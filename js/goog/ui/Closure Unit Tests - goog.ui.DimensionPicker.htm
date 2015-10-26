@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<!-- saved from url=(0089)http://closure-library.googlecode.com/svn/trunk/closure/goog/ui/dimensionpicker_test.html -->
+<HTML><!--
+  Copyright 2008 Google Inc. All Rights Reserved.
+
+--><HEAD><META http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+  <TITLE>Closure Unit Tests - goog.ui.DimensionPicker</TITLE>
+  <SCRIPT src="./Closure Unit Tests - goog.ui.DimensionPicker_files/base.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.DimensionPicker_files/deps.js"></SCRIPT>
+  <SCRIPT>
+    goog.require('goog.dom');
+    goog.require('goog.dom.TagName');
+    goog.require('goog.math.Size');
+    goog.require('goog.testing.jsunit');
+    goog.require('goog.testing.events');
+    goog.require('goog.testing.ui.rendererasserts');
+    goog.require('goog.ui.DimensionPicker');
+    goog.require('goog.ui.DimensionPickerRenderer');
+  </SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.DimensionPicker_files/array.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.DimensionPicker_files/tagname.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.DimensionPicker_files/classes.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.DimensionPicker_files/coordinate.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.DimensionPicker_files/size.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.DimensionPicker_files/object.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.DimensionPicker_files/string.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.DimensionPicker_files/useragent.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.DimensionPicker_files/dom.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.DimensionPicker_files/stacktrace.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.DimensionPicker_files/asserts.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.DimensionPicker_files/testcase.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.DimensionPicker_files/testrunner.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.DimensionPicker_files/jsunit.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.DimensionPicker_files/errorhandlerweakdep.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.DimensionPicker_files/disposable.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.DimensionPicker_files/event.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.DimensionPicker_files/browserevent.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.DimensionPicker_files/eventwrapper.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.DimensionPicker_files/listener.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.DimensionPicker_files/simplepool.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.DimensionPicker_files/jscript.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.DimensionPicker_files/pools.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.DimensionPicker_files/events.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.DimensionPicker_files/keycodes.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.DimensionPicker_files/events(1).js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.DimensionPicker_files/rendererasserts.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.DimensionPicker_files/eventtarget.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.DimensionPicker_files/keyhandler.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.DimensionPicker_files/eventhandler.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.DimensionPicker_files/box.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.DimensionPicker_files/rect.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.DimensionPicker_files/product.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.DimensionPicker_files/style.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.DimensionPicker_files/idgenerator.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.DimensionPicker_files/component.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.DimensionPicker_files/controlcontent.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.DimensionPicker_files/a11y.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.DimensionPicker_files/controlrenderer.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.DimensionPicker_files/registry.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.DimensionPicker_files/decorate.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.DimensionPicker_files/control.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.DimensionPicker_files/bidi.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.DimensionPicker_files/dimensionpickerrenderer.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.DimensionPicker_files/dimensionpicker.js"></SCRIPT>
+</HEAD><BODY>
+  <DIV id="render"></DIV>
+  <DIV id="decorate" class="goog-dimension-picker" style="width: 5em; -webkit-user-select: none; "></DIV>
+  <SCRIPT>
+    var picker;
+    var render = goog.dom.$('render');
+    var decorate = goog.dom.$('decorate');
+
+    function setUp() {
+      picker = new goog.ui.DimensionPicker();
+      render.innerHTML = '';
+      decorate.innerHTML = '';
+    }
+
+    function tearDown() {
+      picker.dispose();
+    }
+
+    function testConstructor() {
+      assertNotNull('Should have successful construction', picker);
+      assertNull('Should not be in document', picker.getElement());
+    }
+
+    function testRender() {
+      picker.render(render);
+
+      assertEquals('Should create 1 child', 1, render.childNodes.length);
+      assertEquals('Should be a div', goog.dom.TagName.DIV,
+          render.firstChild.tagName);
+    }
+
+    function testDecorate() {
+      picker.decorate(decorate);
+
+      assertNotEquals('Should add several children', decorate.firstChild,
+          decorate.lastChild);
+    }
+
+    function testHighlightedSize() {
+      picker.render(render);
+
+      var size = picker.getValue();
+      assertEquals('Should have 0 columns highlighted', 0, size.width);
+      assertEquals('Should have 0 rows highlighted', 0, size.height);
+
+      picker.setValue(1, 2);
+
+      size = picker.getValue();
+      assertEquals('Should have 1 column highlighted', 1, size.width);
+      assertEquals('Should have 2 rows highlighted', 2, size.height);
+
+      picker.setValue(new goog.math.Size(3, 4));
+      size = picker.getValue();
+      assertEquals('Should have 3 columns highlighted', 3, size.width);
+      assertEquals('Should have 4 rows highlighted', 4, size.height);
+    }
+
+    function testHandleMove() {
+      picker.render(render);
+      var renderer = picker.getRenderer();
+      var mouseMoveElem = renderer.getMouseMoveElement(picker);
+
+      picker.rightToLeft_ = false;
+      var e = {
+        target: mouseMoveElem,
+        offsetX: 18, // Each grid square currently a magic 18px.
+        offsetY: 36
+      };
+
+      picker.handleMouseMove(e);
+      var size = picker.getValue();
+      assertEquals('Should have 1 column highlighted', 1, size.width);
+      assertEquals('Should have 2 rows highlighted', 2, size.height);
+
+      picker.rightToLeft_ = true;
+
+      picker.handleMouseMove(e);
+      var size = picker.getValue();
+      // In RTL we pick from the right side of the picker, so an offsetX of 0
+      // would actually mean select all columns.
+      assertEquals('Should have columns to the right of the mouse highlighted',
+          Math.ceil((mouseMoveElem.offsetWidth - e.offsetX) / 18), size.width);
+      assertEquals('Should have 2 rows highlighted', 2, size.height);
+    }
+
+    function testDispose() {
+      var element = picker.getElement();
+      picker.render(render);
+      picker.dispose();
+      assertTrue('Picker should have been disposed of', picker.isDisposed());
+      assertNull('Picker element reference should have been nulled out',
+          picker.getElement());
+    }
+
+    function testRendererDoesntCallGetCssClassInConstructor() {
+      goog.testing.ui.rendererasserts.
+          assertNoGetCssClassCallsInConstructor(
+              goog.ui.DimensionPickerRenderer);
+    }
+  </SCRIPT>
+
+
+<DIV><DIV style="color: rgb(0, 100, 0); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; font-weight: bold; ">Closure Unit Tests - goog.ui.DimensionPicker [PASSED]</DIV><DIV style="color: rgb(51, 51, 51); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; font-weight: bold; ">closure-library.googlecode.com/svn/trunk/closure/goog/ui/dimensionpicker_test.html</DIV><DIV style="color: rgb(51, 51, 51); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">7 of 7 tests run in 34ms.</DIV><DIV style="color: rgb(51, 51, 51); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">7 passed, 0 failed.</DIV><DIV style="color: rgb(51, 51, 51); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">5 ms/test. 47 files loaded.</DIV><DIV style="color: rgb(51, 51, 51); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">.</DIV><DIV style="color: rgb(51, 51, 51); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">08:23:04.134  Start</DIV><DIV style="color: rgb(0, 100, 0); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">08:23:04.136  testConstructor : PASSED</DIV><DIV style="color: rgb(0, 100, 0); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">08:23:04.152  testDecorate : PASSED</DIV><DIV style="color: rgb(0, 100, 0); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">08:23:04.156  testDispose : PASSED</DIV><DIV style="color: rgb(0, 100, 0); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">08:23:04.161  testHandleMove : PASSED</DIV><DIV style="color: rgb(0, 100, 0); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">08:23:04.164  testHighlightedSize : PASSED</DIV><DIV style="color: rgb(0, 100, 0); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">08:23:04.166  testRender : PASSED</DIV><DIV style="color: rgb(0, 100, 0); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">08:23:04.167  testRendererDoesntCallGetCssClassInConstructor : PASSED</DIV><DIV style="color: rgb(51, 51, 51); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">08:23:04.167  Done</DIV><DIV style="color: rgb(51, 51, 51); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; "> </DIV><A style="display: block; font-size: small; " href="">Run again without reloading</A></DIV></BODY></HTML>

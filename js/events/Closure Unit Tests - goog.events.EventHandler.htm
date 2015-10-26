@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<!-- saved from url=(0090)http://closure-library.googlecode.com/svn/trunk/closure/goog/events/eventhandler_test.html -->
+<HTML><!--
+  Copyright 2006 Google Inc. All Rights Reserved.
+--><HEAD><META http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<TITLE>Closure Unit Tests - goog.events.EventHandler</TITLE>
+<SCRIPT src="./Closure Unit Tests - goog.events.EventHandler_files/base.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.events.EventHandler_files/deps.js"></SCRIPT>
+<SCRIPT>
+  goog.require('goog.events');
+  goog.require('goog.events.EventHandler');
+  goog.require('goog.events.EventTarget');
+  goog.require('goog.testing.jsunit');
+</SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.events.EventHandler_files/array.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.events.EventHandler_files/errorhandlerweakdep.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.events.EventHandler_files/disposable.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.events.EventHandler_files/event.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.events.EventHandler_files/string.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.events.EventHandler_files/useragent.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.events.EventHandler_files/browserevent.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.events.EventHandler_files/eventwrapper.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.events.EventHandler_files/listener.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.events.EventHandler_files/simplepool.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.events.EventHandler_files/jscript.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.events.EventHandler_files/pools.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.events.EventHandler_files/object.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.events.EventHandler_files/events.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.events.EventHandler_files/eventhandler.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.events.EventHandler_files/eventtarget.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.events.EventHandler_files/stacktrace.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.events.EventHandler_files/asserts.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.events.EventHandler_files/testcase.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.events.EventHandler_files/testrunner.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.events.EventHandler_files/jsunit.js"></SCRIPT>
+</HEAD><BODY>
+
+<DIV id="a"></DIV>
+<DIV id="b"></DIV>
+<DIV id="c"></DIV>
+<DIV id="d"></DIV>
+
+<SCRIPT>
+
+  var a = document.getElementById('a');
+  var b = document.getElementById('b');
+  var c = document.getElementById('c');
+  var d = document.getElementById('d');
+
+
+  function testEventHandlerClearsListeners() {
+    assertEquals('No event listeners should be registered at the start', 0,
+        goog.object.getCount(goog.events.listeners_));
+
+    function tmp() {}
+
+    goog.events.listen(a, 'click', tmp);
+
+    assertEquals('1 listener should be registered now', 1,
+        goog.object.getCount(goog.events.listeners_));
+
+    var eh = new goog.events.EventHandler();
+    eh.listen(a, 'click');
+    eh.listen(a, 'keypress');
+    eh.listen(b, 'mouseover');
+    eh.listen(c, 'mousedown');
+    eh.listen(d, 'click');
+    eh.listen(d, 'mousedown');
+
+    assertEquals('7 listeners should be registered now', 7,
+        goog.object.getCount(goog.events.listeners_));
+
+    eh.unlisten(d, 'mousedown');
+
+    assertEquals('6 listeners should be registered now', 6,
+        goog.object.getCount(goog.events.listeners_));
+
+    eh.dispose();
+
+    assertEquals('1 listener should be left', 1,
+        goog.object.getCount(goog.events.listeners_));
+
+    goog.events.unlisten(a, 'click', tmp);
+
+    assertEquals('No event listeners should be registered at the end', 0,
+        goog.object.getCount(goog.events.listeners_));
+  }
+
+  function testListenArray() {
+    var eh = new goog.events.EventHandler();
+
+    eh.listen(a, ['click', 'mousedown', 'mouseup']);
+
+    assertEquals('3 listeners should be registered', 3,
+        goog.object.getCount(goog.events.listeners_));
+
+    eh.unlisten(a, ['click', 'mousedown', 'mouseup']);
+
+    assertEquals('no listeners should be registered', 0,
+        goog.object.getCount(goog.events.listeners_));
+
+    eh.listen(a, ['click', 'mousedown', 'mouseup']);
+
+    assertEquals('3 listeners should be registered', 3,
+        goog.object.getCount(goog.events.listeners_));
+
+    eh.removeAll();
+
+    assertEquals('no listeners should be registered', 0,
+        goog.object.getCount(goog.events.listeners_));
+  }
+
+  function testListenOnceRemovesListenerWhenFired() {
+    var events = [];
+    assertEquals('No listeners registered yet', 0,
+        goog.object.getCount(goog.events.listeners_));
+    var target = new goog.events.EventTarget();
+    var eh = new goog.events.EventHandler();
+    eh.listenOnce(target, 'click', function(e) { events.push(e); });
+    assertEquals('1 listener should be registered', 1,
+        goog.object.getCount(goog.events.listeners_));
+    target.dispatchEvent('click');
+    assertEquals('One event should have been dispatched', 1, events.length);
+    assertEquals('no listeners should be registered', 0,
+        goog.object.getCount(goog.events.listeners_));
+    target.dispatchEvent('click');
+    assertEquals('No event should have been dispatched', 1, events.length);
+
+  }
+
+  function testListenOnceListenerIsCleanedUp() {
+    var events = [];
+    assertEquals('No listeners registered yet', 0,
+        goog.object.getCount(goog.events.listeners_));
+    var target = new goog.events.EventTarget();
+    var eh = new goog.events.EventHandler();
+    eh.listenOnce(target, 'click', function(e) { events.push(e); });
+    assertEquals('1 listener should be registered', 1,
+        goog.object.getCount(goog.events.listeners_));
+    eh.removeAll();
+    assertEquals('no listeners should be registered', 0,
+        goog.object.getCount(goog.events.listeners_));
+    target.dispatchEvent('click');
+    assertEquals('No event should have been dispatched', 0, events.length);
+  }
+
+  function testClearListenersWithListenOnceListenerRemoved() {
+    var events = [];
+    assertEquals('No listeners registered yet', 0,
+        goog.object.getCount(goog.events.listeners_));
+    var target = new goog.events.EventTarget();
+    var eh = new goog.events.EventHandler();
+    eh.listenOnce(target, 'click', function(e) { events.push(e); });
+    assertEquals('1 listener should be registered', 1,
+        goog.object.getCount(goog.events.listeners_));
+    target.dispatchEvent('click');
+    assertEquals('One event should have been dispatched', 1, events.length);
+    assertEquals('no listeners should be registered', 0,
+        goog.object.getCount(goog.events.listeners_));
+    eh.removeAll();
+    assertEquals('no listeners should be registered', 0,
+        goog.object.getCount(goog.events.listeners_));
+    target.dispatchEvent('click');
+    assertEquals('No event should have been dispatched', 1, events.length);
+  }
+
+  function testListenOnceArray() {
+    var events = [];
+    assertEquals('No listeners registered yet', 0,
+        goog.object.getCount(goog.events.listeners_));
+    var target = new goog.events.EventTarget();
+    var eh = new goog.events.EventHandler();
+    eh.listenOnce(target, ['click', 'mousedown', 'mouseup'],
+    function(e) { events.push(e); });
+    assertEquals('3 listeners should be registered', 3,
+        goog.object.getCount(goog.events.listeners_));
+    target.dispatchEvent('click');
+    assertEquals('1 event should have been dispatched', 1, events.length);
+    assertEquals('Should be a click event', 'click', events[0].type)
+    assertEquals('2 listeners should be registered', 2,
+        goog.object.getCount(goog.events.listeners_));
+    target.dispatchEvent('mouseup');
+    assertEquals('1 event should have been dispatched', 2, events.length);
+    assertEquals('Should be a click event', 'mouseup', events[1].type)
+    assertEquals('1 listeners should be registered', 1,
+        goog.object.getCount(goog.events.listeners_));
+    target.dispatchEvent('mousedown');
+    assertEquals('1 event should have been dispatched', 3, events.length);
+    assertEquals('Should be a click event', 'mousedown', events[2].type)
+    assertEquals('no listeners should be registered', 0,
+        goog.object.getCount(goog.events.listeners_));
+    target.dispatchEvent('click');
+    assertEquals('No events should have been dispatched', 3, events.length);
+  }
+
+  function testListenUnlistenWithObjectHandler() {
+    var events = [];
+    assertEquals('No listeners registered yet', 0,
+        goog.object.getCount(goog.events.listeners_));
+    var target = new goog.events.EventTarget();
+    var eh = new goog.events.EventHandler();
+    var handlerObj = {
+      handleEvent: function(e) {
+        events.push(e);
+      }
+    };
+    eh.listen(target, 'click', handlerObj);
+    assertEquals('1 listener should be registered', 1,
+        goog.object.getCount(goog.events.listeners_));
+    target.dispatchEvent('click');
+    assertEquals('1 listener should be registered', 1,
+        goog.object.getCount(goog.events.listeners_));
+    assertEquals('One event should have been dispatched', 1, events.length);
+    eh.unlisten(target, 'click', handlerObj);
+    assertEquals('no listeners should be registered', 0,
+        goog.object.getCount(goog.events.listeners_));
+    target.dispatchEvent('click');
+    assertEquals('No event should have been dispatched', 1, events.length);
+  }
+
+  function testListenOnceWithObjectHandler() {
+    var events = [];
+    assertEquals('No listeners registered yet', 0,
+        goog.object.getCount(goog.events.listeners_));
+    var target = new goog.events.EventTarget();
+    var eh = new goog.events.EventHandler();
+    var handlerObj = {
+      handleEvent: function(e) {
+        events.push(e);
+      }
+    };
+    eh.listenOnce(target, 'click', handlerObj);
+    assertEquals('1 listener should be registered', 1,
+        goog.object.getCount(goog.events.listeners_));
+    target.dispatchEvent('click');
+    assertEquals('One event should have been dispatched', 1, events.length);
+    assertEquals('no listeners should be registered', 0,
+        goog.object.getCount(goog.events.listeners_));
+    target.dispatchEvent('click');
+    assertEquals('No event should have been dispatched', 1, events.length);
+  }
+
+
+</SCRIPT>
+
+
+<DIV><DIV style="color: rgb(0, 100, 0); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; font-weight: bold; ">Closure Unit Tests - goog.events.EventHandler [PASSED]</DIV><DIV style="color: rgb(51, 51, 51); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; font-weight: bold; ">closure-library.googlecode.com/svn/trunk/closure/goog/events/eventhandler_test.html</DIV><DIV style="color: rgb(51, 51, 51); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">8 of 8 tests run in 9ms.</DIV><DIV style="color: rgb(51, 51, 51); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">8 passed, 0 failed.</DIV><DIV style="color: rgb(51, 51, 51); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">1 ms/test. 23 files loaded.</DIV><DIV style="color: rgb(51, 51, 51); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">.</DIV><DIV style="color: rgb(51, 51, 51); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">09:52:17.860  Start</DIV><DIV style="color: rgb(0, 100, 0); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">09:52:17.862  testClearListenersWithListenOnceListenerRemoved : PASSED</DIV><DIV style="color: rgb(0, 100, 0); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">09:52:17.864  testEventHandlerClearsListeners : PASSED</DIV><DIV style="color: rgb(0, 100, 0); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">09:52:17.865  testListenArray : PASSED</DIV><DIV style="color: rgb(0, 100, 0); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">09:52:17.866  testListenOnceArray : PASSED</DIV><DIV style="color: rgb(0, 100, 0); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">09:52:17.867  testListenOnceListenerIsCleanedUp : PASSED</DIV><DIV style="color: rgb(0, 100, 0); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">09:52:17.867  testListenOnceRemovesListenerWhenFired : PASSED</DIV><DIV style="color: rgb(0, 100, 0); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">09:52:17.868  testListenOnceWithObjectHandler : PASSED</DIV><DIV style="color: rgb(0, 100, 0); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">09:52:17.869  testListenUnlistenWithObjectHandler : PASSED</DIV><DIV style="color: rgb(51, 51, 51); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">09:52:17.869  Done</DIV><DIV style="color: rgb(51, 51, 51); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; "> </DIV><A style="display: block; font-size: small; " href="">Run again without reloading</A></DIV></BODY></HTML>

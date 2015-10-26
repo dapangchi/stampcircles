@@ -1,0 +1,36 @@
+{
+   identifier: 'id',
+   label: 'description',
+   items: [
+      { recordType: "hdr", id: 987987, 
+        description:"Order 987987", priority:"Next Day Air",
+        line: [
+            { _reference:"987987-1" }, 
+            { _reference:"987987-2" } 
+        ] },
+      { recordType: "hdr", id: 988855, 
+        description:"Order 988855", priority:"2nd Day Air",
+        line: [
+            { _reference:"988855-1" } 
+        ] },
+      { recordType: "hdr", id: 988900, 
+        description:"Order 988900", priority:"2nd Day Air",
+        line: [
+            { _reference:"988900-1" }, 
+            { _reference:"988900-2" } 
+        ] },
+        
+      { recordType: "lin", id: '987987-1', qty:1,
+        sku:11761, description: 'Yodeling Pickle'},
+      { recordType: "lin", id: '987987-2', qty:3, 
+        sku:11798, description: 'Gummy Tapeworm'},
+      { recordType: "lin", id: '988855-1', qty:4,
+        sku:11753, description: 'Gummy Haggis'},
+      { recordType: "lin", id: '988900-1', qty:15,
+        sku:11824, description: 'Worlds Largest Inflatable Heart'},
+      { recordType: "lin", id: '988900-2', qty:1,
+        sku:11548, description: 'Deluxe Librarian Action Figure'}
+        
+   ]
+}
+

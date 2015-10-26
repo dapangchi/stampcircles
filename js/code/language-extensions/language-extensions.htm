@@ -1,0 +1,460 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+        "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+  <head>
+    <title>Mastering Dojo - Language Extensions</title>
+    <script 
+      type="text/javascript" 
+      src="/dojoroot/dojo/dojo.js" 
+      djConfig="isDebug: true">
+    </script>
+    <script type="text/javascript">
+    function f1() {
+      // START:snip1-1
+      var theAccumulator= {
+        total: 0,
+        clear: function() {
+          this.total= 0;
+        },
+        add: function(x) {
+          this.total+= x;
+        },
+        getResult: function() {
+          return this.total;
+        }
+      };
+      // END:snip1-1
+
+      // START:snip1-2
+      //display a message box with the result of calling f...
+      function printResult(f) {
+        alert("result= " + f());
+      }
+      // END:snip1-2
+      
+      
+      // START:snip1-3
+      theAccumulator.clear();
+      theAccumulator.add(100);
+      theAccumulator.add(200);
+      
+      //this is wrong!
+      printResult(theAccumulator.getResult);
+      // END:snip1-3
+      
+      // START:snip2
+      printResult(function(){return theAccumulator.getResult();});
+      // END:snip2
+      // START:snip2a
+      printResult(dojo.hitch(theAccumulator, "getResult"));
+      // END:snip2a
+    }
+    dojo.addOnLoad(function(){
+      dojo.connect(dojo.byId("f1"), "click", f1);
+    });
+
+    function f2(){
+      var o= {
+        name: "object-o",
+        f: function() {
+          console.debug("in o.f, in the context of " + this.name + " with arguments %o", arguments);
+        }
+      };
+      var p= {
+        name: "object-p",
+        f: function() {
+          console.debug("in p.f, in the context of " + this.name + " with arguments %o", arguments);
+        }
+      };
+      var f= function() {
+        console.debug("in f, in the context of " + this.name + " with arguments %o", arguments);
+      };
+      
+      var x1, x2;
+      
+      x1= dojo.hitch(o, o.f);
+      x2= function() {return o.f.apply(o, arguments);};
+      x1(1, 2, 3);
+      x2(1, 2, 3);
+        
+      x1= dojo.hitch(o, "f");
+      x2= function() {return o["f"].apply(o, arguments);};
+      x1(1, 2, 3);
+      x2(1, 2, 3);
+      
+      x1= dojo.hitch(o, f); 
+      x2= function() {return f.apply(o, arguments);};
+      x1(1, 2, 3);
+      x2(1, 2, 3);
+      
+      x1= dojo.hitch(o, p.f); 
+      x2= function() {return p.f.apply(o, arguments);};
+      x1(1, 2, 3);
+      x2(1, 2, 3);
+      
+      // START:snip3
+      dojo.hitch(o, o.f);
+        //o an object, f a member function of o, returns...
+        function() {return o.f.apply(o, arguments);}
+        
+      dojo.hitch(o, "f");
+        //o an object, f the name of a member function of o, returns...
+        function() {return o["f"].apply(o, arguments);}
+      // END:snip3
+      
+      // START:snip3a
+      dojo.hitch(o, f); 
+        //o an object, f a function, returns...
+        function() {return f.apply(o, arguments);}
+        
+      dojo.hitch(o, p.f); 
+        //o, p objects, o!=p, f a member function of p, returns...
+        function() {return p.f.apply(o, arguments);}
+      // END:snip3a
+    }
+    dojo.addOnLoad(function(){
+      dojo.connect(dojo.byId("f2"), "click", f2);
+    });    
+
+    // START:snip3b
+    function showData() {
+      var x= this.getData();
+      dojo.byId("showData").innerHTML= "The result= " + x;
+    }
+    // END:snip3b
+    
+    // START:snip3c
+    //generates 1, 2, 3, ...
+    var dataSrc1 = {
+      value: 0,
+      getData: function() {return this.value++;}
+    };
+        
+    //generates 5, 10, 15, ...		
+    var dataSrc2 = {
+      value: 0,
+      getData: function() {return (this.value+= 5);}
+    };
+    // END:snip3c
+
+    dojo.addOnLoad(function(){
+      // START:snip3d
+      dojo.byId("f3").onclick= dojo.hitch(dataSrc1, showData);
+      dojo.byId("f4").onclick= dojo.hitch(dataSrc2, showData);
+      // END:snip3d
+      dojo.connect(dojo.byId("f5"), "click", dataSrc1, showData);
+      dojo.connect(dojo.byId("f6"), "click", dataSrc2, showData);
+    });
+    
+    function(){
+      // START:snip4
+      //note: dojo.global holds a reference to the global object space
+
+      //first form 
+      dojo.hitch(null, f); //f a function, is the same as...
+      dojo.hitch(f); //which returns...
+        f
+
+      //second form
+      dojo.hitch(null, "f"); //is the same as...
+      dojo.hitch("f"); //which returns...
+        function() {return dojo.global[f].apply(dojo.global, arguments);}
+      // END:snip4
+      
+      // START:snip6
+      //this won't work!
+      dojo.byId("someId").click= handler(someArg);
+      // END:snip6
+      
+      // START:snip6a
+      dojo.byId("someId").click= function(){handler(someArg);};
+      // END:snip6a
+      
+      // START:snip6c
+      dojo.byId("someId").click= dojo.hitch(null, handler, someArg);
+      // END:snip6c
+      
+      // START:snip6d
+      dojo.byId("someId").click= dojo.partial(handler, someArg);
+      // END:snip6d	
+  
+      /*
+      // START:snip7
+      dojo.hitch(context, f, a1, ..., an); //returns...
+        function(){return context.f.apply(
+          context, [a1, ..., an].concat(arguments));};
+      // END:snip7
+      */
+    }
+
+   
+    // START:snip8a
+    function print3Args(a1, a2, a3) {
+      alert(a1 + a2 + a3);
+    }
+    // END:snip8a
+    
+    // START:snip8b
+    var printArg= dojo.hitch(null, print3Args, "this", " is ");         
+    // END:snip8b
+    
+    function f4() {
+      // START:snip8c
+      printArg("easy.");  //...prints "this is easy"
+        //effectively, print3Args("this", " is ", "easy.") was called.
+        
+      printArg("beautiful.");  //...prints "this is beautiful"
+        //effectively, print3Args("this", " is ", "beautiful.") was called.
+        
+      printArg("not the key to life!");  //...prints "this is not the key to life!"
+        //effectively, print3Args("this", " is ", "not the key to life!) was called.
+      // END:snip8c
+    }
+    dojo.addOnLoad(function(){
+      dojo.connect(dojo.byId("f7"), "click", f4);
+    });
+    
+    function f5(){
+      var theArray= [];
+      
+      // START:snip9a
+      for (var i= 0, end= theArray.length; i<end; i++) {
+        //do something interesting with theArray[i]
+      }
+      // END:snip9a
+      // START:snip9b
+      dojo.forEach(theArray, function(x){
+        //called once for each array element
+        //do something interesting with x which is theArray[i]
+      });
+      // END:snip9b
+      
+      if (!dojo.isIE) {
+        // START:snip9c
+        theArray.forEach(function(x){
+          //called once for each array element
+          //do something interesting with x which is theArray[i]
+        });
+        // END:snip9c
+      }
+      
+      // START:snip10a
+      var src= [1, 2, 3, 4, 5];
+      
+      //see if every element is odd...
+      var allOdd= dojo.every(src, function(x){
+        return x%2;
+      });
+      //allOdd is now false
+      
+      //see if some element is odd...
+      var someOdd= dojo.some(src, function(x){
+        return x%2;
+      }); 
+      //someOdd is now true
+      // END:snip10a
+      console.debug("src: %o", src);
+      console.debug("allOdd: %o", allOdd);
+      console.debug("someOdd: %o", someOdd);
+      
+      // START:snip10b
+      //filter just the odd numbers out of src...
+      var odds= dojo.filter(src, function(x){
+        return x%2;
+      });
+      //odds is now [1, 3, 5]
+      //src is STILL [1, 2, 3, 4, 5]
+      // END:snip10b
+      console.debug("src: %o", src);
+      console.debug("odds: %o", odds);      
+            
+      // START:snip10c
+      //make a new array by doubling each element in src...
+      var multiplyBy2= dojo.map(src, function(x){
+        return x*2;
+      });
+      //multiplyBy2 is now [2, 4, 6, 8, 10];
+      //src is STILL [1, 2, 3, 4, 5]
+      // END:snip10c
+      console.debug("src: %o", src);
+      console.debug("multiplyBy2: %o", multiplyBy2);   
+            
+      // START:snip11a
+      var accumulator= {
+        total: 0,
+        add: function(x){this.total+= x;}
+      };  
+      // END:snip11a
+      
+      // START:snip11b
+      accumulator.total= 0;
+      dojo.forEach(src, accumulator.add, accumulator);
+      //accumulator.total is now 15
+      // END:snip11b
+      console.debug("accumulator.total= " + accumulator.total);
+      
+      /*
+      // START:snip100
+      function(item [, index] [, array]) {
+        //function-body
+      }
+      // END:snip100
+      */
+      
+      // START:snip101
+      //see if every element is odd...
+      var allOdd= dojo.every(src, "return item%2;");
+      //allOdd is now false
+      
+      //see if some element is odd...
+      var someOdd= dojo.some(src, "return item%2;");
+      //someOdd is now true
+    
+      //filter just the odd numbers out of src...
+      var odds= dojo.filter(src, "return item%2;");
+      //odds is now [1, 3, 5]
+      //src is STILL [1, 2, 3, 4, 5]
+    
+      //make a new array by doubling each element in src...
+      var multiplyBy2= dojo.map(src, "return item*2;");
+      //multiplyBy2 is now [2, 4, 6, 8, 10];
+      //src is STILL [1, 2, 3, 4, 5]
+    
+      var accumulator = {total: 0};
+      dojo.forEach(src, "this.total+= item;", accumulator);
+      //accumulator.total is now 15
+      // END:snip101  
+      console.log("src: ", src);
+      console.log("allOdd: ", allOdd);
+      console.log("someOdd: ", someOdd);
+      console.log("odds: ", odds);    
+      console.log("multiplyBy2: ", multiplyBy2);    
+      console.log("accumulator.total: ", accumulator.total); 
+      
+      // START:snip102
+      var total= 0;
+      dojo.forEach(src, function(x){
+        total+= x;
+      });
+      //total is now 15
+      // END:snip102  
+      console.log("total: ", total); 
+      
+      // START:snip103
+      var total= 0;
+      try {
+        dojo.forEach(src, "total+= item;");
+      } catch (e) {
+        alert(e);
+      }
+      // END:snip103  
+
+      // START:snip12
+      var src= [1, 2, 3, 3, 3, 4, 5];
+      var result;
+      result= dojo.indexOf(src, 3);           //result is now 2
+      result= dojo.indexOf(src, 3, result+1); //result is now 3
+      result= dojo.lastIndexOf(src, 3);       //result is now 4
+      result= dojo.lastIndexOf(src, 3, result-1);  //result is now 3
+      // END:snip12
+      
+      // START:snip13a
+      function t1(theObject){
+        return (theObject instanceof String);
+      }
+      function t2(theObject){
+        return (typeof theObject == "string");
+      }     
+      
+      var b;
+      b= t1("test");      //b is false
+      b= t2("test");      //b is true
+      s= new String("test");
+      b= t1(s);       //b is true
+      b= t2(s);       //b is false
+      // END:snip13a
+      
+      // START:snip13b
+      function someFunction(theValue){
+        if (dojo.isString(theValue)) {
+          _someFunction_string(theValue);
+        } else if (dojo.isFunction(theValue)) {
+          _someFunction_func(theValue);
+        } else {
+          throw new Error("improper type for someFunction");
+        }
+      }
+      // END:snip13b
+      
+      var myObject= {};
+      // START:snip14a
+      myObject.prop1= 123.456;
+      myObject.prop2= "hello, world";
+      myObject.someProp= yourObject;
+      // END:snip14a  
+      
+      // START:snip14b
+      dojo.mixin(myObject, {
+        prop1: 123.456,
+        prop2: "hello, world",
+        someProp: yourObject});
+      // END:snip14b
+      
+      var yourObject= {prop1:0, prop2:0, someProp:0};
+      // START:snip14c
+      myObject.prop1= yourObject.prop1;
+      myObject.prop2= yourObject.prop2;
+      myObject.someProp= yourObject.someProp;
+      // END:snip14c
+      
+      // START:snip14d
+      dojo.mixin(myObject, yourObject);
+      // END:snip14d
+        
+      // START:snip14e
+      myObject= {p: 1};
+      dojo.mixin(myObject, {p:2}, {p:3});
+      //myOjbect.p is now set to 3!
+      // END:snip14e
+      
+      // START:snip14g
+      //create an object with some properties
+      var bicester= {city: "Bicester", country: "UK"};
+      var attraction= {name: "Blenheim Palace", cost: 15, location: bicester};
+    
+      var try1, try2, try3;
+      try1= attraction;
+      try2= dojo.mixin({}, attraction);
+      try3= dojo.clone(attraction);
+      // END:snip14g
+      
+      // START:snip14h
+      //create an object with some properties
+      var base= {
+        greet: function(){
+          return "hello, my name is " + this.name;}
+      };
+      var newObject= dojo.delegate(base, {name: "John"});
+      // END:snip14h
+      console.debug(newObject.greet());
+    }
+    dojo.addOnLoad(function(){
+      dojo.connect(dojo.byId("f8"), "click", f5);
+    });
+    
+  </script>
+  
+  </head>
+  <body class=tundra>
+    <h1>Mastering Dojo - Language Extensions</h1>
+    <p><input id="f1" type="button" value="Example-1" /></p>
+    <p><input id="f2" type="button" value="Example-2" /></p>
+    <p><input id="f3" type="button" value="Example-3" /></p>
+    <p><input id="f4" type="button" value="Example-4" /></p>
+    <p><input id="f5" type="button" value="Example-5" /></p>
+    <p><input id="f6" type="button" value="Example-6" /></p>
+    <p id="showData"></p>
+    <p><input id="f7" type="button" value="Example-7" /></p>
+    <p><input id="f8" type="button" value="Example-8" /></p>
+  </body>
+</html>

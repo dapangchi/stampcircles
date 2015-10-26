@@ -1,0 +1,491 @@
+<!-- Feedback Form -->
+
+<div id="feedback" class="clearfix" style="position:fixed;left:0px;bottom:108px;border:1px solid blue">
+    <img id="feedback_link" onclick="$('#feedback_form_wrapper').show(); return false;" src="/codeigniter/images/feedback.gif"/>
+    <div id="feedback_form_wrapper" style="display: none;padding-bottom:3px">
+        <a class="close light" onclick="$('#feedback_form_wrapper').hide('slow'); return false;" href="#"
+        style="float: right; margin-right: 5px;color:#fff;font-size:11px">CLOSE X</a>
+        <form id="feedback_form" onsubmit="t61.feedback.submit(); return false;" action=".">
+            <div style="margin: 8px; width: 184px; float: left;">
+                <select name="subject">
+                    <option value="bug">found a bug</option>
+                    <option value="quest_idea">idea for a quest</option>
+                </select>
+                email:
+                <br/>
+                <input class="email" type="text" name="email"/>
+                <br/>
+                <textarea id="feedback_body" style="height: 180px;width:95%;margin-top: 8px;" name="body"/>
+                <input class="input_submit_button" type="submit" value="submit"/>
+            </div>
+        </form>
+    </div>
+</div>
+
+
+
+<div id="lsidemenu" class="span-5 clearfix" style="margin:0 0 0 15px">
+    <div  class="clearfix" style="background:#fff;">
+        <h4 id="subheading" class="closure" style="width:200px">
+            <span>Google's Closure</span><span style="width:16px;height:16px;float:right" class="ui-icon ui-icon-circle-minus">-</span>
+        </h4>
+        <div id="subheading1">
+
+            <ul class=LHnav style="margin-left:0px;width:210px">
+                <li style="margin-bottom:15px;padding-bottom:15px"> General tutorials as to howto use Google's
+                    Closure JavaScript Library and comparisons with other libraries. It is different!
+                </li>
+                <li><a  href="http://127.0.0.1/CodeIgniter/index.php/Blogs/tutorials/jQuery/basen">
+                        <strong>GETTING STARTED</strong>
+                    </a>
+                </li>
+                <li><a href="http://127.0.0.1/CodeIgniter/index.php/Blogs/tutorials/jQuery/Getting_Started_with_Closure"><span class="link-right">Getting Started</span> </a></li>
+                <li><a href="http://127.0.0.1/CodeIgniter/index.php/Blogs/tutorials/jQuery/Closure_assessment"><span class="link-right">An assessment of Closure</span> </a></li>
+
+                <li><a  href="http://127.0.0.1/CodeIgniter/index.php/Blogs/tutorials/jQuery/basen">
+                    <strong>UNDER THE HOOD</strong></a>
+                </li>
+                <li><a href="/CodeIgniter/Blogs/tutorials/jQuery/Closure_base"><span class="link-right">base.js</span></a></li>
+
+
+                <li>
+                    <strong>OBJECT HANDLING</strong>
+                </li>
+                <li>
+                    <a href="/CodeIgniter/index.php/Blogs/tutorials/jQuery/Closure_object">
+                        <span class="link-right">
+                            How to use Closure's <strong>object.js</strong>, methods effectively
+                        </span>
+                    </a>
+                </li>
+                <li><a href="http://127.0.0.1/CodeIgniter/index.php/Blogs/tutorials/jQuery/array">Examining Closure's <strong>array.js</strong> more closely</a></li>
+
+                <li>
+                    <strong>FUNCTION MEMOIZATION</strong>
+                </li>
+                <li><a href="http://127.0.0.1/CodeIgniter/index.php/Blogs/tutorials/jQuery/Memoization"><span class="link-right">
+                Memoization Part I</span></a></li>
+                <li><a href="http://127.0.0.1/CodeIgniter/index.php/Blogs/tutorials/jQuery/Memoization">
+                        <span class="link-right">
+                Memoization Part II</span></a></li>
+
+                <li>
+                    <strong>CRYPTO</strong>
+                    Closure's crypto related files and methods <strong>crypt.js</strong>
+                </li>
+                
+                <li><a  href="http://127.0.0.1/CodeIgniter/index.php/Blogs/tutorials/jQuery/basen">
+                    <span class="link-right">basen</span></a></li>
+                        <li><a  href="http://127.0.0.1/CodeIgniter/index.php/Blogs/tutorials/jQuery/basen">
+                                <strong>DATA STRUCTURES</strong><br/>
+                                Working with collections such as
+                                Map, Set Array and Object as well as other classes that implement collection-like methods <strong>structs.js
+                        </strong> </a></li>
+
+                        <li><a  href="http://127.0.0.1/CodeIgniter/index.php/Blogs/tutorials/jQuery/basen"><span class="link-right">basen.js</span> </a></li>
+                        <li><a href="http://127.0.0.1/CodeIgniter/index.php/Blogs/tutorials/jQuery/queue"><span class="link-right">queue.js</span> </a></li>
+                        <li><a href="http://127.0.0.1/CodeIgniter/index.php/Blogs/tutorials/jQuery/heap"><span class="link-right">heap.js</span> </a></li>
+                        <li><a href="http://127.0.0.1/CodeIgniter/index.php/Blogs/tutorials/jQuery/Set"><span class="link-right">set.js</span> </a></li>
+  <li><a href="http://127.0.0.1/CodeIgniter/index.php/Blogs/tutorials/jQuery/String_sets_II"><span class="link-right">StringSet Class</span> </a></li>
+<li><a href="http://127.0.0.1/CodeIgniter/index.php/Blogs/tutorials/jQuery/Closure_LinkedMap"><span class="link-right">LinkedMap</span> </a></li>
+
+
+
+                        <li><a href="http://127.0.0.1/CodeIgniter/index.php/Blogs/tutorials/jQuery/Circular_buffer"><span class="link-right">circularbuffer.js</span> </a></li>
+  <li><a href="http://127.0.0.1/CodeIgniter/index.php/Blogs/tutorials/jQuery/Closure_trie_class"><span class="link-right">Trie Class</span> </a></li>
+                        <li><a href="http://127.0.0.1/CodeIgniter/index.php/Blogs/tutorials/jQuery/Formatting_numbers">
+                                <strong>INTERNATIONALIZATION AND LOCALIZATION</strong><br/>
+                                How to Internationalize and localize your JavaScript using
+                        Closure's i18n Classes</a></li>
+                        <li><a href="http://127.0.0.1/CodeIgniter/index.php/Blogs/tutorials/jQuery/Formatting_numbers"><span class="link-right">The locale object</span> </a></li>
+
+                        <li><a href="http://127.0.0.1/CodeIgniter/index.php/Blogs/tutorials/jQuery/Formatting_numbers"><span class="link-right">Format Currency and Numbers</span> </a></li>
+                        <li><a href="http://127.0.0.1/CodeIgniter/index.php/Blogs/tutorials/jQuery/date_and_time_formatting"><span class="link-right">
+                        Date and Time formatting</span> </a></li>
+
+<li><strong>MATH</strong><br/>
+    How to use a bundle of math functions, from creating ranges and sets to formatting strings. Use box
+    to fit images into certain dimensions with the correct aspect ratio. Plenty of useful material here.
+    <strong>maths.js
+    </strong>
+</li>
+                <li><a href="http://127.0.0.1/CodeIgniter/index.php/Blogs/tutorials/jQuery/Math_size.js"><span class="link-right">The Size class</span> </a></li>
+                <li><a href="http://127.0.0.1/CodeIgniter/index.php/Blogs/tutorials/jQuery/Math_box.js"><span class="link-right">The Box class</span> </a></li>
+                <li><a href="http://127.0.0.1/CodeIgniter/index.php/Blogs/tutorials/jQuery/Math_coordinate"><span class="link-right">The Coordinate class</span> </a></li>
+                <li><a href="http://127.0.0.1/CodeIgniter/index.php/Blogs/tutorials/jQuery/Math_range"><span class="link-right">The Range class</span> </a></li>
+                <li><a href="http://127.0.0.1/CodeIgniter/index.php/Blogs/tutorials/jQuery/Math_rangeset"><span class="link-right">The RangeSet class</span> </a></li>
+                <li><a href="http://127.0.0.1/CodeIgniter/index.php/Blogs/tutorials/jQuery/Math_rangeset"><span class="link-right">The Inversion Map</span> </a></li>
+                <li><a href="http://127.0.0.1/CodeIgniter/index.php/Blogs/tutorials/jQuery/Closure_Matrix"><span class="link-right">The Matrix Class</span> </a></li>
+                <li><a href="http://127.0.0.1/CodeIgniter/index.php/Blogs/tutorials/jQuery/Long"><span class="link-right">Long </span> </a></li>
+
+                <li>
+                    <strong>TIMERS</strong><br/>
+                    The Closure Time class and how to use it effectively. Limitations.
+                </li>
+                <li><a href="http://127.0.0.1/CodeIgniter/index.php/Blogs/tutorials/jQuery/Colors_Part_I"><span class="link-right">Colors Part I</span></a></li>
+                <li><a href="http://127.0.0.1/CodeIgniter/index.php/Blogs/tutorials/jQuery/Colors_Part_II"><span class="link-right">Colors Part II (alpha channel)</span></a></li>
+
+                <li>
+                    <strong>Colors</strong><br/>
+                    The Closure Time class and how to use it effectively. Limitations.
+                </li>
+                <li><a href="http://127.0.0.1/CodeIgniter/index.php/Blogs/tutorials/jQuery/Closure_timers"><span class="link-right">Google's Closure Timer object
+                </span></a></li>
+
+                <li>
+                    <strong>DOM</strong>
+                </li>
+
+                <li><a href="http://127.0.0.1/CodeIgniter/index.php/Blogs/tutorials/jQuery/Closure_DOM"><span class="link-right">Introduction
+                to Closure DOM Methods</span></a></li>
+                <li><a href="http://127.0.0.1/CodeIgniter/index.php/Blogs/tutorials/jQuery/Attributes"><span class="link-right">Attributes </span></a></li>
+                <li><a href="http://127.0.0.1/CodeIgniter/index.php/Blogs/tutorials/jQuery/Viewport_information"><span class="link-right">getting Viewport Information </span></a></li>
+
+                <li>
+                    <strong>AJAX</strong>
+                </li>
+                <li>
+                    <strong>UI</strong>
+                </li>
+<li><a href="http://127.0.0.1/CodeIgniter/index.php/Blogs/tutorials/jQuery/Closure_animation"><span class="link-right">Animation </span></a></li>
+<li><a href="http://127.0.0.1/CodeIgniter/index.php/Blogs/tutorials/jQuery/Closure_animation_queues"><span class="link-right">Animation Queues</span></a></li>
+<li><a href="http://127.0.0.1/CodeIgniter/index.php/Blogs/tutorials/jQuery/Closure_drag_and_drop"><span class="link-right">Drag and Drop</span></a></li>
+<li><a href="http://127.0.0.1/CodeIgniter/index.php/Blogs/tutorials/jQuery/Closure_Dragger"><span class="link-right">Dragger Class</span></a></li>
+
+
+<li><a href="http://127.0.0.1/CodeIgniter/index.php/Blogs/tutorials/jQuery/Table_sorter"><span class="link-right">Table sorter</span></a></li>
+<li><a href="http://127.0.0.1/CodeIgniter/index.php/Blogs/tutorials/jQuery/Progress_bar"><span class="link-right">Progress Bar</span></a></li>
+<li><a href="http://127.0.0.1/CodeIgniter/index.php/Blogs/tutorials/jQuery/Closure_Sliders"><span class="link-right">Sliders</span></a></li>
+<li><a href="http://127.0.0.1/CodeIgniter/index.php/Blogs/tutorials/jQuery/Closure_Dialog"><span class="link-right">Dialog</span></a></li>
+
+
+<li><a href="http://127.0.0.1/CodeIgniter/index.php/Blogs/tutorials/jQuery/Closure_Native_Buttons"><span class="link-right">Native Button management</span></a></li>
+
+<li><a href="http://127.0.0.1/CodeIgniter/index.php/Blogs/tutorials/jQuery/Closure_Controls_Part_I"><span class="link-right">Controls Part I</span></a></li>
+
+
+<li><a href="http://127.0.0.1/CodeIgniter/index.php/Blogs/tutorials/jQuery/Closure_Native_Buttons"><span class="link-right">A gentle intoduction into Renderers and Decorators</span></a></li>
+<li><a href="http://127.0.0.1/CodeIgniter/index.php/Blogs/tutorials/jQuery/ratings_widget"><span class="link-right">Ratings widget</span></a></li>
+
+
+              <li>
+                    <strong>Data Storage</strong>
+                </li>
+ <li><a href="http://127.0.0.1/CodeIgniter/index.php/Blogs/tutorials/jQuery/Datastore_Part_I"><span class="link-right">Datastores</span></a></li>
+
+
+
+           </ul>
+        </div>
+    </div>
+    <h4 class="country">JQuery</h4>
+    <ul class="LHnav" style="margin-left:0px;width:210px">
+        <li><a href="http://127.0.0.1/CodeIgniter/index.php/Blogs/tutorials/jQuery/Add_table_row_with_jQuery">Add table row with jQuery</a></li>
+        <li><a href="http://127.0.0.1/CodeIgniter/index.php/Blogs/tutorials/jQuery/How_to_write_a_plugin">How to write a jQuery plugin</a></li>
+        <li><a href="http://127.0.0.1/CodeIgniter/index.php/Blogs/tutorials/jQuery/jQuery_binding_events">Binding Events</a></li>
+        <li><a href="http://127.0.0.1/CodeIgniter/index.php/Blogs/tutorials/jQuery/jQuery_Selectors_nth_Child">Selectors n<sup>th</sup> Child</a></li>
+        <li><a href="http://localhost/CodeIgniter/index.php/Blogs/tutorials/jQuery/jQuery_and_Lists">jQuery and lists</a></li>
+        <li><a href="http://127.0.0.1/CodeIgniter/index.php/Blogs/tutorials/jQuery/jQuery_extend">jQuery extend</a></li>
+        <li><a href="http://127.0.0.1/CodeIgniter/index.php/Blogs/tutorials/jQuery/jSon">AJAX Json</a></li>
+        <li><a href="http://127.0.0.1/CodeIgniter/index.php/Blogs/tutorials/jQuery/AJAX_Part_III">AJAX Part III</a></li>
+        <li><a href="http://127.0.0.1/CodeIgniter/index.php/Blogs/tutorials/jQuery/AJAX_Part_V">AJAX Loading Scripts</a></li>
+        <li><a href="http://127.0.0.1/CodeIgniter/index.php/Blogs/tutorials/jQuery/jQuery_Utilities_Part_1">Utilities Part 1</a></li>
+        <li><a href="http://127.0.0.1/CodeIgniter/index.php/Blogs/tutorials/jQuery/jQuery_Utilities_Part_2">Utilities Part 2</a></li>
+        <li><a href="http://127.0.0.1/CodeIgniter/index.php/Blogs/tutorials/jQuery/Utilities_Find_Base_Path">Finding the Base Path of a Script</a></li>
+
+
+
+    </ul>
+
+    <h4 class="country">jQuery Labs</h4>
+    <ul id="LHnav" style="margin-left:0px;width:210px">
+        <li><a href="http://127.0.0.1/CodeIgniter/index.php/Blogs/tutorials/jQuery/Debouncing_events">Debouncing events</a></li>
+        <li><a href="http://127.0.0.1/CodeIgniter/index.php/Blogs/tutorials/jQuery/Console">Developing a Console</a></li>
+        <li><a href="http://127.0.0.1/CodeIgniter/index.php/Blogs/tutorials/jQuery/jQuery_Writing_Modal_dialogs">Dialogs (Modal)</a></li>
+        <li><a href="http://127.0.0.1/CodeIgniter/index.php/Blogs/tutorials/jQuery/Citations">Citations </a></li>
+    </ul>
+
+    <h4 class="country">Selected jQuery Plugins</h4>
+    <ul id="LHnav" style="margin-left:0px;width:210px">
+
+        <li><a href="http://127.0.0.1/CodeIgniter/index.php/Blogs/tutorials/jQuery/Developing_Plugins_Part_I">Developing Plugins Part I</a></li>
+        <li><a href="http://127.0.0.1/CodeIgniter/index.php/Blogs/tutorials/jQuery/jQuery_Plugins_ColorBox">ColorBox</a></li>
+         <li><a href="http://127.0.0.1/CodeIgniter/index.php/Blogs/tutorials/jQuery/Form_plugin">Form Plugin</a></li>
+        <li><a href="http://127.0.0.1/CodeIgniter/index.php/Blogs/tutorials/jQuery/jQuery_Plugins_Cycle">Cycle</a></li>
+        <li><a href="http://127.0.0.1/CodeIgniter/index.php/Blogs/tutorials/jQuery/Canvas_the_Flot_plugin">Graphs with the Flot plugin</a></li>
+        <li><a href="http://127.0.0.1/CodeIgniter/index.php/Blogs/tutorials/jQuery/jQuery_Plugins_in_Field_Labels">In field labels</a></li>
+        <li><a href="http://127.0.0.1/CodeIgniter/index.php/Blogs/tutorials/jQuery/jQuery_Plugins_ScrollTo">Scroll To</a></li>
+        <li><a href="http://127.0.0.1/CodeIgniter/index.php/Blogs/tutorials/jQuery/jQuery_Plugins_Flip">Flip Plugin</a></li>
+
+   </ul>
+
+    <h4 class="country" style="background:green">Graphics Labs</h4>
+    <ul id="LHnav" style="margin-left:0px;width:210px">
+        <li><a href="http://127.0.0.1/CodeIgniter/index.php/Blogs/tutorials/jQuery/Canvas_Support">Canvas Browser Support</a></li>
+        <li><a href="http://127.0.0.1/CodeIgniter/index.php/Blogs/tutorials/jQuery/Canvas_Images">Canvas Images</a></li>
+        <li><a href="http://127.0.0.1/CodeIgniter/index.php/Blogs/tutorials/jQuery/Canvas_Support">Determining if a browser supports the canvas element</a></li>
+        <li><a href="http://127.0.0.1/CodeIgniter/index.php/Blogs/tutorials/jQuery/SVG_Introduction">Introduction to svg</a></li>
+        <li><a href="http://127.0.0.1/CodeIgniter/index.php/Blogs/tutorials/jQuery/Javascript_Drawing_Circles">Drawing Circles</a></li>
+        <li><a href="http://127.0.0.1/CodeIgniter/index.php/Blogs/tutorials/jQuery/Graphics_Libraries_jsxgraph">JSXGraph</a></li>
+        <li><a href="http://127.0.0.1/CodeIgniter/index.php/Blogs/tutorials/jQuery/Animation_Basics_Part_I">Animation Basics Part I</a></li>
+    </ul>
+
+
+
+    <h4 class="country" style="background: green">Javascript Core</h4>
+    <ul id="LHnav" style="margin-left:0px;width:210px;">
+
+        <li><a href="http://127.0.0.1/CodeIgniter/index.php/Blogs/tutorials/jQuery/Javascript_Expressions_and_Operators" >Expressions and Operators</a></li>
+        <li><a href="http://127.0.0.1/CodeIgniter/index.php/Blogs/tutorials/jQuery/Javascript_Types">Javascript Types</a></li>
+        <li><a href="http://127.0.0.1/CodeIgniter/index.php/Blogs/tutorials/jQuery/Javascript_do_while_loops">do while loops</a></li>
+        <li><a href="http://127.0.0.1/CodeIgniter/index.php/Blogs/tutorials/jQuery/Javascript_for_loops">loops</a></li>
+        <li><a href="http://127.0.0.1/CodeIgniter/index.php/Blogs/tutorials/jQuery/Javascript_Exception_Handling">Exception Handling</a></li>
+
+        <li><a href="http://127.0.0.1/CodeIgniter/index.php/Blogs/tutorials/jQuery/Javascript_Expressions_and_Operators" >
+            <strong>Expressions and Operators</strong><br/>
+             A quick review of all JavaScript's operators. Examine some of their peculiarities,
+             such as modulus calculations, comparison operators. Bitwise operators. Object examination operators.
+        </a></li>
+        <li><a href="http://127.0.0.1/CodeIgniter/index.php/Blogs/tutorials/jQuery/Javascript_False_or_True"><span class="link-right">True or False?</span></a></li>
+        <li><a href="http://127.0.0.1/CodeIgniter/index.php/Blogs/tutorials/jQuery/Modulus_operator">
+        <span class="link-right">Modulus operator</span></a></li>
+
+        <li><a href="http://127.0.0.1/CodeIgniter/index.php/Blogs/tutorials/jQuery/Bitwise_Operations">
+        <span class="link-right">Bitwise Operators Part I</span></a></li>
+        <li><a href="http://127.0.0.1/CodeIgniter/index.php/Blogs/tutorials/jQuery/Bitwise_Operations_Part_I">
+        <span class="link-right">Bitwise Operators Part II</span></a></li>
+        <li><a href="http://127.0.0.1/CodeIgniter/index.php/Blogs/tutorials/jQuery/typeof">
+        <span class="link-right">typeof()</span></a></li>
+        <li><a href="http://127.0.0.1/CodeIgniter/index.php/Blogs/tutorials/jQuery/instanceof">
+        <span class="link-right">instanceof()</span></a></li>
+        <li><a href="http://127.0.0.1/CodeIgniter/index.php/Blogs/tutorials/jQuery/trueTypeOf">
+        <span class="link-right">trueTypeOf()</span></a></li>
+
+
+
+        <li><a href="http://127.0.0.1/CodeIgniter/index.php/Blogs/tutorials/jQuery/with">The with statement</a></li>
+        <li><a href="http://127.0.0.1/CodeIgniter/index.php/Blogs/tutorials/jQuery/Javascript_Switch">Switch Statement</a></li>
+        <li><a href="http://127.0.0.1/CodeIgniter/index.php/Blogs/tutorials/jQuery/Javascript_the_new_operator ">The new operator</a></li>
+        <li><a href="http://127.0.0.1/CodeIgniter/index.php/Blogs/tutorials/jQuery/Library_currency ">Currency Handling</a></li>
+        <li><a href="http://127.0.0.1/CodeIgniter/index.php/Blogs/tutorials/jQuery/Code_Evaluation">
+        <strong>CODE EVALUATION</strong></a></li>
+        <li><a href="http://127.0.0.1/CodeIgniter/index.php/Blogs/tutorials/jQuery/Code_Evaluation">
+        <span class="link-right">Code evaluation eval() Part I</span></a></li>
+        <li><a href="http://127.0.0.1/CodeIgniter/index.php/Blogs/tutorials/jQuery/Code_Evaluation_Part_II">
+        <span class="link-right">Code evaluation Part II</span></a></li>
+        <li><a href="http://127.0.0.1/CodeIgniter/index.php/Blogs/tutorials/jQuery/Code_Evaluation_Part_III">
+        <span class="link-right"> Code evaluation Part III</span></a></li>
+    </ul>
+
+ <h4 class="country" style="background: green">Javascript Objects</h4>
+    <ul id="LHnav" style="margin-left:0px;width:210px;">
+        <li><a href="http://127.0.0.1/CodeIgniter/index.php/Blogs/tutorials/jQuery/Objects_Enumerating_properties">Enumerating Properties</a></li>
+ <li><a href="http://127.0.0.1/CodeIgniter/index.php/Blogs/tutorials/jQuery/Object_mother_object">The mother Object!</a></li>
+<li><a href="http://127.0.0.1/CodeIgniter/index.php/Blogs/tutorials/jQuery/jQuery_Objects"> Objects</a></li>
+ <li><a href="http://127.0.0.1/CodeIgniter/index.php/Blogs/tutorials/jQuery/Objects_Private_Variables">Private, public and priviledged variables</a></li>
+
+      <li><a href="http://127.0.0.1/CodeIgniter/index.php/Blogs/tutorials/jQuery/HTML_prototype"> Sub-classing Native Objects</a></li>
+
+    </ul>
+
+
+
+    <h4 class="country" style="background: green">Javascript Math Object</h4>
+    <ul id="LHnav" style="margin-left:0px;width:210px;">
+        <li><a href="http://127.0.0.1/CodeIgniter/index.php/Blogs/tutorials/jQuery/Javascript_Math_Object">The Math object</a></li>
+        <li><a href="http://127.0.0.1/CodeIgniter/index.php/Blogs/tutorials/jQuery/Javascript_Math_Object_Part_II">Extending the Math Object</a></li>
+
+        <li><a href="http://127.0.0.1/CodeIgniter/index.php/Blogs/tutorials/jQuery/Number_Object">Number_Object_Extensions</a></li>
+        <li><a href="http://127.0.0.1/CodeIgniter/index.php/Blogs/tutorials/jQuery/Number_Object">Number Object</a></li>
+        <li><a href="http://127.0.0.1/CodeIgniter/index.php/Blogs/tutorials/jQuery/toExponential">Scientific Notation toExponential()</a></li>
+        <li><a href="http://127.0.0.1/CodeIgniter/index.php/Blogs/tutorials/jQuery/ParseInt_and_ParseFloat">ParseInt() and parseFloat()</a></li>
+
+
+    </ul>
+
+    <!-- Dates -->
+
+    <h4 class="country" style="background: green">Dates</h4>
+    <ul id="LHnav" style="margin-left:0px;width:210px;">
+        <li><a href="http://127.0.0.1/CodeIgniter/index.php/Blogs/tutorials/jQuery/Javascript_Date_Object">The Date object</a></li>
+        <li><a href="http://127.0.0.1/CodeIgniter/index.php/Blogs/tutorials/jQuery/Dates_Part_II">Dates_Part_II</a></li>
+
+
+
+    </ul>
+
+    <h4 class="country" style="background: green">Javascript Arrays</h4>
+    <ul class="LHnav" style="margin-left:0px;width:210px;">
+        <li><a href="http://127.0.0.1/CodeIgniter/index.php/Blogs/tutorials/jQuery/Array_like_objects">Understanding array like objects</a></li>
+        <li><a href="http://127.0.0.1/CodeIgniter/index.php/Blogs/tutorials/jQuery/Javascript_arrays">Javascript Arrays</a></li>
+        <li><a href="http://127.0.0.1/CodeIgniter/index.php/Blogs/tutorials/jQuery/jQuery_Arrays">Jquery Arrays</a></li>
+        <li><a href="http://127.0.0.1/CodeIgniter/index.php/Blogs/tutorials/jQuery/Javascript_Associative_Arrays">Associative Arrays</a></li>
+        <li><a href="http://127.0.0.1/CodeIgniter/index.php/Blogs/tutorials/jQuery/Javascript_Functions_in_Arrays">Functions in Arrays</a></li>
+        <li><a href="http://127.0.0.1/CodeIgniter/index.php/Blogs/tutorials/jQuery/Array_operations">Array_operations</a></li>
+        <li><a href="http://127.0.0.1/CodeIgniter/index.php/Blogs/tutorials/jQuery/Math_rangeset"><strong>ARRAY REFERENCE</strong><br/>
+                A comprehensive list of array methods, with full examples.
+        </a></li>
+        <li><a href="http://127.0.0.1/CodeIgniter/index.php/Blogs/tutorials/jQuery/Array_pop_and_push">
+        <span class="link-right">pop() and push()</span></a></li>
+        <li><a href="http://127.0.0.1/CodeIgniter/index.php/Blogs/tutorials/jQuery/Array_slice_and_splice">
+        <span class="link-right">slice() and splice()</span></a></li>
+        <li><a href="http://127.0.0.1/CodeIgniter/index.php/Blogs/tutorials/jQuery/Array_clear"><span class="link-right">clear()</span> </a></li>
+        <li><a href="http://127.0.0.1/CodeIgniter/index.php/Blogs/tutorials/jQuery/Array_concat"><span class="link-right">concat()</span> </a></li>
+        <li><a href="http://127.0.0.1/CodeIgniter/index.php/Blogs/tutorials/jQuery/Array_convert_to_string"><span class="link-right">join()</span> </a></li>
+        <li><a href="http://127.0.0.1/CodeIgniter/index.php/Blogs/tutorials/jQuery/Array_flatten"><span class="link-right">flatten()</span> </a></li>
+
+
+
+    </ul>
+
+    <h4 class="country" style="background: green">Javascript Strings</h4>
+    <ul id="LHnav" style="margin-left:0px;width:210px;">
+        <li><a href="http://127.0.0.1/CodeIgniter/index.php/Blogs/tutorials/jQuery/Javascript_Strings">Strings Part I</a></li>
+        <li><a href="http://127.0.0.1/CodeIgniter/index.php/Blogs/tutorials/jQuery/Javascript_Strings-Part_II">Strings Part II</a></li>
+        <li><a href="http://127.0.0.1/CodeIgniter/index.php/Blogs/tutorials/jQuery/Javascript_Strings-Part_III">Strings Part III</a></li>
+        <li><a href="http://127.0.0.1/CodeIgniter/index.php/Blogs/tutorials/jQuery/Javascript_Strings-Part_IV">Strings Part IV</a></li>
+        <li><a href="http://127.0.0.1/CodeIgniter/index.php/Blogs/tutorials/jQuery/Javascript_Unicode">Unicode</a></li>
+        <li><a href="http://127.0.0.1/CodeIgniter/index.php/Blogs/tutorials/jQuery/String_substitutions"><span class="link-right">String substitutions</span></a></li>
+        <li><a href="http://127.0.0.1/CodeIgniter/index.php/Blogs/tutorials/jQuery/Strings_Reference">
+                <strong>STRING REFERENCE</strong><br/>
+                A comprehensive list of all string functions with
+                links to all library and default functions.
+        </a></li>
+        <li><a href="http://127.0.0.1/CodeIgniter/index.php/Blogs/tutorials/jQuery/Parse_int_and_Parse_Float"><span class="link-right">ParseInt() and ParseFloat()</span></a></li>
+        <li><a href="http://127.0.0.1/CodeIgniter/index.php/Blogs/tutorials/jQuery/toExponential"><span class="link-right">toExponential()</span></a></li>
+        <li><a href="http://127.0.0.1/CodeIgniter/index.php/Blogs/tutorials/jQuery/Strings_and_whitespace"><span class="link-right">Strings and whitespace</span></a></li>
+        <li><a href="http://127.0.0.1/CodeIgniter/index.php/Blogs/tutorials/jQuery/lastIndexOf"><span class="link-right">lastIndexOf</span></a></li>
+        <li><a href="http://127.0.0.1/CodeIgniter/index.php/Blogs/tutorials/jQuery/String_trim"><span class="link-right">trim()</span></a></li>
+        <li><a href="http://127.0.0.1/CodeIgniter/index.php/Blogs/tutorials/jQuery/String_charAt"><span class="link-right">charAt()</span></a></li>
+        <li><a href="http://127.0.0.1/CodeIgniter/index.php/Blogs/tutorials/jQuery/String_CharCodeAt"><span class="link-right">charCodeAt()</span></a></li>
+        <li><a href="http://127.0.0.1/CodeIgniter/index.php/Blogs/tutorials/jQuery/Strings_toUpperCase_and_toLowerCase"><span class="link-right">toUppercase() and toLowerCase()</span></a></li>
+        <li><a href="http://127.0.0.1/CodeIgniter/index.php/Blogs/tutorials/jQuery/String_concat"><span class="link-right">concat()</span></a></li>
+        <li><a href="http://127.0.0.1/CodeIgniter/index.php/Blogs/tutorials/jQuery/String_isEmpty"><span class="link-right">isEmpty()</span></a></li>
+        <li><a href="http://127.0.0.1/CodeIgniter/index.php/Blogs/tutorials/jQuery/String_StartsWith_and_endsWith"><span class="link-right">StartsWith() and endsWith()</span></a></li>
+        <li><a href="http://127.0.0.1/CodeIgniter/index.php/Blogs/tutorials/jQuery/String_quote"><span class="link-right">quote()</span></a></li>
+    </ul>
+
+    <h4 class="country" style="background: green">Javascript Functions</h4>
+    <ul class="LHnav" style="margin-left:0px;width:210px;">
+        <li><a href="http://127.0.0.1/CodeIgniter/index.php/Blogs/tutorials/jQuery/Function_Build-in_Object">The Function constructor</a></li>
+        <li><a href="http://127.0.0.1/CodeIgniter/index.php/Blogs/tutorials/jQuery/Javascript_Variable_Number_Arguments">Variadic functions</a></li>
+
+        <li><a href="http://127.0.0.1/CodeIgniter/index.php/Blogs/tutorials/jQuery/Javascript_Currying">Currying</a></li>
+        <li><a href="http://127.0.0.1/CodeIgniter/index.php/Blogs/tutorials/jQuery/Javascript_Functions_Recursion">Recursion</a></li>
+        <li><a href="http://127.0.0.1/CodeIgniter/index.php/Blogs/tutorials/jQuery/Javascript_Functions_Recursion_Part_II">Recursion Part II</a></li>
+        <li><a href="http://127.0.0.1/CodeIgniter/index.php/Blogs/tutorials/jQuery/Closures_Part_I">Closure Part I</a></li>
+        <li><a href="http://127.0.0.1/CodeIgniter/index.php/Blogs/tutorials/jQuery/Closures_Part_II">Closure Part II</a></li>
+        <li><a href="http://127.0.0.1/CodeIgniter/index.php/Blogs/tutorials/jQuery/Closure_functions">Closures III</a></li>
+        <li><a href="http://127.0.0.1/CodeIgniter/index.php/Blogs/tutorials/jQuery/Chaining">Chaining</a></li>
+        <li><a href="http://127.0.0.1/CodeIgniter/index.php/Blogs/tutorials/jQuery/Inheritance_Mixins">Inheritance Mixins</a></li>
+        <li><a href="http://127.0.0.1/CodeIgniter/index.php/Blogs/tutorials/jQuery/Javascript_Function_Properties_and_Methods">Function Properties and Methods</a></li>
+        <li><a href="http://127.0.0.1/CodeIgniter/index.php/Blogs/tutorials/jQuery/Javascript_the_new_operator">The new Operator</a></li>
+    
+    </ul>
+
+    
+
+    <h4 class="country" style="background: green">Javascript Regex </h4>
+    <ul id="LHnav" style="margin-left:0px;width:210px;">
+        <li><a href="http://127.0.0.1/CodeIgniter/index.php/Blogs/tutorials/jQuery/Javascript_Regular_Expressions">Regular Expressions</a></li>
+        <li><a href="http://127.0.0.1/CodeIgniter/index.php/Blogs/tutorials/jQuery/Javascript_Regular_Expressions_Part_III">Regular Expressions Part III</a></li>
+        <li><a href="http://127.0.0.1/CodeIgniter/index.php/Blogs/tutorials/jQuery/Javascript_Regular_Expressions_Part_IV">Regular Expressions Part IV</a></li>
+        <li><a href="http://127.0.0.1/CodeIgniter/index.php/Blogs/tutorials/jQuery/Javascript_Regular_Expressions_Part_V">Regular Expressions Part V</a></li>
+        <li><a href="http://127.0.0.1/CodeIgniter/index.php/Blogs/tutorials/jQuery/Javascript_Regular_Expressions_Part_VI">Regular Expressions Part VI</a></li>
+        <li><a href="http://127.0.0.1/CodeIgniter/index.php/Blogs/tutorials/jQuery/Regular_Expression_Library">Regular Expressions Library</a></li>
+    </ul>
+
+    <h4 class="country" style="background: green">Local Storage</h4>
+    <ul id="LHnav" style="margin-left:0px;width:210px;">
+        <li><a href="http://127.0.0.1/CodeIgniter/index.php/Blogs/tutorials/jQuery/Cookies_Part_1">Cookies Part I</a></li>
+
+    </ul>
+
+    <h4 class="country" style="background: green">Patterns</h4>
+    <ul id="LHnav" style="margin-left:0px;width:210px;">
+        <li><a href="http://127.0.0.1/CodeIgniter/index.php/Blogs/tutorials/jQuery/Patterns_Module">The Module Pattern</a></li>
+        <li><a href="http://127.0.0.1/CodeIgniter/index.php/Blogs/tutorials/jQuery/Patterns_Cache_Object">The Cache Pattern</a></li>
+        <li><a href="http://127.0.0.1/CodeIgniter/index.php/Blogs/tutorials/jQuery/Patterns_Configuration_Object">The Configuration Object Pattern</a></li>
+        <li><a href="http://127.0.0.1/CodeIgniter/index.php/Blogs/tutorials/jQuery/Objects_Revealing_Pattern">The Revealing Pattern</a></li>
+
+    </ul>
+
+    <h4 class="country" style="background: green">Timers</h4>
+    <ul id="LHnav" style="margin-left:0px;width:210px;">
+        <li><a href="http://127.0.0.1/CodeIgniter/index.php/Blogs/tutorials/jQuery/Javascript_timers">Timers Part I</a></li>
+        <li><a href="http://127.0.0.1/CodeIgniter/index.php/Blogs/tutorials/jQuery/Timers_part_II">Timers Part II</a></li>
+        <li><a href="http://127.0.0.1/CodeIgniter/index.php/Blogs/tutorials/jQuery/Timers_Part_III">Timers Part III</a></li>
+        <li><a href="http://127.0.0.1/CodeIgniter/index.php/Blogs/tutorials/jQuery/Closure_timers">Google's Closure Timer object</a></li>
+
+
+    </ul>
+    <h4 class="country" style="background: green">Testing</h4>
+    <ul id="LHnav" style="margin-left:0px;width:210px;">
+        <li><a href="http://127.0.0.1/CodeIgniter/index.php/Blogs/tutorials/jQuery/Assert">Assertions</a></li>
+        <li><a href="http://127.0.0.1/CodeIgniter/index.php/Blogs/tutorials/jQuery/Asynchronous_testing">Asynchronous Testing</a></li>
+        <li><a href="http://127.0.0.1/CodeIgniter/index.php/Blogs/tutorials/jQuery/Profiling">Profiling tests</a></li>
+        <li><a href="http://127.0.0.1/CodeIgniter/index.php/Blogs/tutorials/jQuery/Objects_Revealing_Pattern">JSUnit</a></li>
+
+    </ul>
+
+
+    <div>
+        <h4 class="country" style="background: green " >Javascript Labs</h4>
+        <ul id="LHnav" style="margin-left:0px;width:210px">
+            <li><a href="http://127.0.0.1/CodeIgniter/index.php/Blogs/tutorials/jQuery/Sieve_of_Eratosthenes">Sieve of Eratosthenes</a></li>
+            <li><a href="http://127.0.0.1/CodeIgniter/index.php/Blogs/tutorials/jQuery/base64">Base64 encoding with JavaScript</a></li>
+            <li><a href="http://127.0.0.1/CodeIgniter/index.php/Blogs/tutorials/jQuery/Cadaeic_Cadenza_regex_and_pi">Calculate pi from a piece of prose: Cadaeic Cadenza</a></li>
+            <li><a href="http://127.0.0.1/CodeIgniter/index.php/Blogs/tutorials/jQuery/Cadaeic_Cadenza_regex_and_pi">Calculate pi from a piece of prose: Cadaeic Cadenza</a></li>
+            <li><a href="http://127.0.0.1/CodeIgniter/index.php/Blogs/tutorials/jQuery/Chinese_Counting_Rods">Chinese counting rods</a></li>
+            <li><a href="http://127.0.0.1/CodeIgniter/index.php/Blogs/tutorials/jQuery/Maya_Numbers">Maya numbers</a></li>
+            <li><a href="http://127.0.0.1/CodeIgniter/index.php/Blogs/tutorials/jQuery/All_Cretans_are_liars">All Cretans are Liars</a></li>
+            <li><a href="http://127.0.0.1/CodeIgniter/index.php/Blogs/tutorials/jQuery/Excursions_into_Numbers_the_Greek_Numbering_System">The Greek Numbering System Part I</a></li>
+            <li><a href="http://127.0.0.1/CodeIgniter/index.php/Blogs/tutorials/jQuery/Javascript_spigot_algorithms">pi and Spigot algorithms</a></li>
+            <li><a href="http://127.0.0.1/CodeIgniter/index.php/Blogs/tutorials/jQuery/Javascript_Morse_Code">Morse Code</a></li>
+            <li><a href="http://127.0.0.1/CodeIgniter/index.php/Blogs/tutorials/jQuery/Bouncing_Numbers">Bouncing Numbers</a></li>
+            <li><a href="http://127.0.0.1/CodeIgniter/index.php/Blogs/tutorials/jQuery/Bouncing_Numbers_Part_II">Bouncing Numbers Part II</a></li>
+            <li><a href="http://127.0.0.1/CodeIgniter/index.php/Blogs/tutorials/jQuery/Buffon's_Needles">Buffon's Needles</a></li>
+            <li><a href="http://127.0.0.1/CodeIgniter/index.php/Blogs/tutorials/jQuery/Properties">Fluid Properties Library Part I</a></li>
+            <li><a href="http://127.0.0.1/CodeIgniter/index.php/Blogs/tutorials/jQuery/Properties-Part_II">Fluid Properties Library Part II</a></li>
+        </ul>
+    </div>
+
+
+    <h4 class="country" style="background: green">Engineers Library</h4>
+    <ul id="LHnav" style="margin-left:0px;width:210px;">
+        <li><a href="http://127.0.0.1/CodeIgniter/index.php/Blogs/tutorials/jQuery/Properties">Properties Part I</a></li>
+        <li><a href="http://127.0.0.1/CodeIgniter/index.php/Blogs/tutorials/jQuery/Properties-Part_II">Properties Part II</a></li>
+        <li><a href="http://127.0.0.1/CodeIgniter/index.php/Blogs/tutorials/jQuery/Psychrometrics_Part_1">Psychrometrics Part 1</a></li>
+    </ul>
+
+    <h4 class="country" style="background: green">Prototype</h4>
+    <ul id="LHnav" style="margin-left:0px;width:210px;">
+        <li><a href="http://127.0.0.1/CodeIgniter/index.php/Blogs/tutorials/jQuery/Properties">Prototype.js</a></li>
+        <li><a href="http://127.0.0.1/CodeIgniter/index.php/Blogs/tutorials/jQuery/Prototype_Dissect">Protype Dissect Part I</a></li>
+        <li><a href="http://127.0.0.1/CodeIgniter/index.php/Blogs/tutorials/jQuery/Prototype_Dissect_Part_2">Protype Dissect Part II</a></li>
+        <li><a href="http://127.0.0.1/CodeIgniter/index.php/Blogs/tutorials/jQuery/Prototype_Dissect_Part_3">Protype Dissect Part III</a></li>
+    </ul>
+
+    <h4 class="country" style="background: green">Beautiful Code </h4>
+    <ul id="LHnav" style="margin-left:0px;width:210px;">
+        <li><a href="http://127.0.0.1/CodeIgniter/index.php/Blogs/tutorials/jQuery/JSLint">JSLint</a></li>
+        <li><a href="http://127.0.0.1/CodeIgniter/index.php/Blogs/tutorials/jQuery/Your_Limits">Your Limits</a></li>
+        <li><a href="http://127.0.0.1/CodeIgniter/index.php/Blogs/tutorials/jQuery/Efficiency_personal">Efficiency Personal</a></li>
+        <li><a href="http://127.0.0.1/CodeIgniter/index.php/Blogs/tutorials/jQuery/Organizing_your_Code">Organizing your Code</a></li>
+
+
+    </ul>
+
+    <h4 class="country" style="background: green">Beautiful People </h4>
+    <ul id="LHnav" style="margin-left:0px;width:210px;">
+        <li><a href="http://127.0.0.1/CodeIgniter/index.php/Blogs/tutorials/jQuery/Brendan_Eich">Brendan Eich</a></li>
+        <li><a href="http://127.0.0.1/CodeIgniter/index.php/Blogs/tutorials/jQuery/Your_Limits">Your Limits</a></li>
+        <li><a href="http://127.0.0.1/CodeIgniter/index.php/Blogs/tutorials/jQuery/Efficiency_personal">Efficiency Personal</a></li>
+
+    </ul>
+
+
+
+</div>
+
+<div style="clear:both"></div>

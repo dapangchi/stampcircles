@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<!-- saved from url=(0082)http://closure-library.googlecode.com/svn/trunk/closure/goog/ui/formpost_test.html -->
+<HTML><!--
+Copyright 2009 Google Inc. All Rights Reserved.
+
+--><HEAD><META http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+  <TITLE>Closure Unit Tests - goog.ui.FormPost</TITLE>
+  <SCRIPT src="./Closure Unit Tests - goog.ui.FormPost_files/base.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.FormPost_files/deps.js"></SCRIPT>
+  <SCRIPT>
+    goog.require('goog.dom');
+    goog.require('goog.dom.TagName');
+    goog.require('goog.testing.jsunit');
+    goog.require('goog.ui.FormPost');
+  </SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.FormPost_files/array.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.FormPost_files/tagname.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.FormPost_files/classes.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.FormPost_files/coordinate.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.FormPost_files/size.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.FormPost_files/object.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.FormPost_files/string.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.FormPost_files/useragent.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.FormPost_files/dom.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.FormPost_files/stacktrace.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.FormPost_files/asserts.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.FormPost_files/testcase.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.FormPost_files/testrunner.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.FormPost_files/jsunit.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.FormPost_files/jscript.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.FormPost_files/stringbuffer.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.FormPost_files/errorhandlerweakdep.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.FormPost_files/disposable.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.FormPost_files/event.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.FormPost_files/browserevent.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.FormPost_files/eventwrapper.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.FormPost_files/listener.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.FormPost_files/simplepool.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.FormPost_files/pools.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.FormPost_files/events.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.FormPost_files/eventhandler.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.FormPost_files/eventtarget.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.FormPost_files/box.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.FormPost_files/rect.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.FormPost_files/product.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.FormPost_files/style.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.FormPost_files/idgenerator.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.FormPost_files/component.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.FormPost_files/formpost.js"></SCRIPT>
+</HEAD><BODY>
+  <SCRIPT>
+    var TARGET = 'target';
+    var ACTION_URL = 'http://url/';
+    var formPost;
+    var parameters;
+    var submits;
+    var originalCreateDom = goog.ui.FormPost.prototype.createDom;
+
+    function setUp() {
+      formPost = new goog.ui.FormPost();
+      submits = 0;
+
+      // Replace the form's submit method with a fake.
+      goog.ui.FormPost.prototype.createDom = function() {
+        originalCreateDom.apply(this, arguments);
+
+        this.getElement().submit = function() { submits++ };
+      }
+      parameters = {'foo': 'bar', 'baz': 'blah', 'array': ['no', 'yes']};
+    }
+
+    function tearDown() {
+      formPost.dispose();
+      goog.ui.FormPost.prototype.createDom = originalCreateDom;
+    }
+
+    function testPost() {
+      formPost.post(parameters, ACTION_URL, TARGET);
+      expectUrlAndParameters_(ACTION_URL, TARGET, parameters);
+    }
+
+    function testPostWithDefaults() {
+      formPost = new goog.ui.FormPost();
+      formPost.post(parameters);
+      expectUrlAndParameters_('', '', parameters);
+    }
+
+    function expectUrlAndParameters_(url, target, parameters) {
+      var form = formPost.getElement();
+      assertEquals('element must be a form',
+          goog.dom.TagName.FORM, form.tagName);
+      assertEquals('form must be hidden', 'none', form.style.display);
+      assertEquals('form method must be POST',
+          'POST', form.method.toUpperCase());
+      assertEquals('submits', 1, submits);
+      assertEquals('action attribute', url, form.action);
+      assertEquals('target attribute', target, form.target);
+      var inputs = goog.dom.getElementsByTagNameAndClass(
+          goog.dom.TagName.INPUT, null, form);
+      var formValues = {};
+      for (var i = 0, input = inputs[i]; input = inputs[i]; i++) {
+        if (goog.isArray(formValues[input.name])) {
+          formValues[input.name].push(input.value);
+        } else if (input.name in formValues) {
+          formValues[input.name] = [formValues[input.name], input.value];
+        } else {
+          formValues[input.name] = input.value;
+        }
+      }
+      assertObjectEquals('form values must match', parameters, formValues);
+    }
+
+  </SCRIPT>
+
+
+<DIV><DIV style="color: rgb(0, 100, 0); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; font-weight: bold; ">Closure Unit Tests - goog.ui.FormPost [PASSED]</DIV><DIV style="color: rgb(51, 51, 51); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; font-weight: bold; ">closure-library.googlecode.com/svn/trunk/closure/goog/ui/formpost_test.html</DIV><DIV style="color: rgb(51, 51, 51); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">2 of 2 tests run in 10ms.</DIV><DIV style="color: rgb(51, 51, 51); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">2 passed, 0 failed.</DIV><DIV style="color: rgb(51, 51, 51); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">5 ms/test. 36 files loaded.</DIV><DIV style="color: rgb(51, 51, 51); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">.</DIV><DIV style="color: rgb(51, 51, 51); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">08:25:03.389  Start</DIV><DIV style="color: rgb(0, 100, 0); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">08:25:03.397  testPost : PASSED</DIV><DIV style="color: rgb(0, 100, 0); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">08:25:03.398  testPostWithDefaults : PASSED</DIV><DIV style="color: rgb(51, 51, 51); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">08:25:03.398  Done</DIV><DIV style="color: rgb(51, 51, 51); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; "> </DIV><A style="display: block; font-size: small; " href="">Run again without reloading</A></DIV></BODY></HTML>

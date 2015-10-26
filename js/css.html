@@ -1,0 +1,20 @@
+<script type="text/javascript">
+    openPanel();
+    var menuObject={item1:'Typography',
+                    item1link:'#'}
+    var s='CSS menu <hr/>'+
+           '<span style="display:block"><a id="css" style="color:white" href="'+menuObject.item1link +'">'+menuObject.item1+'</a></span>'+
+           '<span style="display:block">Colors</span>'+
+           '<span style="display:block">Layout</span>'+
+           '<div style="height:100px">'+
+           '<button style="display:block;float:right">Save</button>'+
+           '</div';
+     $('#panelContainer').html(s);
+     $('#css').click(function(){
+        $('#cssContent').load('/CodeIgniter/css/screen.css?', function () {
+          $(this).fadeIn('slow');
+          return false;
+        });
+     });
+</script>
+

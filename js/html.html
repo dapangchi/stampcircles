@@ -1,0 +1,25 @@
+<script type="text/javascript">
+    var menuObject={item1:'Editpost',
+                    item1link:'#'}
+    var s='CSS menu <hr/>'+
+           '<span style="display:block"><a id="css" style="color:white" href="'+menuObject.item1link +'">'+menuObject.item1+'</a></span>'+
+           '<span style="display:block">Colors</span>'+
+           '<span style="display:block">Layout</span>'+
+           '<div style="height:100px">'+
+           '<button style="display:block;float:right">Save</button>'+
+           '</div';
+     $('#panelContent').html(s);
+     $('#css').click(function(){
+        $('#cssContent').load('/jQuery/introduction.dat?', function () {
+         $(this).fadeIn('slow');
+        return false;
+  });
+     });
+</script>
+
+<pre>
+<textarea id="cssContent" contenteditable="true" class="clearfix" style="float:left;width:700px;background:white;color:black;
+        font-size:11px;padding-left:10px">
+
+</textarea>
+</pre>

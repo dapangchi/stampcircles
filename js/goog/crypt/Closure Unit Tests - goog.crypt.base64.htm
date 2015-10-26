@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<!-- saved from url=(0083)http://closure-library.googlecode.com/svn/trunk/closure/goog/crypt/base64_test.html -->
+<HTML><!--
+  Copyright 2007 Google Inc. All Rights Reserved.
+--><HEAD><META http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<TITLE>Closure Unit Tests - goog.crypt.base64</TITLE>
+<SCRIPT src="./Closure Unit Tests - goog.crypt.base64_files/base.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.crypt.base64_files/deps.js"></SCRIPT>
+<SCRIPT>
+goog.require('goog.crypt.base64');
+  goog.require('goog.testing.jsunit');
+</SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.crypt.base64_files/crypt.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.crypt.base64_files/base64.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.crypt.base64_files/stacktrace.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.crypt.base64_files/asserts.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.crypt.base64_files/testcase.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.crypt.base64_files/testrunner.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.crypt.base64_files/jsunit.js"></SCRIPT>
+</HEAD><BODY>
+<SCRIPT>
+
+// Static test data
+var tests =
+[ "", "",
+  "f", "Zg==",
+  "fo", "Zm8=",
+  "foo", "Zm9v",
+  "foob", "Zm9vYg==",
+  "fooba", "Zm9vYmE=",
+  "foobar", "Zm9vYmFy",
+
+  // Testing non-ascii characters (1-10 in chinese)
+  "\xe4\xb8\x80\xe4\xba\x8c\xe4\xb8\x89\xe5\x9b\x9b\xe4\xba\x94\xe5" +
+  "\x85\xad\xe4\xb8\x83\xe5\x85\xab\xe4\xb9\x9d\xe5\x8d\x81",
+  "5LiA5LqM5LiJ5Zub5LqU5YWt5LiD5YWr5Lmd5Y2B"];
+
+function testByteArrayEncoding() {
+  // Let's see if it's sane by feeding it some well-known values. Index i
+  // has the input and index i+1 has the expected value.
+  for (var i = 0; i < tests.length; i += 2) {
+    var enc = goog.crypt.base64.encodeByteArray(
+        goog.crypt.stringToByteArray(tests[i]));
+    assertEquals(tests[i + 1], enc);
+    var dec = goog.crypt.byteArrayToString(
+        goog.crypt.base64.decodeStringToByteArray(enc));
+    assertEquals(tests[i], dec);
+  }
+}
+
+function testShortcutPathEncoding() {
+  // Test the higher-level API (tests the btoa/atob shortcut path)
+  for (var i = 0; i < tests.length; i += 2) {
+    var enc = goog.crypt.base64.encodeString(tests[i]);
+    assertEquals(tests[i + 1], enc);
+    var dec = goog.crypt.base64.decodeString(enc);
+    assertEquals(tests[i], dec);
+  }
+}
+
+function testMultipleIterations() {
+  // Now run it through its paces
+
+  var numIterations = 100;
+  for (var i = 0; i < numIterations; i++) {
+
+    var input = [];
+    for (var j = 0; j < i; j++)
+      input[j] = j % 256;
+
+    var encoded = goog.crypt.base64.encodeByteArray(input);
+    var decoded = goog.crypt.base64.decodeStringToByteArray(encoded);
+    assert("Encoded length not a multiple of 4?", !(encoded.length % 4));
+    assertEquals("Decoded length not equal to input length?",
+        input.length, decoded.length);
+
+    for (var j = 0; j < i; j++)
+      assertEquals("Values differ at position " + j, input[j], decoded[j]);
+  }
+}
+
+function testWebSafeEncoding() {
+  // Test non-websafe / websafe difference
+  var test = ">>>???>>>???=/+";
+  var enc = goog.crypt.base64.encodeByteArray(
+      goog.crypt.stringToByteArray(test));
+  assertEquals("Non-websafe broken?", "Pj4+Pz8/Pj4+Pz8/PS8r", enc);
+  enc = goog.crypt.base64.encodeString(test);
+  assertEquals("Non-websafe broken?", "Pj4+Pz8/Pj4+Pz8/PS8r", enc);
+  enc = goog.crypt.base64.encodeByteArray(
+      goog.crypt.stringToByteArray(test), true /* websafe */);
+  assertEquals("Websafe encoding broken", "Pj4-Pz8_Pj4-Pz8_PS8r", enc);
+  enc = goog.crypt.base64.encodeString(test, true);
+  assertEquals("Non-websafe broken?", "Pj4-Pz8_Pj4-Pz8_PS8r", enc);
+  var dec = goog.crypt.byteArrayToString(
+      goog.crypt.base64.decodeStringToByteArray(enc, true /* websafe */));
+  assertEquals("Websafe decoding broken", test, dec);
+  dec = goog.crypt.base64.decodeString(enc, true /* websafe */);
+  assertEquals("Websafe decoding broken", test, dec);
+
+  // Test parsing malformed characters
+  var caught = false;
+  try {
+    goog.crypt.base64.decodeStringToByteArray("foooooo+oooo", true /*websafe*/);
+  } catch(e) {
+    caught = true;
+  }
+  assertTrue("Didn't throw on malformed input", caught);
+}
+</SCRIPT>
+
+
+<DIV><DIV style="color: rgb(0, 100, 0); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; font-weight: bold; ">Closure Unit Tests - goog.crypt.base64 [PASSED]</DIV><DIV style="color: rgb(51, 51, 51); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; font-weight: bold; ">closure-library.googlecode.com/svn/trunk/closure/goog/crypt/base64_test.html</DIV><DIV style="color: rgb(51, 51, 51); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">4 of 4 tests run in 65ms.</DIV><DIV style="color: rgb(51, 51, 51); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">4 passed, 0 failed.</DIV><DIV style="color: rgb(51, 51, 51); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">16 ms/test. 9 files loaded.</DIV><DIV style="color: rgb(51, 51, 51); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">.</DIV><DIV style="color: rgb(51, 51, 51); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">05:16:39.258  Start</DIV><DIV style="color: rgb(0, 100, 0); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">05:16:39.265  testByteArrayEncoding : PASSED</DIV><DIV style="color: rgb(0, 100, 0); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">05:16:39.313  testMultipleIterations : PASSED</DIV><DIV style="color: rgb(0, 100, 0); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">05:16:39.321  testShortcutPathEncoding : PASSED</DIV><DIV style="color: rgb(0, 100, 0); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">05:16:39.322  testWebSafeEncoding : PASSED</DIV><DIV style="color: rgb(51, 51, 51); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">05:16:39.323  Done</DIV><DIV style="color: rgb(51, 51, 51); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; "> </DIV><A style="display: block; font-size: small; " href="">Run again without reloading</A></DIV></BODY></HTML>

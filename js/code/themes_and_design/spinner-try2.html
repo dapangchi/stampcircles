@@ -1,0 +1,16 @@
+<!--
+ ! Excerpted from "Mastering Dojo",
+ ! published by The Pragmatic Bookshelf.
+ ! Copyrights apply to this code. It may not be used to create training material, 
+ ! courses, books, articles, and the like. Contact us if you are in doubt.
+ ! We make no guarantees that this code is fit for any purpose. 
+ ! Visit http://www.pragmaticprogrammer.com/titles/rgdojo for more book information.
+-->
+<div dojoType='dijit.form.Button'> 
+   <script type="dojo/method">
+       alert("hello!");
+       var slotValues=["cherry", "lemon", "orange", "bar", "seven"];
+       this.setLabel(slotValues[Math.floor(Math.random()*5)]);
+   </script>
+</div>
+

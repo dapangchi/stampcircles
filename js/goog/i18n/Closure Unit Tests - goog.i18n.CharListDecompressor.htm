@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<!-- saved from url=(0096)http://closure-library.googlecode.com/svn/trunk/closure/goog/i18n/charlistdecompressor_test.html -->
+<HTML><!--
+Copyright 2009 Google Inc. All Rights Reserved.
+
+--><HEAD><META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<TITLE>Closure Unit Tests - goog.i18n.CharListDecompressor</TITLE>
+<META charset="utf-8">
+
+<SCRIPT src="./Closure Unit Tests - goog.i18n.CharListDecompressor_files/base.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.i18n.CharListDecompressor_files/deps.js"></SCRIPT>
+<SCRIPT>
+  goog.require('goog.i18n.CharListDecompressor');
+  goog.require('goog.testing.jsunit');
+</SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.i18n.CharListDecompressor_files/array.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.i18n.CharListDecompressor_files/uchar.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.i18n.CharListDecompressor_files/charlistdecompressor.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.i18n.CharListDecompressor_files/stacktrace.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.i18n.CharListDecompressor_files/asserts.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.i18n.CharListDecompressor_files/testcase.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.i18n.CharListDecompressor_files/testrunner.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.i18n.CharListDecompressor_files/jsunit.js"></SCRIPT>
+</HEAD><BODY>
+<SCRIPT>
+var decompressor = new goog.i18n.CharListDecompressor();
+
+function testBuildCharMap() {
+  assertEquals(0, decompressor.charMap_['0']);
+  assertEquals(10, decompressor.charMap_['A']);
+  assertEquals(87, decompressor.charMap_['}']);
+}
+
+function testGetCodeAt() {
+  var code = decompressor.getCodeAt_('321', 1, 2);
+  assertEquals(90, code);
+}
+
+function testAddCharsForType0() {
+  var list = ['a'];
+  var lastcode = decompressor.addChars_(list, 97, 0, 0);
+  assertArrayEquals(['a', 'b'], list);
+  assertEquals(98, lastcode);
+}
+
+function testAddCharsForType1() {
+  var list = ['a'];
+  var lastcode = decompressor.addChars_(list, 98, 0, 1);
+  assertArrayEquals(['a', 'a'], list);
+  assertEquals(97, lastcode);
+}
+
+function testAddCharsForType2() {
+  var list = ['a'];
+  var lastcode = decompressor.addChars_(list, 97, 1, 2);
+  assertArrayEquals(['a', 'b', 'c'], list);
+  assertEquals(99, lastcode);
+}
+
+function testToCharList() {
+  var list = decompressor.toCharList('%812E<E'); // a, x-z, p-r
+  assertArrayEquals(['a', 'x', 'y', 'z', 'p', 'q', 'r'], list);
+}
+</SCRIPT>
+
+
+
+<DIV><DIV style="color: rgb(0, 100, 0); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; font-weight: bold; ">Closure Unit Tests - goog.i18n.CharListDecompressor [PASSED]</DIV><DIV style="color: rgb(51, 51, 51); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; font-weight: bold; ">closure-library.googlecode.com/svn/trunk/closure/goog/i18n/charlistdecompressor_test.html</DIV><DIV style="color: rgb(51, 51, 51); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">6 of 6 tests run in 4ms.</DIV><DIV style="color: rgb(51, 51, 51); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">6 passed, 0 failed.</DIV><DIV style="color: rgb(51, 51, 51); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">1 ms/test. 10 files loaded.</DIV><DIV style="color: rgb(51, 51, 51); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">.</DIV><DIV style="color: rgb(51, 51, 51); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">07:35:56.879  Start</DIV><DIV style="color: rgb(0, 100, 0); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">07:35:56.881  testAddCharsForType0 : PASSED</DIV><DIV style="color: rgb(0, 100, 0); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">07:35:56.881  testAddCharsForType1 : PASSED</DIV><DIV style="color: rgb(0, 100, 0); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">07:35:56.882  testAddCharsForType2 : PASSED</DIV><DIV style="color: rgb(0, 100, 0); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">07:35:56.882  testBuildCharMap : PASSED</DIV><DIV style="color: rgb(0, 100, 0); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">07:35:56.882  testGetCodeAt : PASSED</DIV><DIV style="color: rgb(0, 100, 0); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">07:35:56.883  testToCharList : PASSED</DIV><DIV style="color: rgb(51, 51, 51); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">07:35:56.883  Done</DIV><DIV style="color: rgb(51, 51, 51); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; "> </DIV><A style="display: block; font-size: small; " href="">Run again without reloading</A></DIV></BODY></HTML>

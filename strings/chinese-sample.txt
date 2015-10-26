@@ -1,0 +1,430 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" dir="ltr" lang="en"><head>
+
+	
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+				<meta name="keywords" content="Wang Hsing-ching,1946,Commentator,Critic,Diaoyutai,Journalist,Libertarian,National Taiwan University,Pseudonym,RTHK,Taiwan Strait">
+		<link rel="shortcut icon" href="http://en.wikipedia.org/favicon.ico">
+		<link rel="apple-touch-icon" href="http://en.wikipedia.org/apple-touch-icon.png">
+		<link rel="search" type="application/opensearchdescription+xml" href="http://en.wikipedia.org/w/opensearch_desc.php" title="Wikipedia (en)">
+		<link rel="copyright" href="http://www.gnu.org/copyleft/fdl.html">
+<link rel="alternate" type="application/rss+xml" title="Wikipedia RSS Feed" href="http://en.wikipedia.org/w/index.php?title=Special:RecentChanges&amp;feed=rss">
+<link rel="alternate" type="application/atom+xml" title="Wikipedia Atom Feed" href="http://en.wikipedia.org/w/index.php?title=Special:RecentChanges&amp;feed=atom"><title>Wang Hsing-ching - Wikipedia, the free encyclopedia</title>
+		
+		<style type="text/css" media="screen, projection">/*<![CDATA[*/
+			@import "/skins-1.5/common/shared.css?122";
+			@import "/skins-1.5/monobook/main.css?122";
+		/*]]>*/</style>
+		<link rel="stylesheet" type="text/css" media="print" href="chinese-sample_files/commonPrint.css"><!--[if lt IE 5.5000]><style type="text/css">@import "/skins-1.5/monobook/IE50Fixes.css?122";</style><![endif]--><!--[if IE 5.5000]><style type="text/css">@import "/skins-1.5/monobook/IE55Fixes.css?122";</style><![endif]--><!--[if IE 6]><style type="text/css">@import "/skins-1.5/monobook/IE60Fixes.css?122";</style><![endif]--><!--[if IE 7]><style type="text/css">@import "/skins-1.5/monobook/IE70Fixes.css?122";</style><![endif]--><!--[if lt IE 7]><script type="text/javascript" src="/skins-1.5/common/IEFixes.js?122"></script>
+		<meta http-equiv="imagetoolbar" content="no" /><![endif]-->
+		
+		
+		
+		
+		
+		
+		<script type="text/javascript">/*<![CDATA[*/
+var skin = "monobook";
+var stylepath = "/skins-1.5";
+var wgArticlePath = "/wiki/$1";
+var wgScriptPath = "/w";
+var wgScript = "/w/index.php";
+var wgVariantArticlePath = false;
+var wgActionPaths = [];
+var wgServer = "http://en.wikipedia.org";
+var wgCanonicalNamespace = "";
+var wgCanonicalSpecialPageName = false;
+var wgNamespaceNumber = 0;
+var wgPageName = "Wang_Hsing-ching";
+var wgTitle = "Wang Hsing-ching";
+var wgAction = "view";
+var wgArticleId = "1038969";
+var wgIsArticle = true;
+var wgUserName = "Yannisl";
+var wgUserGroups = ["*", "user", "autoconfirmed"];
+var wgUserLanguage = "en";
+var wgContentLanguage = "en";
+var wgBreakFrames = false;
+var wgCurRevisionId = "193175417";
+var wgVersion = "1.13alpha";
+var wgEnableAPI = true;
+var wgEnableWriteAPI = false;
+var wgRestrictionEdit = [];
+var wgRestrictionMove = [];
+var wgAjaxWatch = {"watchMsg": "Watch", "unwatchMsg": "Unwatch", "watchingMsg": "Watching...", "unwatchingMsg": "Unwatching..."};
+/*]]>*/</script>
+                
+		<script type="text/javascript" src="chinese-sample_files/wikibits.js"><!-- wikibits js --></script><!-- Head Scripts -->
+		
+		<script type="text/javascript" src="chinese-sample_files/ajax.js"></script>
+		<script type="text/javascript" src="chinese-sample_files/ajaxwatch.js"></script>
+		<script type="text/javascript" src="chinese-sample_files/index_002.php"><!-- site js --></script><script type="text/javascript" src="chinese-sample_files/index_003.php"></script>
+		<style type="text/css">/*<![CDATA[*/
+@import "/w/index.php?title=MediaWiki:Common.css&usemsgcache=yes&action=raw&ctype=text/css&smaxage=2678400";
+@import "/w/index.php?title=MediaWiki:Monobook.css&usemsgcache=yes&action=raw&ctype=text/css&smaxage=2678400";
+@import "/w/index.php?title=-&action=raw&gen=css&maxage=2678400&smaxage=0&ts=20080217101802";
+@import "/w/index.php?title=User:Yannisl/monobook.css&action=raw&ctype=text/css";
+/*]]>*/</style>
+		<script type="text/javascript" src="chinese-sample_files/index.php"></script></head><body class="mediawiki ns-0 ltr page-Wang_Hsing-ching">
+	<div id="globalWrapper">
+		<div id="column-content">
+	<div id="content">
+		<a name="top" id="top"></a>
+		<div id="siteNotice"><script type="text/javascript" language="JavaScript">
+<!--
+var cookieName = "dismissSiteNotice=";
+var cookiePos = document.cookie.indexOf(cookieName);
+var siteNoticeID = "2.9";
+var siteNoticeValue = "\x3cdiv class=\"plainlinks\"\x3eThe \x3ca href=\"http://wikimania2008.wikimedia.org/wiki/\" class=\"external text\" title=\"http://wikimania2008.wikimedia.org/wiki/\" rel=\"nofollow\"\x3eWikimania 2008\x3c/a\x3e \x3ca href=\"http://wikimania2008.wikimedia.org/wiki/Call_for_Participation\" class=\"external text\" title=\"http://wikimania2008.wikimedia.org/wiki/Call_for_Participation\" rel=\"nofollow\"\x3eCall for Participation\x3c/a\x3e has been extended to the 19th.\x3cbr/\x3eSend in any last-minute proposals now!\x3c/div\x3e\n";
+var cookieValue = "";
+var msgClose = "hide";
+
+if (cookiePos > -1) {
+	cookiePos = cookiePos + cookieName.length;
+	var endPos = document.cookie.indexOf(";", cookiePos);
+	if (endPos > -1) {
+		cookieValue = document.cookie.substring(cookiePos, endPos);
+	} else {
+		cookieValue = document.cookie.substring(cookiePos);
+	}
+}
+if (cookieValue != siteNoticeID) {
+	function dismissNotice() {
+		var date = new Date();
+		date.setTime(date.getTime() + 30*86400*1000);
+		document.cookie = cookieName + siteNoticeID + "; expires="+date.toGMTString() + "; path=/";
+		var element = document.getElementById('siteNotice');
+		element.parentNode.removeChild(element);
+	}
+	document.writeln('<table width="100%" id="mw-dismissable-notice"><tr><td width="80%">'+siteNoticeValue+'</td>');
+	document.writeln('<td width="20%" align="right">[<a href="javascript:dismissNotice();">'+msgClose+'</a>]</td></tr></table>');
+}
+-->
+</script><table id="mw-dismissable-notice" width="100%"><tbody><tr><td width="80%"><div class="plainlinks">The <a href="http://wikimania2008.wikimedia.org/wiki/" class="external text" title="http://wikimania2008.wikimedia.org/wiki/" rel="nofollow">Wikimania 2008</a> <a href="http://wikimania2008.wikimedia.org/wiki/Call_for_Participation" class="external text" title="http://wikimania2008.wikimedia.org/wiki/Call_for_Participation" rel="nofollow">Call for Participation</a> has been extended to the 19th.<br>Send in any last-minute proposals now!</div>
+</td>
+<td align="right" width="20%">[<a href="javascript:dismissNotice();">hide</a>]</td></tr></tbody></table>
+</div>		<h1 class="firstHeading"><span><span>Wang Hsing-ching</span></span></h1>
+		<div id="bodyContent">
+			<h3 id="siteSub">From Wikipedia, the free encyclopedia</h3>
+			<div id="contentSub"></div>
+									<div id="jump-to-nav">Jump to: <a href="#column-one">navigation</a>, <a href="#searchInput">search</a></div>			<!-- start content -->
+			<table style="" class="metadata plainlinks ambox ambox-style">
+<tbody><tr>
+<td class="ambox-image">
+<div style="width: 52px;"><a href="http://en.wikipedia.org/wiki/Image:Broom_icon.svg" class="image" title="Broom icon.svg"><img alt="" src="chinese-sample_files/40px-Broom_icon.png" border="0" height="40" width="40"></a></div>
+</td>
+<td class="ambox-text">The references in this article would be clearer with a different or consistent style of <b><a href="http://en.wikipedia.org/wiki/Wikipedia:Citing_sources" title="Wikipedia:Citing sources">citation</a>, <a href="http://en.wikipedia.org/wiki/Wikipedia:Footnote" class="mw-redirect" title="Wikipedia:Footnote">footnoting</a>, or <a href="http://en.wikipedia.org/wiki/Wikipedia:External_links" title="Wikipedia:External links">external linking</a></b>.</td>
+</tr>
+</tbody></table>
+<p><b>Wang Hsing-ching</b> (王杏慶/王杏庆 Wáng Xìngqìng) (born in <a href="http://en.wikipedia.org/wiki/1946" title="1946">1946</a>), who has a <a href="http://en.wikipedia.org/wiki/Pseudonym" title="Pseudonym">pseudonym</a> of <b>Nanfang Shuo</b> (南方朔 Nán Fāngshuò), is a <a href="http://en.wikipedia.org/wiki/Journalist" title="Journalist">journalist</a>, political <a href="http://en.wikipedia.org/wiki/Commentator" title="Commentator">commentator</a>, and cultural <a href="http://en.wikipedia.org/wiki/Critic" title="Critic">critic</a>. Today, he is the chief editor and writer of <a href="http://www.new7.com.tw/" class="external text" title="http://www.new7.com.tw/" rel="nofollow"><i>The Journalist</i> magazine</a>
+(《新新聞週刊》), with commentaries on current issues in major newspapers. His
+writings, including Western ideas analysis, social phenomena criticism,
+and literature comments, are all regarded as very influential.
+Crediting his intellectual contribution to the society, he is known as
+"the most industrious private scholar in Taiwan".</p>
+<table id="toc" class="toc" summary="Contents">
+<tbody><tr>
+<td>
+<div id="toctitle">
+<h2>Contents</h2>
+ <span class="toctoggle">[<a href="javascript:toggleToc()" class="internal" id="togglelink">hide</a>]</span></div>
+<ul>
+<li class="toclevel-1"><a href="#Background"><span class="tocnumber">1</span> <span class="toctext">Background</span></a></li>
+<li class="toclevel-1"><a href="#Style_and_Major_Themes_of_Writing"><span class="tocnumber">2</span> <span class="toctext">Style and Major Themes of Writing</span></a></li>
+<li class="toclevel-1"><a href="#Contribution_to_Journalism"><span class="tocnumber">3</span> <span class="toctext">Contribution to Journalism</span></a></li>
+<li class="toclevel-1"><a href="#Views_on_Journalism"><span class="tocnumber">4</span> <span class="toctext">Views on Journalism</span></a></li>
+<li class="toclevel-1"><a href="#Seeing_Literature_as_Journalism"><span class="tocnumber">5</span> <span class="toctext">Seeing Literature as Journalism</span></a></li>
+<li class="toclevel-1"><a href="#Views_on_Reading"><span class="tocnumber">6</span> <span class="toctext">Views on Reading</span></a></li>
+<li class="toclevel-1"><a href="#Comments_on_literatures"><span class="tocnumber">7</span> <span class="toctext">Comments on literatures</span></a></li>
+<li class="toclevel-1"><a href="#Bibliography"><span class="tocnumber">8</span> <span class="toctext">Bibliography</span></a></li>
+<li class="toclevel-1"><a href="#Links_to_Nan.27s_Work"><span class="tocnumber">9</span> <span class="toctext">Links to Nan's Work</span></a></li>
+</ul>
+</td>
+</tr>
+</tbody></table>
+<script type="text/javascript">
+//<![CDATA[
+ if (window.showTocToggle) { var tocShowText = "show"; var tocHideText = "hide"; showTocToggle(); } 
+//]]>
+</script>
+<p><a name="Background" id="Background"></a></p>
+<h2><span class="editsection">[<a href="http://en.wikipedia.org/w/index.php?title=Wang_Hsing-ching&amp;action=edit&amp;section=1" title="Edit section: Background">edit</a>]</span> <span class="mw-headline">Background</span></h2>
+<p><b>Wang Hsing-ching</b> earned his undergraduate degree in the <a href="http://www.fo.ntu.edu.tw/fo_e/vision_e.htm" class="external text" title="http://www.fo.ntu.edu.tw/fo_e/vision_e.htm" rel="nofollow">School for Forestry and Resource Conservation</a>, from <a href="http://en.wikipedia.org/wiki/National_Taiwan_University" title="National Taiwan University">National Taiwan University</a> (臺大森林系) and a doctorate degree in <a href="http://www.pccu.edu.tw/" class="external text" title="http://www.pccu.edu.tw/" rel="nofollow">Chinese Culture University</a>(文化大學實業計畫研究所博士班). <a href="http://en.wikipedia.org/wiki/Diaoyutai" class="mw-redirect" title="Diaoyutai">The Diaoyutai Island (Senkaku Islands)</a>
+incident (釣魚台事件) made Wang reach an ephiphany to become a journalist.
+During that period, Wang abandoned his overseas study plan and stayed
+in Taiwan, starting his career. In the 1970s, Wang was a reporter for
+the <i><a href="http://en.wikipedia.org/wiki/Taiwan_Times" title="Taiwan Times">Taiwan Times</a>,</i> and afterwards worked as a writer, vice general editor, and general editor in <i><a href="http://en.wikipedia.org/wiki/The_China_Times" class="mw-redirect" title="The China Times">The China Times</a></i>
+(《中國時報》). Although he never received technical university training in
+journalism, he has more than twenty years of experience in the mass
+media as a news commentator.</p>
+<p><a name="Style_and_Major_Themes_of_Writing" id="Style_and_Major_Themes_of_Writing"></a></p>
+<h2><span class="editsection">[<a href="http://en.wikipedia.org/w/index.php?title=Wang_Hsing-ching&amp;action=edit&amp;section=2" title="Edit section: Style and Major Themes of Writing">edit</a>]</span> <span class="mw-headline">Style and Major Themes of Writing</span></h2>
+<p>Wang, as an author, began with topics mainly concerned about
+cultural changes, political changes, and the controversies in society.
+His early works are based on the themes of describing and criticizing
+cultures and politics, e.g. <i>Di guo shu yi yu Taiwan du li yun dong</i>
+(《帝國主義與臺灣獨立運動》). Later in his career, he started publishing critical
+book reviews . Recently, Wang has published a series of books about
+"Language". <i>Magical Eyes,</i> his latest book, (《魔幻之眼》) is his
+first published work in the book commentary collection. As a tutor
+through writing, his analysis focuses on culture, history, thoughts,
+politics, etc.</p>
+<p><a name="Contribution_to_Journalism" id="Contribution_to_Journalism"></a></p>
+<h2><span class="editsection">[<a href="http://en.wikipedia.org/w/index.php?title=Wang_Hsing-ching&amp;action=edit&amp;section=3" title="Edit section: Contribution to Journalism">edit</a>]</span> <span class="mw-headline">Contribution to Journalism</span></h2>
+<p>Wang has never been shy expressing his critical opinions on current
+affairs. In the summer of 2004, he attended a forum in the Hong Kong
+Convention and Exhibition Center concerning the political issues in
+Taiwan and the relation across the <a href="http://en.wikipedia.org/wiki/Taiwan_Strait" title="Taiwan Strait">Taiwan Strait</a>
+after the Presidential election. He suggested that the two shores of
+the Strait should make positive interactions in order to solve the
+rational problems.</p>
+<p>As a journalist and the chief writer of <a href="http://www.new7.com.tw/" class="external text" title="http://www.new7.com.tw/" rel="nofollow"><i>The Journalist magazine</i></a>,
+he has his own independent analysis towards the political issues. Not
+long after President Chen Shuibien gave the speech of “One State on
+Each Side”, he wrote critics on it, which was exactly to the point,
+“democracy in Taiwan is already moving towards a new and populist type
+of soft politics of terror”.</p>
+<p><a name="Views_on_Journalism" id="Views_on_Journalism"></a></p>
+<h2><span class="editsection">[<a href="http://en.wikipedia.org/w/index.php?title=Wang_Hsing-ching&amp;action=edit&amp;section=4" title="Edit section: Views on Journalism">edit</a>]</span> <span class="mw-headline">Views on Journalism</span></h2>
+<p>In a public discussion titled “How to build a mass media culture
+with “taste”? Wang criticized the current mass media culture. He
+pointed out that if the speakers/interviewees could not state their
+stance clearly, they had to “pay the price” in the sense that reporters
+might make twist their words to make a story more dramatic. The
+unethical reporting of some journalists disappointed Wang, and he urged
+that journalists had to realize that it was shameful to have
+disregarded the obligation to report the truth.</p>
+<p>At societal level, he emphasized that not only does the mass media
+deliver information to the public, but it also affects the social
+structure and the political environment. He noted that journalists
+should bear in mind that they have great responsibilities to the
+general public.</p>
+<p>Particularly in Taiwan, he put the blame of the current situation on
+changes in political conditions. During this unstable period, different
+types of mass media emerged. As advertising plays a greater role in the
+mass media, it is inevitable that politicians would make use of the
+mass media for propaganda. However, he said that there are still
+journalists who stand by their principles, although it remains
+difficult for them to uphold the journalistic ethics.</p>
+<p><a name="Seeing_Literature_as_Journalism" id="Seeing_Literature_as_Journalism"></a></p>
+<h2><span class="editsection">[<a href="http://en.wikipedia.org/w/index.php?title=Wang_Hsing-ching&amp;action=edit&amp;section=5" title="Edit section: Seeing Literature as Journalism">edit</a>]</span> <span class="mw-headline">Seeing Literature as Journalism</span></h2>
+<div class="thumb tright">
+<div class="thumbinner" style="width: 242px;"><a href="http://en.wikipedia.org/wiki/Image:NanRTHK.jpg" class="image" title="Nanfang Shuo in an RTHK interview"><img alt="Nanfang Shuo in an RTHK interview" src="chinese-sample_files/NanRTHK.jpg" class="thumbimage" border="0" height="180" width="240"></a>
+<div class="thumbcaption">Nanfang Shuo in an <a href="http://en.wikipedia.org/wiki/RTHK" class="mw-redirect" title="RTHK">RTHK</a> interview</div>
+</div>
+</div>
+<p>In an RTHK TV program "Merry Book Worm" in October 2003, (<a href="http://www.rthk.org.hk/rthk/tv/bookworm/20031026.html" class="external text" title="http://www.rthk.org.hk/rthk/tv/bookworm/20031026.html" rel="nofollow">愈讀愈快樂</a><sup class="noprint Inline-Template"><span title="The preceding link appears to be dead&nbsp;since April 2007" style="white-space: nowrap;">[<i><a href="http://en.wikipedia.org/wiki/Wikipedia:Dead_external_links" title="Wikipedia:Dead external links">dead link</a> – <a href="http://web.archive.org/web/*/http://www.rthk.org.hk/rthk/tv/bookworm/20031026.html" class="external text" title="http://web.archive.org/web/*/http://www.rthk.org.hk/rthk/tv/bookworm/20031026.html" rel="nofollow">history</a></i>]</span></sup>,
+5 Oct 04.) Wang shared his opinions on how to choose suitable books for
+ourselves. He raised questions on how topics of certain discourses are
+set, why the topics are written the way they are, and how the written
+formats differ from author to author, and suggested that these are the
+aspects we have to think about when we choose books to read. Also, Wang
+stressed that it is necessary for every author to get the basic and
+wide-ranging knowledge on different areas before having any disscusion
+or analysis. With his literature commentaries in <i>Magical Eyes</i> (《魔幻之眼》), Nanfang Shuo attempts to give his readers a brief overview on his recommended books to help them choose readings.</p>
+<p>Wang’s views on literature ties in well in the principles in
+journalism. While literature commenting allows his audience to have a
+knowledge of what is currently happening in the world, reporters are
+also doing the same thing: making readers be aware of current affairs.
+Speaking about journalism, he said that we, as readers, have to be
+careful about different reporters’ stances and their different
+perspectives based on various sources. On the other hand, reporters
+should always bear the obligation to the truth and be objective by
+relying on the more reliable sources.</p>
+<p>In another interview from <a href="http://news.pchome.com.tw/life/cna/20030408/index-20030408165736010244.html" class="external text" title="http://news.pchome.com.tw/life/cna/20030408/index-20030408165736010244.html" rel="nofollow">Central News Agency (中央社)</a><sup class="noprint Inline-Template"><span title="The preceding link appears to be dead&nbsp;since April 2007" style="white-space: nowrap;">[<i><a href="http://en.wikipedia.org/wiki/Wikipedia:Dead_external_links" title="Wikipedia:Dead external links">dead link</a> – <a href="http://web.archive.org/web/*/http://news.pchome.com.tw/life/cna/20030408/index-20030408165736010244.html" class="external text" title="http://web.archive.org/web/*/http://news.pchome.com.tw/life/cna/20030408/index-20030408165736010244.html" rel="nofollow">history</a></i>]</span></sup>
+in Taiwan, Wang pointed out that readers are not encouraged to spend
+too much time on books which are too difficult to be digested or too
+easy to read. In the interview, Wang encouraged readers to find the
+books which would motivate them and those which can give them new
+perspectives. Applying Wang's views on reading, journalism, and news
+reports, readers should focus their attention on news of particular
+interest to them, ones which they feel comfortable to read and
+criticize. Moreover, Wang believes that readers are responsible for the
+verification of reports.</p>
+<p><a name="Views_on_Reading" id="Views_on_Reading"></a></p>
+<h2><span class="editsection">[<a href="http://en.wikipedia.org/w/index.php?title=Wang_Hsing-ching&amp;action=edit&amp;section=6" title="Edit section: Views on Reading">edit</a>]</span> <span class="mw-headline">Views on Reading</span></h2>
+<p>As a commentator of literature, Wang welcomes all different genres
+of books. He firmly believes that all books can be beneficial and that
+the more one reads, the more one will gain in that field of expertise.
+He recalled that in his childhood, he was unable to do anything but
+read.</p>
+<p>One belief of Wang is that wisdom in different aspects are all
+inter-related. For him, the concepts of literature, history, and social
+theory can be easily understood. He believes that literature, poetry,
+politics, and philosophy are mutually related. Having this
+understanding, Wang likes to use poems to interpret international
+politics and the economic phenomenon in recent years. This proves that
+as a commentator of current affairs and as chief writer of <a href="http://www.new7.com.tw/" class="external text" title="http://www.new7.com.tw/" rel="nofollow"><i>The Journalist</i></a>, he uses literary style to write journalistic articles.</p>
+<p>A few years ago, Wang discovered an interest in linguistics. Some of
+the inspirations of Wang stems from the Chinese classic literature,
+novels, and prose, while some of them comes from news reports.
+Researching the origin and history of the common vocabularies, he also
+investigated the changing process of these vocabularies in society. To
+him, this changing process can be seen from the use of language in news
+reports, for the language the reporters used marks the changes in
+social value. In fact, his motivation and his way to learn about the
+origins of vocabulary is very applicable to the elements of journalism:
+both fields require accurate information, and verification by different
+reliable sources. We can only tell the truth (of events or the origin
+of vocabularies) after verifications.</p>
+<p>Wang is a <a href="http://en.wikipedia.org/wiki/Libertarian" class="mw-redirect" title="Libertarian">libertarian</a>,
+and he believes that it is important to be aware of the language
+ambiguity in understanding readings. As there are some writers who
+easily confuse readers, with or without intention, great language
+skills and a critical mind are essential to make yourself clear about
+what you are reading and what the writers are telling.</p>
+<p><a name="Comments_on_literatures" id="Comments_on_literatures"></a></p>
+<h2><span class="editsection">[<a href="http://en.wikipedia.org/w/index.php?title=Wang_Hsing-ching&amp;action=edit&amp;section=7" title="Edit section: Comments on literatures">edit</a>]</span> <span class="mw-headline">Comments on literatures</span></h2>
+<p>Wang was one of the committee members to adjudicate the “20th
+century 100 greatest Chinese novels”. As the novels revealed to Wang a
+feeling of sorrow and a sense of pressure, he commented the 20th
+century Chinese novels as a reflection of Chinese history in the past
+100 years which he saw a difficult and suffering period for the
+intellectuals.</p>
+<p><a name="Bibliography" id="Bibliography"></a></p>
+<h2><span class="editsection">[<a href="http://en.wikipedia.org/w/index.php?title=Wang_Hsing-ching&amp;action=edit&amp;section=8" title="Edit section: Bibliography">edit</a>]</span> <span class="mw-headline">Bibliography</span></h2>
+<ul>
+<li>《靈犀之眼：閱讀大師2》 Lingxi zhi Yan&nbsp;: Yuedu Dashi 2 18th June, 2004</li>
+<li>《語言之鑰》 Yuyan zhi Yao 23rd March, 2004</li>
+<li>《白遼士浮士德的天譴》 Bailiaoshi Fushide de Tianqian 21st December, 2003</li>
+<li>Magical Eyes 《魔幻之眼》 Mo Wan Zhi Yan 31st March, 2003</li>
+<li>《詩戀記》 Shilian ji 5th January, 2003</li>
+<li>Language is our Hope 《語言是我們的希望》 Yuyan shi Women de Xiwang 1st July, 2002</li>
+<li>Write myself a poem 《給自己一首詩》 Gei Ziji Yi Shou Shi 1st September, 2001</li>
+<li>Under the Sky of Language 《在語言的天空下》 Zai yuyan de tiankong xia 1st May, 2001</li>
+<li>《除魔與昇華》 Cho Mo yu Sheng Hua 10th April, 2001</li>
+<li>Language is Our Ocean 《語言是我們的海洋》 Yuyan shi Women de Haiyang 1st Auguest, 2000</li>
+<li>Where There is Light 《有光的所在》 You Guang de Suo Zai 1st February, 2000</li>
+<li>《經濟是權力，也是文學》 Jingji shi quanli, ye shi Wenxue 1st October, 1999</li>
+<li>Language is Our Starmap 《語言是我們的星圖》 Yuyan shi Women de Xingtu 5th March, 1999</li>
+<li>《世紀末抒情》 Shi Ji Mo Shu Qing 10th September, 1998</li>
+<li>Dwelling in language 《語言是我們的居所》 Yu Yan Shi Wo Men De Ju Suo 15th January, 1998</li>
+<li>《如何做一個積極的公民》 Ruhe zuo Yige Jiji de Gongmin 1st November, 1995</li>
+<li>Critique of the Li Teng-hui era 《李登輝時代的批判》 Li Denghui shidai de Pipan 16th April, 1994</li>
+<li>《自由主義的反思批判》 Ziyou zhuyi de fansi Pipan 16th March, 1994</li>
+<li>《憤怒之愛&nbsp;: 六零年代美國學生運動》 Fen nu zhi ai&nbsp;: liu ling nian dai Meiguo xue sheng yu dong 1991</li>
+<li>The King Edaepus 《伊底帕斯王的悲劇》 Yi De Pa Si Wang de Bei Ju</li>
+<li>《自由主義之最後堡壘》 Zi You Zhu Yi Zhi Zui Hou Pu Lei</li>
+<li>《自由主義的反思批判》 Zi You Zhu Yi De Fan Si Bi Ban</li>
+<li>《另一種英雄&nbsp;: 反體制的思想與人物》 Ling yi zhong ying xiong&nbsp;: Fan ti zhi de si xiang yu ren wu</li>
+<li>《文化啟示錄》 Wen Hua Qi Shi Lu</li>
+</ul>
+<p><a name="Links_to_Nan.27s_Work" id="Links_to_Nan.27s_Work"></a></p>
+<h2><span class="editsection">[<a href="http://en.wikipedia.org/w/index.php?title=Wang_Hsing-ching&amp;action=edit&amp;section=9" title="Edit section: Links to Nan's Work">edit</a>]</span> <span class="mw-headline">Links to Nan's Work</span></h2>
+<ul>
+<li><a href="http://hk.news.yahoo.com/041010/12/15irn.html" class="external text" title="http://hk.news.yahoo.com/041010/12/15irn.html" rel="nofollow">A news article of Nan's views on the US democratic system (Ming Pao, 11 Oct 2004)</a><sup class="noprint Inline-Template"><span title="The preceding link appears to be dead&nbsp;since April 2007" style="white-space: nowrap;">[<i><a href="http://en.wikipedia.org/wiki/Wikipedia:Dead_external_links" title="Wikipedia:Dead external links">dead link</a> – <a href="http://web.archive.org/web/*/http://hk.news.yahoo.com/041010/12/15irn.html" class="external text" title="http://web.archive.org/web/*/http://hk.news.yahoo.com/041010/12/15irn.html" rel="nofollow">history</a></i>]</span></sup></li>
+</ul>
+
+
+<!-- 
+NewPP limit report
+Preprocessor node count: 243/1000000
+Post-expand include size: 5588/2048000 bytes
+Template argument size: 1718/2048000 bytes
+#ifexist count: 0/500
+-->
+
+<!-- Saved in parser cache with key enwiki:pcache:idhash:1038969-0!1!0!default!!en!2 and timestamp 20080312183555 -->
+<div class="printfooter">
+Retrieved from "<a href="http://en.wikipedia.org/wiki/Wang_Hsing-ching">http://en.wikipedia.org/wiki/Wang_Hsing-ching</a>"</div>
+			<div id="catlinks" class="catlinks"><div id="mw-normal-catlinks"><a href="http://en.wikipedia.org/wiki/Special:Categories" title="Special:Categories">Categories</a>: <span dir="ltr"><a href="http://en.wikipedia.org/wiki/Category:1946_births" title="Category:1946 births">1946 births</a></span> | <span dir="ltr"><a href="http://en.wikipedia.org/wiki/Category:Living_people" title="Category:Living people">Living people</a></span> | <span dir="ltr"><a href="http://en.wikipedia.org/wiki/Category:National_Taiwan_University_alumni" title="Category:National Taiwan University alumni">National Taiwan University alumni</a></span> | <span dir="ltr"><a href="http://en.wikipedia.org/wiki/Category:Taiwanese_journalists" title="Category:Taiwanese journalists">Taiwanese journalists</a></span></div><div id="mw-hidden-catlinks" class="mw-hidden-cats-hidden">Hidden categories: <span dir="ltr"><a href="http://en.wikipedia.org/wiki/Category:Wikipedia_references_cleanup" title="Category:Wikipedia references cleanup">Wikipedia references cleanup</a></span> | <span dir="ltr"><a href="http://en.wikipedia.org/wiki/Category:All_articles_with_dead_external_links" title="Category:All articles with dead external links">All articles with dead external links</a></span> | <span dir="ltr"><a href="http://en.wikipedia.org/wiki/Category:Articles_with_dead_external_links_since_April_2007" title="Category:Articles with dead external links since April 2007">Articles with dead external links since April 2007</a></span></div></div>			<!-- end content -->
+			<div class="visualClear"></div>
+		</div>
+	</div>
+		</div>
+		<div id="column-one">
+	<div id="p-cactions" class="portlet">
+		<h5>Views</h5>
+		<div class="pBody">
+			<ul>
+					 <li id="ca-nstab-main" class="selected"><a href="http://en.wikipedia.org/wiki/Wang_Hsing-ching" title="View the content page [alt-shift-c]" accesskey="c">Article</a></li>
+					 <li id="ca-talk"><a href="http://en.wikipedia.org/wiki/Talk:Wang_Hsing-ching" title="Discussion about the content page [alt-shift-t]" accesskey="t">Discussion</a></li>
+					 <li id="ca-edit"><a href="http://en.wikipedia.org/w/index.php?title=Wang_Hsing-ching&amp;action=edit" title="You can edit this page. Please use the preview button before saving. [alt-shift-e]" accesskey="e">Edit this page</a></li>
+					 <li id="ca-history"><a href="http://en.wikipedia.org/w/index.php?title=Wang_Hsing-ching&amp;action=history" title="Past versions of this page [alt-shift-h]" accesskey="h">History</a></li>
+					 <li id="ca-move"><a href="http://en.wikipedia.org/wiki/Special:MovePage/Wang_Hsing-ching" title="Rename this page [alt-shift-m]" accesskey="m">Move</a></li>
+					 <li id="ca-watch"><a href="http://en.wikipedia.org/w/index.php?title=Wang_Hsing-ching&amp;action=watch" title="Add this page to your watchlist [alt-shift-w]" accesskey="w">Watch</a></li>
+				</ul>
+		</div>
+	</div>
+	<div class="portlet" id="p-personal">
+		<h5>Personal tools</h5>
+		<div class="pBody">
+			<ul>
+				<li id="pt-userpage"><a href="http://en.wikipedia.org/wiki/User:Yannisl" title="My user page [alt-shift-.]" accesskey="." class="new">Yannisl</a></li>
+				<li id="pt-mytalk"><a href="http://en.wikipedia.org/wiki/User_talk:Yannisl" title="My talk page [alt-shift-n]" accesskey="n">My talk</a></li>
+				<li id="pt-preferences"><a href="http://en.wikipedia.org/wiki/Special:Preferences" title="My preferences">My preferences</a></li>
+				<li id="pt-watchlist"><a href="http://en.wikipedia.org/wiki/Special:Watchlist" title="The list of pages that you are monitoring for changes [alt-shift-l]" accesskey="l">My watchlist</a></li>
+				<li id="pt-mycontris"><a href="http://en.wikipedia.org/wiki/Special:Contributions/Yannisl" title="List of my contributions [alt-shift-y]" accesskey="y">My contributions</a></li>
+				<li id="pt-logout"><a href="http://en.wikipedia.org/w/index.php?title=Special:UserLogout&amp;returnto=Wang_Hsing-ching" title="Log out">Log out</a></li>
+			</ul>
+		</div>
+	</div>
+	<div class="portlet" id="p-logo">
+		<a style="background-image: url(/images/wiki-en.png);" href="http://en.wikipedia.org/wiki/Main_Page" title="Visit the main page [alt-shift-z]" accesskey="z"></a>
+	</div>
+	<script type="text/javascript"> if (window.isMSIE55) fixalpha(); </script>
+		<div class="portlet" id="p-navigation">
+		<h5>Navigation</h5>
+		<div class="pBody">
+			<ul>
+				<li id="n-mainpage"><a href="http://en.wikipedia.org/wiki/Main_Page" title="Visit the main page [alt-shift-z]" accesskey="z">Main Page</a></li>
+				<li id="n-Contents"><a href="http://en.wikipedia.org/wiki/Portal:Contents" title="Guides to browsing Wikipedia">Contents</a></li>
+				<li id="n-featuredcontent"><a href="http://en.wikipedia.org/wiki/Portal:Featured_content">Featured content</a></li>
+				<li id="n-currentevents"><a href="http://en.wikipedia.org/wiki/Portal:Current_events" title="Find background information on current events">Current events</a></li>
+				<li id="n-randompage"><a href="http://en.wikipedia.org/wiki/Special:Random" title="Load a random article [alt-shift-x]" accesskey="x">Random article</a></li>
+			</ul>
+		</div>
+	</div>
+		<div class="portlet" id="p-interaction">
+		<h5>Interaction</h5>
+		<div class="pBody">
+			<ul>
+				<li id="n-aboutsite"><a href="http://en.wikipedia.org/wiki/Wikipedia:About">About Wikipedia</a></li>
+				<li id="n-portal"><a href="http://en.wikipedia.org/wiki/Wikipedia:Community_Portal" title="About the project, what you can do, where to find things">Community portal</a></li>
+				<li id="n-recentchanges"><a href="http://en.wikipedia.org/wiki/Special:RecentChanges" title="The list of recent changes in the wiki [alt-shift-r]" accesskey="r">Recent changes</a></li>
+				<li id="n-contact"><a href="http://en.wikipedia.org/wiki/Wikipedia:Contact_us" title="How to contact Wikipedia">Contact Wikipedia</a></li>
+				<li id="n-sitesupport"><a href="http://wikimediafoundation.org/wiki/Donate" title="Support us">Donate to Wikipedia</a></li>
+				<li id="n-help"><a href="http://en.wikipedia.org/wiki/Help:Contents" title="Guidance on how to use and edit Wikipedia">Help</a></li>
+			</ul>
+		</div>
+	</div>
+		<div id="p-search" class="portlet">
+		<h5><label for="searchInput">Search</label></h5>
+		<div id="searchBody" class="pBody">
+			<form action="/wiki/Special:Search" id="searchform"><div>
+				<input id="searchInput" name="search" title="Search Wikipedia [alt-shift-f]" accesskey="f" value="" type="text">
+				<input name="go" class="searchButton" id="searchGoButton" value="Go" title="Go to a page with this exact name if one exists" type="submit">&nbsp;
+				<input name="fulltext" class="searchButton" id="mw-searchButton" value="Search" title="Search the wiki for this text" type="submit">
+			</div></form>
+		</div>
+	</div>
+	<div class="portlet" id="p-tb">
+		<h5>Toolbox</h5>
+		<div class="pBody">
+			<ul>
+				<li id="t-whatlinkshere"><a href="http://en.wikipedia.org/wiki/Special:WhatLinksHere/Wang_Hsing-ching" title="List of all English Wikipedia pages that link here [alt-shift-j]" accesskey="j">What links here</a></li>
+				<li id="t-recentchangeslinked"><a href="http://en.wikipedia.org/wiki/Special:RecentChangesLinked/Wang_Hsing-ching" title="Recent changes in pages linked from this page [alt-shift-k]" accesskey="k">Related changes</a></li>
+<li id="t-upload"><a href="http://en.wikipedia.org/wiki/Wikipedia:Upload" title="Upload files [alt-shift-u]" accesskey="u">Upload file</a></li>
+<li id="t-specialpages"><a href="http://en.wikipedia.org/wiki/Special:SpecialPages" title="List of all special pages [alt-shift-q]" accesskey="q">Special pages</a></li>
+				<li id="t-print"><a href="http://en.wikipedia.org/w/index.php?title=Wang_Hsing-ching&amp;printable=yes" title="Printable version of this page [alt-shift-p]" accesskey="p">Printable version</a></li>				<li id="t-permalink"><a href="http://en.wikipedia.org/w/index.php?title=Wang_Hsing-ching&amp;oldid=193175417" title="Permanent link to this version of the page">Permanent link</a></li><li id="t-cite"><a href="http://en.wikipedia.org/w/index.php?title=Special:Cite&amp;page=Wang_Hsing-ching&amp;id=193175417">Cite this page</a></li>			</ul>
+		</div>
+	</div>
+		</div><!-- end of the left (by default at least) column -->
+			<div class="visualClear"></div>
+			<div id="footer">
+				<div id="f-poweredbyico"><a href="http://www.mediawiki.org/"><img src="chinese-sample_files/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki"></a></div>
+				<div id="f-copyrightico"><a href="http://wikimediafoundation.org/"><img src="chinese-sample_files/wikimedia-button.png" alt="Wikimedia Foundation" border="0"></a></div>
+			<ul id="f-list">
+				<li id="lastmod"> This page was last modified on 22 February 2008, at 01:44.</li>
+				<li id="copyright">All text is available under the terms of the <a class="internal" href="http://en.wikipedia.org/wiki/Wikipedia:Text_of_the_GNU_Free_Documentation_License" title="Wikipedia:Text of the GNU Free Documentation License">GNU Free Documentation License</a>. (See <b><a class="internal" href="http://en.wikipedia.org/wiki/Wikipedia:Copyrights" title="Wikipedia:Copyrights">Copyrights</a></b> for details.) <br> Wikipedia® is a registered trademark of the <a href="http://www.wikimediafoundation.org/">Wikimedia Foundation, Inc</a>., a U.S. registered <a class="internal" href="http://en.wikipedia.org/wiki/501%28c%29#501.28c.29.283.29" title="501(c)(3)">501(c)(3)</a> <a href="http://wikimediafoundation.org/wiki/Deductibility_of_donations">tax-deductible</a> <a class="internal" href="http://en.wikipedia.org/wiki/Non-profit_organization" title="Non-profit organization">nonprofit</a> <a href="http://en.wikipedia.org/wiki/Charitable_organization" title="Charitable organization">charity</a>.<br></li>
+				<li id="privacy"><a href="http://wikimediafoundation.org/wiki/Privacy_policy" title="wikimedia:Privacy policy">Privacy policy</a></li>
+				<li id="about"><a href="http://en.wikipedia.org/wiki/Wikipedia:About" title="Wikipedia:About">About Wikipedia</a></li>
+				<li id="disclaimer"><a href="http://en.wikipedia.org/wiki/Wikipedia:General_disclaimer" title="Wikipedia:General disclaimer">Disclaimers</a></li>
+			</ul>
+		</div>
+		
+	
+		<script type="text/javascript">if (window.runOnloadHook) runOnloadHook();</script>
+</div>
+<!-- Served by srv177 in 0.049 secs. -->
+</body></html>

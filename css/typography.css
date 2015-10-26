@@ -1,0 +1,305 @@
+
+/* Pagewrap 920
+============================================================ */
+div#pagewrap { width:1023px; margin:40px auto; background:#fff; border-top:3px solid #c04343; }
+
+
+/* Pagehead
+============================================================ */
+div#pagehead, div#pagehead-spacer { width:900px; height:80px; background:#fff; position:relative; padding-left:20px; }
+	div#pagehead h1 { font-size:1em;color:#bebebe; font-weight:normal; padding-top:21px; }
+		div#pagehead h1 span { font-family:georgia, serif; font-size:2.2em; font-weight:normal; color:#262626; position:relative; top:4px; padding:2px 15px 2px 0; margin-right:12px; border-right:1px solid #bebebe; }
+
+	#pagehead ul#menu { position:absolute; top:23px; right:20px; margin:0; padding:0; list-style:none; }
+	#pagehead ul#menu li { float:left; padding:4px 8px; background:#fff; margin:0 0 0 1px; }
+	#pagehead ul#menu li a { color:#c04343; border-bottom:0px solid #fff; padding:4px 8px; text-decoration:none; }
+	#pagehead ul#menu li a:hover { color:#fff; border-bottom:0px solid #fff; padding:4px 8px; text-decoration:none; background:#c04343; }
+	#pagehead ul#menu li.active { float:left; padding:4px 8px; background:#c04343; margin:0 0 0 1px; }
+	#pagehead ul#menu li.active a { color:#fff; border-bottom:0px solid #fff; padding:4px 8px; text-decoration:none; }
+
+
+/* Pagecontent 900
+============================================================ */
+div#pagecontent { width:980px; height:auto; background:#fff; padding:0 10px 20px 10px; }
+
+div.content-row { display:block; background:#fff; float:left; }
+div.content-rows { display:block; background:#fff; padding:25px 0 5px 0; float:left; }
+div.content-col { width:280px; margin:0 10px; background:#fff; float:left; display:inline; }
+div.content-col h2 { color:#c04343;  text-transform:uppercase; padding:0 0 5px 0; }
+div.content-col h3 { color:#545454; line-height:1.4em; font-family:georgia, serif; font-weight:normal; text-align:justify; margin:5px 0 20px 0; }
+div.content-col p { margin:5px 0; }
+div.content-col strong { color:#545454; }
+div.content-col img { margin:5px 0; }
+div.content-col a { color:#c04343; }
+div.content-col a.pdf { color:#c04343; background: transparent url('../images/adobepdf.jpg') top left no-repeat; padding:5px 0 5px 30px;}
+div.content-colwide { width:650px; margin:0 10px; background:#fff; float:left; }
+div.content-colwide p { margin:5px 0; }
+div.content-colwide a { color:#c04343; }
+div.content-colwide a.pdf { color:#c04343; background: transparent url('../images/adobepdf.jpg') top left no-repeat; padding:5px 0 5px 30px;}
+
+
+/* Pagefooter
+============================================================ */
+#pagefooter { width:980px; height:auto; background:#c04343; padding:3px 10px; }
+#pagefooter p { font-size:1em; color:#fff; padding:3px 10px; border-left:1px solid #fff; float:left; }
+#pagefooter p.copyright { border:0; }
+
+
+
+
+#hoverNav{
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	z-index: 10;
+	}
+
+#prevLink, #nextLink{
+	width: 49%;
+	height: 100%;
+	background: transparent url(../images/blank.gif) no-repeat; /* Trick IE into showing hover */
+	display: block;
+	}
+#prevLink { left: 0; float: left;}
+#nextLink { right: 0; float: right;}
+#prevLink:hover, #prevLink:visited:hover { background: url(../images/prevlabel.gif) left 15% no-repeat; }
+#nextLink:hover, #nextLink:visited:hover { background: url(../images/nextlabel.gif) right 15% no-repeat; }
+
+
+
+
+/* -------------------------------------------------------------- 
+   
+   typography.css
+   * Sets up some sensible default typography.
+      
+-------------------------------------------------------------- */
+
+/* Default font settings. 
+   The font-size percentage is of 16px. (0.75 * 16px = 12px) */
+body { 
+  font-size: 100%;
+  color: #222; 
+  background: #ececec;
+  font-family: verdana, "Helvetica Neue", Helvetica, arial, sans-serif;
+}
+
+/* Headings
+-------------------------------------------------------------- */
+
+h1,h2,h3,h4,h5,h6 { 
+    font-weight: bold;
+    color: green;font-family:georgia
+
+}
+
+h1 { font-size: 2em; line-height: 1; margin-bottom: 0.5em; }  /*was 3em */
+h2 { font-size: 2em; margin-bottom: 0.75em; }
+h3 { font-size: 1.5em; line-height: 1; margin-bottom: 1em; }
+h4 { font-size: 1.2em; line-height: 1.25; margin-bottom: 1.25em; height: 1.25em; }
+h5 { font-size: 1em; font-weight: bold; margin-bottom: 1.5em;}
+h6 { font-size: 1em;  }
+
+h1 img, h2 img, h3 img, 
+h4 img, h5 img, h6 img {
+  margin: 0;
+}
+
+h1.heading {
+	margin:0px;
+	font-family:Georgia, Times New Roman, Times, serif;
+	font-size:2.7em;
+	line-height:1.2em;
+	font-weight:normal;
+}
+h1.index {
+	margin:0px;
+	font-family:Georgia, 'Times New Roman', Times, serif;
+	font-size:2.2em;
+	line-height:1.1em;
+	font-weight:normal;
+}
+h1.section {
+	margin:0px;
+	font-family:Georgia, Times New Roman, Times, serif;
+	font-size:1.5em;
+	line-height:1.0em;
+	font-weight:normal;
+	color:#000;
+	text-transform:uppercase;
+	padding:4px 0px 2px 0px;
+}
+h2.sub-heading {
+	color:#333;
+	margin:0px;
+	font-family:Georgia, Times New Roman, Times, serif;
+	font-size:1.4em;
+	line-height:1.1em;
+	font-weight:bold;
+	letter-spacing:-0.06em;
+}
+h2.paginationHeading {
+	color:#333;
+	margin:0px;
+	font-family:Georgia, Times New Roman, Times, serif;
+	font-size:14pt;
+	line-height:1.1em;
+	font-weight:bold;
+	letter-spacing:-0.06em;
+}
+h2.pagination {
+	color:#333;
+	margin:0px;
+	font-family:Georgia, Times New Roman, Times, serif;
+	font-size:1.4em;
+	line-height:1.1em;
+	font-weight:bold;
+	letter-spacing:-0.06em;
+}
+h2.sub-heading-puff {
+	margin:0px;
+	font-family:Georgia, Times New Roman, Times, serif;
+	font-size:1.4em;
+	line-height:1.1em;
+	font-weight:bold;
+	letter-spacing:-0.06em;
+}
+h3.section-heading {
+	margin:0px;
+	font-family:Georgia, Times New Roman, Times, serif;
+	font-size:1.0em;
+	line-height:1.3em;
+	text-transform:uppercase;
+	color:#666;
+	padding-bottom:4px;
+}
+h3.section-heading-white {
+	margin:0px;
+	font-family:Georgia, Times New Roman, Times, serif;
+	font-size:1.0em;
+	line-height:1.3em;
+	text-transform:uppercase;
+	color:#fff;
+	padding-bottom:4px;
+}
+h3.section-heading-smaller {
+	margin:0px;
+	font-family:Georgia, Times New Roman, Times, serif;
+	font-size:0.89em;
+	line-height:1.0em;
+	text-transform:uppercase;
+	color:#666;
+	padding-bottom:4px;
+}
+
+/* Paragraphs
+-------------------------------------------------------------- */
+
+p {
+    font-family:georgia;
+    line-height:1.5;
+    font-size:1.2em!important;
+    margin: 0 0 1.5em;
+    color:#222; /* if leave out inherits from body */
+}
+
+p.footer{ font-size:0.8em!important}
+
+p.no-margin {
+	margin:0px 0px 0px 0px;
+}
+p img       { float: left; margin: 1.5em 1.5em 1.5em 0; padding: 0; }
+p img.right { float: right; margin: 1.5em 0 1.5em 1.5em; }
+
+/*a:focus, 
+a:hover     { color: #000; }
+a           { color: #009; text-decoration: underline; }*/
+
+blockquote  { margin: 1.5em; color: #444; font-style: italic;font-family:georgia;line-height:1.5 }
+strong      { font-weight: bold; }
+em          { font-style: italic; }
+
+dfn           { font-weight: bold; }
+sup, sub    { line-height: 0; }
+
+abbr, 
+acronym     { border-bottom: 1px dotted #666; }
+address     { margin: 0 0 1.5em; font-style: italic; }
+del         { color:#666; }
+
+pre,code    { margin: 1.5em 0; white-space: pre; }
+pre,code,tt { font: 1em 'andale mono', 'lucida console', monospace;
+              line-height: 1.5; }
+
+
+/* Lists
+-------------------------------------------------------------- */
+
+li ul, 
+li ol       { margin:0 1.5em; }
+ul, ol      { margin: 0 1.5em 1.5em 1.5em; }
+
+ul          { list-style-type: disc; }
+ol          { list-style-type: decimal; }
+
+dl          { margin: 0 0 1.5em 0; }
+dl dt       { font-weight: bold; }
+dd          { margin-left: 1.5em;}
+
+
+/* Tables
+-------------------------------------------------------------- 
+
+table       { margin-bottom: 1.4em; width:98%; }
+th          { font-weight: bold; background: #fafafa;line-height:1.5 }
+th,td       { padding: 4px 10px 4px 5px; }
+td           {margin-left:1px}
+tr.even td  { background: #E5ECF9; }
+tfoot       { font-style: italic; }
+caption     { background: #eee; }
+*/
+
+
+#LHnav li, .LHnav li{
+padding-top:3px;
+}
+
+#LHnav li, .LHnav li{
+ list-style-type:none;
+ padding-bottom:2px;
+ text-indent:0pt;
+}
+
+.link-right {display:block;text-align:right;padding-right:15px}
+a:link, a:visited,  a:hover {color:rgb(88,88,88);text-decoration:underline;font-size:inherit}
+li a:link, li a:visited,  li a:hover {color:rgb(88,88,88);text-decoration:none;font-size:inherit}
+a:hover{color:gray;text-decoration:underline}
+
+
+p:hover a:link,p:hover a:visited,p:hover a:hover{color:#dd0000;text-decoration:underline;font-size:inherit}
+p a:link,p a:visited, p a:hover {color:rgb(188,29,29);text-decoration:underline;font-size:inherit}
+
+
+a:hover, img:hover, button:hover{cursor:pointer}
+
+
+
+.arial11 {
+  color:#303000;
+  font-family:Arial,Helvetica,Verdana;
+  font-size:11px;
+  font-style:normal;
+  font-weight:bold;
+  line-height:13px;}
+
+.byline {
+	display:inline;
+	margin:0px;
+	padding:0px 2px;;
+	font-size:1.1em;
+	line-height:1.1em;
+	background:#f8f1d8;
+	color:#666;
+}

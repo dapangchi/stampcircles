@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<!-- saved from url=(0082)http://closure-library.googlecode.com/svn/trunk/closure/goog/ui/menuitem_test.html -->
+<HTML><!--
+Copyright 2008 Google Inc. All Rights Reserved.
+
+--><HEAD><META http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+  <TITLE>Closure Unit Tests - goog.ui.MenuItem</TITLE>
+  <SCRIPT src="./Closure Unit Tests - goog.ui.MenuItem_files/base.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.MenuItem_files/deps.js"></SCRIPT>
+  <SCRIPT>
+    goog.require('goog.dom.classes');
+    goog.require('goog.dom');
+    goog.require('goog.dom.NodeType');
+    goog.require('goog.testing.jsunit');
+    goog.require('goog.ui.Component.State');
+    goog.require('goog.ui.MenuItem');
+    goog.require('goog.ui.MenuItemRenderer');
+  </SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.MenuItem_files/array.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.MenuItem_files/classes.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.MenuItem_files/tagname.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.MenuItem_files/coordinate.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.MenuItem_files/size.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.MenuItem_files/object.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.MenuItem_files/string.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.MenuItem_files/useragent.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.MenuItem_files/dom.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.MenuItem_files/stacktrace.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.MenuItem_files/asserts.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.MenuItem_files/testcase.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.MenuItem_files/testrunner.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.MenuItem_files/jsunit.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.MenuItem_files/errorhandlerweakdep.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.MenuItem_files/disposable.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.MenuItem_files/event.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.MenuItem_files/browserevent.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.MenuItem_files/eventwrapper.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.MenuItem_files/listener.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.MenuItem_files/simplepool.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.MenuItem_files/jscript.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.MenuItem_files/pools.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.MenuItem_files/events.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.MenuItem_files/eventhandler.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.MenuItem_files/eventtarget.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.MenuItem_files/box.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.MenuItem_files/rect.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.MenuItem_files/product.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.MenuItem_files/style.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.MenuItem_files/idgenerator.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.MenuItem_files/component.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.MenuItem_files/keycodes.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.MenuItem_files/keyhandler.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.MenuItem_files/controlcontent.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.MenuItem_files/a11y.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.MenuItem_files/controlrenderer.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.MenuItem_files/registry.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.MenuItem_files/decorate.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.MenuItem_files/control.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.MenuItem_files/menuitemrenderer.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.MenuItem_files/menuitem.js"></SCRIPT>
+</HEAD><BODY>
+  <DIV id="sandbox"></DIV>
+  <SCRIPT>
+    var sandbox = goog.dom.$('sandbox');
+    var item;
+  
+    function setUp() {
+      item = new goog.ui.MenuItem('Item');
+    }
+    
+    function tearDown() {
+      item.dispose();
+      goog.dom.removeChildren(sandbox);
+    }
+
+    function testMenuItem() {
+      assertNotNull('Instance must not be null', item);
+      assertEquals('Renderer must default to MenuItemRenderer singleton',
+          goog.ui.MenuItemRenderer.getInstance(), item.getRenderer());
+      assertEquals('Content must have expected value', 'Item',
+          item.getContent());
+      assertEquals('Caption must default to the content', item.getContent(),
+          item.getCaption());
+      assertEquals('Value must default to the caption', item.getCaption(),
+          item.getValue());
+    }
+
+    function testMenuItemConstructor() {
+      var model = 'Hello';
+      var fakeDom = {};
+      var fakeRenderer = {};
+
+      var menuItem = new goog.ui.MenuItem('Item', model, fakeDom, fakeRenderer);
+      assertEquals('Content must have expected value', 'Item',
+          menuItem.getContent());
+      assertEquals('Caption must default to the content', menuItem.getContent(),
+          menuItem.getCaption());
+      assertEquals('Model must be set', model, menuItem.getModel());
+      assertNotEquals('Value must not equal the caption', menuItem.getCaption(),
+          menuItem.getValue());
+      assertEquals('Value must equal the model', model, menuItem.getValue());
+      assertEquals('DomHelper must be set', fakeDom, menuItem.getDomHelper());
+      assertEquals('Renderer must be set', fakeRenderer,
+          menuItem.getRenderer());
+    }
+
+    function testGetValue() {
+      assertUndefined('Model must be undefined by default', item.getModel());
+      assertEquals('Without a model, value must default to the caption',
+          item.getCaption(), item.getValue());
+      item.setModel('Foo');
+      assertEquals('With a model, value must default to the model',
+          item.getModel(), item.getValue());
+    }
+
+    function testSetValue() {
+      assertUndefined('Model must be undefined by default', item.getModel());
+      assertEquals('Without a model, value must default to the caption',
+          item.getCaption(), item.getValue());
+      item.setValue(17);
+      assertEquals('Value must be set', 17, item.getValue());
+      assertEquals('Value and model must be the same', item.getValue(),
+          item.getModel());
+    }
+
+    function testGetSetContent() {
+      assertEquals('Content must have expected value', 'Item',
+          item.getContent());
+      item.setContent(goog.dom.createDom('div', 'foo', 'Foo'));
+      assertEquals('Content must be an element', goog.dom.NodeType.ELEMENT,
+          item.getContent().nodeType);
+      assertHTMLEquals('Content must be the expected element',
+          '<div class="foo">Foo</div>',
+          goog.dom.getOuterHtml(item.getContent()));
+    }
+
+    function testGetSetCaption() {
+      assertEquals('Caption must have expected value', 'Item',
+          item.getCaption());
+      item.setCaption('Hello, world!');
+      assertTrue('Caption must be a string', goog.isString(item.getCaption()));
+      assertEquals('Caption must have expected value', 'Hello, world!',
+          item.getCaption());
+      item.setContent(goog.dom.createDom('div', 'foo', 'Foo'));
+      assertTrue('Caption must be a string', goog.isString(item.getCaption()));
+      assertEquals('Caption must have expected value', 'Foo',
+          item.getCaption());
+    }
+
+    function testGetSetContentAfterCreateDom() {
+      item.createDom();
+      assertEquals('Content must have expected value', 'Item',
+          item.getContent());
+      item.setContent(goog.dom.createDom('div', 'foo', 'Foo'));
+      assertEquals('Content must be an element', goog.dom.NodeType.ELEMENT,
+          item.getContent().nodeType);
+      assertHTMLEquals('Content must be the expected element',
+          '<div class="foo">Foo</div>',
+          goog.dom.getOuterHtml(item.getContent()));
+    }
+
+    function testGetSetCaptionAfterCreateDom() {
+      item.createDom();
+      assertEquals('Caption must have expected value', 'Item',
+          item.getCaption());
+      item.setCaption('Hello, world!');
+      assertTrue('Caption must be a string', goog.isString(item.getCaption()));
+      assertEquals('Caption must have expected value', 'Hello, world!',
+          item.getCaption());
+      item.setContent(goog.dom.createDom('div', 'foo', 'Foo'));
+      assertTrue('Caption must be a string', goog.isString(item.getCaption()));
+      assertEquals('Caption must have expected value', 'Foo',
+          item.getCaption());
+    }
+
+    function testSetSelectable() {
+      assertFalse('Item must not be selectable by default',
+          item.isSupportedState(goog.ui.Component.State.SELECTED));
+      item.setSelectable(true);
+      assertTrue('Item must be selectable',
+          item.isSupportedState(goog.ui.Component.State.SELECTED));
+      item.setSelected(true);
+      assertTrue('Item must be selected', item.isSelected());
+      assertFalse('Item must not be checked', item.isChecked());
+      item.setSelectable(false);
+      assertFalse('Item must not no longer be selectable',
+          item.isSupportedState(goog.ui.Component.State.SELECTED));
+      assertFalse('Item must no longer be selected', item.isSelected());
+      assertFalse('Item must not be checked', item.isChecked());
+    }
+
+    function testSetCheckable() {
+      assertFalse('Item must not be checkable by default',
+          item.isSupportedState(goog.ui.Component.State.CHECKED));
+      item.setCheckable(true);
+      assertTrue('Item must be checkable',
+          item.isSupportedState(goog.ui.Component.State.CHECKED));
+      item.setChecked(true);
+      assertTrue('Item must be checked', item.isChecked());
+      assertFalse('Item must not be selected', item.isSelected());
+      item.setCheckable(false);
+      assertFalse('Item must not no longer be checkable',
+          item.isSupportedState(goog.ui.Component.State.CHECKED));
+      assertFalse('Item must no longer be checked', item.isChecked());
+      assertFalse('Item must not be selected', item.isSelected());
+    }
+
+    function testSetSelectableBeforeCreateDom() {
+      item.setSelectable(true);
+      item.createDom();
+      assertTrue('Item must have checkbox structure',
+          item.getRenderer().hasCheckBoxStructure(item.getElement()));
+      item.setSelectable(false);
+      assertFalse('Item must no longer have checkbox structure',
+          item.getRenderer().hasCheckBoxStructure(item.getElement()));
+    }
+
+    function testSetCheckableBeforeCreateDom() {
+      item.setCheckable(true);
+      item.createDom();
+      assertTrue('Item must have checkbox structure',
+          item.getRenderer().hasCheckBoxStructure(item.getElement()));
+      item.setCheckable(false);
+      assertFalse('Item must no longer have checkbox structure',
+          item.getRenderer().hasCheckBoxStructure(item.getElement()));
+    }
+
+    function testSetSelectableAfterCreateDom() {
+      item.createDom();
+      item.setSelectable(true);
+      assertTrue('Item must have checkbox structure',
+          item.getRenderer().hasCheckBoxStructure(item.getElement()));
+      item.setSelectable(false);
+      assertFalse('Item must no longer have checkbox structure',
+          item.getRenderer().hasCheckBoxStructure(item.getElement()));
+    }
+
+    function testSetCheckableAfterCreateDom() {
+      item.createDom();
+      item.setCheckable(true);
+      assertTrue('Item must have checkbox structure',
+          item.getRenderer().hasCheckBoxStructure(item.getElement()));
+      item.setCheckable(false);
+      assertFalse('Item must no longer have checkbox structure',
+          item.getRenderer().hasCheckBoxStructure(item.getElement()));
+    }
+
+    function testSelectableBehavior() {
+      item.setSelectable(true);
+      item.render(sandbox);
+      assertFalse('Item must not be selected by default', item.isSelected());
+      item.performActionInternal();
+      assertTrue('Item must be selected', item.isSelected());
+      item.performActionInternal();
+      assertTrue('Item must still be selected', item.isSelected());
+    }
+
+    function testCheckableBehavior() {
+      item.setCheckable(true);
+      item.render(sandbox);
+      assertFalse('Item must not be checked by default', item.isChecked());
+      item.performActionInternal();
+      assertTrue('Item must be checked', item.isChecked());
+      item.performActionInternal();
+      assertFalse('Item must no longer be checked', item.isChecked());
+    }
+
+    function testGetSetContentForItemWithCheckBox() {
+      item.setSelectable(true);
+      item.createDom();
+
+      assertTrue('Item must have checkbox structure',
+          item.getRenderer().hasCheckBoxStructure(item.getElement()));
+      assertEquals('getContent() must not return the checkbox structure',
+          'Item', item.getContent());
+
+      item.setContent('Hello');
+      assertEquals('getContent() must not return the checkbox structure',
+          'Hello', item.getContent());
+      assertTrue('Item must still have checkbox structure',
+          item.getRenderer().hasCheckBoxStructure(item.getElement()));
+
+      item.setContent(goog.dom.createDom('span', 'foo', 'Foo'));
+      assertEquals('getContent() must return element', goog.dom.NodeType.ELEMENT,
+          item.getContent().nodeType);
+      assertTrue('Item must still have checkbox structure',
+          item.getRenderer().hasCheckBoxStructure(item.getElement()));
+
+      item.setContent(null);
+      assertNull('getContent() must return null', item.getContent());
+      assertTrue('Item must still have checkbox structure',
+          item.getRenderer().hasCheckBoxStructure(item.getElement()));
+    }
+
+    function testGetSetCaptionForItemWithCheckBox() {
+      item.setCheckable(true);
+      item.createDom();
+
+      assertTrue('Item must have checkbox structure',
+          item.getRenderer().hasCheckBoxStructure(item.getElement()));
+      assertEquals('getCaption() must not return the checkbox structure',
+          'Item', item.getCaption());
+
+      item.setCaption('Hello');
+      assertEquals('getCaption() must not return the checkbox structure',
+          'Hello', item.getCaption());
+      assertTrue('Item must still have checkbox structure',
+          item.getRenderer().hasCheckBoxStructure(item.getElement()));
+
+      item.setContent(goog.dom.createDom('span', 'foo', 'Foo'));
+      assertEquals('getCaption() must return text content', 'Foo',
+          item.getCaption());
+      assertTrue('Item must still have checkbox structure',
+          item.getRenderer().hasCheckBoxStructure(item.getElement()));
+
+      item.setCaption(null);
+      assertNull('getCaption() must return null', item.getCaption());
+      assertTrue('Item must still have checkbox structure',
+          item.getRenderer().hasCheckBoxStructure(item.getElement()));
+    }
+
+    function testRender() {
+      item.render(sandbox);
+      var contentElement = item.getContentElement();
+      assertNotNull('Content element must exist', contentElement);
+      assertTrue('Content element must have expected class name',
+          goog.dom.classes.has(contentElement,
+              item.getRenderer().getStructuralCssClass() + '-content'));
+      assertHTMLEquals('Content element must have expected structure',
+          'Item', contentElement.innerHTML);
+    }
+
+    function testRenderSelectableItem() {
+      item.setSelectable(true);
+      item.render(sandbox);
+      assertTrue('Item must have checkbox structure',
+          item.getRenderer().hasCheckBoxStructure(item.getElement()));
+      assertEquals('getCaption() return expected value', 'Item',
+          item.getCaption());
+    }
+
+    function testRenderSelectedItem() {
+      item.setSelectable(true);
+      item.setSelected(true);
+      item.render(sandbox);
+      assertTrue('Item must have checkbox structure',
+          item.getRenderer().hasCheckBoxStructure(item.getElement()));
+      assertTrue('Item must have selected style',
+          goog.dom.classes.has(item.getElement(),
+              item.getRenderer().getClassForState(
+                  goog.ui.Component.State.SELECTED)));
+    }
+
+    function testRenderCheckableItem() {
+      item.setCheckable(true);
+      item.render(sandbox);
+      assertTrue('Item must have checkbox structure',
+          item.getRenderer().hasCheckBoxStructure(item.getElement()));
+      assertEquals('getCaption() return expected value', 'Item',
+          item.getCaption());
+    }
+
+    function testRenderCheckedItem() {
+      item.setCheckable(true);
+      item.setChecked(true);
+      item.render(sandbox);
+      assertTrue('Item must have checkbox structure',
+          item.getRenderer().hasCheckBoxStructure(item.getElement()));
+      assertTrue('Item must have checked style',
+          goog.dom.classes.has(item.getElement(),
+              item.getRenderer().getClassForState(
+                  goog.ui.Component.State.CHECKED)));
+    }
+
+    function testDecorate() {
+      sandbox.innerHTML = '<div id="foo">Foo</div>';
+      var foo = goog.dom.$('foo');
+      item.decorate(foo);
+      assertEquals('Decorated element must be as expected', foo,
+          item.getElement());
+      assertTrue('Decorated element must have expected class name',
+          goog.dom.classes.has(item.getElement(),
+              item.getRenderer().getCssClass()));
+      assertEquals('Content element must be the decorated element\'s child',
+          item.getContentElement(), item.getElement().firstChild);
+      assertHTMLEquals('Content must have expected structure', 'Foo',
+          item.getContentElement().innerHTML);
+    }
+
+    function testDecorateCheckableItem() {
+      sandbox.innerHTML = '<div id="foo" class="goog-option">Foo</div>';
+      var foo = goog.dom.$('foo');
+      item.decorate(foo);
+      assertEquals('Decorated element must be as expected', foo,
+          item.getElement());
+      assertTrue('Decorated element must have expected class name',
+          goog.dom.classes.has(item.getElement(),
+              item.getRenderer().getCssClass()));
+      assertEquals('Content element must be the decorated element\'s child',
+          item.getContentElement(), item.getElement().firstChild);
+      assertTrue('Item must have checkbox structure',
+          item.getRenderer().hasCheckBoxStructure(item.getElement()));
+      assertFalse('Item must not be checked', item.isChecked());
+    }
+
+    function testDecorateCheckedItem() {
+      sandbox.innerHTML =
+          '<div id="foo" class="goog-option goog-option-selected">Foo</div>';
+      var foo = goog.dom.$('foo');
+      item.decorate(foo);
+      assertEquals('Decorated element must be as expected', foo,
+          item.getElement());
+      assertSameElements('Decorated element must have expected class names',
+          ['goog-menuitem', 'goog-option', 'goog-option-selected'],
+          goog.dom.classes.get(item.getElement()));
+      assertEquals('Content element must be the decorated element\'s child',
+          item.getContentElement(), item.getElement().firstChild);
+      assertTrue('Item must have checkbox structure',
+          item.getRenderer().hasCheckBoxStructure(item.getElement()));
+      assertTrue('Item must be checked', item.isChecked());
+    }
+
+    function testDecorateTemplate() {
+      sandbox.innerHTML = '<div id="foo" class="goog-menuitem">' +
+          '<div class="goog-menuitem-content">Foo</div></div>';
+      var foo = goog.dom.$('foo');
+      item.decorate(foo);
+      assertEquals('Decorated element must be as expected', foo,
+          item.getElement());
+      assertTrue('Decorated element must have expected class name',
+          goog.dom.classes.has(item.getElement(),
+              item.getRenderer().getCssClass()));
+      assertEquals('Content element must be the decorated element\'s child',
+          item.getContentElement(), item.getElement().firstChild);
+      assertHTMLEquals('Content must have expected structure', 'Foo',
+          item.getContentElement().innerHTML);
+    }
+
+    function testDecorateCheckableItemTemplate() {
+      sandbox.innerHTML = '<div id="foo" class="goog-menuitem goog-option">' +
+          '<div class="goog-menuitem-content">' +
+          '<div class="goog-menuitem-checkbox"></div>' +
+          'Foo</div></div>';
+      var foo = goog.dom.$('foo');
+      item.decorate(foo);
+      assertEquals('Decorated element must be as expected', foo,
+          item.getElement());
+      assertTrue('Decorated element must have expected class name',
+          goog.dom.classes.has(item.getElement(),
+              item.getRenderer().getCssClass()));
+      assertEquals('Content element must be the decorated element\'s child',
+          item.getContentElement(), item.getElement().firstChild);
+      assertTrue('Item must have checkbox structure',
+          item.getRenderer().hasCheckBoxStructure(item.getElement()));
+      assertEquals('Item must have exactly one checkbox structure', 1,
+          goog.dom.$$('div', 'goog-menuitem-checkbox',
+              item.getElement()).length);
+      assertFalse('Item must not be checked', item.isChecked());
+    }
+
+    function testDecorateCheckedItemTemplate() {
+      sandbox.innerHTML = '<div id="foo" ' +
+          'class="goog-menuitem goog-option goog-option-selected">' +
+          '<div class="goog-menuitem-content">' +
+          '<div class="goog-menuitem-checkbox"></div>' +
+          'Foo</div></div>';
+      var foo = goog.dom.$('foo');
+      item.decorate(foo);
+      assertEquals('Decorated element must be as expected', foo,
+          item.getElement());
+      assertSameElements('Decorated element must have expected class names',
+          ['goog-menuitem', 'goog-option', 'goog-option-selected'],
+          goog.dom.classes.get(item.getElement()));
+      assertEquals('Content element must be the decorated element\'s child',
+          item.getContentElement(), item.getElement().firstChild);
+      assertTrue('Item must have checkbox structure',
+          item.getRenderer().hasCheckBoxStructure(item.getElement()));
+      assertEquals('Item must have exactly one checkbox structure', 1,
+          goog.dom.$$('div', 'goog-menuitem-checkbox',
+              item.getElement()).length);
+      assertTrue('Item must be checked', item.isChecked());
+    }
+  </SCRIPT>
+
+
+<DIV><DIV style="color: rgb(0, 100, 0); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; font-weight: bold; ">Closure Unit Tests - goog.ui.MenuItem [PASSED]</DIV><DIV style="color: rgb(51, 51, 51); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; font-weight: bold; ">closure-library.googlecode.com/svn/trunk/closure/goog/ui/menuitem_test.html</DIV><DIV style="color: rgb(51, 51, 51); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">29 of 29 tests run in 47ms.</DIV><DIV style="color: rgb(51, 51, 51); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">29 passed, 0 failed.</DIV><DIV style="color: rgb(51, 51, 51); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">2 ms/test. 44 files loaded.</DIV><DIV style="color: rgb(51, 51, 51); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">.</DIV><DIV style="color: rgb(51, 51, 51); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">08:32:04.140  Start</DIV><DIV style="color: rgb(0, 100, 0); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">08:32:04.149  testCheckableBehavior : PASSED</DIV><DIV style="color: rgb(0, 100, 0); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">08:32:04.153  testDecorate : PASSED</DIV><DIV style="color: rgb(0, 100, 0); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">08:32:04.155  testDecorateCheckableItem : PASSED</DIV><DIV style="color: rgb(0, 100, 0); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">08:32:04.158  testDecorateCheckableItemTemplate : PASSED</DIV><DIV style="color: rgb(0, 100, 0); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">08:32:04.160  testDecorateCheckedItem : PASSED</DIV><DIV style="color: rgb(0, 100, 0); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">08:32:04.162  testDecorateCheckedItemTemplate : PASSED</DIV><DIV style="color: rgb(0, 100, 0); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">08:32:04.164  testDecorateTemplate : PASSED</DIV><DIV style="color: rgb(0, 100, 0); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">08:32:04.166  testGetSetCaption : PASSED</DIV><DIV style="color: rgb(0, 100, 0); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">08:32:04.167  testGetSetCaptionAfterCreateDom : PASSED</DIV><DIV style="color: rgb(0, 100, 0); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">08:32:04.168  testGetSetCaptionForItemWithCheckBox : PASSED</DIV><DIV style="color: rgb(0, 100, 0); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">08:32:04.169  testGetSetContent : PASSED</DIV><DIV style="color: rgb(0, 100, 0); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">08:32:04.169  testGetSetContentAfterCreateDom : PASSED</DIV><DIV style="color: rgb(0, 100, 0); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">08:32:04.170  testGetSetContentForItemWithCheckBox : PASSED</DIV><DIV style="color: rgb(0, 100, 0); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">08:32:04.171  testGetValue : PASSED</DIV><DIV style="color: rgb(0, 100, 0); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">08:32:04.171  testMenuItem : PASSED</DIV><DIV style="color: rgb(0, 100, 0); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">08:32:04.172  testMenuItemConstructor : PASSED</DIV><DIV style="color: rgb(0, 100, 0); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">08:32:04.174  testRender : PASSED</DIV><DIV style="color: rgb(0, 100, 0); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">08:32:04.176  testRenderCheckableItem : PASSED</DIV><DIV style="color: rgb(0, 100, 0); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">08:32:04.178  testRenderCheckedItem : PASSED</DIV><DIV style="color: rgb(0, 100, 0); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">08:32:04.179  testRenderSelectableItem : PASSED</DIV><DIV style="color: rgb(0, 100, 0); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">08:32:04.181  testRenderSelectedItem : PASSED</DIV><DIV style="color: rgb(0, 100, 0); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">08:32:04.183  testSelectableBehavior : PASSED</DIV><DIV style="color: rgb(0, 100, 0); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">08:32:04.184  testSetCheckable : PASSED</DIV><DIV style="color: rgb(0, 100, 0); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">08:32:04.185  testSetCheckableAfterCreateDom : PASSED</DIV><DIV style="color: rgb(0, 100, 0); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">08:32:04.185  testSetCheckableBeforeCreateDom : PASSED</DIV><DIV style="color: rgb(0, 100, 0); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">08:32:04.186  testSetSelectable : PASSED</DIV><DIV style="color: rgb(0, 100, 0); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">08:32:04.186  testSetSelectableAfterCreateDom : PASSED</DIV><DIV style="color: rgb(0, 100, 0); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">08:32:04.187  testSetSelectableBeforeCreateDom : PASSED</DIV><DIV style="color: rgb(0, 100, 0); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">08:32:04.187  testSetValue : PASSED</DIV><DIV style="color: rgb(51, 51, 51); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">08:32:04.187  Done</DIV><DIV style="color: rgb(51, 51, 51); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; "> </DIV><A style="display: block; font-size: small; " href="">Run again without reloading</A></DIV></BODY></HTML>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<!-- saved from url=(0083)http://closure-library.googlecode.com/svn/trunk/closure/goog/debug/tracer_test.html -->
+<HTML><!--
+  Copyright 2006 Google Inc. All Rights Reserved.
+--><HEAD><META http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<TITLE>Closure Unit Tests - goog.util.Tracer</TITLE>
+<SCRIPT src="./Closure Unit Tests - goog.util.Tracer_files/base.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.util.Tracer_files/deps.js"></SCRIPT>
+<SCRIPT>
+  goog.require('goog.debug.Trace');
+  goog.require('goog.testing.jsunit');
+</SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.util.Tracer_files/array.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.util.Tracer_files/string.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.util.Tracer_files/object.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.util.Tracer_files/structs.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.util.Tracer_files/iter.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.util.Tracer_files/map.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.util.Tracer_files/set.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.util.Tracer_files/debug.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.util.Tracer_files/logrecord.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.util.Tracer_files/logger.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.util.Tracer_files/disposable.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.util.Tracer_files/simplepool.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.util.Tracer_files/tracer.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.util.Tracer_files/stacktrace.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.util.Tracer_files/asserts.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.util.Tracer_files/testcase.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.util.Tracer_files/testrunner.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.util.Tracer_files/jsunit.js"></SCRIPT>
+</HEAD><BODY>
+<SCRIPT>
+
+  function testTracer() {
+    goog.debug.Trace.initCurrentTrace();
+    var t = goog.debug.Trace.startTracer('foo');
+    var sum = 0;
+    for (var i = 0; i < 100000; i++) {
+      sum += i;
+    }
+    goog.debug.Trace.stopTracer(t);
+    var trace = goog.debug.Trace.getFormattedTrace();
+    var lines = trace.split('\n');
+    assertEquals(8, lines.length);
+    assertNotNull(lines[0].match(/^\s*\d+\.\d+\s+Start\s+foo$/));
+    assertNotNull(lines[1].match(/^\s*\d+\s+\d+\.\d+\s+Done\s+\d+ ms\s+foo$/));
+  }
+
+  function testPerf() {
+    goog.debug.Trace.initCurrentTrace();
+    var count = 1000;
+    var start = goog.now();
+    for (var i = 0; i < count; i++) {
+      var t = goog.debug.Trace.startTracer('foo');
+      var t2 = goog.debug.Trace.startTracer('foo.bar');
+      var t3 = goog.debug.Trace.startTracer('foo.bar.baz');
+      goog.debug.Trace.stopTracer(t3);
+      var t4 = goog.debug.Trace.startTracer('foo.bar.bim');
+      goog.debug.Trace.stopTracer(t4);
+      goog.debug.Trace.stopTracer(t2);
+      goog.debug.Trace.stopTracer(t);
+    }
+    count *= 4;
+    var end = goog.now();
+  }
+
+
+</SCRIPT>
+
+
+<DIV><DIV style="color: rgb(0, 100, 0); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; font-weight: bold; ">Closure Unit Tests - goog.util.Tracer [PASSED]</DIV><DIV style="color: rgb(51, 51, 51); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; font-weight: bold; ">closure-library.googlecode.com/svn/trunk/closure/goog/debug/tracer_test.html</DIV><DIV style="color: rgb(51, 51, 51); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">2 of 2 tests run in 81ms.</DIV><DIV style="color: rgb(51, 51, 51); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">2 passed, 0 failed.</DIV><DIV style="color: rgb(51, 51, 51); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">41 ms/test. 20 files loaded.</DIV><DIV style="color: rgb(51, 51, 51); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">.</DIV><DIV style="color: rgb(51, 51, 51); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">04:19:35.643  Start</DIV><DIV style="color: rgb(0, 100, 0); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">04:19:35.716  testPerf : PASSED</DIV><DIV style="color: rgb(0, 100, 0); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">04:19:35.723  testTracer : PASSED</DIV><DIV style="color: rgb(51, 51, 51); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">04:19:35.724  Done</DIV><DIV style="color: rgb(51, 51, 51); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; "> </DIV><A style="display: block; font-size: small; " href="">Run again without reloading</A></DIV></BODY></HTML>

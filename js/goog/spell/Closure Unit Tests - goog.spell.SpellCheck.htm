@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<!-- saved from url=(0087)http://closure-library.googlecode.com/svn/trunk/closure/goog/spell/spellcheck_test.html -->
+<HTML><!--
+  Copyright 2007 Google Inc. All Rights Reserved.
+--><HEAD><META http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<TITLE>Closure Unit Tests - goog.spell.SpellCheck</TITLE>
+<SCRIPT src="./Closure Unit Tests - goog.spell.SpellCheck_files/base.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.spell.SpellCheck_files/deps.js"></SCRIPT>
+<SCRIPT>
+  goog.require('goog.spell.SpellCheck');
+  goog.require('goog.testing.jsunit');
+</SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.spell.SpellCheck_files/disposable.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.spell.SpellCheck_files/array.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.spell.SpellCheck_files/errorhandlerweakdep.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.spell.SpellCheck_files/event.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.spell.SpellCheck_files/string.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.spell.SpellCheck_files/useragent.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.spell.SpellCheck_files/browserevent.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.spell.SpellCheck_files/eventwrapper.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.spell.SpellCheck_files/listener.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.spell.SpellCheck_files/simplepool.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.spell.SpellCheck_files/jscript.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.spell.SpellCheck_files/pools.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.spell.SpellCheck_files/object.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.spell.SpellCheck_files/events.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.spell.SpellCheck_files/eventtarget.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.spell.SpellCheck_files/timer.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.spell.SpellCheck_files/structs.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.spell.SpellCheck_files/iter.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.spell.SpellCheck_files/map.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.spell.SpellCheck_files/set.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.spell.SpellCheck_files/spellcheck.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.spell.SpellCheck_files/stacktrace.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.spell.SpellCheck_files/asserts.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.spell.SpellCheck_files/testcase.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.spell.SpellCheck_files/testrunner.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.spell.SpellCheck_files/jsunit.js"></SCRIPT>
+</HEAD><BODY>
+<SCRIPT>
+  var TEST_DATA = {
+    'Test': [goog.spell.SpellCheck.WordStatus.VALID, []],
+    'strnig': [goog.spell.SpellCheck.WordStatus.INVALID, []],
+    'wtih': [goog.spell.SpellCheck.WordStatus.INVALID, []],
+    'a': [goog.spell.SpellCheck.WordStatus.VALID, []],
+    'few': [goog.spell.SpellCheck.WordStatus.VALID, []],
+    'misspeled': [goog.spell.SpellCheck.WordStatus.INVALID,
+        ['misspelled', 'misapplied', 'misspell']],
+    'words': [goog.spell.SpellCheck.WordStatus.VALID, []],
+    'Testing': [goog.spell.SpellCheck.WordStatus.VALID, []],
+    'set': [goog.spell.SpellCheck.WordStatus.VALID, []],
+    'status': [goog.spell.SpellCheck.WordStatus.VALID, []],
+    'vaild': [goog.spell.SpellCheck.WordStatus.INVALID, []],
+    'invalid': [goog.spell.SpellCheck.WordStatus.VALID, []],
+    'ignoerd': [goog.spell.SpellCheck.WordStatus.INVALID, []]
+  };
+
+  function mockSpellCheckingFunction(words, spellChecker, callback) {
+    var len = words.length;
+    var data = [];
+    for (var i = 0; i < len; i++) {
+      var word = words[i];
+      var status = TEST_DATA[word][0];
+      var suggestions = TEST_DATA[word][1];
+      data.push([word, status, suggestions]);
+    }
+    callback.call(spellChecker, data);
+  }
+
+
+  function testWordMatching() {
+    var spell = new goog.spell.SpellCheck(mockSpellCheckingFunction);
+
+    var valid = goog.spell.SpellCheck.WordStatus.VALID;
+    var invalid = goog.spell.SpellCheck.WordStatus.INVALID;
+
+    spell.checkBlock('Test strnig wtih a few misspeled words.');
+    assertEquals(valid, spell.checkWord('Test'));
+    assertEquals(invalid, spell.checkWord('strnig'));
+    assertEquals(invalid, spell.checkWord('wtih'));
+    assertEquals(valid, spell.checkWord('a'));
+    assertEquals(valid, spell.checkWord('few'));
+    assertEquals(invalid, spell.checkWord('misspeled'));
+    assertEquals(valid, spell.checkWord('words'));
+  }
+
+
+  function testSetWordStatusValid() {
+    var spell = new goog.spell.SpellCheck(mockSpellCheckingFunction);
+
+    var valid = goog.spell.SpellCheck.WordStatus.VALID;
+
+    spell.checkBlock('Testing set status vaild.');
+    spell.setWordStatus('vaild', valid);
+
+    assertEquals(valid, spell.checkWord('vaild'));
+  }
+
+  function testSetWordStatusInvalid() {
+    var spell = new goog.spell.SpellCheck(mockSpellCheckingFunction);
+
+    var valid = goog.spell.SpellCheck.WordStatus.VALID;
+    var invalid = goog.spell.SpellCheck.WordStatus.INVALID;
+
+    spell.checkBlock('Testing set status invalid.');
+    spell.setWordStatus('invalid', invalid);
+
+    assertEquals(invalid, spell.checkWord('invalid'));
+  }
+
+
+  function testSetWordStatusIgnored() {
+    var spell = new goog.spell.SpellCheck(mockSpellCheckingFunction);
+
+    var ignored = goog.spell.SpellCheck.WordStatus.IGNORED;
+
+    spell.checkBlock('Testing set status ignoerd.');
+    spell.setWordStatus('ignoerd', ignored);
+
+    assertEquals(ignored, spell.checkWord('ignoerd'));
+  }
+
+
+  function testGetSuggestions() {
+    var spell = new goog.spell.SpellCheck(mockSpellCheckingFunction);
+
+    spell.checkBlock('Test strnig wtih a few misspeled words.');
+    var suggestions = spell.getSuggestions('misspeled');
+    assertEquals(3, suggestions.length);
+  }
+</SCRIPT>
+
+
+<DIV><DIV style="color: rgb(0, 100, 0); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; font-weight: bold; ">Closure Unit Tests - goog.spell.SpellCheck [PASSED]</DIV><DIV style="color: rgb(51, 51, 51); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; font-weight: bold; ">closure-library.googlecode.com/svn/trunk/closure/goog/spell/spellcheck_test.html</DIV><DIV style="color: rgb(51, 51, 51); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">5 of 5 tests run in 16ms.</DIV><DIV style="color: rgb(51, 51, 51); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">5 passed, 0 failed.</DIV><DIV style="color: rgb(51, 51, 51); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">3 ms/test. 28 files loaded.</DIV><DIV style="color: rgb(51, 51, 51); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">.</DIV><DIV style="color: rgb(51, 51, 51); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">05:52:43.250  Start</DIV><DIV style="color: rgb(0, 100, 0); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">05:52:43.350  testGetSuggestions : PASSED</DIV><DIV style="color: rgb(0, 100, 0); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">05:52:43.370  testSetWordStatusIgnored : PASSED</DIV><DIV style="color: rgb(0, 100, 0); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">05:52:43.380  testSetWordStatusInvalid : PASSED</DIV><DIV style="color: rgb(0, 100, 0); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">05:52:43.390  testSetWordStatusValid : PASSED</DIV><DIV style="color: rgb(0, 100, 0); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">05:52:43.400  testWordMatching : PASSED</DIV><DIV style="color: rgb(51, 51, 51); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">05:52:43.410  Done</DIV><DIV style="color: rgb(51, 51, 51); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; "> </DIV><A style="display: block; font-size: small; " href="">Run again without reloading</A></DIV></BODY></HTML>

@@ -1,0 +1,98 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!--
+ ! Excerpted from "Mastering Dojo",
+ ! published by The Pragmatic Bookshelf.
+ ! Copyrights apply to this code. It may not be used to create training material, 
+ ! courses, books, articles, and the like. Contact us if you are in doubt.
+ ! We make no guarantees that this code is fit for any purpose. 
+ ! Visit http://www.pragmaticprogrammer.com/titles/rgdojo for more book information.
+-->
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Menu</title>
+    <style type="text/css">
+        @import "/dojoroot/dijit/themes/tundra/tundra.css";
+        @import "/dojoroot/dojo/resources/dojo.css"
+    </style>
+    <script type="text/javascript" src="/dojoroot/dojo/dojo.js"  djConfig="parseOnLoad: true,isDebug:true"></script>
+    <script type="text/javascript">
+       dojo.require("dojo.parser");
+       dojo.require("dijit.form.Button");
+       dojo.require("dijit.Menu");
+       dojo.require("dijit.Toolbar");
+    </script>
+</head>
+<body class="tundra">
+    
+   <div dojoType="dijit.Menu">
+       <div dojoType="dijit.MenuItem">Disaster Menu</div>
+       <div dojoType="dijit.MenuSeparator"></div>
+       <div dojoType="dijit.PopupMenuItem">
+           <span>Natural</span>
+           <div dojoType="dijit.Menu">
+               <div dojoType="dijit.MenuItem">Boll Weevils</div>
+               <div dojoType="dijit.MenuItem">Flood</div>
+           </div>
+       </div>
+       <div dojoType="dijit.PopupMenuItem">
+           <span>Emotional</span>
+           <div dojoType="dijit.Menu">
+               <div dojoType="dijit.MenuItem">Spouse Left You</div>
+               <div dojoType="dijit.MenuItem">Spouse Caught You Cheating</div>
+               <div dojoType="dijit.MenuItem">
+                   Spouse Caught You Cheating and Left
+               </div>
+               <div dojoType="dijit.MenuItem">Spouse With Best Friend
+                  <script type="dojo/method" event="onClick">
+                       console.log("Now that is REALLY bad!");
+                  </script>
+               </div>
+           </div>
+       </div>
+       <div dojoType="dijit.PopupMenuItem">
+           <span>Medical</span>
+               <div dojoType="dijit.Menu">
+               <div dojoType="dijit.MenuItem">TB</div>
+               <div dojoType="dijit.MenuItem">Rheum-y-tism</div>
+           </div>
+       </div>
+   </div>
+   
+   <br/><br/>    
+    
+   <div dojoType="dijit.Toolbar">
+       <span dojoType="dijit.form.DropDownButton">
+           <span>Natural</span>
+           <div dojoType="dijit.Menu">
+               <div dojoType="dijit.MenuItem">Boll Weevils</div>
+               <div dojoType="dijit.MenuItem">Flood</div>
+           </div>
+       </span>
+       <span dojoType="dijit.form.DropDownButton">
+           <span>Emotional</span>
+           <div dojoType="dijit.Menu">
+               <div dojoType="dijit.MenuItem">Spouse Left You</div>
+               <div dojoType="dijit.MenuItem">Spouse Caught You Cheating</div>
+               <div dojoType="dijit.MenuItem">
+                  Spouse Caught You Cheating and Left
+               </div>
+               <div dojoType="dijit.MenuItem">Spouse With Best Friend
+                  <script type="dojo/method" event="onClick">
+                       console.log("Now that is REALLY bad!");
+                  </script>
+               </div>
+           </div>
+       </span>
+       <span dojoType="dijit.form.DropDownButton">
+           <span>Medical</span>
+           <div dojoType="dijit.Menu">
+               <div dojoType="dijit.MenuItem">TB</div>
+               <div dojoType="dijit.MenuItem">Rheum-y-tism</div>
+           </div>
+       </span>
+   </div>
+    
+
+</body>
+</html>

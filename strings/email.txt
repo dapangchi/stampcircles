@@ -1,0 +1,12 @@
+email harvester
+
+package MegaSpider
+* @desc Spider Example
+* @link http://www.marcinsznyra.info/
+* @copyright 2005 Marcin Szymon Sznyra <marcin@marcinsznyra.info>
+* @license Public Domain LGPL
+* @author Marcin Szymon Sznyra <marcin@marcinsznyra.info>
+* @version $Id: example.php,v 1.0 RC 2005/05/05 08:32:25 MarcinSznyra Exp$;
+   mailto:yannis_lazarides@yahoo.com
+  yl@mweb.co.za  
+  yl.yl.yannis.z123@mweb.co.eu.mn  

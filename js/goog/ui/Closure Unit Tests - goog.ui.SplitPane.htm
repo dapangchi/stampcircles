@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<!-- saved from url=(0083)http://closure-library.googlecode.com/svn/trunk/closure/goog/ui/splitpane_test.html -->
+<HTML><!--
+  Copyright 2009 Google Inc. All Rights Reserved.
+
+--><HEAD><META http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<TITLE>Closure Unit Tests - goog.ui.SplitPane</TITLE>
+<SCRIPT src="./Closure Unit Tests - goog.ui.SplitPane_files/base.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.SplitPane_files/deps.js"></SCRIPT>
+<SCRIPT type="text/javascript">
+  goog.require('goog.dom');
+  goog.require('goog.dom.classes');
+  goog.require('goog.math.Size');
+  goog.require('goog.style');
+  goog.require('goog.testing.jsunit');
+  goog.require('goog.ui.Component');
+  goog.require('goog.ui.SplitPane');
+  goog.require('goog.ui.SplitPane.Orientation');
+</SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.SplitPane_files/array.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.SplitPane_files/tagname.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.SplitPane_files/classes.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.SplitPane_files/coordinate.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.SplitPane_files/size.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.SplitPane_files/object.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.SplitPane_files/string.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.SplitPane_files/useragent.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.SplitPane_files/dom.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.SplitPane_files/box.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.SplitPane_files/rect.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.SplitPane_files/product.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.SplitPane_files/style.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.SplitPane_files/stacktrace.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.SplitPane_files/asserts.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.SplitPane_files/testcase.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.SplitPane_files/testrunner.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.SplitPane_files/jsunit.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.SplitPane_files/errorhandlerweakdep.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.SplitPane_files/disposable.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.SplitPane_files/event.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.SplitPane_files/browserevent.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.SplitPane_files/eventwrapper.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.SplitPane_files/listener.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.SplitPane_files/simplepool.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.SplitPane_files/jscript.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.SplitPane_files/pools.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.SplitPane_files/events.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.SplitPane_files/eventhandler.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.SplitPane_files/eventtarget.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.SplitPane_files/idgenerator.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.SplitPane_files/component.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.SplitPane_files/dragger.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.SplitPane_files/splitpane.js"></SCRIPT>
+</HEAD><BODY>
+
+<DIV id="sandbox"></DIV>
+
+<SCRIPT type="text/javascript">
+
+var splitpane;
+var leftComponent;
+var rightComponent;
+
+function setUp() {
+  leftComponent = new goog.ui.Component();
+  rightComponent = new goog.ui.Component();
+  splitpane = new goog.ui.SplitPane(leftComponent, rightComponent,
+      goog.ui.SplitPane.Orientation.HORIZONTAL);
+}
+
+function tearDown() {
+  splitpane.dispose();
+  leftComponent.dispose();
+  rightComponent.dispose();
+  goog.dom.$('sandbox').innerHTML = '';
+}
+
+function testRender() {
+  splitpane.render(goog.dom.$('sandbox'));
+  assertEquals(1, goog.dom.getElementsByTagNameAndClass('div',
+      'goog-splitpane').length);
+  assertEquals(1, goog.dom.getElementsByTagNameAndClass('div',
+      'goog-splitpane-first-container').length);
+  assertEquals(1, goog.dom.getElementsByTagNameAndClass('div',
+      'goog-splitpane-second-container').length);
+  assertEquals(1, goog.dom.getElementsByTagNameAndClass('div',
+      'goog-splitpane-handle').length);
+}
+
+function testDecorate() {
+  var mainDiv = goog.dom.createDom('div', 'goog-splitpane',
+      goog.dom.createDom('div', 'goog-splitpane-first-container'),
+      goog.dom.createDom('div', 'goog-splitpane-second-container'),
+      goog.dom.createDom('div', 'goog-splitpane-handle'));
+  var sandbox = goog.dom.$('sandbox');
+  goog.dom.appendChild(sandbox, mainDiv);
+
+  splitpane.decorate(mainDiv);  
+}
+
+function testSetSize() {
+  splitpane.setInitialSize(200);
+  splitpane.setHandleSize(10);
+  splitpane.render(goog.dom.$('sandbox'));
+
+  splitpane.setSize(new goog.math.Size(500, 300));
+  assertEquals(200, splitpane.getFirstComponentSize());
+
+  var splitpaneSize = goog.style.getBorderBoxSize(splitpane.getElement());
+  assertEquals(500, splitpaneSize.width);
+  assertEquals(300, splitpaneSize.height);  
+}
+
+
+function testOrientationChange() {
+  splitpane.setInitialSize(200);
+  splitpane.setHandleSize(10);
+  splitpane.render(goog.dom.$('sandbox'));
+  splitpane.setSize(new goog.math.Size(500, 300));
+
+  var first = goog.dom.getElementsByTagNameAndClass('div',
+      'goog-splitpane-first-container')[0];
+  var second = goog.dom.getElementsByTagNameAndClass('div',
+      'goog-splitpane-second-container')[0];
+  var handle = goog.dom.getElementsByTagNameAndClass('div',
+      'goog-splitpane-handle')[0];
+
+  var handleSize = goog.style.getBorderBoxSize(handle);
+  assertEquals(10, handleSize.width);
+  assertEquals(300, handleSize.height);
+
+  var firstSize = goog.style.getBorderBoxSize(first);
+  assertEquals(200, firstSize.width);
+  assertEquals(300, firstSize.height);
+
+  var secondSize = goog.style.getBorderBoxSize(second);
+  assertEquals(290, secondSize.width); // 500 - 200 - 10 = 290
+  assertEquals(300, secondSize.height);
+
+  splitpane.setOrientation(goog.ui.SplitPane.Orientation.VERTICAL);
+
+  handleSize = goog.style.getBorderBoxSize(handle);
+  assertEquals(10, handleSize.height);
+  assertEquals(500, handleSize.width);
+
+  firstSize = goog.style.getBorderBoxSize(first);
+  assertEquals(120, firstSize.height); // 200 * 300/500 = 120
+  assertEquals(500, firstSize.width);
+
+  secondSize = goog.style.getBorderBoxSize(second);
+  assertEquals(170, secondSize.height); // 300 - 120 - 10 = 170
+  assertEquals(500, secondSize.width);
+
+  splitpane.setOrientation(goog.ui.SplitPane.Orientation.HORIZONTAL);
+
+  handleSize = goog.style.getBorderBoxSize(handle);
+  assertEquals(10, handleSize.width);
+  assertEquals(300, handleSize.height);
+
+  firstSize = goog.style.getBorderBoxSize(first);
+  assertEquals(200, firstSize.width);
+  assertEquals(300, firstSize.height);
+
+  secondSize = goog.style.getBorderBoxSize(second);
+  assertEquals(290, secondSize.width);
+  assertEquals(300, secondSize.height);
+}
+
+</SCRIPT>
+
+
+<DIV><DIV style="color: rgb(0, 100, 0); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; font-weight: bold; ">Closure Unit Tests - goog.ui.SplitPane [PASSED]</DIV><DIV style="color: rgb(51, 51, 51); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; font-weight: bold; ">closure-library.googlecode.com/svn/trunk/closure/goog/ui/splitpane_test.html</DIV><DIV style="color: rgb(51, 51, 51); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">4 of 4 tests run in 33ms.</DIV><DIV style="color: rgb(51, 51, 51); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">4 passed, 0 failed.</DIV><DIV style="color: rgb(51, 51, 51); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">8 ms/test. 36 files loaded.</DIV><DIV style="color: rgb(51, 51, 51); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">.</DIV><DIV style="color: rgb(51, 51, 51); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">08:43:08.336  Start</DIV><DIV style="color: rgb(0, 100, 0); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">08:43:08.358  testDecorate : PASSED</DIV><DIV style="color: rgb(0, 100, 0); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">08:43:08.364  testOrientationChange : PASSED</DIV><DIV style="color: rgb(0, 100, 0); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">08:43:08.366  testRender : PASSED</DIV><DIV style="color: rgb(0, 100, 0); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">08:43:08.368  testSetSize : PASSED</DIV><DIV style="color: rgb(51, 51, 51); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">08:43:08.368  Done</DIV><DIV style="color: rgb(51, 51, 51); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; "> </DIV><A style="display: block; font-size: small; " href="">Run again without reloading</A></DIV></BODY></HTML>

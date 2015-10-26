@@ -1,0 +1,635 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" dir="ltr" lang="en"><head>
+
+	
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+				<meta name="keywords" content="1987 IAAF World Indoor Championships,IAAF Championships,1983 World Championships in Athletics,1985 IAAF World Indoor Games,1986 World Junior Championships in Athletics,1987,1987 World Championships in Athletics,1987 in athletics (track and field),1988 World Junior Championships in Athletics,1989 IAAF World Indoor Championships,1990 World Junior Championships in Athletics">
+		<link rel="shortcut icon" href="http://en.wikipedia.org/favicon.ico">
+		<link rel="apple-touch-icon" href="http://en.wikipedia.org/apple-touch-icon.png">
+		<link rel="search" type="application/opensearchdescription+xml" href="http://en.wikipedia.org/w/opensearch_desc.php" title="Wikipedia (en)">
+		<link rel="copyright" href="http://www.gnu.org/copyleft/fdl.html">
+<link rel="alternate" type="application/rss+xml" title="Wikipedia RSS Feed" href="http://en.wikipedia.org/w/index.php?title=Special:RecentChanges&amp;feed=rss">
+<link rel="alternate" type="application/atom+xml" title="Wikipedia Atom Feed" href="http://en.wikipedia.org/w/index.php?title=Special:RecentChanges&amp;feed=atom"><title>1987 IAAF World Indoor Championships - Wikipedia, the free encyclopedia</title>
+		
+		<style type="text/css" media="screen, projection">/*<![CDATA[*/
+			@import "/skins-1.5/common/shared.css?122";
+			@import "/skins-1.5/monobook/main.css?122";
+		/*]]>*/</style>
+		<link rel="stylesheet" type="text/css" media="print" href="champions_files/commonPrint.css"><!--[if lt IE 5.5000]><style type="text/css">@import "/skins-1.5/monobook/IE50Fixes.css?122";</style><![endif]--><!--[if IE 5.5000]><style type="text/css">@import "/skins-1.5/monobook/IE55Fixes.css?122";</style><![endif]--><!--[if IE 6]><style type="text/css">@import "/skins-1.5/monobook/IE60Fixes.css?122";</style><![endif]--><!--[if IE 7]><style type="text/css">@import "/skins-1.5/monobook/IE70Fixes.css?122";</style><![endif]--><!--[if lt IE 7]><script type="text/javascript" src="/skins-1.5/common/IEFixes.js?122"></script>
+		<meta http-equiv="imagetoolbar" content="no" /><![endif]-->
+		
+		
+		
+		
+		
+		
+		<script type="text/javascript">/*<![CDATA[*/
+var skin = "monobook";
+var stylepath = "/skins-1.5";
+var wgArticlePath = "/wiki/$1";
+var wgScriptPath = "/w";
+var wgScript = "/w/index.php";
+var wgVariantArticlePath = false;
+var wgActionPaths = [];
+var wgServer = "http://en.wikipedia.org";
+var wgCanonicalNamespace = "";
+var wgCanonicalSpecialPageName = false;
+var wgNamespaceNumber = 0;
+var wgPageName = "1987_IAAF_World_Indoor_Championships";
+var wgTitle = "1987 IAAF World Indoor Championships";
+var wgAction = "view";
+var wgArticleId = "2618812";
+var wgIsArticle = true;
+var wgUserName = "Yannisl";
+var wgUserGroups = ["*", "user", "autoconfirmed"];
+var wgUserLanguage = "en";
+var wgContentLanguage = "en";
+var wgBreakFrames = false;
+var wgCurRevisionId = "198379807";
+var wgVersion = "1.13alpha";
+var wgEnableAPI = true;
+var wgEnableWriteAPI = false;
+var wgRestrictionEdit = [];
+var wgRestrictionMove = [];
+var wgAjaxWatch = {"watchMsg": "Watch", "unwatchMsg": "Unwatch", "watchingMsg": "Watching...", "unwatchingMsg": "Unwatching..."};
+/*]]>*/</script>
+                
+		<script type="text/javascript" src="champions_files/wikibits.js"><!-- wikibits js --></script><!-- Head Scripts -->
+		
+		<script type="text/javascript" src="champions_files/ajax.js"></script>
+		<script type="text/javascript" src="champions_files/ajaxwatch.js"></script>
+		<script type="text/javascript" src="champions_files/index_003.php"><!-- site js --></script><script type="text/javascript" src="champions_files/index_002.php"></script>
+		<style type="text/css">/*<![CDATA[*/
+@import "/w/index.php?title=MediaWiki:Common.css&usemsgcache=yes&action=raw&ctype=text/css&smaxage=2678400";
+@import "/w/index.php?title=MediaWiki:Monobook.css&usemsgcache=yes&action=raw&ctype=text/css&smaxage=2678400";
+@import "/w/index.php?title=-&action=raw&gen=css&maxage=2678400&smaxage=0&ts=20080217101802";
+@import "/w/index.php?title=User:Yannisl/monobook.css&action=raw&ctype=text/css";
+/*]]>*/</style>
+		<script type="text/javascript" src="champions_files/index.php"></script></head><body class="mediawiki ns-0 ltr page-1987_IAAF_World_Indoor_Championships">
+	<div id="globalWrapper">
+		<div id="column-content">
+	<div id="content">
+		<a name="top" id="top"></a>
+		<div id="siteNotice"><script type="text/javascript" language="JavaScript">
+<!--
+var cookieName = "dismissSiteNotice=";
+var cookiePos = document.cookie.indexOf(cookieName);
+var siteNoticeID = "2.8";
+var siteNoticeValue = "\x3cdiv class=\"plainlinks\"\x3eThe \x3ca href=\"http://wikimania2008.wikimedia.org/wiki/\" class=\"external text\" title=\"http://wikimania2008.wikimedia.org/wiki/\" rel=\"nofollow\"\x3eWikimania 2008\x3c/a\x3e \x3ca href=\"http://wikimania2008.wikimedia.org/wiki/Call_for_Participation\" class=\"external text\" title=\"http://wikimania2008.wikimedia.org/wiki/Call_for_Participation\" rel=\"nofollow\"\x3eCall for Participation\x3c/a\x3e closes on March 16. Send in any last-minute proposals now!\x3c/div\x3e\n";
+var cookieValue = "";
+var msgClose = "hide";
+
+if (cookiePos > -1) {
+	cookiePos = cookiePos + cookieName.length;
+	var endPos = document.cookie.indexOf(";", cookiePos);
+	if (endPos > -1) {
+		cookieValue = document.cookie.substring(cookiePos, endPos);
+	} else {
+		cookieValue = document.cookie.substring(cookiePos);
+	}
+}
+if (cookieValue != siteNoticeID) {
+	function dismissNotice() {
+		var date = new Date();
+		date.setTime(date.getTime() + 30*86400*1000);
+		document.cookie = cookieName + siteNoticeID + "; expires="+date.toGMTString() + "; path=/";
+		var element = document.getElementById('siteNotice');
+		element.parentNode.removeChild(element);
+	}
+	document.writeln('<table width="100%" id="mw-dismissable-notice"><tr><td width="80%">'+siteNoticeValue+'</td>');
+	document.writeln('<td width="20%" align="right">[<a href="javascript:dismissNotice();">'+msgClose+'</a>]</td></tr></table>');
+}
+-->
+</script><table id="mw-dismissable-notice" width="100%"><tbody><tr><td width="80%"><div class="plainlinks">The <a href="http://wikimania2008.wikimedia.org/wiki/" class="external text" title="http://wikimania2008.wikimedia.org/wiki/" rel="nofollow">Wikimania 2008</a> <a href="http://wikimania2008.wikimedia.org/wiki/Call_for_Participation" class="external text" title="http://wikimania2008.wikimedia.org/wiki/Call_for_Participation" rel="nofollow">Call for Participation</a> closes on March 16. Send in any last-minute proposals now!</div>
+</td>
+<td align="right" width="20%">[<a href="javascript:dismissNotice();">hide</a>]</td></tr></tbody></table>
+</div>		<h1 class="firstHeading"><span><span>1987 IAAF World Indoor Championships</span></span></h1>
+		<div id="bodyContent">
+			<h3 id="siteSub">From Wikipedia, the free encyclopedia</h3>
+			<div id="contentSub"></div>
+									<div id="jump-to-nav">Jump to: <a href="#column-one">navigation</a>, <a href="#searchInput">search</a></div>			<!-- start content -->
+			<p>The <b>1st IAAF World Indoor Championships in Athletics</b> were held in <a href="http://en.wikipedia.org/wiki/Indianapolis" class="mw-redirect" title="Indianapolis">Indianapolis</a>, <a href="http://en.wikipedia.org/wiki/United_States" title="United States">United States</a> from <a href="http://en.wikipedia.org/wiki/March_6" title="March 6">March 6</a> to <a href="http://en.wikipedia.org/wiki/March_8" title="March 8">March 8</a>, <a href="http://en.wikipedia.org/wiki/1987" title="1987">1987</a>. The championship had previously been known as the <b>World Indoor Games</b>, which were held once before changing the name.</p>
+<p>Being the second championship of its kind, there were a lot of
+championship records. In fact, new championship records were set for
+every single women event. There were a total number of 419
+participating athletes from 85 countries.</p>
+<table id="toc" class="toc" summary="Contents">
+<tbody><tr>
+<td>
+<div id="toctitle">
+<h2>Contents</h2>
+ <span class="toctoggle">[<a href="javascript:toggleToc()" class="internal" id="togglelink">hide</a>]</span></div>
+<ul>
+<li class="toclevel-1"><a href="#Results"><span class="tocnumber">1</span> <span class="toctext">Results</span></a>
+<ul>
+<li class="toclevel-2"><a href="#Men"><span class="tocnumber">1.1</span> <span class="toctext">Men</span></a></li>
+<li class="toclevel-2"><a href="#Women"><span class="tocnumber">1.2</span> <span class="toctext">Women</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1"><a href="#Medals_table"><span class="tocnumber">2</span> <span class="toctext">Medals table</span></a></li>
+<li class="toclevel-1"><a href="#See_also"><span class="tocnumber">3</span> <span class="toctext">See also</span></a></li>
+<li class="toclevel-1"><a href="#External_links"><span class="tocnumber">4</span> <span class="toctext">External links</span></a></li>
+</ul>
+</td>
+</tr>
+</tbody></table>
+<script type="text/javascript">
+//<![CDATA[
+ if (window.showTocToggle) { var tocShowText = "show"; var tocHideText = "hide"; showTocToggle(); } 
+//]]>
+</script>
+<p><a name="Results" id="Results"></a></p>
+<h2><span class="editsection">[<a href="http://en.wikipedia.org/w/index.php?title=1987_IAAF_World_Indoor_Championships&amp;action=edit&amp;section=1" title="Edit section: Results">edit</a>]</span> <span class="mw-headline">Results</span></h2>
+<p><a name="Men" id="Men"></a></p>
+<h3><span class="editsection">[<a href="http://en.wikipedia.org/w/index.php?title=1987_IAAF_World_Indoor_Championships&amp;action=edit&amp;section=2" title="Edit section: Men">edit</a>]</span> <span class="mw-headline">Men</span></h3>
+<p><a href="http://en.wikipedia.org/wiki/1985_IAAF_World_Indoor_Games#Men" title="1985 IAAF World Indoor Games">1985</a> | 1987 | <a href="http://en.wikipedia.org/wiki/1989_IAAF_World_Indoor_Championships#Men" title="1989 IAAF World Indoor Championships">1989</a> | <a href="http://en.wikipedia.org/wiki/1991_IAAF_World_Indoor_Championships#Men" title="1991 IAAF World Indoor Championships">1991</a> |</p>
+<table class="wikitable" border="1" cellpadding="2" cellspacing="0">
+<tbody><tr>
+<th>Event:</th>
+<th colspan="2" bgcolor="gold">Gold:</th>
+<th colspan="2" bgcolor="silver">Silver:</th>
+<th colspan="2" bgcolor="#cc9966">Bronze:</th>
+</tr>
+<tr>
+<td>60 m</td>
+<td><a href="http://en.wikipedia.org/wiki/Lee_McRae" title="Lee McRae">Lee McRae</a><br>
+<span class="flagicon"><a href="http://en.wikipedia.org/wiki/Image:Flag_of_the_United_States.svg" class="image" title="Flag of the United States"><img alt="Flag of the United States" src="champions_files/22px-Flag_of_the_United_States.png" class="thumbborder" border="0" height="12" width="22"></a>&nbsp;</span><a href="http://en.wikipedia.org/wiki/United_States" title="United States">United States</a></td>
+<td>6.50 CR</td>
+<td><a href="http://en.wikipedia.org/w/index.php?title=Mark_Witherspoon&amp;action=edit&amp;redlink=1" class="new" title="Mark Witherspoon (page does not exist)">Mark Witherspoon</a><br>
+<span class="flagicon"><a href="http://en.wikipedia.org/wiki/Image:Flag_of_the_United_States.svg" class="image" title="Flag of the United States"><img alt="Flag of the United States" src="champions_files/22px-Flag_of_the_United_States.png" class="thumbborder" border="0" height="12" width="22"></a>&nbsp;</span><a href="http://en.wikipedia.org/wiki/United_States" title="United States">United States</a></td>
+<td>6.54</td>
+<td><a href="http://en.wikipedia.org/wiki/Pierfrancesco_Pavoni" title="Pierfrancesco Pavoni">Pierfrancesco Pavoni</a><br>
+<span class="flagicon"><a href="http://en.wikipedia.org/wiki/Image:Flag_of_Italy.svg" class="image" title="Flag of Italy"><img alt="Flag of Italy" src="champions_files/22px-Flag_of_Italy.png" class="thumbborder" border="0" height="15" width="22"></a>&nbsp;</span><a href="http://en.wikipedia.org/wiki/Italy" title="Italy">Italy</a></td>
+<td>6.59</td>
+</tr>
+<tr>
+<td>200 m</td>
+<td><a href="http://en.wikipedia.org/wiki/Kirk_Baptiste" title="Kirk Baptiste">Kirk Baptiste</a><br>
+<span class="flagicon"><a href="http://en.wikipedia.org/wiki/Image:Flag_of_the_United_States.svg" class="image" title="Flag of the United States"><img alt="Flag of the United States" src="champions_files/22px-Flag_of_the_United_States.png" class="thumbborder" border="0" height="12" width="22"></a>&nbsp;</span><a href="http://en.wikipedia.org/wiki/United_States" title="United States">United States</a></td>
+<td>20.73 CR</td>
+<td><a href="http://en.wikipedia.org/wiki/Bruno_Marie-Rose" title="Bruno Marie-Rose">Bruno Marie-Rose</a><br>
+<span class="flagicon"><a href="http://en.wikipedia.org/wiki/Image:Flag_of_France.svg" class="image" title="Flag of France"><img alt="Flag of France" src="champions_files/22px-Flag_of_France.png" class="thumbborder" border="0" height="15" width="22"></a>&nbsp;</span><a href="http://en.wikipedia.org/wiki/France" title="France">France</a></td>
+<td>20.89</td>
+<td><a href="http://en.wikipedia.org/wiki/Robson_da_Silva" title="Robson da Silva">Robson da Silva</a><br>
+<span class="flagicon"><a href="http://en.wikipedia.org/wiki/Image:Flag_of_Brazil.svg" class="image" title="Flag of Brazil"><img alt="Flag of Brazil" src="champions_files/22px-Flag_of_Brazil.png" class="thumbborder" border="0" height="15" width="22"></a>&nbsp;</span><a href="http://en.wikipedia.org/wiki/Brazil" title="Brazil">Brazil</a></td>
+<td>20.92</td>
+</tr>
+<tr>
+<td>400 m</td>
+<td><a href="http://en.wikipedia.org/wiki/Antonio_McKay" title="Antonio McKay">Antonio McKay</a><br>
+<span class="flagicon"><a href="http://en.wikipedia.org/wiki/Image:Flag_of_the_United_States.svg" class="image" title="Flag of the United States"><img alt="Flag of the United States" src="champions_files/22px-Flag_of_the_United_States.png" class="thumbborder" border="0" height="12" width="22"></a>&nbsp;</span><a href="http://en.wikipedia.org/wiki/United_States" title="United States">United States</a></td>
+<td>45.98</td>
+<td><a href="http://en.wikipedia.org/wiki/Roberto_Hern%C3%A1ndez_%28track_athlete%29" title="Roberto Hernández (track athlete)">Roberto Hernández</a><br>
+<span class="flagicon"><a href="http://en.wikipedia.org/wiki/Image:Flag_of_Cuba.svg" class="image" title="Flag of Cuba"><img alt="Flag of Cuba" src="champions_files/22px-Flag_of_Cuba.png" class="thumbborder" border="0" height="11" width="22"></a>&nbsp;</span><a href="http://en.wikipedia.org/wiki/Cuba" title="Cuba">Cuba</a></td>
+<td>46.09</td>
+<td><a href="http://en.wikipedia.org/wiki/Mike_Franks" title="Mike Franks">Mike Franks</a><br>
+<span class="flagicon"><a href="http://en.wikipedia.org/wiki/Image:Flag_of_the_United_States.svg" class="image" title="Flag of the United States"><img alt="Flag of the United States" src="champions_files/22px-Flag_of_the_United_States.png" class="thumbborder" border="0" height="12" width="22"></a>&nbsp;</span><a href="http://en.wikipedia.org/wiki/United_States" title="United States">United States</a></td>
+<td>46.19</td>
+</tr>
+<tr>
+<td>800 m</td>
+<td><a href="http://en.wikipedia.org/wiki/Jos%C3%A9_Luiz_Barbosa" title="José Luiz Barbosa">José Luiz Barbosa</a><br>
+<span class="flagicon"><a href="http://en.wikipedia.org/wiki/Image:Flag_of_Brazil.svg" class="image" title="Flag of Brazil"><img alt="Flag of Brazil" src="champions_files/22px-Flag_of_Brazil.png" class="thumbborder" border="0" height="15" width="22"></a>&nbsp;</span><a href="http://en.wikipedia.org/wiki/Brazil" title="Brazil">Brazil</a></td>
+<td>1:47.49</td>
+<td><a href="http://en.wikipedia.org/w/index.php?title=Vladimir_Graudyn&amp;action=edit&amp;redlink=1" class="new" title="Vladimir Graudyn (page does not exist)">Vladimir Graudyn</a><br>
+<span class="flagicon"><a href="http://en.wikipedia.org/wiki/Image:Flag_of_the_Soviet_Union.svg" class="image" title="Flag of the Soviet Union"><img alt="Flag of the Soviet Union" src="champions_files/22px-Flag_of_the_Soviet_Union.png" class="thumbborder" border="0" height="11" width="22"></a>&nbsp;</span><a href="http://en.wikipedia.org/wiki/Soviet_Union" title="Soviet Union">Soviet Union</a></td>
+<td>1:47.68</td>
+<td><a href="http://en.wikipedia.org/w/index.php?title=Faouzi_Lahbi&amp;action=edit&amp;redlink=1" class="new" title="Faouzi Lahbi (page does not exist)">Faouzi Lahbi</a><br>
+<span class="flagicon"><a href="http://en.wikipedia.org/wiki/Image:Flag_of_Morocco.svg" class="image" title="Flag of Morocco"><img alt="Flag of Morocco" src="champions_files/22px-Flag_of_Morocco.png" class="thumbborder" border="0" height="15" width="22"></a>&nbsp;</span><a href="http://en.wikipedia.org/wiki/Morocco" title="Morocco">Morocco</a></td>
+<td>1:47.79</td>
+</tr>
+<tr>
+<td>1500 m</td>
+<td><a href="http://en.wikipedia.org/wiki/Marcus_O%27Sullivan" title="Marcus O'Sullivan">Marcus O'Sullivan</a><br>
+<span class="flagicon"><a href="http://en.wikipedia.org/wiki/Image:Flag_of_Ireland.svg" class="image" title="Flag of Ireland"><img alt="Flag of Ireland" src="champions_files/22px-Flag_of_Ireland.png" class="thumbborder" border="0" height="11" width="22"></a>&nbsp;</span><a href="http://en.wikipedia.org/wiki/Republic_of_Ireland" title="Republic of Ireland">Ireland</a></td>
+<td>3:39.04 CR</td>
+<td><a href="http://en.wikipedia.org/wiki/Jos%C3%A9_Manuel_Abascal" title="José Manuel Abascal">José Manuel Abascal</a><br>
+<span class="flagicon"><a href="http://en.wikipedia.org/wiki/Image:Flag_of_Spain.svg" class="image" title="Flag of Spain"><img alt="Flag of Spain" src="champions_files/22px-Flag_of_Spain.png" class="thumbborder" border="0" height="15" width="22"></a>&nbsp;</span><a href="http://en.wikipedia.org/wiki/Spain" title="Spain">Spain</a></td>
+<td>3:39.13</td>
+<td><a href="http://en.wikipedia.org/wiki/Han_Kulker" title="Han Kulker">Han Kulker</a><br>
+<span class="flagicon"><a href="http://en.wikipedia.org/wiki/Image:Flag_of_the_Netherlands.svg" class="image" title="Flag of the Netherlands"><img alt="Flag of the Netherlands" src="champions_files/22px-Flag_of_the_Netherlands.png" class="thumbborder" border="0" height="15" width="22"></a>&nbsp;</span><a href="http://en.wikipedia.org/wiki/Netherlands" title="Netherlands">Netherlands</a></td>
+<td>3:39.51</td>
+</tr>
+<tr>
+<td>3000 m</td>
+<td><a href="http://en.wikipedia.org/wiki/Frank_O%27Mara" title="Frank O'Mara">Frank O'Mara</a><br>
+<span class="flagicon"><a href="http://en.wikipedia.org/wiki/Image:Flag_of_Ireland.svg" class="image" title="Flag of Ireland"><img alt="Flag of Ireland" src="champions_files/22px-Flag_of_Ireland.png" class="thumbborder" border="0" height="11" width="22"></a>&nbsp;</span><a href="http://en.wikipedia.org/wiki/Republic_of_Ireland" title="Republic of Ireland">Ireland</a></td>
+<td>8.03.32</td>
+<td><a href="http://en.wikipedia.org/wiki/Paul_Donovan" title="Paul Donovan">Paul Donovan</a><br>
+<span class="flagicon"><a href="http://en.wikipedia.org/wiki/Image:Flag_of_Ireland.svg" class="image" title="Flag of Ireland"><img alt="Flag of Ireland" src="champions_files/22px-Flag_of_Ireland.png" class="thumbborder" border="0" height="11" width="22"></a>&nbsp;</span><a href="http://en.wikipedia.org/wiki/Republic_of_Ireland" title="Republic of Ireland">Ireland</a></td>
+<td>8.03.39</td>
+<td><a href="http://en.wikipedia.org/w/index.php?title=Terry_Brahm&amp;action=edit&amp;redlink=1" class="new" title="Terry Brahm (page does not exist)">Terry Brahm</a><br>
+<span class="flagicon"><a href="http://en.wikipedia.org/wiki/Image:Flag_of_the_United_States.svg" class="image" title="Flag of the United States"><img alt="Flag of the United States" src="champions_files/22px-Flag_of_the_United_States.png" class="thumbborder" border="0" height="12" width="22"></a>&nbsp;</span><a href="http://en.wikipedia.org/wiki/United_States" title="United States">United States</a></td>
+<td>8:03.92</td>
+</tr>
+<tr>
+<td>60 m Hurdles</td>
+<td><a href="http://en.wikipedia.org/w/index.php?title=Tonie_Campbell&amp;action=edit&amp;redlink=1" class="new" title="Tonie Campbell (page does not exist)">Tonie Campbell</a><br>
+<span class="flagicon"><a href="http://en.wikipedia.org/wiki/Image:Flag_of_the_United_States.svg" class="image" title="Flag of the United States"><img alt="Flag of the United States" src="champions_files/22px-Flag_of_the_United_States.png" class="thumbborder" border="0" height="12" width="22"></a>&nbsp;</span><a href="http://en.wikipedia.org/wiki/United_States" title="United States">United States</a></td>
+<td>7.51 CR</td>
+<td><a href="http://en.wikipedia.org/wiki/St%C3%A9phane_Caristan" title="Stéphane Caristan">Stéphane Caristan</a><br>
+<span class="flagicon"><a href="http://en.wikipedia.org/wiki/Image:Flag_of_France.svg" class="image" title="Flag of France"><img alt="Flag of France" src="champions_files/22px-Flag_of_France.png" class="thumbborder" border="0" height="15" width="22"></a>&nbsp;</span><a href="http://en.wikipedia.org/wiki/France" title="France">France</a></td>
+<td>7.62</td>
+<td><a href="http://en.wikipedia.org/wiki/Nigel_Walker" title="Nigel Walker">Nigel Walker</a><br>
+<span class="flagicon"><a href="http://en.wikipedia.org/wiki/Image:Flag_of_the_United_Kingdom.svg" class="image" title="Flag of the United Kingdom"><img alt="Flag of the United Kingdom" src="champions_files/22px-Flag_of_the_United_Kingdom.png" class="thumbborder" border="0" height="11" width="22"></a>&nbsp;</span><a href="http://en.wikipedia.org/wiki/United_Kingdom" title="United Kingdom">United Kingdom</a></td>
+<td>7.66</td>
+</tr>
+<tr>
+<td><a href="http://en.wikipedia.org/wiki/High_Jump" class="mw-redirect" title="High Jump">High Jump</a></td>
+<td><a href="http://en.wikipedia.org/wiki/Igor_Paklin" title="Igor Paklin">Igor Paklin</a><br>
+<span class="flagicon"><a href="http://en.wikipedia.org/wiki/Image:Flag_of_the_Soviet_Union.svg" class="image" title="Flag of the Soviet Union"><img alt="Flag of the Soviet Union" src="champions_files/22px-Flag_of_the_Soviet_Union.png" class="thumbborder" border="0" height="11" width="22"></a>&nbsp;</span><a href="http://en.wikipedia.org/wiki/Soviet_Union" title="Soviet Union">Soviet Union</a></td>
+<td>2.38 CR</td>
+<td><a href="http://en.wikipedia.org/wiki/Gennadiy_Avdeyenko" title="Gennadiy Avdeyenko">Gennadiy Avdeyenko</a><br>
+<span class="flagicon"><a href="http://en.wikipedia.org/wiki/Image:Flag_of_the_Soviet_Union.svg" class="image" title="Flag of the Soviet Union"><img alt="Flag of the Soviet Union" src="champions_files/22px-Flag_of_the_Soviet_Union.png" class="thumbborder" border="0" height="11" width="22"></a>&nbsp;</span><a href="http://en.wikipedia.org/wiki/Soviet_Union" title="Soviet Union">Soviet Union</a></td>
+<td>2.38</td>
+<td><a href="http://en.wikipedia.org/wiki/J%C3%A1n_Zvara" title="Ján Zvara">Ján Zvara</a><br>
+<span class="flagicon"><a href="http://en.wikipedia.org/wiki/Image:Flag_of_Czechoslovakia.svg" class="image" title="Flag of Czechoslovakia"><img alt="Flag of Czechoslovakia" src="champions_files/22px-Flag_of_Czechoslovakia.png" class="thumbborder" border="0" height="15" width="22"></a>&nbsp;</span><a href="http://en.wikipedia.org/wiki/Czechoslovakia" title="Czechoslovakia">Czechoslovakia</a></td>
+<td>2.34</td>
+</tr>
+<tr>
+<td><a href="http://en.wikipedia.org/wiki/Pole_Vault" class="mw-redirect" title="Pole Vault">Pole Vault</a></td>
+<td><a href="http://en.wikipedia.org/wiki/Sergey_Bubka" class="mw-redirect" title="Sergey Bubka">Sergey Bubka</a><br>
+<span class="flagicon"><a href="http://en.wikipedia.org/wiki/Image:Flag_of_the_Soviet_Union.svg" class="image" title="Flag of the Soviet Union"><img alt="Flag of the Soviet Union" src="champions_files/22px-Flag_of_the_Soviet_Union.png" class="thumbborder" border="0" height="11" width="22"></a>&nbsp;</span><a href="http://en.wikipedia.org/wiki/Soviet_Union" title="Soviet Union">Soviet Union</a></td>
+<td>5.85 CR</td>
+<td><a href="http://en.wikipedia.org/wiki/Earl_Bell_%28athlete%29" class="mw-redirect" title="Earl Bell (athlete)">Earl Bell</a><br>
+<span class="flagicon"><a href="http://en.wikipedia.org/wiki/Image:Flag_of_the_United_States.svg" class="image" title="Flag of the United States"><img alt="Flag of the United States" src="champions_files/22px-Flag_of_the_United_States.png" class="thumbborder" border="0" height="12" width="22"></a>&nbsp;</span><a href="http://en.wikipedia.org/wiki/United_States" title="United States">United States</a></td>
+<td>5.80</td>
+<td><a href="http://en.wikipedia.org/wiki/Thierry_Vigneron" title="Thierry Vigneron">Thierry Vigneron</a><br>
+<span class="flagicon"><a href="http://en.wikipedia.org/wiki/Image:Flag_of_France.svg" class="image" title="Flag of France"><img alt="Flag of France" src="champions_files/22px-Flag_of_France.png" class="thumbborder" border="0" height="15" width="22"></a>&nbsp;</span><a href="http://en.wikipedia.org/wiki/France" title="France">France</a></td>
+<td>5.80</td>
+</tr>
+<tr>
+<td><a href="http://en.wikipedia.org/wiki/Long_Jump" class="mw-redirect" title="Long Jump">Long Jump</a></td>
+<td><a href="http://en.wikipedia.org/wiki/Larry_Myricks" title="Larry Myricks">Larry Myricks</a><br>
+<span class="flagicon"><a href="http://en.wikipedia.org/wiki/Image:Flag_of_the_United_States.svg" class="image" title="Flag of the United States"><img alt="Flag of the United States" src="champions_files/22px-Flag_of_the_United_States.png" class="thumbborder" border="0" height="12" width="22"></a>&nbsp;</span><a href="http://en.wikipedia.org/wiki/United_States" title="United States">United States</a></td>
+<td>8.23 CR</td>
+<td><a href="http://en.wikipedia.org/wiki/Paul_Emordi" title="Paul Emordi">Paul Emordi</a><br>
+<span class="flagicon"><a href="http://en.wikipedia.org/wiki/Image:Flag_of_Nigeria.svg" class="image" title="Flag of Nigeria"><img alt="Flag of Nigeria" src="champions_files/22px-Flag_of_Nigeria.png" class="thumbborder" border="0" height="11" width="22"></a>&nbsp;</span><a href="http://en.wikipedia.org/wiki/Nigeria" title="Nigeria">Nigeria</a></td>
+<td>8.01</td>
+<td><a href="http://en.wikipedia.org/wiki/Giovanni_Evangelisti" title="Giovanni Evangelisti">Giovanni Evangelisti</a><br>
+<span class="flagicon"><a href="http://en.wikipedia.org/wiki/Image:Flag_of_Italy.svg" class="image" title="Flag of Italy"><img alt="Flag of Italy" src="champions_files/22px-Flag_of_Italy.png" class="thumbborder" border="0" height="15" width="22"></a>&nbsp;</span><a href="http://en.wikipedia.org/wiki/Italy" title="Italy">Italy</a></td>
+<td>8.01</td>
+</tr>
+<tr>
+<td><a href="http://en.wikipedia.org/wiki/Triple_Jump" class="mw-redirect" title="Triple Jump">Triple Jump</a></td>
+<td><a href="http://en.wikipedia.org/wiki/Mike_Conley_%28track_athlete%29" class="mw-redirect" title="Mike Conley (track athlete)">Mike Conley</a><br>
+<span class="flagicon"><a href="http://en.wikipedia.org/wiki/Image:Flag_of_the_United_States.svg" class="image" title="Flag of the United States"><img alt="Flag of the United States" src="champions_files/22px-Flag_of_the_United_States.png" class="thumbborder" border="0" height="12" width="22"></a>&nbsp;</span><a href="http://en.wikipedia.org/wiki/United_States" title="United States">United States</a></td>
+<td>17.54 CR</td>
+<td><a href="http://en.wikipedia.org/wiki/Oleg_Protsenko" title="Oleg Protsenko">Oleg Protsenko</a><br>
+<span class="flagicon"><a href="http://en.wikipedia.org/wiki/Image:Flag_of_the_Soviet_Union.svg" class="image" title="Flag of the Soviet Union"><img alt="Flag of the Soviet Union" src="champions_files/22px-Flag_of_the_Soviet_Union.png" class="thumbborder" border="0" height="11" width="22"></a>&nbsp;</span><a href="http://en.wikipedia.org/wiki/Soviet_Union" title="Soviet Union">Soviet Union</a></td>
+<td>17.26</td>
+<td><a href="http://en.wikipedia.org/wiki/Frank_Rutherford" title="Frank Rutherford">Frank Rutherford</a><br>
+<span class="flagicon"><a href="http://en.wikipedia.org/wiki/Image:Flag_of_the_Bahamas.svg" class="image" title="Flag of the Bahamas"><img alt="Flag of the Bahamas" src="champions_files/22px-Flag_of_the_Bahamas.png" class="thumbborder" border="0" height="11" width="22"></a>&nbsp;</span><a href="http://en.wikipedia.org/wiki/The_Bahamas" title="The Bahamas">Bahamas</a></td>
+<td>17.02</td>
+</tr>
+<tr>
+<td><a href="http://en.wikipedia.org/wiki/Shot_Put" class="mw-redirect" title="Shot Put">Shot Put</a></td>
+<td><a href="http://en.wikipedia.org/wiki/Ulf_Timmermann" title="Ulf Timmermann">Ulf Timmermann</a><br>
+<span class="flagicon"><a href="http://en.wikipedia.org/wiki/Image:Flag_of_East_Germany.svg" class="image" title="Flag of the German Democratic Republic"><img alt="Flag of the German Democratic Republic" src="champions_files/22px-Flag_of_East_Germany.png" class="thumbborder" border="0" height="13" width="22"></a>&nbsp;</span><a href="http://en.wikipedia.org/wiki/East_Germany" title="East Germany">East Germany</a></td>
+<td>22.24 CR</td>
+<td><a href="http://en.wikipedia.org/wiki/Werner_G%C3%BCnth%C3%B6r" title="Werner Günthör">Werner Günthör</a><br>
+<span class="flagicon"><a href="http://en.wikipedia.org/wiki/Image:Flag_of_Switzerland.svg" class="image" title="Flag of Switzerland"><img alt="Flag of Switzerland" src="champions_files/20px-Flag_of_Switzerland.png" class="thumbborder" border="0" height="20" width="20"></a>&nbsp;</span><a href="http://en.wikipedia.org/wiki/Switzerland" title="Switzerland">Switzerland</a></td>
+<td>21.61</td>
+<td><a href="http://en.wikipedia.org/wiki/Sergey_Smirnov" title="Sergey Smirnov">Sergey Smirnov</a><br>
+<span class="flagicon"><a href="http://en.wikipedia.org/wiki/Image:Flag_of_the_Soviet_Union.svg" class="image" title="Flag of the Soviet Union"><img alt="Flag of the Soviet Union" src="champions_files/22px-Flag_of_the_Soviet_Union.png" class="thumbborder" border="0" height="11" width="22"></a>&nbsp;</span><a href="http://en.wikipedia.org/wiki/Soviet_Union" title="Soviet Union">Soviet Union</a></td>
+<td>20.67</td>
+</tr>
+<tr>
+<td>5000 Metres Walk</td>
+<td><a href="http://en.wikipedia.org/wiki/Mikhail_Shchennikov" title="Mikhail Shchennikov">Mikhail Shchennikov</a><br>
+<span class="flagicon"><a href="http://en.wikipedia.org/wiki/Image:Flag_of_the_Soviet_Union.svg" class="image" title="Flag of the Soviet Union"><img alt="Flag of the Soviet Union" src="champions_files/22px-Flag_of_the_Soviet_Union.png" class="thumbborder" border="0" height="11" width="22"></a>&nbsp;</span><a href="http://en.wikipedia.org/wiki/Soviet_Union" title="Soviet Union">Soviet Union</a></td>
+<td>18:27.79 CR</td>
+<td><a href="http://en.wikipedia.org/wiki/Jozef_Pribilinec" title="Jozef Pribilinec">Jozef Pribilinec</a><br>
+<span class="flagicon"><a href="http://en.wikipedia.org/wiki/Image:Flag_of_Czechoslovakia.svg" class="image" title="Flag of Czechoslovakia"><img alt="Flag of Czechoslovakia" src="champions_files/22px-Flag_of_Czechoslovakia.png" class="thumbborder" border="0" height="15" width="22"></a>&nbsp;</span><a href="http://en.wikipedia.org/wiki/Czechoslovakia" title="Czechoslovakia">Czechoslovakia</a></td>
+<td>18:27.80</td>
+<td><a href="http://en.wikipedia.org/wiki/Ernesto_Canto" title="Ernesto Canto">Ernesto Canto</a><br>
+<span class="flagicon"><a href="http://en.wikipedia.org/wiki/Image:Flag_of_Mexico.svg" class="image" title="Flag of Mexico"><img alt="Flag of Mexico" src="champions_files/22px-Flag_of_Mexico.png" class="thumbborder" border="0" height="13" width="22"></a>&nbsp;</span><a href="http://en.wikipedia.org/wiki/Mexico" title="Mexico">Mexico</a></td>
+<td>18:38.71</td>
+</tr>
+</tbody></table>
+<p><a name="Women" id="Women"></a></p>
+<h3><span class="editsection">[<a href="http://en.wikipedia.org/w/index.php?title=1987_IAAF_World_Indoor_Championships&amp;action=edit&amp;section=3" title="Edit section: Women">edit</a>]</span> <span class="mw-headline">Women</span></h3>
+<p><a href="http://en.wikipedia.org/wiki/1985_IAAF_World_Indoor_Games#Women" title="1985 IAAF World Indoor Games">1985</a> | 1987 | <a href="http://en.wikipedia.org/wiki/1989_IAAF_World_Indoor_Championships#Women" title="1989 IAAF World Indoor Championships">1989</a> | <a href="http://en.wikipedia.org/wiki/1991_IAAF_World_Indoor_Championships#Women" title="1991 IAAF World Indoor Championships">1991</a> |</p>
+<table class="wikitable" border="1" cellpadding="2" cellspacing="0">
+<tbody><tr>
+<th>Event:</th>
+<th colspan="2" bgcolor="gold">Gold:</th>
+<th colspan="2" bgcolor="silver">Silver:</th>
+<th colspan="2" bgcolor="#cc9966">Bronze:</th>
+</tr>
+<tr>
+<td>60 m</td>
+<td><a href="http://en.wikipedia.org/wiki/Nelli_Fiere-Cooman" class="mw-redirect" title="Nelli Fiere-Cooman">Nelli Fiere-Cooman</a><br>
+<span class="flagicon"><a href="http://en.wikipedia.org/wiki/Image:Flag_of_the_Netherlands.svg" class="image" title="Flag of the Netherlands"><img alt="Flag of the Netherlands" src="champions_files/22px-Flag_of_the_Netherlands.png" class="thumbborder" border="0" height="15" width="22"></a>&nbsp;</span><a href="http://en.wikipedia.org/wiki/Netherlands" title="Netherlands">Netherlands</a></td>
+<td>7.08 CR</td>
+<td><a href="http://en.wikipedia.org/wiki/Anelia_Nuneva" title="Anelia Nuneva">Anelia Nuneva</a><br>
+<span class="flagicon"><a href="http://en.wikipedia.org/wiki/Image:Flag_of_Bulgaria.svg" class="image" title="Flag of Bulgaria"><img alt="Flag of Bulgaria" src="champions_files/22px-Flag_of_Bulgaria.png" class="thumbborder" border="0" height="13" width="22"></a>&nbsp;</span><a href="http://en.wikipedia.org/wiki/Bulgaria" title="Bulgaria">Bulgaria</a></td>
+<td>7.10</td>
+<td><a href="http://en.wikipedia.org/wiki/Angela_Bailey" title="Angela Bailey">Angela Bailey</a><br>
+<span class="flagicon"><a href="http://en.wikipedia.org/wiki/Image:Flag_of_Canada.svg" class="image" title="Flag of Canada"><img alt="Flag of Canada" src="champions_files/22px-Flag_of_Canada.png" class="thumbborder" border="0" height="11" width="22"></a>&nbsp;</span><a href="http://en.wikipedia.org/wiki/Canada" title="Canada">Canada</a></td>
+<td>7.12</td>
+</tr>
+<tr>
+<td>200 m</td>
+<td><a href="http://en.wikipedia.org/wiki/Heike_Drechsler" title="Heike Drechsler">Heike Drechsler</a><br>
+<span class="flagicon"><a href="http://en.wikipedia.org/wiki/Image:Flag_of_East_Germany.svg" class="image" title="Flag of the German Democratic Republic"><img alt="Flag of the German Democratic Republic" src="champions_files/22px-Flag_of_East_Germany.png" class="thumbborder" border="0" height="13" width="22"></a>&nbsp;</span><a href="http://en.wikipedia.org/wiki/East_Germany" title="East Germany">East Germany</a></td>
+<td>22.27 CR</td>
+<td><a href="http://en.wikipedia.org/wiki/Merlene_Ottey" title="Merlene Ottey">Merlene Ottey</a><br>
+<span class="flagicon"><a href="http://en.wikipedia.org/wiki/Image:Flag_of_Jamaica.svg" class="image" title="Flag of Jamaica"><img alt="Flag of Jamaica" src="champions_files/22px-Flag_of_Jamaica.png" class="thumbborder" border="0" height="11" width="22"></a>&nbsp;</span><a href="http://en.wikipedia.org/wiki/Jamaica" title="Jamaica">Jamaica</a></td>
+<td>22.66</td>
+<td><a href="http://en.wikipedia.org/wiki/Grace_Jackson" title="Grace Jackson">Grace Jackson</a><br>
+<span class="flagicon"><a href="http://en.wikipedia.org/wiki/Image:Flag_of_Jamaica.svg" class="image" title="Flag of Jamaica"><img alt="Flag of Jamaica" src="champions_files/22px-Flag_of_Jamaica.png" class="thumbborder" border="0" height="11" width="22"></a>&nbsp;</span><a href="http://en.wikipedia.org/wiki/Jamaica" title="Jamaica">Jamaica</a></td>
+<td>23.21</td>
+</tr>
+<tr>
+<td>400 m</td>
+<td><a href="http://en.wikipedia.org/wiki/Sabine_Busch" title="Sabine Busch">Sabine Busch</a><br>
+<span class="flagicon"><a href="http://en.wikipedia.org/wiki/Image:Flag_of_East_Germany.svg" class="image" title="Flag of the German Democratic Republic"><img alt="Flag of the German Democratic Republic" src="champions_files/22px-Flag_of_East_Germany.png" class="thumbborder" border="0" height="13" width="22"></a>&nbsp;</span><a href="http://en.wikipedia.org/wiki/East_Germany" title="East Germany">East Germany</a></td>
+<td>51.66 CR</td>
+<td><a href="http://en.wikipedia.org/wiki/Lillie_Leatherwood" title="Lillie Leatherwood">Lillie Leatherwood</a><br>
+<span class="flagicon"><a href="http://en.wikipedia.org/wiki/Image:Flag_of_the_United_States.svg" class="image" title="Flag of the United States"><img alt="Flag of the United States" src="champions_files/22px-Flag_of_the_United_States.png" class="thumbborder" border="0" height="12" width="22"></a>&nbsp;</span><a href="http://en.wikipedia.org/wiki/United_States" title="United States">United States</a></td>
+<td>52.54</td>
+<td><a href="http://en.wikipedia.org/w/index.php?title=Judit_Forg%C3%A1cs&amp;action=edit&amp;redlink=1" class="new" title="Judit Forgács (page does not exist)">Judit Forgács</a><br>
+<span class="flagicon"><a href="http://en.wikipedia.org/wiki/Image:Flag_of_Hungary.svg" class="image" title="Flag of Hungary"><img alt="Flag of Hungary" src="champions_files/22px-Flag_of_Hungary.png" class="thumbborder" border="0" height="11" width="22"></a>&nbsp;</span><a href="http://en.wikipedia.org/wiki/Hungary" title="Hungary">Hungary</a></td>
+<td>52.68</td>
+</tr>
+<tr>
+<td>800 m</td>
+<td><a href="http://en.wikipedia.org/wiki/Christine_Wachtel" title="Christine Wachtel">Christine Wachtel</a><br>
+<span class="flagicon"><a href="http://en.wikipedia.org/wiki/Image:Flag_of_East_Germany.svg" class="image" title="Flag of the German Democratic Republic"><img alt="Flag of the German Democratic Republic" src="champions_files/22px-Flag_of_East_Germany.png" class="thumbborder" border="0" height="13" width="22"></a>&nbsp;</span><a href="http://en.wikipedia.org/wiki/East_Germany" title="East Germany">East Germany</a></td>
+<td>2:01.32 CR</td>
+<td><a href="http://en.wikipedia.org/w/index.php?title=Gabriela_Sedl%C3%A1kov%C3%A1&amp;action=edit&amp;redlink=1" class="new" title="Gabriela Sedláková (page does not exist)">Gabriela Sedláková</a><br>
+<span class="flagicon"><a href="http://en.wikipedia.org/wiki/Image:Flag_of_Czechoslovakia.svg" class="image" title="Flag of Czechoslovakia"><img alt="Flag of Czechoslovakia" src="champions_files/22px-Flag_of_Czechoslovakia.png" class="thumbborder" border="0" height="15" width="22"></a>&nbsp;</span><a href="http://en.wikipedia.org/wiki/Czechoslovakia" title="Czechoslovakia">Czechoslovakia</a></td>
+<td>2:01.85</td>
+<td><a href="http://en.wikipedia.org/wiki/Lyubov_Kiryukhina" title="Lyubov Kiryukhina">Lyubov Kiryukhina</a><br>
+<span class="flagicon"><a href="http://en.wikipedia.org/wiki/Image:Flag_of_the_Soviet_Union.svg" class="image" title="Flag of the Soviet Union"><img alt="Flag of the Soviet Union" src="champions_files/22px-Flag_of_the_Soviet_Union.png" class="thumbborder" border="0" height="11" width="22"></a>&nbsp;</span><a href="http://en.wikipedia.org/wiki/Soviet_Union" title="Soviet Union">Soviet Union</a></td>
+<td>2:01.98</td>
+</tr>
+<tr>
+<td>1500 m</td>
+<td><a href="http://en.wikipedia.org/wiki/Doina_Melinte" title="Doina Melinte">Doina Melinte</a><br>
+<span class="flagicon"><a href="http://en.wikipedia.org/wiki/Image:Flag_of_Romania.svg" class="image" title="Flag of Romania"><img alt="Flag of Romania" src="champions_files/22px-Flag_of_Romania.png" class="thumbborder" border="0" height="15" width="22"></a>&nbsp;</span><a href="http://en.wikipedia.org/wiki/Romania" title="Romania">Romania</a></td>
+<td>4:05.68 CR</td>
+<td><a href="http://en.wikipedia.org/wiki/Tatyana_Samolenko-Dorovskikh" class="mw-redirect" title="Tatyana Samolenko-Dorovskikh">Tatyana Samolenko-Dorovskikh</a><br>
+<span class="flagicon"><a href="http://en.wikipedia.org/wiki/Image:Flag_of_the_Soviet_Union.svg" class="image" title="Flag of the Soviet Union"><img alt="Flag of the Soviet Union" src="champions_files/22px-Flag_of_the_Soviet_Union.png" class="thumbborder" border="0" height="11" width="22"></a>&nbsp;</span><a href="http://en.wikipedia.org/wiki/Soviet_Union" title="Soviet Union">Soviet Union</a></td>
+<td>4:07.08</td>
+<td><a href="http://en.wikipedia.org/wiki/Svetlana_Kitova" title="Svetlana Kitova">Svetlana Kitova</a><br>
+<span class="flagicon"><a href="http://en.wikipedia.org/wiki/Image:Flag_of_the_Soviet_Union.svg" class="image" title="Flag of the Soviet Union"><img alt="Flag of the Soviet Union" src="champions_files/22px-Flag_of_the_Soviet_Union.png" class="thumbborder" border="0" height="11" width="22"></a>&nbsp;</span><a href="http://en.wikipedia.org/wiki/Soviet_Union" title="Soviet Union">Soviet Union</a></td>
+<td>4:07.59</td>
+</tr>
+<tr>
+<td>3000 m</td>
+<td><a href="http://en.wikipedia.org/wiki/Tatyana_Samolenko-Dorovskikh" class="mw-redirect" title="Tatyana Samolenko-Dorovskikh">Tatyana Samolenko-Dorovskikh</a><br>
+<span class="flagicon"><a href="http://en.wikipedia.org/wiki/Image:Flag_of_the_Soviet_Union.svg" class="image" title="Flag of the Soviet Union"><img alt="Flag of the Soviet Union" src="champions_files/22px-Flag_of_the_Soviet_Union.png" class="thumbborder" border="0" height="11" width="22"></a>&nbsp;</span><a href="http://en.wikipedia.org/wiki/Soviet_Union" title="Soviet Union">Soviet Union</a></td>
+<td>8:46.52 CR</td>
+<td><a href="http://en.wikipedia.org/wiki/Olga_Bondarenko" title="Olga Bondarenko">Olga Bondarenko</a><br>
+<span class="flagicon"><a href="http://en.wikipedia.org/wiki/Image:Flag_of_the_Soviet_Union.svg" class="image" title="Flag of the Soviet Union"><img alt="Flag of the Soviet Union" src="champions_files/22px-Flag_of_the_Soviet_Union.png" class="thumbborder" border="0" height="11" width="22"></a>&nbsp;</span><a href="http://en.wikipedia.org/wiki/Soviet_Union" title="Soviet Union">Soviet Union</a></td>
+<td>8:47.08</td>
+<td><a href="http://en.wikipedia.org/wiki/Maricica_Puica" class="mw-redirect" title="Maricica Puica">Maricica Puica</a><br>
+<span class="flagicon"><a href="http://en.wikipedia.org/wiki/Image:Flag_of_Romania.svg" class="image" title="Flag of Romania"><img alt="Flag of Romania" src="champions_files/22px-Flag_of_Romania.png" class="thumbborder" border="0" height="15" width="22"></a>&nbsp;</span><a href="http://en.wikipedia.org/wiki/Romania" title="Romania">Romania</a></td>
+<td>8:47.92</td>
+</tr>
+<tr>
+<td>60 m Hurdles</td>
+<td><a href="http://en.wikipedia.org/wiki/Cornelia_Oschkenat" title="Cornelia Oschkenat">Cornelia Oschkenat</a><br>
+<span class="flagicon"><a href="http://en.wikipedia.org/wiki/Image:Flag_of_East_Germany.svg" class="image" title="Flag of the German Democratic Republic"><img alt="Flag of the German Democratic Republic" src="champions_files/22px-Flag_of_East_Germany.png" class="thumbborder" border="0" height="13" width="22"></a>&nbsp;</span><a href="http://en.wikipedia.org/wiki/East_Germany" title="East Germany">East Germany</a></td>
+<td>7.82 CR</td>
+<td><a href="http://en.wikipedia.org/wiki/Yordanka_Donkova" title="Yordanka Donkova">Yordanka Donkova</a><br>
+<span class="flagicon"><a href="http://en.wikipedia.org/wiki/Image:Flag_of_Bulgaria.svg" class="image" title="Flag of Bulgaria"><img alt="Flag of Bulgaria" src="champions_files/22px-Flag_of_Bulgaria.png" class="thumbborder" border="0" height="13" width="22"></a>&nbsp;</span><a href="http://en.wikipedia.org/wiki/Bulgaria" title="Bulgaria">Bulgaria</a></td>
+<td>7.85</td>
+<td><a href="http://en.wikipedia.org/wiki/Ginka_Zagorcheva" title="Ginka Zagorcheva">Ginka Zagorcheva</a><br>
+<span class="flagicon"><a href="http://en.wikipedia.org/wiki/Image:Flag_of_Bulgaria.svg" class="image" title="Flag of Bulgaria"><img alt="Flag of Bulgaria" src="champions_files/22px-Flag_of_Bulgaria.png" class="thumbborder" border="0" height="13" width="22"></a>&nbsp;</span><a href="http://en.wikipedia.org/wiki/Bulgaria" title="Bulgaria">Bulgaria</a></td>
+<td>7.99</td>
+</tr>
+<tr>
+<td><a href="http://en.wikipedia.org/wiki/High_Jump" class="mw-redirect" title="High Jump">High Jump</a></td>
+<td><a href="http://en.wikipedia.org/wiki/Stefka_Kostadinova" title="Stefka Kostadinova">Stefka Kostadinova</a><br>
+<span class="flagicon"><a href="http://en.wikipedia.org/wiki/Image:Flag_of_Bulgaria.svg" class="image" title="Flag of Bulgaria"><img alt="Flag of Bulgaria" src="champions_files/22px-Flag_of_Bulgaria.png" class="thumbborder" border="0" height="13" width="22"></a>&nbsp;</span><a href="http://en.wikipedia.org/wiki/Bulgaria" title="Bulgaria">Bulgaria</a></td>
+<td>2.05 CR</td>
+<td><a href="http://en.wikipedia.org/wiki/Susanne_Beyer" title="Susanne Beyer">Susanne Beyer</a><br>
+<span class="flagicon"><a href="http://en.wikipedia.org/wiki/Image:Flag_of_East_Germany.svg" class="image" title="Flag of the German Democratic Republic"><img alt="Flag of the German Democratic Republic" src="champions_files/22px-Flag_of_East_Germany.png" class="thumbborder" border="0" height="13" width="22"></a>&nbsp;</span><a href="http://en.wikipedia.org/wiki/East_Germany" title="East Germany">East Germany</a></td>
+<td>2.02</td>
+<td><a href="http://en.wikipedia.org/w/index.php?title=Emilia_Dragieva&amp;action=edit&amp;redlink=1" class="new" title="Emilia Dragieva (page does not exist)">Emilia Dragieva</a><br>
+<span class="flagicon"><a href="http://en.wikipedia.org/wiki/Image:Flag_of_Bulgaria.svg" class="image" title="Flag of Bulgaria"><img alt="Flag of Bulgaria" src="champions_files/22px-Flag_of_Bulgaria.png" class="thumbborder" border="0" height="13" width="22"></a>&nbsp;</span><a href="http://en.wikipedia.org/wiki/Bulgaria" title="Bulgaria">Bulgaria</a></td>
+<td>2.00</td>
+</tr>
+<tr>
+<td><a href="http://en.wikipedia.org/wiki/Long_Jump" class="mw-redirect" title="Long Jump">Long Jump</a></td>
+<td><a href="http://en.wikipedia.org/wiki/Heike_Drechsler" title="Heike Drechsler">Heike Drechsler</a><br>
+<span class="flagicon"><a href="http://en.wikipedia.org/wiki/Image:Flag_of_East_Germany.svg" class="image" title="Flag of the German Democratic Republic"><img alt="Flag of the German Democratic Republic" src="champions_files/22px-Flag_of_East_Germany.png" class="thumbborder" border="0" height="13" width="22"></a>&nbsp;</span><a href="http://en.wikipedia.org/wiki/East_Germany" title="East Germany">East Germany</a></td>
+<td>7.10 CR</td>
+<td><a href="http://en.wikipedia.org/wiki/Helga_Radtke" title="Helga Radtke">Helga Radtke</a><br>
+<span class="flagicon"><a href="http://en.wikipedia.org/wiki/Image:Flag_of_East_Germany.svg" class="image" title="Flag of the German Democratic Republic"><img alt="Flag of the German Democratic Republic" src="champions_files/22px-Flag_of_East_Germany.png" class="thumbborder" border="0" height="13" width="22"></a>&nbsp;</span><a href="http://en.wikipedia.org/wiki/East_Germany" title="East Germany">East Germany</a></td>
+<td>6.94</td>
+<td><a href="http://en.wikipedia.org/wiki/Yelena_Belevskaya" title="Yelena Belevskaya">Yelena Belevskaya</a><br>
+<span class="flagicon"><a href="http://en.wikipedia.org/wiki/Image:Flag_of_the_Soviet_Union.svg" class="image" title="Flag of the Soviet Union"><img alt="Flag of the Soviet Union" src="champions_files/22px-Flag_of_the_Soviet_Union.png" class="thumbborder" border="0" height="11" width="22"></a>&nbsp;</span><a href="http://en.wikipedia.org/wiki/Soviet_Union" title="Soviet Union">Soviet Union</a></td>
+<td>6.76</td>
+</tr>
+<tr>
+<td><a href="http://en.wikipedia.org/wiki/Shot_Put" class="mw-redirect" title="Shot Put">Shot Put</a></td>
+<td><a href="http://en.wikipedia.org/wiki/Natalya_Lisovskaya" title="Natalya Lisovskaya">Natalya Lisovskaya</a><br>
+<span class="flagicon"><a href="http://en.wikipedia.org/wiki/Image:Flag_of_the_Soviet_Union.svg" class="image" title="Flag of the Soviet Union"><img alt="Flag of the Soviet Union" src="champions_files/22px-Flag_of_the_Soviet_Union.png" class="thumbborder" border="0" height="11" width="22"></a>&nbsp;</span><a href="http://en.wikipedia.org/wiki/Soviet_Union" title="Soviet Union">Soviet Union</a></td>
+<td>20.52 CR</td>
+<td><a href="http://en.wikipedia.org/wiki/Ilona_Slupianek" title="Ilona Slupianek">Ilona Briesenick</a><br>
+<span class="flagicon"><a href="http://en.wikipedia.org/wiki/Image:Flag_of_East_Germany.svg" class="image" title="Flag of the German Democratic Republic"><img alt="Flag of the German Democratic Republic" src="champions_files/22px-Flag_of_East_Germany.png" class="thumbborder" border="0" height="13" width="22"></a>&nbsp;</span><a href="http://en.wikipedia.org/wiki/East_Germany" title="East Germany">East Germany</a></td>
+<td>20.28</td>
+<td><a href="http://en.wikipedia.org/wiki/Claudia_Losch" title="Claudia Losch">Claudia Losch</a><br>
+<span class="flagicon"><a href="http://en.wikipedia.org/wiki/Image:Flag_of_Germany.svg" class="image" title="Flag of West Germany"><img alt="Flag of West Germany" src="champions_files/22px-Flag_of_Germany.png" class="thumbborder" border="0" height="13" width="22"></a>&nbsp;</span><a href="http://en.wikipedia.org/wiki/West_Germany" title="West Germany">West Germany</a></td>
+<td>20.14</td>
+</tr>
+<tr>
+<td>3000 Metres Walk</td>
+<td><a href="http://en.wikipedia.org/wiki/Olga_Krishtop" title="Olga Krishtop">Olga Krishtop</a><br>
+<span class="flagicon"><a href="http://en.wikipedia.org/wiki/Image:Flag_of_the_Soviet_Union.svg" class="image" title="Flag of the Soviet Union"><img alt="Flag of the Soviet Union" src="champions_files/22px-Flag_of_the_Soviet_Union.png" class="thumbborder" border="0" height="11" width="22"></a>&nbsp;</span><a href="http://en.wikipedia.org/wiki/Soviet_Union" title="Soviet Union">Soviet Union</a></td>
+<td>12:05.49 CR</td>
+<td><a href="http://en.wikipedia.org/wiki/Giuliana_Salce" title="Giuliana Salce">Giuliana Salce</a><br>
+<span class="flagicon"><a href="http://en.wikipedia.org/wiki/Image:Flag_of_Italy.svg" class="image" title="Flag of Italy"><img alt="Flag of Italy" src="champions_files/22px-Flag_of_Italy.png" class="thumbborder" border="0" height="15" width="22"></a>&nbsp;</span><a href="http://en.wikipedia.org/wiki/Italy" title="Italy">Italy</a></td>
+<td>12:36.76</td>
+<td><a href="http://en.wikipedia.org/wiki/Ann_Peel" title="Ann Peel">Ann Peel</a><br>
+<span class="flagicon"><a href="http://en.wikipedia.org/wiki/Image:Flag_of_Canada.svg" class="image" title="Flag of Canada"><img alt="Flag of Canada" src="champions_files/22px-Flag_of_Canada.png" class="thumbborder" border="0" height="11" width="22"></a>&nbsp;</span><a href="http://en.wikipedia.org/wiki/Canada" title="Canada">Canada</a></td>
+<td>12:38.97</td>
+</tr>
+</tbody></table>
+<p><a name="Medals_table" id="Medals_table"></a></p>
+<h2><span class="editsection">[<a href="http://en.wikipedia.org/w/index.php?title=1987_IAAF_World_Indoor_Championships&amp;action=edit&amp;section=4" title="Edit section: Medals table">edit</a>]</span> <span class="mw-headline">Medals table</span></h2>
+<div class="boilerplate metadata plainlinks" id="stub">
+<table style="background-color: transparent;" cellpadding="0" cellspacing="0">
+<tbody><tr>
+<td><a href="http://en.wikipedia.org/wiki/Image:Wiki_letter_w.svg" class="image" title="Wiki letter w.svg"><img alt="" src="champions_files/17px-Wiki_letter_w.png" border="0" height="17" width="17"></a></td>
+<td><i>&nbsp;<sup>This short section requires <a href="http://en.wikipedia.org/w/index.php?title=1987_IAAF_World_Indoor_Championships&amp;action=edit" class="external text" title="http://en.wikipedia.org/w/index.php?title=1987_IAAF_World_Indoor_Championships&amp;action=edit" rel="nofollow">expansion</a>.</sup></i></td>
+</tr>
+</tbody></table>
+</div>
+<p><a name="See_also" id="See_also"></a></p>
+<h2><span class="editsection">[<a href="http://en.wikipedia.org/w/index.php?title=1987_IAAF_World_Indoor_Championships&amp;action=edit&amp;section=5" title="Edit section: See also">edit</a>]</span> <span class="mw-headline">See also</span></h2>
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/1987_in_athletics_%28track_and_field%29" title="1987 in athletics (track and field)">1987 in athletics (track and field)</a></li>
+</ul>
+<p><a name="External_links" id="External_links"></a></p>
+<h2><span class="editsection">[<a href="http://en.wikipedia.org/w/index.php?title=1987_IAAF_World_Indoor_Championships&amp;action=edit&amp;section=6" title="Edit section: External links">edit</a>]</span> <span class="mw-headline">External links</span></h2>
+<ul>
+<li><a href="http://www.gbrathletics.com/ic/wi.htm" class="external text" title="http://www.gbrathletics.com/ic/wi.htm" rel="nofollow">GBR Athletics</a></li>
+<li><a href="http://www.athletics.com.au/history/international/int85.htm" class="external text" title="http://www.athletics.com.au/history/international/int85.htm" rel="nofollow">Athletics Australia</a></li>
+</ul>
+<p><br></p>
+<table id="collapsibleTable0" class="navbox collapsible autocollapse nowraplinks" style="margin: auto; background: white none repeat scroll 0%; -moz-background-clip: -moz-initial; -moz-background-origin: -moz-initial; -moz-background-inline-policy: -moz-initial;">
+<tbody><tr>
+<th colspan="2" style="background: rgb(191, 215, 255) none repeat scroll 0%; text-align: center; width: 100%; -moz-background-clip: -moz-initial; -moz-background-origin: -moz-initial; -moz-background-inline-policy: -moz-initial;"><span style="float: right; font-weight: normal; text-align: right; width: 6em;">[<a href="javascript:collapseTable(0);" id="collapseButton0">hide</a>]</span>
+<div style="float: left; width: 6em; text-align: left;">
+<div class="noprint plainlinksneverexpand" style="border: medium none ; padding: 0pt; background: rgb(191, 215, 255) none repeat scroll 0%; white-space: nowrap; font-weight: normal; font-size: xx-small; -moz-background-clip: -moz-initial; -moz-background-origin: -moz-initial; -moz-background-inline-policy: -moz-initial;"><a href="http://en.wikipedia.org/wiki/Template:IAAF_Championships" title="Template:IAAF Championships"><span title="View this template" style="border: medium none ; background: rgb(191, 215, 255) none repeat scroll 0%; -moz-background-clip: -moz-initial; -moz-background-origin: -moz-initial; -moz-background-inline-policy: -moz-initial;">v</span></a>&nbsp;<span style="font-size: 80%;">•</span>&nbsp;<a href="http://en.wikipedia.org/w/index.php?title=Template_talk:IAAF_Championships&amp;action=edit&amp;redlink=1" class="new" title="Template talk:IAAF Championships (page does not exist)"><span style="border: medium none ; background: rgb(191, 215, 255) none repeat scroll 0%; color: rgb(0, 43, 184); -moz-background-clip: -moz-initial; -moz-background-origin: -moz-initial; -moz-background-inline-policy: -moz-initial;" title="Discussion about this template">d</span></a>&nbsp;<span style="font-size: 80%;">•</span>&nbsp;<a href="http://en.wikipedia.org/w/index.php?title=Template:IAAF_Championships&amp;action=edit" class="external text" title="http://en.wikipedia.org/w/index.php?title=Template:IAAF_Championships&amp;action=edit" rel="nofollow"><span style="border: medium none ; background: rgb(191, 215, 255) none repeat scroll 0%; color: rgb(0, 43, 184); -moz-background-clip: -moz-initial; -moz-background-origin: -moz-initial; -moz-background-inline-policy: -moz-initial;" title="You can edit this template. Please use the preview button before saving.">e</span></a></div>
+</div>
+<span style="font-size: 110%;"><a href="http://en.wikipedia.org/wiki/International_Association_of_Athletics_Federations" title="International Association of Athletics Federations">IAAF World Championships in Athletics</a></span></th>
+</tr>
+<tr>
+<th style="background: rgb(191, 215, 255) none repeat scroll 0%; white-space: nowrap; text-align: center; -moz-background-clip: -moz-initial; -moz-background-origin: -moz-initial; -moz-background-inline-policy: -moz-initial;"><b><a href="http://en.wikipedia.org/wiki/IAAF_World_Championships_in_Athletics" title="IAAF World Championships in Athletics">Outdoor</a></b></th>
+<td colspan="1" style="text-align: left; width: 100%; font-size: 95%;">
+<center><a href="http://en.wikipedia.org/wiki/1983_World_Championships_in_Athletics" title="1983 World Championships in Athletics">1983</a> &nbsp;• <a href="http://en.wikipedia.org/wiki/1987_World_Championships_in_Athletics" title="1987 World Championships in Athletics">1987</a> &nbsp;• <a href="http://en.wikipedia.org/wiki/1991_World_Championships_in_Athletics" title="1991 World Championships in Athletics">1991</a> &nbsp;• <a href="http://en.wikipedia.org/wiki/1993_World_Championships_in_Athletics" title="1993 World Championships in Athletics">1993</a> &nbsp;• <a href="http://en.wikipedia.org/wiki/1995_World_Championships_in_Athletics" title="1995 World Championships in Athletics">1995</a> &nbsp;• <a href="http://en.wikipedia.org/wiki/1997_World_Championships_in_Athletics" title="1997 World Championships in Athletics">1997</a> &nbsp;• <a href="http://en.wikipedia.org/wiki/1999_World_Championships_in_Athletics" title="1999 World Championships in Athletics">1999</a> &nbsp;• <a href="http://en.wikipedia.org/wiki/2001_World_Championships_in_Athletics" title="2001 World Championships in Athletics">2001</a> &nbsp;• <a href="http://en.wikipedia.org/wiki/2003_World_Championships_in_Athletics" title="2003 World Championships in Athletics">2003</a> &nbsp;• <a href="http://en.wikipedia.org/wiki/2005_World_Championships_in_Athletics" title="2005 World Championships in Athletics">2005</a> &nbsp;• <a href="http://en.wikipedia.org/wiki/2007_World_Championships_in_Athletics" title="2007 World Championships in Athletics">2007</a> &nbsp;• <a href="http://en.wikipedia.org/wiki/2009_World_Championships_in_Athletics" title="2009 World Championships in Athletics"><i>2009</i></a> &nbsp;• <a href="http://en.wikipedia.org/wiki/2011_World_Championships_in_Athletics" title="2011 World Championships in Athletics"><i>2011</i></a> &nbsp;• <a href="http://en.wikipedia.org/wiki/2013_World_Championships_in_Athletics" title="2013 World Championships in Athletics"><i>2013</i></a></center>
+</td>
+</tr>
+<tr>
+<th style="background: rgb(191, 215, 255) none repeat scroll 0%; white-space: nowrap; text-align: center; -moz-background-clip: -moz-initial; -moz-background-origin: -moz-initial; -moz-background-inline-policy: -moz-initial;"><b><a href="http://en.wikipedia.org/wiki/IAAF_World_Indoor_Championships_in_Athletics" title="IAAF World Indoor Championships in Athletics">Indoor</a></b></th>
+<td colspan="1" style="background: rgb(247, 247, 247) none repeat scroll 0%; text-align: left; width: 100%; font-size: 95%; -moz-background-clip: -moz-initial; -moz-background-origin: -moz-initial; -moz-background-inline-policy: -moz-initial;">
+<center><a href="http://en.wikipedia.org/wiki/1985_IAAF_World_Indoor_Games" title="1985 IAAF World Indoor Games">1985</a> &nbsp;• <strong class="selflink">1987</strong> &nbsp;• <a href="http://en.wikipedia.org/wiki/1989_IAAF_World_Indoor_Championships" title="1989 IAAF World Indoor Championships">1989</a> &nbsp;• <a href="http://en.wikipedia.org/wiki/1991_IAAF_World_Indoor_Championships" title="1991 IAAF World Indoor Championships">1991</a> &nbsp;• <a href="http://en.wikipedia.org/wiki/1993_IAAF_World_Indoor_Championships" title="1993 IAAF World Indoor Championships">1993</a> &nbsp;• <a href="http://en.wikipedia.org/wiki/1995_IAAF_World_Indoor_Championships" title="1995 IAAF World Indoor Championships">1995</a> &nbsp;• <a href="http://en.wikipedia.org/wiki/1997_IAAF_World_Indoor_Championships" title="1997 IAAF World Indoor Championships">1997</a> &nbsp;• <a href="http://en.wikipedia.org/wiki/1999_IAAF_World_Indoor_Championships" title="1999 IAAF World Indoor Championships">1999</a> &nbsp;• <a href="http://en.wikipedia.org/wiki/2001_IAAF_World_Indoor_Championships" title="2001 IAAF World Indoor Championships">2001</a> &nbsp;• <a href="http://en.wikipedia.org/wiki/2003_IAAF_World_Indoor_Championships" title="2003 IAAF World Indoor Championships">2003</a> &nbsp;• <a href="http://en.wikipedia.org/wiki/2004_IAAF_World_Indoor_Championships" title="2004 IAAF World Indoor Championships">2004</a> &nbsp;• <a href="http://en.wikipedia.org/wiki/2006_IAAF_World_Indoor_Championships" title="2006 IAAF World Indoor Championships">2006</a> &nbsp;• <a href="http://en.wikipedia.org/wiki/2008_IAAF_World_Indoor_Championships" title="2008 IAAF World Indoor Championships">2008</a> &nbsp;• <a href="http://en.wikipedia.org/wiki/2010_IAAF_World_Indoor_Championships" title="2010 IAAF World Indoor Championships"><i>2010</i></a> &nbsp;• <a href="http://en.wikipedia.org/wiki/2012_IAAF_World_Indoor_Championships" title="2012 IAAF World Indoor Championships"><i>2012</i></a></center>
+</td>
+</tr>
+<tr>
+<th style="background: rgb(191, 215, 255) none repeat scroll 0%; white-space: nowrap; text-align: center; -moz-background-clip: -moz-initial; -moz-background-origin: -moz-initial; -moz-background-inline-policy: -moz-initial;"><b><a href="http://en.wikipedia.org/wiki/IAAF_World_Junior_Championships_in_Athletics" title="IAAF World Junior Championships in Athletics">Junior</a></b></th>
+<td colspan="1" style="text-align: left; width: 100%; font-size: 95%;">
+<center><a href="http://en.wikipedia.org/wiki/1986_World_Junior_Championships_in_Athletics" title="1986 World Junior Championships in Athletics">1986</a> &nbsp;• <a href="http://en.wikipedia.org/wiki/1988_World_Junior_Championships_in_Athletics" title="1988 World Junior Championships in Athletics">1988</a> &nbsp;• <a href="http://en.wikipedia.org/wiki/1990_World_Junior_Championships_in_Athletics" title="1990 World Junior Championships in Athletics">1990</a> &nbsp;• <a href="http://en.wikipedia.org/wiki/1992_World_Junior_Championships_in_Athletics" title="1992 World Junior Championships in Athletics">1992</a> &nbsp;• <a href="http://en.wikipedia.org/wiki/1994_World_Junior_Championships_in_Athletics" title="1994 World Junior Championships in Athletics">1994</a> &nbsp;• <a href="http://en.wikipedia.org/wiki/1996_World_Junior_Championships_in_Athletics" title="1996 World Junior Championships in Athletics">1996</a> &nbsp;• <a href="http://en.wikipedia.org/wiki/1998_World_Junior_Championships_in_Athletics" title="1998 World Junior Championships in Athletics">1998</a> &nbsp;• <a href="http://en.wikipedia.org/wiki/2000_World_Junior_Championships_in_Athletics" title="2000 World Junior Championships in Athletics">2000</a> &nbsp;• <a href="http://en.wikipedia.org/wiki/2002_World_Junior_Championships_in_Athletics" title="2002 World Junior Championships in Athletics">2002</a> &nbsp;• <a href="http://en.wikipedia.org/wiki/2004_World_Junior_Championships_in_Athletics" title="2004 World Junior Championships in Athletics">2004</a> &nbsp;• <a href="http://en.wikipedia.org/wiki/2006_World_Junior_Championships_in_Athletics" title="2006 World Junior Championships in Athletics">2006</a> &nbsp;• <a href="http://en.wikipedia.org/wiki/2008_World_Junior_Championships_in_Athletics" title="2008 World Junior Championships in Athletics"><i>2008</i></a> &nbsp;• <a href="http://en.wikipedia.org/wiki/2010_World_Junior_Championships_in_Athletics" title="2010 World Junior Championships in Athletics"><i>2010</i></a></center>
+</td>
+</tr>
+<tr>
+<th style="background: rgb(191, 215, 255) none repeat scroll 0%; white-space: nowrap; text-align: center; -moz-background-clip: -moz-initial; -moz-background-origin: -moz-initial; -moz-background-inline-policy: -moz-initial;"><b><a href="http://en.wikipedia.org/wiki/IAAF_World_Youth_Championships_in_Athletics" title="IAAF World Youth Championships in Athletics">Youth</a></b></th>
+<td colspan="1" style="background: rgb(247, 247, 247) none repeat scroll 0%; text-align: left; width: 100%; font-size: 95%; -moz-background-clip: -moz-initial; -moz-background-origin: -moz-initial; -moz-background-inline-policy: -moz-initial;">
+<center><a href="http://en.wikipedia.org/w/index.php?title=1999_World_Youth_Championships_in_Athletics&amp;action=edit&amp;redlink=1" class="new" title="1999 World Youth Championships in Athletics (page does not exist)">1999</a> &nbsp;• <a href="http://en.wikipedia.org/w/index.php?title=2001_World_Youth_Championships_in_Athletics&amp;action=edit&amp;redlink=1" class="new" title="2001 World Youth Championships in Athletics (page does not exist)">2001</a> &nbsp;• <a href="http://en.wikipedia.org/wiki/2003_World_Youth_Championships_in_Athletics" title="2003 World Youth Championships in Athletics">2003</a> &nbsp;• <a href="http://en.wikipedia.org/wiki/2005_World_Youth_Championships_in_Athletics" title="2005 World Youth Championships in Athletics">2005</a> &nbsp;• <a href="http://en.wikipedia.org/wiki/2007_World_Youth_Championships_in_Athletics" title="2007 World Youth Championships in Athletics">2007</a> &nbsp;• <a href="http://en.wikipedia.org/wiki/2009_World_Youth_Championships_in_Athletics" title="2009 World Youth Championships in Athletics"><i>2009</i></a></center>
+</td>
+</tr>
+</tbody></table>
+
+
+<!-- 
+NewPP limit report
+Preprocessor node count: 2041/1000000
+Post-expand include size: 42962/2048000 bytes
+Template argument size: 13925/2048000 bytes
+#ifexist count: 0/500
+-->
+
+<!-- Saved in parser cache with key enwiki:pcache:idhash:2618812-0!1!0!default!!en!2 and timestamp 20080315094752 -->
+<div class="printfooter">
+Retrieved from "<a href="http://en.wikipedia.org/wiki/1987_IAAF_World_Indoor_Championships">http://en.wikipedia.org/wiki/1987_IAAF_World_Indoor_Championships</a>"</div>
+			<div id="catlinks" class="catlinks"><div id="mw-normal-catlinks"><a href="http://en.wikipedia.org/wiki/Special:Categories" title="Special:Categories">Categories</a>: <span dir="ltr"><a href="http://en.wikipedia.org/wiki/Category:1987_in_athletics_%28track_and_field%29" title="Category:1987 in athletics (track and field)">1987 in athletics (track and field)</a></span> | <span dir="ltr"><a href="http://en.wikipedia.org/wiki/Category:1987_in_the_United_States" title="Category:1987 in the United States">1987 in the United States</a></span> | <span dir="ltr"><a href="http://en.wikipedia.org/wiki/Category:World_Indoor_Championships_in_Athletics" title="Category:World Indoor Championships in Athletics">World Indoor Championships in Athletics</a></span> | <span dir="ltr"><a href="http://en.wikipedia.org/wiki/Category:Sports_festivals_hosted_in_the_United_States" title="Category:Sports festivals hosted in the United States">Sports festivals hosted in the United States</a></span></div><div id="mw-hidden-catlinks" class="mw-hidden-cats-hidden">Hidden category: <span dir="ltr"><a href="http://en.wikipedia.org/wiki/Category:Articles_with_sections_needing_expansion" title="Category:Articles with sections needing expansion">Articles with sections needing expansion</a></span></div></div>			<!-- end content -->
+			<div class="visualClear"></div>
+		</div>
+	</div>
+		</div>
+		<div id="column-one">
+	<div id="p-cactions" class="portlet">
+		<h5>Views</h5>
+		<div class="pBody">
+			<ul>
+					 <li id="ca-nstab-main" class="selected"><a href="http://en.wikipedia.org/wiki/1987_IAAF_World_Indoor_Championships" title="View the content page [alt-shift-c]" accesskey="c">Article</a></li>
+					 <li id="ca-talk"><a href="http://en.wikipedia.org/wiki/Talk:1987_IAAF_World_Indoor_Championships" title="Discussion about the content page [alt-shift-t]" accesskey="t">Discussion</a></li>
+					 <li id="ca-edit"><a href="http://en.wikipedia.org/w/index.php?title=1987_IAAF_World_Indoor_Championships&amp;action=edit" title="You can edit this page. Please use the preview button before saving. [alt-shift-e]" accesskey="e">Edit this page</a></li>
+					 <li id="ca-history"><a href="http://en.wikipedia.org/w/index.php?title=1987_IAAF_World_Indoor_Championships&amp;action=history" title="Past versions of this page [alt-shift-h]" accesskey="h">History</a></li>
+					 <li id="ca-move"><a href="http://en.wikipedia.org/wiki/Special:MovePage/1987_IAAF_World_Indoor_Championships" title="Rename this page [alt-shift-m]" accesskey="m">Move</a></li>
+					 <li id="ca-watch"><a href="http://en.wikipedia.org/w/index.php?title=1987_IAAF_World_Indoor_Championships&amp;action=watch" title="Add this page to your watchlist [alt-shift-w]" accesskey="w">Watch</a></li>
+				</ul>
+		</div>
+	</div>
+	<div class="portlet" id="p-personal">
+		<h5>Personal tools</h5>
+		<div class="pBody">
+			<ul>
+				<li id="pt-userpage"><a href="http://en.wikipedia.org/wiki/User:Yannisl" title="My user page [alt-shift-.]" accesskey="." class="new">Yannisl</a></li>
+				<li id="pt-mytalk"><a href="http://en.wikipedia.org/wiki/User_talk:Yannisl" title="My talk page [alt-shift-n]" accesskey="n">My talk</a></li>
+				<li id="pt-preferences"><a href="http://en.wikipedia.org/wiki/Special:Preferences" title="My preferences">My preferences</a></li>
+				<li id="pt-watchlist"><a href="http://en.wikipedia.org/wiki/Special:Watchlist" title="The list of pages that you are monitoring for changes [alt-shift-l]" accesskey="l">My watchlist</a></li>
+				<li id="pt-mycontris"><a href="http://en.wikipedia.org/wiki/Special:Contributions/Yannisl" title="List of my contributions [alt-shift-y]" accesskey="y">My contributions</a></li>
+				<li id="pt-logout"><a href="http://en.wikipedia.org/w/index.php?title=Special:UserLogout&amp;returnto=1987_IAAF_World_Indoor_Championships" title="Log out">Log out</a></li>
+			</ul>
+		</div>
+	</div>
+	<div class="portlet" id="p-logo">
+		<a style="background-image: url(/images/wiki-en.png);" href="http://en.wikipedia.org/wiki/Main_Page" title="Visit the main page [alt-shift-z]" accesskey="z"></a>
+	</div>
+	<script type="text/javascript"> if (window.isMSIE55) fixalpha(); </script>
+		<div class="portlet" id="p-navigation">
+		<h5>Navigation</h5>
+		<div class="pBody">
+			<ul>
+				<li id="n-mainpage"><a href="http://en.wikipedia.org/wiki/Main_Page" title="Visit the main page [alt-shift-z]" accesskey="z">Main Page</a></li>
+				<li id="n-Contents"><a href="http://en.wikipedia.org/wiki/Portal:Contents" title="Guides to browsing Wikipedia">Contents</a></li>
+				<li id="n-featuredcontent"><a href="http://en.wikipedia.org/wiki/Portal:Featured_content">Featured content</a></li>
+				<li id="n-currentevents"><a href="http://en.wikipedia.org/wiki/Portal:Current_events" title="Find background information on current events">Current events</a></li>
+				<li id="n-randompage"><a href="http://en.wikipedia.org/wiki/Special:Random" title="Load a random article [alt-shift-x]" accesskey="x">Random article</a></li>
+			</ul>
+		</div>
+	</div>
+		<div class="portlet" id="p-interaction">
+		<h5>Interaction</h5>
+		<div class="pBody">
+			<ul>
+				<li id="n-aboutsite"><a href="http://en.wikipedia.org/wiki/Wikipedia:About">About Wikipedia</a></li>
+				<li id="n-portal"><a href="http://en.wikipedia.org/wiki/Wikipedia:Community_Portal" title="About the project, what you can do, where to find things">Community portal</a></li>
+				<li id="n-recentchanges"><a href="http://en.wikipedia.org/wiki/Special:RecentChanges" title="The list of recent changes in the wiki [alt-shift-r]" accesskey="r">Recent changes</a></li>
+				<li id="n-contact"><a href="http://en.wikipedia.org/wiki/Wikipedia:Contact_us" title="How to contact Wikipedia">Contact Wikipedia</a></li>
+				<li id="n-sitesupport"><a href="http://wikimediafoundation.org/wiki/Donate" title="Support us">Donate to Wikipedia</a></li>
+				<li id="n-help"><a href="http://en.wikipedia.org/wiki/Help:Contents" title="Guidance on how to use and edit Wikipedia">Help</a></li>
+			</ul>
+		</div>
+	</div>
+		<div id="p-search" class="portlet">
+		<h5><label for="searchInput">Search</label></h5>
+		<div id="searchBody" class="pBody">
+			<form action="/wiki/Special:Search" id="searchform"><div>
+				<input id="searchInput" name="search" title="Search Wikipedia [alt-shift-f]" accesskey="f" value="" type="text">
+				<input name="go" class="searchButton" id="searchGoButton" value="Go" title="Go to a page with this exact name if one exists" type="submit">&nbsp;
+				<input name="fulltext" class="searchButton" id="mw-searchButton" value="Search" title="Search the wiki for this text" type="submit">
+			</div></form>
+		</div>
+	</div>
+	<div class="portlet" id="p-tb">
+		<h5>Toolbox</h5>
+		<div class="pBody">
+			<ul>
+				<li id="t-whatlinkshere"><a href="http://en.wikipedia.org/wiki/Special:WhatLinksHere/1987_IAAF_World_Indoor_Championships" title="List of all English Wikipedia pages that link here [alt-shift-j]" accesskey="j">What links here</a></li>
+				<li id="t-recentchangeslinked"><a href="http://en.wikipedia.org/wiki/Special:RecentChangesLinked/1987_IAAF_World_Indoor_Championships" title="Recent changes in pages linked from this page [alt-shift-k]" accesskey="k">Related changes</a></li>
+<li id="t-upload"><a href="http://en.wikipedia.org/wiki/Wikipedia:Upload" title="Upload files [alt-shift-u]" accesskey="u">Upload file</a></li>
+<li id="t-specialpages"><a href="http://en.wikipedia.org/wiki/Special:SpecialPages" title="List of all special pages [alt-shift-q]" accesskey="q">Special pages</a></li>
+				<li id="t-print"><a href="http://en.wikipedia.org/w/index.php?title=1987_IAAF_World_Indoor_Championships&amp;printable=yes" title="Printable version of this page [alt-shift-p]" accesskey="p">Printable version</a></li>				<li id="t-permalink"><a href="http://en.wikipedia.org/w/index.php?title=1987_IAAF_World_Indoor_Championships&amp;oldid=198379807" title="Permanent link to this version of the page">Permanent link</a></li><li id="t-cite"><a href="http://en.wikipedia.org/w/index.php?title=Special:Cite&amp;page=1987_IAAF_World_Indoor_Championships&amp;id=198379807">Cite this page</a></li>			</ul>
+		</div>
+	</div>
+	<div id="p-lang" class="portlet">
+		<h5>Languages</h5>
+		<div class="pBody">
+			<ul>
+				<li class="interwiki-de"><a href="http://de.wikipedia.org/wiki/Leichtathletik-Hallenweltmeisterschaft_1987">Deutsch</a></li>
+				<li class="interwiki-et"><a href="http://et.wikipedia.org/wiki/1987._aasta_kergej%C3%B5ustiku_sisemaailmameistriv%C3%B5istlused">Eesti</a></li>
+				<li class="interwiki-fr"><a href="http://fr.wikipedia.org/wiki/Championnats_du_monde_d%27athl%C3%A9tisme_en_salle_1987">Français</a></li>
+				<li class="interwiki-no"><a href="http://no.wikipedia.org/wiki/VM_i_friidrett_innend%C3%B8rs_1987">‪Norsk (bokmål)‬</a></li>
+				<li class="interwiki-pl"><a href="http://pl.wikipedia.org/wiki/Halowe_Mistrzostwa_%C5%9Awiata_w_Lekkoatletyce_1987">Polski</a></li>
+				<li class="interwiki-fi"><a href="http://fi.wikipedia.org/wiki/Yleisurheilun_sis%C3%A4ratojen_maailmanmestaruuskilpailut_1987">Suomi</a></li>
+				<li class="interwiki-tr"><a href="http://tr.wikipedia.org/wiki/1987_IAAF_D%C3%BCnya_Salon_%C5%9Eampiyonas%C4%B1">Türkçe</a></li>
+			</ul>
+		</div>
+	</div>
+		</div><!-- end of the left (by default at least) column -->
+			<div class="visualClear"></div>
+			<div id="footer">
+				<div id="f-poweredbyico"><a href="http://www.mediawiki.org/"><img src="champions_files/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki"></a></div>
+				<div id="f-copyrightico"><a href="http://wikimediafoundation.org/"><img src="champions_files/wikimedia-button.png" alt="Wikimedia Foundation" border="0"></a></div>
+			<ul id="f-list">
+				<li id="lastmod"> This page was last modified on 8 March 2008, at 19:19.</li>
+				<li id="copyright">All text is available under the terms of the <a class="internal" href="http://en.wikipedia.org/wiki/Wikipedia:Text_of_the_GNU_Free_Documentation_License" title="Wikipedia:Text of the GNU Free Documentation License">GNU Free Documentation License</a>. (See <b><a class="internal" href="http://en.wikipedia.org/wiki/Wikipedia:Copyrights" title="Wikipedia:Copyrights">Copyrights</a></b> for details.) <br> Wikipedia® is a registered trademark of the <a href="http://www.wikimediafoundation.org/">Wikimedia Foundation, Inc</a>., a U.S. registered <a class="internal" href="http://en.wikipedia.org/wiki/501%28c%29#501.28c.29.283.29" title="501(c)(3)">501(c)(3)</a> <a href="http://wikimediafoundation.org/wiki/Deductibility_of_donations">tax-deductible</a> <a class="internal" href="http://en.wikipedia.org/wiki/Non-profit_organization" title="Non-profit organization">nonprofit</a> <a href="http://en.wikipedia.org/wiki/Charitable_organization" title="Charitable organization">charity</a>.<br></li>
+				<li id="privacy"><a href="http://wikimediafoundation.org/wiki/Privacy_policy" title="wikimedia:Privacy policy">Privacy policy</a></li>
+				<li id="about"><a href="http://en.wikipedia.org/wiki/Wikipedia:About" title="Wikipedia:About">About Wikipedia</a></li>
+				<li id="disclaimer"><a href="http://en.wikipedia.org/wiki/Wikipedia:General_disclaimer" title="Wikipedia:General disclaimer">Disclaimers</a></li>
+			</ul>
+		</div>
+		
+	
+		<script type="text/javascript">if (window.runOnloadHook) runOnloadHook();</script>
+</div>
+<!-- Served by srv152 in 0.055 secs. -->
+</body></html>

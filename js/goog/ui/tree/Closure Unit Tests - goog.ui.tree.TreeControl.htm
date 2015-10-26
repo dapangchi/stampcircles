@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<!-- saved from url=(0090)http://closure-library.googlecode.com/svn/trunk/closure/goog/ui/tree/treecontrol_test.html -->
+<HTML><!--
+  Copyright 2008 Google Inc. All Rights Reserved.
+
+--><HEAD><META http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<TITLE>Closure Unit Tests - goog.ui.tree.TreeControl</TITLE>
+<SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.tree.TreeControl_files/base.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.tree.TreeControl_files/deps.js"></SCRIPT>
+<SCRIPT type="text/javascript">
+  goog.require('goog.testing.jsunit');
+  goog.require('goog.dom');
+  goog.require('goog.events.KeyCodes');
+  goog.require('goog.ui.tree.TreeControl');
+</SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.tree.TreeControl_files/stacktrace.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.tree.TreeControl_files/asserts.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.tree.TreeControl_files/testcase.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.tree.TreeControl_files/testrunner.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.tree.TreeControl_files/jsunit.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.tree.TreeControl_files/array.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.tree.TreeControl_files/tagname.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.tree.TreeControl_files/classes.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.tree.TreeControl_files/coordinate.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.tree.TreeControl_files/size.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.tree.TreeControl_files/object.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.tree.TreeControl_files/string.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.tree.TreeControl_files/useragent.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.tree.TreeControl_files/dom.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.tree.TreeControl_files/keycodes.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.tree.TreeControl_files/structs.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.tree.TreeControl_files/iter.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.tree.TreeControl_files/map.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.tree.TreeControl_files/set.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.tree.TreeControl_files/debug.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.tree.TreeControl_files/logrecord.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.tree.TreeControl_files/logger.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.tree.TreeControl_files/a11y.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.tree.TreeControl_files/errorhandlerweakdep.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.tree.TreeControl_files/disposable.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.tree.TreeControl_files/event.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.tree.TreeControl_files/browserevent.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.tree.TreeControl_files/eventwrapper.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.tree.TreeControl_files/listener.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.tree.TreeControl_files/simplepool.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.tree.TreeControl_files/jscript.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.tree.TreeControl_files/pools.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.tree.TreeControl_files/events.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.tree.TreeControl_files/eventtarget.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.tree.TreeControl_files/focushandler.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.tree.TreeControl_files/keyhandler.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.tree.TreeControl_files/timer.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.tree.TreeControl_files/stringbuffer.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.tree.TreeControl_files/eventhandler.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.tree.TreeControl_files/box.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.tree.TreeControl_files/rect.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.tree.TreeControl_files/product.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.tree.TreeControl_files/style.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.tree.TreeControl_files/idgenerator.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.tree.TreeControl_files/component.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.tree.TreeControl_files/basenode.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.tree.TreeControl_files/treenode.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.tree.TreeControl_files/trie.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.tree.TreeControl_files/typeahead.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.tree.TreeControl_files/treecontrol.js"></SCRIPT>
+</HEAD><BODY>
+  <DIV id="treeContainer" style="width:400px"><DIV class="goog-tree-root goog-tree-item focused" id=":0" hidefocus="true" tabindex="0"><DIV class="goog-tree-row" style="padding-left:0px"><IMG class="goog-tree-icon goog-tree-expanded-folder-icon" src="./Closure Unit Tests - goog.ui.tree.TreeControl_files/cleardot.gif"><SPAN class="goog-tree-item-label" id=":0.label">A</SPAN><SPAN></SPAN></DIV><DIV class="goog-tree-children" style="display: block; background-position: -100px 0px; "><DIV class="goog-tree-item" id=":1"><DIV class="goog-tree-row" style="padding-left:0px"><IMG type="expand" class="goog-tree-icon goog-tree-expand-icon goog-tree-expand-icon-tminus" src="./Closure Unit Tests - goog.ui.tree.TreeControl_files/cleardot.gif"><IMG class="goog-tree-icon goog-tree-expanded-folder-icon" src="./Closure Unit Tests - goog.ui.tree.TreeControl_files/cleardot.gif"><SPAN class="goog-tree-item-label" id=":1.label">AA</SPAN><SPAN></SPAN></DIV><DIV class="goog-tree-children" style="display: block; background-position: 0px 0px; "><DIV class="goog-tree-item" id=":3"><DIV class="goog-tree-row" style="padding-left:19px"><IMG type="expand" class="goog-tree-icon goog-tree-expand-icon goog-tree-expand-icon-lminus" src="./Closure Unit Tests - goog.ui.tree.TreeControl_files/cleardot.gif"><IMG class="goog-tree-icon goog-tree-expanded-folder-icon" src="./Closure Unit Tests - goog.ui.tree.TreeControl_files/cleardot.gif"><SPAN class="goog-tree-item-label" id=":3.label">AAB</SPAN><SPAN></SPAN></DIV><DIV class="goog-tree-children" style="display: block; background-position: -100px 0px; "><DIV class="goog-tree-item" id=":2"><DIV class="goog-tree-row" style="padding-left: 38px; "><IMG type="expand" class="goog-tree-icon goog-tree-expand-icon goog-tree-expand-icon-t" src="./Closure Unit Tests - goog.ui.tree.TreeControl_files/cleardot.gif"><IMG class="goog-tree-icon goog-tree-file-icon" src="./Closure Unit Tests - goog.ui.tree.TreeControl_files/cleardot.gif"><SPAN class="goog-tree-item-label" id=":2.label">AAA</SPAN><SPAN></SPAN></DIV><DIV class="goog-tree-children" style="background-position:19px 0;display:none;"></DIV></DIV></DIV></DIV></DIV></DIV><DIV class="goog-tree-item" id=":4"><DIV class="goog-tree-row" style="padding-left:0px"><IMG type="expand" class="goog-tree-icon goog-tree-expand-icon goog-tree-expand-icon-lminus" src="./Closure Unit Tests - goog.ui.tree.TreeControl_files/cleardot.gif"><IMG class="goog-tree-icon goog-tree-expanded-folder-icon" src="./Closure Unit Tests - goog.ui.tree.TreeControl_files/cleardot.gif"><SPAN class="goog-tree-item-label" id=":4.label">AB</SPAN><SPAN></SPAN></DIV><DIV class="goog-tree-children" style="display: block; background-position: -100px 0px; "><DIV class="goog-tree-item" id=":5"><DIV class="goog-tree-row selected" style="padding-left:19px"><IMG type="expand" class="goog-tree-icon goog-tree-expand-icon goog-tree-expand-icon-t" src="./Closure Unit Tests - goog.ui.tree.TreeControl_files/cleardot.gif"><IMG class="goog-tree-icon goog-tree-file-icon" src="./Closure Unit Tests - goog.ui.tree.TreeControl_files/cleardot.gif"><SPAN class="goog-tree-item-label" id=":5.label">ABA</SPAN><SPAN></SPAN></DIV><DIV class="goog-tree-children" style="background-position:19px 0;display:none;"></DIV></DIV><DIV class="goog-tree-item" id=":6"><DIV class="goog-tree-row" style="padding-left:19px"><IMG type="expand" class="goog-tree-icon goog-tree-expand-icon goog-tree-expand-icon-l" src="./Closure Unit Tests - goog.ui.tree.TreeControl_files/cleardot.gif"><IMG class="goog-tree-icon goog-tree-file-icon" src="./Closure Unit Tests - goog.ui.tree.TreeControl_files/cleardot.gif"><SPAN class="goog-tree-item-label" id=":6.label">ABB</SPAN><SPAN></SPAN></DIV><DIV class="goog-tree-children" style="background-position:-100px 0;display:none;"></DIV></DIV></DIV></DIV></DIV></DIV><DIV class="goog-tree-root goog-tree-item" id=":7" hidefocus="true" tabindex="0"><DIV class="goog-tree-row selected" style="padding-left:0px"><IMG class="goog-tree-icon goog-tree-expanded-folder-icon" src="./Closure Unit Tests - goog.ui.tree.TreeControl_files/cleardot.gif"><SPAN class="goog-tree-item-label" id=":7.label">A</SPAN><SPAN></SPAN></DIV><DIV class="goog-tree-children" style="display: block; background-position: -100px 0px; "><DIV class="goog-tree-item" id=":8"><DIV class="goog-tree-row" style="padding-left:0px"><IMG type="expand" class="goog-tree-icon goog-tree-expand-icon goog-tree-expand-icon-tminus" src="./Closure Unit Tests - goog.ui.tree.TreeControl_files/cleardot.gif"><IMG class="goog-tree-icon goog-tree-expanded-folder-icon" src="./Closure Unit Tests - goog.ui.tree.TreeControl_files/cleardot.gif"><SPAN class="goog-tree-item-label" id=":8.label">AA</SPAN><SPAN></SPAN></DIV><DIV class="goog-tree-children" style="display: block; background-position: 0px 0px; "><DIV class="goog-tree-item" id=":a"><DIV class="goog-tree-row" style="padding-left:19px"><IMG type="expand" class="goog-tree-icon goog-tree-expand-icon goog-tree-expand-icon-l" src="./Closure Unit Tests - goog.ui.tree.TreeControl_files/cleardot.gif"><IMG class="goog-tree-icon goog-tree-file-icon" src="./Closure Unit Tests - goog.ui.tree.TreeControl_files/cleardot.gif"><SPAN class="goog-tree-item-label" id=":a.label">AAB</SPAN><SPAN></SPAN></DIV><DIV class="goog-tree-children" style="background-position:-100px 0;display:none;"></DIV></DIV></DIV></DIV><DIV class="goog-tree-item" id=":b"><DIV class="goog-tree-row" style="padding-left:0px"><IMG type="expand" class="goog-tree-icon goog-tree-expand-icon goog-tree-expand-icon-tminus" src="./Closure Unit Tests - goog.ui.tree.TreeControl_files/cleardot.gif"><IMG class="goog-tree-icon goog-tree-expanded-folder-icon" src="./Closure Unit Tests - goog.ui.tree.TreeControl_files/cleardot.gif"><SPAN class="goog-tree-item-label" id=":b.label">AB</SPAN><SPAN></SPAN></DIV><DIV class="goog-tree-children" style="display: block; background-position: 0px 0px; "><DIV class="goog-tree-item" id=":c"><DIV class="goog-tree-row" style="padding-left:19px"><IMG type="expand" class="goog-tree-icon goog-tree-expand-icon goog-tree-expand-icon-t" src="./Closure Unit Tests - goog.ui.tree.TreeControl_files/cleardot.gif"><IMG class="goog-tree-icon goog-tree-file-icon" src="./Closure Unit Tests - goog.ui.tree.TreeControl_files/cleardot.gif"><SPAN class="goog-tree-item-label" id=":c.label">ABA</SPAN><SPAN></SPAN></DIV><DIV class="goog-tree-children" style="background-position:19px 0;display:none;"></DIV></DIV><DIV class="goog-tree-item" id=":d"><DIV class="goog-tree-row" style="padding-left:19px"><IMG type="expand" class="goog-tree-icon goog-tree-expand-icon goog-tree-expand-icon-l" src="./Closure Unit Tests - goog.ui.tree.TreeControl_files/cleardot.gif"><IMG class="goog-tree-icon goog-tree-file-icon" src="./Closure Unit Tests - goog.ui.tree.TreeControl_files/cleardot.gif"><SPAN class="goog-tree-item-label" id=":d.label">ABB</SPAN><SPAN></SPAN></DIV><DIV class="goog-tree-children" style="background-position:-100px 0;display:none;"></DIV></DIV></DIV></DIV><DIV class="goog-tree-item" id=":9"><DIV class="goog-tree-row" style="padding-left: 0px; "><IMG type="expand" class="goog-tree-icon goog-tree-expand-icon goog-tree-expand-icon-t" src="./Closure Unit Tests - goog.ui.tree.TreeControl_files/cleardot.gif"><IMG class="goog-tree-icon goog-tree-file-icon" src="./Closure Unit Tests - goog.ui.tree.TreeControl_files/cleardot.gif"><SPAN class="goog-tree-item-label" id=":9.label">AAA</SPAN><SPAN></SPAN></DIV><DIV class="goog-tree-children" style="background-position:19px 0;display:none;"></DIV></DIV></DIV></DIV></DIV>
+<SCRIPT type="text/javascript">
+
+function makeATree() {
+  var tree = new goog.ui.tree.TreeControl('root');
+  var testData = ['A', [
+                  ['AA', [
+                    ['AAA', []],
+                    ['AAB', []]
+                  ]],
+                  ['AB', [
+                    ['ABA', []],
+                    ['ABB', []]
+                  ]]
+                ]];
+
+  createTreeFromTestData(tree, testData, 3);
+  tree.render(goog.dom.$('treeContainer'));
+  return tree;
+};
+
+function createTreeFromTestData(node, data, maxLevels) {
+  node.setHtml(data[0]);
+  if (maxLevels < 0) {
+    return;
+  }
+
+  var children = data[1];
+  for (var i = 0; i < children.length; i++) {
+    var child = children[i];
+    var childNode = node.getTree().createNode();
+    node.add(childNode);
+    createTreeFromTestData(childNode, child, maxLevels - 1);
+  }
+};
+
+/**
+ * Test moving a node to a greater depth.
+ */
+function testIndent() {
+  var tree = makeATree();
+  tree.expandAll();
+
+  var node = tree.getChildren()[0].getChildren()[0];
+  assertEquals(node.html_,'AAA');
+  assertNotNull(node.getElement());
+  assertEquals('19px', node.getRowElement().style.paddingLeft);
+
+  assertEquals(2, node.getDepth());
+
+  var newParent = node.getNextSibling();
+  assertEquals('AAB', newParent.html_);
+  assertEquals(2, newParent.getDepth());
+
+  newParent.add(node);
+
+  assertEquals(newParent, node.getParent());
+  assertEquals(node, newParent.getChildren()[0]);
+  assertEquals(3, node.getDepth());
+  assertEquals('38px', node.getRowElement().style.paddingLeft);
+};
+
+/**
+ * Test moving a node to a lesser depth.
+ */
+function testOutdent() {
+  var tree = makeATree();
+  tree.expandAll();
+
+  var node = tree.getChildren()[0].getChildren()[0];
+  assertEquals(node.html_,'AAA');
+  assertNotNull(node.getElement());
+  assertEquals('19px', node.getRowElement().style.paddingLeft);
+
+  assertEquals(2, node.getDepth());
+
+  var newParent = tree;
+  assertEquals('A', newParent.html_);
+  assertEquals(0, newParent.getDepth());
+
+  newParent.add(node);
+
+  assertEquals(newParent, node.getParent());
+  assertEquals(node, newParent.getChildren()[2]);
+  assertEquals(1, node.getDepth());
+  assertEquals('0px', node.getRowElement().style.paddingLeft);
+};
+
+</SCRIPT>
+
+
+<DIV><DIV style="color: rgb(0, 100, 0); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; font-weight: bold; ">Closure Unit Tests - goog.ui.tree.TreeControl [PASSED]</DIV><DIV style="color: rgb(51, 51, 51); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; font-weight: bold; ">closure-library.googlecode.com/svn/trunk/closure/goog/ui/tree/treecontrol_test.html</DIV><DIV style="color: rgb(51, 51, 51); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">2 of 2 tests run in 45ms.</DIV><DIV style="color: rgb(51, 51, 51); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">2 passed, 0 failed.</DIV><DIV style="color: rgb(51, 51, 51); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">23 ms/test. 52 files loaded.</DIV><DIV style="color: rgb(51, 51, 51); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">.</DIV><DIV style="color: rgb(51, 51, 51); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">08:50:54.242  Start</DIV><DIV style="color: rgb(0, 100, 0); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">08:50:54.276  testIndent : PASSED</DIV><DIV style="color: rgb(0, 100, 0); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">08:50:54.287  testOutdent : PASSED</DIV><DIV style="color: rgb(51, 51, 51); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">08:50:54.287  Done</DIV><DIV style="color: rgb(51, 51, 51); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; "> </DIV><A style="display: block; font-size: small; " href="">Run again without reloading</A></DIV></BODY></HTML>

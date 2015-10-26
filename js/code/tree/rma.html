@@ -1,0 +1,130 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!--
+ ! Excerpted from "Mastering Dojo",
+ ! published by The Pragmatic Bookshelf.
+ ! Copyrights apply to this code. It may not be used to create training material, 
+ ! courses, books, articles, and the like. Contact us if you are in doubt.
+ ! We make no guarantees that this code is fit for any purpose. 
+ ! Visit http://www.pragmaticprogrammer.com/titles/rgdojo for more book information.
+-->
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Return Items</title>
+    <style type="text/css">
+        @import "/dojoroot/dijit/themes/tundra/tundra.css";
+    </style>
+    <script type="text/javascript" src="/dojoroot/dojo/dojo.js"  djConfig="parseOnLoad: true"></script>
+    <script type="text/javascript">
+       dojo.registerModulePath("dojobook","../../dojobook");
+       dojo.require("dojo.parser");
+       dojo.require("dojo.data.ItemFileReadStore");
+       dojo.require("dojo.data.ItemFileWriteStore");
+       dojo.require("dijit.Tree");
+       dojo.require("dijit.layout.BorderContainer");
+       dojo.require("dijit.layout.ContentPane");
+       dojo.require("dijit._tree.dndSource");
+       dojo.require("dijit.form.Button");
+
+       
+       // Object tree uses
+       dojo.require("dojobook.tree.objects.rma");
+       var rma = null;
+       
+        
+       
+       // functions that actually call methods
+       function itemAccept(target, source) {
+           return rma.itemAccept(target, source);
+       }
+
+       function dndDrop(source, nodes, copy) {
+           rma.boxDrop(source, nodes, copy);
+       };
+       
+
+       
+       function never() { return false; }
+       
+       
+
+     </script>
+</head>
+<body class="tundra">
+   <div dojoType="dijit.layout.BorderContainer" style="width:600px; height:400px"
+        design="headline"  liveSizing="true">
+        <div dojoType="dijit.layout.ContentPane" region="leading"
+             splitter="true" style="width:200px"
+        >
+        
+           
+           <div dojoType="dijit.form.Button">
+               Add Box
+               <script type="dojo/event" event="onClick">
+                   rma.addBox();
+               </script>
+           </div> 
+
+           <div dojoType="dijit.form.Button">
+               Remove Box
+               <script type="dojo/event" event="onClick" args="evt">
+                   rma.removeBox();
+               </script>
+           </div> 
+
+           <div dojoType="dijit.form.Button">
+               Rename Box
+               <script type="dojo/event" event="onClick" args="evt">
+                   rma.renameBox();
+               </script>
+           </div> 
+           
+        
+           <div dojoType="dojo.data.ItemFileWriteStore" 
+                url="datasources/rma_boxes.json"         
+                jsId="boxJson"></div>
+                
+           <div dojoType="dijit.tree.ForestStoreModel" store="boxJson"
+                jsId="boxModel" rootLabel="Boxes"></div> 
+                
+           
+           
+           <div dojoType="dijit.Tree" id="boxes"
+                model="boxModel"
+                dndController="dijit._tree.dndSource"
+                onDndDrop="dndDrop"
+                checkItemAcceptance="itemAccept"
+                >
+           
+                <script type="dojo/method">
+                    // Executed when the widget is created
+                    rma = new dojobook.tree.objects.rma(boxJson, this.dndController);
+                </script>
+
+                <script type="dojo/event" event="onClick" args="item">
+                    rma.lastBoxSelected = item;
+                </script>
+           </div>
+           
+        </div>
+
+        <div dojoType="dijit.layout.ContentPane" region="center">
+           <div dojoType="dojo.data.ItemFileReadStore" 
+                url="datasources/order_with_serial.json"         
+                jsId="ordJson"></div>
+    
+           <div dojoType="dijit.tree.ForestStoreModel" store="ordJson"
+                jsId="ordModel" rootLabel="Order"
+                childrenAttrs="line,serial"
+                ></div> 
+    
+           
+           <div dojoType="dijit.Tree" id="ordTree" 
+                model="ordModel" 
+                dndController="dijit._tree.dndSource"
+                checkAcceptance="never">
+           </div>
+           
+       </div>
+   </div>
+</body></html>        

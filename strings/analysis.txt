@@ -1,0 +1,51 @@
+Sentence boundary detection: The following punctuation marks are considered as
+potential sentence boundaries: period, exclamation point, question mark, ellipsis. A
+set of automatically acquired disambiguation rules (Stamatatos et al. 1999) is, then,
+applied to every potential sentence boundary in order to locate the actual sentence
+boundaries. These rules utilize neither lexicons with specialized information nor
+abbreviation lists.
+Token-level: The sample text is considered as a set of tokens grouped in sentences.
+This level is based on the output of the sentence boundary detector:
+Sentence Boundary
+Detection
+
+Morphological Descriptions
+Multiple-pass Parsing
+
+
+
+
+
+1. M01 detected sentences / words1
+2. M02 punctuation marks / words
+3. M03 detected sentences / potential sentence boundaries
+
+Phrase-level: The sample text is considered as a set of phrases (i.e., chunks). This
+level is based on the output of the chunk boundary detector:
+Code Description
+
+1. M04 detected NPs / total detected chunks
+2. M05 detected VPs / total detected chunks
+3. M06 detected APs / total detected chunks
+4. M07 detected PPs / total detected chunks
+5. M08 detected CONs / total detected chunks
+6. M09 words included in NPs / detected NPs
+7. M10 words included in VPs / detected VPs
+8. M11 words included in APs / detected APs
+9. M12 words included in PPs / detected PPs
+10. M13 words included in CONs / detected CONs
+
+ Analysis-level: It includes measures that represent the way in which the sample text
+has been analyzed by the particular methodology of the SCBD:
+Code Description
+
+11. M14 detected keywords / words
+12. M15 special words / words
+13, M16 assigned morphological descriptions / words
+14. M17 chunks’ morphological descriptions / total detected chunks
+15. M18 words remaining unanalyzed after pass 1 / words
+16. M19 words remaining unanalyzed after pass 2 / words
+17. M20 words remaining unanalyzed after pass 3 / words
+18. M21 words remaining unanalyzed after pass 4 / words
+19. M22 words remaining unanalyzed after pass 5 / words
+

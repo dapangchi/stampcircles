@@ -1,0 +1,63 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!--
+ ! Excerpted from "Mastering Dojo",
+ ! published by The Pragmatic Bookshelf.
+ ! Copyrights apply to this code. It may not be used to create training material, 
+ ! courses, books, articles, and the like. Contact us if you are in doubt.
+ ! We make no guarantees that this code is fit for any purpose. 
+ ! Visit http://www.pragmaticprogrammer.com/titles/rgdojo for more book information.
+-->
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Toaster</title>
+    <style type="text/css">
+        @import "/dojoroot/dijit/themes/tundra/tundra.css";
+        @import "/dojoroot/dojo/resources/dojo.css";
+        @import "/dojoroot/dojox/widget/Toaster/Toaster.css";
+    </style>
+    <script type="text/javascript" src="/dojoroot/dojo/dojo.js"  djConfig="parseOnLoad: true"></script>
+    <script type="text/javascript">
+       dojo.require("dojo.parser");
+       dojo.require("dojox.widget.Toaster");
+       dojo.require("dijit.form.Button");
+       
+       /* Typically you would show the message when an async operation
+          begins, and stop it when it ends like this:  
+       
+       dojo.publish("/saving",[ "Saving..." ]);
+       dojo.xhrPost({
+          url: "/some/long/operation.php",
+          form: "saveform",
+          load: function() {
+             saveToaster._setHideTimer(1);
+          }
+       });
+       
+       */          
+    </script>
+</head>
+<body class="tundra">
+    
+    <span dojoType="dijit.form.Button">
+       Start Saving
+       <script type="dojo/method" event="onClick">
+           dojo.publish("/saving",[ "Saving..." ]);
+       </script>
+    </span>
+    
+    <span dojoType="dijit.form.Button">
+       Stop Saving
+       <script type="dojo/method" event="onClick">
+           saveToaster._setHideTimer(1);
+       </script>
+    </span>
+    
+
+    
+    <div dojoType="dojox.widget.Toaster" duration="0" jsId="saveToaster"
+         messageTopic="/saving" positionDirection="tr-left"></div>
+    
+    
+</body>
+</html>

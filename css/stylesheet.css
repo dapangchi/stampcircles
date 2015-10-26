@@ -1,0 +1,145 @@
+/* -------------------------------------------------------------- 
+   
+   typography.css
+   * Sets up some sensible default typography.
+      
+-------------------------------------------------------------- */
+
+/* Default font settings. 
+   The font-size percentage is of 16px. (0.75 * 16px = 12px) */
+body { 
+  font-size: 100%;
+  color: #222; 
+  background: #000;
+  font-family: "Helvetica Neue", Helvetica, verdana,arial, sans-serif;
+}
+
+
+/* Headings
+-------------------------------------------------------------- */
+
+h1,h2,h3,h4,h5,h6 { font-weight: normal; color: #111;font-family:georgia }
+
+h1 { font-size: 2em; line-height: 1; margin-bottom: 0.5em;font-family:georgia }  /*was 3em */
+h2 { font-size: 2em; margin-bottom: 0.75em; font-family:georgia}
+h3 { font-size: 1.5em; line-height: 1; margin-bottom: 1em; font-family:georgia}
+h4 { font-size: 1.2em; line-height: 1.25; margin-bottom: 1.25em; height: 1.25em; }
+h5 { font-size: 1em; font-weight: bold; margin-bottom: 1.5em; }
+h6 { font-size: 1em; font-weight: bold; }
+
+h1 img, h2 img, h3 img, 
+h4 img, h5 img, h6 img {
+  margin: 0;
+}
+
+
+/* Text elements
+-------------------------------------------------------------- */
+
+p           { margin: 0 0 1.5em; }
+p img       { float: left; margin: 1.5em 1.5em 1.5em 0; padding: 0; }
+p img.right { float: right; margin: 1.5em 0 1.5em 1.5em; }
+
+/*a:focus, 
+a:hover     { color: #000; }
+a           { color: #009; text-decoration: underline; }*/
+
+blockquote  { margin: 1.5em; color: #666; font-style: italic; }
+strong      { font-weight: bold; }
+em          { font-style: italic; }
+dfn           { font-weight: bold;color:green }
+sup, sub    { line-height: 0; }
+
+abbr, 
+acronym     { border-bottom: 1px dotted #666; }
+address     { margin: 0 0 1.5em; font-style: italic; }
+del         { color:#666; }
+
+pre,code    { margin: 1.5em 0; white-space: pre; }
+pre,code,tt { font: 1em 'andale mono', 'lucida console', monospace; line-height: 1.5; } 
+
+
+/* Lists
+-------------------------------------------------------------- */
+
+li ul, 
+li ol       { margin:0 1.5em; }
+ul, ol      { margin: 0 1.5em 1.5em 1.5em; }
+
+ul          { list-style-type: disc; }
+ol          { list-style-type: decimal; }
+
+dl          { margin: 0 0 1.5em 0; }
+dl dt       { font-weight: bold; }
+dd          { margin-left: 1.5em;}
+
+
+/* Tables
+-------------------------------------------------------------- */
+
+table       { margin-bottom: 1.4em; width:100%; }
+th          { font-weight: bold; background: #C3D9FF; }
+th,td       { padding: 4px 10px 4px 5px; }
+tr.even td  { background: #E5ECF9; }
+tfoot       { font-style: italic; }
+caption     { background: #eee; }
+
+
+/* Misc classes
+-------------------------------------------------------------- */
+
+.small      { font-size: .8em; margin-bottom: 1.875em; line-height: 1.875em; }
+.large      { font-size: 1.2em; line-height: 2.5em; margin-bottom: 1.25em; }
+.hide       { display: none; }
+
+.quiet      { color: #666; }
+.loud       { color: #000; }
+.highlight  { background:#ff0; }
+.added      { background:#060; color: #fff; }
+.removed    { background:#900; color: #fff; }
+
+.first      { margin-left:0; padding-left:0; }
+.last       { margin-right:0; padding-right:0; }
+.top        { margin-top:0; padding-top:0; }
+.bottom     { margin-bottom:0; padding-bottom:0; }
+
+#LHnav li, .LHnav li {
+padding-top:3px;
+}
+
+#LHnav li, .LHnav li {
+border-bottom:1px solid #CCCCCC;
+list-style-type:none;
+padding-bottom:2px;
+text-indent:0pt;
+margin-left:0px;width:210px
+}
+
+
+
+.LHnav li a:link,.LHnav a:visited, .LHnav a:hover {color:#666;
+                          font-size:1.0em;
+                          text-decoration:none;
+
+    }
+
+
+
+
+p:hover a:link,p:hover a:visited,p:hover a:hover{color:#dd0000;text-decoration:underline}
+
+
+
+
+/* Tabber */
+
+
+.tabberlive .tabbertabhide { display: none; } .tabber { padding: 0px; } .tabberlive { margin-bottom: 10px; } ul.tabbernav { margin: 0; padding: 5px 0 ; color: #544850; font-size: 12px; font-family: Arial, Tahoma, Verdana; font-weight: normal; background:#ffffff; } ul.tabbernav li { list-style: none; margin: 0; display: inline; } ul.tabbernav li a { padding: 3px 0.5em; border-bottom: none; text-decoration: none; } ul.tabbernav li a:link { color: #544850; background: #DDDDDD; margin: 0px 5px 0px 0px; } ul.tabbernav li a:visited { color: #afa9a9; background: #DDDDDD; } ul.tabbernav li a:hover { background: #afa9a9; color: #FFFFFF; text-decoration: none; } ul.tabbernav li.tabberactive a { background: #afa9a9; color: #FFFFFF; text-decoration: none; } ul.tabbernav li.tabberactive a:hover { background: #afa9a9; color: #FFFFFF; } .tabberlive .tabbertab { background: #FFFFFF; padding: 10px 0px 0px 0px; } .tabbertableft { float: left; width: 125px; margin: 0px 0px 0px 0px; padding: 0px 10px 0px 0px; } .tabbertabright { float: left; width: 400px; margin: 0px 0px 0px 0px; padding: 12px 0px 0px 0px; } .tabberlive .tabbertab h2 { display: none; } .tabberlive .tabbertab h3 { display: none; } .tabbertab cite { font-size: 11px; margin: 0px; padding: 0px; }
+
+
+
+
+
+
+
+

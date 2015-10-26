@@ -1,0 +1,67 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!--
+ ! Excerpted from "Mastering Dojo",
+ ! published by The Pragmatic Bookshelf.
+ ! Copyrights apply to this code. It may not be used to create training material, 
+ ! courses, books, articles, and the like. Contact us if you are in doubt.
+ ! We make no guarantees that this code is fit for any purpose. 
+ ! Visit http://www.pragmaticprogrammer.com/titles/rgdojo for more book information.
+-->
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Greeking Widget</title>
+<style type="text/css">
+    @import "/dojoroot/dijit/themes/tundra/tundra.css";
+</style>
+
+    <script type="text/javascript" src="/dojoroot/dojo/dojo.js"  djConfig="parseOnLoad: true"></script>
+    <script type="text/javascript">
+       dojo.registerModulePath("dojobook","../../dojobook");
+       dojo.require("dojobook.creating_widgets.widgets.GreekingWidget");
+       dojo.require("dojo.parser");
+     </script>
+     <style type="text/css">
+         .FooBarClass { color: red;  }
+     </style>
+     
+     <script>
+     
+     var greek = new dojobook.creating_widgets.widgets.GreekingWidget({
+            paragraphs: 1,
+            sentencesPer: 1,
+            loremIpsum: true,
+            style: 'width:200px'
+        }, dijit.byId("whereGreekShouldGo")
+     );
+     
+     </script>
+</head>
+<body class="tundra">
+        <h2>Usage and unit tests for GreekingWidget</h2>
+
+        <h3>Default options</h3>
+        <div dojoType="dojobook.creating_widgets.widgets.GreekingWidget"></div>
+
+        <h3>One sentence</h3>
+        
+        <div dojoType="dojobook.creating_widgets.widgets.GreekingWidget"
+            paragraphs="1"
+            sentencesPer="1"
+            loremIpsum="true"
+            style="width:200px"
+            ></div>
+        
+
+        <h3>Generate blockquotes</h3>
+        <div dojoType="dojobook.creating_widgets.widgets.GreekingWidget" 
+            paragraphs="2" 
+            tag="blockquote"></div>
+
+        <h3>Add CSS class to make them red</h3>
+        <div dojoType="dojobook.creating_widgets.widgets.GreekingWidget" 
+            paragraphs="2" 
+            addClass="FooBarClass"></div>
+
+</body>
+</html>

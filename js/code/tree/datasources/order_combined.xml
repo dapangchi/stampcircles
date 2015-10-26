@@ -1,0 +1,60 @@
+<!--
+ ! Excerpted from "Mastering Dojo",
+ ! published by The Pragmatic Bookshelf.
+ ! Copyrights apply to this code. It may not be used to create training material, 
+ ! courses, books, articles, and the like. Contact us if you are in doubt.
+ ! We make no guarantees that this code is fit for any purpose. 
+ ! Visit http://www.pragmaticprogrammer.com/titles/rgdojo for more book information.
+-->
+
+<orders>
+   <order>
+      <orderNumber>987987</orderNumber>
+      <description>Order 987987</description>
+      <priority>Next Day Air</priority>
+      <line>
+         <lineId>987987-1</lineId>
+         <qty>1</qty>
+         <sku>11761</sku>
+         <description>Yodeling Pickle</description>
+      </line>
+      <line>
+         <lineId>987987-2</lineId>
+         <qty>3</qty>
+         <sku>11798</sku>
+         <description>Gummy Tapeworm</description>
+      </line>
+   </order>
+   <!-- More Orders Here -->
+   
+   <order>
+      <orderNumber>988855</orderNumber>
+      <description>Order 988855</description>
+      <priority>2nd Day Air</priority>
+      <line>
+         <lineId>988855-1</lineId>
+         <qty>4</qty>
+         <sku>11753</sku>
+         <description>Gummy Haggis</description>
+      </line>
+   </order>
+   <order>
+      <orderNumber>988900</orderNumber>
+      <description>Order 988900</description>
+      <priority>2nd Day Air</priority>
+      <line>
+         <lineId>988900-1</lineId>
+         <qty>15</qty>
+         <sku>11824</sku>
+         <description>Worlds Largest Inflatable Heart</description>
+      </line>
+      <line>
+         <lineId>988900-2</lineId>
+         <qty>1</qty>
+         <sku>11548</sku>
+         <description>Deluxe Librarian Action Figure</description>
+      </line>
+   </order>
+   
+</orders>
+

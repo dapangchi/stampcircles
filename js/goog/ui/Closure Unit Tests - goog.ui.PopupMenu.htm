@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<!-- saved from url=(0083)http://closure-library.googlecode.com/svn/trunk/closure/goog/ui/popupmenu_test.html -->
+<HTML><!--
+  Copyright 2008 Google Inc. All Rights Reserved.
+--><HEAD><META http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<TITLE>Closure Unit Tests - goog.ui.PopupMenu</TITLE>
+<SCRIPT src="./Closure Unit Tests - goog.ui.PopupMenu_files/base.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.PopupMenu_files/deps.js"></SCRIPT>
+<SCRIPT>
+  goog.require('goog.dom');
+  goog.require('goog.events.EventHandler');
+  goog.require('goog.math.Box');
+  goog.require('goog.positioning.Corner');
+  goog.require('goog.testing.jsunit');
+  goog.require('goog.ui.PopupMenu');
+</SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.PopupMenu_files/array.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.PopupMenu_files/tagname.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.PopupMenu_files/classes.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.PopupMenu_files/coordinate.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.PopupMenu_files/size.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.PopupMenu_files/object.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.PopupMenu_files/string.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.PopupMenu_files/useragent.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.PopupMenu_files/dom.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.PopupMenu_files/disposable.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.PopupMenu_files/errorhandlerweakdep.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.PopupMenu_files/event.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.PopupMenu_files/browserevent.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.PopupMenu_files/eventwrapper.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.PopupMenu_files/listener.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.PopupMenu_files/simplepool.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.PopupMenu_files/jscript.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.PopupMenu_files/pools.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.PopupMenu_files/events.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.PopupMenu_files/eventhandler.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.PopupMenu_files/box.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.PopupMenu_files/eventtarget.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.PopupMenu_files/rect.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.PopupMenu_files/product.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.PopupMenu_files/style.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.PopupMenu_files/positioning.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.PopupMenu_files/stacktrace.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.PopupMenu_files/asserts.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.PopupMenu_files/testcase.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.PopupMenu_files/testrunner.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.PopupMenu_files/jsunit.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.PopupMenu_files/abstractposition.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.PopupMenu_files/anchoredposition.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.PopupMenu_files/anchoredviewportposition.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.PopupMenu_files/clientposition.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.PopupMenu_files/viewportclientposition.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.PopupMenu_files/structs.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.PopupMenu_files/iter.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.PopupMenu_files/map.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.PopupMenu_files/idgenerator.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.PopupMenu_files/component.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.PopupMenu_files/a11y.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.PopupMenu_files/keycodes.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.PopupMenu_files/keyhandler.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.PopupMenu_files/controlcontent.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.PopupMenu_files/controlrenderer.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.PopupMenu_files/registry.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.PopupMenu_files/decorate.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.PopupMenu_files/control.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.PopupMenu_files/menuseparatorrenderer.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.PopupMenu_files/separator.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.PopupMenu_files/containerrenderer.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.PopupMenu_files/container.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.PopupMenu_files/menuitemrenderer.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.PopupMenu_files/menuitem.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.PopupMenu_files/menurenderer.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.PopupMenu_files/menuseparator.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.PopupMenu_files/menu.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.PopupMenu_files/timer.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.PopupMenu_files/popupbase.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.PopupMenu_files/popupmenu.js"></SCRIPT>
+</HEAD><BODY>
+<DIV id="popup-anchor"></DIV>
+<SCRIPT>
+
+// Event handler
+var handler;
+var showPopup;
+var beforeShowPopupCalled;
+var target = goog.dom.getElement('popup-anchor');
+var popup;
+
+function setUp() {
+  handler = new goog.events.EventHandler();
+  popup = new goog.ui.PopupMenu();
+  popup.render();
+}
+
+function tearDown() {
+  handler.dispose();
+  popup.dispose();
+}
+
+function beforeShowPopup() {
+  // Ensure that the element is not yet visible.
+  assertFalse('The element should not be shown when BEFORE_SHOW event is ' +
+      'being handled',
+       goog.style.isElementShown(popup.getElement()));
+  beforeShowPopupCalled = true;
+  return showPopup;
+}
+
+/**
+ * Asserts properties of {@code target} matches the expected value.
+ *
+ * @param {Object} target The target specifying how the popup menu should be
+ *     attached to an anchor.
+ * @param {Element} expectedElement The expected anchoring element.
+ * @param {goog.positioning.Corner} expectedTargetCorner The expected value of
+ *     the {@code target.targetCorner_} property.
+ * @param {goog.positioning.Corner} expectedMenuCorner The expected value of
+ *     the {@code target.menuCorner_} property.
+ * @param {goog.events.EventType} expectedEventType The expected value of the
+ *     {@code target.eventType_} property.
+ * @param {goog.math.Box} expectedMargin The expected value of the
+ *     {@code target.margin_} property.
+ */
+function assertTarget(target, expectedElement, expectedTargetCorner,
+    expectedMenuCorner, expectedEventType, expectedMargin) {
+  var expectedTarget = {
+    element_: expectedElement,
+    targetCorner_: expectedTargetCorner,
+    menuCorner_: expectedMenuCorner,
+    eventType_: expectedEventType,
+    margin_: expectedMargin
+  }
+
+  assertObjectEquals('Target does not match.', expectedTarget, target);
+}
+
+/**
+ * Test menu receives BEFORE_SHOW event before it's displayed.
+ */
+function testBeforeShowEvent() {
+  handler.listen(popup,
+                 goog.ui.Menu.EventType.BEFORE_SHOW,
+                 beforeShowPopup);
+  beforeShowPopupCalled = false;
+  showPopup = false;
+  popup.showMenu(target, 0, 0);
+  assertTrue('BEFORE_SHOW event handler should be called on #showMenu',
+       beforeShowPopupCalled);
+  assertFalse('The element should not be shown when BEFORE_SHOW handler ' +
+      'returned false',
+       goog.style.isElementShown(popup.getElement()));
+
+  beforeShowPopupCalled = false;
+  showPopup = true;
+  popup.showMenu(target, 0, 0);
+  assertTrue('The element should be shown when BEFORE_SHOW handler ' +
+      'returned true',
+      goog.style.isElementShown(popup.getElement()));
+}
+
+/**
+ * Test the behavior of {@link PopupMenu.isAttachTarget}.
+ */
+function testIsAttachTarget() {
+  var anchor = goog.dom.$('popup-anchor');
+  // Before 'attach' is called.
+  assertFalse('Menu should not be attached to the element',
+      popup.isAttachTarget(anchor));
+
+  popup.attach(anchor);
+  assertTrue('Menu should be attached to the anchor',
+      popup.isAttachTarget(anchor));
+
+  popup.detach(anchor);
+  assertFalse('Menu is expected to be detached from the element',
+     popup.isAttachTarget(anchor));
+}
+
+/**
+ * Tests the behavior of {@link PopupMenu.createAttachTarget}.
+ */
+function testCreateAttachTarget() {
+  var element = goog.dom.$('popup-anchor');
+  // Randomly picking parameters.
+  var targetCorner = goog.positioning.Corner.TOP_END;
+  var menuCorner = goog.positioning.Corner.BOTTOM_LEFT;
+  var contextMenu = false;   // Show menu on mouse down event.
+  var margin = new goog.math.Box(0, 10, 5, 25);
+
+  // Simply setting the required parameters.
+  var target = popup.createAttachTarget(element);
+  assertTrue(popup.isAttachTarget(element));
+  assertTarget(target, element, undefined, undefined,
+      goog.events.EventType.MOUSEDOWN, undefined);
+
+  // Creating another target with all the parameters.
+  target = popup.createAttachTarget(element, targetCorner, menuCorner,
+      contextMenu, margin);
+  assertTrue(popup.isAttachTarget(element));
+  assertTarget(target, element, targetCorner, menuCorner,
+      goog.events.EventType.MOUSEDOWN, margin);
+
+  // Finally, switch up the 'contextMenu'
+  target = popup.createAttachTarget(element, undefined, undefined,
+      true /*opt_contextMenu*/, undefined);
+  assertTarget(target, element, undefined, undefined,
+      goog.events.EventType.CONTEXTMENU, undefined);
+}
+
+/**
+ * Tests the behavior of {@link PopupMenu.getAttachTarget}.
+ */
+function testGetAttachTarget() {
+  var element = goog.dom.$('popup-anchor');
+  // Before the menu is attached to the anchor.
+  var target = popup.getAttachTarget(element);
+  assertTrue('Not expecting a target before the element is attach to the menu',
+      target == null);
+
+  // Randomly picking parameters.
+  var targetCorner = goog.positioning.Corner.TOP_END;
+  var menuCorner = goog.positioning.Corner.BOTTOM_LEFT;
+  var contextMenu = false;   // Show menu on mouse down event.
+  var margin = new goog.math.Box(0, 10, 5, 25);
+
+  popup.attach(element, targetCorner, menuCorner, contextMenu, margin);
+  target = popup.getAttachTarget(element);
+  assertTrue('Failed to get target after attaching element to menu',
+      target != null);
+
+  // Make sure we got the right target back.
+  assertTarget(target, element, targetCorner, menuCorner,
+      goog.events.EventType.MOUSEDOWN, margin);
+}
+
+</SCRIPT>
+
+
+<DIV><DIV style="color: rgb(0, 100, 0); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; font-weight: bold; ">Closure Unit Tests - goog.ui.PopupMenu [PASSED]</DIV><DIV style="color: rgb(51, 51, 51); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; font-weight: bold; ">closure-library.googlecode.com/svn/trunk/closure/goog/ui/popupmenu_test.html</DIV><DIV style="color: rgb(51, 51, 51); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">4 of 4 tests run in 36ms.</DIV><DIV style="color: rgb(51, 51, 51); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">4 passed, 0 failed.</DIV><DIV style="color: rgb(51, 51, 51); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">9 ms/test. 63 files loaded.</DIV><DIV style="color: rgb(51, 51, 51); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">.</DIV><DIV style="color: rgb(51, 51, 51); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">08:38:14.900  Start</DIV><DIV style="color: rgb(0, 100, 0); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">08:38:14.114  testBeforeShowEvent : PASSED</DIV><DIV style="color: rgb(0, 100, 0); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">08:38:14.120  testCreateAttachTarget : PASSED</DIV><DIV style="color: rgb(0, 100, 0); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">08:38:14.122  testGetAttachTarget : PASSED</DIV><DIV style="color: rgb(0, 100, 0); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">08:38:14.125  testIsAttachTarget : PASSED</DIV><DIV style="color: rgb(51, 51, 51); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">08:38:14.126  Done</DIV><DIV style="color: rgb(51, 51, 51); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; "> </DIV><A style="display: block; font-size: small; " href="">Run again without reloading</A></DIV></BODY></HTML>

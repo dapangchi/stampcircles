@@ -1,0 +1,79 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!--
+ ! Excerpted from "Mastering Dojo",
+ ! published by The Pragmatic Bookshelf.
+ ! Copyrights apply to this code. It may not be used to create training material, 
+ ! courses, books, articles, and the like. Contact us if you are in doubt.
+ ! We make no guarantees that this code is fit for any purpose. 
+ ! Visit http://www.pragmaticprogrammer.com/titles/rgdojo for more book information.
+-->
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Connected Buttons</title>
+    <style type="text/css">
+        @import "/dojoroot/dijit/themes/tundra/tundra.css";
+        @import "/dojoroot/dojo/resources/dojo.css"
+    </style>
+    <script type="text/javascript" src="/dojoroot/dojo/dojo.js"  djConfig="parseOnLoad: true"></script>
+    <script type="text/javascript">
+       dojo.require("dojo.parser");
+       dojo.require("dijit.form.Form");
+       dojo.require("dijit.form.CheckBox");
+       dojo.require("dijit.form.FilteringSelect");
+       dojo.require("dijit.form.ValidationTextBox");
+       
+    </script>
+</head>
+<body class="tundra">
+    <form dojoType="dijit.form.Form" name="gencode">
+        
+        <select dojoType="dijit.form.FilteringSelect" name="language" id="language">
+            <option value="c">C</option>
+            <option value="java">Java</option>
+            <option value="vb">Visual Basic</option>
+            
+            <script type="dojo/method" event="onChange" args="newLang">
+                dojo.publish("/formchange/gencode/language", [newLang]);
+            </script>
+            
+            <script type="dojo/method">
+                // Danger: heavy use of regular expressions!  Consult your
+                // favorite JavaScript reference for details
+                dojo.subscribe("/formchange/gencode/filename",this,function(filename) {
+                   // Change language based on extension, if c, vb, or java
+                   if ((extension = /\.(java|c|vb)$/.exec(filename)) != null) {
+                      this.setValue(extension[1]);
+                   }
+                });
+            </script>
+        </select>
+        
+        
+        <br/>
+        
+        <div dojoType="dijit.form.CheckBox" name="debugSymbols" 
+             id="debugSymbols" value="Y">
+            <script type="dojo/method">
+               dojo.subscribe("/formchange/gencode/language",this,function(language) {
+               var debugSymAvailable = language=='c' || language=='java';
+                    this.setDisabled(!debugSymAvailable);
+               });
+            </script>
+        </div><label for="debugSymbols">Debug Symbols On?</label>
+        
+        
+        <br/>
+        
+        <label for="filename">File Name:</label>
+        <div dojoType="dijit.form.ValidationTextBox" length="50" name="filename"> 
+           <script type="dojo/method" event="onChange" args="newFile">
+              dojo.publish("/formchange/gencode/filename",[newFile]);
+           </script>
+        </div>
+        
+        <br/>
+        <input type="submit" value="submit">
+    </form>
+</body></html>
+

@@ -1,0 +1,34 @@
+html, body {
+  height: 100%; 
+  width: 100%;
+}
+
+#navigator {
+  border: 1px solid black;  
+  background-color: #00D000;
+}
+
+#workspace {
+  border: 1px solid black;  
+  background-color: #A0A0D0;
+}
+
+.tundra .bafDijitStatus {
+  padding: 3px 0 1px 3px; 
+  border-top: 1px solid #ccc;
+  background:#eaeaea url("../dojo/dijit/themes/tundra/images/titleBar.png") repeat-x top left;
+}
+
+.tundra .bafDijitStatus .bafDijitStatusStaticPane {
+  display:block;
+  margin-left: 0.5em;
+  padding: 0.2em;
+  padding-left: 0.5em;
+  border-left: 2px solid #ccc;
+  height: 1em;
+}
+/*
+.statusPaneRed {
+  background-color: #F0C0C0;
+}
+*/

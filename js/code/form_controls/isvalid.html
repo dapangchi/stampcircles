@@ -1,0 +1,55 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!--
+ ! Excerpted from "Mastering Dojo",
+ ! published by The Pragmatic Bookshelf.
+ ! Copyrights apply to this code. It may not be used to create training material, 
+ ! courses, books, articles, and the like. Contact us if you are in doubt.
+ ! We make no guarantees that this code is fit for any purpose. 
+ ! Visit http://www.pragmaticprogrammer.com/titles/rgdojo for more book information.
+-->
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Validating a Form</title>
+    <style type="text/css">
+        @import "/dojoroot/dijit/themes/tundra/tundra.css";
+        @import "/dojoroot/dojo/resources/dojo.css"
+    </style>
+    <script type="text/javascript" src="/dojoroot/dojo/dojo.js"  djConfig="parseOnLoad: true,isDebug:true"></script>
+    <script type="text/javascript">
+       dojo.require("dojo.parser");
+       dojo.require("dijit.form.Form");
+       dojo.require("dijit.form.ValidationTextBox");
+       dojo.require("dijit.form.Button");
+    </script>
+</head>
+<body class="tundra">
+    
+    <form dojoType="dijit.form.Form" name="mojoform" id="mojoform">
+        <p style="margin-top:200px;width:300px;">
+        Got my Mojo workin' but it just don't work on 
+        <span dojoType="dijit.form.ValidationTextBox" 
+              required="true" name="who"></span>  
+        </p>
+        
+        <button dojoType="dijit.form.Button">
+           Submit
+           <script type="dojo/method" event="onClick">
+              if (dijit.byId("mojoform").validate()) {
+                  dojo.xhrPost({
+                     url: "controller.html",
+                     form: "mojoform",
+                     load: function() {
+                        console.log("Form successfully submitted");
+                     },
+                     error: function() {
+                        console.error("Error on submission");
+                     }
+                  });
+              }
+           </script>
+        </button>
+    </form>
+    
+</body>
+</html>

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<!-- saved from url=(0087)http://closure-library.googlecode.com/svn/trunk/closure/goog/ui/tree/basenode_test.html -->
+<HTML><!--
+  Copyright 2009 Google Inc. All Rights Reserved.
+
+--><HEAD><META http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<TITLE>Closure Unit Tests - goog.ui.tree.BaseNode</TITLE>
+<SCRIPT src="./Closure Unit Tests - goog.ui.tree.BaseNode_files/base.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.tree.BaseNode_files/deps.js"></SCRIPT>
+<SCRIPT>
+
+goog.require('goog.testing.jsunit');
+goog.require('goog.ui.tree.TreeControl');
+goog.require('goog.ui.tree.BaseNode');
+goog.require('goog.ui.tree.BaseNode.EventType');
+
+</SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.tree.BaseNode_files/stacktrace.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.tree.BaseNode_files/asserts.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.tree.BaseNode_files/testcase.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.tree.BaseNode_files/testrunner.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.tree.BaseNode_files/jsunit.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.tree.BaseNode_files/array.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.tree.BaseNode_files/string.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.tree.BaseNode_files/object.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.tree.BaseNode_files/structs.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.tree.BaseNode_files/iter.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.tree.BaseNode_files/map.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.tree.BaseNode_files/set.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.tree.BaseNode_files/debug.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.tree.BaseNode_files/logrecord.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.tree.BaseNode_files/logger.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.tree.BaseNode_files/tagname.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.tree.BaseNode_files/classes.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.tree.BaseNode_files/coordinate.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.tree.BaseNode_files/size.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.tree.BaseNode_files/useragent.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.tree.BaseNode_files/dom.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.tree.BaseNode_files/a11y.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.tree.BaseNode_files/errorhandlerweakdep.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.tree.BaseNode_files/disposable.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.tree.BaseNode_files/event.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.tree.BaseNode_files/browserevent.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.tree.BaseNode_files/eventwrapper.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.tree.BaseNode_files/listener.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.tree.BaseNode_files/simplepool.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.tree.BaseNode_files/jscript.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.tree.BaseNode_files/pools.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.tree.BaseNode_files/events.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.tree.BaseNode_files/eventtarget.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.tree.BaseNode_files/focushandler.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.tree.BaseNode_files/keycodes.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.tree.BaseNode_files/keyhandler.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.tree.BaseNode_files/timer.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.tree.BaseNode_files/stringbuffer.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.tree.BaseNode_files/eventhandler.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.tree.BaseNode_files/box.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.tree.BaseNode_files/rect.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.tree.BaseNode_files/product.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.tree.BaseNode_files/style.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.tree.BaseNode_files/idgenerator.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.tree.BaseNode_files/component.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.tree.BaseNode_files/basenode.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.tree.BaseNode_files/treenode.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.tree.BaseNode_files/trie.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.tree.BaseNode_files/typeahead.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.tree.BaseNode_files/treecontrol.js"></SCRIPT>
+</HEAD><BODY>
+<SCRIPT>
+
+function testExpandEvents() {
+  var n = new goog.ui.tree.BaseNode('');
+  n.getTree = function() {};
+  var expanded = false;
+  n.setExpanded(expanded);
+  assertEquals(expanded, n.getExpanded());
+  var callCount = 0;
+  n.addEventListener(goog.ui.tree.BaseNode.EventType.BEFORE_EXPAND,
+      function(e) {
+        assertEquals(expanded, n.getExpanded());
+        callCount++;
+      });
+  n.addEventListener(goog.ui.tree.BaseNode.EventType.EXPAND,
+      function(e) {
+        assertEquals(!expanded, n.getExpanded());
+        callCount++;
+      });
+  n.setExpanded(!expanded);
+  assertEquals(2, callCount);
+}
+
+function testExpandEvents2() {
+  var n = new goog.ui.tree.BaseNode('');
+  n.getTree = function() {};
+  var expanded = true;
+  n.setExpanded(expanded);
+  assertEquals(expanded, n.getExpanded());
+  var callCount = 0;
+  n.addEventListener(goog.ui.tree.BaseNode.EventType.BEFORE_COLLAPSE,
+      function(e) {
+        assertEquals(expanded, n.getExpanded());
+        callCount++;
+      });
+  n.addEventListener(goog.ui.tree.BaseNode.EventType.COLLAPSE,
+      function(e) {
+        assertEquals(!expanded, n.getExpanded());
+        callCount++;
+      });
+  n.setExpanded(!expanded);
+  assertEquals(2, callCount);
+}
+
+function testExpandEventsPreventDefault() {
+  var n = new goog.ui.tree.BaseNode('');
+  n.getTree = function() {};
+  var expanded = true;
+  n.setExpanded(expanded);
+  assertEquals(expanded, n.getExpanded());
+  var callCount = 0;
+  n.addEventListener(goog.ui.tree.BaseNode.EventType.BEFORE_COLLAPSE,
+      function(e) {
+        assertEquals(expanded, n.getExpanded());
+        e.preventDefault();
+        callCount++;
+      });
+  n.addEventListener(goog.ui.tree.BaseNode.EventType.COLLAPSE,
+      function(e) {
+        fail('Should not fire COLLAPSE');
+      });
+  n.setExpanded(!expanded);
+  assertEquals(1, callCount);
+}
+
+function testExpandEventsPreventDefault2() {
+  var n = new goog.ui.tree.BaseNode('');
+  n.getTree = function() {};
+  var expanded = false;
+  n.setExpanded(expanded);
+  assertEquals(expanded, n.getExpanded());
+  var callCount = 0;
+  n.addEventListener(goog.ui.tree.BaseNode.EventType.BEFORE_EXPAND,
+      function(e) {
+        assertEquals(expanded, n.getExpanded());
+        e.preventDefault();
+        callCount++;
+      });
+  n.addEventListener(goog.ui.tree.BaseNode.EventType.EXPAND,
+      function(e) {
+        fail('Should not fire EXPAND');
+      });
+  n.setExpanded(!expanded);
+  assertEquals(1, callCount);
+}
+
+</SCRIPT>
+
+
+<DIV><DIV style="color: rgb(0, 100, 0); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; font-weight: bold; ">Closure Unit Tests - goog.ui.tree.BaseNode [PASSED]</DIV><DIV style="color: rgb(51, 51, 51); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; font-weight: bold; ">closure-library.googlecode.com/svn/trunk/closure/goog/ui/tree/basenode_test.html</DIV><DIV style="color: rgb(51, 51, 51); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">4 of 4 tests run in 16ms.</DIV><DIV style="color: rgb(51, 51, 51); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">4 passed, 0 failed.</DIV><DIV style="color: rgb(51, 51, 51); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">4 ms/test. 52 files loaded.</DIV><DIV style="color: rgb(51, 51, 51); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">.</DIV><DIV style="color: rgb(51, 51, 51); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">08:50:40.900  Start</DIV><DIV style="color: rgb(0, 100, 0); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">08:50:40.911  testExpandEvents : PASSED</DIV><DIV style="color: rgb(0, 100, 0); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">08:50:40.913  testExpandEvents2 : PASSED</DIV><DIV style="color: rgb(0, 100, 0); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">08:50:40.914  testExpandEventsPreventDefault : PASSED</DIV><DIV style="color: rgb(0, 100, 0); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">08:50:40.916  testExpandEventsPreventDefault2 : PASSED</DIV><DIV style="color: rgb(51, 51, 51); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">08:50:40.916  Done</DIV><DIV style="color: rgb(51, 51, 51); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; "> </DIV><A style="display: block; font-size: small; " href="">Run again without reloading</A></DIV></BODY></HTML>

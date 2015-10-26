@@ -1,0 +1,48 @@
+{
+    "repositories":[
+		{
+			"type": "pear",
+			"url": "http://pear.php.net"
+		},	
+		{
+			"type": "pear",
+			"url": "pear2.php.net"
+		},	
+		{
+		"type": "package",
+			"package": {
+				"name": "dready92/php-on-couch",
+				"version": "dev-master",
+				"source": {
+					"url": "https://github.com/dready92/PHP-on-Couch.git",
+					"type": "git",
+					"reference": "master"
+				},
+            "autoload": {
+                "psr-0" : {
+                    "couch\\yannis" : "src"
+					}
+				}
+			}
+		}
+	],
+	"require": {
+        "pear-pear2.php.net/PEAR2_Text_Markdown": "*",
+        "pear-pear2/PEAR2_HTTP_Request": "*",
+		"pear-pear/Date_HumanDiff": "*" ,
+        "monolog/monolog": "1.0.*",
+		"kriswallsmith/buzz": "*",
+		"aws/aws-sdk-php": "2.*",
+		"doctrine/cache":"*",
+		"weaverryan/derp-dangerzone": "dev-master",
+		"leafo/lessphp": "0.4.0",
+		"guzzlehttp/guzzle": "~4.0",
+		"lukaszkujawa/couch-php": "dev-master",
+		"erusev/parsedown": "1.0.1",
+		 "moontoast/math": "*",
+		"rhumsaa/uuid": "~2.7"
+	},
+	"require-dev": {
+        "phpunit/phpunit": "4.1.*"
+       }
+}

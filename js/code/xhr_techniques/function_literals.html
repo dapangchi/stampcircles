@@ -1,0 +1,86 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!--
+ ! Excerpted from "Mastering Dojo",
+ ! published by The Pragmatic Bookshelf.
+ ! Copyrights apply to this code. It may not be used to create training material, 
+ ! courses, books, articles, and the like. Contact us if you are in doubt.
+ ! We make no guarantees that this code is fit for any purpose. 
+ ! Visit http://www.pragmaticprogrammer.com/titles/rgdojo for more book information.
+-->
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Function Literals</title>
+    <style type="text/css">
+        @import "/dojoroot/dijit/themes/tundra/tundra.css";
+        @import "/dojoroot/dojo/resources/dojo.css"
+    </style>
+    <script type="text/javascript" src="/dojoroot/dojo/dojo.js"  djConfig="parseOnLoad: true"></script>
+<script>
+
+// Assume there's a <ul id="listOfUrls"></ul> present.  
+var listNode = document.getElementById("listOfUrls");
+
+// You want to turn this:
+var urls = [
+   { url: "http://www.yahoo.com", title: "Yahoo" },
+   { url: "http://www.ask.com", title: "Ask" },
+   { url: "http://www.google.com", title: "Google" }
+];
+
+/* into this:  
+   <li><a href="http://www.yahoo.com">Yahoo</a></li>
+   <li><a href="http://www.ask.com">Ask</a></li>
+   <li><a href="http://www.google.com">Google</a></li>
+*/
+
+
+
+for (var i=0; i < urls.length; i++) {
+    var listItem = document.createElement("li");
+    listItem.innerHTML =
+       "<a href='" 
+       + urls[i].url 
+       + "'>" 
+       + urls[i].title 
+       + "</a>";
+    listNode.appendChild(listItem);
+}
+
+
+
+for (var i=0; i < urls.length; i++) {
+    var listItem = document.createElement("li");
+    listItem.innerHTML =
+       dojo.string.substitute("<a href='${url}'>${title}</a>", urls[i]);
+    listNode.appendChild(listItem);
+}
+
+       
+
+var listNode = document.getElementById("listOfUrls");
+function appendNewListItem(oneResult) {
+    var listItem = document.createElement("li");
+    listItem.innerHTML =
+       dojo.string.substitute("<a href='${url}'>${title}</a>", oneResult);
+    listNode.appendChild(listItem);
+}
+
+
+
+dojo.forEach( urls, appendNewListItem );
+
+
+
+var listNode = document.getElementById("listOfUrls");
+dojo.forEach( urls, function(oneResult) {
+    var listItem = document.createElement("li");
+    listItem.innerHTML =
+       dojo.string.substitute("<a href='${url}'>${title}</a>", oneResult);
+    listNode.appendChild(listItem);
+});
+
+
+</script>
+</head>
+</html>

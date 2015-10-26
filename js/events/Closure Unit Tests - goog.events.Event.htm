@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<!-- saved from url=(0083)http://closure-library.googlecode.com/svn/trunk/closure/goog/events/event_test.html -->
+<HTML><!-- Copyright 2008 Google Inc. All Rights Reserved.--><!----><HEAD><META http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+  <TITLE>Closure Unit Tests - goog.events.Event</TITLE>
+  <SCRIPT src="./Closure Unit Tests - goog.events.Event_files/base.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.events.Event_files/deps.js"></SCRIPT>
+  <SCRIPT>
+    goog.require('goog.events.Event');
+    goog.require('goog.events.EventTarget');
+    goog.require('goog.testing.jsunit');
+  </SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.events.Event_files/disposable.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.events.Event_files/event.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.events.Event_files/array.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.events.Event_files/errorhandlerweakdep.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.events.Event_files/string.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.events.Event_files/useragent.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.events.Event_files/browserevent.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.events.Event_files/eventwrapper.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.events.Event_files/listener.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.events.Event_files/simplepool.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.events.Event_files/jscript.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.events.Event_files/pools.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.events.Event_files/object.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.events.Event_files/events.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.events.Event_files/eventtarget.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.events.Event_files/stacktrace.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.events.Event_files/asserts.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.events.Event_files/testcase.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.events.Event_files/testrunner.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.events.Event_files/jsunit.js"></SCRIPT>
+</HEAD><BODY>
+  <SCRIPT>
+    var e, target;
+
+    function setUp() {
+      target = new goog.events.EventTarget();
+      e = new goog.events.Event('eventType', target);
+    }
+
+    function tearDown() {
+      target.dispose();
+      e.dispose();
+    }
+
+    function testConstructor() {
+      assertNotNull('Event must not be null', e);
+      assertEquals('Event type must be as expected', 'eventType', e.type);
+      assertEquals('Event target must be as expected', target, e.target);
+      assertEquals('Current target must be as expected', target,
+          e.currentTarget);
+    }
+
+    function testDispose() {
+      assertFalse('Event must not have been disposed of', e.isDisposed());
+      e.dispose();
+      assertTrue('Event must have been disposed of', e.isDisposed());
+      assertUndefined('Event type must have been deleted', e.type);
+      assertUndefined('Event target reference must have been deleted',
+          e.target);
+      assertUndefined('Current target reference must have been deleted',
+          e.currentTarget);
+    }
+
+    function testStopPropagation() {
+      // This test breaks encapsulation because thre is no public getter for
+      // propagationStopped_.
+      assertFalse('Propagation must not have been stopped',
+          e.propagationStopped_);
+      e.stopPropagation();
+      assertTrue('Propagation must have been stopped', e.propagationStopped_);
+    }
+
+    function testPreventDefault() {
+      // This test breaks encapsulation because thre is no public getter for
+      // returnValue_.
+      assertTrue('Return value must be true', e.returnValue_);
+      e.preventDefault();
+      assertFalse('Return value must be false', e.returnValue_);
+    }
+  </SCRIPT>
+
+
+<DIV><DIV style="color: rgb(0, 100, 0); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; font-weight: bold; ">Closure Unit Tests - goog.events.Event [PASSED]</DIV><DIV style="color: rgb(51, 51, 51); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; font-weight: bold; ">closure-library.googlecode.com/svn/trunk/closure/goog/events/event_test.html</DIV><DIV style="color: rgb(51, 51, 51); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">4 of 4 tests run in 5ms.</DIV><DIV style="color: rgb(51, 51, 51); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">4 passed, 0 failed.</DIV><DIV style="color: rgb(51, 51, 51); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">1 ms/test. 22 files loaded.</DIV><DIV style="color: rgb(51, 51, 51); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">.</DIV><DIV style="color: rgb(51, 51, 51); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">09:52:07.159  Start</DIV><DIV style="color: rgb(0, 100, 0); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">09:52:07.161  testConstructor : PASSED</DIV><DIV style="color: rgb(0, 100, 0); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">09:52:07.162  testDispose : PASSED</DIV><DIV style="color: rgb(0, 100, 0); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">09:52:07.163  testPreventDefault : PASSED</DIV><DIV style="color: rgb(0, 100, 0); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">09:52:07.164  testStopPropagation : PASSED</DIV><DIV style="color: rgb(51, 51, 51); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">09:52:07.164  Done</DIV><DIV style="color: rgb(51, 51, 51); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; "> </DIV><A style="display: block; font-size: small; " href="">Run again without reloading</A></DIV></BODY></HTML>

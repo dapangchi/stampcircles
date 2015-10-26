@@ -1,0 +1,17 @@
+Chillers, 2000000,20%
+Cooling Tower, 2000000,20%
+AHU,4000000,20%
+Fan-coil-units,5000000,20%
+Boilers,3000000,20%
+Boiler Flue,2000000,20%
+Generators,3000000,20%
+Ducting,5000000,20%
+Chilled Water Piping,10000000,20%
+Valves,2000000,20%
+Expansion Tanks,1500000,20%
+Pressurization Units,1000000,20%
+Insulation,2000000,20%
+BMS,8000000,20%
+Fire Alarm,2000000,20%
+Fire Pumps,2000000,20%
+Transformers,3500000,20%

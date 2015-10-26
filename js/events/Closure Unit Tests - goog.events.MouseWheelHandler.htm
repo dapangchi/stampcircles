@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<!-- saved from url=(0095)http://closure-library.googlecode.com/svn/trunk/closure/goog/events/mousewheelhandler_test.html -->
+<HTML><!--
+  Copyright 2009 Google Inc. All Rights Reserved.
+
+--><HEAD><META http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<TITLE>Closure Unit Tests - goog.events.MouseWheelHandler</TITLE>
+<SCRIPT src="./Closure Unit Tests - goog.events.MouseWheelHandler_files/base.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.events.MouseWheelHandler_files/deps.js"></SCRIPT>
+<SCRIPT>
+  goog.require('goog.dom');
+  goog.require('goog.events.MouseWheelHandler');
+  goog.require('goog.functions');
+  goog.require('goog.object');
+  goog.require('goog.testing.jsunit');
+</SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.events.MouseWheelHandler_files/array.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.events.MouseWheelHandler_files/tagname.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.events.MouseWheelHandler_files/classes.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.events.MouseWheelHandler_files/coordinate.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.events.MouseWheelHandler_files/size.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.events.MouseWheelHandler_files/object.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.events.MouseWheelHandler_files/string.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.events.MouseWheelHandler_files/useragent.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.events.MouseWheelHandler_files/dom.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.events.MouseWheelHandler_files/errorhandlerweakdep.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.events.MouseWheelHandler_files/disposable.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.events.MouseWheelHandler_files/event.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.events.MouseWheelHandler_files/browserevent.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.events.MouseWheelHandler_files/eventwrapper.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.events.MouseWheelHandler_files/listener.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.events.MouseWheelHandler_files/simplepool.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.events.MouseWheelHandler_files/jscript.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.events.MouseWheelHandler_files/pools.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.events.MouseWheelHandler_files/events.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.events.MouseWheelHandler_files/eventtarget.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.events.MouseWheelHandler_files/mousewheelhandler.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.events.MouseWheelHandler_files/functions.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.events.MouseWheelHandler_files/stacktrace.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.events.MouseWheelHandler_files/asserts.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.events.MouseWheelHandler_files/testcase.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.events.MouseWheelHandler_files/testrunner.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.events.MouseWheelHandler_files/jsunit.js"></SCRIPT>
+</HEAD><BODY>
+  <DIV id="foo"></DIV>
+<SCRIPT>
+
+  var DEFAULT_TYPE = 'mousewheel';
+  var GECKO_TYPE = 'DOMMouseScroll';
+
+  var HORIZONTAL = 'h';
+  var VERTICAL = 'v';
+
+  var mouseWheelEvent;
+  var mouseWheelHandler;
+
+  function tearDown() {
+    goog.userAgent = null;
+    mouseWheelHandler.dispose();
+    mouseWheelHandler = null;
+    mouseWheelEvent = null;
+  }
+
+  function testIeStyleMouseWheel() {
+    goog.userAgent = {
+        OPERA: false,
+        IE: true,
+        GECKO: false,
+        CAMINO: false,
+        WEBKIT: false
+    };
+
+    createHandlerAndListen();
+
+    // Non-gecko, non-webkit events get wheelDelta divided by -40 to get detail.
+    mouseWheelHandler.handleEvent(
+        createFakeMouseWheelEvent(DEFAULT_TYPE, 120));
+    assertMouseWheelEvent(-3, 0, -3);
+
+    mouseWheelHandler.handleEvent(
+        createFakeMouseWheelEvent(DEFAULT_TYPE, -120));
+    assertMouseWheelEvent(3, 0, 3);
+
+    mouseWheelHandler.handleEvent(
+        createFakeMouseWheelEvent(DEFAULT_TYPE, 1200));
+    assertMouseWheelEvent(-30, 0, -30);
+  }
+
+  function testGeckoStyleMouseWheel() {
+    goog.userAgent = {
+        OPERA: false,
+        IE: false,
+        GECKO: true,
+        CAMINO: false,
+        WEBKIT: false
+    };
+
+    createHandlerAndListen();
+
+    mouseWheelHandler.handleEvent(
+        createFakeMouseWheelEvent(GECKO_TYPE, null, 3));
+    assertMouseWheelEvent(3, 0, 3);
+
+    mouseWheelHandler.handleEvent(
+        createFakeMouseWheelEvent(GECKO_TYPE, null, -12));
+    assertMouseWheelEvent(-12, 0, -12);
+
+    // Really big values should get truncated to +-3.
+    mouseWheelHandler.handleEvent(
+        createFakeMouseWheelEvent(GECKO_TYPE, null, 1200));
+    assertMouseWheelEvent(3, 0, 3);
+
+    mouseWheelHandler.handleEvent(
+        createFakeMouseWheelEvent(GECKO_TYPE, null, -1200));
+    assertMouseWheelEvent(-3, 0, -3);
+
+    // Test scrolling with the additional axis property.
+    mouseWheelHandler.handleEvent(
+        createFakeMouseWheelEvent(GECKO_TYPE, null, 3, VERTICAL));
+    assertMouseWheelEvent(3, 0, 3);
+
+    mouseWheelHandler.handleEvent(
+        createFakeMouseWheelEvent(GECKO_TYPE, null, 3, HORIZONTAL));
+    assertMouseWheelEvent(3, 3, 0);
+
+    mouseWheelHandler.handleEvent(
+        createFakeMouseWheelEvent(GECKO_TYPE, null, -3, HORIZONTAL));
+    assertMouseWheelEvent(-3, -3, 0);
+  }
+
+  function testWebkitStyleMouseWheel_ieStyle() {
+    goog.userAgent = {
+        OPERA: false,
+        IE: false,
+        GECKO: false,
+        CAMINO: false,
+        WEBKIT: true,
+        WINDOWS: true
+    };
+
+    createHandlerAndListen();
+
+    // IE-style Webkit events get wheelDelta divided by -40 to get detail.
+    mouseWheelHandler.handleEvent(
+        createFakeWebkitMouseWheelEvent(-40, 0));
+    assertMouseWheelEvent(1, 1, 0);
+
+    mouseWheelHandler.handleEvent(
+        createFakeWebkitMouseWheelEvent(120, 0));
+    assertMouseWheelEvent(-3, -3, 0);
+
+    mouseWheelHandler.handleEvent(
+        createFakeWebkitMouseWheelEvent(0, 120));
+    assertMouseWheelEvent(-3, 0, -3);
+
+    mouseWheelHandler.handleEvent(
+        createFakeWebkitMouseWheelEvent(0, -40));
+    assertMouseWheelEvent(1, 0, 1);
+
+    mouseWheelHandler.handleEvent(
+        createFakeWebkitMouseWheelEvent(80, -40));
+    assertMouseWheelEvent(-2, -2, 1);
+  }
+
+  function testWebkitStyleMouseWheel_nonIeStyle() {
+    goog.userAgent = {
+        OPERA: false,
+        IE: false,
+        GECKO: false,
+        CAMINO: false,
+        WEBKIT: true,
+        WINDOWS: false
+    };
+
+    goog.userAgent.isVersion = goog.functions.FALSE;
+
+    createHandlerAndListen();
+
+    // non-IE-style Webkit events do not get wheelDelta scaled
+    mouseWheelHandler.handleEvent(
+        createFakeWebkitMouseWheelEvent(-1, 0));
+    assertMouseWheelEvent(1, 1, 0);
+
+    mouseWheelHandler.handleEvent(
+        createFakeWebkitMouseWheelEvent(3, 0));
+    assertMouseWheelEvent(-3, -3, 0);
+
+    mouseWheelHandler.handleEvent(
+        createFakeWebkitMouseWheelEvent(0, 3));
+    assertMouseWheelEvent(-3, 0, -3);
+
+    mouseWheelHandler.handleEvent(
+        createFakeWebkitMouseWheelEvent(0, -1));
+    assertMouseWheelEvent(1, 0, 1);
+
+    mouseWheelHandler.handleEvent(
+        createFakeWebkitMouseWheelEvent(2, -1));
+    assertMouseWheelEvent(-2, -2, 1);
+  }
+
+  // Be sure to call this after setting up goog.userAgent mock and not before.
+  function createHandlerAndListen() {
+    mouseWheelHandler = new goog.events.MouseWheelHandler(goog.dom.$('foo'));
+
+    goog.events.listen(mouseWheelHandler,
+        goog.events.MouseWheelHandler.EventType.MOUSEWHEEL,
+        function(e) { mouseWheelEvent = e; });
+  }
+
+  function assertMouseWheelEvent(expectedDetail, expectedDeltaX, expectedDeltaY) {
+    assertTrue("event should be non-null", !!mouseWheelEvent);
+    assertTrue("event should have correct JS type",
+        mouseWheelEvent instanceof goog.events.MouseWheelEvent);
+    assertEquals("event should have correct detail property",
+        expectedDetail, mouseWheelEvent.detail);
+    assertEquals("event should have correct deltaX property",
+        expectedDeltaX, mouseWheelEvent.deltaX);
+    assertEquals("event should have correct deltaY property",
+        expectedDeltaY, mouseWheelEvent.deltaY);
+  }
+
+  function createFakeMouseWheelEvent(type, opt_wheelDelta, opt_detail,
+      opt_axis, opt_wheelDeltaX, opt_wheelDeltaY) {
+    var event = {
+      type: type,
+      wheelDelta: goog.isDef(opt_wheelDelta) ? opt_wheelDelta : undefined,
+      detail: goog.isDef(opt_detail) ? opt_detail : undefined,
+      axis: opt_axis || undefined,
+      wheelDeltaX: goog.isDef(opt_wheelDeltaX) ? opt_wheelDeltaX : undefined,
+      wheelDeltaY: goog.isDef(opt_wheelDeltaY) ? opt_wheelDeltaY : undefined,
+
+      // These two are constants defined on the event in FF3.1 and later.
+      // It doesn't matter exactly what they are, and it doesn't affect
+      // our simulations of other browsers.
+      HORIZONTAL_AXIS: HORIZONTAL,
+      VERTICAL_AXIS: VERTICAL
+    };
+    return new goog.events.BrowserEvent(event);
+  }
+
+  function createFakeWebkitMouseWheelEvent(wheelDeltaX, wheelDeltaY) {
+    return createFakeMouseWheelEvent(DEFAULT_TYPE,
+        Math.abs(wheelDeltaX) > Math.abs(wheelDeltaY) ?
+            wheelDeltaX : wheelDeltaY,
+        undefined, undefined, wheelDeltaX, wheelDeltaY);
+  }
+
+</SCRIPT>
+
+
+<DIV><DIV style="color: rgb(0, 100, 0); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; font-weight: bold; ">Closure Unit Tests - goog.events.MouseWheelHandler [PASSED]</DIV><DIV style="color: rgb(51, 51, 51); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; font-weight: bold; ">closure-library.googlecode.com/svn/trunk/closure/goog/events/mousewheelhandler_test.html</DIV><DIV style="color: rgb(51, 51, 51); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">4 of 4 tests run in 19ms.</DIV><DIV style="color: rgb(51, 51, 51); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">4 passed, 0 failed.</DIV><DIV style="color: rgb(51, 51, 51); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">5 ms/test. 29 files loaded.</DIV><DIV style="color: rgb(51, 51, 51); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">.</DIV><DIV style="color: rgb(51, 51, 51); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">09:53:24.713  Start</DIV><DIV style="color: rgb(0, 100, 0); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">09:53:24.721  testGeckoStyleMouseWheel : PASSED</DIV><DIV style="color: rgb(0, 100, 0); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">09:53:24.724  testIeStyleMouseWheel : PASSED</DIV><DIV style="color: rgb(0, 100, 0); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">09:53:24.728  testWebkitStyleMouseWheel_ieStyle : PASSED</DIV><DIV style="color: rgb(0, 100, 0); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">09:53:24.732  testWebkitStyleMouseWheel_nonIeStyle : PASSED</DIV><DIV style="color: rgb(51, 51, 51); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">09:53:24.732  Done</DIV><DIV style="color: rgb(51, 51, 51); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; "> </DIV><A style="display: block; font-size: small; " href="">Run again without reloading</A></DIV></BODY></HTML>

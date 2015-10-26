@@ -1,0 +1,81 @@
+var temp = $('#flipBox2').html();
+var next;
+    next = 0;
+// Adding AJAX functionality
+
+// outputs questions and answers to card
+function show_questions(){
+    $('.question').text(flashCard.question);
+    $('.answer').each(function(i){
+        $(this).text(flashCard.answers[i+1]);
+    });
+
+}
+
+// callback
+function next_question(data, status)
+{
+  //alert(status);
+ flashCard = eval ( '(' + data +')' );
+ show_questions();
+}
+
+// get data from server
+function get_data(user, questionID, next){
+$.ajax({
+    type : "GET",
+    url : "/CodeIgniter/Blogs/ajax_question/"+next,
+    data:'',
+    success: next_question
+   });
+}
+
+// first uri
+get_data("y","1",next);
+
+
+
+
+$('.answer').live('click', function(){
+   var wrong='<div> Wrong Answer </div>';
+   var corr = '<div>  Correct Answer </div>';
+   var message = wrong;
+
+   var correct = $('.answer:eq('+parseInt(flashCard.correctAnswer-1,0)+')').text();
+
+   // increment  counter
+       next = next +1;
+   if ($(this).text()== correct){
+   message = corr;}else{message = wrong}
+  $('#flipBox2').flip({
+  direction: 'bt',
+  color: '#D46419',
+  speed: 100,
+  content: message + flashCard.answerExplanation
+})
+})
+
+$('a#next').click(function(){
+   $('#flipBox2').html(temp);
+   get_data("", "", next);
+   return false;
+})
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,175 @@
+/* 
+Various Boxes for common
+page elements.
+Dr Y Lazarides 2013
+Available both for html and tex
+code blocks
+*/
+
+
+/* Console CSS */
+
+.code-block{
+    background:url(http://localhost/application-latest/images/code-bg.gif);
+    margin:0;padding:15px;margin-bottom:1.5em;border:1px solid #ececec
+}
+.code-block .code , code{white-space:pre;font-family:verdana;font-size:13px;padding:0;margin:0;border:none;margin-top:10px;
+    margin-bottom:10px}
+.code-block.code code,.edit-code {font-size:1.0em;margin-top:2em;margin-bottom:2em}
+.edit-code{padding:15px}
+
+.code, code.snippet{margin:0;padding-top:0;font: 13px verdana, "Lucida Console", monospace;
+    color: #0b094b;
+}
+
+code.snippet, code.snippett{background:url(http://localhost/codeigniter/images/code-bg.gif);
+    margin:0;padding:15px;margin-bottom:1.5em;border:1px solid #ececec;
+    white-space:pre-wrap;
+}
+
+.eval {
+    border:0; margin-top:8px;padding:10px;background:rgb(102,102,102);border:1px solid #ececec;color:#fff
+}
+
+
+.exists{color:yellow}
+.hidden{display:none}
+
+a.toggleClass:link{color:blue;text-decoration:underline}
+a.toggleClass:hover{color:blue}
+a.toggleClass:visited{color:blue}
+
+.jslint{background:#fff; font-family:verdana;font-size:13px;
+        width:90%;padding:20px}
+
+
+ #content code {
+    font-family: Monaco, Verdana, Sans-serif;
+    font-size: 12px;
+    background-color: #f9f9f9;
+    border: 1px solid #D0D0D0;
+    color: #002166;
+    display: block;
+    margin: 14px 0 14px 0;
+    padding: 12px 10px 12px 10px;
+}
+
+#content pre {
+    font-family: Monaco, Verdana, Sans-serif;
+    font-size: 12px;
+    background-color: #f9f9f9;
+    border: 1px solid #D0D0D0;
+    color: #002166;
+    display: block;
+    margin: 14px 0 14px 0;
+    padding: 12px 10px 12px 10px;
+}
+
+
+
+.sandbox-console, console-sandbox{background:#fafafa url(http://localhost/application-latest/images/sandbox.png) 10px 10px no-repeat;
+    width:85%;border:1px solid #ececec;min-height:80px;padding-left:70px;
+    font: 13px verdana, "Lucida Console", monospace;
+    color: #0b094b;
+}
+.sandbox{margin-bottom:8px}
+
+/* for snippett and echoPRE*/
+.pretty-pre{
+    background:url(/codeigniter/images/code-bg.gif);
+    padding:10px;
+}
+
+pre{background-image:none;
+    border:none}
+
+pre.dotted{
+    background:url(http://localhost/CodeIgniter/images/code-sample-background.jpg) no-repeat top right;
+    min-height:80px;
+    border:1px dotted #bebebe;font-size:11px;line-height:1.0
+}
+
+
+.set-title{text-align:center;}
+
+incode {
+  padding: 0 3px 2px;
+  font-family: Monaco, Menlo, Consolas, "Courier New", monospace;
+  font-size: 12px;
+  color: #333333;
+  -webkit-border-radius: 3px;
+     -moz-border-radius: 3px;
+          border-radius: 3px;
+  padding: 2px 4px;
+  color: #d14;
+
+  background-color: #f7f7f9;
+  border: 1px solid #e1e1e8;
+}
+
+
+/* from bootstrap 
+code,
+pre {
+  padding: 0 3px 2px;
+  font-family: Monaco, Menlo, Consolas, "Courier New", monospace;
+  font-size: 12px;
+  color: #333333;
+  -webkit-border-radius: 3px;
+     -moz-border-radius: 3px;
+          border-radius: 3px;
+}
+
+code {
+  padding: 2px 4px;
+  color: #d14;
+  
+  background-color: #f7f7f9;
+  border: 1px solid #e1e1e8;
+}
+
+pre {
+  display: block;
+  padding: 9.5px;
+  margin: 0 0 10px;
+  font-size: 13px;
+  line-height: 20px;
+  word-break: break-all;
+  word-wrap: break-word;
+  white-space: pre;
+  white-space: pre-wrap;
+  background-color: #f5f5f5;
+  border: 1px solid #ccc;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  -webkit-border-radius: 4px;
+     -moz-border-radius: 4px;
+          border-radius: 4px;
+}
+
+pre.prettyprint {
+  margin-bottom: 20px;
+}
+
+pre code {
+  padding: 0;
+  color: inherit;
+  white-space: pre;
+  white-space: pre-wrap;
+  background-color: transparent;
+  border: 0;
+}
+
+.pre-scrollable {
+  max-height: 340px;
+  overflow-y: scroll;
+}
+*/
+
+
+
+
+
+
+
+
+

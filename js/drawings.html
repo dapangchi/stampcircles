@@ -1,0 +1,196 @@
+<!--
+To change this template, choose Tools | Templates
+and open the template in the editor.
+-->
+<style type="text/css">
+.pink{background-color:pink;width:100%;display:block}
+.green{background-color:lightgreen;width:100%;display:block}
+.small{font-size:10px;margin:0px;line-height:1.2}
+p.pos_fixed
+{
+position:fixed;
+bottom:0px;
+left:10px;
+background-color:#555;
+width:100%;
+margin:0;
+font-size:12px;
+}
+.date{font-size:12pt;font-weight:bold;font-family:arial;color:#555;margin-bottom:2px}
+span.date{display:block;float:none;margin:0px auto;}
+</style>
+
+
+<h3>Drawings Work Flow View</h3>
+
+<script>
+	$(function() {
+		$( "ul.droptrue, div.droptrue" ).sortable({
+			connectWith: "ul,div",
+                        placeholder: "ui-state-highlight"
+		});
+
+		$( "ul.dropfalse").sortable({
+			connectWith: "ul",
+			dropOnEmpty: false,
+                        placeholder: "ui-state-highlight"
+		});
+
+$( "#sortable1, #sortable2, #sortable3, #sortable4,#sortable5,#sortable6,#sortable7,#sortable8,#sortable9, #sortable10,#sortable11,#sortable12").disableSelection();
+	});
+
+
+</script>
+<p class="pos_fixed">Some more text</p>
+
+<div id="drawings_view" class="clearfix bordered" style="width:97%;height:auto;min-height:300px">
+<!-- Activities Container
+Holds information on all the activities accumulating for a user.
+This in reality is another way of presenting todo lists.
+-->
+<div id="accumulator" class="accumulator clearfix bordered" style="width:160px;float:left;margin-right:10px">
+<div style="font-size:11px;width:140px;float:left"><img src="/codeigniter/images/users/george_clooney_2007.jpg" style="width:30px;float:left;padding:2px;display:block">Backlog Que</div>
+<div id="sortable1" class='droptrue' style="margin: 0 auto; padding: 0; background: #eee; padding: 5px; width: 143px;font-size:11px">
+</div>
+</div>
+<!-- End of activities container-->
+
+<!-- In Progress
+Holds information on all the activities accumulating for a user.
+This in reality is another way of presenting todo lists.
+-->
+<div id="accumulator1" class="accumulator clearfix bordered" style="width:160px;float:left;margin-right:10px">
+<div style="font-size:11px;width:140px;float:left;"><img src="/codeigniter/images/users/george_clooney_2007.jpg" style="width:30px;float:left;padding:2px">In progress que</div>
+<div id="sortable2" class='droptrue' style="margin: 0; padding: 0; float: left; margin-right: 10px; background: #eee; padding: 5px; width: 143px;font-size:11px">
+</div>
+</div>
+<!-- End of activities container-->
+
+<!-- On Review
+Holds information on all the activities accumulating for a user.
+This in reality is another way of presenting todo lists.
+-->
+<div id="accumulator2" class="accumulator clearfix bordered" style="width:160px;float:left;margin-right:10px">
+<div style="font-size:11px;width:140px;float:left;"><img src="/codeigniter/images/users/john_mcenroe_2006.jpg" style="width:30px;float:left;padding:2px">For Internal Review</div>
+<div id="sortable3" class='droptrue' style="margin: 0; padding: 0; float: left; margin-right: 10px; background: #eee; padding: 5px; width: 143px;font-size:11px">
+</div>
+</div>
+<!-- End of activities container-->
+
+
+<!-- Issued for Approval
+Holds information on all the activities accumulating for a user.
+This in reality is another way of presenting todo lists.
+-->
+<div id="accumulator3" class="accumulator clearfix bordered" style="width:160px;float:left;margin-right:10px">
+<div style="font-size:11px;width:140px;float:left;"><img src="/codeigniter/images/users/valentino_2006.jpg" style="width:30px;float:left;padding:2px">Approval Que</div>
+<div id="sortable4" class='droptrue' style="margin: 0; padding: 0; float: left; margin-right: 10px; background: #eee; padding: 5px; width: 143px;font-size:11px">
+</div>
+</div>
+<!-- End of activities container-->
+
+<!-- returned to be internally Approval
+Holds information on all the activities accumulating for a user.
+This in reality is another way of presenting todo lists.
+-->
+<div id="accumulator3" class="accumulator clearfix bordered" style="width:160px;float:left;margin-right:10px">
+<div style="font-size:11px;width:140px;float:left;"><img src="/codeigniter/images/users/george_clooney_2007.jpg" style="width:30px;float:left;padding:2px">Received and being internally reviewed</div>
+<div id="sortable5" class='droptrue' style="margin: 0; padding: 0; float: left; margin-right: 10px; background: #eee; padding: 5px; width: 143px;font-size:11px">
+</div>
+</div>
+<!-- End of activities container-->
+
+</div><!-- main container -->
+
+<div id="statistics" class='dropfalse bordered' style="list-style-type: none; margin: 0; padding: 0; float: left; margin-right: 10px; background: #eee; padding: 5px; width: 70%;font-size:11px" >
+<div class="small">Average Productivity: 5 drgs/day</div>
+<div class="small">Lost Time: 5 hrs</div>
+<div class="small">Target Completion Date: 13 Aug 2011</div>
+<div class="small">Expected Completion Date: 19 Aug 2011</div>
+<div class="small">Delta: 9 days</div>
+</div>
+
+<hr/>
+<script type="text/javascript">
+$(document).ready(function() {
+$('#left-menu').css({'width':'0px','display':'none'});
+$('#left').css({'width':'1100px'}).addClass('bordered, clearfix');
+$('div#pagehead-spacer').css({'height':'23px'});
+$('.span-17, .content-row').css({'width':'980px'}).addClass('bordered, clearfix');
+
+
+//mock-up for ajax calls
+for (var i = 1; i < 8; i++) {
+$('#sortable1').prepend('<div class="ui-state-default small">DRG HVAC-01'+i+
+'/0 Podium details for hot water</div>');
+}
+
+
+for (var i = 1; i < 13; i++) {
+$('#sortable2').prepend('<div class="ui-state-default small">DRG HVAC-01'+i+
+'/0 Podium details for hot water</div>');
+}
+
+
+for (var i = 1; i < 9; i++) {
+$('#sortable3').prepend('<div class="ui-state-default small">DRG HVAC-01'+i+
+'/0 Podium details for hot water</div>');
+}
+
+
+for (var i = 1; i < 8; i++) {
+$('#sortable4').prepend('<div class="ui-state-default small">DRG HVAC-01'+i+
+'/0 Podium details for hot water</div>');
+}
+
+for (var i = 1; i < 7; i++) {
+$('#sortable5').prepend('<div class="ui-state-default small">DRG HVAC-01'+i+
+'/0 Podium details for hot water</div>');
+}
+
+// basic activity class is shown below
+// as a jSON object
+// factory Class is shown later
+var activity={
+  id:'123456',
+  name:'Drafting',
+  activityCode:'Drg No:12567',
+  showButtons:['enabled','cancel','save','edit'],
+  currentStatus: ['onQue','forApproval','onHold','other'],
+  estimatedDuration:'13:00:01',
+  actualDuration:'18:30',
+  owner:'@Indra',
+  currentLocation:["For Review"],
+  predecessors:['activity1256'],
+  successor:['activity1388'],
+  criticalPath:true,
+  onHoldReason:'Drawing is being revised by Architect'
+}
+
+var s=JSON.stringify(activity);
+
+var t=$('#pagehead >h1>span').html('killPrimavera<sup style="font-size:12px">&copy;</sup>');
+
+   
+
+});//document ready
+
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

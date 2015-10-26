@@ -1,0 +1,39 @@
+{
+   identifier: 'id',
+   label: 'name',
+   items: [
+      {  type: 'shelf', name: 'Top Right', id: "tr",
+         children: [ 
+          { type:'fooditem', id:'pnkbns', name:'Pink Beans', 
+            foodType: 'Canned' },
+          { type:'fooditem', id:'olvs', name:'Olives', 
+            foodType: 'Canned' },
+          { type:'fooditem', id:'rstt', name:'Risotto', 
+            foodType: 'Grain' }
+         ]
+      },
+      {  type: 'shelf', name: 'Bottom Right',  id:"br",
+         children: [ 
+          { type:'fooditem', id:'ktchp', name:'Ketchup', 
+            foodType: 'Condiment' },
+          { type:'fooditem', id:'sysac', name:'Soy Sauce', 
+            foodType: 'Condiment' }
+         ]
+      },
+      {  type: 'shelf', name: 'Top Left', id:"tl",
+         children: [ 
+          { type:'fooditem', id:'mthrnlwstng', 
+            name:'Mother in Laws Tongue', foodType: 'Grain' 
+          },
+          { type:'fooditem', id:'xxxhthrsrdsh', 
+            name:'XXX-Hot Horseradish', 
+            foodType: 'Condiment' 
+          },
+          { type:'fooditem', id:'pckldoctps', 
+            name:'Pickled Octopus', 
+            foodType: 'Canned' 
+          }
+         ]
+      }
+   ]
+}

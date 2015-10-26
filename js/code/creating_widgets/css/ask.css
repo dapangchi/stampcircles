@@ -1,0 +1,10 @@
+.ask {
+    text-decoration: underline;
+    cursor: pointer;
+}
+.questionableParagraph {
+    width: 200px;
+    /* Next two effectively center the paragraph in the browser */
+    margin-left: auto;
+    margin-right: auto;
+}

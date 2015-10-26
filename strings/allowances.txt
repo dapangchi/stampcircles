@@ -1,0 +1,25 @@
+F1:Escalation,1.5
+F2:discount,7
+F3:waste,6
+F4:painting,5
+F5:consumables,1
+F6:co-ordination,2
+C1:ductwork-sheets;
+C2:steel;
+C3:copper;
+C4:pvc
+C5:PPR
+C6:
+
+Piping
+Ducting
+ Fire dampers
+ Supports
+ Other
+
+
+
+ 
+  
+  
+  

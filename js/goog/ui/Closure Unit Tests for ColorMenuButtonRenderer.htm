@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<!-- saved from url=(0097)http://closure-library.googlecode.com/svn/trunk/closure/goog/ui/colormenubuttonrenderer_test.html -->
+<HTML><!--
+  Copyright 2009 Google Inc. All Rights Reserved.
+
+
+--><HEAD><META http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<TITLE>Closure Unit Tests for ColorMenuButtonRenderer</TITLE>
+<SCRIPT src="./Closure Unit Tests for ColorMenuButtonRenderer_files/base.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests for ColorMenuButtonRenderer_files/deps.js"></SCRIPT>
+<SCRIPT>
+  goog.require('goog.dom');
+  goog.require('goog.dom.classes');
+  goog.require('goog.events');
+  goog.require('goog.events.Event');
+  goog.require('goog.testing.events');
+  goog.require('goog.testing.jsunit');
+  goog.require('goog.testing.ui.RendererHarness');
+  goog.require('goog.testing.ui.rendererasserts');
+  goog.require('goog.ui.ColorMenuButton');
+  goog.require('goog.userAgent');
+</SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests for ColorMenuButtonRenderer_files/array.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests for ColorMenuButtonRenderer_files/tagname.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests for ColorMenuButtonRenderer_files/classes.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests for ColorMenuButtonRenderer_files/coordinate.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests for ColorMenuButtonRenderer_files/size.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests for ColorMenuButtonRenderer_files/object.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests for ColorMenuButtonRenderer_files/string.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests for ColorMenuButtonRenderer_files/useragent.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests for ColorMenuButtonRenderer_files/dom.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests for ColorMenuButtonRenderer_files/errorhandlerweakdep.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests for ColorMenuButtonRenderer_files/disposable.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests for ColorMenuButtonRenderer_files/event.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests for ColorMenuButtonRenderer_files/browserevent.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests for ColorMenuButtonRenderer_files/eventwrapper.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests for ColorMenuButtonRenderer_files/listener.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests for ColorMenuButtonRenderer_files/simplepool.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests for ColorMenuButtonRenderer_files/jscript.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests for ColorMenuButtonRenderer_files/pools.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests for ColorMenuButtonRenderer_files/events.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests for ColorMenuButtonRenderer_files/keycodes.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests for ColorMenuButtonRenderer_files/events(1).js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests for ColorMenuButtonRenderer_files/stacktrace.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests for ColorMenuButtonRenderer_files/asserts.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests for ColorMenuButtonRenderer_files/testcase.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests for ColorMenuButtonRenderer_files/testrunner.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests for ColorMenuButtonRenderer_files/jsunit.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests for ColorMenuButtonRenderer_files/rendererharness.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests for ColorMenuButtonRenderer_files/rendererasserts.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests for ColorMenuButtonRenderer_files/names.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests for ColorMenuButtonRenderer_files/box.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests for ColorMenuButtonRenderer_files/range.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests for ColorMenuButtonRenderer_files/rect.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests for ColorMenuButtonRenderer_files/math.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests for ColorMenuButtonRenderer_files/color.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests for ColorMenuButtonRenderer_files/controlcontent.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests for ColorMenuButtonRenderer_files/product.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests for ColorMenuButtonRenderer_files/style.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests for ColorMenuButtonRenderer_files/a11y.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests for ColorMenuButtonRenderer_files/eventhandler.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests for ColorMenuButtonRenderer_files/eventtarget.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests for ColorMenuButtonRenderer_files/idgenerator.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests for ColorMenuButtonRenderer_files/component.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests for ColorMenuButtonRenderer_files/controlrenderer.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests for ColorMenuButtonRenderer_files/buttonrenderer.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests for ColorMenuButtonRenderer_files/cssnames.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests for ColorMenuButtonRenderer_files/custombuttonrenderer.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests for ColorMenuButtonRenderer_files/keyhandler.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests for ColorMenuButtonRenderer_files/registry.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests for ColorMenuButtonRenderer_files/decorate.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests for ColorMenuButtonRenderer_files/control.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests for ColorMenuButtonRenderer_files/menuseparatorrenderer.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests for ColorMenuButtonRenderer_files/separator.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests for ColorMenuButtonRenderer_files/containerrenderer.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests for ColorMenuButtonRenderer_files/container.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests for ColorMenuButtonRenderer_files/menuitemrenderer.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests for ColorMenuButtonRenderer_files/menuitem.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests for ColorMenuButtonRenderer_files/menurenderer.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests for ColorMenuButtonRenderer_files/menuseparator.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests for ColorMenuButtonRenderer_files/menu.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests for ColorMenuButtonRenderer_files/menubuttonrenderer.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests for ColorMenuButtonRenderer_files/colormenubuttonrenderer.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests for ColorMenuButtonRenderer_files/paletterenderer.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests for ColorMenuButtonRenderer_files/selectionmodel.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests for ColorMenuButtonRenderer_files/palette.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests for ColorMenuButtonRenderer_files/colorpalette.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests for ColorMenuButtonRenderer_files/timer.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests for ColorMenuButtonRenderer_files/positioning.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests for ColorMenuButtonRenderer_files/abstractposition.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests for ColorMenuButtonRenderer_files/anchoredposition.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests for ColorMenuButtonRenderer_files/anchoredviewportposition.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests for ColorMenuButtonRenderer_files/menuanchoredposition.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests for ColorMenuButtonRenderer_files/nativebuttonrenderer.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests for ColorMenuButtonRenderer_files/button.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests for ColorMenuButtonRenderer_files/menubutton.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests for ColorMenuButtonRenderer_files/colormenubutton.js"></SCRIPT>
+</HEAD><BODY>
+
+<DIV id="root">
+  <!-- A parent to attach rendered buttons to -->
+  <DIV id="parent"></DIV>
+
+  <!-- A button to decorate -->
+  <DIV id="decoratedButton"><DIV>Foo</DIV></DIV>
+</DIV>
+
+<SCRIPT>
+
+var harness;
+
+function setUp() {
+  harness = new goog.testing.ui.RendererHarness(
+      goog.ui.ColorMenuButtonRenderer.getInstance(),
+      goog.dom.$('parent'),
+      goog.dom.$('decoratedButton'));
+}
+
+function tearDown() {
+  harness.dispose();
+}
+
+function testEquality() {
+  harness.attachControlAndRender(
+      new goog.ui.ColorMenuButton('Foo'));
+  harness.attachControlAndDecorate(
+      new goog.ui.ColorMenuButton());
+  harness.assertDomMatches();
+}
+
+function testWrapCaption() {
+  var caption = goog.dom.createDom('div', null, 'Foo');
+  var wrappedCaption = goog.ui.ColorMenuButtonRenderer.wrapCaption(caption,
+      goog.dom.getDomHelper());
+  assertNotEquals('Caption should have been wrapped', caption, wrappedCaption);
+  assertEquals('Wrapped caption should have indicator css class',
+      'goog-color-menu-button-indicator', wrappedCaption.className);
+}
+
+function testSetCaptionValue() {
+  var caption = goog.dom.createDom('div', null, 'Foo');
+  var wrappedCaption = goog.ui.ColorMenuButtonRenderer.wrapCaption(caption,
+      goog.dom.getDomHelper());
+  goog.ui.ColorMenuButtonRenderer.setCaptionValue(wrappedCaption, 'red');
+
+  var expectedColor = goog.userAgent.IE ? '#ff0000' : 'rgb(255, 0, 0)';
+  assertEquals(expectedColor, caption.style.borderBottomColor);
+}
+
+function testDoesntCallGetCssClassInConstructor() {
+  goog.testing.ui.rendererasserts.
+      assertNoGetCssClassCallsInConstructor(goog.ui.ColorMenuButtonRenderer);
+}
+</SCRIPT>
+
+
+<DIV><DIV style="color: rgb(0, 100, 0); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; font-weight: bold; ">Closure Unit Tests for ColorMenuButtonRenderer [PASSED]</DIV><DIV style="color: rgb(51, 51, 51); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; font-weight: bold; ">closure-library.googlecode.com/svn/trunk/closure/goog/ui/colormenubuttonrenderer_test.html</DIV><DIV style="color: rgb(51, 51, 51); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">4 of 4 tests run in 47ms.</DIV><DIV style="color: rgb(51, 51, 51); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">4 passed, 0 failed.</DIV><DIV style="color: rgb(51, 51, 51); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">12 ms/test. 77 files loaded.</DIV><DIV style="color: rgb(51, 51, 51); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">.</DIV><DIV style="color: rgb(51, 51, 51); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">10:13:00.967  Start</DIV><DIV style="color: rgb(0, 100, 0); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">10:13:00.971  testDoesntCallGetCssClassInConstructor : PASSED</DIV><DIV style="color: rgb(0, 100, 0); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">10:13:01.900  testEquality : PASSED</DIV><DIV style="color: rgb(0, 100, 0); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">10:13:01.110  testSetCaptionValue : PASSED</DIV><DIV style="color: rgb(0, 100, 0); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">10:13:01.120  testWrapCaption : PASSED</DIV><DIV style="color: rgb(51, 51, 51); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">10:13:01.130  Done</DIV><DIV style="color: rgb(51, 51, 51); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; "> </DIV><A style="display: block; font-size: small; " href="">Run again without reloading</A></DIV></BODY></HTML>

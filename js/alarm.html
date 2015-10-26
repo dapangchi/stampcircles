@@ -1,0 +1,206 @@
+
+<script type="text/javascript">
+/* This is the main function that we use to build a toolbar
+ * a toolbar has many components and tools
+ * A toolbar has a collection of icons
+ * Each icon has actions [onclick, onhide etc]
+ * Each btButton has associated panels
+ * Each panel is fetched using Ajax.
+ * Any button clicked after content was loaded
+ * will refresh the display if the cache property set to false
+ *                   */
+       var toolbar = (function(el) {
+          $('toolbar').css({'top':'100px',
+                            'right':'0'
+          });
+
+          var common = {
+              version : "1.1.1",
+              name: "toolbar-plugin",
+              type: "fancy",
+              addTitle:  function(el){
+                 return $(el).html('test');
+              }
+          };
+          //locations of icons
+          var iconSRC='/CodeIgniter/images/icon/toolbar/';
+          var contentSRC='/CodeIgniter/js/';
+          // dont allow empty buttons
+           function makePanel(id, aText){
+            return '<div id='+id+' class="hidden tool" >name : '+aText+'</div>';
+          }
+          var buttons =[];
+          var registerToolbarButton = function(aButton){
+                if (aButton!==''|| aButton!== null || aButton !==undefined){
+                   buttons.push(aButton);
+                };
+             
+              //alert(buttons);
+          };
+          var init=(function(){
+              registerToolbarButton(el);
+              var  toolbox={collection:[ {
+                                     'name':'config',
+                                     'type':'db',
+                                     'ajax': true,
+                                     'model':'true',
+                                     'view':'template',
+                                     'title':'This is the configuration title'
+                                     },
+                                    {'name':'clock'},
+                                    {'name':'burn'},
+                                    {'name':'comment'},
+                                    {'name':'connect'},
+                                    {'name':'delete',
+                                     'title':'Be careful what you delete'},
+                                    {'name':'database'},
+                                    {'name':'bulb'},
+                                    {'name':'alarm'},
+                                    {'name':'alert'},
+                                    {'name':'Login'},
+                                    {'name':'Logout'},
+                                    {'name':'Under-construction'},
+                                    {'name':'templates'},
+                                    {'name':'drawings',
+                                     'cache':false,
+                                     'hide':['#panelContainer'],
+                                     'show':['#largePanel'],
+                                     'toggle':[]
+                                    }
+                                 ]};
+               // toolbox.collection.push(el);
+               //clear image pane;
+               $('#backgrounds').html('');
+                 var imgsrc='';
+                 var titleStr;
+               // Iterate through the collectiom
+               toolbox.collection.forEach(function(index){
+                // if there is a title get the title
+                // otherwise use the name of the btnButton as
+                // title 
+                if (index.title) {titleStr=index.title}
+                    else titleStr = index.name;
+                    imgsrc+='<img class="toolbar_image" src="'+iconSRC+index.name+'.png" ' +
+                     'title="'+titleStr+'" class="'+index.name+'" />';
+                     //add button images
+                 $('#backgrounds').html(imgsrc)
+                 if (index.name=='drawings' && index.cache==false){
+                    $('#largePanel').load('/codeigniter/js/drawings.html?',function(){
+                        toolbox.name.cache=true;
+                     });
+                 };
+                 $('.toolbar_image').bind('click',function(){
+                   var titleStr=$(this).attr('title');
+                   $('.tool').hide();
+                   $('#main-content').hide();
+                   $('#panelContainer').toggle();
+                   $('#'+titleStr).text(titleStr).toggle();
+                   if (index.cache==false){
+                   // now load the content -- must rather use $.ajax
+                   $('#panelContainer').load(contentSRC+titleStr+'.html?', function () {
+                      //$('#panelContent').fadeIn('slow');
+                   });
+                 };
+               
+              }); //iteration
+
+            
+                
+            });
+
+            })();
+
+
+            /* ERROR?
+           function getData( genre, skip, top ) {
+             $.ajax({
+                dataType: "jsonp", //[various types]
+                url: "http://odata.netflix.com/Catalog/Genres('" + genre
+                     + "')/Titles?$format=json&$skip="
+                     + skip + "&$top=" + top,
+                jsonp: "$callback",  //callback
+                success: function( data ) {
+                   /* Get the movies array from the data */
+                   /*  var movies = data.d;
+                    /* Remove current set of movie template items */
+                   /*  $( "#movieList" ).empty();
+                   /* Render the template items for each movie
+                   and insert the template items into the "movieList" */
+                   /*  $.tmpl( "movieTemplate", movies )
+                  .appendTo( "#movieList" );
+                }
+          });
+       }
+           */
+            
+          
+       /*
+                  
+          var smallGallery  = {
+            // renders the panel
+            _ID: registerToolbarButton("smallGalleryID"), //component id same like component
+            name: "smallGallery",
+            attachTo: '#panelContainer',
+            buttons: [{closeButton: "Close",
+                       cancelButton: "Cancel",
+                       saveButton: "Save"}],
+            buttonsCustomHTML: "",
+            description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+           _htmlSkeleton: [
+             "<div id='smallGalleryID' style='border:1px solid red;height:450px'>",
+               "<img id='smallGalleryImage' src='http://localhost/CodeIgniter/images/smallgallery.png' style='width:99%' />",
+             "</div>" //panelHead
+          ].join(""),
+          title: "Small Gallery",
+          panelButtonsContainer:"<div id='panelButtons'>Panel Buttons Container</div>",
+          footer: "<div class='contentPanelFooter'>This is a footer</div",
+          _addButtons: function() {
+            $('#panelButtons').html('<a id="btnClose">Close</a>');
+          },
+
+          setHeight: function(el){
+                 //var parentHeight= el.height();
+                  $('#panelContainer').height('700px');
+          },
+
+          render:function(el){ //main method to show the component
+              openPanel();//make sure the panel is open
+              var tempS = this.title+this._htmlSkeleton+
+                  this.panelButtonsContainer+
+                  this.footer;
+                  $('#panelContentTitle').html(this.title);
+                  $(el).html(tempS);
+                  this._addButtons();
+                  this.setHeight();
+               }
+             
+          };
+
+          var backPanel={
+              _htmlSkeleton:'name'
+          };
+
+
+      //render and initializes
+      smallGallery.render('#panelContainer');
+      registerToolbarButton('smallGallery, Alarm');
+      //add events to buttons etc
+      $('#smallGalleryID').ready(function(){
+      $('#btnClose').bind('click',function(){
+         // $('#smallGallery').hide();
+         var z=$('#smallGalleryID').attr('id');
+         alert(smallGallery._ID+' '+backPanel._htmlSkeleton);
+         closePanel();
+      });
+      
+      });
+      */
+  })({'name':'html'});
+
+  //toolbar.registerToolbarButton('test');
+   
+     
+</script>
+
+ 
+

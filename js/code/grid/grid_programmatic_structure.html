@@ -1,0 +1,41 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!--
+ ! Excerpted from "Mastering Dojo",
+ ! published by The Pragmatic Bookshelf.
+ ! Copyrights apply to this code. It may not be used to create training material, 
+ ! courses, books, articles, and the like. Contact us if you are in doubt.
+ ! We make no guarantees that this code is fit for any purpose. 
+ ! Visit http://www.pragmaticprogrammer.com/titles/rgdojo for more book information.
+-->
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Using a Programmatic Structure</title>
+    <style type="text/css">
+        @import "/dojoroot/dijit/themes/tundra/tundra.css";
+        @import "/dojoroot/dojox/grid/_grid/tundraGrid.css";
+    </style>
+    <script type="text/javascript" src="/dojoroot/dojo/dojo.js"  djConfig="parseOnLoad: true"></script>
+    <script type="text/javascript">
+       dojo.registerModulePath("dojobook","../../dojobook");
+       dojo.require("dojox.grid.Grid");
+       dojo.require("dojobook.grid.grid_definitions.programmatic");
+       dojo.require("dojo.data.ItemFileReadStore");
+    </script>
+</head>
+<body class="tundra">
+    <span dojoType="dojo.data.ItemFileReadStore" 
+        jsId="icStore" url="datastores/ice_cream.json">
+    </span>
+
+    
+
+<div id="grid" dojoType="dojox.grid.Grid"
+    jsId="icGrid"
+    store="icStore"
+    clientSort="true" 
+    style="width: 35em; height: 15em;"
+    structure="dojobook.grid.grid_definitions.programmatic.structure">
+    </div>
+
+</body>

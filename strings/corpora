@@ -1,0 +1,55 @@
+Father Roberto Bursa
+String analysis itself has been going on for decades. According to Hockey (2000), electronic text analysis began as early as 1949 with the work of Father Roberto Bursa's analysis entitled “The Index Thomisticus.” Father Bursa's analysis of the works of Thomas Aquinas and related authors presented an alphabetical listing of 11 million words, which was quite an accomplishment to say the least. Bursa recognized that defining a word as a sequence of letters separated by punctuation marks or spaces had severe implications for an inflected language like Latin. This same problem occurs in English. Bursa favored an approach where words were organized by their dictionary headword. This combines a
+7
+straightforward data driven model to a model that attempts to unite strings and definitions. In English this approach captures the similarity between the various forms of the word “to go”; go, going, gone, and went. This would mean that alphabetization would have some influence on the organization but would not make the sole determination since these various forms of “to go” would properly be included under the same headword. Bursa's lemmatization required a monumental manual effort, which partly explains why the first volume of Index Thomisticus did not occur until 1973, a full 24 years after the effort began.
+The Brown Corpus
+Modern day computer-based Corpus Linguistics really started in the early 1960s with the creation of the Brown Corpus at Brown University in Providence, Rhode Island. The primary researchers Henry Kucera and W. Nelson Francis provided basic statistics about the Brown Corpus in their paper Computational Analysis of Present-Day American English (1967). Francis notes there were corpuses in British Columbia before that date but they were not based upon computers (W.N. Francis 1992). The Brown Corpus, which consisted of a little over a million words, was considered large at the time but is modest by today’s standards.
+
+The British National Corpus
+The British National Corpus (BNC) is a 100-million-word collection of samples of written and spoken language from a wide range of sources. Initial efforts for creation of the BNC began in 1991 and finished in 1994, with the first edition release being announced in February of 1995. Release of the second edition did not occur until 2001. The BNC project was carried out and managed by the BNC Consortium. The consortium members were led by Oxford University Press. Other members include dictionary publishers Addison-Wesley
+8
+Longman and Larousse Kingfisher Chambers and academic research centers at Oxford University Computing Services (OUCS), the University Centre for Computer Corpus Research on Language (UCREL) at Lancaster University, and the British Library's Research and Innovation Centre. The BNC is widely recognized and often cited as a large and useful data source for corpus analysis. Word frequency lists have been created and published describing the BNC by Geoffrey Leech, Paul Rayson, and Andrew Wilson in their 2001 book “Word Frequencies in Written and Spoken English: based on the British National Corpus.”
+There are several other important corpus efforts besides the Brown and BNC, and the following discussion describes a few of them.
+The Lancaster-Oslo/Bergen Corpus (LOB)
+The LOB corpus was an effort begun in 1970 at the University of Lancaster by Stig Johansson, in collaboration with Geoffrey Leech, and Helen Goodluck to create a corpus of British English to compare with the Brown corpus. Like the Brown corpus, the LOB contains 500 printed texts of about 2000 words each, or one million words total. The text publication year (1961) and the sampling principles are identical to that of the Brown corpus in the effort to promote the ability to make comparisons between the two.
+
+International Computer Archive of Medieval and Modern English (ICAME)
+ICAME is an international organization of researchers working with English machine-readable texts. ICAME has been organizing conferences since 1979; it produces a journal and releases corpora and software on CDROM. The corpora that it distributes include
+• Brown Corpus
+• LOB Corpus
+• Frieburg-Brown (Frown)
+In 1992 Christian Mair set out to compile a set of corpora to “match” the Brown and LOB corpora. The difference in this data set was that it should represent language of the early 1990s and that it focused on American English.
+
+
+<h2>Frieburg-LOB (FLOB)</h2>
+This effort began in 1991 and focused on British English.
+
+<h2>Kolhapur Corpus</h2>
+Again the attempt was to create a corpus to compare against Brown and LOB. The salient differences here were that the corpus was of Indian English and that the samples came from published material from the 1978, instead of Brown and LOB’s 1961.
+
+<h2>Australian Corpus of English (ACE)</h2>
+
+<p>In 1986 this corpus was compiled at the Department of Linguistics at Marquarie University NSW Australia. The aim was to create a corpus of Australian English modeled again on the Brown and LOB corpora.</p>
+
+<h2>Wellington Corpus</h2>
+
+This challenging effort began in 1987 to collect half a million words of informal conversational speech as well as other categories.
+International Corpus of English (ICE)
+The International Corpus of English is the name of an effort that began in 1990 to gather or create electronic corpora representing national or regional variations of English to stimulate analysis of national variety. Fifteen research teams used a common corpus design to create corpora of one million words of spoken or written English after 1989.
+
+
+<h2>Methodology</h2>
+
+The following section provides a description of the parallel analysis architecture that is at the heart of this entire analysis. This is followed by a chart with an overview of the successive steps that are used to analyze a file. Attention is given to any of the software dependencies required for each task, followed by a description of each of the simplifying assumptions and their repercussions. The last topic in this methodology section describes the structure of the results format in Resource Description Framework
+
+The parallel process at the pinion of this effort for generating string frequency metadata has only three discrete steps. Initially, the data set is acquired. Second, a list of files is created that determines what is to be analyzed. Last, the task is started using the list of files, and the analysis operation is influenced by three simple run time parameters.
+
+Step 1: Acquisition of the data set
+The objective of this step is to get the data set local to the machine performing the analysis. This requires that the files are downloaded from the Internet. Project Gutenberg’s main site warns about “spidering” their site so the conservative approach is to use a mirror site for any type of automated retrieval mechanism such as the one described here. It is likely they are not concerned with “spidering” per se; rather, it is likely they are concerned about excessive load being placed on their servers through automated retrieval. The Project Gutenberg warning against “spidering” is likely an imprecise use of language, which unfortunately characterizes much of the project. Since Project Gutenberg’s main site explicitly warns against overloading their resources, they were indeed retrieved from one of the mirror sites. This is shown in the following example. It is recommended that the files are
+
+stored under a directory with a unique name like "gutenberg" because that will be crucial in the second step.
+
+
+Storing the Project Gutenberg archive’s zip files required a considerable amount of free disk space. The data set took more than 16.2 gigabytes of disk space for the more than 80,000 compressed files and directories. Therefore, it is recommended to have at least 20 gigabytes of space free before attempting this step. The additional space will be required because the files will be uncompressed one at a time.
+
+

@@ -1,0 +1,10 @@
+$needle[0]='blogger';
+$needle[1]='blogroll';
+$needle[2]='posts';
+$needle[3]='blog';
+$needle[4]='recent posts';
+$needle[5]='Archives';
+$needle[6]='Typepad';
+$needle[7]='wordpress';
+$needle[8]='Related Posts:';
+$needle[9]='Bag';

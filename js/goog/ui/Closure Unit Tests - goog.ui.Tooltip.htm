@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<!-- saved from url=(0081)http://closure-library.googlecode.com/svn/trunk/closure/goog/ui/tooltip_test.html -->
+<HTML><!-- Copyright 2008 Google Inc. All Rights Reserved.--><!----><HEAD><META http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+  <TITLE>Closure Unit Tests - goog.ui.Tooltip</TITLE>
+  <SCRIPT src="./Closure Unit Tests - goog.ui.Tooltip_files/base.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.Tooltip_files/deps.js"></SCRIPT>
+  <SCRIPT>
+    goog.require('goog.dom');
+    goog.require('goog.events.EventHandler');
+    goog.require('goog.ui.Tooltip');
+    goog.require('goog.style');
+    goog.require('goog.testing.jsunit');
+    goog.require('goog.testing.events');
+    goog.require('goog.testing.MockClock');
+    goog.require('goog.testing.TestQueue');
+    goog.require('goog.userAgent');
+  </SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.Tooltip_files/array.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.Tooltip_files/tagname.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.Tooltip_files/classes.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.Tooltip_files/coordinate.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.Tooltip_files/size.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.Tooltip_files/object.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.Tooltip_files/string.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.Tooltip_files/useragent.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.Tooltip_files/dom.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.Tooltip_files/disposable.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.Tooltip_files/errorhandlerweakdep.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.Tooltip_files/event.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.Tooltip_files/browserevent.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.Tooltip_files/eventwrapper.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.Tooltip_files/listener.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.Tooltip_files/simplepool.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.Tooltip_files/jscript.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.Tooltip_files/pools.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.Tooltip_files/events.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.Tooltip_files/eventhandler.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.Tooltip_files/eventtarget.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.Tooltip_files/timer.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.Tooltip_files/box.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.Tooltip_files/rect.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.Tooltip_files/product.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.Tooltip_files/style.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.Tooltip_files/positioning.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.Tooltip_files/abstractposition.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.Tooltip_files/anchoredposition.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.Tooltip_files/viewportposition.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.Tooltip_files/structs.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.Tooltip_files/iter.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.Tooltip_files/map.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.Tooltip_files/set.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.Tooltip_files/absoluteposition.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.Tooltip_files/anchoredviewportposition.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.Tooltip_files/clientposition.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.Tooltip_files/viewportclientposition.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.Tooltip_files/keycodes.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.Tooltip_files/popupbase.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.Tooltip_files/popup.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.Tooltip_files/tooltip.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.Tooltip_files/stacktrace.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.Tooltip_files/asserts.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.Tooltip_files/testcase.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.Tooltip_files/testrunner.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.Tooltip_files/jsunit.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.Tooltip_files/events(1).js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.Tooltip_files/mockclock.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.Tooltip_files/testqueue.js"></SCRIPT>
+</HEAD><BODY>
+  <IFRAME id="testframe" style="width: 200px; height: 200px;" src="./Closure Unit Tests - goog.ui.Tooltip_files/blank_test_helper.htm">
+  </IFRAME>
+  <SCRIPT>
+    var tt, clock, handler, eventQueue, dom;
+
+    // Allow positions to be off by one in gecko as it reports scrolling
+    // offsets in steps of 2.
+    var ALLOWED_OFFSET = goog.userAgent.GECKO ? 1 : 0;
+
+    function setUp() {
+      // We get access denied error when accessing the iframe in IE on the farm
+      // as IE doesn't have the same window size issues as firefox on the farm
+      // we bypass the iframe and use the current document instead.
+      if (goog.userAgent.IE) {
+        dom = goog.dom.getDomHelper(document);
+      } else {
+        var frame = document.getElementById('testframe');
+        var doc = goog.dom.getFrameContentDocument(frame);
+        dom = goog.dom.getDomHelper(doc);
+      }
+
+      // Host elements in fixed size iframe to avoid window size problems when
+      // running under Selenium.
+      dom.getDocument().body.innerHTML =
+          '<p id="notpopup">Content</p>' +
+          '<p id="hovertarget">Hover Here For Popup</p>' +
+          '<p id="second">Secondary target</p>';
+
+      tt = new goog.ui.Tooltip(undefined, undefined, dom);
+      tt.setElement(dom.createDom('div', {id: 'popup',
+                                          style: 'visibility:hidden'},
+                                  'Hello'));
+      clock = new goog.testing.MockClock(true);
+      eventQueue = new goog.testing.TestQueue();
+      handler = new goog.events.EventHandler(eventQueue);
+      handler.listen(tt, goog.ui.PopupBase.EventType.SHOW, eventQueue.enqueue);
+      handler.listen(tt, goog.ui.PopupBase.EventType.HIDE, eventQueue.enqueue);
+    }
+
+    function tearDown() {
+      // tooltip needs to be hidden as well as disposed of so that it doesn't
+      // leave global state hanging around to trip up other tests.
+      tt.onHide_();
+      tt.dispose();
+      clock.uninstall();
+      handler.removeAll();
+    }
+
+    function testConstructor() {
+      var element = tt.getElement();
+      assertNotNull('Tooltip should have non-null element', element);
+      assertEquals('Tooltip element should be the DIV we created',
+          dom.getElement('popup'), element);
+      assertEquals('Tooltip element should be a child of the document body',
+          dom.getDocument().body, element.parentNode);
+    }
+
+    function testTooltipShowsAndHides() {
+      var hoverTarget = dom.getElement('hovertarget');
+      var elsewhere = dom.getElement('notpopup');
+      var element = tt.getElement();
+      assertNotNull('Tooltip should have non-null element', element);
+      assertEquals('Initial state should be inactive',
+                   goog.ui.Tooltip.State.INACTIVE, tt.getState());
+      tt.attach(hoverTarget);
+      tt.setShowDelayMs(100);
+      tt.setHideDelayMs(50);
+      goog.testing.events.fireMouseOverEvent(hoverTarget, elsewhere);
+      assertEquals(goog.ui.Tooltip.State.WAITING_TO_SHOW, tt.getState());
+      clock.tick(101);
+      assertEquals('visible', tt.getElement().style.visibility);
+      assertEquals(goog.ui.Tooltip.State.SHOWING, tt.getState());
+      assertEquals(goog.ui.PopupBase.EventType.SHOW, eventQueue.dequeue().type);
+      assertTrue(eventQueue.isEmpty());
+
+      goog.testing.events.fireMouseOutEvent(hoverTarget, elsewhere);
+      assertEquals(goog.ui.Tooltip.State.WAITING_TO_HIDE, tt.getState());
+      clock.tick(51);
+      assertEquals('hidden', tt.getElement().style.visibility);
+      assertEquals(goog.ui.Tooltip.State.INACTIVE, tt.getState());
+      assertEquals(goog.ui.PopupBase.EventType.HIDE, eventQueue.dequeue().type);
+      assertTrue(eventQueue.isEmpty());
+    }
+
+    function testMultipleTargets() {
+      var firstTarget = dom.getElement('hovertarget');
+      var secondTarget = dom.getElement('second');
+      var elsewhere = dom.getElement('notpopup');
+      var element = tt.getElement();
+
+      tt.attach(firstTarget);
+      tt.attach(secondTarget);
+      tt.setShowDelayMs(100);
+      tt.setHideDelayMs(50);
+
+      // Move over first target
+      goog.testing.events.fireMouseOverEvent(firstTarget, elsewhere);
+      clock.tick(101);
+      assertEquals(goog.ui.PopupBase.EventType.SHOW, eventQueue.dequeue().type);
+      assertTrue(eventQueue.isEmpty());
+
+      // Move from first to second
+      goog.testing.events.fireMouseOutEvent(firstTarget, secondTarget);
+      goog.testing.events.fireMouseOverEvent(secondTarget, firstTarget);
+      assertEquals(goog.ui.Tooltip.State.UPDATING,  tt.getState());
+      assertTrue(eventQueue.isEmpty());
+
+      // Move from second to element (before second shows)
+      goog.testing.events.fireMouseOutEvent(secondTarget, element);
+      goog.testing.events.fireMouseOverEvent(element, secondTarget);
+      assertEquals(goog.ui.Tooltip.State.SHOWING, tt.getState());
+      assertTrue(eventQueue.isEmpty());
+
+      // Move from element to second, and let it show
+      goog.testing.events.fireMouseOutEvent(element, secondTarget);
+      goog.testing.events.fireMouseOverEvent(secondTarget, element);
+      assertEquals(goog.ui.Tooltip.State.UPDATING, tt.getState());
+      clock.tick(101);
+      assertEquals(goog.ui.Tooltip.State.SHOWING, tt.getState());
+      assertEquals('Anchor should be second target', secondTarget, tt.anchor);
+      assertEquals(goog.ui.PopupBase.EventType.HIDE, eventQueue.dequeue().type);
+      assertEquals(goog.ui.PopupBase.EventType.SHOW, eventQueue.dequeue().type);
+      assertTrue(eventQueue.isEmpty());
+
+      // Move from second to first and then off without first showing
+      goog.testing.events.fireMouseOutEvent(secondTarget, firstTarget);
+      goog.testing.events.fireMouseOverEvent(firstTarget, secondTarget);
+      assertEquals(goog.ui.Tooltip.State.UPDATING, tt.getState());
+      goog.testing.events.fireMouseOutEvent(firstTarget, elsewhere);
+      assertEquals(goog.ui.Tooltip.State.WAITING_TO_HIDE, tt.getState());
+      clock.tick(51);
+      assertEquals('hidden', tt.getElement().style.visibility);
+      assertEquals(goog.ui.Tooltip.State.INACTIVE, tt.getState());
+      assertEquals(goog.ui.PopupBase.EventType.HIDE, eventQueue.dequeue().type);
+      assertTrue(eventQueue.isEmpty());
+    }
+
+    function testRequireInteraction() {
+      var hoverTarget = dom.getElement('hovertarget');
+      var elsewhere = dom.getElement('notpopup');
+
+      tt.attach(hoverTarget);
+      tt.setShowDelayMs(100);
+      tt.setHideDelayMs(50);
+      tt.setRequireInteraction(true);
+
+      goog.testing.events.fireMouseOverEvent(hoverTarget, elsewhere);
+      clock.tick(101);
+      assertEquals(
+          'Tooltip should not show without mouse move event',
+          'hidden', tt.getElement().style.visibility);
+      goog.testing.events.fireMouseMoveEvent(hoverTarget);
+      goog.testing.events.fireMouseOverEvent(hoverTarget, elsewhere);
+      clock.tick(101);
+      assertEquals(
+          'Tooltip should show because we had mouse move event',
+          'visible', tt.getElement().style.visibility);
+
+      goog.testing.events.fireMouseOutEvent(hoverTarget, elsewhere);
+      clock.tick(51);
+      assertEquals('hidden', tt.getElement().style.visibility);
+      goog.testing.events.fireBrowserEvent(new goog.events.Event(
+          goog.events.EventType.FOCUS, hoverTarget));
+      clock.tick(101);
+      assertEquals(
+          'Tooltip should show because we had focus event',
+          'visible', tt.getElement().style.visibility);
+      goog.testing.events.fireBrowserEvent(new goog.events.Event(
+          goog.events.EventType.BLUR, hoverTarget));
+      clock.tick(51);
+      assertEquals('hidden', tt.getElement().style.visibility);
+
+      goog.testing.events.fireMouseMoveEvent(hoverTarget);
+      goog.testing.events.fireMouseOverEvent(hoverTarget, elsewhere);
+      goog.testing.events.fireMouseOutEvent(hoverTarget, elsewhere);
+      goog.testing.events.fireMouseOverEvent(hoverTarget, elsewhere);
+      clock.tick(101);
+      assertEquals(
+          'A cancelled trigger should also cancel the seen interaction',
+          'hidden', tt.getElement().style.visibility);
+    }
+
+    function testDispose() {
+      var element = tt.getElement();
+      tt.dispose();
+      assertTrue('Tooltip should have been disposed of', tt.isDisposed());
+      assertNull('Tooltip element reference should have been nulled out',
+          tt.getElement());
+      assertNotEquals('Tooltip element should not be a child of the body',
+          document.body, element.parentNode);
+    }
+
+    function testNested() {
+      var ttNested;
+      tt.getElement().appendChild(dom.createDom(
+          'span', {id: 'nested'}, 'Goodbye'));
+      ttNested = new goog.ui.Tooltip(undefined, undefined, dom);
+      ttNested.setElement(dom.createDom('div', {id: 'nestedPopup'}, 'hi'));
+      tt.setShowDelayMs(100);
+      tt.setHideDelayMs(50);
+      ttNested.setShowDelayMs(75);
+      ttNested.setHideDelayMs(25);
+      var nestedAnchor = dom.getElement('nested');
+      var hoverTarget = dom.getElement('hovertarget');
+      var outerTooltip = dom.getElement('popup');
+      var innerTooltip = dom.getElement('nestedPopup');
+      var elsewhere = dom.getElement('notpopup');
+
+      ttNested.attach(nestedAnchor);
+      tt.attach(hoverTarget);
+
+      // Test mouse into, out of nested tooltip
+      goog.testing.events.fireMouseOverEvent(hoverTarget, elsewhere);
+      clock.tick(101);
+      goog.testing.events.fireMouseOutEvent(hoverTarget, outerTooltip);
+      goog.testing.events.fireMouseOverEvent(outerTooltip, hoverTarget);
+      clock.tick(51);
+      assertEquals('visible', tt.getElement().style.visibility);
+      goog.testing.events.fireMouseOutEvent(outerTooltip, nestedAnchor);
+      goog.testing.events.fireMouseOverEvent(nestedAnchor, outerTooltip);
+      clock.tick(76);
+      assertEquals('visible', tt.getElement().style.visibility);
+      assertEquals('visible', ttNested.getElement().style.visibility);
+      goog.testing.events.fireMouseOutEvent(nestedAnchor, outerTooltip);
+      goog.testing.events.fireMouseOverEvent(outerTooltip, nestedAnchor);
+      clock.tick(100);
+      assertEquals('visible', tt.getElement().style.visibility);
+      assertEquals('hidden', ttNested.getElement().style.visibility);
+
+      // Go back in nested tooltip and then out through tooltip element.
+      goog.testing.events.fireMouseOutEvent(outerTooltip, nestedAnchor);
+      goog.testing.events.fireMouseOverEvent(nestedAnchor, outerTooltip);
+      clock.tick(76);
+      goog.testing.events.fireMouseOutEvent(nestedAnchor, innerTooltip);
+      goog.testing.events.fireMouseOverEvent(innerTooltip, nestedAnchor);
+      clock.tick(15);
+      assertEquals('visible', tt.getElement().style.visibility);
+      assertEquals('visible', ttNested.getElement().style.visibility);
+      goog.testing.events.fireMouseOutEvent(innerTooltip, elsewhere);
+      clock.tick(26);
+      assertEquals('hidden', ttNested.getElement().style.visibility);
+      clock.tick(51);
+      assertEquals('hidden', tt.getElement().style.visibility);
+
+      // Test with focus
+      goog.testing.events.fireBrowserEvent(new goog.events.Event(
+          goog.events.EventType.FOCUS, hoverTarget));
+      clock.tick(101);
+      goog.testing.events.fireBrowserEvent(new goog.events.Event(
+          goog.events.EventType.BLUR, hoverTarget));
+      goog.testing.events.fireBrowserEvent(new goog.events.Event(
+          goog.events.EventType.FOCUS, nestedAnchor));
+      clock.tick(76);
+      assertEquals('visible', tt.getElement().style.visibility);
+      assertEquals('visible', ttNested.getElement().style.visibility);
+      goog.testing.events.fireBrowserEvent(new goog.events.Event(
+          goog.events.EventType.BLUR, nestedAnchor));
+      goog.testing.events.fireBrowserEvent(new goog.events.Event(
+          goog.events.EventType.FOCUS, hoverTarget));
+      clock.tick(26);
+      assertEquals('visible', tt.getElement().style.visibility);
+      assertEquals('hidden', ttNested.getElement().style.visibility);
+
+      ttNested.onHide_();
+      ttNested.dispose();
+    }
+
+    function testMemoryLeak() {
+      var listeners = goog.events.getTotalListenerCount();
+      var anchor = dom.createElement('div');
+      var tooltip = new goog.ui.Tooltip(anchor, '');
+      tooltip.setVisible(true);
+      tooltip.dispose();
+      assertEquals('no event listeners leaked', listeners,
+                   goog.events.getTotalListenerCount());
+    }
+
+    function testPosition() {
+      dom.getDocument().body.style.paddingBottom = '150%'; // force scrollbar
+      var scrollEl = dom.getDocumentScrollElement();
+
+      var anchor = dom.getElement('hovertarget');
+      var tooltip = new goog.ui.Tooltip(anchor, 'foo');
+      tooltip.getElement().style.position = 'absolute';
+
+      tooltip.cursorPosition.x = 100;
+      tooltip.cursorPosition.y = 100;
+      tooltip.showForElement(anchor);
+
+      assertEquals('Tooltip should be at cursor position',
+        '(110, 110)', // (100, 100) + padding (10, 10)
+        goog.style.getPageOffset(tooltip.getElement()).toString());
+
+      scrollEl.scrollTop = 50;
+
+      var offset = goog.style.getPageOffset(tooltip.getElement());
+      assertTrue('Tooltip should be at cursor position when scrolled',
+        Math.abs(offset.x - 110) <= ALLOWED_OFFSET); // 100 + padding 10
+      assertTrue('Tooltip should be at cursor position when scrolled',
+        Math.abs(offset.y - 110) <= ALLOWED_OFFSET); // 100 + padding 10
+
+      tooltip.dispose();
+      dom.getDocument().body.style.paddingTop = '';
+      scrollEl.scrollTop = 0;
+    }
+  </SCRIPT>
+
+
+<DIV><DIV style="color: rgb(0, 100, 0); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; font-weight: bold; ">Closure Unit Tests - goog.ui.Tooltip [PASSED]</DIV><DIV style="color: rgb(51, 51, 51); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; font-weight: bold; ">closure-library.googlecode.com/svn/trunk/closure/goog/ui/tooltip_test.html</DIV><DIV style="color: rgb(51, 51, 51); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">8 of 8 tests run in 133ms.</DIV><DIV style="color: rgb(51, 51, 51); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">8 passed, 0 failed.</DIV><DIV style="color: rgb(51, 51, 51); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">17 ms/test. 52 files loaded.</DIV><DIV style="color: rgb(51, 51, 51); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">.</DIV><DIV style="color: rgb(51, 51, 51); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">08:49:23.910  Start</DIV><DIV style="color: rgb(0, 100, 0); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">08:49:23.117  testConstructor : PASSED</DIV><DIV style="color: rgb(0, 100, 0); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">08:49:23.120  testDispose : PASSED</DIV><DIV style="color: rgb(0, 100, 0); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">08:49:23.128  testMemoryLeak : PASSED</DIV><DIV style="color: rgb(0, 100, 0); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">08:49:23.172  testMultipleTargets : PASSED</DIV><DIV style="color: rgb(0, 100, 0); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">08:49:23.201  testNested : PASSED</DIV><DIV style="color: rgb(0, 100, 0); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">08:49:23.205  testPosition : PASSED</DIV><DIV style="color: rgb(0, 100, 0); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">08:49:23.218  testRequireInteraction : PASSED</DIV><DIV style="color: rgb(0, 100, 0); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">08:49:23.222  testTooltipShowsAndHides : PASSED</DIV><DIV style="color: rgb(51, 51, 51); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">08:49:23.223  Done</DIV><DIV style="color: rgb(51, 51, 51); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; "> </DIV><A style="display: block; font-size: small; " href="">Run again without reloading</A></DIV></BODY></HTML>

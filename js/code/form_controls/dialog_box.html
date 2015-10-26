@@ -1,0 +1,79 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!--
+ ! Excerpted from "Mastering Dojo",
+ ! published by The Pragmatic Bookshelf.
+ ! Copyrights apply to this code. It may not be used to create training material, 
+ ! courses, books, articles, and the like. Contact us if you are in doubt.
+ ! We make no guarantees that this code is fit for any purpose. 
+ ! Visit http://www.pragmaticprogrammer.com/titles/rgdojo for more book information.
+-->
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Dialog Box</title>
+    <style type="text/css">
+        @import "/dojoroot/dijit/themes/tundra/tundra.css";
+        @import "/dojoroot/dojo/resources/dojo.css"
+    </style>
+    <script type="text/javascript" src="/dojoroot/dojo/dojo.js"  djConfig="parseOnLoad: true"></script>
+    <script type="text/javascript">
+       dojo.require("dojo.parser");
+       dojo.require("dijit.Dialog");
+       dojo.require("dijit.form.TextBox");
+       dojo.require("dijit.form.DateTextBox");
+       dojo.require("dijit.form.Button");
+    </script>
+</head>
+<body class="tundra">
+    <p style="width:300px;">
+Everybody ought to treat a stranger right<br/>
+A long way from home<br/>
+Everybody ought to treat a stranger right<br/>
+Ain't no way to come home<br/>
+<br/>
+Be careful on how you see a stranger<br/>
+By the lie you turn him away<br/>
+Well, the thing that you might attain here<br/>
+It drives him from your way.<br/>
+<br/>
+If you might forget your speak<br/>
+Be careful how you're goin' on<br/>
+You must always treat a stranger right<br/>
+Always send him home<br/>
+<br/>
+Were all of us down at the strangers<br/>
+And none of us having no home<br/>
+Don't never hurt your brother<br/>
+When it's cold turn the porch light on<br/>
+    </p>
+
+    
+   <div dojoType="dijit.form.Button">
+       Guess the Singer
+       <script type="dojo/method" event="onClick">
+           dlg.show();
+       </script>
+   </div>
+    
+    <div dojoType="dijit.Dialog" jsId="dlg">
+       <div>
+           <label for="singer">Singer:</label>
+           <span dojoType="dijit.form.TextBox" id="singer"></span>
+       </div>
+       
+       <div>
+           <label for="singer">Date of Guess:</label>
+           <span dojoType="dijit.form.DateTextBox"></span>
+       </div>
+              
+       <div dojoType="dijit.form.Button">
+           Go
+           <script type="dojo/method" event="onClick">
+               // Do a submit here
+               dlg.hide();
+           </script>
+       </div>
+    </div>    
+    
+</body>
+</html>

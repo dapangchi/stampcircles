@@ -1,0 +1,148 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" 
+  "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+  <title>
+   Mastering Dojo - DOM Utilities Demonstration - Question List Challenge Step 3
+  </title>
+  
+  <style type="text/css">
+    @import "questions.css";
+  </style>
+  
+  <script 
+    type="text/javascript" 
+    src="/dojoroot/dojo/dojo.js" 
+    djConfig="isDebug: true">
+  </script>
+                
+  <script type="text/javascript">
+    (function(){
+        
+      function createElement(tag, className){
+        var newNode= document.createElement(tag);
+        dojo.addClass(newNode, className);
+        return newNode;
+      }   
+      
+      function restructure(){
+        dojo.query("form > p").addClass("formTitle");
+        
+        var questionDiv= dojo.query("div.questions")[0];
+        dojo.query("p", questionDiv).forEach(function(node, questionNumber){
+          var primeQuestion= !(questionNumber % 2);
+          var band= (questionNumber % 2) ? "lightBand" : "darkBand";
+          var className= "question " + band;
+          var question= createElement("div", className);
+          dojo.place(question, questionDiv, "last");
+          dojo.query("span", node).forEach(function(choiceNode){
+            var choice= createElement("p", "choice");
+            dojo.place(choiceNode, choice, "last");
+            dojo.place(choice, question, "last");
+          });
+          dojo.addClass(node, "questionText");
+          dojo.place(node, question, "last");
+        });
+      }
+      
+      //START:snip2
+      function layout3(){
+        layout3.titleNode= layout3.titleNode || dojo.query("form > p")[0];
+        var box= dojo.marginBox(layout3.titleNode);
+        if (layout3.basis && box.w==layout3.basis.w && box.h==layout3.basis.h) {
+          return;
+        }
+        layout3.basis= {w: box.w, h: box.h};
+        
+        //the rest of the function omitted...
+        //END:snip2
+        alert("recalculating size");
+        
+        //clear all the previous widths so we get the natural widths...
+        dojo.query("p.choice").style("width", "");
+        
+        //START:snip1
+        //get the questions in a NodeList...
+        var questions= dojo.query("div.question");
+        
+        //find the maximum width of each column...
+        var widths= [];
+        questions.forEach(function(qNode){
+          dojo.query("p.choice", qNode).forEach(function(choiceNode, i){
+            var w= widths[i] || 0;
+            widths[i]= Math.max(w, dojo.marginBox(choiceNode).w);
+          });
+        });
+        
+        //set each option to the maximum width just calculated...	
+        questions.forEach(function(qNode){
+          dojo.query("p.choice", qNode).forEach(function(choiceNode, i){
+            dojo.marginBox(choiceNode, {w: widths[i]});
+          });
+        });  
+              
+        //calculate the total width of all the columns...
+        var paddingLeft= 0;
+        dojo.forEach(widths, function(w){paddingLeft+= w;});
+        
+        //pad the question text by this width...											
+        dojo.query(".questionText").forEach(function(node){
+          dojo.style(node, "paddingLeft", paddingLeft+10+"px");
+        });
+        //END:snip1
+      }
+      
+      dojo.addOnLoad(function(){
+        restructure();
+        layout3();
+        //START:snip3
+        window.setInterval(layout3, 2000);
+        //END:snip3
+      });
+    })();
+  </script>
+</head>
+        
+<body><div><form>
+  <p>Programmer Interview Questions</p>
+  <div class="questions">
+    <p>
+      <span><input type="radio" name="q1" value="yes">Yes</span>
+      <span><input type="radio" name="q1" value="no">No</span>
+      Are you a C programmer?
+    </p><p>
+      <span><input type="radio" name="q1-yes" value="yes">Yes</span>
+      <span><input type="radio" name="q1-yes" value="no">No</span>
+      <span><input type="radio" name="q1-yes" value="maybe">Don't know</span>
+      Have you read Kernighan and Ritchie?
+    </p><p>
+      <span><input type="radio" name="q2" value="yes">Yes</span>
+      <span><input type="radio" name="q2" value="no">No</span>
+      Are you a C++ programmer?
+    </p><p>
+      <span><input type="radio" name="q2-yes" value="yes">Yes</span>
+      <span><input type="radio" name="q2-yes" value="no">No</span>
+      <span><input type="radio" name="q2-yes" value="maybe">Don't know</span>
+      Have you read Stroustrup?
+    </p><p>
+      <span><input type="radio" name="q3" value="yes">Yes</span>
+      <span><input type="radio" name="q3" value="no">No</span>
+      Are you a Ruby programmer?
+    </p><p>
+      <span><input type="radio" name="q3-yes" value="yes">Yes</span>
+      <span><input type="radio" name="q3-yes" value="no">No</span>
+      <span><input type="radio" name="q3-yes" value="maybe">Don't know</span>
+      Have you read the pickax book?
+    </p><p>
+      <span><input type="radio" name="q4" value="yes">Yes</span>
+      <span><input type="radio" name="q4" value="no">No</span>
+      Are you a Lisp programmer?
+    </p><p>
+      <span><input type="radio" name="q4-yes" value="yes">Yes</span>
+      <span><input type="radio" name="q4-yes" value="no">No</span>
+      <span><input type="radio" name="q4-yes" value="maybe">Don't know</span>
+      Have you read the "Wizard" book?
+    </p>
+  </div>
+</form></div></body>
+</html>

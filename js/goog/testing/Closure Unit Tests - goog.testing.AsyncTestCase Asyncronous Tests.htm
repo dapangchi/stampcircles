@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<!-- saved from url=(0098)http://closure-library.googlecode.com/svn/trunk/closure/goog/testing/asynctestcase_async_test.html -->
+<HTML><!--
+Copyright 2009 Google Inc. All Rights Reserved.
+
+
+This tests that the AsyncTestCase can handle asynchronous behaviour in:
+  setUpPage(),
+  setUp(),
+  test*(),
+  tearDown()
+--><HEAD><META http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<TITLE>Closure Unit Tests - goog.testing.AsyncTestCase Asyncronous Tests</TITLE>
+  <SCRIPT src="./Closure Unit Tests - goog.testing.AsyncTestCase Asyncronous Tests_files/base.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.testing.AsyncTestCase Asyncronous Tests_files/deps.js"></SCRIPT>
+  <SCRIPT type="text/javascript">
+    goog.require('goog.testing.AsyncTestCase');
+    goog.require('goog.testing.jsunit');
+  </SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.testing.AsyncTestCase Asyncronous Tests_files/stacktrace.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.testing.AsyncTestCase Asyncronous Tests_files/asserts.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.testing.AsyncTestCase Asyncronous Tests_files/testcase.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.testing.AsyncTestCase Asyncronous Tests_files/asynctestcase.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.testing.AsyncTestCase Asyncronous Tests_files/testrunner.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.testing.AsyncTestCase Asyncronous Tests_files/jsunit.js"></SCRIPT>
+</HEAD><BODY>
+  <SCRIPT>
+    // Has the setUp() function been called.
+    var setUpCalled = false;
+    // Has the current test function completed. This helps us to ensure that
+    // the next test is not started before the previous completed.
+    var curTestIsDone = true;
+    // Use an asynchronous test runner for our tests.
+    var asyncTestCase =
+        goog.testing.AsyncTestCase.createAndInstall(document.title);
+
+    /**
+     * Uses window.setTimeout() to perform asynchronous behaviour and uses
+     * asyncTestCase.waitForAsync() and asyncTestCase.continueTesting() to mark
+     * the beginning and end of it.
+     * @param {number} numAsyncCalls The number of asynchronous calls to make.
+     * @param {string} name The name of the current step.
+     */
+    function doAsyncStuff(numAsyncCalls, name) {
+      if (numAsyncCalls > 0) {
+        curTestIsDone = false;
+        asyncTestCase.waitForAsync('doAsyncStuff-' + name + '(' + numAsyncCalls
+                                   + ')');
+        window.setTimeout(function() {
+          doAsyncStuff(numAsyncCalls - 1, name);
+        }, 0);
+      } else {
+        curTestIsDone = true;
+        asyncTestCase.continueTesting();
+      }
+    }
+
+    function setUpPage() {
+      debug('setUpPage was called.');
+      doAsyncStuff(3, 'setUpPage');
+    }
+    function setUp() {
+      assertTrue(curTestIsDone);
+      doAsyncStuff(3, 'setUp');
+    }
+    function tearDown() {
+      assertTrue(curTestIsDone);
+    }
+    function test1() {
+      assertTrue(curTestIsDone);
+      doAsyncStuff(1, 'test1');
+    }
+    function test2_asyncContinueThenWait() {
+      var activeTest = asyncTestCase.activeTest_;
+      function async1() {
+        asyncTestCase.continueTesting();
+        asyncTestCase.waitForAsync('2');
+        window.setTimeout(async2, 0);
+      }
+      function async2() {
+        asyncTestCase.continueTesting();
+        assertEquals('Did not wait for inner waitForAsync',
+                     activeTest,
+                     asyncTestCase.activeTest_);
+      }
+      asyncTestCase.waitForAsync('1');
+      window.setTimeout(async1, 0);
+    }
+    function test3() {
+      assertTrue(curTestIsDone);
+      doAsyncStuff(2, 'test3');
+    }
+
+    function tearDownPage() {
+      debug('tearDownPage was called.');
+      assertTrue(curTestIsDone);
+    }
+
+  </SCRIPT><DIV><DIV style="color: rgb(0, 100, 0); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; font-weight: bold; ">Closure Unit Tests - goog.testing.AsyncTestCase Asyncronous Tests [PASSED]</DIV><DIV style="color: rgb(51, 51, 51); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; font-weight: bold; ">closure-library.googlecode.com/svn/trunk/closure/goog/testing/asynctestcase_async_test.html</DIV><DIV style="color: rgb(51, 51, 51); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">3 of 3 tests run in 85ms.</DIV><DIV style="color: rgb(51, 51, 51); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">3 passed, 0 failed.</DIV><DIV style="color: rgb(51, 51, 51); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">28 ms/test. 8 files loaded.</DIV><DIV style="color: rgb(51, 51, 51); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">.</DIV><DIV style="color: rgb(51, 51, 51); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">16:02:29.373  Start</DIV><DIV style="color: rgb(0, 100, 0); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">16:02:29.398  test1 : PASSED</DIV><DIV style="color: rgb(0, 100, 0); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">16:02:29.428  test2_asyncContinueThenWait : PASSED</DIV><DIV style="color: rgb(0, 100, 0); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">16:02:29.457  test3 : PASSED</DIV><DIV style="color: rgb(51, 51, 51); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">16:02:29.458  Done</DIV><DIV style="color: rgb(51, 51, 51); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; "> </DIV><A style="display: block; font-size: small; " href="">Run again without reloading</A></DIV>
+
+
+</BODY></HTML>

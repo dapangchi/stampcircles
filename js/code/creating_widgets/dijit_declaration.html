@@ -1,0 +1,53 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!--
+ ! Excerpted from "Mastering Dojo",
+ ! published by The Pragmatic Bookshelf.
+ ! Copyrights apply to this code. It may not be used to create training material, 
+ ! courses, books, articles, and the like. Contact us if you are in doubt.
+ ! We make no guarantees that this code is fit for any purpose. 
+ ! Visit http://www.pragmaticprogrammer.com/titles/rgdojo for more book information.
+-->
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Dijit.Declaration example</title>
+    <style type="text/css">
+        @import "/dojoroot/dijit/themes/tundra/tundra.css";
+    </style>
+    <script type="text/javascript" src="/dojoroot/dojo/dojo.js"  djConfig="parseOnLoad: true"></script>
+    <script type="text/javascript">
+       dojo.registerModulePath("dojobook","../../dojobook");
+       dojo.require("dojo.parser");
+       dojo.require("dijit.Declaration");
+     </script>
+</head>
+<body class="tundra">
+   
+   <style>
+   td {
+      border: 1pt solid black
+   }
+   </style>
+   <div dojoType="dijit.Declaration" widgetClass="CardLabel" 
+        defaults="{name: 'Nobody', address: 'Nowhere', csz: 'Nowhere'}">   
+      <tr>
+         <td>
+         ${name}<br/>
+         ${address}<br/>
+         ${csz}<br/>
+         <br/>
+         <div dojoAttachPoint="containerNode"></div>
+      </tr>
+   </div>
+
+   <table>
+      <div dojoType="CardLabel" name="Donald Trump" address="590 Trump Tower" 
+           csz="New York, NY 55555">
+         <strong>Open immediately!</strong>
+      </div>
+      <div dojoType="CardLabel" name="Martha Stewart" address="Club Fed" 
+           csz="Attica, NY 11111"></div>
+   </table>
+   
+</body>
+</html>

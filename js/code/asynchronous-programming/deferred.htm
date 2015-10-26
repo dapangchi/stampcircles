@@ -1,0 +1,276 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+        "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<title>Mastering Dojo - dojo.Deferred</title>
+		<script 
+      type="text/javascript"
+      djConfig="isDebug:true"
+      src="/dojoroot/dojo/dojo.js">
+    </script>
+    <script type="text/javascript">
+      
+      // START:snip1
+      var theDataRequest;  //holds the data query
+      var theDataDeferred; //holds the Deferred that controls the data service
+      
+      //the data service asynchronous function call...
+      function makeAsynchronousServerDataCall(theDeferred, theRequest){
+        theDataDeferred= theDeferred;
+        theDataRequest= theRequest;
+        
+        //the "real" asynchronous call would go here;
+        //the mock server just displays the request in the form...
+        dojo.byId("serverMockDataQuery").innerHTML= theRequest;
+      }
+      
+      //success and fail event handlers to simulate a service...
+      function returnData(e){
+        dojo.stopEvent(e);
+        theDataDeferred.callback("result("+theDataRequest+")");
+      }
+      function failData(e){
+        dojo.stopEvent(e);
+        theDataDeferred.errback("failed");
+      }
+      // END:snip1
+      
+      var theMetadataRequest, theMetadataDeferred;
+      function makeAsynchronousServerMetadataCall(theDeferred, theRequest){
+        theMetadataDeferred= theDeferred;
+        theMetadataRequest= theRequest;
+        dojo.byId("serverMockMetadataQuery").innerHTML= theRequest;
+      }
+      function returnMetadata(e){
+        dojo.stopEvent(e);
+        theMetadataDeferred.callback("result("+theMetadataRequest+")");
+      }      
+      function failMetadata(e){
+        dojo.stopEvent(e);
+        theMetadataDeferred.errback("failed");
+      }
+      
+      function allocatePanel(){
+        dojo.byId("progress").innerHTML= "Waiting for data and metadata...";
+        dojo.byId("dataResult").innerHTML= "";
+        dojo.byId("metadataResult").innerHTML= "";
+        return dojo.byId("panel");
+      }
+      
+      function cacheData() {
+        dojo.byId("progress").innerHTML= "got data!";
+        alert("got data!");
+      }
+      
+      function preparePanel() {
+        dojo.byId("progress").innerHTML= "got metadata!";
+        alert("got metadata!");
+      }
+      
+      function populatePanelWithData(displayInfo) {
+        dojo.byId("progress").innerHTML= "";
+        dojo.byId("dataResult").innerHTML= displayInfo.data;
+        dojo.byId("metadataResult").innerHTML= displayInfo.metadata;
+      }
+      
+      function releasePanelToUser() {
+        dojo.byId("serverMockDataQuery").innerHTML= dojo.byId("dataQuery").value= "";
+        dojo.byId("serverMockMetadataQuery").innerHTML= dojo.byId("metadataQuery").value= "";
+      }
+      
+      function giveRetryCancelMessage(message, retry, cancel) {
+        if (confirm(message)) {
+          retry();
+        } else {
+          cancel();
+        }
+      }
+      
+      function destroyPanel() {
+        dojo.byId("progress").innerHTML= "failed";
+        dojo.byId("serverMockDataQuery").innerHTML= dojo.byId("dataQuery").value= "";
+        dojo.byId("serverMockMetadataQuery").innerHTML= dojo.byId("metadataQuery").value= "";
+        alert("the request has been canceled.");
+      }
+      
+      function doExercise(e){
+        dojo.stopEvent(e);
+        display(dojo.byId("metadataQuery").value, dojo.byId("dataQuery").value);
+      }
+
+      // START:snip1
+      //hook up the handlers to the form buttons...
+      dojo.addOnLoad(function(){
+      // END:snip1
+        dojo.connect(dojo.byId("exTrigger"), "click", doExercise);
+      // START:snip1
+        dojo.connect(dojo.byId("dataReturn"), "click", returnData);
+        dojo.connect(dojo.byId("dataError"), "click", failData);
+      // END:snip1
+        dojo.connect(dojo.byId("metadataReturn"), "click", returnMetadata);
+        dojo.connect(dojo.byId("metadataError"), "click", failMetadata);
+      // START:snip1        
+      });
+      // END:snip1
+
+      // START:snip3
+      function display(panelId, query) {
+        
+        //displayInfo is a shared bookkeeping area
+        var displayInfo= {
+          panelId: panelId, 
+          query: query,
+          processCompleteCount: 0};
+      
+        //get an HTML div in which to place the panel
+        displayInfo.div= allocatePanel(displayInfo);
+        
+        getData();
+        getMetadata();
+      
+        function getData() {
+          displayInfo.dataDeferred= new dojo.Deferred(doCancel);
+          displayInfo.dataDeferred.addCallback(continueWithData);
+          displayInfo.dataDeferred.addErrback(handleDataError);
+          makeAsynchronousServerDataCall(displayInfo.dataDeferred, query);
+        }
+        
+        function getMetadata() {
+          displayInfo.metadataDeferred= new dojo.Deferred(doCancel);
+          displayInfo.metadataDeferred.addCallback(continueWithMetadata);
+          displayInfo.metadataDeferred.addErrback(handleMetadataError);
+          makeAsynchronousServerMetadataCall(displayInfo.metadataDeferred, panelId);
+        }
+        
+        //process the data as far as we can without the metadata
+        function continueWithData(data){
+          //put the data in an application-wide cache 
+          //for use with other requests...
+          cacheData(data);
+          
+          //save quick access to the data
+          displayInfo.data= data;
+      
+          finishDisplay();
+        }
+        
+        //process the metadata as far as we can without the data
+        function continueWithMetadata(metadata) {
+          //start to set up the HTML and other control structures 
+          //given by the metadata...
+          preparePanel(metadata);
+          
+          //save quick access to the metadata
+          displayInfo.metadata= metadata;
+      
+          finishDisplay();
+        }
+        
+        //when continueWithData and continueWithMetadata have completed,
+        //finish with the display process
+        function finishDisplay() {
+          displayInfo.processCompleteCount++;
+          if (displayInfo.processCompleteCount==2) {
+            //both have completed...
+            populatePanelWithData(displayInfo);
+            releasePanelToUser(displayInfo);
+          }
+        }
+        
+        function handleDataError(){
+          if (displayInfo.dataDeferred) {
+            giveRetryCancelMessage(
+              "The server failed to deliver the data.",
+              getData,     //retry function
+              function() { //cancel function
+                doCancel(displayInfo.dataDeferred);
+              }   
+            );
+          } else {
+            //the process was canceled
+          }
+        }
+        
+        function handleMetadataError(){
+          if (displayInfo.metadataDeferred) {
+            giveRetryCancelMessage(
+              "The server failed to deliver the metadata.",
+              getMetadata, //retry function
+              function() { //cancel function
+                doCancel(displayInfo.metadataDeferred);
+              }   
+            );
+          } else {
+            //the process was canceled
+          }
+        }
+          
+        function doCancel(theDeferred) {
+        
+          //execute this routine for the first Deferred canceled only...
+          if (!displayInfo.dataDeferred) {
+            return;
+          }
+          
+          //figure out which Deferred was canceled and take
+          //a reference to the other Deferred
+          var temp= displayInfo.dataDeferred==theDeferred ? 
+            displayInfo.metadataDeferred : displayInfo.dataDeferred;
+          
+          //ensure this routine is executed only once
+          displayInfo.dataDeferred= null;
+          displayInfo.metadataDeferred= null;
+          
+          //cancel the other Deferred
+          temp.cancel();
+          
+          //clean up the display
+          destroyPanel(displayInfo);
+        }
+      }
+      // END:snip3
+
+    </script>    
+	</head>
+	<body>
+	  <div>
+	    <h1>Dojo Deferred Example</h1>
+	  </div>
+    <div>
+      <h1>Request Mock</h1>
+      <form class="request">
+        <p>Make Request (type any pseudo data in both boxes and hit request):</p>
+        <p>Data Query:<input id="dataQuery" type="text" size="20" maxLength="20" name="dataQuery"></p>
+        <p>Metadata Query:<input id="metadataQuery" type="text" size="20" maxLength="20" name="metadataQuery"></p>
+        <p><input id="exTrigger" type="submit" name="exTrigger" value="Request!"></p>
+      </form>
+    </div>
+    <!-- START:snip2 -->
+    <div>
+      <h1>Server Mock</h1>
+      <form class="request">
+        <p>The data query is...</p>
+        <p id= "serverMockDataQuery"></p>
+        <p>
+          <input id="dataReturn" type="submit" name="dataReturn" value="Send It!">
+        </p>
+        <p>
+          <input id="dataError" type="submit" name="dataError" value="Signal Error">
+        </p>
+    <!-- END:snip2 -->
+        <p>The metadata request is...</p>
+        <p id="serverMockMetadataQuery"></p>
+        <p><input id="metadataReturn" type="submit" name="metadataReturn" value="Send It!"></p>
+        <p><input id="metadataError" type="submit" name="metadataError" value="Signal Error"></p>
+    <!-- START:snip2 -->
+      </form>
+    </div>
+    <!-- END:snip2 -->
+    <div id="panel">
+      <h1>The New Panel</h1>
+      <p id="progress"></p>
+      <p id="dataResult"></p>
+      <p id="metadataResult"></p>
+    </div>      	  
+	</body>
+</html>

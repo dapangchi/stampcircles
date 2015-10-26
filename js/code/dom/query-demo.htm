@@ -1,0 +1,503 @@
+<html>
+<head>
+  <title>
+    Master Dojo - DOM Utilities - dojo.query Demonstration
+  </title>
+  <script 
+    type="text/javascript" 
+    src="/dojoroot/dojo/dojo.js" 
+    djConfig="isDebug: true">
+  </script>
+  <style type="text/css">
+    @import "/dojoroot/dojo/resources/dojo.css";
+    @import "/dojoroot/dijit/themes/tundra/tundra.css";
+  </style>
+  <style type="text/css">
+    table, td, th {
+      border: 1px solid black;
+    }
+    th {
+      background-color:#F0F0F0;
+    }
+    table p {
+      margin:0;
+      padding:0;
+    }
+    p.code {
+      font-family:monospace;
+      font-weight:bold;
+    }
+  </style>
+  <script type="text/javascript">
+  function doCannedQuery(query, eventObject){
+    dojo.stopEvent(eventObject);
+    
+    //erase any previous borders...
+    dojo.query("*", "fixture").style("border", "");
+    
+    
+    //set all elements found by the query to have a red border...
+    dojo.query(query, "fixture").style("border", "2px solid red");
+    
+    //update the form input element for consistency...
+    dojo.byId("query").value= dojo.trim(query);
+  }
+  dojo.addOnLoad(function(){
+    dojo.query("p.code").forEach(function(node) {
+      dojo.connect(node.parentNode.parentNode, "click", dojo.partial(doCannedQuery, node.innerHTML));
+    });
+  });
+  </script>       
+</head>
+<body class="tundra">
+  <!-- START:snip5 -->
+  <div id="fixture">
+    <div class="section1">
+      <h1>
+        Section 1
+      </h1>
+      <p>
+        Introduction Text
+      </p>
+      <div class="section1-1" >
+        <h2>
+          Section 1.1
+        </h2>
+        <p>
+          Section 1.1, Paragraph-1
+        </p>
+        <p class="special">
+          Section 1.1, Paragraph-2 (class=special)
+        </p>
+        <p myAttrib="special">
+          Section 1.1, Paragraph-3 (myAttrib="special")
+        </p>
+        <p myAttrib="special-1 special-2 special-3">
+          Section 1.1, Paragraph-4 (myAttrib="special-1 special-2 special-3")
+        </p>
+      </div>
+    </div>
+  </div>
+  <!-- END:snip5 -->
+  <!-- START:snip6 -->
+  <div class="queryTester" style="background-color:#DDDDDD; padding: 5px;">
+    <form id="qform">
+      Enter selector string; press &lt;enter&gt; to process:
+      <input id="query" type="text" name="querySelector" size="40">
+      <input type="submit">
+    </form>
+  <!-- END:snip6 -->    
+    <p>...or click any row to see the example query...</p>
+  <!-- START:snip6 -->
+  </div>
+  <script type="text/javascript">
+    dojo.addOnLoad(function(){
+      dojo.connect(dojo.byId("qform"), "submit", function(e){
+        //stop default processing and propagation
+        //(we really don't want to submit the form)
+        dojo.stopEvent(e);
+        
+        //erase any previous borders...
+        dojo.query("*", "fixture").style("border", "");
+        
+        //set all elements found by the query to have a red border...
+        var query= dojo.byId("query").value;
+        dojo.query(query, "fixture").style("border", "2px solid red");
+      });
+    });
+  </script>
+  <!-- END:snip6 -->
+
+  
+
+  <table>
+      <tr>
+          <th>
+              <p>
+                  <b>Selector</b>
+              </p>
+          </th>
+          <th>
+              <p>
+                  <b>Meaning</b>
+              </p>
+              <p class="code">
+                  example
+              </p>
+          </th>
+      </tr>
+      <tr>
+          <td>
+              <p>
+                  *
+              </p>
+          </td>
+          <td>
+              <p>
+                  any
+                  element
+              </p>
+              <p class="code">
+                  *
+              </p>
+          </td>
+      </tr>
+      <tr>
+          <td>
+              <p>
+                  E
+              </p>
+          </td>
+          <td>
+              <p>
+                  an
+                  element of type E
+              </p>
+              <p class="code">
+                  h1
+              </p>
+          </td>
+      </tr>
+      <tr>
+          <td>
+              <p>
+                  E[foo]
+              </p>
+          </td>
+          <td>
+              <p>
+                  an E
+                  element with a &quot;foo&quot; attribute
+              </p>
+              <p class="code">
+                  p[myAttrib]
+              </p>
+          </td>
+      </tr>
+      <tr>
+          <td>
+              <p>
+                  E[foo=&quot;bar&quot;]
+              </p>
+          </td>
+          <td>
+              <p>
+                  an E
+                  element whose &quot;foo&quot; attribute value is exactly equal to
+                  &quot;bar&quot;
+              </p>
+              <p class="code">
+                  p[myAttrib=&quot;special&quot;]
+              </p>
+          </td>
+      </tr>
+      <tr>
+          <td>
+              <p>
+                  E[foo~=&quot;bar&quot;]
+              </p>
+          </td>
+          <td>
+              <p>
+                  an E
+                  element whose &quot;foo&quot; attribute value is a list of space-separated
+                  values, one of which is exactly equal to &quot;bar&quot;
+              </p>
+              <p class="code">
+                  p[myAttrib~=&quot;special-2&quot;]
+              </p>
+          </td>
+      </tr>
+      <tr>
+          <td>
+              <p>
+                  E[foo^=&quot;bar&quot;]
+              </p>
+          </td>
+          <td>
+              <p>
+                  an E
+                  element whose &quot;foo&quot; attribute value begins exactly with the string
+                  &quot;bar&quot;
+              </p>
+              <p class="code">
+                  p[myAttrib^=&quot;special-1&quot;]
+              </p>
+          </td>
+      </tr>
+      <tr>
+          <td>
+              <p>
+                  E[foo$=&quot;bar&quot;]
+              </p>
+          </td>
+          <td>
+              <p>
+                  an E
+                  element whose &quot;foo&quot; attribute value ends exactly with the string
+                  &quot;bar&quot;
+              </p>
+              <p class="code">
+                  p[myAttrib$=&quot;special-3&quot;]
+              </p>
+          </td>
+      </tr>
+      <tr>
+          <td>
+              <p>
+                  E[foo*=&quot;bar&quot;]
+              </p>
+          </td>
+          <td>
+              <p>
+                  an E
+                  element whose &quot;foo&quot; attribute value contains the substring
+                  &quot;bar&quot;
+              </p>
+              <p class="code">
+                  p[myAttrib*=&quot;spec”]
+              </p>
+          </td>
+      </tr>
+      <tr>
+          <td>
+              <p>
+                  E:nth-child(n)
+              </p>
+          </td>
+          <td>
+              <p>
+                  an E
+                  element, the n-th child of its parent
+              </p>
+              <p class="code">
+                  div.section1-1 :nth-child(3)
+              </p>
+          </td>
+      </tr>
+      <tr>
+          <td>
+              <p>
+                  E:nth-child(even)
+              </p>
+          </td>
+          <td>
+              <p>
+                  an E
+                  element, the 2
+                  <sup>
+                      nd
+                  </sup>, 4
+                  <sup>
+                      th
+                  </sup>, … children
+              </p>
+              <p class="code">
+                  div.section1-1 :nth-child(even)
+              </p>
+          </td>
+      </tr>
+      <tr>
+          <td>
+              <p>
+                  E:nth-child(odd)
+              </p>
+          </td>
+          <td>
+              <p>
+                  an E
+                  element, the 1
+                  <sup>
+                      st
+                  </sup>, 3
+                  <sup>
+                      rd
+                  </sup>, … children
+              </p>
+              <p class="code">
+                  div.section1-1 :nth-child(odd)
+              </p>
+          </td>
+      </tr>
+      <tr>
+          <td>
+              <p>
+                  E:first-child
+              </p>
+          </td>
+          <td>
+              <p>
+                  an E
+                  element, first child of its parent
+              </p>
+              <p class="code">
+                  div.section1-1 :first-child
+              </p>
+          </td>
+      </tr>
+      <tr>
+          <td>
+              <p>
+                  E:last-child
+              </p>
+          </td>
+          <td>
+              <p>
+                  an E
+                  element, last child of its parent
+              </p>
+              <p class="code">
+                  div.section1-1 :last-child
+              </p>
+          </td>
+      </tr>
+      <tr>
+          <td>
+              <p>
+                  E:not(s)
+              </p>
+          </td>
+          <td>
+              <p>
+                  an E
+                  element that does not match simple selector s
+              </p>
+              <p class="code">
+                  p:not(.special)
+              </p>
+          </td>
+      </tr>
+      <tr>
+          <td>
+              <p>
+                  E:empty
+              </p>
+          </td>
+          <td>
+              <p>
+                  an E
+                  element that has no children (including text nodes)
+              </p>
+              <p class="code">
+                  div:empty
+              </p>
+          </td>
+      </tr>
+      <tr>
+          <td>
+              <p>
+                  #myid
+              </p>
+          </td>
+          <td>
+              <p>
+                  an
+                  element with ID equal to &quot;myid&quot;
+              </p>
+              <p class="code">
+                  #fixture
+              </p>
+          </td>
+      </tr>
+      <tr>
+          <td>
+              <p>
+                  E.myclass
+              </p>
+          </td>
+          <td>
+              <p>
+                  An E
+                  element with class “myclass”
+              </p>
+              <p class="code">
+                  p.special
+              </p>
+          </td>
+      </tr>
+      <tr>
+          <td>
+              <p>
+                  E &gt; F
+              </p>
+          </td>
+          <td>
+              <p>
+                  an F
+                  element child of an E element
+              </p>
+              <p class="code">
+                  div &gt; p
+              </p>
+          </td>
+      </tr>
+      <tr>
+          <td>
+              <p>
+                  E ~ F
+              </p>
+          </td>
+          <td>
+              <p>
+                  an F
+                  element preceded by an E element
+              </p>
+              <p class="code">
+                  h2 ~ p
+              </p>
+          </td>
+      </tr>
+      <tr>
+          <td>
+              <p>
+                  E + F
+              </p>
+          </td>
+          <td>
+              <p>
+                  an F
+                  element immediately preceded by an E element
+              </p>
+              <p class="code">
+                  h2 + p
+              </p>
+          </td>
+      </tr>
+      <tr>
+          <td>
+              <p>
+                  s1 s2
+              </p>
+          </td>
+          <td>
+              <p>
+                  The set
+                  of elements returned by selector s2 that are decedents of the set of elements
+                  returned by s1
+              </p>
+              <p class="code">
+                  div p
+              </p>
+          </td>
+      </tr>
+      <tr>
+          <td>
+              <p>
+                  s1, s2
+              </p>
+          </td>
+          <td>
+              <p>
+                  The set
+                  of elements returned by selector s1 union the set of elements returned by
+                  selector s2
+              </p>
+              <p class="code">
+                  h1, h2
+              </p>
+          </td>
+      </tr>
+  </table>
+</body>
+</html>
+

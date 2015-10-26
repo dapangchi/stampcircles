@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<!-- saved from url=(0083)http://closure-library.googlecode.com/svn/trunk/closure/goog/ui/idletimer_test.html -->
+<HTML><!--
+  Copyright 2007 Google Inc. All Rights Reserved.
+--><HEAD><META http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<TITLE>Closure Unit Tests - goog.ui.IdleTimer</TITLE>
+<SCRIPT src="./Closure Unit Tests - goog.ui.IdleTimer_files/base.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.IdleTimer_files/deps.js"></SCRIPT>
+<SCRIPT>
+  goog.require('goog.testing.jsunit');
+  goog.require('goog.testing.MockClock');
+  goog.require('goog.ui.IdleTimer');
+  goog.require('goog.ui.MockActivityMonitor');
+</SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.IdleTimer_files/stacktrace.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.IdleTimer_files/asserts.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.IdleTimer_files/testcase.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.IdleTimer_files/testrunner.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.IdleTimer_files/jsunit.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.IdleTimer_files/disposable.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.IdleTimer_files/mockclock.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.IdleTimer_files/array.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.IdleTimer_files/errorhandlerweakdep.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.IdleTimer_files/event.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.IdleTimer_files/string.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.IdleTimer_files/useragent.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.IdleTimer_files/browserevent.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.IdleTimer_files/eventwrapper.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.IdleTimer_files/listener.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.IdleTimer_files/simplepool.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.IdleTimer_files/jscript.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.IdleTimer_files/pools.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.IdleTimer_files/object.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.IdleTimer_files/events.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.IdleTimer_files/eventtarget.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.IdleTimer_files/timer.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.IdleTimer_files/structs.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.IdleTimer_files/iter.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.IdleTimer_files/map.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.IdleTimer_files/set.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.IdleTimer_files/tagname.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.IdleTimer_files/classes.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.IdleTimer_files/coordinate.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.IdleTimer_files/size.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.IdleTimer_files/dom.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.IdleTimer_files/eventhandler.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.IdleTimer_files/activitymonitor.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.IdleTimer_files/idletimer.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.IdleTimer_files/mockactivitymonitor.js"></SCRIPT>
+</HEAD><BODY>
+<SCRIPT>
+
+  var clock;
+  
+  function setUp() {
+    clock = new goog.testing.MockClock(true);
+    goog.now = goog.bind(clock.getCurrentTime, clock);
+  }
+
+  function tearDown() {
+    clock.dispose();
+  }
+
+
+  /**
+   * Tests whether an event is fired when the user becomes idle
+   */
+  function testBecomeIdle() {
+    var idleThreshold = 1000;
+    var mockActivityMonitor = new goog.ui.MockActivityMonitor();
+    var idleTimer = new goog.ui.IdleTimer(idleThreshold, mockActivityMonitor);
+
+    mockActivityMonitor.simulateEvent();
+    assertFalse('Precondition: user should be active', idleTimer.isIdle());
+
+    var onBecomeIdleCount = 0;
+    var onBecomeIdle = function() {
+      onBecomeIdleCount += 1;
+    };
+    goog.events.listen(idleTimer,
+        goog.ui.IdleTimer.Event.BECOME_IDLE,
+        onBecomeIdle);
+
+    clock.tick(idleThreshold);
+    mockActivityMonitor.simulateEvent();
+    clock.tick(idleThreshold);
+    assert('The BECOME_IDLE event fired too early', onBecomeIdleCount == 0);
+    assertFalse('The user should still be active', idleTimer.isIdle());
+
+    clock.tick(1);
+    assert('The BECOME_IDLE event fired too late', onBecomeIdleCount == 1);
+    assert('The user should be idle', idleTimer.isIdle());
+
+    idleTimer.dispose();
+  }
+
+
+  /**
+   * Tests whether an event is fired when the user becomes active
+   */
+  function testBecomeActive() {
+    var idleThreshold = 1000;
+    var mockActivityMonitor = new goog.ui.MockActivityMonitor();
+    var idleTimer = new goog.ui.IdleTimer(idleThreshold, mockActivityMonitor);
+
+    clock.tick(idleThreshold + 1);
+    assert('Precondition: user should be idle', idleTimer.isIdle());
+
+    var onBecomeActiveCount = 0;
+    var onBecomeActive = function() {
+      onBecomeActiveCount += 1;
+    };
+    goog.events.listen(idleTimer,
+        goog.ui.IdleTimer.Event.BECOME_ACTIVE,
+        onBecomeActive);
+
+    clock.tick(idleThreshold);
+    assert('The BECOME_ACTIVE event fired too early', onBecomeActiveCount == 0);
+    assert('The user should still be idle', idleTimer.isIdle());
+
+    mockActivityMonitor.simulateEvent();
+    assert('The BECOME_ACTIVE event fired too late', onBecomeActiveCount == 1);
+    assertFalse('The user should be active', idleTimer.isIdle());
+
+    idleTimer.dispose();
+  }
+
+</SCRIPT>
+
+
+<DIV><DIV style="color: rgb(0, 100, 0); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; font-weight: bold; ">Closure Unit Tests - goog.ui.IdleTimer [PASSED]</DIV><DIV style="color: rgb(51, 51, 51); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; font-weight: bold; ">closure-library.googlecode.com/svn/trunk/closure/goog/ui/idletimer_test.html</DIV><DIV style="color: rgb(51, 51, 51); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">2 of 2 tests run in 13ms.</DIV><DIV style="color: rgb(51, 51, 51); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">2 passed, 0 failed.</DIV><DIV style="color: rgb(51, 51, 51); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">7 ms/test. 37 files loaded.</DIV><DIV style="color: rgb(51, 51, 51); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">.</DIV><DIV style="color: rgb(51, 51, 51); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">08:27:48.644  Start</DIV><DIV style="color: rgb(0, 100, 0); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">08:27:48.654  testBecomeActive : PASSED</DIV><DIV style="color: rgb(0, 100, 0); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">08:27:48.655  testBecomeIdle : PASSED</DIV><DIV style="color: rgb(51, 51, 51); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">08:27:48.656  Done</DIV><DIV style="color: rgb(51, 51, 51); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; "> </DIV><A style="display: block; font-size: small; " href="">Run again without reloading</A></DIV></BODY></HTML>

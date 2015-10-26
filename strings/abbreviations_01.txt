@@ -1,0 +1,15 @@
+1|AFAICS|As far as I can see
+2|AFAIK|As far as I know
+3|ACL|Access Control List
+4|AIM|AOL (America Online) Instant Messenger
+5|AOL|America Online
+6|API|Application Programming Interface
+7|ASAP|As soon as possible
+
+
+
+
+
+
+
+

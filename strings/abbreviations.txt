@@ -1,0 +1,136 @@
+3   AFAICS       As far as I can see
+4 	AFAIK        As far as I know
+5 	ACL          Access Control List
+6 	AIM          AOL (America Online) Instant Messenger
+7 	AOL          America Online
+8 	API          Application Programming Interface
+9 	ASAP         As soon as possible
+10 	ASCII        American Standard Code for Information Interchange
+11 	ASP          Active Server Pages
+12 	BTW          By the way
+13 	CGI          Common Gateway Interface
+14 	CMS          Content Management System
+15 	CSS          Cascading Style Sheets
+16 	CVS          Concurrent Versions System
+17 	DBA          Database Administrator
+18 	DHTML        Dynamic HyperText Markup Language
+19 	DMCA         Digital Millenium Copyright Act
+20 	DNS          Domain Name Server
+21 	DOM          Document Object Model
+22 	DTD          Document Type Definition
+23 	EOF          End of file
+24 	EOL          End of line
+25 	EOM          End of message
+26 	EOT          End of text
+27 	ESMTP        Extended Simple Mail Transfer Protocol
+28 	FAQ          Frequently Asked Questions
+29 	FDL          GNU Free Documentation License
+30 	FTP          File Transfer Protocol
+31 	FOSS         Free & Open-Source Software
+32 	FLOSS        Free/Libre and Open Source Software
+33 	FUD          Fear, Uncertainty, and Doubt
+34 	GB           Gigabyte
+35 	GHz          Gigahertz
+36 	GIF          Graphics Interchange Format
+37 	GPL          GNU General Public License
+38 	GUI          Graphical User Interface
+39 	HTML         HyperText Markup Language
+40 	HTTP         Hyper Text Transfer Protocol
+41 	IANAL        I am not a lawyer (but)
+42 	ICANN        Internet Corporation for Assigned Names and Numbers
+43 	ICQ          I seek you (Instant Messenger)
+44 	IE5          Internet Explorer 5
+45 	IE6          Internet Explorer 6
+    IE7          Internet Explorer 7
+46 	IE           Internet Explorer
+47 	IIRC         If I remember correctly
+48 	IIS          Internet Information Services
+49 	IMAP         Internet Message Access Protocol
+50 	IMHO         In my humble opinion
+51 	IMO          In my opinion
+52 	IOW          In other words
+53 	IRC          Internet Relay Chat
+54 	IRL          In real life
+55 	ISO          International Organization for Standardization
+56 	ISP          Internet Service Provider
+57 	JDK          Java Development Kit
+58 	JPEG         Joint Photographics Experts Group
+59 	JPG          Joint Photographics Experts Group
+60 	JS           JavaScript
+61 	KISS         Keep it simple stupid
+62 	LGPL         GNU Lesser General Public License
+63 	LOL          Laughing out loud
+64 	MathML       Mathematical Markup Language
+65 	MB           Megabyte
+66 	MHz          Megahertz
+67 	MIME         Multipurpose Internet Mail Extension
+68 	MIT          Massachusetts Institute of Technology
+69 	MML          Mathematical Markup Language
+70 	MP3          Motion Picture Experts Group Layer 3
+71 	MPEG         Motion Picture Experts Group
+72 	MSDN         Microsoft Developer Network
+73 	MS           Microsoft
+74 	NS4.7        Netscape 4.7
+75 	NS4          Netscape 4
+76 	NS6          Netscape 6
+77 	NS7          Netscape 7
+78 	OMG          Oh my God
+79 	OPML         Outline Processor Markup Language
+80 	OS           Operating System
+81 	OSS          Open Source Software
+82 	OTOH         On the other hand
+83 	P2P          Peer to Peer
+84 	PDA          Personal Digital Assistant
+85 	PDF          Portable Document Format
+86 	Perl         Practical Extraction and Report Language
+87 	PERL         Practical Extraction and Report Language
+88 	PHP          Hypertext Preprocessor
+89 	PICS         Platform for Internet Content Selection
+90 	PIN          Personal Identification Number
+91 	PITA         Pain in the Ass
+92 	PNG          Portable Network Graphics
+93 	POP3         Post Office Protocol 3
+94 	POP          Post Office Protocol
+95 	QoS          Quality of Service
+96 	RAID         Redundant Array of Inexpensive Disks
+97 	RDF          Rich Data File
+98 	ROTFL        Rolling on the floor laughing
+99 	RPC          Remote Procedure Call
+100 	RSS          Rich Site Summary
+101 	RTFM         Read The Fine Manual
+102 	RTF          Rich Text File
+103 	SCSI         Small Computer System Interface
+104 	SDK          Software Development Kit
+105 	SGML         Standard General Markup Language
+106 	SMIL         Synchronized Multimedia Integration Language
+107 	SMTP         Simple Mail Transfer Protocol
+108 	SOAP         Simple Object Access Protocol
+109 	spec         specification
+110 	SQL          Structured Query Language
+111 	SSH          Secure Shell
+112 	SSI          Server Side Includes
+113 	SSL          Secure Sockets Layer
+114 	SVG          Scalable Vector Graphics
+115 	TIA          Thanks in advance
+116 	TIFF         Tagged Image File Format
+117 	TLD          Top Level Domain
+118 	TOC          Table of Contents
+119 	URI          Uniform Resource Identifier
+120 	URL          Uniform Resource Locator
+121 	URN          Uniform Resource Name
+122 	VBA          Visual Basic for Applications
+123 	VB           Visual Basic
+124 	W3C          World Wide Web Consortium
+125 	WAN          Wide Area Network
+126 	WAP          Wireless Access Protocol
+127 	WML          Wireless Markup Language
+128 	WTF?         What the f***
+129 	WWW          World Wide Web
+130 	WYSIWYG      What You See Is What You Get
+131 	XHTML        Extensible HyperText Markup Language
+132 	XML          Extensible Markup Language
+133 	XSD          XML (Extensible Markup Language) Schema Definition
+134 	XSL          Extensible Stylesheet Language
+135 	XSLT         Extensible Stylesheet Language Transformations
+136 	XUL          XML User Interface Language
+137 	YMMV         Your mileage may vary

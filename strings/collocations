@@ -1,0 +1,89 @@
+
+<?php
+//This program finds the frequency of key-phrases in the text
+ @set_time_limit ( 20*60 ) ; # Time limit 20min
+include_once('utilities.php');
+include_once('Snoopy.class.php');
+
+$url="http://latenightengineer.com/play/text-analysis-with-PHP";
+$snoopy = new Snoopy;
+$snoopy->fetchtext($url);
+echoPRE($snoopy->results);
+
+
+
+//read text and place into array
+//start at position 0
+//read two words from array
+// find in text
+$time_start = microtime(true); //just timing the text
+$text=$snoopy->results;
+//clean text a bit
+
+$pattern='/( ){2,}/';
+
+$text=preg_replace($pattern,' ',$text);//replace one or more spaces
+echo $text;
+statistics($text);
+
+$words=explode(' ',$text);
+//echo_array($words);
+
+echo $limit=str_word_count($text);
+
+  
+$i=0;
+for ($i=0;$i<$limit-3;$i++){
+   //first create search array
+   $search=$words[$i].' '.$words[$i+1];
+   $search_array[]=$search;
+ }
+ 
+$search_array=array_unique($search_array);
+//echo_array($search_array);
+$limit=count($search_array);
+echo 'Number of search terms : '.count($search_array);
+
+echo_array($search_array);
+
+
+$z=0;
+for ($z=0;$z<$limit+1;$z++){  
+@$result=substr_count($text,$search_array[$z]);
+if ($result>2) {//echoPRE($result).'<br />';
+   $dictionary[]=$search_array[$z];
+ }
+}
+//$dictionary=array_unique($dictionary);
+echo_array($dictionary);
+//remove common words
+
+frequency($text); //gets the frequency of words
+
+$url='http://latenightengineer.com/play';
+$result = getUrlData($url);
+echo '<pre style="overflow:scroll">';
+   print_r($result);
+echo '</pre>';
+
+
+function collocations($text){
+  $words=explode(' ',$text);
+  //find if word exist
+  //if it does echo it plus neighbours from text not array!
+  in_array  ( mixed $needle  , array $haystack  [, bool $strict  ] )
+
+
+
+}
+
+
+
+
+$time_end = microtime(true);
+$time = $time_end - $time_start;
+
+echo "Time $time seconds\n";
+?>
+
+//search and replace multiple spaces with one space

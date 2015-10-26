@@ -1,0 +1,92 @@
+<html>
+<head>
+  <title>
+    Mastering Dojo - Remote Scripting - Yahoo Service Example
+  </title>
+  
+  <style type="text/css">
+    @import "remote-scripting.css";
+  </style>  
+  
+  <script 
+    type="text/javascript" 
+    src="/dojoroot/dojo/dojo.js" 
+    djConfig="isDebug: true"></script>
+    
+  <script type="text/javascript">
+    //START:snip1
+    var smd= {
+      "SMDVersion":".1",
+      "objectName":"yahoo",
+      "serviceType":"JSON-P",
+      "required": {
+        "appid": "dojotoolkit",
+        "output": "json"
+      },
+      "methods":[
+        //
+        // WEB SEARCH
+        //
+        {
+          // http://developer.yahoo.com/search/web/V1/webSearch.html 
+          "name":"webSearch",
+          "serviceURL": "http://api.search.yahoo.com/WebSearchService/V1/webSearch",
+          "parameters":[
+            { "name":"query", "type":"STRING" },
+            { "name":"type", "type":"STRING" },
+            { "name":"region", "type":"STRING" },
+            { "name":"results", "type":"INTEGER" },
+            { "name":"start", "type":"INTEGER" },
+            { "name":"format", "type":"STRING" },
+            { "name":"adult_ok", "type":"INTEGER" },
+            { "name":"similar_ok", "type":"INTEGER" },
+            { "name":"language", "type":"STRING" },
+            { "name":"country", "type":"STRING" },
+            { "name":"site", "type":"STRING" },
+            { "name":"subscription", "type":"STRING" },
+            { "name":"license", "type":"STRING" }
+          ]
+        }
+       ]
+    }
+    //END:snip1
+    
+    //START:snip3
+    //START:snip2
+    dojo.require("dojo.rpc.JsonpService");
+    dojo.addOnLoad(function() {
+      var service= new dojo.rpc.JsonpService(
+        smd, {appid: "your-appid-goes-here"});
+    //END:snip2
+      var theResult= service.webSearch(
+        {query:'"mastering dojo"', site:"pragprog.com"});
+      theResult.addCallback(function(result){
+        console.dir(result);
+      });
+    //START:snip2
+    });
+    //END:snip2
+    //END:snip3
+  </script>  
+</head>
+
+ 
+<body>
+  <div>
+    <h1>Remote Scripting Exercises</h1>    
+    <form><p>
+      Exercise Identifier: 
+      <input id="exId" type="text" size="2" maxLength="2" name="exId">
+      <input id="exTrigger" type="submit" name="exTrigger" value="Go!">
+    </p></form>
+  </div>
+  <div>
+    <h1>Result:</h1>
+    <pre id="result"></pre>
+  </div>
+  <div>
+    <h1>Object Dumps:</h1>
+    <div id="objects"></div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<html>
+<head>
+  <title>
+    Mastering Dojo - The Build System
+  </title>
+
+  <!-- config.js initializes djConfig to demonstrate various load options -->
+  <script type="text/javascript" src="js/magiBrowse/config.js" ></script>
+  
+  <script type="text/javascript" djConfig="isDebug: true" src="js/release/magiBrowse/dojo/dojo.js" ></script>
+
+  <script type="text/javascript" >
+    console.log("Finished script-include dojo.js");
+    
+    //hijack dojo.require to log message before and after it's called...
+    var realDojoRequire= dojo.require;
+    var id= 0;
+    dojo.require= function(moduleName) {
+      var thisId= ++id;
+      console.log('Start(' + thisId + ') dojo.require("' + moduleName + '")');
+      realDojoRequire.apply(dojo, arguments);
+      console.log('Finished(' + thisId + ') dojo.require("' + moduleName + '")');
+    }
+    
+    dojo.require("magiBrowse.acmeBase");
+    dojo.require("magiBrowse.main");
+  </script>
+</head>
+
+<body>
+  <div>
+    <h1>The Build System</h1>    
+    <pre id="messages"></pre>
+  </div>
+</body>
+</html>

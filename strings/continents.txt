@@ -1,0 +1,107 @@
+optgroup,AFRICA
+dz/fr/, Algeria - French
+ai/en/, Anguilla - English
+ag/en/, Antigua and Barbuda - English
+ar/es/, Argentina - Spanish
+aw/en/, Aruba - English
+au/en/, Australia - English
+at/de/, Austria - German
+bs/en/, Bahamas - English
+bh/en/, Bahrain - English
+bd/en/, Bangladesh - English
+bb/en/, Barbados - English
+be/en/, Belgium - English
+be/nl/, Belgium - Dutch
+be/fr/, Belgium - French
+bm/en/, Bermuda - English
+bo/es/, Bolivia - Spanish
+br/pt/, Brazil - Portuguese
+
+optgroup, OCEANIA
+
+vg/en/, British Virgin Islands - English
+bg/bg/, Bulgaria - Bulgarian
+ca/en/, Canada - English
+ca/fr/, Canada - French
+ky/en/, Cayman Islands - English
+cl/es/, Chile - Spanish
+cn/zh/, China - Chinese (Simplified)
+co/es/, Colombia - Spanish
+hr/hr/, Croatia - Croatian
+cy/en/, Cyprus - English
+cz/cs/, Czech Republic - Czech
+dk/da/, Denmark - Danish
+dm/en/, Dominica - English
+ec/es/, Ecuador - Spanish
+eg/en/, Egypt - English
+ee/et/, Estonia - Estonian
+fi/fi/, Finland - Finnish
+fr/fr/, France - French
+de/de/, Germany - German
+
+OPTGROUP, Europe
+
+gr/el/, Greece - Greek
+gd/en/, Grenada - English
+gy/en/, Guyana - English
+hk/en/, Hong Kong S.A.R. of China - English
+hu/hu/, Hungary - Hungarian
+in/en/, India - English
+id/en/, Indonesia - English
+ie/en/, Ireland - English
+il/he/, Israel - Hebrew
+it/it/, Italy - Italian
+jm/en/, Jamaica - English
+jp/ja/, Japan - Japanese
+jo/en/, Jordan - English
+kr/ko/, Korea, Republic of - Korean
+kw/en/, Kuwait - English
+lv/lv/, Latvia - Latvian
+lb/en/, Lebanon - English
+lt/lt/, Lithuania - Lithuanian
+my/en/, Malaysia - English
+mx/es/, Mexico - Spanish
+ms/en/, Montserrat - English
+ma/fr/, Morocco - French
+nl/nl/, Netherlands - Dutch
+an/en/, Netherlands Antilles - English
+nz/en/, New Zealand - English
+no/no/, Norway - Norwegian
+om/en/, Oman - English
+pk/en/, Pakistan - English
+py/es/, Paraguay - Spanish
+pe/es/, Peru - Spanish
+ph/en/, Philippines - English
+pl/pl/, Poland - Polish
+pt/pt/, Portugal - Portuguese
+qa/en/, Qatar - English
+ro/ro/, Romania - Romanian
+ru/ru/, Russian Federation - Russian
+kn/en/, Saint Kitts and Nevis - English
+lc/en/, Saint Lucia - English
+vc/en/, Saint Vincent and the Grenadines - English
+sa/en/, Saudi Arabia - English
+rs/sr/, Serbia - Serbian
+sg/en/, Singapore - English
+sk/sk/, Slovakia - Slovak
+si/sl/, Slovenia - Slovenian
+za/en/, South Africa - English
+es/es/, Spain - Spanish
+lk/en/, Sri Lanka - English
+sr/en/, Suriname - English
+se/sv/, Sweden - Swedish
+ch/de/, Switzerland - German
+ch/fr/, Switzerland - French
+tw/zh/, Taiwan - Chinese (Traditional)
+th/en/, Thailand - English
+tt/en/, Trinidad and Tobago - English
+tn/fr/, Tunisia - French
+tr/tr/, Turkey - Turkish
+tc/en/, Turks and Caicos Islands - English
+ua/uk/, Ukraine - Ukrainian
+ae/en/, United Arab Emirates - English
+uk/en/, United Kingdom - English
+us/en/, United States - English
+uy/es/, Uruguay - Spanish
+ve/es/, Venezuela - Spanish
+vn/en/, Vietnam - English

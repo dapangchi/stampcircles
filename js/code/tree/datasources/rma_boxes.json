@@ -1,0 +1,7 @@
+{
+   identifier: 'id',
+   label: 'name',
+   items: [
+      { id: 1, name: "Box 1", type:"box", weight:0 }
+   ]
+}

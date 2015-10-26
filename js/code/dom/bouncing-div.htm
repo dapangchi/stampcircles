@@ -1,0 +1,60 @@
+<!-- START:snip1 -->
+<html>
+<head>
+  <title>
+    Mastering Dojo - DOM Utilities - Bouncing DIV
+  </title>
+
+  <style type="text/css">
+    #ball {
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      background-color: blue;
+    }
+  </style>
+
+  <script 
+    type="text/javascript" 
+    src="/dojoroot/dojo/dojo.js" 
+    djConfig="isDebug: true">
+  </script>
+
+  <script type="text/javascript">
+    var currentPosition= 0;
+    var leftToRight= true;
+    
+    function moveNode(){
+      //get the ball node
+      var ball= dojo.byId("ball");
+      
+      //move it
+      (leftToRight ? currentPosition++ : currentPosition--);
+      dojo.marginBox(ball, {l: currentPosition});
+      
+      ///twiddle leftToRight if about to go off the end
+      var containerBox= dojo.marginBox("frame");
+      var ballBox= dojo.marginBox(ball);
+      if (leftToRight) {
+        if (currentPosition+ballBox.w-1 > containerBox.l+containerBox.w) {
+            leftToRight= false;
+        }
+      } else {
+        if (currentPosition < containerBox.l) {
+            leftToRight= true;
+        }
+      }
+    }
+    
+    dojo.addOnLoad(function(){
+      window.setInterval(moveNode, 20);
+    });
+  </script>
+</head>
+<body>
+  <div id="frame">
+    <p id="ball"></p> 
+  </div>
+</body>
+</html>
+<!-- END:snip1 -->

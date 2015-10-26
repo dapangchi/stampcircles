@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<!-- saved from url=(0088)http://closure-library.googlecode.com/svn/trunk/closure/goog/ui/buttonrenderer_test.html -->
+<HTML><!--
+Copyright 2008 Google Inc. All Rights Reserved.
+
+
+--><HEAD><META http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+  <TITLE>Closure Unit Tests - goog.ui.ButtonRenderer</TITLE>
+  <SCRIPT src="./Closure Unit Tests - goog.ui.ButtonRenderer_files/base.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.ButtonRenderer_files/deps.js"></SCRIPT>
+  <SCRIPT>
+    goog.require('goog.dom.a11y');
+    goog.require('goog.dom.a11y.Role');
+    goog.require('goog.dom.a11y.State');
+    goog.require('goog.dom.classes');
+    goog.require('goog.style');
+    goog.require('goog.testing.ExpectedFailures');
+    goog.require('goog.testing.jsunit');
+    goog.require('goog.testing.ui.rendererasserts');
+    goog.require('goog.ui.Button');
+    goog.require('goog.ui.ButtonRenderer');
+  </SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.ButtonRenderer_files/array.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.ButtonRenderer_files/tagname.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.ButtonRenderer_files/classes.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.ButtonRenderer_files/coordinate.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.ButtonRenderer_files/size.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.ButtonRenderer_files/object.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.ButtonRenderer_files/string.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.ButtonRenderer_files/useragent.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.ButtonRenderer_files/dom.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.ButtonRenderer_files/a11y.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.ButtonRenderer_files/box.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.ButtonRenderer_files/rect.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.ButtonRenderer_files/product.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.ButtonRenderer_files/style.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.ButtonRenderer_files/relativetimeprovider.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.ButtonRenderer_files/formatter.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.ButtonRenderer_files/structs.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.ButtonRenderer_files/iter.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.ButtonRenderer_files/map.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.ButtonRenderer_files/set.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.ButtonRenderer_files/debug.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.ButtonRenderer_files/logrecord.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.ButtonRenderer_files/logger.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.ButtonRenderer_files/divconsole.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.ButtonRenderer_files/errorhandlerweakdep.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.ButtonRenderer_files/disposable.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.ButtonRenderer_files/event.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.ButtonRenderer_files/browserevent.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.ButtonRenderer_files/eventwrapper.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.ButtonRenderer_files/listener.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.ButtonRenderer_files/simplepool.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.ButtonRenderer_files/jscript.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.ButtonRenderer_files/pools.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.ButtonRenderer_files/events.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.ButtonRenderer_files/stacktrace.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.ButtonRenderer_files/asserts.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.ButtonRenderer_files/testcase.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.ButtonRenderer_files/expectedfailures.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.ButtonRenderer_files/testrunner.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.ButtonRenderer_files/jsunit.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.ButtonRenderer_files/rendererasserts.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.ButtonRenderer_files/keycodes.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.ButtonRenderer_files/eventhandler.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.ButtonRenderer_files/eventtarget.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.ButtonRenderer_files/idgenerator.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.ButtonRenderer_files/component.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.ButtonRenderer_files/controlcontent.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.ButtonRenderer_files/controlrenderer.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.ButtonRenderer_files/buttonrenderer.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.ButtonRenderer_files/keyhandler.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.ButtonRenderer_files/registry.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.ButtonRenderer_files/decorate.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.ButtonRenderer_files/control.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.ButtonRenderer_files/nativebuttonrenderer.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.ButtonRenderer_files/button.js"></SCRIPT>
+<STYLE>.dbg-sev{color:#F00}.dbg-w{color:#C40}.dbg-sh{font-weight:bold;color:#000}.dbg-i{color:#444}.dbg-f{color:#999}.dbg-ev{color:#0A0}.dbg-m{color:#990}.logmsg{border-bottom:1px solid #CCC;padding:2px}.logsep{background-color: #8C8;}.logdiv{border:1px solid #CCC;background-color:#FCFCFC;font:medium monospace}</STYLE></HEAD><BODY>
+  <DIV id="sandbox"></DIV>
+  <SCRIPT>
+    var button, buttonRenderer, testRenderer;
+    var sandbox = goog.dom.$('sandbox');
+    var expectedFailures = new goog.testing.ExpectedFailures();
+    
+    /**
+     * A subclass of ButtonRenderer that overrides
+     * {@code getStructuralCssClass} for testing purposes.
+     * @constructor
+     * @extends {goog.ui.ControlRenderer}
+     */
+    function TestRenderer() {
+      goog.ui.ButtonRenderer.call(this);
+    };
+    goog.inherits(TestRenderer, goog.ui.ButtonRenderer);
+    goog.addSingletonGetter(TestRenderer);
+
+    /** {@inheritDoc} */
+    TestRenderer.prototype.getStructuralCssClass = function() {
+      return 'goog-base';
+    };
+
+    function setUp() {
+      buttonRenderer = goog.ui.ButtonRenderer.getInstance();
+      button = new goog.ui.Button('Hello', buttonRenderer);
+      testRenderer = TestRenderer.getInstance();
+    }
+
+    function tearDown() {
+      button.dispose();
+      goog.dom.removeChildren(sandbox);
+      expectedFailures.handleTearDown();
+    }
+
+    function testConstructor() {
+      assertNotNull('ButtonRenderer singleton instance must not be null',
+          buttonRenderer);
+    }
+
+    function testGetAriaRole() {
+      assertEquals('ButtonRenderer\'s ARIA role must have expected value',
+          goog.dom.a11y.Role.BUTTON, buttonRenderer.getAriaRole());
+    }
+
+    function testCreateDom() {
+      var element = buttonRenderer.createDom(button);
+      assertNotNull('Element must not be null', element);
+      assertEquals('Element must be a DIV', 'DIV', element.tagName);
+      assertHTMLEquals('Element must have expected structure',
+          '<div class="goog-button">Hello</div>',
+          goog.dom.getOuterHtml(element));
+
+      button.setTooltip('Hello, world!');
+      button.setValue('foo');
+      element = buttonRenderer.createDom(button);
+      assertNotNull('Element must not be null', element);
+      assertEquals('Element must be a DIV', 'DIV', element.tagName);
+      assertSameElements('Element must have expected class name',
+          ['goog-button'], goog.dom.classes.get(element));
+      assertEquals('Element must have expected title', 'Hello, world!',
+          element.title);
+      assertUndefined('Element must have no value', element.value);
+      assertEquals('Element must have expected contents', 'Hello',
+          element.innerHTML);
+
+      button.setSupportedState(goog.ui.Component.State.CHECKED, true);
+      var element = buttonRenderer.createDom(button);
+      if (goog.userAgent.GECKO) {
+        assertEquals('button\'s aria-pressed attribute must be false', 'false',
+            goog.dom.a11y.getState(element, goog.dom.a11y.State.PRESSED));
+      } else {
+        assertEquals('button\'s aria-pressed attribute must not be set', '',
+            goog.dom.a11y.getState(element, goog.dom.a11y.State.PRESSED));
+      }
+    }
+
+    function testDecorate() {
+      sandbox.innerHTML =
+          '<div id="foo">Foo</div>\n' +
+          '<div id="bar" title="Hello, world!">Bar</div>\n' +
+          '<div id="toggle">Toggle</div>';
+
+      var foo = new goog.ui.Button(null, buttonRenderer);
+      foo.decorate(goog.dom.$('foo'));
+      assertEquals('foo\'s tooltip must be the empty string', '',
+          foo.getTooltip());
+      foo.dispose();
+
+      var bar = new goog.ui.Button(null, buttonRenderer);
+      bar.decorate(goog.dom.$('bar'));
+      assertEquals('bar\'s tooltip must be initialized', 'Hello, world!',
+          bar.getTooltip());
+      bar.dispose();
+
+      var toggle = new goog.ui.Button(null, buttonRenderer);
+      toggle.setSupportedState(goog.ui.Component.State.CHECKED, true);
+      var element = goog.dom.$('toggle');
+      toggle.decorate(element);
+      if (goog.userAgent.GECKO) {
+        assertEquals('toggle\'s aria-pressed attribute must be false', 'false',
+            goog.dom.a11y.getState(element, goog.dom.a11y.State.PRESSED));
+      } else {
+        assertEquals('toggle\'s aria-pressed attribute must not be set', '',
+            goog.dom.a11y.getState(element, goog.dom.a11y.State.PRESSED));
+      }
+      toggle.dispose();
+    }
+    
+    function testCollapse() {
+      buttonRenderer.setCollapsed(button, goog.ui.Button.Side.START);
+      assertSameElements('Button should have class to collapse start',
+          ['goog-button-collapse-left'], button.getExtraClassNames());
+      buttonRenderer.setCollapsed(button, goog.ui.Button.Side.END);
+      assertSameElements('Button should have class to collapse end',
+          ['goog-button-collapse-right'], button.getExtraClassNames());
+      buttonRenderer.setCollapsed(button, goog.ui.Button.Side.BOTH);
+      assertSameElements('Button should have classes to collapse both',
+          ['goog-button-collapse-left', 'goog-button-collapse-right'],
+          button.getExtraClassNames());
+    }
+    
+    function testCollapseRtl() {
+      button.setRightToLeft(true);
+      buttonRenderer.setCollapsed(button, goog.ui.Button.Side.START);
+      assertSameElements('Button should have class to collapse start',
+          ['goog-button-collapse-right'], button.getExtraClassNames());
+      buttonRenderer.setCollapsed(button, goog.ui.Button.Side.END);
+      assertSameElements('Button should have class to collapse end',
+          ['goog-button-collapse-left'], button.getExtraClassNames());
+      buttonRenderer.setCollapsed(button, goog.ui.Button.Side.BOTH);
+      assertSameElements('Button should have classes to collapse both',
+          ['goog-button-collapse-left', 'goog-button-collapse-right'],
+          button.getExtraClassNames());
+    }
+    
+    function testCollapseWithStructuralClass() {
+      testRenderer.setCollapsed(button, goog.ui.Button.Side.BOTH);
+      assertSameElements('Should use structural class for collapse classes',
+          ['goog-base-collapse-left', 'goog-base-collapse-right'],
+          button.getExtraClassNames());
+    }
+
+    function testUpdateAriaState() {
+      var element = buttonRenderer.createDom(button);
+      buttonRenderer.updateAriaState(element, goog.ui.Component.State.CHECKED,
+          true);
+      if (goog.userAgent.GECKO) {
+        assertEquals('On Gecko, button must have pressed ARIA state', 'true',
+            goog.dom.a11y.getState(element, goog.dom.a11y.State.PRESSED));
+      } else {
+        assertEquals('On non-Gecko, control must not have ARIA state', '',
+            goog.dom.a11y.getState(element, goog.dom.a11y.State.PRESSED));
+      }
+
+      // Test for updating a state other than CHECKED
+      buttonRenderer.updateAriaState(element, goog.ui.Component.State.DISABLED,
+          true);
+      if (goog.userAgent.GECKO) {
+        assertEquals('On Gecko, button must have disabled ARIA state', 'true',
+            goog.dom.a11y.getState(element, goog.dom.a11y.State.DISABLED));
+      } else {
+        assertEquals('On non-Gecko, control must not have ARIA state', '',
+            goog.dom.a11y.getState(element, goog.dom.a11y.State.DISABLED));
+      }
+
+      buttonRenderer.updateAriaState(element, goog.ui.Component.State.CHECKED,
+          false);
+      if (goog.userAgent.GECKO) {
+        assertEquals('On Gecko, control must no longer have pressed ARIA state',
+            'false',
+            goog.dom.a11y.getState(element, goog.dom.a11y.State.PRESSED));
+      } else {
+        assertEquals('On non-Gecko, control must not have ARIA state', '',
+            goog.dom.a11y.getState(element, goog.dom.a11y.State.PRESSED));
+      }
+    }
+
+    function testDoesntCallGetCssClassInConstructor() {
+      goog.testing.ui.rendererasserts.
+          assertNoGetCssClassCallsInConstructor(goog.ui.ButtonRenderer);
+    }
+
+  </SCRIPT><DIV style="position: absolute; border-top-width: 1px; border-right-width: 1px; border-bottom-width: 1px; border-left-width: 1px; border-top-style: solid; border-right-style: solid; border-bottom-style: solid; border-left-style: solid; border-top-color: rgb(51, 51, 51); border-right-color: rgb(51, 51, 51); border-bottom-color: rgb(51, 51, 51); border-left-color: rgb(51, 51, 51); right: 10px; top: 10px; width: 400px; display: none; " class=" logdiv"><DIV style="position: absolute; border-left-width: 1px; border-left-style: solid; border-left-color: rgb(51, 51, 51); border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: rgb(51, 51, 51); right: 0px; top: 0px; width: 1em; height: 1em; cursor: pointer; background-color: rgb(204, 221, 238); text-align: center; color: black; ">X</DIV></DIV>
+
+
+<DIV><DIV style="color: rgb(0, 100, 0); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; font-weight: bold; ">Closure Unit Tests - goog.ui.ButtonRenderer [PASSED]</DIV><DIV style="color: rgb(51, 51, 51); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; font-weight: bold; ">closure-library.googlecode.com/svn/trunk/closure/goog/ui/buttonrenderer_test.html</DIV><DIV style="color: rgb(51, 51, 51); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">9 of 9 tests run in 28ms.</DIV><DIV style="color: rgb(51, 51, 51); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">9 passed, 0 failed.</DIV><DIV style="color: rgb(51, 51, 51); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">3 ms/test. 57 files loaded.</DIV><DIV style="color: rgb(51, 51, 51); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">.</DIV><DIV style="color: rgb(51, 51, 51); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">10:11:45.883  Start</DIV><DIV style="color: rgb(0, 100, 0); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">10:11:45.887  testCollapse : PASSED</DIV><DIV style="color: rgb(0, 100, 0); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">10:11:45.889  testCollapseRtl : PASSED</DIV><DIV style="color: rgb(0, 100, 0); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">10:11:45.890  testCollapseWithStructuralClass : PASSED</DIV><DIV style="color: rgb(0, 100, 0); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">10:11:45.890  testConstructor : PASSED</DIV><DIV style="color: rgb(0, 100, 0); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">10:11:45.894  testCreateDom : PASSED</DIV><DIV style="color: rgb(0, 100, 0); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">10:11:45.908  testDecorate : PASSED</DIV><DIV style="color: rgb(0, 100, 0); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">10:11:45.909  testDoesntCallGetCssClassInConstructor : PASSED</DIV><DIV style="color: rgb(0, 100, 0); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">10:11:45.910  testGetAriaRole : PASSED</DIV><DIV style="color: rgb(0, 100, 0); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">10:11:45.911  testUpdateAriaState : PASSED</DIV><DIV style="color: rgb(51, 51, 51); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">10:11:45.911  Done</DIV><DIV style="color: rgb(51, 51, 51); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; "> </DIV><A style="display: block; font-size: small; " href="">Run again without reloading</A></DIV></BODY></HTML>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<!-- saved from url=(0082)http://closure-library.googlecode.com/svn/trunk/closure/goog/math/bezier_test.html -->
+<HTML><!--
+  Copyright 2007 Google Inc. All Rights Reserved.
+--><HEAD><META http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<TITLE>Closure Unit Tests - goog.math.Bezier</TITLE>
+<SCRIPT src="./Closure Unit Tests - goog.math.Bezier_files/base.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.math.Bezier_files/deps.js"></SCRIPT>
+<SCRIPT>
+  goog.require('goog.math.Bezier');
+  goog.require('goog.testing.jsunit');
+</SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.math.Bezier_files/array.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.math.Bezier_files/coordinate.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.math.Bezier_files/box.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.math.Bezier_files/range.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.math.Bezier_files/size.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.math.Bezier_files/rect.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.math.Bezier_files/math.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.math.Bezier_files/bezier.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.math.Bezier_files/stacktrace.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.math.Bezier_files/asserts.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.math.Bezier_files/testcase.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.math.Bezier_files/testrunner.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.math.Bezier_files/jsunit.js"></SCRIPT>
+</HEAD><BODY>
+<SCRIPT>
+
+  function testEquals() {
+    var input = new goog.math.Bezier(1, 2, 3, 4, 5, 6, 7, 8);
+
+    assert(input.equals(input));
+  }
+
+  function testClone() {
+    var input = new goog.math.Bezier(1, 2, 3, 4, 5, 6, 7, 8);
+
+    assertNotEquals('Clone returns a new object', input, input.clone())
+    assert('Contents of clone match original', input.equals(input.clone()));
+  }
+
+  function testFlip() {
+    var input = new goog.math.Bezier(1, 1, 2, 2, 3, 3, 4, 4);
+    var compare = new goog.math.Bezier(4, 4, 3, 3, 2, 2, 1, 1);
+
+    var flipped = input.clone();
+    flipped.flip();
+    assert('Flipped behaves as expected', compare.equals(flipped));
+
+    flipped.flip();
+    assert('Flipping twice gives original', input.equals(flipped));
+  }
+
+  function testGetPoint() {
+    var input = new goog.math.Bezier(0, 1, 1, 2, 2, 3, 3, 4);
+
+    assert(goog.math.Coordinate.equals(input.getPoint(0),
+        new goog.math.Coordinate(0, 1)));
+    assert(goog.math.Coordinate.equals(input.getPoint(1),
+        new goog.math.Coordinate(3, 4)));
+    assert(goog.math.Coordinate.equals(input.getPoint(0.5),
+        new goog.math.Coordinate(1.5, 2.5)));
+  }
+
+  function testSubdivide() {
+    var input = new goog.math.Bezier(0, 1, 1, 2, 2, 3, 3, 4);
+
+    input.subdivide(1/3, 2/3);
+
+    assert(goog.math.nearlyEquals(1, input.x0));
+    assert(goog.math.nearlyEquals(2, input.y0));
+    assert(goog.math.nearlyEquals(2, input.x3));
+    assert(goog.math.nearlyEquals(3, input.y3));    
+  }
+  
+</SCRIPT>
+
+
+<DIV><DIV style="color: rgb(0, 100, 0); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; font-weight: bold; ">Closure Unit Tests - goog.math.Bezier [PASSED]</DIV><DIV style="color: rgb(51, 51, 51); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; font-weight: bold; ">closure-library.googlecode.com/svn/trunk/closure/goog/math/bezier_test.html</DIV><DIV style="color: rgb(51, 51, 51); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">5 of 5 tests run in 5ms.</DIV><DIV style="color: rgb(51, 51, 51); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">5 passed, 0 failed.</DIV><DIV style="color: rgb(51, 51, 51); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">1 ms/test. 15 files loaded.</DIV><DIV style="color: rgb(51, 51, 51); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">.</DIV><DIV style="color: rgb(51, 51, 51); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">18:51:58.890  Start</DIV><DIV style="color: rgb(0, 100, 0); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">18:51:58.900  testClone : PASSED</DIV><DIV style="color: rgb(0, 100, 0); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">18:51:58.900  testEquals : PASSED</DIV><DIV style="color: rgb(0, 100, 0); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">18:51:58.900  testFlip : PASSED</DIV><DIV style="color: rgb(0, 100, 0); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">18:51:58.910  testGetPoint : PASSED</DIV><DIV style="color: rgb(0, 100, 0); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">18:51:58.920  testSubdivide : PASSED</DIV><DIV style="color: rgb(51, 51, 51); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">18:51:58.930  Done</DIV><DIV style="color: rgb(51, 51, 51); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; "> </DIV><A style="display: block; font-size: small; " href="">Run again without reloading</A></DIV></BODY></HTML>

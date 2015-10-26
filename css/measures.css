@@ -1,0 +1,436 @@
+/* 
+Document   : measures
+console and pre styling
+important for styling
+*/
+.exists{color:yellow}
+.hidden{display:none}
+.msg{margin-bottom:15px;width:90%;background:#fff;margin-top:15px}
+.cell{float:left;border:1px solid #bebebe;width:30px;height:30px;font-size:12px;font-weight:bold}
+.cell span{margin:0 auto;display:block;float:none}
+.container{width:130px}
+.prime{background:#000;color:#fff}
+.min-height{min-height:100px;background:#fff;padding:20px}
+.bar {cursor:pointer;border:1px solid #bebebe;
+    width:90%;height:20px;
+    margin-bottom:2px;
+}
+.legend{color:#fff;font-size:9px}
+
+
+#toctitle{width:97%;margin:0;padding:0;}
+.toctext{font-size:12px;line-height:normal}
+.tright,.tleft{float:right;margin-left:7px;border:1px solid #bebebe;padding:2px}
+.thumbcaption{font-size:11px;font-family:arial}
+
+
+/*powerset bullets */
+
+ul.bullets {line-height:1.6em;font-size:.85em;display:inline}
+ul.bullets li{display:inline;}
+
+samp{font-family:inherit;font-weight:bold;}
+
+.sidenote, .side{font-size:18px;font-weight:bold;width:23%;float:right;margin-left:8px}
+
+.figright{float:right}
+.figleft{float:left}
+.figcenter img{float:right;margin-left:8px}
+.pagebound img{width:98%}
+
+.highlight{background:#ffffcc}
+
+#demo, #demo-box{width:100px;height:100px}
+
+
+
+
+
+
+#test, ol {
+    list-style-image: url(images/arrow.gif);
+    padding: 0 0 0 18px;
+    margin: 8px 0 12px 20px;
+    width:130px;
+    margin-left:20px;
+
+
+}
+
+ol li {
+    padding: 0;
+    margin: 0 10px 6px 20px;
+}
+
+ol li p {
+    margin-left: 0;
+    margin-right: 0;
+}
+
+
+
+.comment {color:rgb(0,120,0);
+}
+
+
+.lineComment{color:rgb(0,120,0)}
+
+ol.results{width:85%;font-size:12px;font-family:verdana;
+}
+
+
+.modal-dialog-bg {
+    position: absolute;
+    background-color: #666;
+    top: 0;
+    left: 0;
+}
+
+.modal-dialog {
+    position: absolute;
+    padding: 5px;
+    background-color: #bcf;
+    border: 1px solid #000;
+    font-family: arial, sans-serif;
+    width: 475px;
+    color: #000;
+    outline: none;
+}
+
+.modal-dialog a,
+.modal-dialog a:link,
+.modal-dialog a:visited  {
+    color: #0066cc;
+    cursor: pointer;
+}
+
+.modal-dialog-title {
+    position: relative;
+    background-color: #ebeff9;
+    color: #000000;
+    padding: 10px 15px;
+    font-size: 16px;
+    font-weight: bold;
+    vertical-align: middle;
+    cursor: pointer;
+    cursor: hand;
+}
+
+.modal-dialog-title-close {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    width: 15px;
+    height: 16px;
+    background: url("../images/dialog_close_box.gif") no-repeat center;
+    cursor: default;
+}
+
+.modal-dialog-content {
+    padding: 15px;
+    font-size: 90%;
+    background-color: #fff;
+}
+
+.modal-dialog-buttons {
+    padding: 0 15px 15px;
+    background-color: #fff;
+}
+
+.goog-buttonset-default {
+    font-weight: bold;
+}
+
+
+
+#test {
+    height: 20px;
+    width:auto;
+}
+
+label {
+    padding-left: 5px;
+    font: normal 13px/20px arial;
+    color: #999;
+}
+
+
+.goog-ratings {
+    display: block;
+    float: left;
+    height: 20px;
+    height: 20px;
+}
+
+.goog-ratings-star {
+    display: block;
+    float: left;
+    width:19px;
+    height: 19px;
+    cursor: pointer;
+    background:url('http://localhost/codeigniter/images/ico_star_red.gif' );
+    background-repeat: no-repeat;
+    margin:1px;
+    border:1px solid #bebebe;
+}
+
+.goog-ratings-firststar-off {
+    padding-left: 20px;
+    background-position: 0px 0px;
+}
+
+.goog-ratings-firststar-on {
+    padding-left: 20px;
+    background-position: 0px -20px;
+}
+
+.goog-ratings-midstar-off {
+    background-position: 0px -40px;
+}
+
+.goog-ratings-midstar-on {
+    background-position: 0px -60px;
+}
+
+.goog-ratings-laststar-off {
+    padding-left: 18px;
+    background-position: 0px -80px;
+}
+
+.goog-ratings-laststar-on {
+    padding-left: 18px;
+    background-position: 0px -100px;
+}
+
+
+#star {
+    display: block;
+    width:19px;
+    height: 19px;
+    cursor: pointer;
+    background:url('http://localhost/codeigniter/images/ico_star_red.gif' );
+    background-repeat: no-repeat;
+    margin:1px;
+    border:1px solid #bebebe;
+}
+#star:hover{width:25px}
+
+
+
+
+.bg{background:url('http://localhost/codeigniter/images/code-bg.gif') repeat;
+    border:1px solid #ececec;padding:10px }
+
+code{white-space:pre;display:block;
+}
+
+#feature a:link, a:visited, a:hover{text-decoration:underline;color:rgb(188,29,29)}
+#feature a:hover{text-decoration:none}
+
+.icon {
+    width: 11px;
+    height: 11px;
+    background-image: url(/codeigniter/js/goog/images/offlineicons.png);
+}
+
+.icon_1 {
+    width: 50px;
+    height: 70px;
+    background-image: url(/codeigniter/images/running.png);
+    border:1px solid #bebebe
+}
+
+
+#test1,
+#test3 {
+    background-position: 0 -11px;
+}
+
+#test2 {
+    background-position: 0 -11px;
+}
+
+#test_1,
+#test_3 {
+    background-position: 0 0;
+}
+
+#test_2 {
+    background-position: 0 0;
+}
+
+#feedback img, #feedback_form_wrapper {
+    position: fixed;
+    left: 0%;
+    top: 100%;
+    margin-top:-200px;
+    cursor: pointer;
+}
+
+#feedback_form_wrapper {
+    background-color: rgb(85,85,85);
+    width: 200px;
+    height: 310px;
+    color: #fff;
+    text-align: left;
+    font-weight: bold;
+    margin-top:-350px;
+}
+
+#feedback_form_wrapper a {
+    padding: 3px 0px 0px 5px;
+    float: left;
+    font-size: 0.85em;
+}
+
+* html #feedback img, * html #feedback_form_wrapper {
+    position: absolute;
+}
+
+#feedback input.email, #feedback select, #feedback textarea {
+    width: 184px;
+    border: none;
+}
+
+#feedback input.input_submit_button {
+    float: right;
+    background-color: #fff;
+    color: #000;
+    border-width: 0px;
+}
+
+#feedback input.input_submit_button:hover, #feedback input.input_submit_button:active {
+    background-color: #000;
+    color: #fff;
+}
+
+/* UI DEMOS SLIDERS        */
+#container {
+    width:426px; height:180px; position:relative;
+    font:bold 13px Georgia; padding:20px 20px 0;
+    color:rgb(0,0,255);
+    background:rgb(102,102,102);
+}
+#container label {
+    float:left; text-align:right; margin:0 30px 26px 0;
+    clear:left;
+}
+.ui-slider { width:240px; float:left; }
+.ui-slider-handle { width:15px; height:10px; }
+
+#colorBox {width:90px; height:90px; margin:0 auto;
+    background:rgb(255,255,255);
+}
+
+#container #outputLabel {
+    float:right; margin:-14px 10px 0 0;
+}
+#output {
+    width:100px; text-align:center; float:right; clear:both;
+    margin-top:-17px;
+}
+
+
+
+
+
+
+
+/* tweets */
+
+.tweet
+{
+    display: block;
+    background: #333;
+    clear: both;
+    padding: .6em;
+    margin: .3em;
+    overflow: hidden;
+}
+.tweet img
+{
+    float: left;
+    margin-right: 1em;
+    border: 2px solid #222;
+    background: #444;
+}
+.tweet p.text
+{
+    margin: 0;
+    padding: 0;
+    padding-left: 70px;
+}
+.monitter
+{
+    float: left;
+    width: 280px;
+    height: 620px;
+    margin: 5px;
+    border: 4px solid #666;
+    background: #666;
+    overflow:hidden;
+}
+#tweets,#tweets2, #tweets3 {
+    background-color:#555;
+    font-family: verdana;
+    font-size: 11px;
+    color: #efefef;
+    border:1px solid #fff;
+}
+
+#tweets a, #tweets2 a, #tweets3 a, #tweets p, #tweets2 p, #tweets3 p{background-color:#555;
+    font-family: verdana;
+    font-size: 11px;
+    color: #efefef;
+    border:1px solid #555;
+}
+
+#tweets textarea, #tweets2 textarea, #tweets3 textarea
+{
+    display: block;
+    width: 400px;
+    height: 80px;
+    padding: 4px;
+    font-size: 11px;
+    background: #fff;
+    color: #ccc;
+
+}
+
+
+
+
+
+
+.div.footnotes a[rev="footnote"] {
+    text-decoration: none;
+    font-size: 90%;
+    width:100%;
+}
+
+li {
+    display: list-item;
+    text-align: -webkit-match-parent;
+}
+
+
+
+
+
+
+hr {background:#fff}
+
+div#pagehead ul#menu li.active{
+    background-color:#fafafa;}
+div#pagehead ul#menu li.active a:link{color:#666}
+
+div#pagehead ul#menu li.active a:visited{color:#666}
+div#pagehead ul#menu li.active a:hover{color:#fff}
+.S{color:purple}
+
+.cmd {color:blue; font-family:monospace; font-size:inherit}
+.highlight{background:yellow}
+.green{color:green}
+.red{color:#dd0000}
+.yellow{color:#000066}
+

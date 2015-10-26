@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<!-- saved from url=(0092)http://closure-library.googlecode.com/svn/trunk/closure/goog/ui/autocomplete/basic_test.html -->
+<HTML><!--
+  Copyright 2007 Google Inc. All Rights Reserved.
+
+
+  Integration tests for the entire autocomplete package.
+--><HEAD><META http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<TITLE>Closure Unit Tests - goog.ui.AutoComplete</TITLE>
+<SCRIPT src="./Closure Unit Tests - goog.ui.AutoComplete_files/base.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.AutoComplete_files/deps.js"></SCRIPT>
+<SCRIPT>
+  goog.require('goog.testing.jsunit');
+  goog.require('goog.testing.MockClock');
+  goog.require('goog.ui.AutoComplete.Basic');
+</SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.AutoComplete_files/stacktrace.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.AutoComplete_files/asserts.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.AutoComplete_files/testcase.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.AutoComplete_files/testrunner.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.AutoComplete_files/jsunit.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.AutoComplete_files/disposable.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.AutoComplete_files/mockclock.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.AutoComplete_files/array.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.AutoComplete_files/errorhandlerweakdep.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.AutoComplete_files/event.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.AutoComplete_files/string.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.AutoComplete_files/useragent.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.AutoComplete_files/browserevent.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.AutoComplete_files/eventwrapper.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.AutoComplete_files/listener.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.AutoComplete_files/simplepool.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.AutoComplete_files/jscript.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.AutoComplete_files/pools.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.AutoComplete_files/object.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.AutoComplete_files/events.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.AutoComplete_files/eventtarget.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.AutoComplete_files/autocomplete.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.AutoComplete_files/iter.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.AutoComplete_files/arraymatcher.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.AutoComplete_files/timer.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.AutoComplete_files/tagname.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.AutoComplete_files/classes.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.AutoComplete_files/coordinate.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.AutoComplete_files/size.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.AutoComplete_files/dom.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.AutoComplete_files/a11y.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.AutoComplete_files/selection.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.AutoComplete_files/eventhandler.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.AutoComplete_files/keycodes.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.AutoComplete_files/keyhandler.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.AutoComplete_files/inputhandler.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.AutoComplete_files/box.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.AutoComplete_files/rect.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.AutoComplete_files/product.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.AutoComplete_files/style.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.AutoComplete_files/renderer.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.AutoComplete_files/basic.js"></SCRIPT>
+<SCRIPT>
+var autocomplete;
+var data = ['ab', 'aab', 'aaab'];
+var input;
+var mockClock;
+
+function setUpPage() {
+  new goog.ui.AutoComplete.Basic(data, goog.dom.$('user'), true, false);
+}
+
+function setUp() {
+  mockClock = new goog.testing.MockClock(true);
+  input = goog.dom.$('input');
+  input.value = '';
+  autocomplete = new goog.ui.AutoComplete.Basic(data, input, true, false);
+}
+
+function tearDown() {
+  autocomplete.dispose();
+  mockClock.dispose();
+}
+
+//=========================================================================
+// Utility methods
+
+/**
+ * Fire listeners of a given type that are listening to the event's
+ * currentTarget.
+ *
+ * @param {goog.eventsBrowserEvent} event
+ */
+function simulateEvent(event) {
+  goog.events.fireListeners(
+      event.currentTarget, event.type, true, event);
+  goog.events.fireListeners(
+      event.currentTarget, event.type, false, event);
+}
+
+/**
+ * Fire all key event listeners that are listening to the input element.
+ *
+ * @param {number} keyCode The key code.
+ */
+function simulateAllKeyEventsOnInput(keyCode) {
+  var eventTypes = [
+      goog.events.EventType.KEYDOWN,
+      goog.events.EventType.KEYPRESS,
+      goog.events.EventType.KEYUP
+  ];
+
+  goog.array.forEach(eventTypes,
+      function(type) {
+        var event = new goog.events.Event(type, input);
+        event.keyCode = keyCode;
+        simulateEvent(new goog.events.BrowserEvent(event, input));
+      });
+}
+
+/**
+ * @param {string} text
+ * @return {Node} Node whose inner text maches the given text.
+ */
+function findNodeByInnerText(text) {
+  return goog.dom.findNode(document.body,
+      function(node) {
+	try {
+          var display = goog.userAgent.IE ?
+            goog.style.getCascadedStyle(node, 'display') :
+            goog.style.getComputedStyle(node, 'display');
+
+	  return goog.dom.getRawTextContent(node) == text &&
+	      'none' != display && node.nodeType == goog.dom.NodeType.ELEMENT;
+	} catch (e) {
+	  return false;
+	}
+      });
+};
+
+//=========================================================================
+// Tests
+
+/**
+ * Ensure that the display of the autocompleter works.
+ */
+function testBasicDisplay() {
+  simulateAllKeyEventsOnInput(goog.events.KeyCodes.DOWN);
+
+  input.value = 'a';
+  simulateAllKeyEventsOnInput(goog.events.KeyCodes.A);
+  mockClock.tick(500);
+
+  var nodes = [
+      findNodeByInnerText(data[0]),
+      findNodeByInnerText(data[1]),
+      findNodeByInnerText(data[2])
+  ];
+  assert(!!nodes[0]);
+  assert(!!nodes[1]);
+  assert(!!nodes[2]);
+  assert(goog.style.isUnselectable(nodes[0]));
+  assert(goog.style.isUnselectable(nodes[1]));
+  assert(goog.style.isUnselectable(nodes[2]));
+
+  input.value = 'aa';
+  simulateAllKeyEventsOnInput(goog.events.KeyCodes.A);
+  mockClock.tick(500);
+
+  assertFalse(!!findNodeByInnerText(data[0]));
+  assert(!!findNodeByInnerText(data[1]));
+  assert(!!findNodeByInnerText(data[2]));
+}
+
+/**
+ * Ensure that key navigation with multiple inputs work
+ */
+function testKeyNavigation() {
+  simulateAllKeyEventsOnInput(goog.events.KeyCodes.DOWN);
+
+  input.value = 'c, a';
+  goog.dom.selection.setCursorPosition(input, 'c, a'.length);
+  simulateAllKeyEventsOnInput(goog.events.KeyCodes.A);
+  mockClock.tick(500);
+
+  assert(document.body.innerHTML, !!findNodeByInnerText(data[1]));
+  assert(!!findNodeByInnerText(data[2]));
+
+  var selected = findNodeByInnerText(data[0]);
+  assert(!!selected);
+  assertTrue('Should have new standard active class',
+      goog.dom.classes.has(selected, 'ac-active'));
+  assertTrue('Should have legacy active class',
+      goog.dom.classes.has(selected, 'active'));
+
+  simulateAllKeyEventsOnInput(goog.events.KeyCodes.DOWN);
+  assertFalse(goog.dom.classes.has(
+                  findNodeByInnerText(data[0]), 'ac-active'));
+  assert(goog.dom.classes.has(
+             findNodeByInnerText(data[1]), 'ac-active'));
+
+  simulateAllKeyEventsOnInput(goog.events.KeyCodes.ENTER);
+  assertEquals('c, aab, ', input.value);
+};
+
+/**
+ * Ensure that mouse navigation with multiple inputs works.
+ */
+function testMouseNavigation() {
+  simulateAllKeyEventsOnInput(goog.events.KeyCodes.DOWN);
+
+  input.value = 'c, a';
+  goog.dom.selection.setCursorPosition(input, 'c, a'.length);
+  simulateAllKeyEventsOnInput(goog.events.KeyCodes.A);
+  mockClock.tick(500);
+
+  var secondOption = findNodeByInnerText(data[1]);
+  assert(!!secondOption);
+  var parent = secondOption.parentNode;
+  assertFalse(goog.dom.classes.has(secondOption, 'ac-active'));
+
+  var mouseOver = new goog.events.Event(
+      goog.events.EventType.MOUSEOVER, secondOption);
+  simulateEvent(new goog.events.BrowserEvent(mouseOver, parent));
+  assert(goog.dom.classes.has(secondOption, 'ac-active'));
+
+  var mouseDown = new goog.events.Event(
+      goog.events.EventType.MOUSEDOWN, secondOption);
+  simulateEvent(new goog.events.BrowserEvent(mouseDown, parent));
+  var mouseClick = new goog.events.Event(
+      goog.events.EventType.CLICK, secondOption);
+  simulateEvent(new goog.events.BrowserEvent(mouseClick, parent));
+
+  assertEquals('c, aab, ', input.value);
+}
+
+</SCRIPT>
+</HEAD><BODY id="body">
+  <INPUT type="text" id="input">
+  <INPUT type="text" id="user" value="For manual testing">
+
+
+<DIV><DIV style="color: rgb(0, 100, 0); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; font-weight: bold; ">Closure Unit Tests - goog.ui.AutoComplete [PASSED]</DIV><DIV style="color: rgb(51, 51, 51); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; font-weight: bold; ">closure-library.googlecode.com/svn/trunk/closure/goog/ui/autocomplete/basic_test.html</DIV><DIV style="color: rgb(51, 51, 51); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">3 of 3 tests run in 194ms.</DIV><DIV style="color: rgb(51, 51, 51); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">3 passed, 0 failed.</DIV><DIV style="color: rgb(51, 51, 51); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">65 ms/test. 44 files loaded.</DIV><DIV style="color: rgb(51, 51, 51); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">.</DIV><DIV style="color: rgb(51, 51, 51); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">18:10:47.975  Start</DIV><DIV style="color: rgb(0, 100, 0); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">18:10:48.032  testBasicDisplay : PASSED</DIV><DIV style="color: rgb(0, 100, 0); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">18:10:48.153  testKeyNavigation : PASSED</DIV><DIV style="color: rgb(0, 100, 0); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">18:10:48.168  testMouseNavigation : PASSED</DIV><DIV style="color: rgb(51, 51, 51); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">18:10:48.169  Done</DIV><DIV style="color: rgb(51, 51, 51); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; "> </DIV><A style="display: block; font-size: small; " href="">Run again without reloading</A></DIV></BODY></HTML>

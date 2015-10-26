@@ -1,0 +1,52 @@
+<!-- START:snip3 -->  
+<html>
+<head>
+  <title>
+    Mastering Dojo - Remote Scripting
+  </title>
+  
+  <style type="text/css">
+    @import "/dojoroot/dojo/resources/dojo.css";
+    @import "remote-scripting.css";
+  </style>  
+  
+  <script 
+    type="text/javascript" 
+    src="/dojoroot/dojo/dojo.js" 
+    djConfig="isDebug: true"></script>
+    
+  <!-- 
+    this script contains code to call an example 
+    function and dump the results
+  -->
+  <script 
+    type="text/javascript" 
+    src="remote-scripting-lib.js"></script>
+        
+  <!-- 
+    this script contains all the example functions
+  -->          
+  <script 
+    type="text/javascript" 
+    src="remote-scripting.js"></script>  
+</head>
+<body>
+  <div>
+    <h1>Remote Scripting Exercises</h1>    
+    <form><p>
+      Example Identifier: 
+      <input id="exId" type="text" size="2" maxLength="2" name="exId">
+      <input id="exTrigger" type="submit" name="exTrigger" value="Go!">
+    </p></form>
+  </div>
+  <div>
+    <h1>Result:</h1>
+    <pre id="result"></pre>
+  </div>
+  <div>
+    <h1>Object Dumps:</h1>
+    <div id="objects"></div>
+  </div>
+</body>
+</html>
+<!-- END:snip3 -->

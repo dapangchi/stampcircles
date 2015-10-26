@@ -1,0 +1,127 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!--
+ ! Excerpted from "Mastering Dojo",
+ ! published by The Pragmatic Bookshelf.
+ ! Copyrights apply to this code. It may not be used to create training material, 
+ ! courses, books, articles, and the like. Contact us if you are in doubt.
+ ! We make no guarantees that this code is fit for any purpose. 
+ ! Visit http://www.pragmaticprogrammer.com/titles/rgdojo for more book information.
+-->
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Fine Grained Saving</title>
+    <style type="text/css">
+        @import "/dojoroot/dijit/themes/tundra/tundra.css";
+    </style>
+    <script type="text/javascript" src="/dojoroot/dojo/dojo.js"  djConfig="parseOnLoad: true,isDebug:true"></script>
+    <script type="text/javascript">
+       dojo.require("dojo.parser");
+       dojo.require("dojo.data.ItemFileReadStore");
+       dojo.require("dojo.data.ItemFileWriteStore");
+       dojo.require("dijit.Tree");
+       dojo.require("dijit.layout.BorderContainer");
+       dojo.require("dijit.layout.ContentPane");
+       dojo.require("dijit.form.Button");
+       
+       // This is a dummy counter until the real one is in place.
+       var highestBoxId = 1;
+       
+       // For use in Delete and Rename
+       var lastBoxSelected = null;
+     </script>
+</head>
+<body class="tundra">
+   <div dojoType="dijit.layout.BorderContainer" style="width:600px; height:400px"
+        design="headline"  liveSizing="true">
+        <div dojoType="dijit.layout.ContentPane" region="leading"
+             splitter="true" style="width:200px"
+        >
+           
+           <div dojoType="dojo.data.ItemFileWriteStore" 
+                url="datasources/rma_boxes.json"         
+                jsId="boxJson">
+                <script type="dojo/connect" event="onNew" args="newItem">
+                    dojo.xhrPost({
+                        url: "datasources/rma_boxes.json",
+                        content: {
+                            id: this.getValue(newItem,"id"),
+                            description: this.getValue(newItem,"name"),
+                            operation: "insert"                  
+                        },
+                        timeout: 1000,
+                        error: function() {
+                            alert('Uh oh.  The box wasn\'t saved.');
+                        },
+                        load: function() {
+                            console.debug("new box saved");
+                        }
+                    });
+                </script>
+           </div>
+           
+
+           <div dojoType="dijit.tree.ForestStoreModel" store="boxJson"
+                jsId="boxModel" rootLabel="Boxes"></div> 
+                
+           <div dojoType="dijit.form.Button">
+               Add Box
+               <script type="dojo/method" event="onClick" args="evt">
+                   highestBoxId++;
+                   boxModel.newItem({
+                       id: highestBoxId,
+                       name: "Box "+highestBoxId,
+                       type: "box",
+                       weight:0 
+                   });
+               </script>
+           </div> 
+
+           <div dojoType="dijit.form.Button">
+               Remove Box
+               <script type="dojo/method" event="onClick" args="evt">
+                   if (!lastBoxSelected || !boxJson.isItem(lastBoxSelected)) {
+                       alert('You must select a box first');
+                       return;
+                   }
+                   boxJson.deleteItem(lastBoxSelected);
+               </script>
+           </div> 
+
+           <div dojoType="dijit.form.Button">
+               Rename Box
+               <script type="dojo/method" event="onClick" args="evt">
+                   if (!lastBoxSelected || !boxJson.isItem(lastBoxSelected)) {
+                       alert('You must select a box first');
+                       return;
+                   }
+                   // Low-tech solution.  Would be better as a Dijit Dialog
+                   if (newName = prompt("What would you like to call it?")) {
+                       boxJson.setValue(lastBoxSelected,"name",newName);
+                   }
+               </script>
+           </div> 
+
+           <div dojoType="dijit.Tree" id="boxes"
+                model="boxModel">
+                <script type="dojo/method" event="onClick" args="item">
+                   lastBoxSelected = item;
+                </script>
+           </div>
+        </div>
+
+        <div dojoType="dijit.layout.ContentPane" region="center">
+           <div dojoType="dojo.data.ItemFileReadStore" 
+                url="datasources/order_with_serial.json"         
+                jsId="ordJson"></div>
+    
+           <div dojoType="dijit.tree.ForestStoreModel" store="ordJson"
+                jsId="ordModel" rootLabel="Order"
+                childrenAttrs="line,serial"
+                ></div> 
+    
+           <div dojoType="dijit.Tree" id="ordTree" 
+                model="ordModel" >
+       </div>
+   </div>
+</body></html>        

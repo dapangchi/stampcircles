@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<!-- saved from url=(0083)http://closure-library.googlecode.com/svn/trunk/closure/goog/ui/popupbase_test.html -->
+<HTML><!--
+  Copyright 2008 Google Inc. All Rights Reserved.
+
+--><HEAD><META http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<TITLE>Closure Unit Tests - goog.ui.PopupBase</TITLE>
+<SCRIPT src="./Closure Unit Tests - goog.ui.PopupBase_files/base.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.PopupBase_files/deps.js"></SCRIPT>
+<SCRIPT>
+  goog.require('goog.ui.Popup');
+  goog.require('goog.testing.MockClock');
+  goog.require('goog.testing.events');
+  goog.require('goog.testing.jsunit');
+</SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.PopupBase_files/coordinate.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.PopupBase_files/box.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.PopupBase_files/array.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.PopupBase_files/tagname.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.PopupBase_files/classes.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.PopupBase_files/size.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.PopupBase_files/object.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.PopupBase_files/string.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.PopupBase_files/useragent.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.PopupBase_files/dom.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.PopupBase_files/errorhandlerweakdep.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.PopupBase_files/disposable.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.PopupBase_files/event.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.PopupBase_files/browserevent.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.PopupBase_files/eventwrapper.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.PopupBase_files/listener.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.PopupBase_files/simplepool.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.PopupBase_files/jscript.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.PopupBase_files/pools.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.PopupBase_files/events.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.PopupBase_files/eventtarget.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.PopupBase_files/rect.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.PopupBase_files/product.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.PopupBase_files/style.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.PopupBase_files/positioning.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.PopupBase_files/abstractposition.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.PopupBase_files/absoluteposition.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.PopupBase_files/anchoredposition.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.PopupBase_files/anchoredviewportposition.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.PopupBase_files/clientposition.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.PopupBase_files/viewportclientposition.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.PopupBase_files/viewportposition.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.PopupBase_files/timer.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.PopupBase_files/eventhandler.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.PopupBase_files/keycodes.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.PopupBase_files/popupbase.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.PopupBase_files/popup.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.PopupBase_files/mockclock.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.PopupBase_files/events(1).js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.PopupBase_files/stacktrace.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.PopupBase_files/asserts.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.PopupBase_files/testcase.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.PopupBase_files/testrunner.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.PopupBase_files/jsunit.js"></SCRIPT>
+</HEAD><BODY>
+
+<DIV id="commonAncestor">
+  <DIV id="targetDiv">
+    Mouse and key target
+  </DIV>
+
+  <DIV id="popupDiv" style="visibility: hidden; display: none; ">
+    Popup Contents Here.
+  </DIV>
+</DIV>
+
+<SCRIPT>
+
+var targetDiv = goog.dom.$('targetDiv');
+var popupDiv = goog.dom.$('popupDiv');
+var clock;
+var popup;
+
+function setUp() {
+  popup = new goog.ui.PopupBase(popupDiv);
+  clock = new goog.testing.MockClock(true);
+}
+
+function tearDown() {
+  popup.dispose();
+  clock.uninstall();
+}
+
+function testSetVisible() {
+  popup.setVisible(true);
+  assertEquals('visible', popupDiv.style.visibility);
+  assertEquals('', popupDiv.style.display);
+  popup.setVisible(false);
+  assertEquals('hidden', popupDiv.style.visibility);
+  assertEquals('none', popupDiv.style.display);
+}
+
+function testEscapeDismissal() {
+  popup.setHideOnEscape(true);
+  assertTrue('Sanity check that getHideOnEscape is true when set to true.',
+      popup.getHideOnEscape());
+  popup.setVisible(true);
+  assertFalse('Escape key should be cancelled',
+      goog.testing.events.fireKeySequence(
+          targetDiv, goog.events.KeyCodes.ESC));
+  assertFalse(popup.isVisible());
+}
+
+function testEscapeDismissalCanBeDisabled() {
+  popup.setHideOnEscape(false);
+  popup.setVisible(true);
+  assertTrue('Escape key should be cancelled',
+      goog.testing.events.fireKeySequence(
+          targetDiv, goog.events.KeyCodes.ESC));
+  assertTrue(popup.isVisible());
+}
+
+function testEscapeDismissalIsDisabledByDefault() {
+  assertFalse(popup.getHideOnEscape());
+}
+
+function testEscapeDismissalDoesNotRecognizeOtherKeys() {
+  popup.setHideOnEscape(true);
+  popup.setVisible(true);
+  var eventsPropagated = 0;
+  goog.events.listenOnce(goog.dom.$('commonAncestor'),
+      [goog.events.EventType.KEYDOWN,
+       goog.events.EventType.KEYUP,
+       goog.events.EventType.KEYPRESS],
+      function() {
+        ++eventsPropagated;
+      });
+  assertTrue('Popup should remain visible', popup.isVisible());
+  assertTrue('The key event default action should not be prevented',
+      goog.testing.events.fireKeySequence(
+          targetDiv, goog.events.KeyCodes.A));
+  assertEquals('Keydown, keyup, and keypress should have all propagated',
+      3, eventsPropagated);
+}
+
+function testEscapeDismissalCanBeCancelledByBeforeHideEvent() {
+  popup.setHideOnEscape(true);
+  popup.setVisible(true);
+  var eventsPropagated = 0;
+  goog.events.listenOnce(goog.dom.$('commonAncestor'),
+      goog.events.EventType.KEYDOWN,
+      function() {
+        ++eventsPropagated;
+      });
+  // Make a listener so that we stop hiding with an event handler.
+  goog.events.listenOnce(popup, goog.ui.PopupBase.EventType.BEFORE_HIDE,
+      function(e) {
+        e.preventDefault();
+      });
+  assertEquals('The hide should have been cancelled',
+      true, popup.isVisible());
+  assertTrue('The key event default action should not be prevented',
+      goog.testing.events.fireKeySequence(
+          targetDiv, goog.events.KeyCodes.ESC));
+  assertEquals('Keydown should have all propagated',
+      1, eventsPropagated);
+}
+
+function testEscapeDismissalProvidesKeyTargetAsTargetForHideEvents() {
+  popup.setHideOnEscape(true);
+  popup.setVisible(true);
+  var calls = 0;
+  goog.events.listenOnce(popup,
+      [goog.ui.PopupBase.EventType.BEFORE_HIDE,
+       goog.ui.PopupBase.EventType.HIDE],
+      function(e) {
+        calls++;
+        assertEquals('The key target should be the hide event target',
+            'targetDiv', e.target.id);
+      });
+  goog.testing.events.fireKeySequence(
+      targetDiv, goog.events.KeyCodes.ESC);
+}
+
+function testAutoHide() {
+  popup.setAutoHide(true);
+  popup.setVisible(true);
+  clock.tick(1000); // avoid bouncing
+  goog.testing.events.fireClickSequence(targetDiv);
+  assertFalse(popup.isVisible());
+}
+
+function testAutoHideCanBeDisabled() {
+  popup.setAutoHide(false);
+  popup.setVisible(true);
+  clock.tick(1000); // avoid bouncing
+  goog.testing.events.fireClickSequence(targetDiv);
+  assertTrue('Should not be hidden if auto hide is disabled', popup.isVisible());
+}
+
+function testAutoHideEnabledByDefault() {
+  assertTrue(popup.getAutoHide());
+}
+
+function testCanAddElementDuringBeforeShow() {
+  popup.setElement(null);
+  goog.events.listenOnce(popup, goog.ui.PopupBase.EventType.BEFORE_SHOW,
+      function() {
+        popup.setElement(popupDiv);
+      });
+  popup.setVisible(true);
+  assertTrue('Popup should be shown', popup.isVisible());
+}
+
+function testShowWithNoElementThrowsException() {
+  popup.setElement(null);
+  try {
+    popup.setVisible(true);
+  } catch (e) {
+    assertEquals('Caller must call setElement before trying to show the popup',
+                 e.message);
+    return;
+  }
+  fail('Should have thrown exception');
+}
+
+// TODO: Write better unit tests for click and cross-iframe dismissal.
+
+</SCRIPT>
+
+
+<DIV><DIV style="color: rgb(0, 100, 0); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; font-weight: bold; ">Closure Unit Tests - goog.ui.PopupBase [PASSED]</DIV><DIV style="color: rgb(51, 51, 51); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; font-weight: bold; ">closure-library.googlecode.com/svn/trunk/closure/goog/ui/popupbase_test.html</DIV><DIV style="color: rgb(51, 51, 51); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">12 of 12 tests run in 62ms.</DIV><DIV style="color: rgb(51, 51, 51); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">12 passed, 0 failed.</DIV><DIV style="color: rgb(51, 51, 51); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">5 ms/test. 46 files loaded.</DIV><DIV style="color: rgb(51, 51, 51); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">.</DIV><DIV style="color: rgb(51, 51, 51); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">08:36:32.726  Start</DIV><DIV style="color: rgb(0, 100, 0); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">08:36:32.750  testAutoHide : PASSED</DIV><DIV style="color: rgb(0, 100, 0); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">08:36:32.756  testAutoHideCanBeDisabled : PASSED</DIV><DIV style="color: rgb(0, 100, 0); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">08:36:32.757  testAutoHideEnabledByDefault : PASSED</DIV><DIV style="color: rgb(0, 100, 0); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">08:36:32.759  testCanAddElementDuringBeforeShow : PASSED</DIV><DIV style="color: rgb(0, 100, 0); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">08:36:32.765  testEscapeDismissal : PASSED</DIV><DIV style="color: rgb(0, 100, 0); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">08:36:32.772  testEscapeDismissalCanBeCancelledByBeforeHideEvent : PASSED</DIV><DIV style="color: rgb(0, 100, 0); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">08:36:32.777  testEscapeDismissalCanBeDisabled : PASSED</DIV><DIV style="color: rgb(0, 100, 0); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">08:36:32.783  testEscapeDismissalDoesNotRecognizeOtherKeys : PASSED</DIV><DIV style="color: rgb(0, 100, 0); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">08:36:32.783  testEscapeDismissalIsDisabledByDefault : PASSED</DIV><DIV style="color: rgb(0, 100, 0); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">08:36:32.786  testEscapeDismissalProvidesKeyTargetAsTargetForHideEvents : PASSED</DIV><DIV style="color: rgb(0, 100, 0); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">08:36:32.786  testSetVisible : PASSED</DIV><DIV style="color: rgb(0, 100, 0); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">08:36:32.787  testShowWithNoElementThrowsException : PASSED</DIV><DIV style="color: rgb(51, 51, 51); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">08:36:32.787  Done</DIV><DIV style="color: rgb(51, 51, 51); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; "> </DIV><A style="display: block; font-size: small; " href="">Run again without reloading</A></DIV></BODY></HTML>

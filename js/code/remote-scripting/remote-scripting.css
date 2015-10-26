@@ -1,0 +1,50 @@
+body div {
+  margin-left: .5em;
+}
+pre.error {
+  background-color: yellow;
+}
+table.dumpTable {
+  border-collapse: collapse;
+  margin: .5em;
+}
+table.dumpTable tr td {
+  vertical-align: top;
+}
+table.dumpTable td {
+  border: .1em solid black;
+  padding: .25em;
+}  
+table.level0 {
+  background-color: #FFFFFF;
+}
+table.level1 {
+  background-color: #F7F7F7;
+}     
+table.level2 {
+  background-color: #EFEFEF;
+} 
+table.level3 {
+  background-color: #E7E7E7;
+} 
+table.level4 {
+  background-color: #DFDFDF;
+}
+table.dumpTable {
+  font-weight: bold;
+}
+table.dumpTable .null,
+table.dumpTable .number,
+table.dumpTable .boolean,
+table.dumpTable .string,
+table.dumpTable .function {
+  font-style:italic;
+  font-weight: normal;
+}
+table.dumpTable .truncated {
+  color: red;
+  background-color: yellow;
+}
+form {
+  border: 1px solid black;
+}

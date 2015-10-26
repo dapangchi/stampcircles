@@ -1,0 +1,22 @@
+Penn Parsed Corpora of Historical English
+
+The Penn-Helsinki Parsed Corpus of Middle English, second edition (PPCME2), the Penn-Helsinki Parsed Corpus of Early Modern English (PPCEME) and the Penn Parsed Corpus of Modern British English are syntactically annotated corpora of prose text samples of English from the indicated time periods. Their syntactic annotation (parsing) permits searching, not only for words and word sequences, but also for syntactic structure. The corpora are designed for the use of students and scholars of the history of English, especially the historical syntax of the language, and they are publicly available under the following conditions:
+ 
+The PPCME2 and the PPCEME are currently available on CD-ROM at a charge of $300 for a five-user license for both corpora. 
+The PPCMBE is currently under construction and will be distributed for a modest additional charge when completed. 
+Contact (Anthony Kroch) if site licenses for more than five users are desired. Funds paid for the corpora go toward improving them and increasing them in size. Updates are available at nominal cost to corpus license holders. Instructions for ordering the corpus CD-ROM are posted here.
+
+The Penn Corpora are distributed with a search program CorpusSearch2, written by Beth Randall, and released as open source software. CorpusSearch is also available at its Sourceforge project web site.
+
+    * The PPCME2 was created with the support of the National Science Foundation (Grants BNS89-19701 and SBR95-11368), with supplementary support from the University of Pennsylvania Research Foundation.
+    * The PPCEME was created with the support of the National Endowment for the Humanities (Grant PA23382-99) and the National Science Foundation (Grant BCS99-05488).
+    * The PPCMBE is being created with the support of the National Science Foundation (Grant BCS04-18061). 
+    
+
+The Helsinki Corpus of English Texts: Diachronic and Dialectal is a computerized collection of extracts of continuous text. It is the result of a project commenced in 1984 and directed by Matti Rissanen and Ossi Ihalainen at the University of Helsinki. The Corpus contains a diachronic part covering the period from c. 750 to c. 1700 and a dialect part based on transcripts of interviews with speakers of British rural dialects from the 1970's. The aim of the Corpus is to promote and facilitate the diachronic and dialectal study of English as well as to offer computerized material to those interested in the development and varieties of language. The material is intended for both mainframe and microcomputer use.
+
+The aim of this guide is to help the users of the text files included in the diachronic part of the Corpus. It contains a key to coding conventions, and lists of source references and abbreviated titles to the extracts included. A volume by Rissanen et al. (1993, see Note 3) discusses the principles of compilation and offers a number of pilot studies illustrating the use of the material.
+
+A brief introduction to the overall structure of the diachronic part will precede the list of source texts and the index of abbreviated titles. For the benefit of those interested in dialect material, a concise description of the dialectal part is included. The guide will give information on the character set and coding conventions used in the diachronic part, with practical advice on how to identify examples of data drawn from individual texts.
+
+A number of the sections printed here accompany the Corpus as text files. These sections include Texts and File Names (Part One, Section 2), Character Set (Part One, Section 3.1.), Source Texts (Part Two) and Abbreviated Titles (Part Three). Owing to restrictions set by the lay-out format adopted and the character set used in most mainframe systems, other sections only appear printed in this guide.

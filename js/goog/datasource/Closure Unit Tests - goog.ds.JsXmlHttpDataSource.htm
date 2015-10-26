@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<!-- saved from url=(0101)http://closure-library.googlecode.com/svn/trunk/closure/goog/datasource/jsxmlhttpdatasource_test.html -->
+<HTML><!--
+  Copyright 2008 Google Inc. All Rights Reserved.
+--><HEAD><META http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<TITLE>Closure Unit Tests - goog.ds.JsXmlHttpDataSource</TITLE>
+<SCRIPT src="./Closure Unit Tests - goog.ds.JsXmlHttpDataSource_files/base.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ds.JsXmlHttpDataSource_files/deps.js"></SCRIPT>
+<SCRIPT>
+  goog.require('goog.ds.JsXmlHttpDataSource');
+  goog.require('goog.net.MockXhrLite');
+  goog.require('goog.testing.jsunit');
+  goog.require('goog.testing.TestQueue');
+</SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ds.JsXmlHttpDataSource_files/array.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ds.JsXmlHttpDataSource_files/string.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ds.JsXmlHttpDataSource_files/object.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ds.JsXmlHttpDataSource_files/structs.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ds.JsXmlHttpDataSource_files/iter.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ds.JsXmlHttpDataSource_files/map.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ds.JsXmlHttpDataSource_files/asserts.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ds.JsXmlHttpDataSource_files/utils.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ds.JsXmlHttpDataSource_files/uri.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ds.JsXmlHttpDataSource_files/set.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ds.JsXmlHttpDataSource_files/debug.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ds.JsXmlHttpDataSource_files/logrecord.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ds.JsXmlHttpDataSource_files/logger.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ds.JsXmlHttpDataSource_files/datasource.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ds.JsXmlHttpDataSource_files/expr.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ds.JsXmlHttpDataSource_files/datamanager.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ds.JsXmlHttpDataSource_files/fastdatanode.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ds.JsXmlHttpDataSource_files/errorhandlerweakdep.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ds.JsXmlHttpDataSource_files/disposable.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ds.JsXmlHttpDataSource_files/event.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ds.JsXmlHttpDataSource_files/useragent.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ds.JsXmlHttpDataSource_files/browserevent.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ds.JsXmlHttpDataSource_files/eventwrapper.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ds.JsXmlHttpDataSource_files/listener.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ds.JsXmlHttpDataSource_files/simplepool.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ds.JsXmlHttpDataSource_files/jscript.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ds.JsXmlHttpDataSource_files/pools.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ds.JsXmlHttpDataSource_files/events.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ds.JsXmlHttpDataSource_files/eventtype.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ds.JsXmlHttpDataSource_files/eventtarget.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ds.JsXmlHttpDataSource_files/timer.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ds.JsXmlHttpDataSource_files/json.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ds.JsXmlHttpDataSource_files/errorcode.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ds.JsXmlHttpDataSource_files/xmlhttp.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ds.JsXmlHttpDataSource_files/xhrmonitor.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ds.JsXmlHttpDataSource_files/xhrio.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ds.JsXmlHttpDataSource_files/jsxmlhttpdatasource.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ds.JsXmlHttpDataSource_files/tagname.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ds.JsXmlHttpDataSource_files/classes.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ds.JsXmlHttpDataSource_files/coordinate.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ds.JsXmlHttpDataSource_files/size.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ds.JsXmlHttpDataSource_files/dom.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ds.JsXmlHttpDataSource_files/xml.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ds.JsXmlHttpDataSource_files/xhrio(1).js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ds.JsXmlHttpDataSource_files/mockxhrlite.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ds.JsXmlHttpDataSource_files/stacktrace.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ds.JsXmlHttpDataSource_files/asserts(1).js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ds.JsXmlHttpDataSource_files/testcase.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ds.JsXmlHttpDataSource_files/testrunner.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ds.JsXmlHttpDataSource_files/jsunit.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ds.JsXmlHttpDataSource_files/testqueue.js"></SCRIPT>
+<SCRIPT>
+
+  var TEXT_PREFIX = null;
+  var TEXT_POSTFIX = null;
+
+  var INDEX_OF_URI_ENTRY = 1;
+  var INDEX_OF_CONTENT_ENTRY = 3;
+
+  function setUp() {
+  };
+
+  function tearDown() {
+  };
+
+  function testLoad_WithPostAndQueryDataSet() {
+
+    var USE_POST = true;
+    var dataSource =
+      new goog.ds.JsXmlHttpDataSource("uri", "namne", TEXT_PREFIX, TEXT_POSTFIX, USE_POST);
+
+    var testQueue = new goog.testing.TestQueue();
+    dataSource.xhr_ = new goog.net.MockXhrLite(testQueue);
+
+    var expectedContent = "Some test content";
+    dataSource.setQueryData(expectedContent);
+    dataSource.load();
+
+    assertFalse(testQueue.isEmpty());
+
+    var actualRequest = testQueue.dequeue();
+    assertEquals(expectedContent, actualRequest[INDEX_OF_CONTENT_ENTRY]);
+    assertTrue(testQueue.isEmpty());
+  };
+
+  function testLoad_WithPostAndNoQueryDataSet() {
+
+    var USE_POST = true;
+    var dataSource =
+      new goog.ds.JsXmlHttpDataSource("uri?a=1&b=2", "namne", TEXT_PREFIX, TEXT_POSTFIX, USE_POST);
+
+    var testQueue = new goog.testing.TestQueue();
+    dataSource.xhr_ = new goog.net.MockXhrLite(testQueue);
+
+    dataSource.load();
+
+    assertFalse(testQueue.isEmpty());
+
+    var actualRequest = testQueue.dequeue();
+    assertEquals("a=1&b=2", actualRequest[INDEX_OF_CONTENT_ENTRY].toString());
+    assertTrue(testQueue.isEmpty());
+  };
+
+  function testLoad_WithGet() {
+
+    var USE_GET = false;
+    var expectedUri = "uri?a=1&b=2";
+    var dataSource =
+      new goog.ds.JsXmlHttpDataSource(expectedUri, "namne", TEXT_PREFIX, TEXT_POSTFIX, USE_GET);
+
+    var testQueue = new goog.testing.TestQueue();
+    dataSource.xhr_ = new goog.net.MockXhrLite(testQueue);
+
+    dataSource.load();
+
+    assertFalse(testQueue.isEmpty());
+
+    var actualRequest = testQueue.dequeue();
+    assertEquals(expectedUri, actualRequest[INDEX_OF_URI_ENTRY].toString());
+    assertTrue(testQueue.isEmpty());
+  };
+
+</SCRIPT>
+</HEAD><BODY>
+
+<DIV><DIV style="color: rgb(0, 100, 0); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; font-weight: bold; ">Closure Unit Tests - goog.ds.JsXmlHttpDataSource [PASSED]</DIV><DIV style="color: rgb(51, 51, 51); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; font-weight: bold; ">closure-library.googlecode.com/svn/trunk/closure/goog/datasource/jsxmlhttpdatasource_test.html</DIV><DIV style="color: rgb(51, 51, 51); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">3 of 3 tests run in 21ms.</DIV><DIV style="color: rgb(51, 51, 51); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">3 passed, 0 failed.</DIV><DIV style="color: rgb(51, 51, 51); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">7 ms/test. 53 files loaded.</DIV><DIV style="color: rgb(51, 51, 51); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">.</DIV><DIV style="color: rgb(51, 51, 51); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">09:49:19.881  Start</DIV><DIV style="color: rgb(0, 100, 0); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">09:49:19.897  testLoad_WithGet : PASSED</DIV><DIV style="color: rgb(0, 100, 0); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">09:49:19.900  testLoad_WithPostAndNoQueryDataSet : PASSED</DIV><DIV style="color: rgb(0, 100, 0); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">09:49:19.901  testLoad_WithPostAndQueryDataSet : PASSED</DIV><DIV style="color: rgb(51, 51, 51); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">09:49:19.902  Done</DIV><DIV style="color: rgb(51, 51, 51); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; "> </DIV><A style="display: block; font-size: small; " href="">Run again without reloading</A></DIV></BODY></HTML>

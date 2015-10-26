@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<!-- saved from url=(0082)http://closure-library.googlecode.com/svn/trunk/closure/goog/crypt/crypt_test.html -->
+<HTML><!--
+  Copyright 2008 Google Inc. All Rights Reserved.
+--><HEAD><META http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<TITLE>Closure Unit Tests - goog.crypt</TITLE>
+<SCRIPT src="./Closure Unit Tests - goog.crypt_files/base.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.crypt_files/deps.js"></SCRIPT>
+<SCRIPT>
+  goog.require('goog.crypt');
+  goog.require('goog.testing.jsunit');
+</SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.crypt_files/crypt.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.crypt_files/stacktrace.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.crypt_files/asserts.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.crypt_files/testcase.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.crypt_files/testrunner.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.crypt_files/jsunit.js"></SCRIPT>
+</HEAD><BODY>
+<SCRIPT>
+
+  function testStringToUtf8ByteArray() {
+    // Known encodings taken from Java's String.getBytes("UTF8")
+
+    assertArrayEquals([72, 101, 108, 108, 111, 44, 32, 119, 111, 114, 108, 100],
+        goog.crypt.stringToUtf8ByteArray('Hello, world'));
+
+    assertArrayEquals([87, 119, 70, 115, 77, 100],
+        goog.crypt.stringToUtf8ByteArray('WwFsMd'));
+
+    assertArrayEquals([83, 99, 104, 195, 182, 110],
+        goog.crypt.stringToUtf8ByteArray('Sch\u00f6n'));
+  }
+
+  function testUtf8ByteArrayToString() {
+    // Known encodings taken from Java's String.getBytes("UTF8")
+
+    assertEquals('Hello, world', goog.crypt.utf8ByteArrayToString(
+        [72, 101, 108, 108, 111, 44, 32, 119, 111, 114, 108, 100]));
+
+    assertEquals('WwFsMd', goog.crypt.utf8ByteArrayToString(
+        [87, 119, 70, 115, 77, 100]));
+
+    assertEquals('Sch\u00f6n', goog.crypt.utf8ByteArrayToString(
+        [83, 99, 104, 195, 182, 110]));
+  }
+
+  function testByteArrayToString() {
+    assertEquals('', goog.crypt.byteArrayToString([]));
+    assertEquals('abc', goog.crypt.byteArrayToString([97, 98, 99]));      
+  }
+
+</SCRIPT>
+
+
+<DIV><DIV style="color: rgb(0, 100, 0); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; font-weight: bold; ">Closure Unit Tests - goog.crypt [PASSED]</DIV><DIV style="color: rgb(51, 51, 51); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; font-weight: bold; ">closure-library.googlecode.com/svn/trunk/closure/goog/crypt/crypt_test.html</DIV><DIV style="color: rgb(51, 51, 51); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">3 of 3 tests run in 6ms.</DIV><DIV style="color: rgb(51, 51, 51); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">3 passed, 0 failed.</DIV><DIV style="color: rgb(51, 51, 51); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">2 ms/test. 8 files loaded.</DIV><DIV style="color: rgb(51, 51, 51); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">.</DIV><DIV style="color: rgb(51, 51, 51); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">05:16:56.967  Start</DIV><DIV style="color: rgb(0, 100, 0); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">05:16:56.968  testByteArrayToString : PASSED</DIV><DIV style="color: rgb(0, 100, 0); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">05:16:56.972  testStringToUtf8ByteArray : PASSED</DIV><DIV style="color: rgb(0, 100, 0); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">05:16:56.973  testUtf8ByteArrayToString : PASSED</DIV><DIV style="color: rgb(51, 51, 51); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">05:16:56.973  Done</DIV><DIV style="color: rgb(51, 51, 51); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; "> </DIV><A style="display: block; font-size: small; " href="">Run again without reloading</A></DIV></BODY></HTML>

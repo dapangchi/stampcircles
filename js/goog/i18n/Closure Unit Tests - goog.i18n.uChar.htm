@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<!-- saved from url=(0081)http://closure-library.googlecode.com/svn/trunk/closure/goog/i18n/uchar_test.html -->
+<HTML><!--
+Copyright 2009 Google Inc. All Rights Reserved.
+
+--><HEAD><META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<TITLE>Closure Unit Tests - goog.i18n.uChar</TITLE>
+<META charset="utf-8">
+
+<SCRIPT src="./Closure Unit Tests - goog.i18n.uChar_files/base.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.i18n.uChar_files/deps.js"></SCRIPT>
+<SCRIPT>
+  goog.require('goog.i18n.uChar');
+  goog.require('goog.testing.jsunit');
+</SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.i18n.uChar_files/uchar.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.i18n.uChar_files/stacktrace.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.i18n.uChar_files/asserts.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.i18n.uChar_files/testcase.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.i18n.uChar_files/testrunner.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.i18n.uChar_files/jsunit.js"></SCRIPT>
+</HEAD><BODY>
+<SCRIPT>
+function testToHexString() {
+  var result = goog.i18n.uChar.toHexString('\uD869\uDED6');
+  assertEquals('U+2A6D6', result);
+}
+
+function testPadString() {
+  var result = goog.i18n.uChar.padString_('abc', 4, '0');
+  assertEquals('0abc', result);
+}
+
+function testToCharCode() {
+  var result = goog.i18n.uChar.toCharCode('\uD869\uDED6');
+  assertEquals(0x2A6D6, result);
+}
+
+function testFromCharCode() {
+  var result = goog.i18n.uChar.fromCharCode(0x2A6D6);
+  assertEquals('\uD869\uDED6', result);
+}
+
+function testToName() {
+  var result = goog.i18n.uChar.toName(' ');
+  assertEquals('Space', result);
+}
+
+function testToNameForNumberKey() {
+  var result = goog.i18n.uChar.toName('\u2028');
+  assertEquals('Line Separator', result);
+}
+
+function testToNameForVariationSelector() {
+  var result = goog.i18n.uChar.toName('\ufe00');
+  assertEquals('Variation Selector - 1', result);
+}
+
+function testToNameForVariationSelectorSupp() {
+  var result = goog.i18n.uChar.toName('\uDB40\uDD00');
+  assertEquals('Variation Selector - 17', result);
+}
+
+function testToNameForNull() {
+  var result = goog.i18n.uChar.toName('a');
+  assertNull(result);
+}
+
+</SCRIPT>
+
+
+
+<DIV><DIV style="color: rgb(0, 100, 0); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; font-weight: bold; ">Closure Unit Tests - goog.i18n.uChar [PASSED]</DIV><DIV style="color: rgb(51, 51, 51); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; font-weight: bold; ">closure-library.googlecode.com/svn/trunk/closure/goog/i18n/uchar_test.html</DIV><DIV style="color: rgb(51, 51, 51); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">9 of 9 tests run in 13ms.</DIV><DIV style="color: rgb(51, 51, 51); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">9 passed, 0 failed.</DIV><DIV style="color: rgb(51, 51, 51); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">1 ms/test. 8 files loaded.</DIV><DIV style="color: rgb(51, 51, 51); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">.</DIV><DIV style="color: rgb(51, 51, 51); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">07:36:37.814  Start</DIV><DIV style="color: rgb(0, 100, 0); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">07:36:37.815  testFromCharCode : PASSED</DIV><DIV style="color: rgb(0, 100, 0); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">07:36:37.816  testPadString : PASSED</DIV><DIV style="color: rgb(0, 100, 0); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">07:36:37.817  testToCharCode : PASSED</DIV><DIV style="color: rgb(0, 100, 0); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">07:36:37.818  testToHexString : PASSED</DIV><DIV style="color: rgb(0, 100, 0); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">07:36:37.823  testToName : PASSED</DIV><DIV style="color: rgb(0, 100, 0); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">07:36:37.824  testToNameForNull : PASSED</DIV><DIV style="color: rgb(0, 100, 0); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">07:36:37.825  testToNameForNumberKey : PASSED</DIV><DIV style="color: rgb(0, 100, 0); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">07:36:37.826  testToNameForVariationSelector : PASSED</DIV><DIV style="color: rgb(0, 100, 0); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">07:36:37.826  testToNameForVariationSelectorSupp : PASSED</DIV><DIV style="color: rgb(51, 51, 51); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">07:36:37.826  Done</DIV><DIV style="color: rgb(51, 51, 51); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; "> </DIV><A style="display: block; font-size: small; " href="">Run again without reloading</A></DIV></BODY></HTML>

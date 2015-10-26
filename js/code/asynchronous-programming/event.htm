@@ -1,0 +1,67 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+        "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+  <head>
+    <title>Mastering Dojo - Asynchronous Programming - Event Demo</title>
+    <script 
+      type="text/javascript"
+      djConfig="isDebug:true"
+      src="/dojoroot/dojo/dojo.js"></script>
+    <script 
+      type="text/javascript" 
+      src="event.js"></script>
+    <script type="text/javascript">
+      // START:snip14
+      function handleClick(eventObj){
+        console.log(
+          "Event(" + eventObj.type +
+          ") on DOM node " + eventObj.target.id +
+          "; currentTarget= " + eventObj.currentTarget.id);
+        
+        //eventObj is of type MouseEvent
+        if (eventObj.shiftKey) {
+          //stop bubbling shift-click was pressed.
+          eventObj.stopPropagation();
+        }
+      }
+      
+      function connectExercise() {
+        dojo.connect(dojo.byId("body"), "click", handleClick);
+        dojo.connect(dojo.byId("body-div"), "click", handleClick);
+        dojo.connect(dojo.byId("body-div-p"), "click", handleClick);
+        dojo.connect(dojo.byId("body-div-ol"), "click", handleClick);
+        dojo.connect(dojo.byId("body-div-ol-li-1"), "click", handleClick);
+        dojo.connect(dojo.byId("body-div-ol-li-2"), "click", handleClick);
+        dojo.connect(dojo.byId("body-div-ol-li-3"), "click", handleClick);
+        dojo.connect(dojo.byId("body-div-ol-li-4"), "click", handleClick);
+        dojo.connect(dojo.byId("body-div-ol-li-5"), "click", handleClick);
+      }
+      
+      dojo.addOnLoad(connectExercise);   
+      // END:snip14
+    </script>             
+  </head>
+  <!-- START:snip1 -->
+  <body id="body">
+    <div id="body-div">
+      <p id="body-div-p">
+        Now is the time to understand events!
+      </p>
+      <ol id="body-div-ol">
+        <li id="body-div-ol-li-1">
+          connect/disconnect handlers with dojo.connect/disconnect.
+        </li><li id="body-div-ol-li-2">
+          Handlers are always passed an event-object.
+        </li><li id="body-div-ol-li-3">
+          Don't use "this" to reference the current target.
+        </li><li id="body-div-ol-li-4">
+          Events that can bubble always bubble; events never capture. 
+        </li><li id="body-div-ol-li-5">
+          Keyboard events and associated event objects are fully defined.
+        </li>
+      </ol>
+    </div>
+  </body>
+  <!-- END:snip1 -->
+</html>
+

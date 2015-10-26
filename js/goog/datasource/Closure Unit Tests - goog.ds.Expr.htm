@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<!-- saved from url=(0086)http://closure-library.googlecode.com/svn/trunk/closure/goog/datasource/expr_test.html -->
+<HTML><!--
+  Copyright 2006 Google Inc. All Rights Reserved.
+--><HEAD><META http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<TITLE>Closure Unit Tests - goog.ds.Expr</TITLE>
+<SCRIPT src="./Closure Unit Tests - goog.ds.Expr_files/base.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ds.Expr_files/deps.js"></SCRIPT>
+<SCRIPT>
+  goog.require('goog.ds.JsonDataSource');
+  goog.require('goog.ds.XmlDataSource');
+  goog.require('goog.ds.Expr');
+  goog.require('goog.testing.jsunit');
+</SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ds.Expr_files/array.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ds.Expr_files/string.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ds.Expr_files/object.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ds.Expr_files/structs.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ds.Expr_files/iter.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ds.Expr_files/map.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ds.Expr_files/asserts.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ds.Expr_files/utils.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ds.Expr_files/uri.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ds.Expr_files/tagname.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ds.Expr_files/classes.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ds.Expr_files/coordinate.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ds.Expr_files/size.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ds.Expr_files/useragent.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ds.Expr_files/dom.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ds.Expr_files/set.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ds.Expr_files/debug.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ds.Expr_files/logrecord.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ds.Expr_files/logger.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ds.Expr_files/datasource.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ds.Expr_files/expr.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ds.Expr_files/datamanager.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ds.Expr_files/jsdatasource.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ds.Expr_files/jsondatasource.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ds.Expr_files/xml.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ds.Expr_files/xmlhttp.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ds.Expr_files/xmldatasource.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ds.Expr_files/stacktrace.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ds.Expr_files/asserts(1).js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ds.Expr_files/testcase.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ds.Expr_files/testrunner.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ds.Expr_files/jsunit.js"></SCRIPT>
+<SCRIPT>
+  var jsDs;
+  var jsObj = {
+    Success: true,
+    Errors: [],
+    Body: {
+      Contacts: [
+        {
+          Name: 'John Doe',
+          Email: 'john@gmail.com',
+          EmailCount: 300
+        },
+        {
+          Name: 'Jane Doh',
+          Email: 'jane@gmail.com'
+        },
+        {
+          Name: 'Steve Smith',
+          Email: 'steve@gmail.com',
+          EmailCount: 305
+        },
+        {
+          Name: 'John Smith',
+          Email: 'smith@gmail.com'
+        },
+        {
+          Name: 'Homer Simpson',
+          Email: 'homer@gmail.com'
+        },
+        {
+          Name: 'Bart Simpson',
+          Email: 'bart@gmail.com'
+        }
+      ]
+    }
+	};
+
+  function setUp() {
+    jsDs = new goog.ds.JsDataSource(jsObj, 'JS', null);
+    var dm = goog.ds.DataManager.getInstance();
+    dm.addDataSource(jsDs, true);
+  }
+
+  function testBasicStuff() {
+    assertNotNull('Get Body', goog.ds.Expr.create('$JS/Body').getNode());
+  }
+  
+  function testArrayExpressions() {
+    assertEquals(6, goog.ds.Expr.create('$JS/Body/Contacts/*').getNodes().getCount());
+    assertEquals('John Doe',
+        goog.ds.Expr.create('$JS/Body/Contacts/[0]/Name').getValue());
+    assertEquals(305, goog.ds.Expr.create('$JS/Body/Contacts/[2]/EmailCount').getValue());
+    assertEquals(6, goog.ds.Expr.create('$JS/Body/Contacts/*/count()').getValue());
+    assertEquals(0, goog.ds.Expr.create('$JS/Errors/*/count()').getValue());
+  }
+  
+  function testCommonExpressions() {
+    assertTrue(goog.ds.Expr.create('.').isCurrent_);
+    assertFalse(goog.ds.Expr.create('Bob').isCurrent_);
+    assertTrue(goog.ds.Expr.create('*|text()').isAllChildNodes_);
+    assertFalse(goog.ds.Expr.create('Bob').isAllChildNodes_);
+    assertTrue(goog.ds.Expr.create('@*').isAllAttributes_);
+    assertFalse(goog.ds.Expr.create('Bob').isAllAttributes_);
+    assertTrue(goog.ds.Expr.create('*').isAllElements_);
+    assertFalse(goog.ds.Expr.create('Bob').isAllElements_);
+  }
+  
+  function testIndexExpressions() {
+    assertEquals(goog.ds.Expr.create('node/[5]').getNext().size_, 1);
+    assertEquals(goog.ds.Expr.create('node/[5]').getNext().parts_[0], '[5]');
+  }
+ 
+
+</SCRIPT></HEAD><BODY>
+
+
+<DIV><DIV style="color: rgb(0, 100, 0); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; font-weight: bold; ">Closure Unit Tests - goog.ds.Expr [PASSED]</DIV><DIV style="color: rgb(51, 51, 51); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; font-weight: bold; ">closure-library.googlecode.com/svn/trunk/closure/goog/datasource/expr_test.html</DIV><DIV style="color: rgb(51, 51, 51); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">4 of 4 tests run in 6ms.</DIV><DIV style="color: rgb(51, 51, 51); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">4 passed, 0 failed.</DIV><DIV style="color: rgb(51, 51, 51); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">2 ms/test. 34 files loaded.</DIV><DIV style="color: rgb(51, 51, 51); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">.</DIV><DIV style="color: rgb(51, 51, 51); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">09:48:15.211  Start</DIV><DIV style="color: rgb(0, 100, 0); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">09:48:15.215  testArrayExpressions : PASSED</DIV><DIV style="color: rgb(0, 100, 0); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">09:48:15.216  testBasicStuff : PASSED</DIV><DIV style="color: rgb(0, 100, 0); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">09:48:15.216  testCommonExpressions : PASSED</DIV><DIV style="color: rgb(0, 100, 0); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">09:48:15.217  testIndexExpressions : PASSED</DIV><DIV style="color: rgb(51, 51, 51); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">09:48:15.217  Done</DIV><DIV style="color: rgb(51, 51, 51); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; "> </DIV><A style="display: block; font-size: small; " href="">Run again without reloading</A></DIV></BODY></HTML>

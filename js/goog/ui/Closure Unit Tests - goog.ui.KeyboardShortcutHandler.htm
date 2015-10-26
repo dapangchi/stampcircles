@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<!-- saved from url=(0097)http://closure-library.googlecode.com/svn/trunk/closure/goog/ui/keyboardshortcuthandler_test.html -->
+<HTML><HEAD><META http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+  <!-- Copyright 2008 Google Inc. All Rights Reserved.-->
+<!---->
+  <TITLE>Closure Unit Tests - goog.ui.KeyboardShortcutHandler</TITLE>
+  <SCRIPT src="./Closure Unit Tests - goog.ui.KeyboardShortcutHandler_files/base.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.KeyboardShortcutHandler_files/deps.js"></SCRIPT>
+  <SCRIPT>
+    goog.require('goog.dom');
+    goog.require('goog.ui.KeyboardShortcutHandler');
+    goog.require('goog.testing.MockClock');
+    goog.require('goog.testing.StrictMock');
+    goog.require('goog.testing.events');
+    goog.require('goog.testing.jsunit');
+  </SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.KeyboardShortcutHandler_files/array.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.KeyboardShortcutHandler_files/tagname.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.KeyboardShortcutHandler_files/classes.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.KeyboardShortcutHandler_files/coordinate.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.KeyboardShortcutHandler_files/size.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.KeyboardShortcutHandler_files/object.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.KeyboardShortcutHandler_files/string.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.KeyboardShortcutHandler_files/useragent.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.KeyboardShortcutHandler_files/dom.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.KeyboardShortcutHandler_files/disposable.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.KeyboardShortcutHandler_files/errorhandlerweakdep.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.KeyboardShortcutHandler_files/event.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.KeyboardShortcutHandler_files/browserevent.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.KeyboardShortcutHandler_files/eventwrapper.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.KeyboardShortcutHandler_files/listener.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.KeyboardShortcutHandler_files/simplepool.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.KeyboardShortcutHandler_files/jscript.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.KeyboardShortcutHandler_files/pools.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.KeyboardShortcutHandler_files/events.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.KeyboardShortcutHandler_files/eventtarget.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.KeyboardShortcutHandler_files/timer.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.KeyboardShortcutHandler_files/keycodes.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.KeyboardShortcutHandler_files/keynames.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.KeyboardShortcutHandler_files/keyboardshortcuthandler.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.KeyboardShortcutHandler_files/mockclock.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.KeyboardShortcutHandler_files/stacktrace.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.KeyboardShortcutHandler_files/asserts.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.KeyboardShortcutHandler_files/mockmatchers.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.KeyboardShortcutHandler_files/mock.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.KeyboardShortcutHandler_files/strictmock.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.KeyboardShortcutHandler_files/events(1).js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.KeyboardShortcutHandler_files/testcase.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.KeyboardShortcutHandler_files/testrunner.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.KeyboardShortcutHandler_files/jsunit.js"></SCRIPT>
+</HEAD><BODY>
+  <DIV id="rootDiv">
+    <DIV id="targetDiv" contenteditable="false">The test presses keys on me!</DIV>
+    <INPUT type="text" id="targetTextBox" value="text box">
+    <INPUT type="password" id="targetPassword" value="password">
+    <INPUT type="checkbox" id="targetCheckBox">
+    <TEXTAREA id="targetTextArea">text area</TEXTAREA>
+    <SELECT id="targetSelect"><OPTION>select</OPTION></SELECT>
+    <BUTTON id="targetButton">A Button</BUTTON>
+  </DIV>
+  <SCRIPT>
+    var Modifiers = goog.ui.KeyboardShortcutHandler.Modifiers;
+    var KeyCodes = goog.events.KeyCodes;
+
+    var handler;
+    var targetDiv;
+    var listener;
+    var mockClock;
+
+    /**
+     * Fires a keypress on the target div.
+     * @return {boolean} The returnValue of the sequence: false if
+     *     preventDefault() was called on any of the events, true otherwise.
+     */
+    function fire(keycode, opt_extraProperties, opt_element) {
+      return goog.testing.events.fireKeySequence(
+          opt_element || targetDiv, keycode, opt_extraProperties);
+    }
+
+    function setUp() {
+      targetDiv = goog.dom.$('targetDiv');
+      handler = new goog.ui.KeyboardShortcutHandler(goog.dom.$('rootDiv'));
+
+      // Create a mock event listener in order to set expectations on what
+      // events are fired.  We create a fake class whose only method is
+      // shortcutFired(shortcut identifier).
+      listener = new goog.testing.StrictMock(
+          {shortcutFired: goog.nullFunction});
+      goog.events.listen(
+          handler,
+          goog.ui.KeyboardShortcutHandler.EventType.SHORTCUT_TRIGGERED,
+          function (event) { listener.shortcutFired(event.identifier); });
+
+       // Set up a fake clock, because keyboard shortcuts *are* time
+       // sensitive.
+       mockClock = new goog.testing.MockClock(true);
+    }
+
+    function tearDown() {
+      mockClock.uninstall();
+      handler.dispose();
+    }
+
+    function testAllowsSingleLetterKeyBindingsSpecifiedAsString() {
+      listener.shortcutFired('lettergee');
+      listener.$replay();
+
+      handler.registerShortcut('lettergee', 'g');
+      fire(KeyCodes.G);
+
+      listener.$verify()
+    }
+
+    function testAllowsSingleLetterKeyBindingsSpecifiedAsKeyCode() {
+      listener.shortcutFired('lettergee');
+      listener.$replay();
+
+      handler.registerShortcut('lettergee', KeyCodes.G);
+      fire(KeyCodes.G);
+
+      listener.$verify()
+    }
+
+    function testDoesntFireWhenWrongKeyIsPressed() {
+      listener.$replay(); // no events expected
+
+      handler.registerShortcut('letterjay', 'j');
+      fire(KeyCodes.G);
+
+      listener.$verify()
+    }
+
+    function testAllowsControlAndLetterSpecifiedAsAString() {
+      listener.shortcutFired('lettergee');
+      listener.$replay();
+
+      handler.registerShortcut('lettergee', 'ctrl+g');
+      fire(KeyCodes.G, {ctrlKey: true});
+
+      listener.$verify()
+    }
+
+    function testAllowsControlAndLetterSpecifiedAsArgSequence() {
+      listener.shortcutFired('lettergeectrl');
+      listener.$replay();
+
+      handler.registerShortcut('lettergeectrl',
+          KeyCodes.G, Modifiers.CTRL);
+      fire(KeyCodes.G, {ctrlKey: true});
+
+      listener.$verify()
+    }
+
+    function testAllowsControlAndLetterSpecifiedAsArray() {
+      listener.shortcutFired('lettergeectrl');
+      listener.$replay();
+
+      handler.registerShortcut('lettergeectrl',
+          [KeyCodes.G, Modifiers.CTRL]);
+      fire(KeyCodes.G, {ctrlKey: true});
+
+      listener.$verify()
+    }
+
+    function testAllowsShift() {
+      listener.shortcutFired('lettergeeshift');
+      listener.$replay();
+
+      handler.registerShortcut('lettergeeshift',
+          [KeyCodes.G, Modifiers.SHIFT]);
+      fire(KeyCodes.G, {shiftKey: true});
+
+      listener.$verify()
+    }
+
+    function testAllowsAlt() {
+      listener.shortcutFired('lettergeealt');
+      listener.$replay();
+
+      handler.registerShortcut('lettergeealt',
+          [KeyCodes.G, Modifiers.ALT]);
+      fire(KeyCodes.G, {altKey: true});
+
+      listener.$verify()
+    }
+
+    function testAllowsMeta() {
+      listener.shortcutFired('lettergeemeta');
+      listener.$replay();
+
+      handler.registerShortcut('lettergeemeta',
+          [KeyCodes.G, Modifiers.META]);
+      fire(KeyCodes.G, {metaKey: true});
+
+      listener.$verify()
+    }
+
+    function testAllowsMultipleModifiers() {
+      listener.shortcutFired('lettergeectrlaltshift');
+      listener.$replay();
+
+      handler.registerShortcut('lettergeectrlaltshift',
+          KeyCodes.G, Modifiers.CTRL | Modifiers.ALT | Modifiers.SHIFT);
+      fire(KeyCodes.G, {ctrlKey: true, altKey: true, shiftKey: true});
+
+      listener.$verify()
+    }
+
+    function testAllowsMultipleModifiersSpecifiedAsString() {
+      listener.shortcutFired('lettergeectrlaltshiftmeta');
+      listener.$replay();
+
+      handler.registerShortcut('lettergeectrlaltshiftmeta',
+          'ctrl+shift+alt+meta+g');
+      fire(KeyCodes.G,
+          {ctrlKey: true, altKey: true, shiftKey: true, metaKey: true});
+
+      listener.$verify()
+    }
+
+    function testPreventsDefaultOnReturnFalse() {
+      listener.shortcutFired('x');
+      listener.$replay();
+
+      handler.registerShortcut('x', 'x');
+      var key = goog.events.listen(handler,
+          goog.ui.KeyboardShortcutHandler.EventType.SHORTCUT_TRIGGERED,
+          function (event) { return false });
+
+      assertFalse('return false in listener must prevent default',
+                  fire(KeyCodes.X));
+
+      listener.$verify();
+
+      goog.events.unlistenByKey(key);
+    }
+
+    function testDoesntFireWhenUserForgetsRequiredModifier() {
+      listener.$replay(); // no events expected
+
+      handler.registerShortcut('lettergeectrl',
+          KeyCodes.G, Modifiers.CTRL);
+      fire(KeyCodes.G);
+
+      listener.$verify()
+    }
+
+    function testDoesntFireIfTooManyModifiersPressed() {
+      listener.$replay(); // no events expected
+
+      handler.registerShortcut('lettergeectrl',
+          KeyCodes.G, Modifiers.CTRL);
+      fire(KeyCodes.G, {ctrlKey: true, metaKey: true});
+
+      listener.$verify()
+    }
+
+    function testDoesntFireIfAnyRequiredModifierForgotten() {
+      listener.$replay(); // no events expected
+
+      handler.registerShortcut('lettergeectrlaltshift',
+          KeyCodes.G, Modifiers.CTRL | Modifiers.ALT | Modifiers.SHIFT);
+      fire(KeyCodes.G, {altKey: true, shiftKey: true});
+
+      listener.$verify()
+    }
+
+    function testAllowsMultiKeySequenceSpecifiedAsArray() {
+      listener.shortcutFired('quitemacs');
+      listener.$replay();
+
+      handler.registerShortcut('quitemacs',
+          [KeyCodes.X, Modifiers.CTRL,
+           KeyCodes.C]);
+      fire(KeyCodes.X, {ctrlKey: true});
+      fire(KeyCodes.C);
+
+      listener.$verify()
+    }
+
+    function testAllowsMultiKeySequenceSpecifiedAsArray() {
+      listener.shortcutFired('quitemacs');
+      listener.$replay();
+
+      handler.registerShortcut('quitemacs',
+          [KeyCodes.X, Modifiers.CTRL,
+           KeyCodes.C]);
+      fire(KeyCodes.X, {ctrlKey: true});
+      fire(KeyCodes.C);
+
+      listener.$verify()
+    }
+
+    function testAllowsMultiKeySequenceSpecifiedAsArguments() {
+      listener.shortcutFired('quitvi');
+      listener.$replay();
+
+      handler.registerShortcut('quitvi',
+          KeyCodes.COLON, Modifiers.NONE,
+          KeyCodes.Q, Modifiers.NONE,
+          KeyCodes.EXCLAMATION, Modifiers.NONE);
+      fire(KeyCodes.COLON);
+      fire(KeyCodes.Q);
+      fire(KeyCodes.EXCLAMATION);
+
+      listener.$verify()
+    }
+
+    function testMultiKeyEventIsNotFiredIfUserIsTooSlow() {
+      listener.$replay(); // no events expected
+
+      handler.registerShortcut('quitemacs',
+          [KeyCodes.X, Modifiers.CTRL,
+           KeyCodes.C]);
+
+      fire(KeyCodes.X, {ctrlKey: true});
+
+      // Wait 3 seconds before hitting C.  Although the actual limit is 1500
+      // at time of writing, it's best not to over-specify functionality.
+      mockClock.tick(3000);
+
+      fire(KeyCodes.C);
+
+      listener.$verify()
+    }
+
+    function testAllowsMultipleAHandlers() {
+      listener.shortcutFired('quitvi');
+      listener.shortcutFired('letterex');
+      listener.shortcutFired('quitemacs');
+      listener.$replay();
+
+      // register 3 handlers in 3 diferent ways
+      handler.registerShortcut('quitvi',
+          KeyCodes.COLON, Modifiers.NONE,
+          KeyCodes.Q, Modifiers.NONE,
+          KeyCodes.EXCLAMATION, Modifiers.NONE);
+      handler.registerShortcut('quitemacs',
+          [KeyCodes.X, Modifiers.CTRL,
+           KeyCodes.C]);
+      handler.registerShortcut('letterex', 'x');
+
+
+      // quit vi
+      fire(KeyCodes.COLON);
+      fire(KeyCodes.Q);
+      fire(KeyCodes.EXCLAMATION);
+
+      // then press the letter x
+      fire(KeyCodes.X);
+
+      // then quit emacs
+      fire(KeyCodes.X, {ctrlKey: true});
+      fire(KeyCodes.C);
+
+      listener.$verify()
+    }
+
+    function testCanRemoveOneHandler() {
+      listener.shortcutFired('letterex');
+      listener.$replay();
+
+      // register 2 handlers, then remove quitvi
+      handler.registerShortcut('quitvi',
+          KeyCodes.COLON, Modifiers.NONE,
+          KeyCodes.Q, Modifiers.NONE,
+          KeyCodes.EXCLAMATION, Modifiers.NONE);
+      handler.registerShortcut('letterex', 'x');
+      handler.unregisterShortcut(
+          KeyCodes.COLON, Modifiers.NONE,
+          KeyCodes.Q, Modifiers.NONE,
+          KeyCodes.EXCLAMATION, Modifiers.NONE);
+
+      // call the "quit VI" keycodes, even though it is removed
+      fire(KeyCodes.COLON);
+      fire(KeyCodes.Q);
+      fire(KeyCodes.EXCLAMATION);
+
+      // press the letter x
+      fire(KeyCodes.X);
+
+      listener.$verify()
+    }
+
+    function testCanRemoveTwoHandlers() {
+      listener.$replay(); // no events expected
+
+      handler.registerShortcut('quitemacs',
+          [KeyCodes.X, Modifiers.CTRL,
+           KeyCodes.C]);
+      handler.registerShortcut('letterex', 'x');
+      handler.unregisterShortcut(
+          [KeyCodes.X, Modifiers.CTRL,
+           KeyCodes.C]);
+      handler.unregisterShortcut('x');
+
+      fire(KeyCodes.X, {ctrlKey: true});
+      fire(KeyCodes.C);
+      fire(KeyCodes.X);
+
+      listener.$verify()
+    }
+
+    function testCheckRegisteredShortcuts() {
+      assertFalse(handler.isShortcutRegistered('x'));
+      handler.registerShortcut('letterex', 'x');
+      assertTrue(handler.isShortcutRegistered('x'));
+
+      handler.registerShortcut('qe', [KeyCodes.X, Modifiers.CTRL, KeyCodes.C]);
+      assertTrue(handler.isShortcutRegistered('x'));
+      assertTrue(handler.isShortcutRegistered([KeyCodes.X,
+                                               Modifiers.CTRL, KeyCodes.C]));
+      handler.unregisterShortcut('x');
+      assertFalse(handler.isShortcutRegistered('x'));
+      assertTrue(handler.isShortcutRegistered([KeyCodes.X,
+                                               Modifiers.CTRL, KeyCodes.C]));
+      handler.unregisterShortcut([KeyCodes.X, Modifiers.CTRL, KeyCodes.C]);
+      assertFalse(handler.isShortcutRegistered([KeyCodes.X,
+                                                Modifiers.CTRL, KeyCodes.C]));
+    }
+
+    /**
+     * Registers a slew of keyboard shortcuts to test each primary category
+     * of shortcuts.
+     */
+    function registerEnterSpaceXF1AltY() {
+      // Enter and space are specially handled keys.
+      handler.registerShortcut('enter', KeyCodes.ENTER);
+      handler.registerShortcut('space', KeyCodes.SPACE)
+      // 'x' should be treated as text in many contexts
+      handler.registerShortcut('x', 'x');
+      // F1 is a global shortcut.
+      handler.registerShortcut('global', KeyCodes.F1);
+      // Alt-Y has modifiers, which pass through most form elements.
+      handler.registerShortcut('withAlt', 'alt+y');
+    }
+
+    /**
+     * Fires enter, space, X, F1, and Alt-Y keys on a widget.
+     * @param {Element} target The element on which to fire the events.
+     */
+    function fireEnterSpaceXF1AltY(target) {
+      fire(KeyCodes.ENTER, undefined, target);
+      fire(KeyCodes.SPACE, undefined, target);
+      fire(KeyCodes.X, undefined, target);
+      fire(KeyCodes.F1, undefined, target);
+      fire(KeyCodes.Y, {altKey: true}, target);
+    }
+
+    function testIgnoreNonGlobalShortcutsInSelect() {
+      var targetSelect = goog.dom.$('targetSelect');
+
+      listener.shortcutFired('global');
+      listener.shortcutFired('withAlt');
+      listener.$replay();
+
+      registerEnterSpaceXF1AltY();
+      fireEnterSpaceXF1AltY(goog.dom.$('targetSelect'));
+
+      listener.$verify();
+    }
+
+    function testIgnoreNonGlobalShortcutsInTextArea() {
+      listener.shortcutFired('global');
+      listener.shortcutFired('withAlt');
+      listener.$replay();
+
+      registerEnterSpaceXF1AltY();
+      fireEnterSpaceXF1AltY(goog.dom.$('targetTextArea'));
+
+      listener.$verify();
+    }
+
+   function testIgnoreShortcutsExceptEnterInTextBoxAndPassword() {
+      // Events for the text box.
+      listener.shortcutFired('enter');
+      listener.shortcutFired('global');
+      listener.shortcutFired('withAlt');
+      // Events for the password field.
+      listener.shortcutFired('enter');
+      listener.shortcutFired('global');
+      listener.shortcutFired('withAlt');
+      listener.$replay();
+
+      registerEnterSpaceXF1AltY();
+      fireEnterSpaceXF1AltY(goog.dom.$('targetTextBox'));
+      fireEnterSpaceXF1AltY(goog.dom.$('targetPassword'));
+
+      listener.$verify();
+    }
+
+    function testIgnoreSpaceInCheckBoxAndButton() {
+      // Events for the check box.
+      listener.shortcutFired('enter');
+      listener.shortcutFired('x');
+      listener.shortcutFired('global');
+      listener.shortcutFired('withAlt');
+      // Events for the button.
+      listener.shortcutFired('enter');
+      listener.shortcutFired('x');
+      listener.shortcutFired('global');
+      listener.shortcutFired('withAlt');
+      listener.$replay();
+
+      registerEnterSpaceXF1AltY();
+      fireEnterSpaceXF1AltY(goog.dom.$('targetCheckBox'));
+      fireEnterSpaceXF1AltY(goog.dom.$('targetButton'));
+
+      listener.$verify();
+    }
+
+    function testIgnoreNonGlobalShortcutsInContentEditable() {
+      try {
+        document.designMode = 'on';
+        targetDiv.contentEditable = 'true';
+
+        // Expect only global shortcuts.
+        listener.shortcutFired('global');
+        listener.$replay();
+
+        registerEnterSpaceXF1AltY();
+        fireEnterSpaceXF1AltY(targetDiv);
+
+        listener.$verify();
+      } finally {
+        document.designMode = 'off';
+        targetDiv.contentEditable = 'false';
+      }
+    }
+  </SCRIPT>
+
+
+<DIV><DIV style="color: rgb(0, 100, 0); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; font-weight: bold; ">Closure Unit Tests - goog.ui.KeyboardShortcutHandler [PASSED]</DIV><DIV style="color: rgb(51, 51, 51); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; font-weight: bold; ">closure-library.googlecode.com/svn/trunk/closure/goog/ui/keyboardshortcuthandler_test.html</DIV><DIV style="color: rgb(51, 51, 51); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">27 of 27 tests run in 389ms.</DIV><DIV style="color: rgb(51, 51, 51); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">27 passed, 0 failed.</DIV><DIV style="color: rgb(51, 51, 51); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">14 ms/test. 36 files loaded.</DIV><DIV style="color: rgb(51, 51, 51); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">.</DIV><DIV style="color: rgb(51, 51, 51); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">08:29:44.198  Start</DIV><DIV style="color: rgb(0, 100, 0); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">08:29:44.224  testAllowsAlt : PASSED</DIV><DIV style="color: rgb(0, 100, 0); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">08:29:44.234  testAllowsControlAndLetterSpecifiedAsAString : PASSED</DIV><DIV style="color: rgb(0, 100, 0); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">08:29:44.240  testAllowsControlAndLetterSpecifiedAsArgSequence : PASSED</DIV><DIV style="color: rgb(0, 100, 0); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">08:29:44.247  testAllowsControlAndLetterSpecifiedAsArray : PASSED</DIV><DIV style="color: rgb(0, 100, 0); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">08:29:44.254  testAllowsMeta : PASSED</DIV><DIV style="color: rgb(0, 100, 0); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">08:29:44.270  testAllowsMultiKeySequenceSpecifiedAsArguments : PASSED</DIV><DIV style="color: rgb(0, 100, 0); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">08:29:44.281  testAllowsMultiKeySequenceSpecifiedAsArray : PASSED</DIV><DIV style="color: rgb(0, 100, 0); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">08:29:44.313  testAllowsMultipleAHandlers : PASSED</DIV><DIV style="color: rgb(0, 100, 0); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">08:29:44.320  testAllowsMultipleModifiers : PASSED</DIV><DIV style="color: rgb(0, 100, 0); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">08:29:44.325  testAllowsMultipleModifiersSpecifiedAsString : PASSED</DIV><DIV style="color: rgb(0, 100, 0); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">08:29:44.330  testAllowsShift : PASSED</DIV><DIV style="color: rgb(0, 100, 0); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">08:29:44.334  testAllowsSingleLetterKeyBindingsSpecifiedAsKeyCode : PASSED</DIV><DIV style="color: rgb(0, 100, 0); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">08:29:44.338  testAllowsSingleLetterKeyBindingsSpecifiedAsString : PASSED</DIV><DIV style="color: rgb(0, 100, 0); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">08:29:44.349  testCanRemoveOneHandler : PASSED</DIV><DIV style="color: rgb(0, 100, 0); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">08:29:44.359  testCanRemoveTwoHandlers : PASSED</DIV><DIV style="color: rgb(0, 100, 0); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">08:29:44.361  testCheckRegisteredShortcuts : PASSED</DIV><DIV style="color: rgb(0, 100, 0); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">08:29:44.363  testDoesntFireIfAnyRequiredModifierForgotten : PASSED</DIV><DIV style="color: rgb(0, 100, 0); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">08:29:44.367  testDoesntFireIfTooManyModifiersPressed : PASSED</DIV><DIV style="color: rgb(0, 100, 0); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">08:29:44.371  testDoesntFireWhenUserForgetsRequiredModifier : PASSED</DIV><DIV style="color: rgb(0, 100, 0); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">08:29:44.375  testDoesntFireWhenWrongKeyIsPressed : PASSED</DIV><DIV style="color: rgb(0, 100, 0); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">08:29:44.390  testIgnoreNonGlobalShortcutsInContentEditable : PASSED</DIV><DIV style="color: rgb(0, 100, 0); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">08:29:44.404  testIgnoreNonGlobalShortcutsInSelect : PASSED</DIV><DIV style="color: rgb(51, 51, 51); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">08:29:44.404  Breaking async</DIV><DIV style="color: rgb(51, 51, 51); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">08:29:44.504  Start</DIV><DIV style="color: rgb(0, 100, 0); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">08:29:44.518  testIgnoreNonGlobalShortcutsInTextArea : PASSED</DIV><DIV style="color: rgb(0, 100, 0); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">08:29:44.546  testIgnoreShortcutsExceptEnterInTextBoxAndPassword : PASSED</DIV><DIV style="color: rgb(0, 100, 0); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">08:29:44.573  testIgnoreSpaceInCheckBoxAndButton : PASSED</DIV><DIV style="color: rgb(0, 100, 0); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">08:29:44.581  testMultiKeyEventIsNotFiredIfUserIsTooSlow : PASSED</DIV><DIV style="color: rgb(0, 100, 0); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">08:29:44.585  testPreventsDefaultOnReturnFalse : PASSED</DIV><DIV style="color: rgb(51, 51, 51); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">08:29:44.586  Done</DIV><DIV style="color: rgb(51, 51, 51); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; "> </DIV><A style="display: block; font-size: small; " href="">Run again without reloading</A></DIV></BODY></HTML>

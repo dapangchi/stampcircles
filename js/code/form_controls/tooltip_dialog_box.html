@@ -1,0 +1,50 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!--
+ ! Excerpted from "Mastering Dojo",
+ ! published by The Pragmatic Bookshelf.
+ ! Copyrights apply to this code. It may not be used to create training material, 
+ ! courses, books, articles, and the like. Contact us if you are in doubt.
+ ! We make no guarantees that this code is fit for any purpose. 
+ ! Visit http://www.pragmaticprogrammer.com/titles/rgdojo for more book information.
+-->
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Tooltip Dialog Box</title>
+    <style type="text/css">
+        @import "/dojoroot/dijit/themes/tundra/tundra.css";
+        @import "/dojoroot/dojo/resources/dojo.css"
+    </style>
+    <script type="text/javascript" src="/dojoroot/dojo/dojo.js"  djConfig="parseOnLoad: true"></script>
+    <script type="text/javascript">
+       dojo.require("dojo.parser");
+       dojo.require("dijit.Dialog");
+       dojo.require("dijit.form.NumberSpinner");
+       dojo.require("dijit.form.Button");
+    </script>
+</head>
+<body class="tundra">
+    <p style="width:300px;">
+    If you've ever been mistreated,<br/>
+    You know just what I'm talking about<br/>
+    I worked five long years for one woman<br/>
+    And she had the nerve to put me out.<br/>
+    </p>
+
+    
+   <div dojoType="dijit.form.DropDownButton">
+       <span>Print</span>
+        <div dojoType="dijit.TooltipDialog" jsId="dlg">
+           <div>
+               <label for="copies">Copies:</label>
+               <span dojoType="dijit.form.NumberSpinner" 
+                     id="copies" value="1"></span>
+           </div>
+           <div dojoType="dijit.form.Button" type="submit">
+               Go
+           </div>
+       </div>
+    </div>    
+    
+</body>
+</html>

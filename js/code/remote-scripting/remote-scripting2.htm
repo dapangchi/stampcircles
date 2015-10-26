@@ -1,0 +1,62 @@
+<!-- START:snip3 -->  
+<html>
+<head>
+  <title>
+    Mastering Dojo - Remote Scripting
+  </title>
+  
+  <style type="text/css">
+    @import "remote-scripting.css";
+  </style>  
+  
+  <script 
+    type="text/javascript" 
+    src="/dojoroot/dojo/dojo.js" 
+    djConfig="isDebug: true"></script>
+    
+  <!-- 
+    this script contains code to call an example 
+    function and dump the results
+  -->
+  <script 
+    type="text/javascript" 
+    src="remote-scripting-lib.js"></script>
+        
+  <!-- 
+    this script contains all the example functions
+  -->          
+  <script 
+    type="text/javascript" 
+    src="remote-scripting.js"></script>  
+</head>
+<body>
+  <div>
+    <h1>Remote Scripting Exercises</h1>    
+    <form><p>
+      Exercise Identifier: 
+      <input id="exId" type="text" size="2" maxLength="2" name="exId">
+      <input id="exTrigger" type="submit" name="exTrigger" value="Go!">
+    </p></form>
+  </div>
+  <div>
+    <!-- START:snip13 -->
+    <form id="exForm" method="post" action="demo/id7" enctype="text/plain">
+      <p>Name:<br>
+      <input type="text" name="name" size="40"></p>
+      <p>Sex:<br>
+      <input type="radio" name="sex" value="m"> Male<br>
+      <input type="radio" name="sex" value="f"> Female</p>
+    </form>
+    <!-- END:snip13 -->
+  </div> 
+  <div>
+    <h1>Result:</h1>
+    <pre id="result"></pre>
+  </div>
+  <div>
+    <h1>Object Dumps:</h1>
+    <div id="objects"></div>
+  </div>
+</body>
+</html>
+<!-- END:snip3 -->

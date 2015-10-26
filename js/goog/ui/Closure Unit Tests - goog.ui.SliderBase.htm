@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<!-- saved from url=(0084)http://closure-library.googlecode.com/svn/trunk/closure/goog/ui/sliderbase_test.html -->
+<HTML><!--
+  Copyright 2008 Google Inc. All Rights Reserved.
+
+--><HEAD><META http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<TITLE>Closure Unit Tests - goog.ui.SliderBase</TITLE>
+<SCRIPT src="./Closure Unit Tests - goog.ui.SliderBase_files/base.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.SliderBase_files/deps.js"></SCRIPT>
+<SCRIPT type="text/javascript">
+  goog.require('goog.dom');
+  goog.require('goog.events');
+  goog.require('goog.ui.SliderBase');
+  goog.require('goog.testing.jsunit');
+</SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.SliderBase_files/array.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.SliderBase_files/tagname.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.SliderBase_files/classes.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.SliderBase_files/coordinate.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.SliderBase_files/size.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.SliderBase_files/object.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.SliderBase_files/string.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.SliderBase_files/useragent.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.SliderBase_files/dom.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.SliderBase_files/errorhandlerweakdep.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.SliderBase_files/disposable.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.SliderBase_files/event.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.SliderBase_files/browserevent.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.SliderBase_files/eventwrapper.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.SliderBase_files/listener.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.SliderBase_files/simplepool.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.SliderBase_files/jscript.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.SliderBase_files/pools.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.SliderBase_files/events.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.SliderBase_files/eventtarget.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.SliderBase_files/timer.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.SliderBase_files/a11y.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.SliderBase_files/keycodes.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.SliderBase_files/keyhandler.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.SliderBase_files/mousewheelhandler.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.SliderBase_files/fx.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.SliderBase_files/eventhandler.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.SliderBase_files/box.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.SliderBase_files/rect.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.SliderBase_files/dragger.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.SliderBase_files/names.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.SliderBase_files/range.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.SliderBase_files/math.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.SliderBase_files/color.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.SliderBase_files/product.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.SliderBase_files/style.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.SliderBase_files/dom(1).js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.SliderBase_files/idgenerator.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.SliderBase_files/component.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.SliderBase_files/rangemodel.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.SliderBase_files/sliderbase.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.SliderBase_files/stacktrace.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.SliderBase_files/asserts.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.SliderBase_files/testcase.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.SliderBase_files/testrunner.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.SliderBase_files/jsunit.js"></SCRIPT>
+</HEAD><BODY>
+
+<DIV id="sandbox"></DIV>
+
+<SCRIPT type="text/javascript">
+var oneThumbSlider;
+var oneChangeEventCount;
+
+var twoThumbSlider;
+var twoChangeEventCount;
+
+/**
+ * A basic class to implement the abstract goog.ui.SliderBase for testing.
+ * @constructor
+ * @extends {goog.ui.SliderBase}
+ */
+function OneThumbSlider() {
+  goog.ui.SliderBase.call(this);
+}
+goog.inherits(OneThumbSlider, goog.ui.SliderBase);
+
+
+/** {@inheritDoc} */
+OneThumbSlider.prototype.createThumbs = function() {
+  this.valueThumb = this.extentThumb = goog.dom.$('thumb');
+};
+
+
+/** {@inheritDoc} */
+OneThumbSlider.prototype.getCssClass = function() {
+  return 'dummyCssClass';
+};
+
+
+/**
+ * A basic class to implement the abstract goog.ui.SliderBase for testing.
+ * @constructor
+ * @extends {goog.ui.SliderBase}
+ */
+function TwoThumbSlider() {
+  goog.ui.SliderBase.call(this);
+}
+goog.inherits(TwoThumbSlider, goog.ui.SliderBase);
+
+
+/** {@inheritDoc} */
+TwoThumbSlider.prototype.createThumbs = function() {
+  this.valueThumb = goog.dom.$('valueThumb');
+  this.extentThumb = goog.dom.$('extentThumb');
+};
+
+
+/** {@inheritDoc} */
+TwoThumbSlider.prototype.getCssClass = function() {
+  return 'dummyCssClass';
+};
+
+
+function setUp() {
+  var sandBox = goog.dom.$('sandbox');
+
+  var oneThumbElem = goog.dom.createDom(
+      'div', {'id': 'oneThumbSlider'},
+      goog.dom.createDom('span', {'id': 'thumb'}));
+  sandBox.appendChild(oneThumbElem);
+  oneThumbSlider = new OneThumbSlider();
+  oneThumbSlider.decorate(oneThumbElem);
+  oneChangeEventCount = 0;
+  goog.events.listen(oneThumbSlider, goog.ui.Component.EventType.CHANGE,
+      function() {
+        oneChangeEventCount++;
+      });
+
+ var twoThumbElem = goog.dom.createDom(
+     'div', {'id': 'oneThumbSlider'},
+     goog.dom.createDom('span', {'id': 'valueThumb'}),
+     goog.dom.createDom('span', {'id': 'extentThumb'}));
+  sandBox.appendChild(twoThumbElem);
+  twoThumbSlider = new TwoThumbSlider();
+  twoThumbSlider.decorate(twoThumbElem);
+  twoChangeEventCount = 0;
+  goog.events.listen(twoThumbSlider, goog.ui.Component.EventType.CHANGE,
+      function() {
+        twoChangeEventCount++;
+      });
+
+}
+
+function tearDown() {
+  goog.events.removeAll();
+  oneThumbSlider.dispose();
+  twoThumbSlider.dispose();
+  goog.dom.$('sandbox').innerHTML = '';
+}
+
+function testGetAndSetValue() {
+  oneThumbSlider.setValue(30);
+  assertEquals(30, oneThumbSlider.getValue());
+  assertEquals('Setting valid value must dispatch only a single change event.',
+      1, oneChangeEventCount);
+
+  oneThumbSlider.setValue(30);
+  assertEquals(30, oneThumbSlider.getValue());
+  assertEquals('Setting to same value must not dispatch change event.',
+      1, oneChangeEventCount);
+
+  oneThumbSlider.setValue(-30);
+  assertEquals('Setting invalid value must not change value.',
+      30, oneThumbSlider.getValue());
+  assertEquals('Setting invalid value must not dispatch change event.',
+      1, oneChangeEventCount);
+
+
+  // Value thumb can't go past extent thumb, so we must move that first to
+  // allow setting value.
+  twoThumbSlider.setExtent(70);
+  twoChangeEventCount = 0;
+  twoThumbSlider.setValue(60);
+  assertEquals(60, twoThumbSlider.getValue());
+  assertEquals('Setting valid value must dispatch only a single change event.',
+      1, twoChangeEventCount);
+
+  twoThumbSlider.setValue(60);
+  assertEquals(60, twoThumbSlider.getValue());
+  assertEquals('Setting to same value must not dispatch change event.',
+      1, twoChangeEventCount);
+
+  twoThumbSlider.setValue(-60);
+  assertEquals('Setting invalid value must not change value.',
+      60, twoThumbSlider.getValue());
+  assertEquals('Setting invalid value must not dispatch change event.',
+      1, twoChangeEventCount);
+}
+
+function testGetAndSetExtent() {
+  // NOTE: With a one thumb slider the API only really makes sense if you
+  // always use setValue since there is no extent.
+
+  twoThumbSlider.setExtent(7);
+  assertEquals(7, twoThumbSlider.getExtent());
+  assertEquals('Setting valid value must dispatch only a single change event.',
+      1, twoChangeEventCount);
+
+  twoThumbSlider.setExtent(7);
+  assertEquals(7, twoThumbSlider.getExtent());
+  assertEquals('Setting to same value must not dispatch change event.',
+      1, twoChangeEventCount);
+
+  twoThumbSlider.setExtent(-7);
+  assertEquals('Setting invalid value must not change value.',
+      7, twoThumbSlider.getExtent());
+  assertEquals('Setting invalid value must not dispatch change event.',
+      1, twoChangeEventCount);
+}
+
+</SCRIPT>
+
+
+<DIV><DIV style="color: rgb(0, 100, 0); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; font-weight: bold; ">Closure Unit Tests - goog.ui.SliderBase [PASSED]</DIV><DIV style="color: rgb(51, 51, 51); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; font-weight: bold; ">closure-library.googlecode.com/svn/trunk/closure/goog/ui/sliderbase_test.html</DIV><DIV style="color: rgb(51, 51, 51); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">2 of 2 tests run in 20ms.</DIV><DIV style="color: rgb(51, 51, 51); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">2 passed, 0 failed.</DIV><DIV style="color: rgb(51, 51, 51); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">10 ms/test. 48 files loaded.</DIV><DIV style="color: rgb(51, 51, 51); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">.</DIV><DIV style="color: rgb(51, 51, 51); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">08:42:39.347  Start</DIV><DIV style="color: rgb(0, 100, 0); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">08:42:39.361  testGetAndSetExtent : PASSED</DIV><DIV style="color: rgb(0, 100, 0); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">08:42:39.366  testGetAndSetValue : PASSED</DIV><DIV style="color: rgb(51, 51, 51); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">08:42:39.366  Done</DIV><DIV style="color: rgb(51, 51, 51); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; "> </DIV><A style="display: block; font-size: small; " href="">Run again without reloading</A></DIV></BODY></HTML>

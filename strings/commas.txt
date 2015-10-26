@@ -1,0 +1,374 @@
+Larry Trask has a very good guide on the correct usage of commas in English. [http://www.informatics.sussex.ac.uk/department/docs/punctuation/node14.html|commas in English]
+
+
+
+
+The Listing Comma
+
+The listing comma is used as a kind of substitute for the word and, or sometimes for or. It occurs in two slightly different circumstances. First, it is used in a list when three or more words, phrases or even complete sentences are joined by the word and or or; we might call this construction an X, Y and Z list:
+
+    The Three Musketeers were Athos, Porthos and Aramis. 
+    Hungarian is spoken in Hungary, in western Rumania, in northern Serbia and in parts of Austria and Slovakia. 
+    You can fly to Bombay via Moscow, via Athens or via Cairo. 
+    Lisa speaks French, Juliet speaks Italian and I speak Spanish. 
+    We spent our evenings chatting in the cafés, watching the sun set over the harbour, stuffing ourselves with the local crabs and getting pleasantly sloshed on retsina. 
+
+Note that in all these examples the commas could be replaced by the word and or or, though the result would be rather clumsy:
+
+    The Three Musketeers were Athos and Porthos and Aramis. 
+    Hungarian is spoken in Hungary and in western Rumania and in northern Serbia and in parts of Austria and Slovakia. 
+    You can fly to Bombay via Moscow or via Athens or via Cairo. 
+    Lisa speaks French and Juliet speaks Italian and I speak Spanish. 
+    We spent our evenings chatting in the cafés and watching the sun set over the harbour and stuffing ourselves with the local crabs and getting pleasantly sloshed on retsina. 
+
+Observe that you can connect three or more complete sentences with listing commas, as in the Lisa/Juliet example above. Note the difference here:
+
+    Lisa speaks French, Juliet speaks Italian and I speak Spanish. 
+    *Lisa speaks French, Juliet speaks Italian.
+
+Remember, you must not join two complete sentences with a comma, but three or more complete sentences may be joined with listing commas plus and or or.
+
+Note also that it is not usual in British usage to put a listing comma before the word and or or itself (though American usage regularly puts one there). So, in British usage, it is not usual to write
+
+    The Three Musketeers were Athos, Porthos, and Aramis. 
+
+This is reasonable, since the listing comma is a substitute for the word and, not an addition to it. However, you should put a comma in this position if doing so would make your meaning clearer:
+
+    My favourite opera composers are Verdi, Puccini, Mozart, and Gilbert and Sullivan. 
+
+Here the comma before and shows clearly that Gilbert and Sullivan worked together. If you omit the comma, the result might be confusing:
+
+    *My favourite opera composers are Verdi, Puccini, Mozart and Gilbert and Sullivan. 
+
+Here, the reader might possibly take Mozart and Gilbert as the pair who worked together. The extra comma removes the problem.
+
+A listing comma is also used in a list of modifiers which all modify the same thing. This time there will usually be no and present at all, but again such a comma could be replaced by and without destroying the sense:
+
+    This is a provocative, disturbing book. 
+    Her long, dark, glossy hair fascinated me. 
+
+Try replacing the commas by and:
+
+    This is a provocative and disturbing book. 
+    Her long and dark and glossy hair fascinated me. 
+
+The sense is unchanged, though the second example, at least, is much clumsier without the commas.
+
+Observe the difference in the next two examples:
+
+    She gave me an antique ivory box. 
+    I prefer Australian red wines to all others. 
+
+This time there are no commas. It would be wrong to write
+
+    *She gave me an antique, ivory box. 
+    *I prefer Australian, red wines to all others. 
+
+Why the difference? In these examples, a listing comma cannot be used because there is no list: the word and cannot possibly be inserted:
+
+    *She gave me an antique and ivory box. 
+    *I prefer Australian and red wines to all others. 
+
+The reason for the difference is that the modifiers this time do not modify the same thing. In the first example, ivory modifies box, but antique modifies ivory box, not just box. In the second example, Australian modifies red wines, not just wines.
+
+So the rules are clear:
+
+    € Use a listing comma in a list wherever you could conceivably use the word and (or or) instead. Do not use a listing comma anywhere else. 
+    € Put a listing comma before and or or only if this is necessary to make your meaning clear. 
+
+Copyright © Larry Trask, 1997
+
+
+The Joining Comma
+
+The joining comma is only slightly different from the listing comma. It is used to join two complete sentences into a single sentence, and it must be followed by a suitable connecting word. The connecting words which can be used in this way are and, or, but, while and yet. Here are some examples:
+
+    Norway has applied to join the EC, and Sweden is expected to do the same. 
+    You must hand in your essay by Friday, or you will receive a mark of zero. 
+    Britain has long been isolated in Europe, but now she is beginning to find allies. 
+    Billions of dollars have been hurled into the Star Wars projects, yet we appear to have nothing to show for this colossal expenditure. 
+    A dropped goal counts three points in rugby union, while in rugby league it only counts one point. 
+
+Remember, as I pointed out earlier, you cannot join two sentences with a comma unless you also use one of these connecting words. All of the following examples are therefore wrong:
+
+    *Bangladesh is one of the world's poorest countries, its annual income is only $80 per person. 
+    *The British are notoriously bad at learning foreign languages, the Dutch are famously good at it. 
+    *The proposal to introduce rock music to Radio 3 has caused an outcry, angry letters have been pouring into the BBC. 
+    *Borg won his fifth straight Wimbledon title in 1980, the following year he lost in the final to McEnroe. 
+
+Joining two complete sentences with a comma in this way is one of the commonest of all punctuation errors, but one of the easiest to avoid if you pay a little attention to what you're writing. Either you must follow the comma with one of the connecting words listed above, or you must replace the comma with a semicolon.
+
+Note also that most other connecting words cannot be preceded by a joining comma. For example, the connecting words however, therefore, hence, consequently, nevertheless and thus cannot be used after a joining comma. Hence the following examples are also wrong:
+
+    *Saturn was long thought to be the only ringed planet, however, this is now known not to be the case. 
+    *Two members of the expedition were too ill to continue, nevertheless the others decided to press on. 
+    *Liverpool are five points behind the leaders, therefore they must win both their remaining games. 
+
+Sentences like these once again require, not a comma, but a semicolon.
+
+The rule is again easy:
+
+    € Use a joining comma to join two complete sentences with one of the words and, or, but, yet or while. Do not use a joining comma in any other way. 
+
+
+The Gapping Comma
+
+The gapping comma is very easy. We use a gapping comma to show that one or more words have been left out when the missing words would simply repeat the words already used earlier in the same sentence. Here is an example:
+
+    Some Norwegians wanted to base their national language on the speech of the capital city; others, on the speech of the rural countryside. 
+
+The gapping comma here shows that the words wanted to base their national language, which might have been repeated, have instead been omitted. This sentence is equivalent to a longer sentence like this:
+
+    Some Norwegians wanted to base their national language on the speech of the capital city; others wanted to base it on the speech of the rural countryside. 
+
+Here is another example, which contains both listing commas and gapping commas:
+
+    Italy is famous for her composers and musicians, France, for her chefs and philosophers, and Poland, for her mathematicians and logicians. 
+
+(Here I have inserted a listing comma before and for the sake of clarity.)
+
+Gapping commas are not always strictly necessary: you can leave them out if the sentence is perfectly clear without them:
+
+    Italy is famous for her composers and musicians, France for her chefs and philosophers, and Poland for her mathematicians and logicians. 
+
+Use your judgement: if a sentence seems clear without gapping commas, don't use them; if you have doubts, put them in.
+
+
+
+
+
+
+
+
+Bracketing Commas
+
+Bracketing commas (also called isolating commas) do a very different job from the other three types. These are the most frequently used type of comma, and they cause more problems than the other types put together. The rule is this: a pair of bracketing commas is used to mark off a weak interruption of the sentence ‹ that is, an interruption which does not disturb the smooth flow of the sentence. Note that word `pair': bracketing commas, in principle at least, always occur in pairs, though sometimes one of them is not written, as explained below. Look carefully at these examples of bracketing commas:
+
+    These findings, we would suggest, cast doubt upon his hypothesis. 
+    Schliemann, of course, did his digging before modern archaeology was invented. 
+    Pratchett has, it would seem, abandoned Rincewind the wizard to the ravages of the Discworld. 
+    Darwin's Origin of Species, published in 1859, revolutionized biological thinking. 
+    The Pakistanis, like the Australians before them, have exposed the shortcomings of the England batting order. 
+    Rupert Brooke, who was killed in the war at the age of 28, was one of our finest poets. 
+    We have been forced to conclude, after careful study of the data, that the proposed correlations, in spite of their obvious appeal, do not stand up. 
+
+In each case a weak interruption has been set off by a pair of bracketing commas. (The last example has two weak interruptions.) Now notice something important: in every one of these examples, the weak interruption set off by bracketing commas could, in principle, be removed from the sentence, and the result would still be a complete sentence that made good sense. Try this with some of the examples:
+
+    These findings cast doubt upon his hypothesis. 
+    Pratchett has abandoned Rincewind the wizard to the ravages of the Discworld. 
+    The Pakistanis have exposed the shortcomings of the England batting order. 
+    We have been forced to conclude that the proposed correlations do not stand up. 
+
+This is always the case with bracketing commas, and it gives you a simple way of checking your punctuation. If you have set off some words with a pair of bracketing commas, and you find you can't remove those words without destroying the sentence, you have done something wrong. Here is an example of wrong use, taken from Carey (1958):
+
+    *Yet, outside that door, lay a whole new world. 
+
+If you try to remove the words outside that door, the result is *Yet lay a whole new world, which is not a sentence. The problem here is that outside that door is not an interruption at all: it's an essential part of the sentence. So, the bracketing commas shouldn't be there. Just get rid of them:
+
+    Yet outside that door lay a whole new world. 
+
+Here is another example:
+
+    *She groped for her cigarettes, and finding them, hastily lit one. 
+
+This time, if you try to remove the words and finding them, the result is *She groped for her cigarettes hastily lit one, which is again not a sentence. The problem is that the interruption in this sentence is only the sequence finding them; the word and is not part of the interruption, but an essential part of the sentence. So move the first comma:
+
+    She groped for her cigarettes and, finding them, hastily lit one. 
+
+Now check that the interruption has been correctly marked off:
+
+    She groped for her cigarettes and hastily lit one. 
+
+This is a good sentence, so you have now got the bracketing commas in the right places.
+
+Since bracketing commas really do confuse many people, let's look at some further examples:
+
+    *Stanley was a determined, even ruthless figure. 
+
+What's wrong here? Well, that comma can't possibly be a listing comma, a joining comma or a gapping comma; therefore it must be intended as a bracketing comma. But where is the interruption it is trying to bracket? It can't be the three words at the end: *Stanley was a determined is so much gibberish. In fact, the weak interruption here is the phrase even ruthless, and the bracketing commas should show this:
+
+    Stanley was a determined, even ruthless, figure. 
+
+This is perfect, since now the bracketed interruption can be safely removed:
+
+    Stanley was a determined figure. 
+
+Sometimes this very common type of mistake will not disturb your reader too much, but on occasion it can be utterly bewildering:
+
+    *The Third Partition of Poland was the last, and undoubtedly the most humiliating act in the sorry decline of the once-powerful kingdom. 
+
+Here the sequence before the comma, The Third Partition of Poland was the last, seems to make sense by itself, but unfortunately not the sense that the writer intends. With only one comma, the reader will surely assume the writer means `The Third Partition of Poland was the last [partition of Poland]', will go on to assume that the word undoubtedly begins another statement, and will be left floundering when she abruptly comes to a full stop instead of a verb. The essential second bracketing comma removes the problem:
+
+    The Third Partition of Poland was the last, and undoubtedly the most humiliating, act in the sorry decline of the once-powerful kingdom. 
+
+Here is another example of a type which often causes trouble:
+
+    The people of Cornwall, who depend upon fishing for their livelihood, are up in arms over the new EC quotas. 
+
+As always, we could in principle remove the bracketed interruption to produce a sensible sentence:
+
+    The people of Cornwall are up in arms over the new EC quotas. 
+
+But note carefully: this sentence is talking about all the people of Cornwall, and not just some of them, and hence so was the original sentence. The weak interruption in the original sentence is merely adding some extra information about the people of Cornwall. Now consider this different example:
+
+    The people of Cornwall who depend upon fishing for their livelihood are up in arms over the new EC quotas. 
+
+This time their are no bracketing commas because there is no interruption: now we are not talking about all the people of Cornwall, but only about some of them: specifically, about the ones who depend upon fishing for their livelihood. Here the phrase who depend upon fishing for their livelihood is not an interruption but an essential part of the sentence, and hence it receives no bracketing commas.
+
+Sometimes a weak interruption comes at the beginning or at the end of its sentence. In such a case, one of the two bracketing commas would logically fall at the beginning or the end of the sentence ‹ but we never write a comma at the beginning or at the end of a sentence. As a result, only one of the two bracketing commas is written in this case:
+
+    All in all, I think we can say that we've done well. 
+    I think we can say that we've done well, all in all. 
+
+When the weak interruption all in all comes at the beginning of the sentence, it has only a following comma; when it comes at the end, it has only a preceding comma. Compare what happens when the interruption comes in the middle:
+
+    I think we can say that, all in all, we've done well. 
+
+Now the interruption has two bracketing commas. Regardless of where the interruption is placed, it could be removed to give the perfectly good sentence I think we can say that we've done well.
+
+Here are some further examples of weak interruptions that come at the beginning or at the end.
+
+At the beginning:
+
+    Having worked for years in Italy, Susan speaks excellent Italian. 
+    Unlike most nations, Britain has no written constitution. 
+    Although Mercury is closer to the sun, Venus has the higher surface temperature. 
+    After capturing the Aztec capital, Cortés turned his attention to the Pacific. 
+
+And at the end:
+
+    The use of dictionaries is not allowed, which strikes me as preposterous. 
+    The pronunciation of English is changing rapidly, we are told. 
+    The Rose Parade is held in Pasadena, a suburb of Los Angeles. 
+
+Once again, the words set off by a single bracketing comma in these examples could be removed to leave a good sentence. Check this for yourself.
+
+There are a number of common words which typically introduce weak interruptions containing complete sentences. Among the commonest of these are although, though, even though, because, since , after, before, if, when and whenever. Weak interruptions introduced by these words are usually rather long, and therefore they most often come at the beginning or at the end of a sentence. Some examples:
+
+    Although Australian wines are a fairly new phenomenon, they have already established a formidable reputation. 
+    After the Roman legions withdrew from Britain, the British found themselves defenceless against Irish and Viking raids. 
+    If there are any further cuts in funding, our library will be severely affected. 
+    Hitler could never have invaded Britain successfully, because their excellent rail system would have allowed the British to mass defenders quickly at any beachhead. 
+    Columbus is usually credited with discovering America, even though the Vikings had preceded him by several centuries. 
+
+There is just one case in which you might find yourself apparently following all the rules but still using bracketing commas wrongly. Consider the following example, and try to decide if the comma is properly used:
+
+    Note that in each of these examples, the material set off by commas could be removed without destroying the sentence. 
+
+The comma in this example is clearly not a listing comma, a joining comma or a gapping comma. Is it a bracketing comma? Try removing the words before the comma:
+
+    The material set off by commas could be removed without destroying the sentence. 
+
+This appears to be a good sentence, and so you might think that the original example was correctly punctuated. But it is not. The problem is that the original sentence was an instruction to notice something, and the words Note that are therefore an essential part of the sentence, not part of the interruption. The interruption, quite clearly, consists only of the words in each of these examples. When we tried to remove the first seven words, we got something that was a sentence, purely by accident, but a sentence in which the original meaning had been partly destroyed. The original attempt at punctuating was therefore wrong, and it must be corrected by adding the second bracketing comma around the interruption:
+
+    Note that, in each of these examples, the material set off by commas could be removed without destroying the sentence. 
+
+Now the interruption marked off by the bracketing commas can be safely removed without wrecking the sense of the sentence:
+
+    Note that the material set off by commas could be removed without destroying the sentence. 
+
+Therefore, when you are checking your bracketing commas, make sure that the words enclosed in commas really do make up an interruption, and do not include an essential part of the sentence.
+
+In many cases a weak interruption does not absolutely require bracketing commas. Thus either of the following is fine:
+
+    Shortly before the war, he was living in Paris. 
+    Shortly before the war he was living in Paris. 
+
+With or without the bracketing comma, this sentence is perfectly clear. Sometimes, however, the bracketing comma is absolutely essential to avoid misleading the reader:
+
+    *Just before unloading the trucks were fired upon. 
+
+Here the reader naturally takes Just before unloading the trucks as a single phrase, and is left floundering as a result. A bracketing comma removes the difficulty:
+
+    Just before unloading, the trucks were fired upon. 
+
+The best way to avoid problems of this sort is, of course, to read what you've written. Remember, it is your job to make your meaning clear to the reader. The reader should not have to struggle to make sense of what you've written.
+
+Here are the rules for using bracketing commas:
+
+    € Use a pair of bracketing commas to set off a weak interruption which could be removed from the sentence without destroying it. 
+    € If the interruption comes at the beginning or the end of the sentence, use only one bracketing comma. 
+    € Make sure the words set off are really an interruption. 
+
+Copyright © Larry Trask, 1997
+
+Summary of Commas
+
+There are four types of comma: the listing comma, the joining comma, the gapping comma and bracketing commas.
+A listing comma can always be replaced by the word and or or:
+
+    Vanessa seems to live on eggs, pasta and aubergines. 
+    Vanessa seems to live on eggs and pasta and aubergines. 
+    Choose an article from the Guardian, the Independent or the Times. 
+    Choose an article from the Guardian or the Independent or the Times. 
+    Stanley was an energetic, determined and even ruthless figure. 
+    Stanley was an an energetic and determined and even ruthless figure. 
+
+A joining comma must be followed by one of the connecting words and, or, but, yet or while:
+
+    The report was due last week, but it hasn't appeared yet. 
+    The motorways in France and Spain are toll roads, while those in Britain are free. 
+
+A gapping comma indicates that you have decided not to repeat some words which have already occurred in the sentence:
+
+    Jupiter is the largest planet and Pluto, the smallest. 
+
+Bracketing commas always come in pairs, unless one of them would come at the beginning or the end of the sentence, and they always set off a weak interruption which could in principle be removed from the sentence:
+
+    My father, who hated cricket, always refused to watch me play. 
+    We have a slight problem, to put it mildly. 
+
+If you're not sure about your commas, you can check them by using these rules. Ask yourself these questions:
+
+    1. Can the comma be replaced by and or or? 
+    2. Is it followed by one of the connecting words and, or, but, yet or while? 
+    3. Does it represent the absence of repetition? 
+    4. Does it form one of a pair of commas setting off an interruption which could be removed from the sentence? 
+
+If the answer to all these questions is `no', you have done something wrong. Try these questions on the following example:
+
+    The publication of The Hobbit in 1937, marked the beginning of Tolkien's career as a fantasy writer. 
+
+Can that comma be replaced by and or or? No ‹ the result would make no sense. Is it followed by a suitable connecting word? No ‹ obviously not. Have some repeated words been left out? No ‹ certainly not. Is it one of a pair? Not obviously, but maybe the interruption comes at the beginning or the end. Can the words before the comma be safely removed? No ‹ what's left is not a sentence. Can the words after the comma be removed? No ‹ the result would still not be a sentence.
+
+We get the answer `no' in every case, and therefore that comma shouldn't be there. Get rid of it:
+
+    The publication of The Hobbit in 1937 marked the beginning of Tolkien's career as a fantasy writer. 
+
+Try another example:
+
+    Josie originally wanted to be a teacher, but after finishing university, she decided to become a lawyer instead. 
+
+Let's check the first comma. Can it be replaced by and or or? Certainly not. Is it followed by a suitable connecting word? Yes, it's followed by but. So the first comma looks OK at the moment. Now the second comma. Can it be replaced? No. Is it followed by a connecting word? No. Does it stand for a repetition? No. Is it one of a pair? Possibly ‹ but can we remove the words set off by the pair of commas? Let's try:
+
+    Josie originally wanted to be a teacher she decided to become a lawyer instead. 
+
+This is clearly wrong. Is there an interruption at the end of the sentence?
+
+    Josie originally wanted to be a teacher, but after finishing university. 
+
+This is even worse. (It does make sense of a sort, but the wrong sense.) There's something wrong with that second comma. Try getting rid of it:
+
+    Josie originally wanted to be a teacher, but after finishing university she decided to become a lawyer instead. 
+
+This makes perfect sense, and it obeys all the rules. The comma after teacher is a joining comma, but that second comma was a mistake.
+
+In fact, there's another way of fixing this sentence. The words after finishing university actually make up a weak interruption. So you can, if you prefer, put a pair of bracketing commas around these words:
+
+    Josie originally wanted to be a teacher, but, after finishing university, she decided to become a lawyer instead. 
+
+Check that this new version is also correct by removing the words set off by the pair of bracketing commas:
+
+    Josie originally wanted to be a teacher, but she decided to become a lawyer instead. 
+
+This is a good sentence, so the version with three commas is also correct. Remember, you don't have to set off a weak interruption with bracketing commas, as long as the meaning is clear without them, but, if you do use bracketing commas, make sure you use both of them.
+
+In sum, then:
+
+ - Use a listing comma in a list where and or or would be possible instead. 
+ - Use a joining comma before and, or, but, yet or while followed by a complete sentence. 
+ - Use a gapping comma to show that words have been omitted instead of repeated. 
+ - Use a pair of bracketing commas to set off a weak interruption. 
+
+Finally, commas are used in writing numbers and dates.
+

@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<!-- saved from url=(0096)http://closure-library.googlecode.com/svn/trunk/closure/goog/events/actioneventwrapper_test.html -->
+<HTML><!--
+  Copyright 2009 Google Inc. All Rights Reserved.
+--><HEAD><META http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<TITLE>Closure Unit Tests - goog.events.actionEventWrapper</TITLE>
+<SCRIPT src="./Closure Unit Tests - goog.events.actionEventWrapper_files/base.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.events.actionEventWrapper_files/deps.js"></SCRIPT>
+<SCRIPT>
+  goog.require('goog.events');
+  goog.require('goog.events.EventHandler');
+  goog.require('goog.events.actionEventWrapper');
+  goog.require('goog.testing.events');
+  goog.require('goog.testing.jsunit');
+</SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.events.actionEventWrapper_files/array.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.events.actionEventWrapper_files/errorhandlerweakdep.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.events.actionEventWrapper_files/disposable.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.events.actionEventWrapper_files/event.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.events.actionEventWrapper_files/string.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.events.actionEventWrapper_files/useragent.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.events.actionEventWrapper_files/browserevent.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.events.actionEventWrapper_files/eventwrapper.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.events.actionEventWrapper_files/listener.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.events.actionEventWrapper_files/simplepool.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.events.actionEventWrapper_files/jscript.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.events.actionEventWrapper_files/pools.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.events.actionEventWrapper_files/object.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.events.actionEventWrapper_files/events.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.events.actionEventWrapper_files/eventhandler.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.events.actionEventWrapper_files/keycodes.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.events.actionEventWrapper_files/actioneventwrapper.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.events.actionEventWrapper_files/events(1).js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.events.actionEventWrapper_files/stacktrace.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.events.actionEventWrapper_files/asserts.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.events.actionEventWrapper_files/testcase.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.events.actionEventWrapper_files/testrunner.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.events.actionEventWrapper_files/jsunit.js"></SCRIPT>
+</HEAD><BODY>
+<DIV id="a" tabindex="0"></DIV>
+<SCRIPT>
+
+  var a = document.getElementById('a');
+  var eh, events;
+
+  function setUp() {
+    events = [];
+    eh = new goog.events.EventHandler();
+  }
+
+
+  function tearDown() {
+    eh.dispose();
+  }
+
+  var Foo = function() {};
+  Foo.prototype.test = function(e) {
+    events.push(e);
+  };
+
+  function testAddActionListener() {
+    assertEquals('No listeners registered yet', 0,
+        goog.object.getCount(goog.events.listeners_));
+
+    var listener = function(e) { events.push(e); }
+    goog.events.listenWithWrapper(a, goog.events.actionEventWrapper, listener);
+
+    assertEquals('2 listeners should be registered', 2,
+        goog.object.getCount(goog.events.listeners_));
+
+    goog.testing.events.fireClickSequence(a);
+    assertEquals('1 event should have been dispatched', 1, events.length);
+    assertEquals('Should be an click event', 'click', events[0].type)
+
+    goog.testing.events.fireKeySequence(a, goog.events.KeyCodes.ENTER);
+    assertEquals('2 events should have been dispatched', 2, events.length);
+    assertEquals('Should be an keypress event', 'keypress', events[1].type)
+
+    goog.testing.events.fireKeySequence(a, goog.events.KeyCodes.SPACE);
+    assertEquals('2 events should have been dispatched', 2, events.length);
+
+    goog.testing.events.fireKeySequence(a, goog.events.KeyCodes.ESC);
+    assertEquals('2 events should have been dispatched', 2, events.length);
+
+    goog.events.unlistenWithWrapper(a, goog.events.actionEventWrapper,
+        listener);
+    assertEquals('no listeners should be registered', 0,
+        goog.object.getCount(goog.events.listeners_));
+  }
+
+
+  function testRemoveActionListener() {
+    assertEquals('No listeners registered yet', 0,
+        goog.object.getCount(goog.events.listeners_));
+
+    var listener1 = function(e) { events.push(e); };
+    var listener2 = function(e) { events.push({type: 'err'}); }
+
+    goog.events.listenWithWrapper(a, goog.events.actionEventWrapper, listener1);
+    assertEquals('2 listeners should be registered', 2,
+        goog.object.getCount(goog.events.listeners_));
+
+    goog.events.listenWithWrapper(a, goog.events.actionEventWrapper, listener2);
+    assertEquals('4 listeners should be registered', 4,
+        goog.object.getCount(goog.events.listeners_));
+
+    goog.testing.events.fireKeySequence(a, goog.events.KeyCodes.ENTER);
+    assertEquals('2 events should have been dispatched', 2, events.length);
+    assertEquals('Should be an keypress event', 'keypress', events[0].type);
+    assertEquals('Should be an err event', 'err', events[1].type);
+
+    goog.events.unlistenWithWrapper(a, goog.events.actionEventWrapper,
+        listener2);
+    assertEquals('2 listeners should be registered', 2,
+        goog.object.getCount(goog.events.listeners_));
+
+    events = [];
+    goog.testing.events.fireKeySequence(a, goog.events.KeyCodes.ENTER);
+    assertEquals('1 event should have been dispatched', 1, events.length);
+    assertEquals('Should be an keypress event', 'keypress', events[0].type);
+
+    goog.events.unlistenWithWrapper(a, goog.events.actionEventWrapper,
+        listener1);
+    assertEquals('0 listeners should be registered', 0,
+        goog.object.getCount(goog.events.listeners_));
+  }
+
+
+  function testEventHandlerActionListener() {
+    assertEquals('No listeners registered yet', 0,
+        goog.object.getCount(goog.events.listeners_));
+
+    var listener = function(e) { events.push(e); }
+    eh.listenWithWrapper(a, goog.events.actionEventWrapper, listener);
+
+    assertEquals('2 listeners should be registered', 2,
+        goog.object.getCount(goog.events.listeners_));
+
+    goog.testing.events.fireClickSequence(a);
+    assertEquals('1 event should have been dispatched', 1, events.length);
+    assertEquals('Should be an click event', 'click', events[0].type)
+
+    goog.testing.events.fireKeySequence(a, goog.events.KeyCodes.ENTER);
+    assertEquals('2 events should have been dispatched', 2, events.length);
+    assertEquals('Should be an keypress event', 'keypress', events[1].type)
+
+    goog.testing.events.fireKeySequence(a, goog.events.KeyCodes.SPACE);
+    assertEquals('2 events should have been dispatched', 2, events.length);
+
+    goog.testing.events.fireKeySequence(a, goog.events.KeyCodes.ESC);
+    assertEquals('2 events should have been dispatched', 2, events.length);
+
+    eh.unlistenWithWrapper(a, goog.events.actionEventWrapper,
+        listener);
+    assertEquals('no listeners should be registered', 0,
+        goog.object.getCount(goog.events.listeners_));
+  }
+
+
+  function testEventHandlerActionListenerWithScope() {
+    assertEquals('No listeners registered yet', 0,
+        goog.object.getCount(goog.events.listeners_));
+
+    var foo = new Foo();
+    var eh2 = new goog.events.EventHandler(foo);
+
+    eh2.listenWithWrapper(a, goog.events.actionEventWrapper, foo.test);
+
+    assertEquals('2 listeners should be registered', 2,
+        goog.object.getCount(goog.events.listeners_));
+
+    goog.testing.events.fireClickSequence(a);
+    assertEquals('1 event should have been dispatched', 1, events.length);
+    assertEquals('Should be an click event', 'click', events[0].type)
+
+    goog.testing.events.fireKeySequence(a, goog.events.KeyCodes.ENTER);
+    assertEquals('2 events should have been dispatched', 2, events.length);
+    assertEquals('Should be an keypress event', 'keypress', events[1].type)
+
+    goog.testing.events.fireKeySequence(a, goog.events.KeyCodes.SPACE);
+    assertEquals('2 events should have been dispatched', 2, events.length);
+
+    goog.testing.events.fireKeySequence(a, goog.events.KeyCodes.ESC);
+    assertEquals('2 events should have been dispatched', 2, events.length);
+
+    eh2.dispose();
+    assertEquals('no listeners should be registered', 0,
+        goog.object.getCount(goog.events.listeners_));
+    delete foo;
+  }
+
+</SCRIPT>
+
+
+<DIV><DIV style="color: rgb(0, 100, 0); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; font-weight: bold; ">Closure Unit Tests - goog.events.actionEventWrapper [PASSED]</DIV><DIV style="color: rgb(51, 51, 51); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; font-weight: bold; ">closure-library.googlecode.com/svn/trunk/closure/goog/events/actioneventwrapper_test.html</DIV><DIV style="color: rgb(51, 51, 51); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">4 of 4 tests run in 63ms.</DIV><DIV style="color: rgb(51, 51, 51); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">4 passed, 0 failed.</DIV><DIV style="color: rgb(51, 51, 51); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">16 ms/test. 25 files loaded.</DIV><DIV style="color: rgb(51, 51, 51); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">.</DIV><DIV style="color: rgb(51, 51, 51); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">09:51:50.246  Start</DIV><DIV style="color: rgb(0, 100, 0); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">09:51:50.280  testAddActionListener : PASSED</DIV><DIV style="color: rgb(0, 100, 0); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">09:51:50.292  testEventHandlerActionListener : PASSED</DIV><DIV style="color: rgb(0, 100, 0); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">09:51:50.301  testEventHandlerActionListenerWithScope : PASSED</DIV><DIV style="color: rgb(0, 100, 0); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">09:51:50.308  testRemoveActionListener : PASSED</DIV><DIV style="color: rgb(51, 51, 51); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">09:51:50.308  Done</DIV><DIV style="color: rgb(51, 51, 51); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; "> </DIV><A style="display: block; font-size: small; " href="">Run again without reloading</A></DIV></BODY></HTML>

@@ -1,0 +1,22 @@
+This is a helper tab. The tab should be able to be edited, by Administrators.
+	<h2>What is the Document Control Center?</h2>
+	<p>The Document Control Center (DCC) is commonly found in organizations that move a lot of documents, such as letters, drawings and the like. The DCC normally records all incoming and outgoing correspondence and is responsible for centralizing an archive of documents, based on a filing system. With the flow of a large number of documents in electronic form, the DCC also files these documents in many instances. They are also repsonsible for scanning important documents and barcoding if necessary.  </p>
+	
+	<h2>What is a Distribution List?</h2>	
+	<p>A Distribution List, is a list of names, where a document is copied. The names are to be pulled via a
+	contacts database. The list holds the id for the contact person, all other details are to be pulled via the contacts database</p>
+	
+	<h2>What is a Transmittal Slip</h2>
+	
+	<p>A transmittal slip is a form used to record the transmittal of documents. Each Organization will use a slightly different type of form. However, the basic information contained in these forms is fairly standardized. You can see a form, here and here. It is important that the system can print transmittal forms in specific formats. For prototyping transmittal forms can be quickly templated using .pdf and just in the fields.</p>
+	
+	<p>A transmittal represents a one to many relationship and hence a GridView type control is necessary. We suggest the developer needs to spend time in developing this part as general routines and classes, as most modules wuld follow a similar pattern of requirements.</p>
+	
+	<h2>General</h2>
+	<p>Not all fields for a document are captured by the Document Control Module. Some of the fields, such as those required to track financial documents are updated in the releevant modules.</p>
+	
+	<h2>Interface</h2>
+	<p>Complete the interface with a typical office worker in mind. Make it as simple as possible.
+	   We prefer a step by step approach, that lets the user understand the steps he needs to complete the task.
+	   You can add some background graphics and buttons to make the forms a bit more interesting.
+	</p>

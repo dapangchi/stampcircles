@@ -1,0 +1,81 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" 
+  "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<!-- START:snip3 -->
+<head>
+  <title>
+   Mastering Dojo - DOM Utilities Demonstration - Question List Challenge Step 1
+  </title>
+  
+  <style type="text/css">
+    @import "questions.css";
+  </style>
+  
+  <script 
+    type="text/javascript" 
+    src="/dojoroot/dojo/dojo.js" 
+    djConfig="isDebug: true">
+  </script>
+  
+  <script type="text/javascript">
+    (function(){
+      function layout1(){
+        // START:snip2a
+        dojo.addClass(dojo.query("form > p")[0], "formTitle");
+        // END:snip2a
+        // START:snip2
+        dojo.query("div.questions p").forEach(function(node, i){
+          dojo.addClass(node, (i % 2) ? "lightBand" : "darkBand");
+        });
+        // END:snip2
+      }
+      
+      dojo.addOnLoad(layout1);
+    })();
+  </script>
+</head>
+<!-- END:snip3 -->
+
+<body><div><form>
+  <p>Programmer Interview Questions</p>
+  <div class="questions">
+    <p>
+      <span><input type="radio" name="q1" value="yes">Yes</span>
+      <span><input type="radio" name="q1" value="no">No</span>
+      Are you a C programmer?
+    </p><p>
+      <span><input type="radio" name="q1-yes" value="yes">Yes</span>
+      <span><input type="radio" name="q1-yes" value="no">No</span>
+      <span><input type="radio" name="q1-yes" value="maybe">Don't know</span>
+      Have you read Kernighan and Ritchie?
+    </p><p>
+      <span><input type="radio" name="q2" value="yes">Yes</span>
+      <span><input type="radio" name="q2" value="no">No</span>
+      Are you a C++ programmer?
+    </p><p>
+      <span><input type="radio" name="q2-yes" value="yes">Yes</span>
+      <span><input type="radio" name="q2-yes" value="no">No</span>
+      <span><input type="radio" name="q2-yes" value="maybe">Don't know</span>
+      Have you read Stroustrup?
+    </p><p>
+      <span><input type="radio" name="q3" value="yes">Yes</span>
+      <span><input type="radio" name="q3" value="no">No</span>
+      Are you a Ruby programmer?
+    </p><p>
+      <span><input type="radio" name="q3-yes" value="yes">Yes</span>
+      <span><input type="radio" name="q3-yes" value="no">No</span>
+      <span><input type="radio" name="q3-yes" value="maybe">Don't know</span>
+      Have you read the pickax book?
+    </p><p>
+      <span><input type="radio" name="q4" value="yes">Yes</span>
+      <span><input type="radio" name="q4" value="no">No</span>
+      Are you a Lisp programmer?
+    </p><p>
+      <span><input type="radio" name="q4-yes" value="yes">Yes</span>
+      <span><input type="radio" name="q4-yes" value="no">No</span>
+      <span><input type="radio" name="q4-yes" value="maybe">Don't know</span>
+      Have you read the "Wizard" book?
+    </p>
+  </div>
+</form></div></body>
+</html>

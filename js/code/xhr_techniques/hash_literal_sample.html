@@ -1,0 +1,50 @@
+<!--
+ ! Excerpted from "Mastering Dojo",
+ ! published by The Pragmatic Bookshelf.
+ ! Copyrights apply to this code. It may not be used to create training material, 
+ ! courses, books, articles, and the like. Contact us if you are in doubt.
+ ! We make no guarantees that this code is fit for any purpose. 
+ ! Visit http://www.pragmaticprogrammer.com/titles/rgdojo for more book information.
+-->
+    <script type="dojo/connect" event="onRowClick" args="evt">
+        var searchTerms = this.model.getRow(evt.rowIndex).description;
+        
+        dojo.io.script.get({
+            // URL for Yahoo Search 
+            url: "http://search.yahooapis.com/WebSearchService/V1/webSearch",
+
+           // Send search term parameters:
+            content: {
+                appid: "DEMO", 
+                query: searchTerms,  
+                output: "json"
+            },      
+
+            // If the response takes longer than 10000ms (= 10 seconds), error out
+            timeout: 10000,
+
+            // Yahoo API requires you to send the callback function name in the 
+            // parameter "callback"
+            callbackParamName: "callback"
+
+            // The full call will have load and error parameters too
+            // ...
+        });
+        
+    </script>
+    <thead>
+       <tr>
+          <th field="description" width="15em">Cigar</th> 
+          <th field="size">Length/Ring</th> 
+          <th field="origin">Origin</th> 
+          <th field="wrapper">Wrapper</th> 
+          <th field="shape">Shape</th> 
+       </tr>
+    </thead>        
+</table>
+
+<ul id="resultUl" style="width:550px">
+</ul>
+
+</body>
+</html>

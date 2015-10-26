@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<!-- saved from url=(0086)http://closure-library.googlecode.com/svn/trunk/closure/goog/ui/roundedpanel_test.html -->
+<HTML><!--
+  Copyright 2008 Google Inc. All Rights Reserved.
+
+
+  Unit test file for goog.ui.RoundedPanel component
+--><HEAD><META http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+  <TITLE>Closure Unit Tests - goog.ui.RoundedPanel</TITLE>
+  <SCRIPT src="./Closure Unit Tests - goog.ui.RoundedPanel_files/base.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.RoundedPanel_files/deps.js"></SCRIPT>
+  <SCRIPT>
+    goog.require('goog.testing.jsunit');
+    goog.require('goog.ui.RoundedPanel');
+    goog.require('goog.userAgent');
+  </SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.RoundedPanel_files/stacktrace.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.RoundedPanel_files/asserts.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.RoundedPanel_files/testcase.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.RoundedPanel_files/testrunner.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.RoundedPanel_files/jsunit.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.RoundedPanel_files/array.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.RoundedPanel_files/tagname.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.RoundedPanel_files/classes.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.RoundedPanel_files/coordinate.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.RoundedPanel_files/size.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.RoundedPanel_files/object.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.RoundedPanel_files/string.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.RoundedPanel_files/useragent.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.RoundedPanel_files/dom.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.RoundedPanel_files/box.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.RoundedPanel_files/range.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.RoundedPanel_files/rect.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.RoundedPanel_files/math.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.RoundedPanel_files/path.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.RoundedPanel_files/product.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.RoundedPanel_files/style.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.RoundedPanel_files/errorhandlerweakdep.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.RoundedPanel_files/disposable.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.RoundedPanel_files/event.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.RoundedPanel_files/browserevent.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.RoundedPanel_files/eventwrapper.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.RoundedPanel_files/listener.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.RoundedPanel_files/simplepool.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.RoundedPanel_files/jscript.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.RoundedPanel_files/pools.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.RoundedPanel_files/events.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.RoundedPanel_files/eventhandler.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.RoundedPanel_files/eventtarget.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.RoundedPanel_files/idgenerator.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.RoundedPanel_files/component.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.RoundedPanel_files/abstractgraphics.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.RoundedPanel_files/affinetransform.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.RoundedPanel_files/element.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.RoundedPanel_files/strokeandfillelement.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.RoundedPanel_files/ellipseelement.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.RoundedPanel_files/groupelement.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.RoundedPanel_files/imageelement.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.RoundedPanel_files/pathelement.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.RoundedPanel_files/rectelement.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.RoundedPanel_files/textelement.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.RoundedPanel_files/canvaselement.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.RoundedPanel_files/font.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.RoundedPanel_files/fill.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.RoundedPanel_files/lineargradient.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.RoundedPanel_files/solidfill.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.RoundedPanel_files/stroke.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.RoundedPanel_files/canvasgraphics.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.RoundedPanel_files/timer.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.RoundedPanel_files/svgelement.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.RoundedPanel_files/svggraphics.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.RoundedPanel_files/vmlelement.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.RoundedPanel_files/vmlgraphics.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.RoundedPanel_files/graphics.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.RoundedPanel_files/roundedpanel.js"></SCRIPT>
+</HEAD><BODY>
+  <SCRIPT>
+    /**
+     * Tests goog.ui.RoundedPanel.create(), ensuring that the proper instance is
+     * created based on user-agent
+     */
+    function testRoundedPanelCreate() {
+      var rcp = goog.ui.RoundedPanel.create(15,
+                                            5,
+                                            '#cccccc',
+                                            '#cccccc',
+                                            goog.ui.RoundedPanel.Corner.ALL);
+
+      if (goog.userAgent.GECKO && goog.userAgent.isVersion('1.9a')) {
+        assertTrue('For Firefox 3.0+ (uses Gecko 1.9+), an instance of ' +
+            'goog.ui.CssRoundedPanel should be returned.',
+            rcp instanceof goog.ui.CssRoundedPanel);
+      } else if (goog.userAgent.WEBKIT && goog.userAgent.isVersion('500')) {
+        assertTrue('For Safari 3.0+, an instance of goog.ui.CssRoundedPanel ' +
+            'should be returned.', rcp instanceof goog.ui.CssRoundedPanel);
+      } else if (goog.userAgent.GECKO ||
+                 goog.userAgent.IE ||
+                 goog.userAgent.OPERA ||
+                 goog.userAgent.WEBKIT) {
+        assertTrue('For Gecko 1.8- (ex. Firefox 2.0-, Camino 1.5-, etc.), ' +
+            'IE, Opera, and Safari 2.0-, an instance of ' +
+            'goog.ui.GraphicsRoundedPanel should be returned.',
+            rcp instanceof goog.ui.GraphicsRoundedPanel);
+      } else {
+        assertNull('For non-supported user-agents, null is returned.', rcp);
+      }
+    };
+  </SCRIPT>
+
+
+<DIV><DIV style="color: rgb(0, 100, 0); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; font-weight: bold; ">Closure Unit Tests - goog.ui.RoundedPanel [PASSED]</DIV><DIV style="color: rgb(51, 51, 51); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; font-weight: bold; ">closure-library.googlecode.com/svn/trunk/closure/goog/ui/roundedpanel_test.html</DIV><DIV style="color: rgb(51, 51, 51); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">1 of 1 tests run in 4ms.</DIV><DIV style="color: rgb(51, 51, 51); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">1 passed, 0 failed.</DIV><DIV style="color: rgb(51, 51, 51); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">4 ms/test. 61 files loaded.</DIV><DIV style="color: rgb(51, 51, 51); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">.</DIV><DIV style="color: rgb(51, 51, 51); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">08:40:15.935  Start</DIV><DIV style="color: rgb(0, 100, 0); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">08:40:15.938  testRoundedPanelCreate : PASSED</DIV><DIV style="color: rgb(51, 51, 51); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">08:40:15.939  Done</DIV><DIV style="color: rgb(51, 51, 51); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; "> </DIV><A style="display: block; font-size: small; " href="">Run again without reloading</A></DIV></BODY></HTML>

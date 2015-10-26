@@ -1,0 +1,47 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!--
+ ! Excerpted from "Mastering Dojo",
+ ! published by The Pragmatic Bookshelf.
+ ! Copyrights apply to this code. It may not be used to create training material, 
+ ! courses, books, articles, and the like. Contact us if you are in doubt.
+ ! We make no guarantees that this code is fit for any purpose. 
+ ! Visit http://www.pragmaticprogrammer.com/titles/rgdojo for more book information.
+-->
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Two Views</title>
+    <style type="text/css">
+        @import "/dojoroot/dijit/themes/tundra/tundra.css";
+        @import "/dojoroot/dojox/grid/_grid/tundraGrid.css";
+    </style>
+    <script type="text/javascript" src="/dojoroot/dojo/dojo.js"  djConfig="parseOnLoad: true"></script>
+    <script type="text/javascript">
+       dojo.require("dojox.grid.Grid");
+       dojo.require("dojo.data.ItemFileReadStore");
+    </script>
+</head>
+<body class="tundra">
+    
+    <span dojoType="dojo.data.ItemFileReadStore" 
+        jsId="icStore" url="datastores/ice_cream.json">
+    </span>
+
+    <table id="grid" dojoType="dojox.grid.Grid" 
+		store="icStore"
+		clientSort="true"
+		style="width: 35em; height: 15em;">
+        <colgroup span="1" noscroll="true"></colgroup>
+        <colgroup span="4"></colgroup>
+        <thead>
+           <tr>
+              <th field="name"  width="15em">Flavor</th>
+              <th field="baseFlavor"  width="10em">Base Flavor</th>
+              <th field="calories" width="5em">Calories</th>
+              <th field="fat" width="5em">Fat</th>
+              <th field="mixins" width="7em">Mixins</th>
+           </tr>
+        </thead>
+    </table>
+    
+</body>

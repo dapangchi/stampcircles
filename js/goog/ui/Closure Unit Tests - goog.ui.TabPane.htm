@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<!-- saved from url=(0081)http://closure-library.googlecode.com/svn/trunk/closure/goog/ui/tabpane_test.html -->
+<HTML><!--
+  Copyright 2008 Google Inc. All Rights Reserved.
+--><HEAD><META http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<TITLE>Closure Unit Tests - goog.ui.TabPane</TITLE>
+<SCRIPT src="./Closure Unit Tests - goog.ui.TabPane_files/base.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.TabPane_files/deps.js"></SCRIPT>
+<SCRIPT>
+  goog.require('goog.ui.TabPane');
+  goog.require('goog.dom');
+  goog.require('goog.events');
+  goog.require('goog.testing.jsunit');
+</SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.TabPane_files/array.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.TabPane_files/tagname.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.TabPane_files/classes.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.TabPane_files/coordinate.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.TabPane_files/size.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.TabPane_files/object.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.TabPane_files/string.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.TabPane_files/useragent.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.TabPane_files/dom.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.TabPane_files/errorhandlerweakdep.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.TabPane_files/disposable.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.TabPane_files/event.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.TabPane_files/browserevent.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.TabPane_files/eventwrapper.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.TabPane_files/listener.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.TabPane_files/simplepool.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.TabPane_files/jscript.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.TabPane_files/pools.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.TabPane_files/events.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.TabPane_files/eventtarget.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.TabPane_files/keycodes.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.TabPane_files/box.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.TabPane_files/rect.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.TabPane_files/product.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.TabPane_files/style.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.TabPane_files/tabpane.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.TabPane_files/stacktrace.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.TabPane_files/asserts.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.TabPane_files/testcase.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.TabPane_files/testrunner.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.TabPane_files/jsunit.js"></SCRIPT>
+<STYLE>.goog-tabpane-clear { clear: both; height: 0px; overflow: hidden }</STYLE><STYLE>.goog-tabpane-clear { clear: both; height: 0px; overflow: hidden }</STYLE></HEAD><BODY>
+
+<DIV id="testBody"><DIV id="tabpane" class="goog-tabpane goog-tabpane-top"><UL class="goog-tabpane-tabs" tabindex="0"><LI class="goog-tabpane-tab">page1</LI><LI class="goog-tabpane-tab-disabled">page2</LI><LI class="goog-tabpane-tab-selected">page3</LI></UL><DIV class="goog-tabpane-clear"></DIV><DIV class="goog-tabpane-cont"><DIV style="display: none; "></DIV><DIV style="display: none; "></DIV><DIV style=""></DIV></DIV></DIV></DIV>
+
+<SCRIPT>
+
+  var tabPane;
+  var page1;
+  var page2;
+  var page3;
+
+  function setUp() {
+    goog.dom.$('testBody').innerHTML =
+       "<div id='tabpane'></div>"
+       "<div id='page1Content'>"
+       "  Content for page 1"
+       "</div>"
+       "<div id='page2Content'>"
+       "  Content for page 2"
+       "</div>"
+       "<div id='page3Content'>"
+       "  Content for page 3"
+       "</div>";
+
+    tabPane = new goog.ui.TabPane(goog.dom.$('tabpane'));
+    page1 = new goog.ui.TabPane.TabPage(goog.dom.$('page1Content'), 'page1');
+    page2 = new goog.ui.TabPane.TabPage(goog.dom.$('page2Content'), 'page2');
+    page3 = new goog.ui.TabPane.TabPage(goog.dom.$('page3Content'), 'page3');
+
+    tabPane.addPage(page1);
+    tabPane.addPage(page2);
+    tabPane.addPage(page3);
+  }
+
+  function tearDown() {
+    tabPane.dispose();
+  }
+
+  function testAllPagesEnabledAndSelectable() {
+    tabPane.setSelectedIndex(0);
+    var selected = tabPane.getSelectedPage();
+    assertEquals('page1 should be selected', 'page1', selected.getTitle());
+    assertEquals('goog-tabpane-tab-selected',
+                 selected.getTitleElement().className);
+
+    tabPane.setSelectedIndex(1);
+    selected = tabPane.getSelectedPage();
+    assertEquals('page2 should be selected', 'page2', selected.getTitle());
+    assertEquals('goog-tabpane-tab-selected',
+                 selected.getTitleElement().className);
+
+    tabPane.setSelectedIndex(2);
+    selected = tabPane.getSelectedPage();
+    assertEquals('page3 should be selected', 'page3', selected.getTitle());
+    assertEquals('goog-tabpane-tab-selected',
+                 selected.getTitleElement().className);
+  }
+
+  function testDisabledPageIsNotSelectable() {
+    page2.setEnabled(false);
+    assertEquals('goog-tabpane-tab-disabled',
+                 page2.getTitleElement().className);
+
+    tabPane.setSelectedIndex(0);
+    var selected = tabPane.getSelectedPage();
+    assertEquals('page1 should be selected', 'page1', selected.getTitle());
+    assertEquals('goog-tabpane-tab-selected',
+                 selected.getTitleElement().className);
+
+    tabPane.setSelectedIndex(1);
+    selected = tabPane.getSelectedPage();
+    assertEquals('page1 should remain selected, as page2 is disabled',
+                 'page1', selected.getTitle());
+    assertEquals('goog-tabpane-tab-selected',
+                 selected.getTitleElement().className);
+
+    tabPane.setSelectedIndex(2);
+    selected = tabPane.getSelectedPage();
+    assertEquals('page3 should be selected', 'page3', selected.getTitle());
+    assertEquals('goog-tabpane-tab-selected',
+                 selected.getTitleElement().className);
+  }
+</SCRIPT>
+
+
+<DIV><DIV style="color: rgb(0, 100, 0); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; font-weight: bold; ">Closure Unit Tests - goog.ui.TabPane [PASSED]</DIV><DIV style="color: rgb(51, 51, 51); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; font-weight: bold; ">closure-library.googlecode.com/svn/trunk/closure/goog/ui/tabpane_test.html</DIV><DIV style="color: rgb(51, 51, 51); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">2 of 2 tests run in 17ms.</DIV><DIV style="color: rgb(51, 51, 51); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">2 passed, 0 failed.</DIV><DIV style="color: rgb(51, 51, 51); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">9 ms/test. 33 files loaded.</DIV><DIV style="color: rgb(51, 51, 51); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">.</DIV><DIV style="color: rgb(51, 51, 51); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">08:46:10.920  Start</DIV><DIV style="color: rgb(0, 100, 0); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">08:46:10.933  testAllPagesEnabledAndSelectable : PASSED</DIV><DIV style="color: rgb(0, 100, 0); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">08:46:10.935  testDisabledPageIsNotSelectable : PASSED</DIV><DIV style="color: rgb(51, 51, 51); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">08:46:10.936  Done</DIV><DIV style="color: rgb(51, 51, 51); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; "> </DIV><A style="display: block; font-size: small; " href="">Run again without reloading</A></DIV></BODY></HTML>

@@ -1,0 +1,35 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+            "http://www.w3.org/TR/html4/strict.dtd">
+<!--
+ ! Excerpted from "Mastering Dojo",
+ ! published by The Pragmatic Bookshelf.
+ ! Copyrights apply to this code. It may not be used to create training material, 
+ ! courses, books, articles, and the like. Contact us if you are in doubt.
+ ! We make no guarantees that this code is fit for any purpose. 
+ ! Visit http://www.pragmaticprogrammer.com/titles/rgdojo for more book information.
+-->
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Oracle Date/Text Box</title>
+    <style type="text/css">
+        @import "/dojoroot/dijit/themes/tundra/tundra.css";
+        @import "/dojoroot/dojo/resources/dojo.css"
+    </style>
+    <script type="text/javascript" src="/dojoroot/dojo/dojo.js" 
+	        djConfig="parseOnLoad: true"></script>
+   <script type="text/javascript">
+       dojo.registerModulePath("dojobook","../../dojobook");
+       dojo.require("dojo.parser");
+       dojo.require("dojobook.form_controls.widgets.OracleDateTextBox");
+    </script>
+</head>
+<body class="tundra">
+    <form> 
+    
+    <input dojoType="dojobook.form_controls.widgets.OracleDateTextBox" 
+           name="mydate" value="04-MAR-2008"/>
+    
+    <input type="submit" value="go"/>
+    </form>         
+</body></html>

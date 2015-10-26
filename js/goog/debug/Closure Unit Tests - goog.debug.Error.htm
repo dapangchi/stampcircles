@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<!-- saved from url=(0082)http://closure-library.googlecode.com/svn/trunk/closure/goog/debug/error_test.html -->
+<HTML><!--
+  Copyright 2009 Google Inc. All Rights Reserved.
+--><HEAD><META http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<TITLE>Closure Unit Tests - goog.debug.Error</TITLE>
+<SCRIPT src="./Closure Unit Tests - goog.debug.Error_files/base.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.debug.Error_files/deps.js"></SCRIPT>
+<SCRIPT>
+  goog.require('goog.debug.Error');
+  goog.require('goog.testing.ExpectedFailures');
+  goog.require('goog.testing.jsunit');
+  goog.require('goog.userAgent');
+  goog.require('goog.userAgent.product');
+</SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.debug.Error_files/error.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.debug.Error_files/relativetimeprovider.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.debug.Error_files/string.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.debug.Error_files/formatter.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.debug.Error_files/array.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.debug.Error_files/object.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.debug.Error_files/structs.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.debug.Error_files/iter.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.debug.Error_files/map.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.debug.Error_files/set.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.debug.Error_files/debug.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.debug.Error_files/logrecord.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.debug.Error_files/logger.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.debug.Error_files/tagname.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.debug.Error_files/classes.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.debug.Error_files/coordinate.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.debug.Error_files/size.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.debug.Error_files/useragent.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.debug.Error_files/dom.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.debug.Error_files/box.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.debug.Error_files/rect.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.debug.Error_files/product.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.debug.Error_files/style.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.debug.Error_files/divconsole.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.debug.Error_files/errorhandlerweakdep.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.debug.Error_files/disposable.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.debug.Error_files/event.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.debug.Error_files/browserevent.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.debug.Error_files/eventwrapper.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.debug.Error_files/listener.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.debug.Error_files/simplepool.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.debug.Error_files/jscript.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.debug.Error_files/pools.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.debug.Error_files/events.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.debug.Error_files/stacktrace.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.debug.Error_files/asserts.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.debug.Error_files/testcase.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.debug.Error_files/expectedfailures.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.debug.Error_files/testrunner.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.debug.Error_files/jsunit.js"></SCRIPT>
+<STYLE>.dbg-sev{color:#F00}.dbg-w{color:#C40}.dbg-sh{font-weight:bold;color:#000}.dbg-i{color:#444}.dbg-f{color:#999}.dbg-ev{color:#0A0}.dbg-m{color:#990}.logmsg{border-bottom:1px solid #CCC;padding:2px}.logsep{background-color: #8C8;}.logdiv{border:1px solid #CCC;background-color:#FCFCFC;font:medium monospace}</STYLE></HEAD><BODY>
+<SCRIPT>
+var expectedFailures = new goog.testing.ExpectedFailures();
+
+function tearDown() {
+  expectedFailures.handleTearDown();
+}
+
+function testError() {
+  function xxxxx() {
+    yyyyy();
+  }
+  function yyyyy() {
+    zzzzz();
+  }
+  function zzzzz() {
+    throw new goog.debug.Error('testing');
+  }
+
+  var stack = null, message = null;
+  try {
+    xxxxx();
+  } catch (e) {
+    message = e.message;
+    stack = e.stack.split('\n');
+  }
+
+  assertEquals('Message property should be set', 'testing', message);
+
+  expectedFailures.expectFailureFor(
+      goog.userAgent.IE ||
+      goog.userAgent.product.SAFARI || (
+          goog.userAgent.product.CHROME &&
+          !goog.userAgent.isVersion(532)),
+      'error.stack is not widely supported');
+  try {
+    assertContains('1st line of stack should have "Error"', 'Error', stack[0]);
+    // 2nd line is slightly different in firefox/chrome
+    assertContains('3rd line of stack should have "zzzzz"', 'zzzzz', stack[2]);
+    assertContains('4th line of stack should have "yyyyy"', 'yyyyy', stack[3]);
+    assertContains('5th line of stack should have "xxxxx"', 'xxxxx', stack[4]);
+  } catch (e) {
+    expectedFailures.handleException(e);
+  }
+}
+
+function testInheriting() {
+  function MyError() {
+    goog.debug.Error.call(this);
+  }
+  goog.inherits(MyError, goog.debug.Error);
+  MyError.prototype.message = 'My custom error';
+
+  var message = null;
+  try {
+    throw new MyError();
+  } catch (e) {
+    message = e.message;
+  }
+  assertEquals('My custom error', message);
+}
+
+</SCRIPT><DIV style="position: absolute; border-top-width: 1px; border-right-width: 1px; border-bottom-width: 1px; border-left-width: 1px; border-top-style: solid; border-right-style: solid; border-bottom-style: solid; border-left-style: solid; border-top-color: rgb(51, 51, 51); border-right-color: rgb(51, 51, 51); border-bottom-color: rgb(51, 51, 51); border-left-color: rgb(51, 51, 51); right: 10px; top: 10px; width: 400px; display: none; " class=" logdiv"><DIV style="position: absolute; border-left-width: 1px; border-left-style: solid; border-left-color: rgb(51, 51, 51); border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: rgb(51, 51, 51); right: 0px; top: 0px; width: 1em; height: 1em; cursor: pointer; background-color: rgb(204, 221, 238); text-align: center; color: black; ">X</DIV></DIV>
+
+
+<DIV><DIV style="color: rgb(0, 100, 0); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; font-weight: bold; ">Closure Unit Tests - goog.debug.Error [PASSED]</DIV><DIV style="color: rgb(51, 51, 51); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; font-weight: bold; ">closure-library.googlecode.com/svn/trunk/closure/goog/debug/error_test.html</DIV><DIV style="color: rgb(51, 51, 51); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">2 of 2 tests run in 19ms.</DIV><DIV style="color: rgb(51, 51, 51); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">2 passed, 0 failed.</DIV><DIV style="color: rgb(51, 51, 51); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">10 ms/test. 42 files loaded.</DIV><DIV style="color: rgb(51, 51, 51); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">.</DIV><DIV style="color: rgb(51, 51, 51); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">04:20:10.619  Start</DIV><DIV style="color: rgb(0, 100, 0); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">04:20:10.633  testError : PASSED</DIV><DIV style="color: rgb(0, 100, 0); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">04:20:10.638  testInheriting : PASSED</DIV><DIV style="color: rgb(51, 51, 51); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">04:20:10.638  Done</DIV><DIV style="color: rgb(51, 51, 51); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; "> </DIV><A style="display: block; font-size: small; " href="">Run again without reloading</A></DIV></BODY></HTML>

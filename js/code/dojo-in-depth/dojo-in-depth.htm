@@ -1,0 +1,76 @@
+<html>
+  <head>
+    <script type="text/javascript">
+    /*
+    //START:snip1
+    /dojo
+      /_base---------------->names that begin with a leading underscore
+      /_firebug              are considered private (for internal use)
+      /cldr
+      /data
+      /date
+      /dnd
+          autoscroll.js
+          Avatar.js
+          common.js
+          Container.js
+          Manager.js-------->defines the module "dojo.dnd.Manager"
+          move.js            which happens to be a constructor function
+          Moveable.js
+          Mover.js
+          Selector.js
+          Source.js
+      /io
+          iframe.js--------->defines the module "dojo.io.iframe"
+          script.js          which is a regular module object
+      /nls
+      /resources
+      /rpc
+      /tests
+      _base.js
+      AdapterRegistry.js 
+      back.js
+      behavior.js
+      colors.js
+      cookie.js
+      currency.js
+      date.js
+      DeferredList.js
+      dojo.js--------------->the entry point for the toolkit
+      fx.js                  must be loaded first by a script tag
+      i18n.js
+      NodeList-fx.js
+      number.js
+      OpenAjax.js
+      parer.js
+      regexp.js
+      string.js
+      tests.js
+    //END:snip1
+    */
+    </script>
+
+    <!-- START:snip2 -->
+    <script 
+      type="text/javascript"
+      src="/dojoroot/dojo/dojo.js"
+      djConfig="parseOnLoad: true">
+    </script>
+    <!-- END:snip2 -->
+
+    <!-- START:snip3 -->
+    <script type="text/javascript">
+      djConfig= {parseOnLoad: true};
+    </script>
+    
+    <!-- now load dojo.js; note no djConfig attribute -->
+    <script
+      type="text/javascript"
+      src="/dojoroot/dojo/dojo.js">
+    </script>
+    <!-- END:snip3 -->
+	
+  </head>
+  <body class=tundra>
+  </body>
+</html>

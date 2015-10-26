@@ -1,0 +1,63 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!--
+ ! Excerpted from "Mastering Dojo",
+ ! published by The Pragmatic Bookshelf.
+ ! Copyrights apply to this code. It may not be used to create training material, 
+ ! courses, books, articles, and the like. Contact us if you are in doubt.
+ ! We make no guarantees that this code is fit for any purpose. 
+ ! Visit http://www.pragmaticprogrammer.com/titles/rgdojo for more book information.
+-->
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Dojo Method Tree With Icons</title>
+    <style type="text/css">
+        @import "/dojoroot/dijit/themes/tundra/tundra.css";
+    </style>
+    <script type="text/javascript" src="/dojoroot/dojo/dojo.js"  djConfig="parseOnLoad: true"></script>
+    <script type="text/javascript">
+       dojo.require("dojo.parser");
+       dojo.require("dijit.Tree");
+       dojo.require("dojo.data.ItemFileReadStore");
+     </script>
+
+     <style>
+         .GrainIcon {
+            background-image: url(grain.gif); 
+            width: 45px;
+            height: 45px;
+         }
+         .CannedIcon {
+            background-image: url(canned.jpg); 
+            width: 45px;
+            height: 45px;
+         }
+         .CondimentIcon {
+            background-image: url(condiment.jpeg); 
+            width: 45px;
+            height: 45px;
+         } 
+      </style>       
+
+     
+</head>
+<body class="tundra">
+
+    <div dojoType="dojo.data.ItemFileReadStore" jsId="pantryData" 
+         url="services/pantry.json" />
+    
+     <div dojoType="dijit.Tree" id="panTree" store="pantryData" 
+          query="{type:'shelf'}"  >
+         <script type="dojo/method" event="getIconClass" args="foodItem">
+             // Returns Canned, Grain or Condiment, each of which 
+             // corresponds to a CSS class suffixed by "Icon".  Note 
+             // that the root node is not an item, so we must test
+             // for a valid item each time
+             if (pantryData.isItem(foodItem)) {
+                return pantryData.getValue(foodItem, "foodType") + 'Icon';
+             }
+         </script>
+     </div>
+
+</body></html>
+       

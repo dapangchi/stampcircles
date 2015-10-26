@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<!-- saved from url=(0092)http://closure-library.googlecode.com/svn/trunk/closure/goog/ui/customcolorpalette_test.html -->
+<HTML><!--
+Copyright 2008 Google Inc. All Rights Reserved.
+
+--><HEAD><META http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+  <TITLE>CustomColorPalette Unit Tests</TITLE>
+  <SCRIPT src="./CustomColorPalette Unit Tests_files/base.js"></SCRIPT><SCRIPT type="text/javascript" src="./CustomColorPalette Unit Tests_files/deps.js"></SCRIPT>
+  <SCRIPT src="./CustomColorPalette Unit Tests_files/deps.js"></SCRIPT>
+  <SCRIPT>
+    goog.require('goog.dom.TagName');
+    goog.require('goog.testing.jsunit');
+    goog.require('goog.ui.CustomColorPalette');
+  </SCRIPT><SCRIPT type="text/javascript" src="./CustomColorPalette Unit Tests_files/tagname.js"></SCRIPT><SCRIPT type="text/javascript" src="./CustomColorPalette Unit Tests_files/stacktrace.js"></SCRIPT><SCRIPT type="text/javascript" src="./CustomColorPalette Unit Tests_files/asserts.js"></SCRIPT><SCRIPT type="text/javascript" src="./CustomColorPalette Unit Tests_files/testcase.js"></SCRIPT><SCRIPT type="text/javascript" src="./CustomColorPalette Unit Tests_files/testrunner.js"></SCRIPT><SCRIPT type="text/javascript" src="./CustomColorPalette Unit Tests_files/jsunit.js"></SCRIPT><SCRIPT type="text/javascript" src="./CustomColorPalette Unit Tests_files/names.js"></SCRIPT><SCRIPT type="text/javascript" src="./CustomColorPalette Unit Tests_files/array.js"></SCRIPT><SCRIPT type="text/javascript" src="./CustomColorPalette Unit Tests_files/coordinate.js"></SCRIPT><SCRIPT type="text/javascript" src="./CustomColorPalette Unit Tests_files/box.js"></SCRIPT><SCRIPT type="text/javascript" src="./CustomColorPalette Unit Tests_files/range.js"></SCRIPT><SCRIPT type="text/javascript" src="./CustomColorPalette Unit Tests_files/size.js"></SCRIPT><SCRIPT type="text/javascript" src="./CustomColorPalette Unit Tests_files/rect.js"></SCRIPT><SCRIPT type="text/javascript" src="./CustomColorPalette Unit Tests_files/math.js"></SCRIPT><SCRIPT type="text/javascript" src="./CustomColorPalette Unit Tests_files/color.js"></SCRIPT><SCRIPT type="text/javascript" src="./CustomColorPalette Unit Tests_files/classes.js"></SCRIPT><SCRIPT type="text/javascript" src="./CustomColorPalette Unit Tests_files/object.js"></SCRIPT><SCRIPT type="text/javascript" src="./CustomColorPalette Unit Tests_files/string.js"></SCRIPT><SCRIPT type="text/javascript" src="./CustomColorPalette Unit Tests_files/useragent.js"></SCRIPT><SCRIPT type="text/javascript" src="./CustomColorPalette Unit Tests_files/dom.js"></SCRIPT><SCRIPT type="text/javascript" src="./CustomColorPalette Unit Tests_files/product.js"></SCRIPT><SCRIPT type="text/javascript" src="./CustomColorPalette Unit Tests_files/style.js"></SCRIPT><SCRIPT type="text/javascript" src="./CustomColorPalette Unit Tests_files/errorhandlerweakdep.js"></SCRIPT><SCRIPT type="text/javascript" src="./CustomColorPalette Unit Tests_files/disposable.js"></SCRIPT><SCRIPT type="text/javascript" src="./CustomColorPalette Unit Tests_files/event.js"></SCRIPT><SCRIPT type="text/javascript" src="./CustomColorPalette Unit Tests_files/browserevent.js"></SCRIPT><SCRIPT type="text/javascript" src="./CustomColorPalette Unit Tests_files/eventwrapper.js"></SCRIPT><SCRIPT type="text/javascript" src="./CustomColorPalette Unit Tests_files/listener.js"></SCRIPT><SCRIPT type="text/javascript" src="./CustomColorPalette Unit Tests_files/simplepool.js"></SCRIPT><SCRIPT type="text/javascript" src="./CustomColorPalette Unit Tests_files/jscript.js"></SCRIPT><SCRIPT type="text/javascript" src="./CustomColorPalette Unit Tests_files/pools.js"></SCRIPT><SCRIPT type="text/javascript" src="./CustomColorPalette Unit Tests_files/events.js"></SCRIPT><SCRIPT type="text/javascript" src="./CustomColorPalette Unit Tests_files/keycodes.js"></SCRIPT><SCRIPT type="text/javascript" src="./CustomColorPalette Unit Tests_files/eventhandler.js"></SCRIPT><SCRIPT type="text/javascript" src="./CustomColorPalette Unit Tests_files/eventtarget.js"></SCRIPT><SCRIPT type="text/javascript" src="./CustomColorPalette Unit Tests_files/idgenerator.js"></SCRIPT><SCRIPT type="text/javascript" src="./CustomColorPalette Unit Tests_files/component.js"></SCRIPT><SCRIPT type="text/javascript" src="./CustomColorPalette Unit Tests_files/keyhandler.js"></SCRIPT><SCRIPT type="text/javascript" src="./CustomColorPalette Unit Tests_files/controlcontent.js"></SCRIPT><SCRIPT type="text/javascript" src="./CustomColorPalette Unit Tests_files/a11y.js"></SCRIPT><SCRIPT type="text/javascript" src="./CustomColorPalette Unit Tests_files/controlrenderer.js"></SCRIPT><SCRIPT type="text/javascript" src="./CustomColorPalette Unit Tests_files/registry.js"></SCRIPT><SCRIPT type="text/javascript" src="./CustomColorPalette Unit Tests_files/decorate.js"></SCRIPT><SCRIPT type="text/javascript" src="./CustomColorPalette Unit Tests_files/control.js"></SCRIPT><SCRIPT type="text/javascript" src="./CustomColorPalette Unit Tests_files/paletterenderer.js"></SCRIPT><SCRIPT type="text/javascript" src="./CustomColorPalette Unit Tests_files/selectionmodel.js"></SCRIPT><SCRIPT type="text/javascript" src="./CustomColorPalette Unit Tests_files/palette.js"></SCRIPT><SCRIPT type="text/javascript" src="./CustomColorPalette Unit Tests_files/colorpalette.js"></SCRIPT><SCRIPT type="text/javascript" src="./CustomColorPalette Unit Tests_files/customcolorpalette.js"></SCRIPT>
+</HEAD><BODY>
+  <DIV id="sandbox"></DIV>
+  <SCRIPT>
+    var samplePalette;
+
+    function setUp() {
+      samplePalette = new goog.ui.CustomColorPalette();
+    }
+
+    function tearDown() {
+      samplePalette.dispose();
+      document.getElementById('sandbox').innerHTML = '';
+    }
+
+    function testRender() {
+      samplePalette.render(document.getElementById('sandbox'));
+
+      assertTrue('Palette must have been rendered',
+                 samplePalette.isInDocument());
+
+      var elem = samplePalette.getElement();
+      assertNotNull('The palette element should not be null', elem);
+      assertEquals('The palette element should have the right tag name',
+                   goog.dom.TagName.DIV, elem.tagName);
+
+      assertTrue('The custom color palette should have the right class name',
+                 goog.dom.classes.has(elem, 'goog-palette'));
+    }
+
+    function testSetColors() {
+      var colorSet = ['#e06666', '#f6b26b', '#ffd966', '#93c47d', '#76a5af',
+          '#6fa8dc', '#8e7cc3'];
+      samplePalette.setColors(colorSet);
+      assertSameElements('The palette should have the correct set of colors',
+                         colorSet, samplePalette.getColors());
+    }
+  </SCRIPT>
+
+
+<DIV><DIV style="color: rgb(0, 100, 0); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; font-weight: bold; ">CustomColorPalette Unit Tests [PASSED]</DIV><DIV style="color: rgb(51, 51, 51); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; font-weight: bold; ">closure-library.googlecode.com/svn/trunk/closure/goog/ui/customcolorpalette_test.html</DIV><DIV style="color: rgb(51, 51, 51); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">2 of 2 tests run in 35ms.</DIV><DIV style="color: rgb(51, 51, 51); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">2 passed, 0 failed.</DIV><DIV style="color: rgb(51, 51, 51); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">18 ms/test. 52 files loaded.</DIV><DIV style="color: rgb(51, 51, 51); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">.</DIV><DIV style="color: rgb(51, 51, 51); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">08:21:11.959  Start</DIV><DIV style="color: rgb(0, 100, 0); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">08:21:11.988  testRender : PASSED</DIV><DIV style="color: rgb(0, 100, 0); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">08:21:11.993  testSetColors : PASSED</DIV><DIV style="color: rgb(51, 51, 51); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">08:21:11.994  Done</DIV><DIV style="color: rgb(51, 51, 51); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; "> </DIV><A style="display: block; font-size: small; " href="">Run again without reloading</A></DIV></BODY></HTML>

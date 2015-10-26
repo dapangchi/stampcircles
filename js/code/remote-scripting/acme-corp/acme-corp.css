@@ -1,0 +1,48 @@
+@import "../../dojo/resources/dojo.css";
+
+div.titleBanner {
+  background-color: orange;
+  padding: .5em;
+}
+
+.titleBanner h1 {
+  margin:0;
+  font-size:2em;
+  font-weight:bold;
+}
+
+.titleBanner p {
+  margin: 0;
+  padding-top:.5em;
+  font-size:1.5em;
+  font-style:italic;
+ }
+ 
+ div.menu {
+  background-color: #F0F0F0;
+  padding: .25em;
+  border: 2px solid black;
+  border-left: 0;
+  border-right: 0;
+}
+
+.menu p {
+  margin: .5em;
+  font-weight:bold;
+}
+
+.menu a {
+  padding-right: 2em;
+}
+
+.menu a:link, 
+.menu a:visited, 
+.menu a:hover, 
+.menu a:active {
+  text-decoration:none;
+  color: blue;
+}
+
+
+
+

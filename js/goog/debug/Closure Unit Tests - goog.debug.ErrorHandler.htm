@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<!-- saved from url=(0089)http://closure-library.googlecode.com/svn/trunk/closure/goog/debug/errorhandler_test.html -->
+<HTML><!--
+  Copyright 2008 Google Inc. All Rights Reserved.
+
+--><HEAD><META http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<TITLE>Closure Unit Tests - goog.debug.ErrorHandler</TITLE>
+<!-- These paths should be relative to the test -->
+<SCRIPT src="./Closure Unit Tests - goog.debug.ErrorHandler_files/base.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.debug.ErrorHandler_files/deps.js"></SCRIPT>
+<SCRIPT>
+  goog.require('goog.testing.jsunit');
+  goog.require('goog.debug.ErrorHandler');
+</SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.debug.ErrorHandler_files/stacktrace.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.debug.ErrorHandler_files/asserts.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.debug.ErrorHandler_files/testcase.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.debug.ErrorHandler_files/testrunner.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.debug.ErrorHandler_files/jsunit.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.debug.ErrorHandler_files/array.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.debug.ErrorHandler_files/string.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.debug.ErrorHandler_files/object.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.debug.ErrorHandler_files/structs.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.debug.ErrorHandler_files/iter.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.debug.ErrorHandler_files/map.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.debug.ErrorHandler_files/set.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.debug.ErrorHandler_files/debug.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.debug.ErrorHandler_files/logrecord.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.debug.ErrorHandler_files/logger.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.debug.ErrorHandler_files/disposable.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.debug.ErrorHandler_files/simplepool.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.debug.ErrorHandler_files/tracer.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.debug.ErrorHandler_files/errorhandler.js"></SCRIPT>
+</HEAD><BODY>
+<SCRIPT>
+
+  var oldGetObjectByName;
+  var fakeWin;
+  var errorHandler;
+
+  function badTimer() {
+    arguments.callee.called = true;
+    throw "die die die";
+  }
+
+  function setUp() {
+    oldGetObjectByName = goog.getObjectByName;
+    goog.getObjectByName = function(name) {
+      if (name == 'window') {
+        // provide our own window that implements our instrumented and
+        // immediate-call versions of setTimeout and setInterval
+        if (!fakeWin) {
+          fakeWin = {
+            setTimeout: function(fn, time) {
+              fakeWin.setTimeout.called = true;
+              fakeWin.setTimeout.that = this;
+              fn();
+            },
+            setInterval: function(fn, time) {
+              fakeWin.setInterval.called = true;
+              fakeWin.setInterval.that = this;
+              fn();
+            }
+          };
+        }
+        return fakeWin;
+      } else {
+        return oldGetObjectByName(name);
+      };
+    }
+
+    // just record the exception in the error handler when it happens
+    errorHandler = new goog.debug.ErrorHandler(function(ex) {
+                                                 this.ex = ex;
+                                               });
+  }
+
+  function tearDown() {
+    goog.getObjectByName = oldGetObjectByName;
+    fakeWin = null;
+    errorHandler = null;
+    delete badTimer['__protected__'];
+  }
+
+  function testWrapSetTimeout() {
+    errorHandler.protectWindowSetTimeout();
+
+    var caught;
+
+    try {
+      fakeWin.setTimeout(badTimer, 3);
+    } catch (ex) {
+      caught = ex;
+    }
+    assertTrue('exception not thrown', !!caught);
+    assertEquals('exception not caught by error handler',
+                 caught, errorHandler.ex);
+    assertTrue('fake setTimeout not called', !!fakeWin.setTimeout.called);
+    assertTrue('"this" not passed to original setTimeout',
+               fakeWin.setTimeout.that === fakeWin);
+  }
+
+
+  function testWrapSetInterval() {
+    errorHandler.protectWindowSetInterval();
+
+    var caught;
+
+    try {
+      fakeWin.setInterval(badTimer, 3);
+    } catch (ex) {
+      caught = ex;
+    }
+    assertTrue('exception not thrown', !!caught);
+    assertEquals('exception not caught by error handler',
+                 caught, errorHandler.ex);
+    assertTrue('fake setInterval not called', !!fakeWin.setInterval.called);
+    assertTrue('"this" not passed to original setTimeout',
+               fakeWin.setInterval.that === fakeWin);
+  }
+
+</SCRIPT>
+
+
+<DIV><DIV style="color: rgb(0, 100, 0); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; font-weight: bold; ">Closure Unit Tests - goog.debug.ErrorHandler [PASSED]</DIV><DIV style="color: rgb(51, 51, 51); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; font-weight: bold; ">closure-library.googlecode.com/svn/trunk/closure/goog/debug/errorhandler_test.html</DIV><DIV style="color: rgb(51, 51, 51); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">2 of 2 tests run in 2ms.</DIV><DIV style="color: rgb(51, 51, 51); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">2 passed, 0 failed.</DIV><DIV style="color: rgb(51, 51, 51); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">1 ms/test. 21 files loaded.</DIV><DIV style="color: rgb(51, 51, 51); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">.</DIV><DIV style="color: rgb(51, 51, 51); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">07:24:56.907  Start</DIV><DIV style="color: rgb(0, 100, 0); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">07:24:56.908  testWrapSetInterval : PASSED</DIV><DIV style="color: rgb(0, 100, 0); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">07:24:56.909  testWrapSetTimeout : PASSED</DIV><DIV style="color: rgb(51, 51, 51); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">07:24:56.909  Done</DIV><DIV style="color: rgb(51, 51, 51); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; "> </DIV><A style="display: block; font-size: small; " href="">Run again without reloading</A></DIV></BODY></HTML>

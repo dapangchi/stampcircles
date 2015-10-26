@@ -1,0 +1,77 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!--
+ ! Excerpted from "Mastering Dojo",
+ ! published by The Pragmatic Bookshelf.
+ ! Copyrights apply to this code. It may not be used to create training material, 
+ ! courses, books, articles, and the like. Contact us if you are in doubt.
+ ! We make no guarantees that this code is fit for any purpose. 
+ ! Visit http://www.pragmaticprogrammer.com/titles/rgdojo for more book information.
+-->
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Organisms That Have Been Tested under GENETOX</title>
+    <style type="text/css">
+        @import "/dojoroot/dijit/themes/tundra/tundra.css";
+    </style>
+    <script type="text/javascript" src="/dojoroot/dojo/dojo.js"  
+             djConfig="parseOnLoad: true, isDebug: true"></script>
+    <script type="text/javascript">
+       dojo.require("dojo.parser");
+       dojo.require("dijit.form.FilteringSelect");
+       dojo.require("dojo.data.ItemFileReadStore");
+       dojo.require("dojox.collections.SortedList");
+
+       
+       var genetox =
+          new dojo.data.ItemFileReadStore({
+             url: "http://localhost/dojobook/data/datasources/genetox.json"
+          });
+
+       // Organisms will be placed in a dictionary
+       var organismList = new dojox.collections.SortedList();
+                 
+       // Fetch all the values once the page has loaded
+       dojo.addOnLoad(function() {
+         genetox.fetch({
+         
+             onBegin: function() {
+                 console.debug("Begun");
+             },
+         
+             onError: function(errData, request) {
+                 console.debug("Error Occurred");
+                 console.dir(errData);
+             },
+  
+             onItem: function(item) {  
+                 if (! genetox.hasAttribute(item, "endOfFile")) { 
+                     console.debug("Loaded "+genetox.getLabel(item)); 
+                     var spec = genetox.getValue( item, "specimen"); 
+                     organismList.add(spec, spec);
+                 }
+             },   
+             
+             // When everything's done, list them in the page
+             onComplete: function(items, request) { 
+                 listNode = dojo.byId("resultUl");
+                 organismList.forEach(function (org) {
+                    var listItem = document.createElement("li");
+                    listItem.innerHTML = org;
+                    listNode.appendChild(listItem);
+                 });      
+             }  
+         });
+       });        
+       
+     </script>
+</head>
+
+<body class="tundra" style="height:600px">
+
+    <ul id="resultUl" style="width:550px">
+    </ul>
+
+</body>
+</html>             
+    

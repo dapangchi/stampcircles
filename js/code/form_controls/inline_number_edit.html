@@ -1,0 +1,61 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!--
+ ! Excerpted from "Mastering Dojo",
+ ! published by The Pragmatic Bookshelf.
+ ! Copyrights apply to this code. It may not be used to create training material, 
+ ! courses, books, articles, and the like. Contact us if you are in doubt.
+ ! We make no guarantees that this code is fit for any purpose. 
+ ! Visit http://www.pragmaticprogrammer.com/titles/rgdojo for more book information.
+-->
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Inline Editing</title>
+    <style type="text/css">
+        @import "/dojoroot/dijit/themes/tundra/tundra.css";
+        @import "/dojoroot/dojo/resources/dojo.css"
+    </style>
+    <script type="text/javascript" src="/dojoroot/dojo/dojo.js"
+            djConfig="parseOnLoad: true"></script>
+    <script type="text/javascript">
+       dojo.require("dijit.form.Textarea");
+       dojo.require("dijit.InlineEditBox");
+       dojo.require("dijit.form.FilteringSelect");
+       dojo.require("dijit.form.NumberSpinner");
+       dojo.require("dojo.data.ItemFileReadStore");
+       dojo.require("dojo.parser");
+       
+       var genderStore = new dojo.data.ItemFileReadStore({
+           data: { identifier: 'name', 
+                   label: 'name',
+                   items: [
+                        { name: "men" },
+                        { name: "women" }
+                    ]
+           }
+       });
+    </script>
+</head>
+<body class="tundra">
+    
+    <div style="width:350px">
+        I've got 
+         <span dojoType="dijit.InlineEditBox" 
+             editor="dijit.form.NumberSpinner"
+             width="100px">
+             99         
+         </span>
+         &nbsp;
+         <span dojoType="dijit.InlineEditBox" 
+               editor="dijit.form.FilteringSelect"
+               editorParams="{store: genderStore, autocomplete: true}"
+               width="150px"
+               >women</span>.
+         </span>
+         <br/>
+         All I need is one more<br/>
+         When I get that one, pallie <br/>
+         Gonna let the other ones go<br/>
+    </div>
+    
+</body></html>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<!-- saved from url=(0086)http://closure-library.googlecode.com/svn/trunk/closure/goog/asserts/asserts_test.html -->
+<HTML><!--
+  Copyright 2008 Google Inc. All Rights Reserved.
+--><HEAD><META http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<TITLE>Closure Unit Tests - goog.asserts.assert</TITLE>
+<SCRIPT src="./Closure Unit Tests - goog.asserts.assert_files/base.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.asserts.assert_files/deps.js"></SCRIPT>
+<SCRIPT>
+  goog.require('goog.asserts');
+  goog.require('goog.testing.jsunit');
+</SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.asserts.assert_files/asserts.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.asserts.assert_files/stacktrace.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.asserts.assert_files/asserts(1).js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.asserts.assert_files/testcase.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.asserts.assert_files/testrunner.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.asserts.assert_files/jsunit.js"></SCRIPT>
+</HEAD><BODY>
+<SCRIPT>
+
+function testAssert() {
+  // None of them may throw exception
+  goog.asserts.assert(true);
+  goog.asserts.assert(1);
+  goog.asserts.assert([]);
+  goog.asserts.assert({});
+
+  assertThrows('assert(false)', goog.partial(goog.asserts.assert, false));
+  assertThrows('assert(0)', goog.partial(goog.asserts.assert, 0));
+  assertThrows('assert(null)', goog.partial(goog.asserts.assert, null));
+  assertThrows('assert(undefined)',
+               goog.partial(goog.asserts.assert, undefined));
+
+  // Test error message
+  var message;
+  try {
+    goog.asserts.assert(false);
+  } catch (e) {
+    message = e.message;
+  }
+  assertEquals('default message', 'Assertion failed', message);
+
+  try {
+    goog.asserts.assert(false, 'ouch');
+  } catch (e) {
+    message = e.message;
+  }
+  assertEquals('custom message', 'Assertion failed: ouch', message);
+}
+
+
+function testFail() {
+  assertThrows('fail()', goog.asserts.fail);
+}
+
+function testNumber() {
+  goog.asserts.assertNumber(1);
+  assertThrows('assertNumber(null)',
+      goog.partial(goog.asserts.assertNumber, null));
+}
+
+function testString() {
+  goog.asserts.assertString('1');
+  assertThrows('assertString(null)',
+      goog.partial(goog.asserts.assertString, null));
+}
+
+function testFunction() {
+  goog.asserts.assertFunction(function() {});
+  assertThrows('assertFunction(null)',
+      goog.partial(goog.asserts.assertFunction, null));
+}
+
+function testObject() {
+  goog.asserts.assertObject({});
+  assertThrows('assertObject(null)',
+      goog.partial(goog.asserts.assertObject, null));
+}
+
+function testInstanceof() {
+  /** @constructor */
+  var F = function() {};
+  goog.asserts.assertInstanceof(new F(), F);
+  assertThrows('assertInstanceof({}, F)',
+      goog.partial(goog.asserts.assertInstanceof, {}, F));
+}
+
+</SCRIPT>
+
+
+<DIV><DIV style="color: rgb(0, 100, 0); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; font-weight: bold; ">Closure Unit Tests - goog.asserts.assert [PASSED]</DIV><DIV style="color: rgb(51, 51, 51); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; font-weight: bold; ">closure-library.googlecode.com/svn/trunk/closure/goog/asserts/asserts_test.html</DIV><DIV style="color: rgb(51, 51, 51); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">7 of 7 tests run in 11ms.</DIV><DIV style="color: rgb(51, 51, 51); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">7 passed, 0 failed.</DIV><DIV style="color: rgb(51, 51, 51); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">2 ms/test. 8 files loaded.</DIV><DIV style="color: rgb(51, 51, 51); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">.</DIV><DIV style="color: rgb(51, 51, 51); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">14:21:21.209  Start</DIV><DIV style="color: rgb(0, 100, 0); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">14:21:21.214  testAssert : PASSED</DIV><DIV style="color: rgb(0, 100, 0); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">14:21:21.214  testFail : PASSED</DIV><DIV style="color: rgb(0, 100, 0); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">14:21:21.215  testFunction : PASSED</DIV><DIV style="color: rgb(0, 100, 0); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">14:21:21.216  testInstanceof : PASSED</DIV><DIV style="color: rgb(0, 100, 0); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">14:21:21.217  testNumber : PASSED</DIV><DIV style="color: rgb(0, 100, 0); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">14:21:21.217  testObject : PASSED</DIV><DIV style="color: rgb(0, 100, 0); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">14:21:21.218  testString : PASSED</DIV><DIV style="color: rgb(51, 51, 51); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">14:21:21.219  Done</DIV><DIV style="color: rgb(51, 51, 51); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; "> </DIV><A style="display: block; font-size: small; " href="">Run again without reloading</A></DIV></BODY></HTML>

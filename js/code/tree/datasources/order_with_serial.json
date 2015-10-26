@@ -1,0 +1,70 @@
+{
+   identifier: 'id',
+   label: 'description',
+   items: [
+      { id: 987987, description:"Order 987987", 
+        priority:"Next Day Air",
+        line: [
+            { id: '987987-1', qty:1,
+              sku:11761, description: 'Yodeling Pickle',
+              serial: [ 
+                  { id:'PCKL1', description:'PCKL1', weight: 1 } 
+              ]
+            },
+            { id: '987987-2', qty:3, 
+              sku:11798, description: 'Gummy Tapeworm',
+              serial: [  
+                  { id:'GMMYTPWRM1', description:'GMMYTPWRM1', weight: 5},  
+                  { id:'GMMYTPWRM2', description:'GMMYTPWRM2', weight: 5},  
+                  { id:'GMMYTPWRM3', description:'GMMYTPWRM3', weight: 5} 
+              ] 
+            }
+        ]
+      },
+      { id: 988855, description:"Order 988855", 
+        priority:"2nd Day Air" ,
+        line: [
+            { id: '988855-1', qty:4,
+              sku:11753, description: 'Gummy Haggis',
+              serial: [ 
+                  { id:'GMMYHGGS1', description:'GMMYHGGS1', weight: 10},  
+                  { id:'GMMYHGGS2', description:'GMMYHGGS2', weight: 10},  
+                  { id:'GMMYHGGS3', description:'GMMYHGGS3', weight: 10},  
+                  { id:'GMMYHGGS4', description:'GMMYHGGS4', weight: 10} 
+              ]
+            }
+        ]
+      },
+      { id: 988900, description:"Order 988900", 
+        priority:"2nd Day Air", 
+        line: [
+            { id: '988900-1', qty:15,
+              sku:11824, description: 'Worlds Largest Inflatable Heart',
+              serial: [
+                   { id:'HRT1', description:'HRT1', weight: 15},  
+                   { id:'HRT2', description:'HRT2', weight: 15},  
+                   { id:'HRT3', description:'HRT3', weight: 15},  
+                   { id:'HRT4', description:'HRT4', weight: 15},  
+                   { id:'HRT5', description:'HRT5', weight: 15},
+                   { id:'HRT6', description:'HRT6', weight: 15},  
+                   { id:'HRT7', description:'HRT7', weight: 15},  
+                   { id:'HRT8', description:'HRT8', weight: 15},  
+                   { id:'HRT9', description:'HRT9', weight: 15},  
+                   { id:'HRT10', description:'HRT10', weight: 15},
+                   { id:'HRT11', description:'HRT11', weight: 15},  
+                   { id:'HRT12', description:'HRT12', weight: 15},  
+                   { id:'HRT13', description:'HRT13', weight: 15},  
+                   { id:'HRT14', description:'HRT14', weight: 15},  
+                   { id:'HRT15', description:'HRT15', weight: 15}
+              ]
+            },
+            { id: '988900-2', qty:1,
+              sku:11548, description: 'Deluxe Librarian Action Figure',
+              serial: [ 
+                  { id:'LBRRN1', description:'LBRRN1',weight: 4} 
+              ]
+            }        
+        ] 
+      }
+   ]
+}

@@ -1,0 +1,4550 @@
+{ identifier: "docno",
+  label: "substance",
+  items: [
+      
+    { docno:"1", 
+      substance:"IRRADIATED POTATO EXTRACT", 
+      taxonomy:"In vivo mammalian somatic cells - chromosome effects", 
+      date:"19920531",
+      specimen:"Mammalian polychromatic erythrocytes", 
+      result:"No conclusion"
+    },
+     
+    { docno:"2", 
+      substance:"IRRADIATED CHLOROGENIC ACID", 
+      taxonomy:"In vivo mammalian somatic cells - chromosome effects", 
+      date:"19920531",
+      specimen:"Mammalian polychromatic erythrocytes", 
+      result:"No conclusion"
+    },
+    
+    { docno:"3", 
+      substance:"WHOLE SMOKE CONDENSATE", 
+      taxonomy:"In vitro mammalian - gene mutation", 
+      date:"19920531",
+      specimen:"Mouse lymphoma (L5178Y) cells", 
+      result:"Positive"
+    },
+    
+    { docno:"4", 
+      substance:"COAL LIQUID A-3", 
+      taxonomy:"In vivo mammalian somatic cells - gene mutation", 
+      date:"19920615",
+      specimen:"Mouse", 
+      result:"Negative"
+    },
+    
+    { docno:"5", 
+      substance:"LEAD SMELTING", 
+      taxonomy:"Plants - gene mutation", 
+      date:"19920531",
+      specimen:"Zea mays (corn)", 
+      result:"Positive"
+    },
+    
+    { docno:"6", 
+      substance:"RETRONECINE-7,9-PIPERONYLATE", 
+      taxonomy:"Plants - chromosome effects", 
+      date:"19910822",
+      specimen:"Allium cepa", 
+      result:"Positive"
+    },
+    
+    { docno:"7", 
+      substance:"SLUDGE FROM PAPER RECYCLING PLANT", 
+      taxonomy:"Plants - gene mutation", 
+      date:"19920531",
+      specimen:"Glycine max (soybean)", 
+      result:"Positive"
+    },
+    
+    { docno:"8", 
+      substance:"NITROSATION PRODUCTS OF METHYLGUANIDINE", 
+      taxonomy:"In vitro mammalian - chromosome effects", 
+      date:"19920531",
+      specimen:"Human cell culture", 
+      result:"Positive"
+    },
+    
+    { docno:"9", 
+      substance:"HAIR DYE MAHOGANY", 
+      taxonomy:"Lower eukaryotes - other genotoxic effects", 
+      date:"19910130",
+      specimen:"Saccharomyces cerevisiae", 
+      result:"Positive"
+    },
+    
+    { docno:"10", 
+      substance:"B. THURINGIENSIS (CRUDE) EXOTOXIN", 
+      taxonomy:"Insects - gene mutation", 
+      date:"19920531",
+      specimen:"Drosophila melanogaster", 
+      result:"No conclusion"
+    },
+    
+    { docno:"11", 
+      substance:"CIGARETTE SMOKE EXTRACTS", 
+      taxonomy:"Lower eukaryotes - other genotoxic effects", 
+      date:"19920531",
+      specimen:"Saccharomyces cerevisiae", 
+      result:"Positive"
+    },
+    
+    { docno:"14", 
+      substance:"FORMALDEHYDE", 
+      taxonomy:"Lower eukaryotes - gene mutation", 
+      date:"19980322",
+      specimen:"Neurospora crassa", 
+      result:"Positive"
+    },
+    
+    { docno:"15", 
+      substance:"PHENOBARBITAL", 
+      taxonomy:"In vivo mammalian somatic cells - chromosome effects", 
+      date:"19980322",
+      specimen:"Syrian hamster embryo (SHE) cells", 
+      result:"Negative"
+    },
+    
+    { docno:"16", 
+      substance:"MITOMYCIN C", 
+      taxonomy:"Prokaryotes - gene mutation", 
+      date:"19980322",
+      specimen:"Nonhuman", 
+      result:"Positive"
+    },
+    
+    { docno:"17", 
+      substance:"CYCLOPHOSPHAMIDE", 
+      taxonomy:"Prokaryotes - gene mutation", 
+      date:"19950706",
+      specimen:"Salmonella typhimurium, Saccharomyces cerevisiae, human leukocytes and diploid fibroblasts", 
+      result:"Positive"
+    },
+    
+    { docno:"18", 
+      substance:"PREDNISOLONE", 
+      taxonomy:"In vivo mammalian, sperm morphology - other genotoxic effects", 
+      date:"19980322",
+      specimen:"Human", 
+      result:"Positive"
+    },
+    
+    { docno:"19", 
+      substance:"ESTRIOL", 
+      taxonomy:"In vitro mammalian, SCE - other genotoxic effects", 
+      date:"19980407",
+      specimen:"", 
+      result:""
+    },
+    
+    { docno:"20", 
+      substance:"BETA-ESTRADIOL", 
+      taxonomy:"In vivo mammalian, sperm morphology - other genotoxic effects", 
+      date:"19980322",
+      specimen:"Rat", 
+      result:"Positive"
+    },
+    
+    { docno:"21", 
+      substance:"P,P'-DDT", 
+      taxonomy:"Prokaryotes - gene mutation", 
+      date:"19950407",
+      specimen:"Nonhuman", 
+      result:"Positive"
+    },
+    
+    { docno:"22", 
+      substance:"BENZO(A)PYRENE", 
+      taxonomy:"Prokaryotes - gene mutation", 
+      date:"19950706",
+      specimen:"Salmonella typhimurium", 
+      result:"Positive"
+    },
+    
+    { docno:"23", 
+      substance:"PHENYLBUTAZONE", 
+      taxonomy:"In vivo mammalian somatic cells - chromosome effects", 
+      date:"19950406",
+      specimen:"Mammalian germ cells", 
+      result:"Negative"
+    },
+    
+    { docno:"25", 
+      substance:"THALIDOMIDE", 
+      taxonomy:"Prokaryotes - gene mutation", 
+      date:"19920615",
+      specimen:"Salmonella typhimurium", 
+      result:"Negative"
+    },
+    
+    { docno:"26", 
+      substance:"D-LYSERGIC ACID DIETHYLAMIDE", 
+      taxonomy:"Plants - gene mutation", 
+      date:"19920615",
+      specimen:"Nonhuman", 
+      result:"Negative"
+    },
+    
+    { docno:"27", 
+      substance:"CLOMIPHENE CITRATE", 
+      taxonomy:"In vivo mammalian somatic cells - chromosome effects", 
+      date:"19910822",
+      specimen:"Human", 
+      result:"No conclusion"
+    },
+    
+    { docno:"28", 
+      substance:"6-MERCAPTOPURINE", 
+      taxonomy:"In vivo mammalian somatic cells - chromosome effects", 
+      date:"19980322",
+      specimen:"Mouse (C3H/10T1/2) cells", 
+      result:"Negative"
+    },
+    
+    { docno:"31", 
+      substance:"IMIPRAMINE", 
+      taxonomy:"In vivo mammalian germ cells - chromosome effects", 
+      date:"19920615",
+      specimen:"Rodents", 
+      result:"Negative"
+    },
+    
+    { docno:"32", 
+      substance:"THIORIDAZINE", 
+      taxonomy:"Insects - gene mutation", 
+      date:"19910822",
+      specimen:"Drosophila melanogaster", 
+      result:"Positive"
+    },
+    
+    { docno:"33", 
+      substance:"CHLORPROMAZINE", 
+      taxonomy:"In vitro mammalian - gene mutation", 
+      date:"19980322",
+      specimen:"Nonhuman", 
+      result:"Positive"
+    },
+    
+    { docno:"34", 
+      substance:"RESERPINE", 
+      taxonomy:"Lower eukaryotes - chromosome effects", 
+      date:"19910822",
+      specimen:"Aspergillus nidulans", 
+      result:"No conclusion"
+    },
+    
+    { docno:"36", 
+      substance:"NICLOSAMIDE", 
+      taxonomy:"PROKARYOTES - GENE MUTATION", 
+      date:"19980408",
+      specimen:"", 
+      result:""
+    },
+    
+    { docno:"38", 
+      substance:"SORBITOL", 
+      taxonomy:"Insects - gene mutation", 
+      date:"19920615",
+      specimen:"Rodents", 
+      result:"Negative"
+    },
+    
+    { docno:"39", 
+      substance:"ALLOXAN", 
+      taxonomy:"Lower eukaryotes - chromosome effects", 
+      date:"19910822",
+      specimen:"Neurospora crassa", 
+      result:"Negative"
+    },
+    
+    { docno:"40", 
+      substance:"ACTINOMYCIN D", 
+      taxonomy:"Lower eukaryotes - gene mutation", 
+      date:"19980322",
+      specimen:"Mouse (C3H/10T1/2) cells", 
+      result:"Positive"
+    },
+    
+    { docno:"41", 
+      substance:"ACETYLSALICYLIC ACID", 
+      taxonomy:"In vivo mammalian somatic cells - chromosome effects", 
+      date:"19910822",
+      specimen:"Mammalian polychromatic erythrocytes", 
+      result:"No conclusion"
+    },
+    
+    { docno:"42", 
+      substance:"L-ASCORBIC ACID", 
+      taxonomy:"Prokaryotes - gene mutation", 
+      date:"19950706",
+      specimen:"Mammalian polychromatic erythrocytes", 
+      result:"No conclusion"
+    },
+    
+    { docno:"43", 
+      substance:"THYMIDINE", 
+      taxonomy:"Plants - gene mutation", 
+      date:"19950706",
+      specimen:"Mouse (C3H/10T1/2) cells", 
+      result:"Negative"
+    },
+    
+    { docno:"44", 
+      substance:"5-CHLORODEOXYURIDINE", 
+      taxonomy:"In vitro mammalian - gene mutation", 
+      date:"19980322",
+      specimen:"", 
+      result:""
+    },
+    
+    { docno:"45", 
+      substance:"5-FLUORODEOXYURIDINE", 
+      taxonomy:"Prokaryotes - gene mutation", 
+      date:"19950706",
+      specimen:"Aspergillus nidulans", 
+      result:"Positive"
+    },
+    
+    { docno:"46", 
+      substance:"GLUCOSE", 
+      taxonomy:"In vivo mammalian somatic cells - chromosome effects", 
+      date:"19920531",
+      specimen:"Mammalian polychromatic erythrocytes", 
+      result:"No conclusion"
+    },
+    
+    { docno:"47", 
+      substance:"PRONETHALOL HYDROCHLORIDE", 
+      taxonomy:"In vivo mammalian somatic cells - chromosome effects", 
+      date:"19910822",
+      specimen:"", 
+      result:""
+    },
+    
+    { docno:"48", 
+      substance:"PIPERONYL BUTOXIDE", 
+      taxonomy:"$null$", 
+      date:"19910822",
+      specimen:"Nonhuman", 
+      result:"Negative"
+    },
+    
+    { docno:"49", 
+      substance:"PROCAINE HYDROCHLORIDE", 
+      taxonomy:"Prokaryotes - gene mutation", 
+      date:"19950406",
+      specimen:"Escherichia coli polA (W3119 vs P3478)", 
+      result:"No conclusion"
+    },
+    
+    { docno:"50", 
+      substance:"NIALAMID", 
+      taxonomy:"Prokaryotes - gene mutation", 
+      date:"19980322",
+      specimen:"Salmonella typhimurium (one or more of the five standard strains: TA98, TA100, TA1535, TA1537, and TA1538)", 
+      result:"Positive"
+    },
+    
+    { docno:"52", 
+      substance:"TRIETHYLENEMELAMINE", 
+      taxonomy:"Lower eukaryotes - gene mutation", 
+      date:"19980408",
+      specimen:"Mammalian oocytes or early embryo", 
+      result:"Positive"
+    },
+    
+    { docno:"53", 
+      substance:"5-BROMOURACIL", 
+      taxonomy:"Plants - gene mutation", 
+      date:"19910822",
+      specimen:"Hordeum vulgare (barley)", 
+      result:"Positive"
+    },
+    
+    { docno:"54", 
+      substance:"5-FLUOROURACIL", 
+      taxonomy:"Insects - gene mutation", 
+      date:"19980407",
+      specimen:"Mouse (C3H/10T1/2) cells", 
+      result:"Positive"
+    },
+    
+    { docno:"55", 
+      substance:"2,4-DINITROPHENOL", 
+      taxonomy:"Plants - gene mutation", 
+      date:"19910822",
+      specimen:"Arabidopsis species", 
+      result:"Negative"
+    },
+    
+    { docno:"57", 
+      substance:"SCOPOLAMINE", 
+      taxonomy:"Prokaryotes - gene mutation", 
+      date:"19950406",
+      specimen:"Salmonella typhimurium (one or more of the five standard strains: TA98, TA100, TA1535, TA1537, and TA1538)", 
+      result:"No conclusion"
+    },
+    
+    { docno:"61", 
+      substance:"EPINEPHRINE", 
+      taxonomy:"In vivo mammalian somatic cells - chromosome effects", 
+      date:"19910822",
+      specimen:"Mammalian polychromatic erythrocytes", 
+      result:"No conclusion"
+    },
+    
+    { docno:"63", 
+      substance:"6-PROPYL-2-THIOURACIL", 
+      taxonomy:"$null$", 
+      date:"19910822",
+      specimen:"Nonhuman", 
+      result:"Positive"
+    },
+    
+    { docno:"64", 
+      substance:"ATROPINE", 
+      taxonomy:"Prokaryotes - other genotoxic effects", 
+      date:"19910822",
+      specimen:"Escherichia coli polA (W3119 vs P3478)", 
+      result:"No conclusion"
+    },
+    
+    { docno:"65", 
+      substance:"METHAMPHETAMINE HYDROCHLORIDE", 
+      taxonomy:"Insects - gene mutation", 
+      date:"19910822",
+      specimen:"Drosophila melanogaster", 
+      result:"No conclusion"
+    },
+    
+    { docno:"66", 
+      substance:"DOPAMINE", 
+      taxonomy:"In vivo mammalian somatic cells - chromosome effects", 
+      date:"19950803",
+      specimen:"", 
+      result:""
+    },
+    
+    { docno:"70", 
+      substance:"NITROGEN MUSTARD", 
+      taxonomy:"Prokaryotes - gene mutation", 
+      date:"19980408",
+      specimen:"Human lymphocytes or leukocytes", 
+      result:"Positive"
+    },
+    
+    { docno:"71", 
+      substance:"URETHANE", 
+      taxonomy:"Prokaryotes - gene mutation", 
+      date:"19980408",
+      specimen:"Syrian hamster embryo (SHE) cells", 
+      result:"Positive"
+    },
+    
+    { docno:"72", 
+      substance:"NORETHINDRONE ACETATE", 
+      taxonomy:"In vivo mammalian germ cells - chromosome effects", 
+      date:"19920615",
+      specimen:"Rodents", 
+      result:"No conclusion"
+    },
+    
+    { docno:"73", 
+      substance:"THIO-TEPA", 
+      taxonomy:"Prokaryotes - gene mutation", 
+      date:"19980408",
+      specimen:"Mouse (C3H/10T1/2) cells", 
+      result:"Positive"
+    },
+    
+    { docno:"74", 
+      substance:"MORPHINE HYDROCHLORIDE", 
+      taxonomy:"Insects - gene mutation", 
+      date:"19910822",
+      specimen:"Drosophila melanogaster", 
+      result:"No conclusion"
+    },
+    
+    { docno:"75", 
+      substance:"CODEINE PHOSPHATE", 
+      taxonomy:"In vivo mammalian somatic cells - chromosome effects", 
+      date:"19910822",
+      specimen:"Mammalian polychromatic erythrocytes", 
+      result:"No conclusion"
+    },
+    
+    { docno:"77", 
+      substance:"APHOLATE", 
+      taxonomy:"Lower eukaryotes - gene mutation", 
+      date:"19980407",
+      specimen:"Neurospora crassa", 
+      result:"Positive"
+    },
+    
+    { docno:"78", 
+      substance:"CYCLOLEUCINE", 
+      taxonomy:"Prokaryotes - other genotoxic effects", 
+      date:"19920531",
+      specimen:"Escherichia coli polA (W3119 vs P3478)", 
+      result:"No conclusion"
+    },
+    
+    { docno:"80", 
+      substance:"TRICHLORFON", 
+      taxonomy:"Prokaryotes - gene mutation", 
+      date:"19980407",
+      specimen:"Salmonella typhimurium", 
+      result:"Positive"
+    },
+    
+    { docno:"81", 
+      substance:"NORETHANDROLONE", 
+      taxonomy:"In vivo mammalian, sperm morphology - other genotoxic effects", 
+      date:"19910822",
+      specimen:"Human", 
+      result:"Positive"
+    },
+    
+    { docno:"82", 
+      substance:"HALOPERIDOL", 
+      taxonomy:"Plants - chromosome effects", 
+      date:"19980407",
+      specimen:"Allium cepa", 
+      result:"Positive"
+    },
+    
+    { docno:"83", 
+      substance:"L-CYSTEINE", 
+      taxonomy:"Plants - chromosome effects", 
+      date:"19950706",
+      specimen:"Allium cepa", 
+      result:"Negative"
+    },
+    
+    { docno:"85", 
+      substance:"ESTRONE", 
+      taxonomy:"$null$", 
+      date:"19910822",
+      specimen:"Nonhuman", 
+      result:"Positive"
+    },
+    
+    { docno:"86", 
+      substance:"MITOTANE", 
+      taxonomy:"In vitro mammalian - chromosome effects", 
+      date:"19910822",
+      specimen:"Nonhuman", 
+      result:"Positive"
+    },
+    
+    { docno:"87", 
+      substance:"ANDROSTERONE", 
+      taxonomy:"In vivo mammalian, sperm morphology - other genotoxic effects", 
+      date:"19910822",
+      specimen:"Mouse", 
+      result:"Negative"
+    },
+    
+    { docno:"89", 
+      substance:"DIBENZ(A,H)ANTHRACENE", 
+      taxonomy:"Prokaryotes - gene mutation", 
+      date:"19950407",
+      specimen:"Fischer rat embryo (SA7/RE) cells", 
+      result:"Positive"
+    },
+    
+    { docno:"90", 
+      substance:"PUROMYCIN", 
+      taxonomy:"Plants - gene mutation", 
+      date:"19920615",
+      specimen:"Rodents", 
+      result:"Negative"
+    },
+    
+    { docno:"93", 
+      substance:"INDOMETHACIN", 
+      taxonomy:"In vivo mammalian somatic cells - chromosome effects", 
+      date:"19950803",
+      specimen:"", 
+      result:""
+    },
+    
+    { docno:"94", 
+      substance:"N-HYDROXY-2-AMINOFLUORENE", 
+      taxonomy:"Prokaryotes - gene mutation", 
+      date:"19950406",
+      specimen:"Escherichia coli polA (W3119 vs P3478)", 
+      result:"Positive"
+    },
+    
+    { docno:"95", 
+      substance:"N-HYDROXY-2-ACETYLAMINOFLUORENE", 
+      taxonomy:"Prokaryotes - gene mutation", 
+      date:"19980407",
+      specimen:"Mouse (BALB/c-3T3) cells", 
+      result:"Positive"
+    },
+    
+    { docno:"96", 
+      substance:"2-ACETYLAMINOFLUORENE", 
+      taxonomy:"Prokaryotes - gene mutation", 
+      date:"19950803",
+      specimen:"Salmonella typhimurium", 
+      result:"Positive"
+    },
+    
+    { docno:"97", 
+      substance:"CHLOROQUINE", 
+      taxonomy:"In vitro mammalian - chromosome effects", 
+      date:"19910822",
+      specimen:"Escherichia coli polA (W3119 vs P3478)", 
+      result:"Positive"
+    },
+    
+    { docno:"98", 
+      substance:"NICOTINE", 
+      taxonomy:"Prokaryotes - gene mutation", 
+      date:"19980407",
+      specimen:"Neurospora crassa", 
+      result:"Negative"
+    },
+    
+    { docno:"99", 
+      substance:"DL-TRYPTOPHAN", 
+      taxonomy:"In vivo mammalian, sperm morphology - other genotoxic effects", 
+      date:"19910822",
+      specimen:"Human", 
+      result:"Negative"
+    },
+    
+    { docno:"100", 
+      substance:"6-AZAURIDINE", 
+      taxonomy:"Insects - gene mutation", 
+      date:"19910822",
+      specimen:"Rabbit", 
+      result:"Positive"
+    },
+    
+    { docno:"101", 
+      substance:"FUROSEMIDE", 
+      taxonomy:"Lower eukaryotes - other genotoxic effects", 
+      date:"19980407",
+      specimen:"Saccharomyces cerevisiae", 
+      result:"Negative"
+    },
+    
+    { docno:"103", 
+      substance:"5-IODODEOXYURIDINE", 
+      taxonomy:"Prokaryotes - gene mutation", 
+      date:"19980407",
+      specimen:"Syrian hamster embryo (SHE) cells", 
+      result:"Negative"
+    },
+    
+    { docno:"104", 
+      substance:"PYRIDOXAL 5-PHOSPHATE", 
+      taxonomy:"In vitro mammalian, SCE - other genotoxic effects", 
+      date:"19950817",
+      specimen:"", 
+      result:""
+    },
+    
+    { docno:"105", 
+      substance:"AMINOPTERIN", 
+      taxonomy:"Lower eukaryotes - chromosome effects", 
+      date:"19910822",
+      specimen:"Mammalian polychromatic erythrocytes", 
+      result:"Positive"
+    },
+    
+    { docno:"106", 
+      substance:"THIMEROSAL", 
+      taxonomy:"Lower eukaryotes - other genotoxic effects", 
+      date:"19910822",
+      specimen:"Saccharomyces cerevisiae", 
+      result:"Positive"
+    },
+    
+    { docno:"107", 
+      substance:"PRONETHALOL", 
+      taxonomy:"In vitro mammalian, UDS - other genotoxic effects", 
+      date:"19910822",
+      specimen:"Mouse", 
+      result:"Negative"
+    },
+    
+    { docno:"108", 
+      substance:"ISONIAZID", 
+      taxonomy:"Prokaryotes - gene mutation", 
+      date:"19950803",
+      specimen:"Salmonella typhimurium", 
+      result:"No conclusion"
+    },
+    
+    { docno:"109", 
+      substance:"2-METHYL-4-(DIMETHYLAMINO)AZOBENZENE", 
+      taxonomy:"Prokaryotes - gene mutation", 
+      date:"19950407",
+      specimen:"Syrian hamster embryo (SHE) cells", 
+      result:"Negative"
+    },
+    
+    { docno:"111", 
+      substance:"IPRONIAZID", 
+      taxonomy:"PROKARYOTES - GENE MUTATION", 
+      date:"19980407",
+      specimen:"", 
+      result:""
+    },
+    
+    { docno:"113", 
+      substance:"DIETHYLNITROSAMINE", 
+      taxonomy:"Prokaryotes - gene mutation", 
+      date:"19980408",
+      specimen:"Syrian hamster embryo (SHE) cells", 
+      result:"Positive"
+    },
+    
+    { docno:"114", 
+      substance:"BENZAMIDE", 
+      taxonomy:"In vivo mammalian somatic cells - chromosome effects", 
+      date:"19980408",
+      specimen:"", 
+      result:""
+    },
+    
+    { docno:"115", 
+      substance:"FENTHION", 
+      taxonomy:"Prokaryotes - gene mutation", 
+      date:"19950803",
+      specimen:"Bacillus subtilis (H17 vs M45)", 
+      result:"No conclusion"
+    },
+    
+    { docno:"116", 
+      substance:"ATROPINE SULFATE", 
+      taxonomy:"Prokaryotes - gene mutation", 
+      date:"19950406",
+      specimen:"Salmonella typhimurium (one or more of the five standard strains: TA98, TA100, TA1535, TA1537, and TA1538)", 
+      result:"Negative"
+    },
+    
+    { docno:"117", 
+      substance:"N,N-BIS(2-CHLOROETHYL)BENZYLAMINE", 
+      taxonomy:"Lower eukaryotes - gene mutation", 
+      date:"19910822",
+      specimen:"Aspergillus nidulans", 
+      result:"Positive"
+    },
+    
+    { docno:"118", 
+      substance:"4-(METHYLAMINO)PHENOL SULFATE", 
+      taxonomy:"Lower eukaryotes - chromosome effects", 
+      date:"19910822",
+      specimen:"Neurospora crassa", 
+      result:"Negative"
+    },
+    
+    { docno:"120", 
+      substance:"PHENYLMERCURIC NITRATE", 
+      taxonomy:"Lower eukaryotes - chromosome effects", 
+      date:"19910822",
+      specimen:"Neurospora crassa", 
+      result:"Negative"
+    },
+    
+    { docno:"121", 
+      substance:"3'-METHYL-4-DIMETHYLAMINOAZOBENZENE", 
+      taxonomy:"Prokaryotes - gene mutation", 
+      date:"19980408",
+      specimen:"Syrian hamster embryo (SHE) cells", 
+      result:"No conclusion"
+    },
+    
+    { docno:"122", 
+      substance:"NITROGEN MUSTARD HYDROCHLORIDE", 
+      taxonomy:"Prokaryotes - gene mutation", 
+      date:"19980407",
+      specimen:"Arabidopsis species", 
+      result:"Positive"
+    },
+    
+    { docno:"123", 
+      substance:"DIMETHYLBUSULFAN", 
+      taxonomy:"Insects - gene mutation", 
+      date:"19920531",
+      specimen:"Drosophila melanogaster", 
+      result:"Positive"
+    },
+    
+    { docno:"124", 
+      substance:"BUSULFAN", 
+      taxonomy:"Lower eukaryotes - gene mutation", 
+      date:"19980408",
+      specimen:"Nonhuman bone marrow", 
+      result:"Positive"
+    },
+    
+    { docno:"125", 
+      substance:"6-METHYL-2-THIOURACIL", 
+      taxonomy:"$null$", 
+      date:"19910822",
+      specimen:"Nonhuman", 
+      result:"Positive"
+    },
+    
+    { docno:"126", 
+      substance:"CYSTAMINE DIHYDROCHLORIDE", 
+      taxonomy:"In vitro mammalian, SCE - other genotoxic effects", 
+      date:"19950817",
+      specimen:"", 
+      result:""
+    },
+    
+    { docno:"128", 
+      substance:"CARBON TETRACHLORIDE", 
+      taxonomy:"Prokaryotes - gene mutation", 
+      date:"19950406",
+      specimen:"Mouse", 
+      result:"Negative"
+    },
+    
+    { docno:"129", 
+      substance:"HEXABUTYL DISTANNOXANE", 
+      taxonomy:"In vivo mammalian somatic cells - chromosome effects", 
+      date:"19920531",
+      specimen:"", 
+      result:""
+    },
+    
+    { docno:"130", 
+      substance:"ETHYL PARATHION", 
+      taxonomy:"Prokaryotes - gene mutation", 
+      date:"19980408",
+      specimen:"Allium cepa", 
+      result:"Positive"
+    },
+    
+    { docno:"132", 
+      substance:"3-METHYLCHOLANTHRENE", 
+      taxonomy:"Prokaryotes - gene mutation", 
+      date:"19980408",
+      specimen:"Salmonella typhimurium", 
+      result:"Negative"
+    },
+    
+    { docno:"133", 
+      substance:"DIETHYLSTILBESTROL", 
+      taxonomy:"Prokaryotes - gene mutation", 
+      date:"19950803",
+      specimen:"Salmonella typhimurium", 
+      result:"Negative"
+    },
+    
+    { docno:"135", 
+      substance:"BENZ(A)ANTHRACENE", 
+      taxonomy:"Prokaryotes - gene mutation", 
+      date:"19980408",
+      specimen:"Mouse (BALB/c-3T3) cells", 
+      result:"Negative"
+    },
+    
+    { docno:"136", 
+      substance:"4-NITROQUINOLINE 1-OXIDE", 
+      taxonomy:"Prokaryotes - gene mutation", 
+      date:"19980408",
+      specimen:"Mouse (BALB/c-3T3) cells", 
+      result:"Positive"
+    },
+    
+    { docno:"137", 
+      substance:"ATP", 
+      taxonomy:"Insects - chromosome effects", 
+      date:"19910822",
+      specimen:"Drosophila melanogaster", 
+      result:"Negative"
+    },
+    
+    { docno:"138", 
+      substance:"COUMAPHOS", 
+      taxonomy:"$null$", 
+      date:"19910822",
+      specimen:"Nonhuman", 
+      result:"Negative"
+    },
+    
+    { docno:"139", 
+      substance:"CHLORAMPHENICOL", 
+      taxonomy:"Prokaryotes - gene mutation", 
+      date:"19950407",
+      specimen:"Rodents", 
+      result:"Positive"
+    },
+    
+    { docno:"142", 
+      substance:"L-ASPARTIC ACID", 
+      taxonomy:"Plants - chromosome effects", 
+      date:"19920531",
+      specimen:"Allium cepa", 
+      result:"Positive"
+    },
+    
+    { docno:"144", 
+      substance:"L-LYSINE", 
+      taxonomy:"In vivo mammalian, sperm morphology - other genotoxic effects", 
+      date:"19920531",
+      specimen:"Human", 
+      result:"Negative"
+    },
+    
+    { docno:"146", 
+      substance:"ALLYL ISOTHIOCYANATE", 
+      taxonomy:"Insects - gene mutation", 
+      date:"19910822",
+      specimen:"Drosophila melanogaster", 
+      result:"Positive"
+    },
+    
+    { docno:"148", 
+      substance:"STEARIC ACID", 
+      taxonomy:"Prokaryotes - other genotoxic effects", 
+      date:"19920531",
+      specimen:"Escherichia coli polA (W3119 vs P3478)", 
+      result:"Negative"
+    },
+    
+    { docno:"149", 
+      substance:"UREA", 
+      taxonomy:"Plants - gene mutation", 
+      date:"19920531",
+      specimen:"Human lymphocytes or leukocytes", 
+      result:"Positive"
+    },
+    
+    { docno:"150", 
+      substance:"1,1-DIMETHYLHYDRAZINE", 
+      taxonomy:"Prokaryotes - gene mutation", 
+      date:"19950406",
+      specimen:"Syrian hamster embryo (SA7/SHE) cells", 
+      result:"Positive"
+    },
+    
+    { docno:"151", 
+      substance:"CHLOROBUTANOL", 
+      taxonomy:"In vivo mammalian somatic cells - chromosome effects", 
+      date:"19910822",
+      specimen:"", 
+      result:""
+    },
+    
+    { docno:"152", 
+      substance:"VINCRISTINE", 
+      taxonomy:"In vivo mammalian somatic cells - chromosome effects", 
+      date:"19950803",
+      specimen:"Mouse (C3H/10T1/2) cells", 
+      result:"Negative"
+    },
+    
+    { docno:"153", 
+      substance:"SODIUM PHENOBARBITAL", 
+      taxonomy:"Prokaryotes - gene mutation", 
+      date:"19980407",
+      specimen:"Mouse", 
+      result:"Negative"
+    },
+    
+    { docno:"154", 
+      substance:"METEPA", 
+      taxonomy:"Lower eukaryotes - gene mutation", 
+      date:"19920615",
+      specimen:"Nonhuman bone marrow", 
+      result:"Positive"
+    },
+    
+    { docno:"155", 
+      substance:"PHENYTOIN", 
+      taxonomy:"In vivo mammalian somatic cells - chromosome effects", 
+      date:"19950803",
+      specimen:"Human", 
+      result:"No conclusion"
+    },
+    
+    { docno:"156", 
+      substance:"BARBITAL", 
+      taxonomy:"In vivo mammalian somatic cells - chromosome effects", 
+      date:"19910822",
+      specimen:"Nonhuman bone marrow", 
+      result:"Positive"
+    },
+    
+    { docno:"157", 
+      substance:"SUCROSE", 
+      taxonomy:"In vivo mammalian somatic cells - chromosome effects", 
+      date:"19980408",
+      specimen:"Mammalian polychromatic erythrocytes", 
+      result:"No conclusion"
+    },
+    
+    { docno:"158", 
+      substance:"MEPROBAMATE", 
+      taxonomy:"Insects - gene mutation", 
+      date:"19920531",
+      specimen:"Drosophila melanogaster", 
+      result:"Negative"
+    },
+    
+    { docno:"159", 
+      substance:"PROPYLENE GLYCOL", 
+      taxonomy:"In vitro mammalian - cell transformation", 
+      date:"19950803",
+      specimen:"Syrian hamster embryo (SHE) cells", 
+      result:"Negative"
+    },
+    
+    { docno:"161", 
+      substance:"BETA-PROPIOLACTONE", 
+      taxonomy:"Prokaryotes - gene mutation", 
+      date:"19950407",
+      specimen:"Syrian hamster embryo (SHE) cells", 
+      result:"Positive"
+    },
+    
+    { docno:"162", 
+      substance:"ETHYNYLESTRADIOL", 
+      taxonomy:"In vitro mammalian - cell transformation", 
+      date:"19910822",
+      specimen:"Mouse (BALB/c-3T3) cells", 
+      result:"Negative"
+    },
+    
+    { docno:"163", 
+      substance:"PROBENECID", 
+      taxonomy:"Lower eukaryotes - other genotoxic effects", 
+      date:"19910822",
+      specimen:"Saccharomyces cerevisiae", 
+      result:"Negative"
+    },
+    
+    { docno:"164", 
+      substance:"SULFAGUANIDINE", 
+      taxonomy:"Prokaryotes - gene mutation", 
+      date:"19950406",
+      specimen:"Salmonella typhimurium (one or more of the five standard strains: TA98, TA100, TA1535, TA1537, and TA1538)", 
+      result:"Negative"
+    },
+    
+    { docno:"167", 
+      substance:"CHLORDANE,PURIFIED", 
+      taxonomy:"Plants - gene mutation", 
+      date:"19920615",
+      specimen:"Rodents", 
+      result:"No conclusion"
+    },
+    
+    { docno:"168", 
+      substance:"PROGESTERONE", 
+      taxonomy:"Prokaryotes - other genotoxic effects", 
+      date:"19980408",
+      specimen:"Mouse (BALB/c-3T3) cells", 
+      result:"Negative"
+    },
+    
+    { docno:"169", 
+      substance:"TESTOSTERONE PROPIONATE", 
+      taxonomy:"In vivo mammalian, sperm morphology - other genotoxic effects", 
+      date:"19910822",
+      specimen:"Human", 
+      result:"Positive"
+    },
+    
+    { docno:"170", 
+      substance:"CHOLESTEROL", 
+      taxonomy:"In vitro mammalian - cell transformation", 
+      date:"19910822",
+      specimen:"Syrian hamster embryo (SHE) cells", 
+      result:"Negative"
+    },
+    
+    { docno:"171", 
+      substance:"STREPTOMYCIN", 
+      taxonomy:"Plants - chromosome effects", 
+      date:"19910822",
+      specimen:"Vicia faba", 
+      result:"Positive"
+    },
+    
+    { docno:"172", 
+      substance:"(+)-TUBOCURARINE CHLORIDE HYDROCHLORIDE", 
+      taxonomy:"Prokaryotes - gene mutation", 
+      date:"19950406",
+      specimen:"Escherichia coli polA (W3119 vs P3478)", 
+      result:"No conclusion"
+    },
+    
+    { docno:"174", 
+      substance:"7,12-DIMETHYLBENZ(A)ANTHRACENE", 
+      taxonomy:"Prokaryotes - gene mutation", 
+      date:"19980408",
+      specimen:"Fischer rat embryo (SA7/RE) cells", 
+      result:"Positive"
+    },
+    
+    { docno:"175", 
+      substance:"CAFFEINE", 
+      taxonomy:"Prokaryotes - gene mutation", 
+      date:"19950803",
+      specimen:"Syrian hamster embryo (SHE) cells", 
+      result:"Negative"
+    },
+    
+    { docno:"176", 
+      substance:"PYRIMETHAMINE", 
+      taxonomy:"Prokaryotes - gene mutation", 
+      date:"19950406",
+      specimen:"Salmonella typhimurium (one or more of the five standard strains: TA98, TA100, TA1535, TA1537, and TA1538)", 
+      result:"No conclusion"
+    },
+    
+    { docno:"177", 
+      substance:"AMINOPYRINE", 
+      taxonomy:"In vitro mammalian, SCE - other genotoxic effects", 
+      date:"19910822",
+      specimen:"Nonhuman", 
+      result:"Negative"
+    },
+    
+    { docno:"178", 
+      substance:"METHYLTESTOSTERONE", 
+      taxonomy:"In vivo mammalian, sperm morphology - other genotoxic effects", 
+      date:"19910822",
+      specimen:"Human", 
+      result:"Negative"
+    },
+    
+    { docno:"179", 
+      substance:"TESTOSTERONE 17BETA-CYCLOPENTYLPROPIONATE", 
+      taxonomy:"In vivo mammalian, sperm morphology - other genotoxic effects", 
+      date:"19910822",
+      specimen:"Human", 
+      result:"Positive"
+    },
+    
+    { docno:"180", 
+      substance:"TESTOSTERONE", 
+      taxonomy:"In vivo mammalian, sperm morphology - other genotoxic effects", 
+      date:"19910822",
+      specimen:"Human", 
+      result:"Positive"
+    },
+    
+    { docno:"181", 
+      substance:"CHLORDIAZEPOXIDE", 
+      taxonomy:"Prokaryotes - gene mutation", 
+      date:"19950406",
+      specimen:"Saccharomyces cerevisiae", 
+      result:"Negative"
+    },
+    
+    { docno:"184", 
+      substance:"PROMAZINE", 
+      taxonomy:"In vitro mammalian, SCE - other genotoxic effects", 
+      date:"19910822",
+      specimen:"Nonhuman", 
+      result:"Positive"
+    },
+    
+    { docno:"186", 
+      substance:"THEOPHYLLINE", 
+      taxonomy:"Plants - chromosome effects", 
+      date:"19980407",
+      specimen:"Allium cepa", 
+      result:"Positive"
+    },
+    
+    { docno:"188", 
+      substance:"SODIUM CEPHALOTHIN", 
+      taxonomy:"Prokaryotes - other genotoxic effects", 
+      date:"19910822",
+      specimen:"Escherichia coli polA (W3119 vs P3478)", 
+      result:"Negative"
+    },
+    
+    { docno:"190", 
+      substance:"GAMMA-LINDANE", 
+      taxonomy:"Prokaryotes - gene mutation", 
+      date:"19920531",
+      specimen:"Salmonella typhimurium, Serratia marcesens", 
+      result:"No conclusion"
+    },
+    
+    { docno:"193", 
+      substance:"CHLOROTHIAZIDE", 
+      taxonomy:"Prokaryotes - gene mutation", 
+      date:"19950406",
+      specimen:"Salmonella typhimurium (one or more of the five standard strains: TA98, TA100, TA1535, TA1537, and TA1538)", 
+      result:"No conclusion"
+    },
+    
+    { docno:"194", 
+      substance:"KANAMYCIN A", 
+      taxonomy:"Prokaryotes - other genotoxic effects", 
+      date:"19910822",
+      specimen:"Bacillus subtilis (H17 vs M45T)", 
+      result:"No conclusion"
+    },
+    
+    { docno:"196", 
+      substance:"METHOTREXATE", 
+      taxonomy:"Prokaryotes - gene mutation", 
+      date:"19980407",
+      specimen:"Syrian hamster embryo (SHE) cells", 
+      result:"Negative"
+    },
+    
+    { docno:"198", 
+      substance:"5-BROMODEOXYURIDINE", 
+      taxonomy:"Plants - gene mutation", 
+      date:"19980408",
+      specimen:"Syrian hamster embryo (SHE) cells", 
+      result:"No conclusion"
+    },
+    
+    { docno:"200", 
+      substance:"2-HYDROXYQUINOLINE", 
+      taxonomy:"Prokaryotes - gene mutation", 
+      date:"19950406",
+      specimen:"Salmonella typhimurium (one or more of the five standard strains: TA98, TA100, TA1535, TA1537, and TA1538)", 
+      result:"Negative"
+    },
+    
+    { docno:"205", 
+      substance:"DL-METHIONINE", 
+      taxonomy:"Prokaryotes - other genotoxic effects", 
+      date:"19910822",
+      specimen:"Escherichia coli polA (W3119 vs P3478)", 
+      result:"No conclusion"
+    },
+    
+    { docno:"206", 
+      substance:"DIMERCAPROL", 
+      taxonomy:"Prokaryotes - other genotoxic effects", 
+      date:"19910822",
+      specimen:"Escherichia coli polA (W3119 vs P3478)", 
+      result:"Negative"
+    },
+    
+    { docno:"207", 
+      substance:"ISOCARBOXAZID", 
+      taxonomy:"PROKARYOTES - GENE MUTATION", 
+      date:"19980407",
+      specimen:"", 
+      result:""
+    },
+    
+    { docno:"209", 
+      substance:"NITROFURAZONE", 
+      taxonomy:"Prokaryotes - gene mutation", 
+      date:"19950407",
+      specimen:"Fischer rat embryo (RLV/1706) cells", 
+      result:"Positive"
+    },
+    
+    { docno:"211", 
+      substance:"N-NITROSOMORPHOLINE", 
+      taxonomy:"Prokaryotes - gene mutation", 
+      date:"19980408",
+      specimen:"Human lymphocytes or leukocytes", 
+      result:"Positive"
+    },
+    
+    { docno:"213", 
+      substance:"PHENOXYBENZAMINE", 
+      taxonomy:"$null$", 
+      date:"19910822",
+      specimen:"Nonhuman", 
+      result:"Positive"
+    },
+    
+    { docno:"214", 
+      substance:"ETHYLENEDIAMINETETRAACETIC ACID", 
+      taxonomy:"Plants - gene mutation", 
+      date:"19920531",
+      specimen:"Arabidopsis species", 
+      result:"Negative"
+    },
+    
+    { docno:"216", 
+      substance:"4-AMINOAZOBENZENE", 
+      taxonomy:"Prokaryotes - gene mutation", 
+      date:"19980408",
+      specimen:"Syrian hamster embryo (SHE) cells", 
+      result:"Positive"
+    },
+    
+    { docno:"217", 
+      substance:"4-DIMETHYLAMINOAZOBENZENE", 
+      taxonomy:"Prokaryotes - gene mutation", 
+      date:"19980408",
+      specimen:"Salmonella typhimurium", 
+      result:"Positive"
+    },
+    
+    { docno:"218", 
+      substance:"2-PHENYLETHANOL", 
+      taxonomy:"Prokaryotes - gene mutation", 
+      date:"19950817",
+      specimen:"", 
+      result:""
+    },
+    
+    { docno:"219", 
+      substance:"AMPHETAMINE SULFATE", 
+      taxonomy:"Insects - gene mutation", 
+      date:"19910822",
+      specimen:"Drosophila melanogaster", 
+      result:"No conclusion"
+    },
+    
+    { docno:"220", 
+      substance:"P-FLUOROPHENYLALANINE", 
+      taxonomy:"Lower eukaryotes - gene mutation", 
+      date:"19910822",
+      specimen:"Aspergillus nidulans", 
+      result:"Negative"
+    },
+    
+    { docno:"222", 
+      substance:"CYSTEAMINE", 
+      taxonomy:"Prokaryotes - gene mutation", 
+      date:"19980407",
+      specimen:"Neurospora crassa", 
+      result:"Negative"
+    },
+    
+    { docno:"223", 
+      substance:"2-MERCAPTOETHANOL", 
+      taxonomy:"In vitro mammalian, SCE - other genotoxic effects", 
+      date:"19980407",
+      specimen:"", 
+      result:""
+    },
+    
+    { docno:"224", 
+      substance:"DIETHYL ETHER", 
+      taxonomy:"Prokaryotes - gene mutation", 
+      date:"19980407",
+      specimen:"Aspergillus nidulans", 
+      result:"Negative"
+    },
+    
+    { docno:"226", 
+      substance:"METHYLHYDRAZINE", 
+      taxonomy:"Prokaryotes - gene mutation", 
+      date:"19950406",
+      specimen:"Rodents", 
+      result:"Negative"
+    },
+    
+    { docno:"227", 
+      substance:"ACETAMIDE", 
+      taxonomy:"Prokaryotes - gene mutation", 
+      date:"19950407",
+      specimen:"Syrian hamster embryo (SHE) cells", 
+      result:"Positive"
+    },
+    
+    { docno:"228", 
+      substance:"DIMETHOATE", 
+      taxonomy:"Insects - gene mutation", 
+      date:"19980408",
+      specimen:"Allium cepa", 
+      result:"Positive"
+    },
+    
+    { docno:"229", 
+      substance:"TETRACYCLINE", 
+      taxonomy:"Prokaryotes - gene mutation", 
+      date:"19950406",
+      specimen:"Salmonella typhimurium (one or more of the five standard strains: TA98, TA100, TA1535, TA1537, and TA1538)", 
+      result:"Negative"
+    },
+    
+    { docno:"230", 
+      substance:"METHIMAZOLE", 
+      taxonomy:"In vivo mammalian somatic cells - chromosome effects", 
+      date:"19910822",
+      specimen:"", 
+      result:""
+    },
+    
+    { docno:"231", 
+      substance:"DIELDRIN", 
+      taxonomy:"Prokaryotes - gene mutation", 
+      date:"19950406",
+      specimen:"Rodents", 
+      result:"Negative"
+    },
+    
+    { docno:"232", 
+      substance:"ANTIPYRINE", 
+      taxonomy:"Prokaryotes - gene mutation", 
+      date:"19950406",
+      specimen:"Salmonella typhimurium (one or more of the five standard strains: TA98, TA100, TA1535, TA1537, and TA1538)", 
+      result:"Negative"
+    },
+    
+    { docno:"237", 
+      substance:"METHICILLIN", 
+      taxonomy:"Prokaryotes - other genotoxic effects", 
+      date:"19910822",
+      specimen:"Escherichia coli polA (W3119 vs P3478)", 
+      result:"Negative"
+    },
+    
+    { docno:"238", 
+      substance:"PENICILLIN G", 
+      taxonomy:"Insects - gene mutation", 
+      date:"19910822",
+      specimen:"Drosophila melanogaster", 
+      result:"No conclusion"
+    },
+    
+    { docno:"239", 
+      substance:"NIRIDAZOLE", 
+      taxonomy:"Prokaryotes - gene mutation", 
+      date:"19950406",
+      specimen:"Neurospora crassa", 
+      result:"Positive"
+    },
+    
+    { docno:"240", 
+      substance:"METHYLENE BLUE", 
+      taxonomy:"Prokaryotes - gene mutation", 
+      date:"19980407",
+      specimen:"Bacillus subtilis (H17 vs M45)", 
+      result:"Negative"
+    },
+    
+    { docno:"242", 
+      substance:"AMITROLE", 
+      taxonomy:"Prokaryotes - gene mutation", 
+      date:"19980407",
+      specimen:"Syrian hamster embryo (SHE) cells", 
+      result:"Positive"
+    },
+    
+    { docno:"244", 
+      substance:"ARECOLINE HYDROCHLORIDE", 
+      taxonomy:"In vivo mammalian somatic cells - chromosome effects", 
+      date:"19920531",
+      specimen:"", 
+      result:""
+    },
+    
+    { docno:"245", 
+      substance:"4-NITROBENZOIC ACID", 
+      taxonomy:"Prokaryotes - gene mutation", 
+      date:"19910823",
+      specimen:"Salmonella typhimurium", 
+      result:"Negative"
+    },
+    
+    { docno:"246", 
+      substance:"PHENYLMERCURIC ACETATE", 
+      taxonomy:"Insects - chromosome effects", 
+      date:"19920531",
+      specimen:"Bacillus subtilis (H17 vs M45)", 
+      result:"Positive"
+    },
+    
+    { docno:"247", 
+      substance:"ACETOPHENETIDIN", 
+      taxonomy:"In vivo mammalian somatic cells - chromosome effects", 
+      date:"19980407",
+      specimen:"Nonhuman", 
+      result:"Positive"
+    },
+    
+    { docno:"248", 
+      substance:"ETHYL METHANESULFONATE", 
+      taxonomy:"Prokaryotes - gene mutation", 
+      date:"19950407",
+      specimen:"Aspergillus nidulans", 
+      result:"Positive"
+    },
+    
+    { docno:"249", 
+      substance:"ANILINE", 
+      taxonomy:"Prokaryotes - gene mutation", 
+      date:"19980407",
+      specimen:"Mouse (BALB/c-3T3) cells", 
+      result:"Positive"
+    },
+    
+    { docno:"250", 
+      substance:"THIOACETAMIDE", 
+      taxonomy:"Prokaryotes - gene mutation", 
+      date:"19950407",
+      specimen:"Syrian hamster embryo (SHE) cells", 
+      result:"Positive"
+    },
+    
+    { docno:"251", 
+      substance:"THIOUREA", 
+      taxonomy:"Prokaryotes - gene mutation", 
+      date:"19980408",
+      specimen:"Fischer rat embryo (SA7/RE) cells", 
+      result:"Positive"
+    },
+    
+    { docno:"252", 
+      substance:"DICHLORVOS", 
+      taxonomy:"Prokaryotes - gene mutation", 
+      date:"19980408",
+      specimen:"Nonhuman bone marrow", 
+      result:"Negative"
+    },
+    
+    { docno:"253", 
+      substance:"DIMETHYLNITROSAMINE", 
+      taxonomy:"Prokaryotes - gene mutation", 
+      date:"19950803",
+      specimen:"Salmonella typhimurium", 
+      result:"Positive"
+    },
+    
+    { docno:"255", 
+      substance:"CARBARYL", 
+      taxonomy:"Prokaryotes - gene mutation", 
+      date:"19980407",
+      specimen:"Allium cepa", 
+      result:"Positive"
+    },
+    
+    { docno:"257", 
+      substance:"L-METHIONINE", 
+      taxonomy:"In vivo mammalian somatic cells - chromosome effects", 
+      date:"19980408",
+      specimen:"Mammalian polychromatic erythrocytes", 
+      result:"No conclusion"
+    },
+    
+    { docno:"258", 
+      substance:"SULFANILAMIDE", 
+      taxonomy:"Lower eukaryotes - chromosome effects", 
+      date:"19910822",
+      specimen:"Aspergillus nidulans", 
+      result:"Positive"
+    },
+    
+    { docno:"259", 
+      substance:"PHENOXYBENZAMINE HYDROCHLORIDE", 
+      taxonomy:"$null$", 
+      date:"19910822",
+      specimen:"Nonhuman", 
+      result:"Positive"
+    },
+    
+    { docno:"260", 
+      substance:"ETHANOL", 
+      taxonomy:"Prokaryotes - gene mutation", 
+      date:"19980408",
+      specimen:"Aspergillus nidulans", 
+      result:"Negative"
+    },
+    
+    { docno:"261", 
+      substance:"ACETIC ACID", 
+      taxonomy:"Prokaryotes - gene mutation", 
+      date:"19950406",
+      specimen:"Salmonella typhimurium (one or more of the five standard strains: TA98, TA100, TA1535, TA1537, and TA1538)", 
+      result:"Negative"
+    },
+    
+    { docno:"262", 
+      substance:"DIETHYL SULFATE", 
+      taxonomy:"Prokaryotes - gene mutation", 
+      date:"19950407",
+      specimen:"Aspergillus nidulans", 
+      result:"Positive"
+    },
+    
+    { docno:"265", 
+      substance:"TOLBUTAMIDE", 
+      taxonomy:"In vivo mammalian somatic cells - chromosome effects", 
+      date:"19980407",
+      specimen:"Mammalian polychromatic erythrocytes", 
+      result:"Positive"
+    },
+    
+    { docno:"267", 
+      substance:"COLCHICINE", 
+      taxonomy:"Plants - gene mutation", 
+      date:"19950803",
+      specimen:"Mammalian polychromatic erythrocytes", 
+      result:"No conclusion"
+    },
+    
+    { docno:"271", 
+      substance:"4-AMINOSALICYLIC ACID", 
+      taxonomy:"Prokaryotes - other genotoxic effects", 
+      date:"19910822",
+      specimen:"Escherichia coli polA (W3119 vs P3478)", 
+      result:"No conclusion"
+    },
+    
+    { docno:"272", 
+      substance:"ACRIDINE ORANGE", 
+      taxonomy:"Prokaryotes - gene mutation", 
+      date:"19980408",
+      specimen:"Syrian hamster embryo (SHE) cells", 
+      result:"No conclusion"
+    },
+    
+    { docno:"273", 
+      substance:"THYMINE", 
+      taxonomy:"Insects - gene mutation", 
+      date:"19980407",
+      specimen:"Drosophila melanogaster", 
+      result:"No conclusion"
+    },
+    
+    { docno:"274", 
+      substance:"BENZOIC ACID", 
+      taxonomy:"Prokaryotes - gene mutation", 
+      date:"19980407",
+      specimen:"Saccharomyces cerevisiae", 
+      result:"Negative"
+    },
+    
+    { docno:"275", 
+      substance:"URACIL", 
+      taxonomy:"Insects - gene mutation", 
+      date:"19920531",
+      specimen:"Drosophila melanogaster", 
+      result:"No conclusion"
+    },
+    
+    { docno:"276", 
+      substance:"METHYL METHANESULFONATE", 
+      taxonomy:"Prokaryotes - gene mutation", 
+      date:"19950407",
+      specimen:"Aspergillus nidulans", 
+      result:"Positive"
+    },
+    
+    { docno:"278", 
+      substance:"URACIL MUSTARD", 
+      taxonomy:"Prokaryotes - gene mutation", 
+      date:"19950406",
+      specimen:"Mouse (BALB/c-3T3) cells", 
+      result:"Negative"
+    },
+    
+    { docno:"279", 
+      substance:"CYCLOHEXIMIDE", 
+      taxonomy:"Lower eukaryotes - chromosome effects", 
+      date:"19980408",
+      specimen:"Mammalian polychromatic erythrocytes", 
+      result:"No conclusion"
+    },
+    
+    { docno:"280", 
+      substance:"PSORALEN", 
+      taxonomy:"Lower eukaryotes - gene mutation", 
+      date:"19910822",
+      specimen:"Saccharomyces cerevisiae", 
+      result:"No conclusion"
+    },
+    
+    { docno:"281", 
+      substance:"NITROFURANTOIN", 
+      taxonomy:"Prokaryotes - gene mutation", 
+      date:"19950803",
+      specimen:"Salmonella typhimurium and Saccharomyces cerevisiae", 
+      result:"Positive"
+    },
+    
+    { docno:"282", 
+      substance:"DL-ETHIONINE", 
+      taxonomy:"Lower eukaryotes - chromosome effects", 
+      date:"19980408",
+      specimen:"Neurospora crassa", 
+      result:"Negative"
+    },
+    
+    { docno:"283", 
+      substance:"FURAZOLIDONE", 
+      taxonomy:"Prokaryotes - gene mutation", 
+      date:"19980408",
+      specimen:"Bacillus subtilis (H17 vs M45)", 
+      result:"Positive"
+    },
+    
+    { docno:"285", 
+      substance:"CHOLINE CHLORIDE", 
+      taxonomy:"Prokaryotes - other genotoxic effects", 
+      date:"19980407",
+      specimen:"Escherichia coli polA (W3119 vs P3478)", 
+      result:"No conclusion"
+    },
+    
+    { docno:"286", 
+      substance:"METHANOL", 
+      taxonomy:"Lower eukaryotes - chromosome effects", 
+      date:"19920531",
+      specimen:"Syrian hamster embryo (SHE) cells", 
+      result:"Negative"
+    },
+    
+    { docno:"287", 
+      substance:"METHOXYAMINE", 
+      taxonomy:"Lower eukaryotes - gene mutation", 
+      date:"19920531",
+      specimen:"Neurospora crassa", 
+      result:"Positive"
+    },
+    
+    { docno:"288", 
+      substance:"ISOPROPANOL", 
+      taxonomy:"Lower eukaryotes - chromosome effects", 
+      date:"19910822",
+      specimen:"Syrian hamster embryo (SA7/SHE) cells", 
+      result:"Negative"
+    },
+    
+    { docno:"289", 
+      substance:"ACETONE", 
+      taxonomy:"Prokaryotes - gene mutation", 
+      date:"19950803",
+      specimen:"Syrian hamster embryo (SHE) cells", 
+      result:"Negative"
+    },
+    
+    { docno:"290", 
+      substance:"CHLOROFORM", 
+      taxonomy:"Lower eukaryotes - gene mutation", 
+      date:"19950803",
+      specimen:"Syrian hamster embryo (SA7/SHE) cells", 
+      result:"Negative"
+    },
+    
+    { docno:"291", 
+      substance:"DIMETHYL SULFOXIDE", 
+      taxonomy:"Prokaryotes - gene mutation", 
+      date:"19950803",
+      specimen:"Aspergillus nidulans", 
+      result:"No conclusion"
+    },
+    
+    { docno:"292", 
+      substance:"HEXACHLOROETHANE", 
+      taxonomy:"Prokaryotes - gene mutation", 
+      date:"19950406",
+      specimen:"Saccharomyces cerevisiae", 
+      result:"Negative"
+    },
+    
+    { docno:"293", 
+      substance:"FLUOCINOLONE ACETONIDE", 
+      taxonomy:"In vitro mammalian - cell transformation, viral enhancement", 
+      date:"19910822",
+      specimen:"Syrian hamster embryo (SA7/SHE) cells", 
+      result:"Positive"
+    },
+    
+    { docno:"296", 
+      substance:"N,N-DIMETHYLFORMAMIDE", 
+      taxonomy:"In vivo mammalian somatic cells - chromosome effects", 
+      date:"19980408",
+      specimen:"Syrian hamster embryo (SHE) cells", 
+      result:"Negative"
+    },
+    
+    { docno:"297", 
+      substance:"VITAMIN B12", 
+      taxonomy:"In vivo mammalian, sperm morphology - other genotoxic effects", 
+      date:"19910822",
+      specimen:"Human", 
+      result:"No conclusion"
+    },
+    
+    { docno:"298", 
+      substance:"NORETHINDRONE", 
+      taxonomy:"In vivo mammalian, sperm morphology - other genotoxic effects", 
+      date:"19910822",
+      specimen:"Human", 
+      result:"Positive"
+    },
+    
+    { docno:"300", 
+      substance:"RETINOL", 
+      taxonomy:"In vivo mammalian, sperm morphology - other genotoxic effects", 
+      date:"19980407",
+      specimen:"Mouse", 
+      result:"Negative"
+    },
+    
+    { docno:"301", 
+      substance:"D-CYCLOSERINE", 
+      taxonomy:"Prokaryotes - other genotoxic effects", 
+      date:"19910822",
+      specimen:"Escherichia coli polA (W3119 vs P3478)", 
+      result:"Negative"
+    },
+    
+    { docno:"302", 
+      substance:"TRIAZIQUONE", 
+      taxonomy:"Prokaryotes - gene mutation", 
+      date:"19910909",
+      specimen:"Mammalian oocytes or early embryo", 
+      result:"Positive"
+    },
+    
+    { docno:"303", 
+      substance:"DIPYRONE", 
+      taxonomy:"In vitro mammalian, SCE - other genotoxic effects", 
+      date:"19980407",
+      specimen:"", 
+      result:""
+    },
+    
+    { docno:"304", 
+      substance:"HYPOXANTHINE", 
+      taxonomy:"Plants - gene mutation", 
+      date:"19980407",
+      specimen:"Arabidopsis species", 
+      result:"Negative"
+    },
+    
+    { docno:"305", 
+      substance:"QUINACRINE DIHYDROCHLORIDE", 
+      taxonomy:"In vivo mammalian somatic cells - chromosome effects", 
+      date:"19910822",
+      specimen:"Mammalian polychromatic erythrocytes", 
+      result:"No conclusion"
+    },
+    
+    { docno:"306", 
+      substance:"CHLORPROMAZINE HYDROCHLORIDE", 
+      taxonomy:"Prokaryotes - gene mutation", 
+      date:"19980408",
+      specimen:"", 
+      result:""
+    },
+    
+    { docno:"307", 
+      substance:"TUBERCIDIN", 
+      taxonomy:"In vitro mammalian - cell transformation, viral enhancement", 
+      date:"19910822",
+      specimen:"Fischer rat embryo (RLV/1706) cells", 
+      result:"Negative"
+    },
+    
+    { docno:"308", 
+      substance:"AMPICILLIN", 
+      taxonomy:"Prokaryotes - other genotoxic effects", 
+      date:"19910822",
+      specimen:"Escherichia coli polA (W3119 vs P3478)", 
+      result:"Negative"
+    },
+    
+    { docno:"309", 
+      substance:"PENCILLIN G SODIUM", 
+      taxonomy:"Insects - gene mutation", 
+      date:"19910822",
+      specimen:"Drosophila melanogaster", 
+      result:"No conclusion"
+    },
+    
+    { docno:"310", 
+      substance:"D-MANNITOL", 
+      taxonomy:"$null$", 
+      date:"19950627",
+      specimen:"Nonhuman", 
+      result:"Negative"
+    },
+    
+    { docno:"311", 
+      substance:"SALICYLIC ACID", 
+      taxonomy:"Prokaryotes - gene mutation", 
+      date:"19950406",
+      specimen:"Saccharomyces cerevisiae", 
+      result:"Positive"
+    },
+    
+    { docno:"313", 
+      substance:"XANTHINE", 
+      taxonomy:"Insects - gene mutation", 
+      date:"19920531",
+      specimen:"Drosophila melanogaster", 
+      result:"No conclusion"
+    },
+    
+    { docno:"314", 
+      substance:"TRIFLUOROTHYMIDINE", 
+      taxonomy:"In vitro mammalian - gene mutation", 
+      date:"19980407",
+      specimen:"Mouse (C3H/10T1/2) cells", 
+      result:"Negative"
+    },
+    
+    { docno:"315", 
+      substance:"GLUTATHIONE", 
+      taxonomy:"Prokaryotes - gene mutation", 
+      date:"19980408",
+      specimen:"", 
+      result:""
+    },
+    
+    { docno:"316", 
+      substance:"N-METHYL-N'-NITRO-N-NITROSOGUANIDINE", 
+      taxonomy:"Prokaryotes - gene mutation", 
+      date:"19980408",
+      specimen:"Aspergillus nidulans", 
+      result:"Positive"
+    },
+    
+    { docno:"317", 
+      substance:"L-ORNITHINE", 
+      taxonomy:"In vivo mammalian, sperm morphology - other genotoxic effects", 
+      date:"19910822",
+      specimen:"Human", 
+      result:"Negative"
+    },
+    
+    { docno:"318", 
+      substance:"HEXACHLOROPHENE", 
+      taxonomy:"In vivo mammalian somatic cells - chromosome effects", 
+      date:"19910822",
+      specimen:"", 
+      result:""
+    },
+    
+    { docno:"319", 
+      substance:"2,4-DINITROFLUOROBENZENE", 
+      taxonomy:"Lower eukaryotes - gene mutation", 
+      date:"19950803",
+      specimen:"Escherichia coli polA (W3119 vs P3478)", 
+      result:"Positive"
+    },
+    
+    { docno:"320", 
+      substance:"P-TOLUENESULFONAMIDE", 
+      taxonomy:"Insects - gene mutation", 
+      date:"19910822",
+      specimen:"Drosophila melanogaster", 
+      result:"No conclusion"
+    },
+    
+    { docno:"322", 
+      substance:"1-PROPANOL", 
+      taxonomy:"In vitro mammalian, SCE - other genotoxic effects", 
+      date:"19920531",
+      specimen:"Nonhuman", 
+      result:"Negative"
+    },
+    
+    { docno:"323", 
+      substance:"CYTOSINE", 
+      taxonomy:"Insects - gene mutation", 
+      date:"19910822",
+      specimen:"Drosophila melanogaster", 
+      result:"No conclusion"
+    },
+    
+    { docno:"324", 
+      substance:"1-BUTANOL", 
+      taxonomy:"Prokaryotes - gene mutation", 
+      date:"19950406",
+      specimen:"Nonhuman", 
+      result:"Negative"
+    },
+    
+    { docno:"325", 
+      substance:"BENZENE", 
+      taxonomy:"Plants - gene mutation", 
+      date:"19950803",
+      specimen:"Syrian hamster embryo (SA7/SHE) cells", 
+      result:"Negative"
+    },
+    
+    { docno:"326", 
+      substance:"COBALT(2+) ACETATE", 
+      taxonomy:"In vitro mammalian - cell transformation, viral enhancement", 
+      date:"19920531",
+      specimen:"Syrian hamster embryo (SA7/SHE) cells", 
+      result:"Positive"
+    },
+    
+    { docno:"327", 
+      substance:"1,1,1-TRICHLOROETHANE", 
+      taxonomy:"In vivo mammalian somatic cells - chromosome effects", 
+      date:"19980408",
+      specimen:"Fischer rat embryo (RLV/1706) cells", 
+      result:"Positive"
+    },
+    
+    { docno:"328", 
+      substance:"MEDROXYPROGESTERONE ACETATE", 
+      taxonomy:"In vivo mammalian, sperm morphology - other genotoxic effects", 
+      date:"19980407",
+      specimen:"Human", 
+      result:"Positive"
+    },
+    
+    { docno:"329", 
+      substance:"SULFATHIAZOLE", 
+      taxonomy:"Plants - gene mutation", 
+      date:"19910822",
+      specimen:"Arabidopsis species", 
+      result:"Negative"
+    },
+    
+    { docno:"330", 
+      substance:"ENDRIN", 
+      taxonomy:"Prokaryotes - gene mutation", 
+      date:"19950406",
+      specimen:"Hordeum vulgare (barley)", 
+      result:"No conclusion"
+    },
+    
+    { docno:"331", 
+      substance:"MESTRANOL", 
+      taxonomy:"$null$", 
+      date:"19910822",
+      specimen:"Nonhuman", 
+      result:"Positive"
+    },
+    
+    { docno:"332", 
+      substance:"METHOXYCHLOR", 
+      taxonomy:"Prokaryotes - gene mutation", 
+      date:"19950407",
+      specimen:"Mouse (BALB/c-3T3) cells", 
+      result:"Positive"
+    },
+    
+    { docno:"333", 
+      substance:"ALIZARIN", 
+      taxonomy:"Plants - chromosome effects", 
+      date:"19910822",
+      specimen:"Allium cepa", 
+      result:"Positive"
+    },
+    
+    { docno:"334", 
+      substance:"P,P'-DDD", 
+      taxonomy:"Prokaryotes - gene mutation", 
+      date:"19910822",
+      specimen:"Nonhuman", 
+      result:"Positive"
+    },
+    
+    { docno:"335", 
+      substance:"P,P'-DDE", 
+      taxonomy:"Prokaryotes - gene mutation", 
+      date:"19950406",
+      specimen:"Nonhuman", 
+      result:"Positive"
+    },
+    
+    { docno:"337", 
+      substance:"TRYPAN BLUE", 
+      taxonomy:"Prokaryotes - gene mutation", 
+      date:"19950406",
+      specimen:"Bacillus subtilis (H17 vs M45)", 
+      result:"Positive"
+    },
+    
+    { docno:"338", 
+      substance:"METHANDROSTENOLONE", 
+      taxonomy:"In vivo mammalian, sperm morphology - other genotoxic effects", 
+      date:"19910822",
+      specimen:"Human", 
+      result:"Positive"
+    },
+    
+    { docno:"340", 
+      substance:"CORDYCEPIN", 
+      taxonomy:"In vitro mammalian - cell transformation, viral enhancement", 
+      date:"19980407",
+      specimen:"Fischer rat embryo (RLV/1706) cells", 
+      result:"Negative"
+    },
+    
+    { docno:"342", 
+      substance:"ADENINE", 
+      taxonomy:"Insects - gene mutation", 
+      date:"19910822",
+      specimen:"Allium cepa", 
+      result:"Positive"
+    },
+    
+    { docno:"343", 
+      substance:"GUANINE", 
+      taxonomy:"Insects - gene mutation", 
+      date:"19910822",
+      specimen:"Escherichia coli polA (W3119 vs P3478)", 
+      result:"No conclusion"
+    },
+    
+    { docno:"344", 
+      substance:"LIDOCAINE HYDROCHLORIDE", 
+      taxonomy:"Prokaryotes - gene mutation", 
+      date:"19950406",
+      specimen:"Salmonella typhimurium (one or more of the five standard strains: TA98, TA100, TA1535, TA1537, and TA1538)", 
+      result:"No conclusion"
+    },
+    
+    { docno:"349", 
+      substance:"METHYL CHLORIDE", 
+      taxonomy:"Prokaryotes - gene mutation", 
+      date:"19980407",
+      specimen:"Tradescantia species", 
+      result:"Positive"
+    },
+    
+    { docno:"350", 
+      substance:"METHYL IODIDE", 
+      taxonomy:"In vitro mammalian - gene mutation", 
+      date:"19920531",
+      specimen:"Syrian hamster embryo (SHE) cells", 
+      result:"Positive"
+    },
+    
+    { docno:"353", 
+      substance:"ETHYL BROMIDE", 
+      taxonomy:"Insects - gene mutation", 
+      date:"19920531",
+      specimen:"Drosophila melanogaster", 
+      result:"No conclusion"
+    },
+    
+    { docno:"355", 
+      substance:"VINYL CHLORIDE", 
+      taxonomy:"Prokaryotes - gene mutation", 
+      date:"19950817",
+      specimen:"Human lymphocytes or leukocytes", 
+      result:"Positive"
+    },
+    
+    { docno:"359", 
+      substance:"ACETALDEHYDE", 
+      taxonomy:"Prokaryotes - other genotoxic effects", 
+      date:"19980408",
+      specimen:"Escherichia coli polA (W3119 vs P3478)", 
+      result:"Positive"
+    },
+    
+    { docno:"360", 
+      substance:"METHYLENE CHLORIDE", 
+      taxonomy:"Prokaryotes - gene mutation", 
+      date:"19980408",
+      specimen:"Fischer rat embryo (RLV/1706) cells", 
+      result:"Positive"
+    },
+    
+    { docno:"362", 
+      substance:"FORMAMIDE", 
+      taxonomy:"Plants - chromosome effects", 
+      date:"19920531",
+      specimen:"Fischer rat embryo (RLV/1706) cells", 
+      result:"Negative"
+    },
+    
+    { docno:"363", 
+      substance:"CARBON DISULFIDE", 
+      taxonomy:"In vivo mammalian, sperm morphology - other genotoxic effects", 
+      date:"19920531",
+      specimen:"Human", 
+      result:"Positive"
+    },
+    
+    { docno:"365", 
+      substance:"ETHYLENE OXIDE", 
+      taxonomy:"Prokaryotes - gene mutation", 
+      date:"19980408",
+      specimen:"Rodents", 
+      result:"Positive"
+    },
+    
+    { docno:"366", 
+      substance:"BROMOFORM", 
+      taxonomy:"$null$", 
+      date:"19980408",
+      specimen:"", 
+      result:""
+    },
+    
+    { docno:"368", 
+      substance:"BROMODICHLOROMETHANE", 
+      taxonomy:"Prokaryotes - gene mutation", 
+      date:"19980408",
+      specimen:"Saccharomyces cerevisiae", 
+      result:"Negative"
+    },
+    
+    { docno:"370", 
+      substance:"2-CHLOROPROPANE", 
+      taxonomy:"Prokaryotes - gene mutation", 
+      date:"19950406",
+      specimen:"Saccharomyces cerevisiae", 
+      result:"Negative"
+    },
+    
+    { docno:"372", 
+      substance:"VINYLIDENE CHLORIDE", 
+      taxonomy:"Prokaryotes - gene mutation", 
+      date:"19950406",
+      specimen:"Rodents", 
+      result:"Negative"
+    },
+    
+    { docno:"374", 
+      substance:"ETHYLIDENE FLUORIDE", 
+      taxonomy:"Insects - gene mutation", 
+      date:"19920531",
+      specimen:"Drosophila melanogaster", 
+      result:"No conclusion"
+    },
+    
+    { docno:"376", 
+      substance:"CHLORODIFLUOROMETHANE", 
+      taxonomy:"Plants - gene mutation", 
+      date:"19920531",
+      specimen:"Tradescantia species", 
+      result:"Positive"
+    },
+    
+    { docno:"377", 
+      substance:"FLUOROFORM", 
+      taxonomy:"Insects - gene mutation", 
+      date:"19920531",
+      specimen:"Drosophila melanogaster", 
+      result:"No conclusion"
+    },
+    
+    { docno:"380", 
+      substance:"NITROMETHANE", 
+      taxonomy:"In vivo mammalian somatic cells - chromosome effects", 
+      date:"19920531",
+      specimen:"", 
+      result:""
+    },
+    
+    { docno:"381", 
+      substance:"PROPYLENIMINE", 
+      taxonomy:"Prokaryotes - gene mutation", 
+      date:"19950407",
+      specimen:"Mouse (BALB/c-3T3) cells", 
+      result:"Positive"
+    },
+    
+    { docno:"382", 
+      substance:"PROPYLENE OXIDE", 
+      taxonomy:"Lower eukaryotes - gene mutation", 
+      date:"19950803",
+      specimen:"Syrian hamster embryo (SA7/SHE) cells", 
+      result:"Positive"
+    },
+    
+    { docno:"383", 
+      substance:"CACODYLIC ACID", 
+      taxonomy:"Prokaryotes - gene mutation", 
+      date:"19950406",
+      specimen:"Bacillus subtilis (H17 vs M45)", 
+      result:"No conclusion"
+    },
+    
+    { docno:"385", 
+      substance:"TERT-BUTANOL", 
+      taxonomy:"Lower eukaryotes - gene mutation", 
+      date:"19920531",
+      specimen:"Neurospora crassa", 
+      result:"Negative"
+    },
+    
+    { docno:"387", 
+      substance:"DICHLORODIFLUOROMETHANE", 
+      taxonomy:"Plants - gene mutation", 
+      date:"19920531",
+      specimen:"Tradescantia species", 
+      result:"Negative"
+    },
+    
+    { docno:"389", 
+      substance:"METHANESULFONIC ACID", 
+      taxonomy:"Insects - gene mutation", 
+      date:"19920531",
+      specimen:"Escherichia coli polA (W3119 vs P3478)", 
+      result:"No conclusion"
+    },
+    
+    { docno:"391", 
+      substance:"2,2,2-TRIBROMOETHANOL", 
+      taxonomy:"In vivo mammalian germ cells - chromosome effects", 
+      date:"19910909",
+      specimen:"Rodents", 
+      result:"Negative"
+    },
+    
+    { docno:"395", 
+      substance:"2,2,2-TRIFLUOROETHANOL", 
+      taxonomy:"Prokaryotes - gene mutation", 
+      date:"19950406",
+      specimen:"Salmonella typhimurium (one or more of the five standard strains: TA98, TA100, TA1535, TA1537, and TA1538)", 
+      result:"No conclusion"
+    },
+    
+    { docno:"396", 
+      substance:"T-BUTYL HYDROPEROXIDE", 
+      taxonomy:"Lower eukaryotes - gene mutation", 
+      date:"19920531",
+      specimen:"Neurospora crassa", 
+      result:"Positive"
+    },
+    
+    { docno:"398", 
+      substance:"DALAPON", 
+      taxonomy:"Plants - chromosome effects", 
+      date:"19920531",
+      specimen:"Allium cepa", 
+      result:"Positive"
+    },
+    
+    { docno:"401", 
+      substance:"TRICHLOROACETIC ACID", 
+      taxonomy:"Prokaryotes - gene mutation", 
+      date:"19950406",
+      specimen:"Vicia faba", 
+      result:"Positive"
+    },
+    
+    { docno:"402", 
+      substance:"TRIFLUOROACETIC ACID", 
+      taxonomy:"Prokaryotes - gene mutation", 
+      date:"19950406",
+      specimen:"Salmonella typhimurium (one or more of the five standard strains: TA98, TA100, TA1535, TA1537, and TA1538)", 
+      result:"No conclusion"
+    },
+    
+    { docno:"404", 
+      substance:"METHOXYFLURANE", 
+      taxonomy:"Prokaryotes - gene mutation", 
+      date:"19980407",
+      specimen:"Mouse", 
+      result:"Negative"
+    },
+    
+    { docno:"405", 
+      substance:"FLUOXYMESTERONE", 
+      taxonomy:"In vivo mammalian, sperm morphology - other genotoxic effects", 
+      date:"19910822",
+      specimen:"Human", 
+      result:"No conclusion"
+    },
+    
+    { docno:"406", 
+      substance:"HEPTACHLOR", 
+      taxonomy:"Plants - gene mutation", 
+      date:"19920531",
+      specimen:"Zea mays (corn)", 
+      result:"Positive"
+    },
+    
+    { docno:"407", 
+      substance:"BROMTHYMOL BLUE", 
+      taxonomy:"Prokaryotes - other genotoxic effects", 
+      date:"19910822",
+      specimen:"Bacillus subtilis (H17 vs M45)", 
+      result:"No conclusion"
+    },
+    
+    { docno:"408", 
+      substance:"BROMCRESOL GREEN", 
+      taxonomy:"Prokaryotes - gene mutation", 
+      date:"19950406",
+      specimen:"Bacillus subtilis (H17 vs M45T)", 
+      result:"No conclusion"
+    },
+    
+    { docno:"409", 
+      substance:"TRIPHENYLTIN HYDROXIDE", 
+      taxonomy:"$null$", 
+      date:"19910822",
+      specimen:"Nonhuman", 
+      result:"Negative"
+    },
+    
+    { docno:"410", 
+      substance:"METHADONE", 
+      taxonomy:"Insects - gene mutation", 
+      date:"19910822",
+      specimen:"Human", 
+      result:"No conclusion"
+    },
+    
+    { docno:"411", 
+      substance:"GIBBERELLIC ACID", 
+      taxonomy:"Prokaryotes - gene mutation", 
+      date:"19950406",
+      specimen:"Salmonella typhimurium (one or more of the five standard strains: TA98, TA100, TA1535, TA1537, and TA1538)", 
+      result:"Negative"
+    },
+    
+    { docno:"412", 
+      substance:"PHENOLPHTHALEIN", 
+      taxonomy:"Prokaryotes - other genotoxic effects", 
+      date:"19910822",
+      specimen:"Bacillus subtilis (H17 vs M45)", 
+      result:"Negative"
+    },
+    
+    { docno:"413", 
+      substance:"GLUTETHIMIDE", 
+      taxonomy:"Insects - chromosome effects", 
+      date:"19910822",
+      specimen:"Drosophila melanogaster", 
+      result:"Negative"
+    },
+    
+    { docno:"417", 
+      substance:"CARBROMAL", 
+      taxonomy:"$null$", 
+      date:"19910822",
+      specimen:"Nonhuman", 
+      result:"Negative"
+    },
+    
+    { docno:"418", 
+      substance:"BICYCLOPENTADIENE", 
+      taxonomy:"Prokaryotes - gene mutation", 
+      date:"19950406",
+      specimen:"Saccharomyces cerevisiae", 
+      result:"Negative"
+    },
+    
+    { docno:"420", 
+      substance:"DIMETHYL SULFATE", 
+      taxonomy:"Prokaryotes - gene mutation", 
+      date:"19950407",
+      specimen:"Aspergillus nidulans", 
+      result:"Positive"
+    },
+    
+    { docno:"421", 
+      substance:"3-SULFOLENE", 
+      taxonomy:"$null$", 
+      date:"19910822",
+      specimen:"Nonhuman", 
+      result:"Negative"
+    },
+    
+    { docno:"424", 
+      substance:"D-QUINIC ACID", 
+      taxonomy:"Prokaryotes - gene mutation", 
+      date:"19950406",
+      specimen:"Salmonella typhimurium (one or more of the five standard strains: TA98, TA100, TA1535, TA1537, and TA1538)", 
+      result:"Negative"
+    },
+    
+    { docno:"425", 
+      substance:"TETRAETHYL LEAD", 
+      taxonomy:"In vitro mammalian - cell transformation, viral enhancement", 
+      date:"19920531",
+      specimen:"Syrian hamster embryo (SA7/SHE) cells", 
+      result:"Positive"
+    },
+    
+    { docno:"427", 
+      substance:"DIOXATHION", 
+      taxonomy:"$null$", 
+      date:"19910822",
+      specimen:"Nonhuman", 
+      result:"Negative"
+    },
+    
+    { docno:"432", 
+      substance:"S,S,S-TRIBUTYL PHOSPHOROTRITHIOATE", 
+      taxonomy:"In vitro mammalian, SCE - other genotoxic effects", 
+      date:"19950803",
+      specimen:"", 
+      result:""
+    },
+    
+    { docno:"434", 
+      substance:"MENAZON", 
+      taxonomy:"Plants - chromosome effects", 
+      date:"19910822",
+      specimen:"Hordeum vulgare (barley)", 
+      result:"Negative"
+    },
+    
+    { docno:"439", 
+      substance:"PROPYLENE DIBROMIDE", 
+      taxonomy:"Insects - gene mutation", 
+      date:"19920531",
+      specimen:"Drosophila melanogaster", 
+      result:"Positive"
+    },
+    
+    { docno:"440", 
+      substance:"SEC-BUTYL BROMIDE", 
+      taxonomy:"Prokaryotes - other genotoxic effects", 
+      date:"19920531",
+      specimen:"Escherichia coli polA (W3119 vs P3478)", 
+      result:"No conclusion"
+    },
+    
+    { docno:"441", 
+      substance:"ISOBUTYL BROMIDE", 
+      taxonomy:"Prokaryotes - other genotoxic effects", 
+      date:"19920531",
+      specimen:"Escherichia coli polA (W3119 vs P3478)", 
+      result:"No conclusion"
+    },
+    
+    { docno:"448", 
+      substance:"PROPYLENE CHLORIDE", 
+      taxonomy:"Prokaryotes - gene mutation", 
+      date:"19950406",
+      specimen:"Salmonella typhimurium (one or more of the five standard strains: TA98, TA100, TA1535, TA1537, and TA1538)", 
+      result:"Positive"
+    },
+    
+    { docno:"449", 
+      substance:"2,3-DICHLORO-1-PROPENE", 
+      taxonomy:"Prokaryotes - gene mutation", 
+      date:"19950406",
+      specimen:"Salmonella typhimurium (one or more of the five standard strains: TA98, TA100, TA1535, TA1537, and TA1538)", 
+      result:"Positive"
+    },
+    
+    { docno:"451", 
+      substance:"METHYL ETHYL KETONE", 
+      taxonomy:"In vivo mammalian somatic cells - chromosome effects", 
+      date:"19920531",
+      specimen:"Bacillus subtilis (H17 vs M45)", 
+      result:"No conclusion"
+    },
+    
+    { docno:"453", 
+      substance:"CHLOROACETONE", 
+      taxonomy:"Insects - gene mutation", 
+      date:"19920531",
+      specimen:"Drosophila melanogaster", 
+      result:"Positive"
+    },
+    
+    { docno:"455", 
+      substance:"METHYLGLYOXAL", 
+      taxonomy:"$null$", 
+      date:"19980407",
+      specimen:"", 
+      result:""
+    },
+    
+    { docno:"457", 
+      substance:"TRICHLOROETHYLENE", 
+      taxonomy:"Lower eukaryotes - gene mutation", 
+      date:"19980408",
+      specimen:"Fischer rat embryo (RLV/1706) cells", 
+      result:"Positive"
+    },
+    
+    { docno:"459", 
+      substance:"ACRYLAMIDE", 
+      taxonomy:"In vivo mammalian somatic cells - chromosome effects", 
+      date:"19980408",
+      specimen:"Nonhuman bone marrow", 
+      result:"Negative"
+    },
+    
+    { docno:"460", 
+      substance:"2-CHLOROACETAMIDE", 
+      taxonomy:"In vitro mammalian - cell transformation, viral enhancement", 
+      date:"19910822",
+      specimen:"Syrian hamster embryo (SA7/SHE) cells", 
+      result:"Positive"
+    },
+    
+    { docno:"461", 
+      substance:"PROPIONIC ACID", 
+      taxonomy:"In vivo mammalian somatic cells - chromosome effects", 
+      date:"19920531",
+      specimen:"", 
+      result:""
+    },
+    
+    { docno:"463", 
+      substance:"CHLOROACETIC ACID", 
+      taxonomy:"Prokaryotes - gene mutation", 
+      date:"19950406",
+      specimen:"Salmonella typhimurium (one or more of the five standard strains: TA98, TA100, TA1535, TA1537, and TA1538)", 
+      result:"Negative"
+    },
+    
+    { docno:"466", 
+      substance:"NITROETHANE", 
+      taxonomy:"In vivo mammalian somatic cells - chromosome effects", 
+      date:"19920531",
+      specimen:"Mammalian polychromatic erythrocytes", 
+      result:"No conclusion"
+    },
+    
+    { docno:"467", 
+      substance:"1,1,2,2-TETRABROMOETHANE", 
+      taxonomy:"Prokaryotes - other genotoxic effects", 
+      date:"19920531",
+      specimen:"Escherichia coli polA (W3119 vs P3478)", 
+      result:"Positive"
+    },
+    
+    { docno:"468", 
+      substance:"1,1,2,2-TETRACHLOROETHANE", 
+      taxonomy:"Lower eukaryotes - gene mutation", 
+      date:"19920531",
+      specimen:"Escherichia coli polA (W3119 vs P3478)", 
+      result:"Positive"
+    },
+    
+    { docno:"472", 
+      substance:"DIMETHYLCARBAMOYL CHLORIDE", 
+      taxonomy:"Prokaryotes - gene mutation", 
+      date:"19980407",
+      specimen:"Syrian hamster embryo (SHE) cells", 
+      result:"Positive"
+    },
+    
+    { docno:"473", 
+      substance:"2-NITROPROPANE", 
+      taxonomy:"In vivo mammalian somatic cells - chromosome effects", 
+      date:"19920531",
+      specimen:"Mammalian polychromatic erythrocytes", 
+      result:"No conclusion"
+    },
+    
+    { docno:"477", 
+      substance:"VITAMIN A PALMITATE", 
+      taxonomy:"In vitro mammalian, SCE - other genotoxic effects", 
+      date:"19920602",
+      specimen:"Human", 
+      result:"Positive"
+    },
+    
+    { docno:"481", 
+      substance:"N-METHYL-N-NITROSO-P-TOLUENESULFONAMIDE", 
+      taxonomy:"Plants - gene mutation", 
+      date:"19910822",
+      specimen:"Arabidopsis species", 
+      result:"Positive"
+    },
+    
+    { docno:"483", 
+      substance:"CUMENE HYDROPEROXIDE", 
+      taxonomy:"Lower eukaryotes - other genotoxic effects", 
+      date:"19910822",
+      specimen:"Saccharomyces cerevisiae", 
+      result:"Negative"
+    },
+    
+    { docno:"484", 
+      substance:"ETHYL P-TOLUENESULFONATE", 
+      taxonomy:"Prokaryotes - gene mutation", 
+      date:"19950406",
+      specimen:"Syrian hamster embryo (SHE) cells", 
+      result:"Positive"
+    },
+    
+    { docno:"490", 
+      substance:"SACCHARIN", 
+      taxonomy:"Prokaryotes - gene mutation", 
+      date:"19950803",
+      specimen:"Salmonella typhimurium", 
+      result:"Positive"
+    },
+    
+    { docno:"499", 
+      substance:"RHODAMINE B", 
+      taxonomy:"Prokaryotes - gene mutation", 
+      date:"19950803",
+      specimen:"Bacillus subtilis (H17 vs M45T)", 
+      result:"No conclusion"
+    },
+    
+    { docno:"500", 
+      substance:"PHENOSAFRANIN", 
+      taxonomy:"Insects - gene mutation", 
+      date:"19910822",
+      specimen:"Drosophila melanogaster", 
+      result:"No conclusion"
+    },
+    
+    { docno:"501", 
+      substance:"KHELLIN", 
+      taxonomy:"In vitro mammalian, SCE - other genotoxic effects", 
+      date:"19920602",
+      specimen:"Human", 
+      result:"No conclusion"
+    },
+    
+    { docno:"502", 
+      substance:"C.I. DISPERSE ORANGE 11", 
+      taxonomy:"$null$", 
+      date:"19910822",
+      specimen:"Nonhuman", 
+      result:"Positive"
+    },
+    
+    { docno:"503", 
+      substance:"QUINTOZENE", 
+      taxonomy:"Prokaryotes - gene mutation", 
+      date:"19910822",
+      specimen:"Saccharomyces cerevisiae", 
+      result:"Negative"
+    },
+    
+    { docno:"504", 
+      substance:"4-PYRIDOXIC ACID", 
+      taxonomy:"IN VITRO MAMMALIAN, SCE - OTHER GENOTOXIC EFFECTS", 
+      date:"19980407",
+      specimen:"", 
+      result:""
+    },
+    
+    { docno:"506", 
+      substance:"P,P'-DDA", 
+      taxonomy:"Prokaryotes - gene mutation", 
+      date:"19910822",
+      specimen:"Nonhuman", 
+      result:"Negative"
+    },
+    
+    { docno:"507", 
+      substance:"AMINOANTIPYRIN", 
+      taxonomy:"Prokaryotes - gene mutation", 
+      date:"19950406",
+      specimen:"Salmonella typhimurium (one or more of the five standard strains: TA98, TA100, TA1535, TA1537, and TA1538)", 
+      result:"Negative"
+    },
+    
+    { docno:"511", 
+      substance:"ACENAPHTHENE", 
+      taxonomy:"Insects - chromosome effects", 
+      date:"19920602",
+      specimen:"Drosophila melanogaster", 
+      result:"No conclusion"
+    },
+    
+    { docno:"513", 
+      substance:"THEOBROMINE", 
+      taxonomy:"Plants - chromosome effects", 
+      date:"19950803",
+      specimen:"Allium cepa", 
+      result:"Negative"
+    },
+    
+    { docno:"516", 
+      substance:"ROTENONE", 
+      taxonomy:"In vivo mammalian somatic cells - chromosome effects", 
+      date:"19920602",
+      specimen:"", 
+      result:""
+    },
+    
+    { docno:"518", 
+      substance:"QUINACRINE", 
+      taxonomy:"Prokaryotes - other genotoxic effects", 
+      date:"19980408",
+      specimen:"Escherichia coli polA (W3119 vs P3478)", 
+      result:"Positive"
+    },
+    
+    { docno:"519", 
+      substance:"PHENANTHRENEQUINONE", 
+      taxonomy:"Plants - chromosome effects", 
+      date:"19910822",
+      specimen:"Allium cepa", 
+      result:"Negative"
+    },
+    
+    { docno:"527", 
+      substance:"2,2'-DICHLOROBENZIDINE", 
+      taxonomy:"In vitro mammalian, UDS - other genotoxic effects", 
+      date:"19910822",
+      specimen:"Human diploid fibroblasts", 
+      result:"Positive"
+    },
+    
+    { docno:"529", 
+      substance:"DIBUTYL PHTHALATE", 
+      taxonomy:"Lower eukaryotes - gene mutation", 
+      date:"19980407",
+      specimen:"Nonhuman", 
+      result:"No conclusion"
+    },
+    
+    { docno:"531", 
+      substance:"4-AMINO-1-NAPHTHALENESULFONIC ACID", 
+      taxonomy:"Prokaryotes - gene mutation", 
+      date:"19950406",
+      specimen:"Salmonella typhimurium (one or more of the five standard strains: TA98, TA100, TA1535, TA1537, and TA1538)", 
+      result:"No conclusion"
+    },
+    
+    { docno:"532", 
+      substance:"8-HYDROXY-5-QUINOLINESULFONIC ACID", 
+      taxonomy:"Prokaryotes - gene mutation", 
+      date:"19950406",
+      specimen:"Salmonella typhimurium (one or more of the five standard strains: TA98, TA100, TA1535, TA1537, and TA1538)", 
+      result:"Positive"
+    },
+    
+    { docno:"533", 
+      substance:"PERAZINE", 
+      taxonomy:"In vitro mammalian, SCE - other genotoxic effects", 
+      date:"19950803",
+      specimen:"", 
+      result:""
+    },
+    
+    { docno:"534", 
+      substance:"DIQUAT DIBROMIDE", 
+      taxonomy:"Insects - gene mutation", 
+      date:"19950627",
+      specimen:"Drosophila melanogaster", 
+      result:"No conclusion"
+    },
+    
+    { docno:"535", 
+      substance:"PHENANTHRENE", 
+      taxonomy:"Prokaryotes - gene mutation", 
+      date:"19980407",
+      specimen:"Mouse (BALB/c-3T3) cells", 
+      result:"Negative"
+    },
+    
+    { docno:"536", 
+      substance:"BETA-NAPHTHOQUINOLINE", 
+      taxonomy:"Prokaryotes - gene mutation", 
+      date:"19950609",
+      specimen:"Salmonella typhimurium (one or more of the five standard strains: TA98, TA100, TA1535, TA1537, and TA1538)", 
+      result:"Positive"
+    },
+    
+    { docno:"539", 
+      substance:"PHTHALIC ANHYDRIDE", 
+      taxonomy:"$null$", 
+      date:"19910822",
+      specimen:"Nonhuman", 
+      result:"Negative"
+    },
+    
+    { docno:"541", 
+      substance:"6-METHOXY-8-NITROQUINOLINE", 
+      taxonomy:"Prokaryotes - gene mutation", 
+      date:"19950406",
+      specimen:"Salmonella typhimurium (one or more of the five standard strains: TA98, TA100, TA1535, TA1537, and TA1538)", 
+      result:"Positive"
+    },
+    
+    { docno:"542", 
+      substance:"SCARLET RED", 
+      taxonomy:"Prokaryotes - gene mutation", 
+      date:"19950406",
+      specimen:"Syrian hamster embryo (SA7/SHE) cells", 
+      result:"Positive"
+    },
+    
+    { docno:"543", 
+      substance:"FD AND C YELLOW NO. 3", 
+      taxonomy:"Prokaryotes - gene mutation", 
+      date:"19950406",
+      specimen:"Salmonella typhimurium (one or more of the five standard strains: TA98, TA100, TA1535, TA1537, and TA1538)", 
+      result:"No conclusion"
+    },
+    
+    { docno:"544", 
+      substance:"C.I. SOLVENT RED 23", 
+      taxonomy:"Prokaryotes - other genotoxic effects", 
+      date:"19910822",
+      specimen:"Bacillus subtilis (H17 vs M45T)", 
+      result:"No conclusion"
+    },
+    
+    { docno:"547", 
+      substance:"2-METHOXYBIPHENYL", 
+      taxonomy:"Prokaryotes - gene mutation", 
+      date:"19950406",
+      specimen:"Saccharomyces cerevisiae", 
+      result:"Negative"
+    },
+    
+    { docno:"549", 
+      substance:"DIPHENYLNITROSAMINE", 
+      taxonomy:"Prokaryotes - gene mutation", 
+      date:"19980408",
+      specimen:"Mouse (BALB/c-3T3) cells", 
+      result:"Negative"
+    },
+    
+    { docno:"550", 
+      substance:"AZINPHOS-METHYL", 
+      taxonomy:"Prokaryotes - gene mutation", 
+      date:"19980407",
+      specimen:"Bacillus subtilis (H17 vs M45)", 
+      result:"No conclusion"
+    },
+    
+    { docno:"551", 
+      substance:"1-NAPHTHONITRILE", 
+      taxonomy:"Plants - chromosome effects", 
+      date:"19910822",
+      specimen:"Allium cepa", 
+      result:"Positive"
+    },
+    
+    { docno:"554", 
+      substance:"1-NITRONAPHTHALENE", 
+      taxonomy:"$null$", 
+      date:"19910822",
+      specimen:"Nonhuman", 
+      result:"Negative"
+    },
+    
+    { docno:"555", 
+      substance:"FLUORENE", 
+      taxonomy:"Prokaryotes - gene mutation", 
+      date:"19980407",
+      specimen:"Salmonella typhimurium (one or more of the five standard strains: TA98, TA100, TA1535, TA1537, and TA1538)", 
+      result:"Negative"
+    },
+    
+    { docno:"560", 
+      substance:"1-(1-NAPHTHYL)-2-THIOUREA", 
+      taxonomy:"In vitro mammalian - cell transformation", 
+      date:"19910822",
+      specimen:"Syrian hamster embryo (SHE) cells", 
+      result:"Positive"
+    },
+    
+    { docno:"561", 
+      substance:"2,4-DIHYDROXYQUINOLINE", 
+      taxonomy:"Prokaryotes - gene mutation", 
+      date:"19950406",
+      specimen:"Salmonella typhimurium (one or more of the five standard strains: TA98, TA100, TA1535, TA1537, and TA1538)", 
+      result:"Positive"
+    },
+    
+    { docno:"562", 
+      substance:"4,7-DICHLOROQUINOLINE", 
+      taxonomy:"Prokaryotes - gene mutation", 
+      date:"19950406",
+      specimen:"Salmonella typhimurium (one or more of the five standard strains: TA98, TA100, TA1535, TA1537, and TA1538)", 
+      result:"No conclusion"
+    },
+    
+    { docno:"563", 
+      substance:"TRIBROMSALAN", 
+      taxonomy:"In vivo mammalian somatic cells - chromosome effects", 
+      date:"19910822",
+      specimen:"", 
+      result:""
+    },
+    
+    { docno:"565", 
+      substance:"CINNAMYL ANTHRANILATE", 
+      taxonomy:"Insects - gene mutation", 
+      date:"19910822",
+      specimen:"Drosophila melanogaster", 
+      result:"Negative"
+    },
+    
+    { docno:"569", 
+      substance:"1,2,3-TRICHLOROBENZENE", 
+      taxonomy:"In vivo mammalian somatic cells - chromosome effects", 
+      date:"19910822",
+      specimen:"", 
+      result:""
+    },
+    
+    { docno:"571", 
+      substance:"2,6-DICHLOROPHENOL", 
+      taxonomy:"Plants - chromosome effects", 
+      date:"19910822",
+      specimen:"Allium cepa", 
+      result:"Negative"
+    },
+    
+    { docno:"572", 
+      substance:"PYROGALLOL", 
+      taxonomy:"Plants - chromosome effects", 
+      date:"19910822",
+      specimen:"Allium cepa", 
+      result:"Positive"
+    },
+    
+    { docno:"574", 
+      substance:"MANNITOL", 
+      taxonomy:"Prokaryotes - gene mutation", 
+      date:"19910822",
+      specimen:"Escherichia coli WP2 UVRA", 
+      result:"Negative"
+    },
+    
+    { docno:"577", 
+      substance:"PENTACHLOROPHENOL", 
+      taxonomy:"Prokaryotes - gene mutation", 
+      date:"19950406",
+      specimen:"Syrian hamster embryo (SA7/SHE) cells", 
+      result:"Positive"
+    },
+    
+    { docno:"579", 
+      substance:"XYLITOL", 
+      taxonomy:"Prokaryotes - gene mutation", 
+      date:"19950803",
+      specimen:"Salmonella typhimurium", 
+      result:"Negative"
+    },
+    
+    { docno:"580", 
+      substance:"2,4,6-TRICHLOROPHENOL", 
+      taxonomy:"Prokaryotes - gene mutation", 
+      date:"19950406",
+      specimen:"Mouse", 
+      result:"Negative"
+    },
+    
+    { docno:"582", 
+      substance:"O-TOLUENESULFONAMIDE", 
+      taxonomy:"Prokaryotes - gene mutation", 
+      date:"19950406",
+      specimen:"Drosophila melanogaster", 
+      result:"No conclusion"
+    },
+    
+    { docno:"588", 
+      substance:"2-NITROPHENOL", 
+      taxonomy:"Plants - chromosome effects", 
+      date:"19910822",
+      specimen:"Allium cepa", 
+      result:"Negative"
+    },
+    
+    { docno:"589", 
+      substance:"2,3,5-TRIIODOBENZOIC ACID", 
+      taxonomy:"Plants - chromosome effects", 
+      date:"19910822",
+      specimen:"Hordeum vulgare (barley)", 
+      result:"Positive"
+    },
+    
+    { docno:"590", 
+      substance:"DINOSEB", 
+      taxonomy:"Prokaryotes - gene mutation", 
+      date:"19950406",
+      specimen:"Bacillus subtilis (H17 vs M45)", 
+      result:"Positive"
+    },
+    
+    { docno:"592", 
+      substance:"PICRIC ACID", 
+      taxonomy:"Insects - gene mutation", 
+      date:"19910822",
+      specimen:"Allium cepa", 
+      result:"Negative"
+    },
+    
+    { docno:"593", 
+      substance:"PHTHALAMIDE", 
+      taxonomy:"$null$", 
+      date:"19910822",
+      specimen:"Nonhuman", 
+      result:"Negative"
+    },
+    
+    { docno:"594", 
+      substance:"1-PHENYL-3-METHYL-5-PYRAZOLONE", 
+      taxonomy:"$null$", 
+      date:"19910822",
+      specimen:"Nonhuman", 
+      result:"Negative"
+    },
+    
+    { docno:"601", 
+      substance:"SALICYLHYDROXAMIC ACID", 
+      taxonomy:"Prokaryotes - gene mutation", 
+      date:"19950406",
+      specimen:"Salmonella typhimurium (one or more of the five standard strains: TA98, TA100, TA1535, TA1537, and TA1538)", 
+      result:"Positive"
+    },
+    
+    { docno:"602", 
+      substance:"THYMOL", 
+      taxonomy:"Insects - gene mutation", 
+      date:"19910822",
+      specimen:"Allium cepa", 
+      result:"Negative"
+    },
+    
+    { docno:"604", 
+      substance:"O-ANISIDINE", 
+      taxonomy:"Prokaryotes - gene mutation", 
+      date:"19950406",
+      specimen:"Salmonella typhimurium (one or more of the five standard strains: TA98, TA100, TA1535, TA1537, and TA1538)", 
+      result:"No conclusion"
+    },
+    
+    { docno:"605", 
+      substance:"GUAIACOL", 
+      taxonomy:"Prokaryotes - gene mutation", 
+      date:"19980407",
+      specimen:"Allium cepa", 
+      result:"Positive"
+    },
+    
+    { docno:"606", 
+      substance:"1-NAPHTHOL", 
+      taxonomy:"Prokaryotes - gene mutation", 
+      date:"19950406",
+      specimen:"Mammalian polychromatic erythrocytes", 
+      result:"No conclusion"
+    },
+    
+    { docno:"607", 
+      substance:"RHAMNETIN", 
+      taxonomy:"In vivo mammalian somatic cells - chromosome effects", 
+      date:"19910822",
+      specimen:"", 
+      result:""
+    },
+    
+    { docno:"608", 
+      substance:"N-PHENYL-1-NAPHTHYLAMINE", 
+      taxonomy:"Prokaryotes - gene mutation", 
+      date:"19950406",
+      specimen:"Rodents", 
+      result:"No conclusion"
+    },
+    
+    { docno:"609", 
+      substance:"HYMECROMONE", 
+      taxonomy:"Plants - chromosome effects", 
+      date:"19910822",
+      specimen:"Allium cepa", 
+      result:"Positive"
+    },
+    
+    { docno:"610", 
+      substance:"2-AMINOBIPHENYL", 
+      taxonomy:"Prokaryotes - gene mutation", 
+      date:"19980407",
+      specimen:"Salmonella typhimurium", 
+      result:"Negative"
+    },
+    
+    { docno:"613", 
+      substance:"AMINACRINE", 
+      taxonomy:"Prokaryotes - gene mutation", 
+      date:"19980407",
+      specimen:"Human diploid fibroblasts", 
+      result:"Negative"
+    },
+    
+    { docno:"614", 
+      substance:"PENICILLIC ACID", 
+      taxonomy:"Prokaryotes - gene mutation", 
+      date:"19950406",
+      specimen:"Bacillus subtilis (H17 vs M45)", 
+      result:"Positive"
+    },
+    
+    { docno:"617", 
+      substance:"MICHLER'S KETONE", 
+      taxonomy:"In vitro mammalian - cell transformation, viral enhancement", 
+      date:"19910822",
+      specimen:"Fischer rat embryo (RLV/1706) cells", 
+      result:"Positive"
+    },
+    
+    { docno:"621", 
+      substance:"2,6-DIMETHOXYPHENOL", 
+      taxonomy:"$null$", 
+      date:"19980409",
+      specimen:"", 
+      result:""
+    },
+    
+    { docno:"622", 
+      substance:"QUINOXALINE", 
+      taxonomy:"In vivo mammalian, sperm morphology - other genotoxic effects", 
+      date:"19920531",
+      specimen:"Mouse", 
+      result:"Negative"
+    },
+    
+    { docno:"623", 
+      substance:"NAPHTHALENE", 
+      taxonomy:"Prokaryotes - gene mutation", 
+      date:"19950406",
+      specimen:"Mouse embryo (AKR/ME) cells", 
+      result:"Negative"
+    },
+    
+    { docno:"624", 
+      substance:"QUINOLINE", 
+      taxonomy:"Prokaryotes - gene mutation", 
+      date:"19950803",
+      specimen:"Nonhuman", 
+      result:"Negative"
+    },
+    
+    { docno:"625", 
+      substance:"O-NITROANISOLE", 
+      taxonomy:"Prokaryotes - gene mutation", 
+      date:"19950406",
+      specimen:"Salmonella typhimurium (one or more of the five standard strains: TA98, TA100, TA1535, TA1537, and TA1538)", 
+      result:"No conclusion"
+    },
+    
+    { docno:"627", 
+      substance:"ETHOXYQUINE", 
+      taxonomy:"Prokaryotes - gene mutation", 
+      date:"19950406",
+      specimen:"Drosophila melanogaster", 
+      result:"Negative"
+    },
+    
+    { docno:"629", 
+      substance:"2-NAPHTHALENAMINE", 
+      taxonomy:"Prokaryotes - gene mutation", 
+      date:"19980408",
+      specimen:"Mouse (BALB/c-3T3) cells", 
+      result:"Negative"
+    },
+    
+    { docno:"630", 
+      substance:"6-METHYLQUINOLINE", 
+      taxonomy:"Prokaryotes - gene mutation", 
+      date:"19950406",
+      specimen:"Salmonella typhimurium (one or more of the five standard strains: TA98, TA100, TA1535, TA1537, and TA1538)", 
+      result:"Positive"
+    },
+    
+    { docno:"631", 
+      substance:"QUINALDINE", 
+      taxonomy:"Prokaryotes - gene mutation", 
+      date:"19950406",
+      specimen:"Salmonella typhimurium (one or more of the five standard strains: TA98, TA100, TA1535, TA1537, and TA1538)", 
+      result:"Positive"
+    },
+    
+    { docno:"632", 
+      substance:"COUMARIN", 
+      taxonomy:"Plants - chromosome effects", 
+      date:"19910822",
+      specimen:"Allium cepa", 
+      result:"Positive"
+    },
+    
+    { docno:"635", 
+      substance:"METHAPYRILENE", 
+      taxonomy:"In vitro mammalian - gene mutation", 
+      date:"19910822",
+      specimen:"", 
+      result:""
+    },
+    
+    { docno:"639", 
+      substance:"3,3'-DICHLOROBENZIDINE", 
+      taxonomy:"Prokaryotes - gene mutation", 
+      date:"19950406",
+      specimen:"Fischer rat embryo (RLV/1706) cells", 
+      result:"Positive"
+    },
+    
+    { docno:"641", 
+      substance:"C.I.BASIC BLUE 17", 
+      taxonomy:"Prokaryotes - other genotoxic effects", 
+      date:"19910822",
+      specimen:"Bacillus subtilis (H17 vs M45T)", 
+      result:"No conclusion"
+    },
+    
+    { docno:"642", 
+      substance:"PYRONIN Y", 
+      taxonomy:"Insects - gene mutation", 
+      date:"19910822",
+      specimen:"Bacillus subtilis (H17 vs M45)", 
+      result:"Positive"
+    },
+    
+    { docno:"643", 
+      substance:"6-METHYLCOUMARIN", 
+      taxonomy:"Plants - chromosome effects", 
+      date:"19910822",
+      specimen:"Nonhuman", 
+      result:"Positive"
+    },
+    
+    { docno:"644", 
+      substance:"BIPHENYL", 
+      taxonomy:"Lower eukaryotes - other genotoxic effects", 
+      date:"19920531",
+      specimen:"Nonhuman", 
+      result:"Positive"
+    },
+    
+    { docno:"645", 
+      substance:"5-NITROFURFURAL DIACETATE", 
+      taxonomy:"Prokaryotes - gene mutation", 
+      date:"19980407",
+      specimen:"Escherichia coli WP2 UVRA", 
+      result:"Positive"
+    },
+    
+    { docno:"646", 
+      substance:"7-HYDROXY-6-METHOXYCOUMARIN", 
+      taxonomy:"Plants - chromosome effects", 
+      date:"19910822",
+      specimen:"Allium cepa", 
+      result:"Positive"
+    },
+    
+    { docno:"647", 
+      substance:"PROFLAVINE", 
+      taxonomy:"Prokaryotes - gene mutation", 
+      date:"19980407",
+      specimen:"Mouse lymphoma (L5178Y) cells", 
+      result:"Positive"
+    },
+    
+    { docno:"649", 
+      substance:"4-AMINO-1,1'-BIPHENYL", 
+      taxonomy:"Prokaryotes - gene mutation", 
+      date:"19980408",
+      specimen:"Salmonella typhimurium", 
+      result:"Positive"
+    },
+    
+    { docno:"651", 
+      substance:"PHENOTHIAZINE", 
+      taxonomy:"In vitro mammalian - cell transformation, viral enhancement", 
+      date:"19920531",
+      specimen:"Syrian hamster embryo (SA7/SHE) cells", 
+      result:"Positive"
+    },
+    
+    { docno:"653", 
+      substance:"BENZIDINE", 
+      taxonomy:"Prokaryotes - gene mutation", 
+      date:"19950803",
+      specimen:"Syrian hamster embryo (SHE) cells", 
+      result:"Positive"
+    },
+    
+    { docno:"654", 
+      substance:"4-NITRO-1,1'-BIPHENYL", 
+      taxonomy:"Prokaryotes - gene mutation", 
+      date:"19980408",
+      specimen:"Syrian hamster embryo (SHE) cells", 
+      result:"Positive"
+    },
+    
+    { docno:"657", 
+      substance:"QUINALDIC ACID", 
+      taxonomy:"Prokaryotes - gene mutation", 
+      date:"19950406",
+      specimen:"Salmonella typhimurium (one or more of the five standard strains: TA98, TA100, TA1535, TA1537, and TA1538)", 
+      result:"No conclusion"
+    },
+    
+    { docno:"664", 
+      substance:"2-(4-CHLORO-2-METHYLPHENOXY)PROPANOIC ACID", 
+      taxonomy:"Lower eukaryotes - other genotoxic effects", 
+      date:"19910822",
+      specimen:"Saccharomyces cerevisiae", 
+      result:"Positive"
+    },
+    
+    { docno:"665", 
+      substance:"2,4,5-T", 
+      taxonomy:"Prokaryotes - gene mutation", 
+      date:"19910822",
+      specimen:"Nonhuman bone marrow", 
+      result:"Positive"
+    },
+    
+    { docno:"666", 
+      substance:"2,4,5-T BUTYL ESTER", 
+      taxonomy:"Prokaryotes - gene mutation", 
+      date:"19910823",
+      specimen:"Salmonella typhimurium, Serratia marcesens", 
+      result:"No conclusion"
+    },
+    
+    { docno:"668", 
+      substance:"PROPYLPARABEN", 
+      taxonomy:"Prokaryotes - gene mutation", 
+      date:"19950406",
+      specimen:"Salmonella typhimurium (one or more of the five standard strains: TA98, TA100, TA1535, TA1537, and TA1538)", 
+      result:"Negative"
+    },
+    
+    { docno:"669", 
+      substance:"CHLORPROPAMIDE", 
+      taxonomy:"In vivo mammalian somatic cells - chromosome effects", 
+      date:"19980408",
+      specimen:"Mammalian polychromatic erythrocytes", 
+      result:"Positive"
+    },
+    
+    { docno:"671", 
+      substance:"BENZOYL PEROXIDE", 
+      taxonomy:"Prokaryotes - other genotoxic effects", 
+      date:"19910822",
+      specimen:"Escherichia coli polA (W3119 vs P3478)", 
+      result:"No conclusion"
+    },
+    
+    { docno:"673", 
+      substance:"DIHYDROSAFROLE", 
+      taxonomy:"Prokaryotes - gene mutation", 
+      date:"19950406",
+      specimen:"Nonhuman", 
+      result:"Positive"
+    },
+    
+    { docno:"674", 
+      substance:"SAFROLE", 
+      taxonomy:"Prokaryotes - gene mutation", 
+      date:"19950803",
+      specimen:"Syrian hamster embryo (SHE) cells", 
+      result:"Positive"
+    },
+    
+    { docno:"676", 
+      substance:"(4-CHLORO-O-TOLOXY)ACETIC ACID", 
+      taxonomy:"Prokaryotes - gene mutation", 
+      date:"19910822",
+      specimen:"Salmonella typhimurium, Serratia marcesens", 
+      result:"Negative"
+    },
+    
+    { docno:"677", 
+      substance:"2,4-D", 
+      taxonomy:"Prokaryotes - gene mutation", 
+      date:"19980407",
+      specimen:"Nonhuman bone marrow", 
+      result:"Positive"
+    },
+    
+    { docno:"680", 
+      substance:"4-CHLORO-O-TOLYLOXYBUTYRIC ACID", 
+      taxonomy:"Prokaryotes - gene mutation", 
+      date:"19910822",
+      specimen:"Salmonella typhimurium, Serratia marcesens", 
+      result:"Negative"
+    },
+    
+    { docno:"681", 
+      substance:"2,4-DB", 
+      taxonomy:"Prokaryotes - gene mutation", 
+      date:"19950406",
+      specimen:"Human diploid fibroblasts", 
+      result:"Negative"
+    },
+    
+    { docno:"683", 
+      substance:"SULFALLATE", 
+      taxonomy:"Prokaryotes - gene mutation", 
+      date:"19950406",
+      specimen:"Nonhuman", 
+      result:"Positive"
+    },
+    
+    { docno:"688", 
+      substance:"O-XYLENE", 
+      taxonomy:"In vivo mammalian somatic cells - chromosome effects", 
+      date:"19920531",
+      specimen:"", 
+      result:""
+    },
+    
+    { docno:"689", 
+      substance:"O-CRESOL", 
+      taxonomy:"Plants - chromosome effects", 
+      date:"19980408",
+      specimen:"Allium cepa", 
+      result:"No conclusion"
+    },
+    
+    { docno:"690", 
+      substance:"1,2-DICHLOROBENZENE", 
+      taxonomy:"In vivo mammalian somatic cells - chromosome effects", 
+      date:"19910822",
+      specimen:"", 
+      result:""
+    },
+    
+    { docno:"691", 
+      substance:"2-CHLOROANILINE", 
+      taxonomy:"Prokaryotes - other genotoxic effects", 
+      date:"19910822",
+      specimen:"Syrian hamster embryo (SHE) cells", 
+      result:"Negative"
+    },
+    
+    { docno:"692", 
+      substance:"O-TOLUIDINE", 
+      taxonomy:"Prokaryotes - other genotoxic effects", 
+      date:"19980408",
+      specimen:"Fischer rat embryo (RLV/1706) cells", 
+      result:"Positive"
+    },
+    
+    { docno:"693", 
+      substance:"O-PHENYLENEDIAMINE", 
+      taxonomy:"Lower eukaryotes - chromosome effects", 
+      date:"19910909",
+      specimen:"Rodents", 
+      result:"Negative"
+    },
+    
+    { docno:"694", 
+      substance:"O-AMINOPHENOL", 
+      taxonomy:"Prokaryotes - gene mutation", 
+      date:"19980409",
+      specimen:"", 
+      result:""
+    },
+    
+    { docno:"698", 
+      substance:"P-CHLORO-O-TOLUIDINE", 
+      taxonomy:"$null$", 
+      date:"19910822",
+      specimen:"Nonhuman", 
+      result:"Positive"
+    },
+    
+    { docno:"699", 
+      substance:"2,5-DIAMINOTOLUENE", 
+      taxonomy:"In vivo mammalian germ cells - chromosome effects", 
+      date:"19910909",
+      specimen:"Rodents", 
+      result:"Negative"
+    },
+    
+    { docno:"700", 
+      substance:"3-CHLORO-P-TOLUIDINE", 
+      taxonomy:"$null$", 
+      date:"19910822",
+      specimen:"Nonhuman", 
+      result:"Negative"
+    },
+    
+    { docno:"701", 
+      substance:"3,4-DICHLOROANILINE", 
+      taxonomy:"Lower eukaryotes - gene mutation", 
+      date:"19910822",
+      specimen:"Aspergillus nidulans", 
+      result:"Positive"
+    },
+    
+    { docno:"704", 
+      substance:"5-CHLORO-O-TOLUIDINE", 
+      taxonomy:"In vivo mammalian, sperm morphology - other genotoxic effects", 
+      date:"19910822",
+      specimen:"Mouse", 
+      result:"Negative"
+    },
+    
+    { docno:"705", 
+      substance:"2,4-DIAMINOTOLUENE", 
+      taxonomy:"Prokaryotes - gene mutation", 
+      date:"19980407",
+      specimen:"Syrian hamster embryo (SHE) cells", 
+      result:"No conclusion"
+    },
+    
+    { docno:"706", 
+      substance:"4-CHLORO-O-PHENYLENEDIAMINE", 
+      taxonomy:"$null$", 
+      date:"19910822",
+      specimen:"Nonhuman", 
+      result:"Positive"
+    },
+    
+    { docno:"709", 
+      substance:"4-CHLORORESORCINOL", 
+      taxonomy:"Lower eukaryotes - chromosome effects", 
+      date:"19910822",
+      specimen:"Mammalian polychromatic erythrocytes", 
+      result:"No conclusion"
+    },
+    
+    { docno:"712", 
+      substance:"STYRENE OXIDE", 
+      taxonomy:"Prokaryotes - gene mutation", 
+      date:"19950803",
+      specimen:"Rodents", 
+      result:"Negative"
+    },
+    
+    { docno:"713", 
+      substance:"1,2,3-TRIBROMOPROPANE", 
+      taxonomy:"Prokaryotes - gene mutation", 
+      date:"19950406",
+      specimen:"Salmonella typhimurium (one or more of the five standard strains: TA98, TA100, TA1535, TA1537, and TA1538)", 
+      result:"Positive"
+    },
+    
+    { docno:"714", 
+      substance:"1,2-DIBROMO-3-CHLOROPROPANE", 
+      taxonomy:"Prokaryotes - gene mutation", 
+      date:"19980408",
+      specimen:"Salmonella typhimurium", 
+      result:"Negative"
+    },
+    
+    { docno:"715", 
+      substance:"2,3-DIBROMO-1-PROPANOL", 
+      taxonomy:"Prokaryotes - gene mutation", 
+      date:"19950406",
+      specimen:"Salmonella typhimurium (one or more of the five standard strains: TA98, TA100, TA1535, TA1537, and TA1538)", 
+      result:"Positive"
+    },
+    
+    { docno:"717", 
+      substance:"1,3-DICHLORO-2-PROPANOL", 
+      taxonomy:"Prokaryotes - gene mutation", 
+      date:"19950406",
+      specimen:"Salmonella typhimurium (one or more of the five standard strains: TA98, TA100, TA1535, TA1537, and TA1538)", 
+      result:"Positive"
+    },
+    
+    { docno:"718", 
+      substance:"3-CHLORO-1,2-PROPANEDIOL", 
+      taxonomy:"In vivo mammalian germ cells - chromosome effects", 
+      date:"19910909",
+      specimen:"Rodents", 
+      result:"Negative"
+    },
+    
+    { docno:"722", 
+      substance:"METHYL ACRYLATE", 
+      taxonomy:"In vivo mammalian somatic cells - chromosome effects", 
+      date:"19920531",
+      specimen:"", 
+      result:""
+    },
+    
+    { docno:"723", 
+      substance:"N,N'-ETHYLENETHIOUREA", 
+      taxonomy:"Prokaryotes - gene mutation", 
+      date:"19980407",
+      specimen:"Syrian hamster embryo (SA7/SHE) cells", 
+      result:"Negative"
+    },
+    
+    { docno:"724", 
+      substance:"GAMMA-BUTYROLACTONE", 
+      taxonomy:"In vivo mammalian somatic cells - chromosome effects", 
+      date:"19980408",
+      specimen:"Mammalian polychromatic erythrocytes", 
+      result:"No conclusion"
+    },
+    
+    { docno:"728", 
+      substance:"TELEPAQUE", 
+      taxonomy:"In vitro mammalian, SCE - other genotoxic effects", 
+      date:"19980409",
+      specimen:"", 
+      result:""
+    },
+    
+    { docno:"731", 
+      substance:"DICHLOFENTHION", 
+      taxonomy:"In vitro mammalian, SCE - other genotoxic effects", 
+      date:"19980409",
+      specimen:"", 
+      result:""
+    },
+    
+    { docno:"732", 
+      substance:"BITHIONOL", 
+      taxonomy:"In vivo mammalian somatic cells - chromosome effects", 
+      date:"19910822",
+      specimen:"", 
+      result:""
+    },
+    
+    { docno:"733", 
+      substance:"DICHLOROPHENE", 
+      taxonomy:"In vivo mammalian somatic cells - chromosome effects", 
+      date:"19910822",
+      specimen:"", 
+      result:""
+    },
+    
+    { docno:"735", 
+      substance:"ETHYL CHRYSANTHEMATE", 
+      taxonomy:"Lower eukaryotes - other genotoxic effects", 
+      date:"19920531",
+      specimen:"Human diploid fibroblasts", 
+      result:"Negative"
+    },
+    
+    { docno:"737", 
+      substance:"EUGENOL", 
+      taxonomy:"Prokaryotes - gene mutation", 
+      date:"19980407",
+      specimen:"Salmonella typhimurium", 
+      result:"No conclusion"
+    },
+    
+    { docno:"738", 
+      substance:"ISOEUGENOL", 
+      taxonomy:"$null$", 
+      date:"19980409",
+      specimen:"", 
+      result:""
+    },
+    
+    { docno:"739", 
+      substance:"O-AMINOAZOTOLUENE", 
+      taxonomy:"Prokaryotes - gene mutation", 
+      date:"19980408",
+      specimen:"Syrian hamster embryo (SHE) cells", 
+      result:"Positive"
+    },
+    
+    { docno:"741", 
+      substance:"TETRAMETHYLTHIURAM MONOSULFIDE", 
+      taxonomy:"In vivo mammalian somatic cells - chromosome effects", 
+      date:"19910822",
+      specimen:"", 
+      result:""
+    },
+    
+    { docno:"742", 
+      substance:"DISULFIRAM", 
+      taxonomy:"In vivo mammalian somatic cells - chromosome effects", 
+      date:"19910822",
+      specimen:"Nonhuman", 
+      result:"Negative"
+    },
+    
+    { docno:"746", 
+      substance:"FURFURAL ALCOHOL", 
+      taxonomy:"Prokaryotes - gene mutation", 
+      date:"19980409",
+      specimen:"", 
+      result:""
+    },
+    
+    { docno:"747", 
+      substance:"FURFURAL", 
+      taxonomy:"Prokaryotes - gene mutation", 
+      date:"19980408",
+      specimen:"Salmonella typhimurium (one or more of the five standard strains: TA98, TA100, TA1535, TA1537, and TA1538)", 
+      result:"Positive"
+    },
+    
+    { docno:"748", 
+      substance:"BENZOTRICHLORIDE", 
+      taxonomy:"Prokaryotes - other genotoxic effects", 
+      date:"19940509",
+      specimen:"Bacillus subtilis (H17 vs M45)", 
+      result:"Positive"
+    },
+    
+    { docno:"757", 
+      substance:"ISOPROPYLBENZENE", 
+      taxonomy:"Prokaryotes - gene mutation", 
+      date:"19950406",
+      specimen:"Saccharomyces cerevisiae", 
+      result:"Negative"
+    },
+    
+    { docno:"758", 
+      substance:"ALPHA-METHYL STYRENE", 
+      taxonomy:"In vitro mammalian, SCE - other genotoxic effects", 
+      date:"19980409",
+      specimen:"", 
+      result:""
+    },
+    
+    { docno:"759", 
+      substance:"ALPHA-METHYLBENZYL ALCOHOL", 
+      taxonomy:"Prokaryotes - other genotoxic effects", 
+      date:"19910822",
+      specimen:"Escherichia coli polA (W3119 vs P3478)", 
+      result:"No conclusion"
+    },
+    
+    { docno:"760", 
+      substance:"ACETOPHENONE", 
+      taxonomy:"Prokaryotes - other genotoxic effects", 
+      date:"19920531",
+      specimen:"Escherichia coli polA (W3110 vs P3478)", 
+      result:"Negative"
+    },
+    
+    { docno:"761", 
+      substance:"BENZAL CHLORIDE", 
+      taxonomy:"Prokaryotes - gene mutation", 
+      date:"19950609",
+      specimen:"Bacillus subtilis (H17 vs M45)", 
+      result:"Positive"
+    },
+    
+    { docno:"762", 
+      substance:"BENZOYL CHLORIDE", 
+      taxonomy:"Prokaryotes - other genotoxic effects", 
+      date:"19910822",
+      specimen:"Bacillus subtilis (H17 vs M45)", 
+      result:"No conclusion"
+    },
+    
+    { docno:"763", 
+      substance:"NICOTINAMIDE", 
+      taxonomy:"$null$", 
+      date:"19980409",
+      specimen:"", 
+      result:""
+    },
+    
+    { docno:"764", 
+      substance:"NITROBENZENE", 
+      taxonomy:"PROKARYOTES - GENE MUTATION", 
+      date:"19980407",
+      specimen:"", 
+      result:""
+    },
+    
+    { docno:"768", 
+      substance:"M-NITROANILINE", 
+      taxonomy:"Prokaryotes - gene mutation", 
+      date:"19950406",
+      specimen:"Salmonella typhimurium (one or more of the five standard strains: TA98, TA100, TA1535, TA1537, and TA1538)", 
+      result:"No conclusion"
+    },
+    
+    { docno:"769", 
+      substance:"BOTRAN", 
+      taxonomy:"Lower eukaryotes - chromosome effects", 
+      date:"19910822",
+      specimen:"Aspergillus nidulans", 
+      result:"No conclusion"
+    },
+    
+    { docno:"770", 
+      substance:"3,5-DINITROBENZOYL CHLORIDE", 
+      taxonomy:"Prokaryotes - gene mutation", 
+      date:"19950406",
+      specimen:"Salmonella typhimurium (one or more of the five standard strains: TA98, TA100, TA1535, TA1537, and TA1538)", 
+      result:"Positive"
+    },
+    
+    { docno:"775", 
+      substance:"4-NITRO-O-PHENYLENEDIAMINE", 
+      taxonomy:"Prokaryotes - gene mutation", 
+      date:"19980407",
+      specimen:"Salmonella typhimurium", 
+      result:"Positive"
+    },
+    
+    { docno:"776", 
+      substance:"2-AMINO-4-NITROPHENOL", 
+      taxonomy:"Lower eukaryotes - chromosome effects", 
+      date:"19910917",
+      specimen:"Mammalian polychromatic erythrocytes", 
+      result:"No conclusion"
+    },
+    
+    { docno:"777", 
+      substance:"5-NITRO-O-ANISIDINE", 
+      taxonomy:"Prokaryotes - gene mutation", 
+      date:"19950406",
+      specimen:"Nonhuman", 
+      result:"Positive"
+    },
+    
+    { docno:"778", 
+      substance:"1,3-DINITROBENZENE", 
+      taxonomy:"Prokaryotes - gene mutation", 
+      date:"19950406",
+      specimen:"Salmonella typhimurium (one or more of the five standard strains: TA98, TA100, TA1535, TA1537, and TA1538)", 
+      result:"Positive"
+    },
+    
+    { docno:"784", 
+      substance:"P-NITROANILINE", 
+      taxonomy:"In vivo mammalian, sperm morphology - other genotoxic effects", 
+      date:"19910822",
+      specimen:"Mouse", 
+      result:"Negative"
+    },
+    
+    { docno:"785", 
+      substance:"4-NITROPHENOL", 
+      taxonomy:"Prokaryotes - gene mutation", 
+      date:"19950406",
+      specimen:"Salmonella typhimurium, Serratia marcesens", 
+      result:"No conclusion"
+    },
+    
+    { docno:"787", 
+      substance:"P-NITROANISOLE", 
+      taxonomy:"Prokaryotes - gene mutation", 
+      date:"19950406",
+      specimen:"Salmonella typhimurium (one or more of the five standard strains: TA98, TA100, TA1535, TA1537, and TA1538)", 
+      result:"Positive"
+    },
+    
+    { docno:"789", 
+      substance:"TEREPHTHALIC ACID", 
+      taxonomy:"In vitro mammalian - cell transformation, viral enhancement", 
+      date:"19920531",
+      specimen:"Syrian hamster embryo (SA7/SHE) cells", 
+      result:"Negative"
+    },
+    
+    { docno:"791", 
+      substance:"BIS(4-NITROPHENYL) DISULFIDE", 
+      taxonomy:"Prokaryotes - gene mutation", 
+      date:"19950609",
+      specimen:"Salmonella typhimurium (one or more of the five standard strains: TA98, TA100, TA1535, TA1537, and TA1538)", 
+      result:"Positive"
+    },
+    
+    { docno:"792", 
+      substance:"(2-CHLOROETHYL)DIETHYLAMINE", 
+      taxonomy:"Lower eukaryotes - gene mutation", 
+      date:"19920531",
+      specimen:"Aspergillus nidulans", 
+      result:"Positive"
+    },
+    
+    { docno:"795", 
+      substance:"ETHYLBENZENE", 
+      taxonomy:"In vitro mammalian - cell transformation, viral enhancement", 
+      date:"19980408",
+      specimen:"Syrian hamster embryo (SA7/SHE) cells", 
+      result:"Negative"
+    },
+    
+    { docno:"796", 
+      substance:"STYRENE", 
+      taxonomy:"Prokaryotes - gene mutation", 
+      date:"19980408",
+      specimen:"Syrian hamster embryo (SA7/SHE) cells", 
+      result:"Negative"
+    },
+    
+    { docno:"797", 
+      substance:"BENZYL CHLORIDE", 
+      taxonomy:"Prokaryotes - gene mutation", 
+      date:"19950803",
+      specimen:"Syrian hamster embryo (SHE) cells", 
+      result:"Positive"
+    },
+    
+    { docno:"800", 
+      substance:"BENZYL ALCOHOL", 
+      taxonomy:"Prokaryotes - other genotoxic effects", 
+      date:"19910822",
+      specimen:"Escherichia coli polA (W3119 vs P3478)", 
+      result:"Negative"
+    },
+    
+    { docno:"801", 
+      substance:"BENZALDEHYDE", 
+      taxonomy:"Lower eukaryotes - gene mutation", 
+      date:"19910822",
+      specimen:"Neurospora crassa", 
+      result:"Positive"
+    },
+    
+    { docno:"802", 
+      substance:"PHENYLMERCURIC HYDROXIDE", 
+      taxonomy:"Plants - chromosome effects", 
+      date:"19910822",
+      specimen:"Allium cepa", 
+      result:"Positive"
+    },
+    
+    { docno:"804", 
+      substance:"PHENYLHYDRAZINE", 
+      taxonomy:"In vivo mammalian somatic cells - chromosome effects", 
+      date:"19910822",
+      specimen:"", 
+      result:""
+    },
+    
+    { docno:"805", 
+      substance:"CYCLOHEXANONE OXIME", 
+      taxonomy:"Insects - gene mutation", 
+      date:"19920531",
+      specimen:"Drosophila melanogaster", 
+      result:"No conclusion"
+    },
+    
+    { docno:"806", 
+      substance:"N-PHENYLHYDROXYLAMINE", 
+      taxonomy:"$null$", 
+      date:"19980409",
+      specimen:"", 
+      result:""
+    },
+    
+    { docno:"808", 
+      substance:"N-NITROSOPIPERIDINE", 
+      taxonomy:"Prokaryotes - gene mutation", 
+      date:"19980408",
+      specimen:"Syrian hamster embryo (SHE) cells", 
+      result:"Positive"
+    },
+    
+    { docno:"809", 
+      substance:"M-METHYL-STYRENE", 
+      taxonomy:"In vitro mammalian, SCE - other genotoxic effects", 
+      date:"19980409",
+      specimen:"", 
+      result:""
+    },
+    
+    { docno:"810", 
+      substance:"HEXAMETHYLENETETRAMINE", 
+      taxonomy:"Prokaryotes - other genotoxic effects", 
+      date:"19920531",
+      specimen:"Escherichia coli polA (W3119 vs P3478)", 
+      result:"Positive"
+    },
+    
+    { docno:"812", 
+      substance:"ANILAZINE", 
+      taxonomy:"In vitro mammalian - cell transformation, viral enhancement", 
+      date:"19910822",
+      specimen:"Fischer rat embryo (RLV/1706) cells", 
+      result:"Positive"
+    },
+    
+    { docno:"813", 
+      substance:"4,4'-METHYLENEBIS(2-CHLOROBENZENAMINE)", 
+      taxonomy:"Prokaryotes - gene mutation", 
+      date:"19980408",
+      specimen:"Mouse (BALB/c-3T3) cells", 
+      result:"Positive"
+    },
+    
+    { docno:"816", 
+      substance:"CHLORPROPHAM", 
+      taxonomy:"Plants - chromosome effects", 
+      date:"19980408",
+      specimen:"Mammalian polychromatic erythrocytes", 
+      result:"No conclusion"
+    },
+    
+    { docno:"817", 
+      substance:"DINITROSOPENTAMETHYLENE TETRAMINE", 
+      taxonomy:"In vivo mammalian somatic cells - chromosome effects", 
+      date:"19980408",
+      specimen:"Mouse embryo (AKR/ME) cells", 
+      result:"Negative"
+    },
+    
+    { docno:"818", 
+      substance:"BARBAN", 
+      taxonomy:"Prokaryotes - other genotoxic effects", 
+      date:"19910822",
+      specimen:"Bacillus subtilis (H17 vs M45)", 
+      result:"Positive"
+    },
+    
+    { docno:"820", 
+      substance:"N-PHENYL-P-PHENYLENEDIAMINE", 
+      taxonomy:"$null$", 
+      date:"19910822",
+      specimen:"Nonhuman", 
+      result:"Negative"
+    },
+    
+    { docno:"821", 
+      substance:"4,4'-TETRAMETHYLDIAMINODIPHENYLMETHANE", 
+      taxonomy:"Prokaryotes - gene mutation", 
+      date:"19980407",
+      specimen:"Syrian hamster embryo (SHE) cells", 
+      result:"Positive"
+    },
+    
+    { docno:"825", 
+      substance:"BIS(4-AMINOPHENYL) ETHER", 
+      taxonomy:"$null$", 
+      date:"19980407",
+      specimen:"Nonhuman", 
+      result:"Positive"
+    },
+    
+    { docno:"837", 
+      substance:"FERROCENE", 
+      taxonomy:"$null$", 
+      date:"19980409",
+      specimen:"", 
+      result:""
+    },
+    
+    { docno:"839", 
+      substance:"TRIETHANOLAMINE", 
+      taxonomy:"Plants - chromosome effects", 
+      date:"19910822",
+      specimen:"Allium cepa", 
+      result:"Positive"
+    },
+    
+    { docno:"844", 
+      substance:"OCTYL ADIPATE", 
+      taxonomy:"In vivo mammalian germ cells - chromosome effects", 
+      date:"19920531",
+      specimen:"Rodents", 
+      result:"Positive"
+    },
+    
+    { docno:"845", 
+      substance:"TRANS-STILBENE", 
+      taxonomy:"Prokaryotes - gene mutation", 
+      date:"19950406",
+      specimen:"Salmonella typhimurium (one or more of the five standard strains: TA98, TA100, TA1535, TA1537, and TA1538)", 
+      result:"Negative"
+    },
+    
+    { docno:"846", 
+      substance:"AZOBENZENE", 
+      taxonomy:"Prokaryotes - gene mutation", 
+      date:"19980408",
+      specimen:"Nonhuman", 
+      result:"Positive"
+    },
+    
+    { docno:"851", 
+      substance:"ACETANILIDE", 
+      taxonomy:"Prokaryotes - gene mutation", 
+      date:"19950803",
+      specimen:"Salmonella typhimurium", 
+      result:"Negative"
+    },
+    
+    { docno:"852", 
+      substance:"1-PHENYL-2-THIOUREA", 
+      taxonomy:"$null$", 
+      date:"19910822",
+      specimen:"Nonhuman", 
+      result:"Negative"
+    },
+    
+    { docno:"853", 
+      substance:"ACETAMINOPHEN", 
+      taxonomy:"Prokaryotes - gene mutation", 
+      date:"19950803",
+      specimen:"Salmonella typhimurium (one or more of the five standard strains: TA98, TA100, TA1535, TA1537, and TA1538)", 
+      result:"No conclusion"
+    },
+    
+    { docno:"864", 
+      substance:"5-ETHYL-2-METHYLPYRIDINE", 
+      taxonomy:"Prokaryotes - gene mutation", 
+      date:"19950406",
+      specimen:"Saccharomyces cerevisiae", 
+      result:"Negative"
+    },
+    
+    { docno:"870", 
+      substance:"1,3-DIETHYL-2-THIOUREA", 
+      taxonomy:"In vitro mammalian - cell transformation, viral enhancement", 
+      date:"19920531",
+      specimen:"Syrian hamster embryo (SA7/SHE) cells", 
+      result:"Negative"
+    },
+    
+    { docno:"873", 
+      substance:"CAPROLACTAM", 
+      taxonomy:"In vitro mammalian - gene mutation", 
+      date:"19910822",
+      specimen:"Nonhuman", 
+      result:"Negative"
+    },
+    
+    { docno:"874", 
+      substance:"2,4-DIMETHYLPHENOL", 
+      taxonomy:"$null$", 
+      date:"19980409",
+      specimen:"", 
+      result:""
+    },
+    
+    { docno:"877", 
+      substance:"QUINHYDRONE", 
+      taxonomy:"Plants - chromosome effects", 
+      date:"19910822",
+      specimen:"Allium cepa", 
+      result:"No conclusion"
+    },
+    
+    { docno:"878", 
+      substance:"P-BROMOCHLOROBENZENE", 
+      taxonomy:"Prokaryotes - gene mutation", 
+      date:"19950609",
+      specimen:"Saccharomyces cerevisiae", 
+      result:"Negative"
+    },
+    
+    { docno:"879", 
+      substance:"P-BROMOANILINE", 
+      taxonomy:"In vivo mammalian, sperm morphology - other genotoxic effects", 
+      date:"19980407",
+      specimen:"Mouse", 
+      result:"Negative"
+    },
+    
+    { docno:"880", 
+      substance:"P-XYLENE", 
+      taxonomy:"In vivo mammalian somatic cells - chromosome effects", 
+      date:"19920531",
+      specimen:"", 
+      result:""
+    },
+    
+    { docno:"881", 
+      substance:"P-CHLOROTOLUENE", 
+      taxonomy:"Prokaryotes - gene mutation", 
+      date:"19950406",
+      specimen:"Saccharomyces cerevisiae", 
+      result:"Negative"
+    },
+    
+    { docno:"882", 
+      substance:"P-CRESOL", 
+      taxonomy:"Plants - chromosome effects", 
+      date:"19950803",
+      specimen:"Allium cepa", 
+      result:"No conclusion"
+    },
+    
+    { docno:"883", 
+      substance:"1,4-DICHLOROBENZENE", 
+      taxonomy:"Plants - chromosome effects", 
+      date:"19910822",
+      specimen:"Allium cepa", 
+      result:"Positive"
+    },
+    
+    { docno:"884", 
+      substance:"P-CHLOROANILINE", 
+      taxonomy:"Prokaryotes - other genotoxic effects", 
+      date:"19910822",
+      specimen:"Syrian hamster embryo (SHE) cells", 
+      result:"Positive"
+    },
+    
+    { docno:"886", 
+      substance:"P-TOLUIDINE", 
+      taxonomy:"Prokaryotes - other genotoxic effects", 
+      date:"19910822",
+      specimen:"Escherichia coli polA (W3119 vs P3478)", 
+      result:"Negative"
+    },
+    
+    { docno:"887", 
+      substance:"P-PHENYLENEDIAMINE", 
+      taxonomy:"Insects - gene mutation", 
+      date:"19910917",
+      specimen:"Syrian hamster embryo (SA7/SHE) cells", 
+      result:"Positive"
+    },
+    
+    { docno:"888", 
+      substance:"1,4-BENZOQUINONE", 
+      taxonomy:"Insects - gene mutation", 
+      date:"19920531",
+      specimen:"Allium cepa", 
+      result:"Positive"
+    },
+    
+    { docno:"893", 
+      substance:"1,2-EPOXYBUTANE", 
+      taxonomy:"Prokaryotes - gene mutation", 
+      date:"19950406",
+      specimen:"Mouse (BALB/c-3T3) cells", 
+      result:"Negative"
+    },
+    
+    { docno:"894", 
+      substance:"EPICHLORHYDRIN", 
+      taxonomy:"Prokaryotes - gene mutation", 
+      date:"19980408",
+      specimen:"Human lymphocytes or leukocytes", 
+      result:"Positive"
+    },
+    
+    { docno:"898", 
+      substance:"ETHYLENE DIBROMIDE", 
+      taxonomy:"Prokaryotes - gene mutation", 
+      date:"19980408",
+      specimen:"Aspergillus nidulans", 
+      result:"Positive"
+    },
+    
+    { docno:"900", 
+      substance:"BUTADIENE", 
+      taxonomy:"In vivo mammalian somatic cells - chromosome effects", 
+      date:"19920531",
+      specimen:"", 
+      result:""
+    },
+    
+    { docno:"901", 
+      substance:"ACROLEIN", 
+      taxonomy:"Prokaryotes - gene mutation", 
+      date:"19980409",
+      specimen:"", 
+      result:""
+    },
+    
+    { docno:"902", 
+      substance:"1-BROMO-2-CHLOROETHANE", 
+      taxonomy:"In vitro mammalian - gene mutation", 
+      date:"19920531",
+      specimen:"Escherichia coli polA (W3119 vs P3478)", 
+      result:"Positive"
+    },
+    
+    { docno:"903", 
+      substance:"ALLYL CHLORIDE", 
+      taxonomy:"Prokaryotes - other genotoxic effects", 
+      date:"19920531",
+      specimen:"Escherichia coli polA (W3119 vs P3478)", 
+      result:"Positive"
+    },
+    
+    { docno:"904", 
+      substance:"ETHYLENE DICHLORIDE", 
+      taxonomy:"Prokaryotes - gene mutation", 
+      date:"19950406",
+      specimen:"Salmonella typhimurium", 
+      result:"Positive"
+    },
+    
+    { docno:"905", 
+      substance:"ETHYLENE CHLOROHYDRIN", 
+      taxonomy:"Prokaryotes - gene mutation", 
+      date:"19950406",
+      specimen:"Glycine max (soybean)", 
+      result:"Negative"
+    },
+    
+    { docno:"907", 
+      substance:"ACRYLONITRILE", 
+      taxonomy:"Prokaryotes - gene mutation", 
+      date:"19980408",
+      specimen:"Syrian hamster embryo (SHE) cells", 
+      result:"Positive"
+    },
+    
+    { docno:"909", 
+      substance:"ETHYLENEDIAMINE", 
+      taxonomy:"In vitro mammalian - gene mutation", 
+      date:"19950803",
+      specimen:"", 
+      result:""
+    },
+    
+    { docno:"911", 
+      substance:"CHLOROACETALDEHYDE", 
+      taxonomy:"Prokaryotes - gene mutation", 
+      date:"19950406",
+      specimen:"Escherichia coli polA (W3119 vs P3478)", 
+      result:"Positive"
+    },
+    
+    { docno:"912", 
+      substance:"ETHYLENE GLYCOL", 
+      taxonomy:"Prokaryotes - gene mutation", 
+      date:"19950406",
+      specimen:"Syrian hamster embryo (SA7/SHE) cells", 
+      result:"Negative"
+    },
+    
+    { docno:"914", 
+      substance:"CHLOROETHYLMERCURY", 
+      taxonomy:"In vivo mammalian somatic cells - chromosome effects", 
+      date:"19910822",
+      specimen:"", 
+      result:""
+    },
+    
+    { docno:"916", 
+      substance:"CHLOROMETHYL METHYL ETHER", 
+      taxonomy:"In vitro mammalian - cell transformation, viral enhancement", 
+      date:"19920531",
+      specimen:"Syrian hamster embryo (SA7/SHE) cells", 
+      result:"Positive"
+    },
+    
+    { docno:"918", 
+      substance:"DIISOBUTYLENE", 
+      taxonomy:"Prokaryotes - gene mutation", 
+      date:"19950406",
+      specimen:"Salmonella typhimurium (one or more of the five standard strains: TA98, TA100, TA1535, TA1537, and TA1538)", 
+      result:"No conclusion"
+    },
+    
+    { docno:"923", 
+      substance:"SARCOSINE", 
+      taxonomy:"Lower eukaryotes - chromosome effects", 
+      date:"19920531",
+      specimen:"Neurospora crassa", 
+      result:"Negative"
+    },
+    
+    { docno:"924", 
+      substance:"(2-CHLOROETHYL)DIMETHYLAMINE", 
+      taxonomy:"Lower eukaryotes - gene mutation", 
+      date:"19920531",
+      specimen:"Saccharomyces cerevisiae", 
+      result:"Positive"
+    },
+    
+    { docno:"926", 
+      substance:"1-NITROPROPANE", 
+      taxonomy:"In vivo mammalian somatic cells - chromosome effects", 
+      date:"19920531",
+      specimen:"", 
+      result:""
+    },
+    
+    { docno:"927", 
+      substance:"VINYL ACETATE", 
+      taxonomy:"Prokaryotes - gene mutation", 
+      date:"19980408",
+      specimen:"Syrian hamster embryo (SA7/SHE) cells", 
+      result:"Positive"
+    },
+    
+    { docno:"928", 
+      substance:"(ACETATO-O)METHYLMERCURY", 
+      taxonomy:"In vivo mammalian somatic cells - chromosome effects", 
+      date:"19920531",
+      specimen:"Mammalian polychromatic erythrocytes", 
+      result:"No conclusion"
+    },
+    
+    { docno:"933", 
+      substance:"SUCCINIC ANHYDRIDE", 
+      taxonomy:"Prokaryotes - gene mutation", 
+      date:"19950406",
+      specimen:"Syrian hamster embryo (SHE) cells", 
+      result:"Positive"
+    },
+    
+    { docno:"935", 
+      substance:"M-BROMOCHLOROBENZENE", 
+      taxonomy:"Prokaryotes - gene mutation", 
+      date:"19950609",
+      specimen:"Salmonella typhimurium (one or more of the five standard strains: TA98, TA100, TA1535, TA1537, and TA1538)", 
+      result:"Negative"
+    },
+    
+    { docno:"936", 
+      substance:"M-XYLENE", 
+      taxonomy:"In vivo mammalian somatic cells - chromosome effects", 
+      date:"19920531",
+      specimen:"", 
+      result:""
+    },
+    
+    { docno:"937", 
+      substance:"M-CRESOL", 
+      taxonomy:"Plants - chromosome effects", 
+      date:"19980408",
+      specimen:"Allium cepa", 
+      result:"No conclusion"
+    },
+    
+    { docno:"938", 
+      substance:"M-CHLOROANILINE", 
+      taxonomy:"In vivo mammalian, sperm morphology - other genotoxic effects", 
+      date:"19910822",
+      specimen:"Mouse", 
+      result:"Negative"
+    },
+    
+    { docno:"939", 
+      substance:"M-PHENYLENEDIAMINE", 
+      taxonomy:"Prokaryotes - gene mutation", 
+      date:"19950406",
+      specimen:"Syrian hamster embryo (SHE) cells", 
+      result:"Positive"
+    },
+    
+    { docno:"940", 
+      substance:"RESORCINOL", 
+      taxonomy:"Prokaryotes - gene mutation", 
+      date:"19950803",
+      specimen:"Mammalian polychromatic erythrocytes", 
+      result:"No conclusion"
+    },
+    
+    { docno:"942", 
+      substance:"3,5-XYLENOL", 
+      taxonomy:"Plants - chromosome effects", 
+      date:"19910822",
+      specimen:"Allium cepa", 
+      result:"No conclusion"
+    },
+    
+    { docno:"944", 
+      substance:"1,3,5-TRICHLOROBENZENE", 
+      taxonomy:"Prokaryotes - gene mutation", 
+      date:"19910822",
+      specimen:"Bacillus subtilis (H17 vs M45)", 
+      result:"No conclusion"
+    },
+    
+    { docno:"945", 
+      substance:"PHLOROGLUCINOL", 
+      taxonomy:"Plants - chromosome effects", 
+      date:"19910822",
+      specimen:"Allium cepa", 
+      result:"Positive"
+    },
+    
+    { docno:"946", 
+      substance:"MELAMINE", 
+      taxonomy:"Insects - gene mutation", 
+      date:"19910822",
+      specimen:"Drosophila melanogaster", 
+      result:"No conclusion"
+    },
+    
+    { docno:"949", 
+      substance:"BROMOBENZENE", 
+      taxonomy:"Prokaryotes - gene mutation", 
+      date:"19950607",
+      specimen:"Syrian hamster embryo (SHE) cells", 
+      result:"Negative"
+    },
+    
+    { docno:"950", 
+      substance:"TOLUENE", 
+      taxonomy:"In vivo mammalian somatic cells - chromosome effects", 
+      date:"19980408",
+      specimen:"Syrian hamster embryo (SA7/SHE) cells", 
+      result:"Negative"
+    }
+  ]
+}
+    

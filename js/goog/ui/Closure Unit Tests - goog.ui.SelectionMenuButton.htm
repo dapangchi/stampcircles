@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<!-- saved from url=(0093)http://closure-library.googlecode.com/svn/trunk/closure/goog/ui/selectionmenubutton_test.html -->
+<HTML><!--
+  Copyright 2009 Google Inc. All Rights Reserved.
+
+
+--><HEAD><META http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<TITLE>Closure Unit Tests - goog.ui.SelectionMenuButton</TITLE>
+<STYLE type="text/css">
+.goog-menu {
+  position: absolute;
+  color: #aaa;
+}
+</STYLE>
+<SCRIPT src="./Closure Unit Tests - goog.ui.SelectionMenuButton_files/base.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.SelectionMenuButton_files/deps.js"></SCRIPT>
+<SCRIPT>
+  goog.require('goog.Timer');
+  goog.require('goog.dom');
+  goog.require('goog.events');
+  goog.require('goog.events.Event');
+  goog.require('goog.events.KeyCodes');
+  goog.require('goog.positioning');
+  goog.require('goog.positioning.Overflow');
+  goog.require('goog.style');
+  goog.require('goog.testing.PropertyReplacer');
+  goog.require('goog.testing.events');
+  goog.require('goog.testing.jsunit');
+  goog.require('goog.ui.SelectionMenuButton');
+</SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.SelectionMenuButton_files/disposable.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.SelectionMenuButton_files/array.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.SelectionMenuButton_files/errorhandlerweakdep.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.SelectionMenuButton_files/event.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.SelectionMenuButton_files/string.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.SelectionMenuButton_files/useragent.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.SelectionMenuButton_files/browserevent.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.SelectionMenuButton_files/eventwrapper.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.SelectionMenuButton_files/listener.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.SelectionMenuButton_files/simplepool.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.SelectionMenuButton_files/jscript.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.SelectionMenuButton_files/pools.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.SelectionMenuButton_files/object.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.SelectionMenuButton_files/events.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.SelectionMenuButton_files/eventtarget.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.SelectionMenuButton_files/timer.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.SelectionMenuButton_files/tagname.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.SelectionMenuButton_files/classes.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.SelectionMenuButton_files/coordinate.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.SelectionMenuButton_files/size.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.SelectionMenuButton_files/dom.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.SelectionMenuButton_files/keycodes.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.SelectionMenuButton_files/box.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.SelectionMenuButton_files/rect.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.SelectionMenuButton_files/product.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.SelectionMenuButton_files/style.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.SelectionMenuButton_files/positioning.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.SelectionMenuButton_files/propertyreplacer.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.SelectionMenuButton_files/events(1).js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.SelectionMenuButton_files/stacktrace.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.SelectionMenuButton_files/asserts.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.SelectionMenuButton_files/testcase.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.SelectionMenuButton_files/testrunner.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.SelectionMenuButton_files/jsunit.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.SelectionMenuButton_files/eventhandler.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.SelectionMenuButton_files/idgenerator.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.SelectionMenuButton_files/component.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.SelectionMenuButton_files/a11y.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.SelectionMenuButton_files/keyhandler.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.SelectionMenuButton_files/controlcontent.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.SelectionMenuButton_files/controlrenderer.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.SelectionMenuButton_files/registry.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.SelectionMenuButton_files/decorate.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.SelectionMenuButton_files/control.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.SelectionMenuButton_files/menuseparatorrenderer.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.SelectionMenuButton_files/separator.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.SelectionMenuButton_files/containerrenderer.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.SelectionMenuButton_files/container.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.SelectionMenuButton_files/menuitemrenderer.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.SelectionMenuButton_files/menuitem.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.SelectionMenuButton_files/menurenderer.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.SelectionMenuButton_files/menuseparator.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.SelectionMenuButton_files/menu.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.SelectionMenuButton_files/abstractposition.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.SelectionMenuButton_files/anchoredposition.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.SelectionMenuButton_files/anchoredviewportposition.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.SelectionMenuButton_files/menuanchoredposition.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.SelectionMenuButton_files/buttonrenderer.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.SelectionMenuButton_files/nativebuttonrenderer.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.SelectionMenuButton_files/button.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.SelectionMenuButton_files/cssnames.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.SelectionMenuButton_files/custombuttonrenderer.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.SelectionMenuButton_files/menubuttonrenderer.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.SelectionMenuButton_files/menubutton.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.SelectionMenuButton_files/selectionmenubutton.js"></SCRIPT>
+</HEAD><BODY>
+<SCRIPT>
+
+var selectionMenuButton;
+var clonedSelectionMenuButtonDom;
+
+
+function setUp() {
+  clonedSelectionMenuButtonDom =
+      goog.dom.$('demoSelectionMenuButton').cloneNode(true);
+
+  selectionMenuButton = new goog.ui.SelectionMenuButton();
+}
+
+function tearDown() {
+  selectionMenuButton.dispose();
+
+  var element = goog.dom.$('demoSelectionMenuButton');
+  element.parentNode.replaceChild(clonedSelectionMenuButtonDom, element);
+}
+
+
+/**
+ * Open the menu and click on the menu item inside.
+ */
+function testBasicButtonBehavior() {
+  var node = goog.dom.$('demoSelectionMenuButton');
+  selectionMenuButton.decorate(node);
+  goog.testing.events.fireClickSequence(node);
+
+  assertTrue('Menu must open after click', selectionMenuButton.isOpen());
+
+  var menuItemClicked = 0;
+  var lastMenuItemClicked = null;
+  goog.events.listen(selectionMenuButton.getMenu(),
+    goog.ui.Component.EventType.ACTION,
+    function(e) {
+      menuItemClicked++;
+      lastMenuItemClicked = e.target
+    });
+
+  var menuItem2 = goog.dom.$('menuItem2');
+  goog.testing.events.fireClickSequence(menuItem2);
+  assertFalse('Menu must close on clicking when open', selectionMenuButton.isOpen());
+  assertEquals('Number of menu items clicked should be 1', 1, menuItemClicked);
+  assertEquals('menuItem2 should be the last menuitem clicked', menuItem2,
+      lastMenuItemClicked.getElement());
+}
+
+
+/**
+ * Tests that the checkbox fires the same events as the first 2 items.
+ */
+function testCheckboxFireEvents() {
+  var node = goog.dom.$('demoSelectionMenuButton');
+  selectionMenuButton.decorate(node);
+
+  var menuItemClicked = 0;
+  var lastMenuItemClicked = null;
+  goog.events.listen(selectionMenuButton.getMenu(),
+    goog.ui.Component.EventType.ACTION,
+    function(e) {
+      menuItemClicked++;
+      lastMenuItemClicked = e.target;
+    });
+
+  var checkbox = goog.dom.$('demoCheckbox');
+  assertFalse('Checkbox must be unchecked (i.e. unselected)', checkbox.checked);
+
+  checkbox.checked = true;
+  goog.testing.events.fireClickSequence(checkbox);
+  assertFalse('Menu must be closed when clicking checkbox', selectionMenuButton.isOpen());
+  assertEquals('Number of menu items clicked should be 1', 1, menuItemClicked);
+  assertEquals('menuItem1 should be the last menuitem clicked', goog.dom.$('menuItem1'),
+      lastMenuItemClicked.getElement());
+
+  checkbox.checked = false;
+  goog.testing.events.fireClickSequence(checkbox);
+  assertFalse('Menu must be closed when clicking checkbox', selectionMenuButton.isOpen());
+  assertEquals('Number of menu items clicked should be 2', 2, menuItemClicked);
+  assertEquals('menuItem2 should be the last menuitem clicked', goog.dom.$('menuItem2'),
+      lastMenuItemClicked.getElement());
+}
+
+
+/**
+ * Tests that the checkbox state gets updated when the first 2 events fire
+ */
+function testCheckboxReceiveEvents() {
+  var node = goog.dom.$('demoSelectionMenuButton');
+  selectionMenuButton.decorate(node);
+
+  var checkbox = goog.dom.$('demoCheckbox');
+  assertFalse('Checkbox must be unchecked (i.e. unselected)', checkbox.checked);
+
+  goog.testing.events.fireClickSequence(goog.dom.$('menuItem1'));
+  assertTrue('Checkbox must be checked (i.e. selected)', checkbox.checked);
+
+  goog.testing.events.fireClickSequence(goog.dom.$('menuItem2'));
+  assertFalse('Checkbox must be unchecked (i.e. unselected)', checkbox.checked);
+}
+
+
+/**
+ * Tests that set/getSelectionState correctly changes the state
+ */
+function testSelectionState() {
+  var node = goog.dom.$('demoSelectionMenuButton');
+  selectionMenuButton.decorate(node);
+
+  var checkbox = goog.dom.$('demoCheckbox');
+  assertFalse('Checkbox must be unchecked (i.e. unselected)', checkbox.checked);
+
+  selectionMenuButton.setSelectionState(
+      goog.ui.SelectionMenuButton.SelectionState.ALL);
+  assertTrue('Checkbox should be checked when selecting all', checkbox.checked);
+  assertEquals('selectionState should be ALL',
+      selectionMenuButton.getSelectionState(),
+      goog.ui.SelectionMenuButton.SelectionState.ALL);
+
+  selectionMenuButton.setSelectionState(
+      goog.ui.SelectionMenuButton.SelectionState.NONE);
+  assertFalse('Checkbox should be checked when selecting all',
+      checkbox.checked);
+  assertEquals('selectionState should be NONE',
+      selectionMenuButton.getSelectionState(),
+      goog.ui.SelectionMenuButton.SelectionState.NONE);
+
+  selectionMenuButton.setSelectionState(
+      goog.ui.SelectionMenuButton.SelectionState.SOME);
+  assertTrue('Checkbox should be checked when selecting all', checkbox.checked);
+  assertEquals('selectionState should be SOME',
+      selectionMenuButton.getSelectionState(),
+      goog.ui.SelectionMenuButton.SelectionState.SOME);
+}
+
+
+/**
+ * Tests that the checkbox gets disabled when the button is disabled
+ */
+function testCheckboxDisabled() {
+  var node = goog.dom.$('demoSelectionMenuButton');
+  selectionMenuButton.decorate(node);
+
+  var checkbox = goog.dom.$('demoCheckbox');
+  assertFalse('Checkbox must be enabled', checkbox.disabled);
+
+  selectionMenuButton.setEnabled(false);
+  assertTrue('Checkbox must be disabled', checkbox.disabled);
+
+  selectionMenuButton.setEnabled(true);
+  assertFalse('Checkbox must be enabled', checkbox.disabled);
+}
+
+
+/**
+ * Tests that clicking the checkbox does not open the menu
+ */
+function testCheckboxClickMenuClosed() {
+  var node = goog.dom.$('demoSelectionMenuButton');
+  selectionMenuButton.decorate(node);
+
+  var checkbox = goog.dom.$('demoCheckbox');
+  goog.testing.events.fireMouseDownEvent(checkbox);
+  assertFalse('Menu must be closed when mousedown checkbox', selectionMenuButton.isOpen());
+  goog.testing.events.fireMouseUpEvent(checkbox);
+  assertFalse('Menu must remain closed when mouseup checkbox', selectionMenuButton.isOpen());
+
+  selectionMenuButton.setOpen(true);
+  goog.testing.events.fireClickSequence(checkbox);
+  assertFalse('Menu must close when clickin checkbox', selectionMenuButton.isOpen());
+
+}
+
+
+</SCRIPT>
+
+<P>
+  Here's a selectionmenu defined in markup:
+</P>
+<DIV id="demoSelectionMenuButton" class="goog-selectionmenubutton-button">
+  <INPUT id="demoCheckbox" class="goog-selectionmenubutton-checkbox" type="checkbox">
+  <DIV id="demoMenu" class="goog-menu">
+    <DIV id="menuItem1" class="goog-menuitem">All</DIV>
+    <DIV id="menuItem2" class="goog-menuitem">None</DIV>
+    <DIV id="menuItem3" class="goog-menuitem">Read</DIV>
+    <DIV id="menuItem4" class="goog-menuitem">Unread</DIV>
+  </DIV>
+</DIV>
+
+<DIV id="footer"></DIV>
+
+
+<DIV><DIV style="color: rgb(0, 100, 0); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; font-weight: bold; ">Closure Unit Tests - goog.ui.SelectionMenuButton [PASSED]</DIV><DIV style="color: rgb(51, 51, 51); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; font-weight: bold; ">closure-library.googlecode.com/svn/trunk/closure/goog/ui/selectionmenubutton_test.html</DIV><DIV style="color: rgb(51, 51, 51); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">6 of 6 tests run in 133ms.</DIV><DIV style="color: rgb(51, 51, 51); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">6 passed, 0 failed.</DIV><DIV style="color: rgb(51, 51, 51); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">22 ms/test. 67 files loaded.</DIV><DIV style="color: rgb(51, 51, 51); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">.</DIV><DIV style="color: rgb(51, 51, 51); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">08:41:18.318  Start</DIV><DIV style="color: rgb(0, 100, 0); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">08:41:18.392  testBasicButtonBehavior : PASSED</DIV><DIV style="color: rgb(0, 100, 0); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">08:41:18.411  testCheckboxClickMenuClosed : PASSED</DIV><DIV style="color: rgb(0, 100, 0); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">08:41:18.417  testCheckboxDisabled : PASSED</DIV><DIV style="color: rgb(0, 100, 0); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">08:41:18.432  testCheckboxFireEvents : PASSED</DIV><DIV style="color: rgb(0, 100, 0); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">08:41:18.445  testCheckboxReceiveEvents : PASSED</DIV><DIV style="color: rgb(0, 100, 0); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">08:41:18.451  testSelectionState : PASSED</DIV><DIV style="color: rgb(51, 51, 51); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">08:41:18.451  Done</DIV><DIV style="color: rgb(51, 51, 51); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; "> </DIV><A style="display: block; font-size: small; " href="">Run again without reloading</A></DIV></BODY></HTML>

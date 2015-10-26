@@ -1,0 +1,109 @@
+/* Pagewrap 920
+============================================================ */
+div#pagewrap { width:1023px; margin:40px auto;
+        background:#fff; border-top:3px solid #c04343; }
+
+
+/* Pagehead
+============================================================ */
+div#pagehead { width:900px; height:80px; background:#fff; position:relative; padding-left:20px; }
+	div#pagehead h1 { font-size:1em;color:#bebebe; font-weight:normal; padding-top:21px; }
+		div#pagehead h1 span { font-family:georgia, serif; font-size:2.2em; font-weight:normal; color:#262626; position:relative; top:4px; padding:2px 15px 2px 0; margin-right:12px; border-right:1px solid #bebebe; }
+	
+	#pagehead ul#menu { position:absolute; top:13px; right:20px; margin:0; padding:0; list-style:none; }
+	#pagehead ul#menu li { float:left; padding:4px 8px; background:#fff; margin:0 0 0 1px; }
+	#pagehead ul#menu li a { color:#c04343; border-bottom:0px solid #fff; padding:4px 8px; text-decoration:none; }
+	#pagehead ul#menu li a:hover { color:#fff; border-bottom:0px solid #fff; padding:4px 8px; text-decoration:none; background:#c04343; }
+	#pagehead ul#menu li.active { float:left; padding:4px 8px; background:#c04343; margin:0 0 0 1px; }
+	#pagehead ul#menu li.active a { color:#fff; border-bottom:0px solid #fff; padding:4px 8px; text-decoration:none; }
+		
+	
+/* Pagecontent 900
+============================================================ */
+div#pagecontent { width:980px; height:auto; background:#fff; padding:0 10px 20px 10px; }
+
+	div.content-row { display:block; background:#fff; float:left; }
+	div.content-rows { display:block; background:#fff; padding:25px 0 5px 0; float:left; }
+	div.content-col { width:280px; margin:0 10px; background:#fff; float:left; display:inline; }
+		div.content-col h2 { color:#c04343;  text-transform:uppercase; padding:0 0 5px 0; }
+		div.content-col h3 { color:#545454; line-height:1.4em; font-family:georgia, serif; font-weight:normal; text-align:justify; margin:5px 0 20px 0; }
+		div.content-col p { margin:5px 0; }
+		div.content-col strong { color:#545454; }
+		div.content-col img { margin:5px 0; }
+		div.content-col a { color:#c04343; }
+		div.content-col a.pdf { color:#c04343; background: transparent url('../images/adobepdf.jpg') top left no-repeat; padding:5px 0 5px 30px;}
+	div.content-colwide { width:650px; margin:0 10px; background:#fff; float:left; }
+		div.content-colwide p { margin:5px 0; }
+		div.content-colwide a { color:#c04343; }
+		div.content-colwide a.pdf { color:#c04343; background: transparent url('../images/adobepdf.jpg') top left no-repeat; padding:5px 0 5px 30px;}
+	
+	
+/* Pagefooter
+============================================================ */
+div#pagefooter { width:980px; height:auto; background:#c04343; padding:3px 10px; }
+	div#pagefooter p { font-size:1em; color:#fff; padding:3px 10px; border-left:1px solid #fff; float:left; }
+		div#pagefooter p.copyright { border:0; }
+
+/*http://www.bjornblomquist.com/styles/lightbox.css*/
+
+#lightbox{
+	position: absolute;
+	left: 0;
+	width: 100%;
+	z-index: 100;
+	text-align: center;
+	line-height: 0;
+	}
+
+#lightbox a img{ border: none; }
+
+
+
+#hoverNav{
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	z-index: 10;
+	}
+
+#prevLink, #nextLink{
+	width: 49%;
+	height: 100%;
+	background: transparent url(../images/blank.gif) no-repeat; /* Trick IE into showing hover */
+	display: block;
+	}
+#prevLink { left: 0; float: left;}
+#nextLink { right: 0; float: right;}
+#prevLink:hover, #prevLink:visited:hover { background: url(../images/prevlabel.gif) left 15% no-repeat; }
+#nextLink:hover, #nextLink:visited:hover { background: url(../images/nextlabel.gif) right 15% no-repeat; }
+
+	
+	
+pre, .dotted{background:url(http://localhost/CodeIgniter/images/code-sample-background.jpg) no-repeat top right;}	
+
+
+table {width:50%;margin-right:10px;float:right;margin-bottom:10px} 
+table td{border:0px solid #bebebe;} 
+table th{border:1px solid #bebebe;}  
+.set-title{text-align:center;}  
+pre, pre.dotted{border:1px dotted #bebebe;font-size:11px;line-height:1.0}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

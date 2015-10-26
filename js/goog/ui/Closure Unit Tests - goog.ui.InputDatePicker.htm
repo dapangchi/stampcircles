@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<!-- saved from url=(0089)http://closure-library.googlecode.com/svn/trunk/closure/goog/ui/inputdatepicker_test.html -->
+<HTML><!--
+Copyright 2008 Google Inc. All Rights Reserved.
+
+--><HEAD><META http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+  <TITLE>Closure Unit Tests - goog.ui.InputDatePicker</TITLE>
+  <SCRIPT src="./Closure Unit Tests - goog.ui.InputDatePicker_files/base.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.InputDatePicker_files/deps.js"></SCRIPT>
+  <SCRIPT>
+    goog.require('goog.locale.formatting');
+    goog.require('goog.ui.InputDatePicker');
+    goog.require('goog.testing.jsunit');
+  </SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.InputDatePicker_files/nativenameconstants.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.InputDatePicker_files/locale.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.InputDatePicker_files/string.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.InputDatePicker_files/timezone.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.InputDatePicker_files/datetimeformat.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.InputDatePicker_files/datetimeparse.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.InputDatePicker_files/currencycodemap.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.InputDatePicker_files/numberformat.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.InputDatePicker_files/formatting.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.InputDatePicker_files/date.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.InputDatePicker_files/array.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.InputDatePicker_files/tagname.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.InputDatePicker_files/classes.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.InputDatePicker_files/coordinate.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.InputDatePicker_files/size.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.InputDatePicker_files/object.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.InputDatePicker_files/useragent.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.InputDatePicker_files/dom.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.InputDatePicker_files/asserts.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.InputDatePicker_files/datetimesymbols.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.InputDatePicker_files/timezone(1).js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.InputDatePicker_files/datetimeformat(1).js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.InputDatePicker_files/datetimeparse(1).js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.InputDatePicker_files/errorhandlerweakdep.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.InputDatePicker_files/disposable.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.InputDatePicker_files/event.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.InputDatePicker_files/browserevent.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.InputDatePicker_files/eventwrapper.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.InputDatePicker_files/listener.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.InputDatePicker_files/simplepool.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.InputDatePicker_files/jscript.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.InputDatePicker_files/pools.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.InputDatePicker_files/events.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.InputDatePicker_files/eventhandler.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.InputDatePicker_files/eventtarget.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.InputDatePicker_files/box.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.InputDatePicker_files/rect.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.InputDatePicker_files/product.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.InputDatePicker_files/style.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.InputDatePicker_files/idgenerator.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.InputDatePicker_files/component.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.InputDatePicker_files/positioning.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.InputDatePicker_files/abstractposition.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.InputDatePicker_files/anchoredposition.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.InputDatePicker_files/a11y.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.InputDatePicker_files/keycodes.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.InputDatePicker_files/keyhandler.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.InputDatePicker_files/datepicker.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.InputDatePicker_files/absoluteposition.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.InputDatePicker_files/anchoredviewportposition.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.InputDatePicker_files/clientposition.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.InputDatePicker_files/viewportclientposition.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.InputDatePicker_files/viewportposition.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.InputDatePicker_files/timer.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.InputDatePicker_files/popupbase.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.InputDatePicker_files/popup.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.InputDatePicker_files/popupdatepicker.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.InputDatePicker_files/inputdatepicker.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.InputDatePicker_files/stacktrace.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.InputDatePicker_files/asserts(1).js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.InputDatePicker_files/testcase.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.InputDatePicker_files/testrunner.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.InputDatePicker_files/jsunit.js"></SCRIPT>
+</HEAD><BODY>
+
+<DIV id="renderElement"></DIV>
+<DIV id="popupParent"></DIV>
+
+<SCRIPT>
+  var dateTimeFormatter = new goog.i18n.DateTimeFormat('MM/dd/yyyy');
+  var dateTimeParser = new goog.i18n.DateTimeParse('MM/dd/yyyy');
+
+  var inputDatePicker;
+  var popupDatePicker;
+
+  function setUp() {
+  }
+
+  function tearDown() {
+    if (inputDatePicker) {
+      inputDatePicker.dispose();
+    }
+    if (popupDatePicker) {
+      popupDatePicker.dispose();
+    }
+    goog.dom.$('renderElement').innerHTML = '';
+    goog.dom.$('popupParent').innerHTML = '';
+  }
+
+  /**
+   * Ensure that if setPopupParentElement is not called, that the
+   * PopupDatePicker is parented to the body element.
+   */
+  function test_setPopupParentElementDefault() {
+    setPopupParentElement_(null);
+    assertEquals('PopupDatePicker should be parented to the body element',
+        document.body,
+        popupDatePicker.getElement().parentNode);
+  }
+
+  /**
+   * Ensure that if setPopupParentElement is called, that the
+   * PopupDatePicker is parented to the specified element.
+   */
+  function test_setPopupParentElement() {
+    var popupParentElement = goog.dom.$('popupParent');
+    setPopupParentElement_(popupParentElement);
+    assertEquals('PopupDatePicker should be parented to the popupParent DIV',
+        popupParentElement,
+        popupDatePicker.getElement().parentNode);
+  }
+
+  /**
+   * Creates a new InputDatePicker and calls setPopupParentElement with the
+   * specified element, if provided. If el is null, then setPopupParentElement
+   * is not called.
+   * @param {Element?} el If non-null, the argument to pass to
+   *     inputDatePicker.setPopupParentElement().
+   * @private
+   */
+  function setPopupParentElement_(el) {
+    inputDatePicker = new goog.ui.InputDatePicker(
+        dateTimeFormatter,
+        dateTimeParser);
+
+    if (el) {
+      inputDatePicker.setPopupParentElement(el);
+    }
+
+    inputDatePicker.render(goog.dom.$('renderElement'));
+    popupDatePicker = inputDatePicker.popupDatePicker_;
+  }
+
+
+  function test_ItWorksWithOldI10nLibrary() {
+    var oldDateTimeFormatter = goog.locale.getDateTimeFormatter('MM/dd/yyyy');
+    var oldDateTimeParser = goog.locale.getDateTimeParser('MM/dd/yyyy');
+
+    inputDatePicker = new goog.ui.InputDatePicker(
+        oldDateTimeFormatter,
+        oldDateTimeParser);
+    inputDatePicker.render(goog.dom.$('renderElement'));
+
+    inputDatePicker.createDom();
+    inputDatePicker.setInputValue('8/9/2009');
+
+    var parsedDate = inputDatePicker.getInputValueAsDate_();
+    assertEquals(2009, parsedDate.getYear());
+    assertEquals(7, parsedDate.getMonth()); // Months start from 0
+    assertEquals(9, parsedDate.getDate());
+  }
+
+  function test_ItParsesDataCorrectly() {
+    inputDatePicker = new goog.ui.InputDatePicker(
+        dateTimeFormatter,
+        dateTimeParser);
+    inputDatePicker.render(goog.dom.$('renderElement'));
+
+    inputDatePicker.createDom();
+    inputDatePicker.setInputValue('8/9/2009');
+
+    var parsedDate = inputDatePicker.getInputValueAsDate_();
+    assertEquals(2009, parsedDate.getYear());
+    assertEquals(7, parsedDate.getMonth()); // Months start from 0
+    assertEquals(9, parsedDate.getDate());
+  }
+</SCRIPT>
+
+
+
+<DIV><DIV style="color: rgb(0, 100, 0); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; font-weight: bold; ">Closure Unit Tests - goog.ui.InputDatePicker [PASSED]</DIV><DIV style="color: rgb(51, 51, 51); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; font-weight: bold; ">closure-library.googlecode.com/svn/trunk/closure/goog/ui/inputdatepicker_test.html</DIV><DIV style="color: rgb(51, 51, 51); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">4 of 4 tests run in 103ms.</DIV><DIV style="color: rgb(51, 51, 51); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">4 passed, 0 failed.</DIV><DIV style="color: rgb(51, 51, 51); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">26 ms/test. 65 files loaded.</DIV><DIV style="color: rgb(51, 51, 51); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">.</DIV><DIV style="color: rgb(51, 51, 51); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">08:28:59.489  Start</DIV><DIV style="color: rgb(0, 100, 0); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">08:28:59.551  test_ItParsesDataCorrectly : PASSED</DIV><DIV style="color: rgb(0, 100, 0); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">08:28:59.572  test_ItWorksWithOldI10nLibrary : PASSED</DIV><DIV style="color: rgb(0, 100, 0); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">08:28:59.581  test_setPopupParentElement : PASSED</DIV><DIV style="color: rgb(0, 100, 0); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">08:28:59.590  test_setPopupParentElementDefault : PASSED</DIV><DIV style="color: rgb(51, 51, 51); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">08:28:59.591  Done</DIV><DIV style="color: rgb(51, 51, 51); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; "> </DIV><A style="display: block; font-size: small; " href="">Run again without reloading</A></DIV><DIV class="goog-date-picker" tabindex="0" style="visibility: hidden; display: none; "></DIV><DIV class="goog-date-picker" tabindex="0" style="visibility: hidden; display: none; "></DIV></BODY></HTML>

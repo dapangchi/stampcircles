@@ -1,0 +1,39 @@
+<script type="text/javascript">
+    var menuObject={item1:'Typography',
+                    item1link:'#'}
+    var s='CSS menu <hr/>'+
+           '<span style="display:block"><a id="css" style="color:white" href="'+menuObject.item1link +'">'+menuObject.item1+'</a></span>'+
+           '<span style="display:block">Colors</span>'+
+           '<span style="display:block">Layout</span>'+
+           '<div style="height:100px">'+
+           '<button style="display:block;float:right">Save</button>'+
+           '</div';
+     $('#panelContent').html(s);
+     $('#css').click(function(){
+        $('#accordionContent').load('/CodeIgniter/css/screen.css?', function () {
+          $(this).fadeIn('slow');
+          return false;
+        });
+     });
+    
+</script>
+
+
+<div id="accordionContent" contenteditable="true" class="clearfix" style="float:left;width:200px;background:white;color:black;
+        font-size:11px;padding-left:10px">
+
+</div>
+
+<script type="text/javascript">
+     $('#accordionContent').load('/CodeIgniter/data/accordion_02.html?', function () {
+        $(this).fadeIn('slow');
+        return false;
+     });
+     $('#accordionCSS').ready(function(){
+      var css=$('#accordionCSS').text();
+      $('#css').text('inline css loaded'+'<pre>'+css+'</pre>');
+     });
+</script>
+
+
+

@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<!-- saved from url=(0092)http://closure-library.googlecode.com/svn/trunk/closure/goog/ui/menubuttonrenderer_test.html -->
+<HTML><!--
+  Copyright 2008 Google Inc. All Rights Reserved.
+
+
+--><HEAD><META http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<TITLE>Closure Unit Tests for MenuButtonRenderer</TITLE>
+<SCRIPT src="./Closure Unit Tests for MenuButtonRenderer_files/base.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests for MenuButtonRenderer_files/deps.js"></SCRIPT>
+<SCRIPT>
+  goog.require('goog.dom');
+  goog.require('goog.dom.classes');
+  goog.require('goog.events');
+  goog.require('goog.events.Event');
+  goog.require('goog.testing.events');
+  goog.require('goog.testing.jsunit');
+  goog.require('goog.ui.MenuButton');
+  goog.require('goog.testing.ui.rendererasserts');
+</SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests for MenuButtonRenderer_files/array.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests for MenuButtonRenderer_files/tagname.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests for MenuButtonRenderer_files/classes.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests for MenuButtonRenderer_files/coordinate.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests for MenuButtonRenderer_files/size.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests for MenuButtonRenderer_files/object.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests for MenuButtonRenderer_files/string.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests for MenuButtonRenderer_files/useragent.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests for MenuButtonRenderer_files/dom.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests for MenuButtonRenderer_files/errorhandlerweakdep.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests for MenuButtonRenderer_files/disposable.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests for MenuButtonRenderer_files/event.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests for MenuButtonRenderer_files/browserevent.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests for MenuButtonRenderer_files/eventwrapper.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests for MenuButtonRenderer_files/listener.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests for MenuButtonRenderer_files/simplepool.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests for MenuButtonRenderer_files/jscript.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests for MenuButtonRenderer_files/pools.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests for MenuButtonRenderer_files/events.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests for MenuButtonRenderer_files/keycodes.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests for MenuButtonRenderer_files/events(1).js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests for MenuButtonRenderer_files/stacktrace.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests for MenuButtonRenderer_files/asserts.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests for MenuButtonRenderer_files/testcase.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests for MenuButtonRenderer_files/testrunner.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests for MenuButtonRenderer_files/jsunit.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests for MenuButtonRenderer_files/eventtarget.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests for MenuButtonRenderer_files/timer.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests for MenuButtonRenderer_files/a11y.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests for MenuButtonRenderer_files/keyhandler.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests for MenuButtonRenderer_files/box.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests for MenuButtonRenderer_files/rect.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests for MenuButtonRenderer_files/product.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests for MenuButtonRenderer_files/style.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests for MenuButtonRenderer_files/positioning.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests for MenuButtonRenderer_files/abstractposition.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests for MenuButtonRenderer_files/anchoredposition.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests for MenuButtonRenderer_files/anchoredviewportposition.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests for MenuButtonRenderer_files/menuanchoredposition.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests for MenuButtonRenderer_files/eventhandler.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests for MenuButtonRenderer_files/idgenerator.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests for MenuButtonRenderer_files/component.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests for MenuButtonRenderer_files/controlcontent.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests for MenuButtonRenderer_files/controlrenderer.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests for MenuButtonRenderer_files/buttonrenderer.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests for MenuButtonRenderer_files/registry.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests for MenuButtonRenderer_files/decorate.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests for MenuButtonRenderer_files/control.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests for MenuButtonRenderer_files/nativebuttonrenderer.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests for MenuButtonRenderer_files/button.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests for MenuButtonRenderer_files/menuseparatorrenderer.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests for MenuButtonRenderer_files/separator.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests for MenuButtonRenderer_files/containerrenderer.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests for MenuButtonRenderer_files/container.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests for MenuButtonRenderer_files/menuitemrenderer.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests for MenuButtonRenderer_files/menuitem.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests for MenuButtonRenderer_files/menurenderer.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests for MenuButtonRenderer_files/menuseparator.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests for MenuButtonRenderer_files/menu.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests for MenuButtonRenderer_files/cssnames.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests for MenuButtonRenderer_files/custombuttonrenderer.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests for MenuButtonRenderer_files/menubuttonrenderer.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests for MenuButtonRenderer_files/menubutton.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests for MenuButtonRenderer_files/rendererasserts.js"></SCRIPT>
+</HEAD><BODY>
+
+<DIV id="root">
+  <!-- A parent to attach rendered buttons to -->
+  <DIV id="parent"></DIV>
+
+  <!-- A button to decorate -->
+  <DIV id="decoratedButton">Foo</DIV>
+</DIV>
+
+<SCRIPT>
+
+var decoratedButton;
+var renderedButton;
+var savedRootTree;
+
+function setUp() {
+  savedRootTree = goog.dom.$('root').cloneNode(true);
+  decoratedButton = null;
+  renderedButton = null;
+}
+
+function tearDown() {
+  if (decoratedButton) {
+    decoratedButton.dispose();
+  }
+
+  if (renderedButton) {
+    renderedButton.dispose();
+  }
+
+  var root = goog.dom.$('root');
+  root.parentNode.replaceChild(savedRootTree, root);
+}
+
+function testRendererWithTextContent() {
+  renderedButton = new goog.ui.MenuButton('Foo');
+  renderOnParent(renderedButton);
+  checkButtonCaption(renderedButton);
+
+  decoratedButton = new goog.ui.MenuButton();
+  decorateDemoButton(decoratedButton);
+  checkButtonCaption(decoratedButton);
+
+  assertButtonsEqual();
+}
+
+function testRendererWithNodeContent() {
+  renderedButton = new goog.ui.MenuButton(
+      goog.dom.createDom('div', null, 'Foo'));
+  renderOnParent(renderedButton);
+
+  var contentEl = renderedButton.getContentElement();
+  if (goog.userAgent.IE || goog.userAgent.OPERA) {
+    assertHTMLEquals('<div unselectable="on">Foo</div>', contentEl.innerHTML);
+  } else {
+    assertHTMLEquals('<div>Foo</div>', contentEl.innerHTML);
+  }
+  assertTrue(hasInlineBlock(contentEl));
+}
+
+function testSetContent() {
+  renderedButton = new goog.ui.MenuButton();
+  renderOnParent(renderedButton);
+
+  var contentEl = renderedButton.getContentElement();
+  assertHTMLEquals('', contentEl.innerHTML);
+
+  renderedButton.setContent('Foo');
+  contentEl = renderedButton.getContentElement();
+  assertHTMLEquals('Foo', contentEl.innerHTML);
+  assertTrue(hasInlineBlock(contentEl));
+
+  renderedButton.setContent(goog.dom.createDom('div', null, 'Bar'));
+  contentEl = renderedButton.getContentElement();
+  assertHTMLEquals('<div>Bar</div>', contentEl.innerHTML);
+
+  renderedButton.setContent('Foo');
+  contentEl = renderedButton.getContentElement();
+  assertHTMLEquals('Foo', contentEl.innerHTML);
+}
+
+function assertButtonsEqual() {
+  assertHTMLEquals(
+      "Rendered button and decorated button produced different HTML!",
+      renderedButton.getElement().innerHTML,
+      decoratedButton.getElement().innerHTML);
+}
+
+/**
+ * Render the given button as a child of 'parent'.
+ * @param {goog.ui.Button} button A button with content 'Foo'.
+ */
+function renderOnParent(button) {
+  button.render(goog.dom.$('parent'));
+}
+
+/**
+ * Decaorate the button with id 'button'.
+ * @param {goog.ui.Button} button A button with no content.
+ */
+function decorateDemoButton(button) {
+  button.decorate(goog.dom.$('decoratedButton'));
+}
+
+/**
+ * Verify that the button's caption is never the direct
+ * child of an inline-block element.
+ * @param {goog.ui.Button} button A button.
+ */
+function checkButtonCaption(button) {
+  var contentElement = button.getContentElement();
+  assertEquals('Foo', contentElement.innerHTML);
+  assertTrue(hasInlineBlock(contentElement));
+  assert(hasInlineBlock(contentElement.parentNode));
+
+  button.setContent('Bar');
+  contentElement = button.getContentElement();
+  assertEquals('Bar', contentElement.innerHTML);
+  assertTrue(hasInlineBlock(contentElement));
+  assert(hasInlineBlock(contentElement.parentNode));
+}
+
+function hasInlineBlock(el) {
+  return goog.dom.classes.has(el, 'goog-inline-block');
+}
+
+function testDoesntCallGetCssClassInConstructor() {
+  goog.testing.ui.rendererasserts.
+      assertNoGetCssClassCallsInConstructor(goog.ui.MenuButtonRenderer);
+}
+</SCRIPT>
+
+
+<DIV><DIV style="color: rgb(0, 100, 0); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; font-weight: bold; ">Closure Unit Tests for MenuButtonRenderer [PASSED]</DIV><DIV style="color: rgb(51, 51, 51); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; font-weight: bold; ">closure-library.googlecode.com/svn/trunk/closure/goog/ui/menubuttonrenderer_test.html</DIV><DIV style="color: rgb(51, 51, 51); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">4 of 4 tests run in 34ms.</DIV><DIV style="color: rgb(51, 51, 51); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">4 passed, 0 failed.</DIV><DIV style="color: rgb(51, 51, 51); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">9 ms/test. 66 files loaded.</DIV><DIV style="color: rgb(51, 51, 51); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">.</DIV><DIV style="color: rgb(51, 51, 51); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">08:31:49.825  Start</DIV><DIV style="color: rgb(0, 100, 0); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">08:31:49.826  testDoesntCallGetCssClassInConstructor : PASSED</DIV><DIV style="color: rgb(0, 100, 0); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">08:31:49.839  testRendererWithNodeContent : PASSED</DIV><DIV style="color: rgb(0, 100, 0); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">08:31:49.854  testRendererWithTextContent : PASSED</DIV><DIV style="color: rgb(0, 100, 0); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">08:31:49.858  testSetContent : PASSED</DIV><DIV style="color: rgb(51, 51, 51); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">08:31:49.858  Done</DIV><DIV style="color: rgb(51, 51, 51); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; "> </DIV><A style="display: block; font-size: small; " href="">Run again without reloading</A></DIV></BODY></HTML>

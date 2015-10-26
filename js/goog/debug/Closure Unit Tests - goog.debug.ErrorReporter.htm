@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<!-- saved from url=(0090)http://closure-library.googlecode.com/svn/trunk/closure/goog/debug/errorreporter_test.html -->
+<HTML><!--
+  Copyright 2009 Google Inc. All Rights Reserved.
+
+--><HEAD><META http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<TITLE>Closure Unit Tests - goog.debug.ErrorReporter</TITLE>
+<!-- These paths should be relative to the test -->
+<SCRIPT src="./Closure Unit Tests - goog.debug.ErrorReporter_files/base.js" type="text/javascript"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.debug.ErrorReporter_files/deps.js"></SCRIPT>
+<SCRIPT type="text/javascript">
+  goog.require('goog.debug.ErrorReporter');
+  goog.require('goog.testing.jsunit');
+  goog.require('goog.testing.PropertyReplacer');
+  goog.require('goog.userAgent');
+</SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.debug.ErrorReporter_files/array.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.debug.ErrorReporter_files/string.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.debug.ErrorReporter_files/object.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.debug.ErrorReporter_files/structs.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.debug.ErrorReporter_files/iter.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.debug.ErrorReporter_files/map.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.debug.ErrorReporter_files/asserts.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.debug.ErrorReporter_files/utils.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.debug.ErrorReporter_files/uri.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.debug.ErrorReporter_files/set.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.debug.ErrorReporter_files/debug.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.debug.ErrorReporter_files/logrecord.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.debug.ErrorReporter_files/logger.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.debug.ErrorReporter_files/disposable.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.debug.ErrorReporter_files/simplepool.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.debug.ErrorReporter_files/tracer.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.debug.ErrorReporter_files/errorhandler.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.debug.ErrorReporter_files/errorhandlerweakdep.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.debug.ErrorReporter_files/event.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.debug.ErrorReporter_files/useragent.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.debug.ErrorReporter_files/browserevent.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.debug.ErrorReporter_files/eventwrapper.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.debug.ErrorReporter_files/listener.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.debug.ErrorReporter_files/jscript.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.debug.ErrorReporter_files/pools.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.debug.ErrorReporter_files/events.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.debug.ErrorReporter_files/eventtarget.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.debug.ErrorReporter_files/timer.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.debug.ErrorReporter_files/json.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.debug.ErrorReporter_files/errorcode.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.debug.ErrorReporter_files/eventtype.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.debug.ErrorReporter_files/xmlhttp.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.debug.ErrorReporter_files/xhrmonitor.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.debug.ErrorReporter_files/xhrio.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.debug.ErrorReporter_files/errorreporter.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.debug.ErrorReporter_files/stacktrace.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.debug.ErrorReporter_files/asserts(1).js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.debug.ErrorReporter_files/testcase.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.debug.ErrorReporter_files/testrunner.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.debug.ErrorReporter_files/jsunit.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.debug.ErrorReporter_files/propertyreplacer.js"></SCRIPT>
+</HEAD><BODY>
+<SCRIPT type="text/javascript">
+  MockXhrIo = function() {};
+
+  MockXhrIo.protectEntryPoints = function() {};
+
+  MockXhrIo.lastUrl = null;
+
+  MockXhrIo.send = function(url) {
+    MockXhrIo.lastUrl = url;
+  };
+
+  var stubs = new goog.testing.PropertyReplacer();
+
+  function setUp() {
+    stubs.set(goog.net, 'XhrIo', MockXhrIo);
+  }
+
+  function tearDown() {
+    stubs.reset();
+    MockXhrIo.lastUrl = null;
+  }
+
+  function throwAnErrorWith(script, line, message) {
+    var error = {
+        message: message,
+        fileName: script,
+        lineNumber: line};
+    throw error;
+  }
+
+  function test_nonInternetExplorerSendErrorReport() {
+    stubs.set(goog.userAgent, 'IE', false);
+    stubs.set(goog.global, 'setTimeout',
+        function(fcn, time) {
+          fcn.call();
+        });
+
+    goog.debug.ErrorReporter.install("/errorreporter");
+
+    var errorFunction = goog.bind(
+      throwAnErrorWith, null, "http://www.my.tst/some/bogus.js", 5, "Hello :)");
+
+    try {
+      goog.global.setTimeout(errorFunction, 0);
+    } catch (e) {
+      // Expected. The error is rethrown after sending.
+    }
+
+    assertEquals("/errorreporter?script=bogus.js&error=Hello%20%3A)&line=5",
+        MockXhrIo.lastUrl);
+  }
+
+  function test_internetExplorerSendErrorReport() {
+    stubs.set(goog.userAgent, 'IE', true);
+
+    // Remove test runner's onerror handler so the test doesn't fail.
+    stubs.set(goog.global, 'onerror', null);
+
+    goog.debug.ErrorReporter.install("/errorreporter");
+    goog.global.onerror("Goodbye :(", "http://www.your.tst/more/bogus.js", 22);
+    assertEquals("/errorreporter?script=bogus.js&error=Goodbye%20%3A(&line=22",
+        MockXhrIo.lastUrl);
+  }
+</SCRIPT>
+
+
+<DIV><DIV style="color: rgb(0, 100, 0); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; font-weight: bold; ">Closure Unit Tests - goog.debug.ErrorReporter [PASSED]</DIV><DIV style="color: rgb(51, 51, 51); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; font-weight: bold; ">closure-library.googlecode.com/svn/trunk/closure/goog/debug/errorreporter_test.html</DIV><DIV style="color: rgb(51, 51, 51); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">2 of 2 tests run in 15ms.</DIV><DIV style="color: rgb(51, 51, 51); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">2 passed, 0 failed.</DIV><DIV style="color: rgb(51, 51, 51); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">8 ms/test. 43 files loaded.</DIV><DIV style="color: rgb(51, 51, 51); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">.</DIV><DIV style="color: rgb(51, 51, 51); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">04:20:49.015  Start</DIV><DIV style="color: rgb(0, 100, 0); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">04:20:49.027  test_internetExplorerSendErrorReport : PASSED</DIV><DIV style="color: rgb(0, 100, 0); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">04:20:49.030  test_nonInternetExplorerSendErrorReport : PASSED</DIV><DIV style="color: rgb(51, 51, 51); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">04:20:49.030  Done</DIV><DIV style="color: rgb(51, 51, 51); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; "> </DIV><A style="display: block; font-size: small; " href="">Run again without reloading</A></DIV></BODY></HTML>

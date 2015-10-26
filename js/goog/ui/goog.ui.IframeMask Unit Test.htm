@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<!-- saved from url=(0084)http://closure-library.googlecode.com/svn/trunk/closure/goog/ui/iframemask_test.html -->
+<HTML><!--
+  Copyright 2008 Google Inc. All Rights Reserved.
+
+
+
+--><HEAD><META http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<TITLE>goog.ui.IframeMask Unit Test</TITLE>
+<SCRIPT src="./goog.ui.IframeMask Unit Test_files/base.js"></SCRIPT><SCRIPT type="text/javascript" src="./goog.ui.IframeMask Unit Test_files/deps.js"></SCRIPT>
+<SCRIPT>
+  goog.require('goog.testing.jsunit');
+  goog.require('goog.testing.MockClock');
+  goog.require('goog.testing.StrictMock');
+  goog.require('goog.ui.IframeMask');
+  goog.require('goog.ui.Popup');
+  goog.require('goog.structs.Pool');
+</SCRIPT><SCRIPT type="text/javascript" src="./goog.ui.IframeMask Unit Test_files/stacktrace.js"></SCRIPT><SCRIPT type="text/javascript" src="./goog.ui.IframeMask Unit Test_files/asserts.js"></SCRIPT><SCRIPT type="text/javascript" src="./goog.ui.IframeMask Unit Test_files/testcase.js"></SCRIPT><SCRIPT type="text/javascript" src="./goog.ui.IframeMask Unit Test_files/testrunner.js"></SCRIPT><SCRIPT type="text/javascript" src="./goog.ui.IframeMask Unit Test_files/jsunit.js"></SCRIPT><SCRIPT type="text/javascript" src="./goog.ui.IframeMask Unit Test_files/disposable.js"></SCRIPT><SCRIPT type="text/javascript" src="./goog.ui.IframeMask Unit Test_files/mockclock.js"></SCRIPT><SCRIPT type="text/javascript" src="./goog.ui.IframeMask Unit Test_files/array.js"></SCRIPT><SCRIPT type="text/javascript" src="./goog.ui.IframeMask Unit Test_files/tagname.js"></SCRIPT><SCRIPT type="text/javascript" src="./goog.ui.IframeMask Unit Test_files/classes.js"></SCRIPT><SCRIPT type="text/javascript" src="./goog.ui.IframeMask Unit Test_files/coordinate.js"></SCRIPT><SCRIPT type="text/javascript" src="./goog.ui.IframeMask Unit Test_files/size.js"></SCRIPT><SCRIPT type="text/javascript" src="./goog.ui.IframeMask Unit Test_files/object.js"></SCRIPT><SCRIPT type="text/javascript" src="./goog.ui.IframeMask Unit Test_files/string.js"></SCRIPT><SCRIPT type="text/javascript" src="./goog.ui.IframeMask Unit Test_files/useragent.js"></SCRIPT><SCRIPT type="text/javascript" src="./goog.ui.IframeMask Unit Test_files/dom.js"></SCRIPT><SCRIPT type="text/javascript" src="./goog.ui.IframeMask Unit Test_files/mockmatchers.js"></SCRIPT><SCRIPT type="text/javascript" src="./goog.ui.IframeMask Unit Test_files/mock.js"></SCRIPT><SCRIPT type="text/javascript" src="./goog.ui.IframeMask Unit Test_files/strictmock.js"></SCRIPT><SCRIPT type="text/javascript" src="./goog.ui.IframeMask Unit Test_files/errorhandlerweakdep.js"></SCRIPT><SCRIPT type="text/javascript" src="./goog.ui.IframeMask Unit Test_files/event.js"></SCRIPT><SCRIPT type="text/javascript" src="./goog.ui.IframeMask Unit Test_files/browserevent.js"></SCRIPT><SCRIPT type="text/javascript" src="./goog.ui.IframeMask Unit Test_files/eventwrapper.js"></SCRIPT><SCRIPT type="text/javascript" src="./goog.ui.IframeMask Unit Test_files/listener.js"></SCRIPT><SCRIPT type="text/javascript" src="./goog.ui.IframeMask Unit Test_files/simplepool.js"></SCRIPT><SCRIPT type="text/javascript" src="./goog.ui.IframeMask Unit Test_files/jscript.js"></SCRIPT><SCRIPT type="text/javascript" src="./goog.ui.IframeMask Unit Test_files/pools.js"></SCRIPT><SCRIPT type="text/javascript" src="./goog.ui.IframeMask Unit Test_files/events.js"></SCRIPT><SCRIPT type="text/javascript" src="./goog.ui.IframeMask Unit Test_files/eventtarget.js"></SCRIPT><SCRIPT type="text/javascript" src="./goog.ui.IframeMask Unit Test_files/timer.js"></SCRIPT><SCRIPT type="text/javascript" src="./goog.ui.IframeMask Unit Test_files/iframe.js"></SCRIPT><SCRIPT type="text/javascript" src="./goog.ui.IframeMask Unit Test_files/eventhandler.js"></SCRIPT><SCRIPT type="text/javascript" src="./goog.ui.IframeMask Unit Test_files/box.js"></SCRIPT><SCRIPT type="text/javascript" src="./goog.ui.IframeMask Unit Test_files/rect.js"></SCRIPT><SCRIPT type="text/javascript" src="./goog.ui.IframeMask Unit Test_files/product.js"></SCRIPT><SCRIPT type="text/javascript" src="./goog.ui.IframeMask Unit Test_files/style.js"></SCRIPT><SCRIPT type="text/javascript" src="./goog.ui.IframeMask Unit Test_files/iframemask.js"></SCRIPT><SCRIPT type="text/javascript" src="./goog.ui.IframeMask Unit Test_files/positioning.js"></SCRIPT><SCRIPT type="text/javascript" src="./goog.ui.IframeMask Unit Test_files/abstractposition.js"></SCRIPT><SCRIPT type="text/javascript" src="./goog.ui.IframeMask Unit Test_files/absoluteposition.js"></SCRIPT><SCRIPT type="text/javascript" src="./goog.ui.IframeMask Unit Test_files/anchoredposition.js"></SCRIPT><SCRIPT type="text/javascript" src="./goog.ui.IframeMask Unit Test_files/anchoredviewportposition.js"></SCRIPT><SCRIPT type="text/javascript" src="./goog.ui.IframeMask Unit Test_files/clientposition.js"></SCRIPT><SCRIPT type="text/javascript" src="./goog.ui.IframeMask Unit Test_files/viewportclientposition.js"></SCRIPT><SCRIPT type="text/javascript" src="./goog.ui.IframeMask Unit Test_files/viewportposition.js"></SCRIPT><SCRIPT type="text/javascript" src="./goog.ui.IframeMask Unit Test_files/keycodes.js"></SCRIPT><SCRIPT type="text/javascript" src="./goog.ui.IframeMask Unit Test_files/popupbase.js"></SCRIPT><SCRIPT type="text/javascript" src="./goog.ui.IframeMask Unit Test_files/popup.js"></SCRIPT><SCRIPT type="text/javascript" src="./goog.ui.IframeMask Unit Test_files/iter.js"></SCRIPT><SCRIPT type="text/javascript" src="./goog.ui.IframeMask Unit Test_files/queue.js"></SCRIPT><SCRIPT type="text/javascript" src="./goog.ui.IframeMask Unit Test_files/structs.js"></SCRIPT><SCRIPT type="text/javascript" src="./goog.ui.IframeMask Unit Test_files/map.js"></SCRIPT><SCRIPT type="text/javascript" src="./goog.ui.IframeMask Unit Test_files/set.js"></SCRIPT><SCRIPT type="text/javascript" src="./goog.ui.IframeMask Unit Test_files/pool.js"></SCRIPT>
+<STYLE type="text/css">
+#popup {
+  position: absolute;
+  left: 100px;
+  top: 900px; /* so that you can see unit test failures */
+  width: 300px;
+  height: 400px;
+}
+</STYLE>
+</HEAD><BODY>
+
+<DIV id="sandbox"><DIV id="popup"></DIV></DIV>
+
+<SCRIPT>
+
+var iframeMask;
+var mockClock;
+
+function setUp() {
+  goog.dom.$('sandbox').innerHTML = '<div id="popup"></div>';
+  mockClock = new goog.testing.MockClock(true);
+
+  iframeMask = new goog.ui.IframeMask();
+}
+
+function tearDown() {
+  iframeMask.dispose();
+  mockClock.dispose();
+
+  assertNoIframes();
+}
+
+function findOneAndOnlyIframe() {
+  var iframes = goog.dom.$$(goog.dom.TagName.IFRAME);
+  assertEquals('There should be exactly 1 iframe in the document',
+      1, iframes.length);
+  return iframes[0];
+}
+
+function assertNoIframes() {
+  assertEquals('Expected no iframes in the document', 0,
+      goog.dom.$$(goog.dom.TagName.IFRAME).length);
+}
+
+function testApplyFullScreenMask() {
+  iframeMask.applyMask();
+
+  var iframe = findOneAndOnlyIframe();
+  assertEquals('block', iframe.style.display);
+  assertEquals('absolute', iframe.style.position);
+
+  // coerce zindex to a string
+  assertEquals('1', iframe.style.zIndex + '');
+
+  iframeMask.hideMask();
+  assertEquals('none', iframe.style.display);
+}
+
+function testApplyOpacity() {
+  iframeMask.setOpacity(0.3);
+  iframeMask.applyMask();
+
+  if (goog.userAgent.IE) {
+    assertContains('Expected opactity to be set in the CSS style',
+        '30', findOneAndOnlyIframe().style.cssText);
+  } else {
+    assertContains('Expected opactity to be set in the CSS style',
+        '0.3', findOneAndOnlyIframe().style.cssText);
+  }
+}
+
+function testApplyZIndex() {
+  iframeMask.setZIndex(5);
+  iframeMask.applyMask();
+
+  // coerce zindex to a string
+  assertEquals('5', findOneAndOnlyIframe().style.zIndex + '');
+}
+
+function testSnapElement() {
+  iframeMask.setSnapElement(goog.dom.$('popup'));
+  iframeMask.applyMask();
+
+  var iframe = findOneAndOnlyIframe();
+  var bounds = goog.style.getBounds(iframe);
+  assertEquals(100, bounds.left);
+  assertEquals(900, bounds.top);
+  assertEquals(300, bounds.width);
+  assertEquals(400, bounds.height);
+
+  iframeMask.setSnapElement(document.documentElement);
+
+  // Make sure that snapping to a different element changes the bounds.
+  assertNotEquals('Snap element not updated',
+      400, goog.style.getBounds(iframe).height);
+}
+
+function testAttachToPopup() {
+  var popup = new goog.ui.Popup(goog.dom.$('popup'));
+  iframeMask.listenOnTarget(popup, goog.ui.PopupBase.EventType.SHOW,
+      goog.ui.PopupBase.EventType.HIDE, goog.dom.$('popup'));
+
+  assertNoIframes();
+  popup.setVisible(true);
+  assertNoIframes();
+
+  // Tick because the showing of the iframe mask happens asynchronously.
+  // (Otherwise the handling of the mousedown can take so long that a bounce
+  // occurs).
+  mockClock.tick(1);
+
+  var iframe = findOneAndOnlyIframe();
+  var bounds = goog.style.getBounds(iframe);
+  assertEquals(300, bounds.width);
+  assertEquals(400, bounds.height);
+  assertEquals('block', iframe.style.display);
+
+  popup.setVisible(false);
+  assertEquals('none', iframe.style.display);
+}
+
+function testQuickHidingPopup() {
+  var popup = new goog.ui.Popup(goog.dom.$('popup'));
+  iframeMask.listenOnTarget(popup, goog.ui.PopupBase.EventType.SHOW,
+      goog.ui.PopupBase.EventType.HIDE);
+
+  assertNoIframes();
+  popup.setVisible(true);
+  assertNoIframes();
+  popup.setVisible(false);
+  assertNoIframes();
+
+  // Tick because the showing of the iframe mask happens asynchronously.
+  // (Otherwise the handling of the mousedown can take so long that a bounce
+  // occurs).
+  mockClock.tick(1);
+  assertNoIframes();
+}
+
+function testRemoveHandlers() {
+  var popup = new goog.ui.Popup(goog.dom.$('popup'));
+  iframeMask.listenOnTarget(popup, goog.ui.PopupBase.EventType.SHOW,
+      goog.ui.PopupBase.EventType.HIDE);
+  iframeMask.removeHandlers();
+  popup.setVisible(true);
+
+  // Tick because the showing of the iframe mask happens asynchronously.
+  // (Otherwise the handling of the mousedown can take so long that a bounce
+  // occurs).
+  mockClock.tick(1);
+  assertNoIframes();
+}
+
+function testIframePool() {
+  var iframe = goog.dom.iframe.createBlank(goog.dom.getDomHelper());
+  var mockPool = new goog.testing.StrictMock(goog.structs.Pool);
+  mockPool.getObject();
+  mockPool.$returns(iframe);
+
+  mockPool.$replay();
+
+  iframeMask.dispose();
+
+  // Create a new iframe mask with a pool, and verify that it checks
+  // its iframe out of the pool instead of creating one.
+  iframeMask = new goog.ui.IframeMask(null, mockPool);
+  iframeMask.applyMask();
+  mockPool.$verify();
+  findOneAndOnlyIframe();
+
+  mockPool.$reset();
+  
+  mockPool.releaseObject(iframe);
+  mockPool.$replay();
+
+  // When the iframe mask has a pool, the pool is responsible for
+  // removing the iframe from the DOM.
+  iframeMask.hideMask();
+  mockPool.$verify();
+  findOneAndOnlyIframe()
+
+  // And showing the iframe again should check it out of the pool again.
+  mockPool.$reset();
+  mockPool.getObject();
+  mockPool.$returns(iframe);
+  mockPool.$replay();
+  
+  iframeMask.applyMask();
+  mockPool.$verify();
+
+  // When the test is over, the iframe mask should be disposed. Make sure
+  // that the pool removes the iframe from the page.
+  mockPool.$reset();
+  mockPool.releaseObject(iframe);
+  mockPool.$does(function() {
+    goog.dom.removeNode(iframe);
+  });
+  mockPool.$replay();
+}
+
+</SCRIPT>
+
+
+
+<DIV><DIV style="color: rgb(0, 100, 0); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; font-weight: bold; ">goog.ui.IframeMask Unit Test [PASSED]</DIV><DIV style="color: rgb(51, 51, 51); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; font-weight: bold; ">closure-library.googlecode.com/svn/trunk/closure/goog/ui/iframemask_test.html</DIV><DIV style="color: rgb(51, 51, 51); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">8 of 8 tests run in 362ms.</DIV><DIV style="color: rgb(51, 51, 51); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">8 passed, 0 failed.</DIV><DIV style="color: rgb(51, 51, 51); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">45 ms/test. 56 files loaded.</DIV><DIV style="color: rgb(51, 51, 51); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">.</DIV><DIV style="color: rgb(51, 51, 51); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">08:28:24.300  Start</DIV><DIV style="color: rgb(0, 100, 0); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">08:28:24.500  testApplyFullScreenMask : PASSED</DIV><DIV style="color: rgb(0, 100, 0); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">08:28:24.970  testApplyOpacity : PASSED</DIV><DIV style="color: rgb(0, 100, 0); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">08:28:24.130  testApplyZIndex : PASSED</DIV><DIV style="color: rgb(0, 100, 0); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">08:28:24.178  testAttachToPopup : PASSED</DIV><DIV style="color: rgb(0, 100, 0); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">08:28:24.222  testIframePool : PASSED</DIV><DIV style="color: rgb(51, 51, 51); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">08:28:24.223  Breaking async</DIV><DIV style="color: rgb(51, 51, 51); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">08:28:24.323  Start</DIV><DIV style="color: rgb(0, 100, 0); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">08:28:24.325  testQuickHidingPopup : PASSED</DIV><DIV style="color: rgb(0, 100, 0); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">08:28:24.326  testRemoveHandlers : PASSED</DIV><DIV style="color: rgb(0, 100, 0); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">08:28:24.364  testSnapElement : PASSED</DIV><DIV style="color: rgb(51, 51, 51); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">08:28:24.365  Done</DIV><DIV style="color: rgb(51, 51, 51); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; "> </DIV><A style="display: block; font-size: small; " href="">Run again without reloading</A></DIV></BODY></HTML>

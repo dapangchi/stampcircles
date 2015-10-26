@@ -1,0 +1,60 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+            "http://www.w3.org/TR/html4/strict.dtd">
+<!--
+ ! Excerpted from "Mastering Dojo",
+ ! published by The Pragmatic Bookshelf.
+ ! Copyrights apply to this code. It may not be used to create training material, 
+ ! courses, books, articles, and the like. Contact us if you are in doubt.
+ ! We make no guarantees that this code is fit for any purpose. 
+ ! Visit http://www.pragmaticprogrammer.com/titles/rgdojo for more book information.
+-->
+<html>
+<head>
+<title>Unusual Pet Store Application</title>
+    <style type="text/css">
+        @import "/dojoroot/dijit/themes/tundra/tundra.css";
+        @import "/dojoroot/dojo/resources/dojo.css"
+    </style>
+    <script type="text/javascript" src="/dojoroot/dojo/dojo.js" 
+            djConfig="parseOnLoad: true"></script>
+    <script type="text/javascript">
+       dojo.registerModulePath("dojobook","../../dojobook");
+       dojo.require("dojo.parser");
+       dojo.require("dijit.layout.AccordionContainer");
+       dojo.require("dojobook.widgets.DeclarativePortal");
+     </script>
+</head>
+<body class="tundra">
+    
+   <div id="ups" dojoType="dijit.layout.AccordionContainer" 
+        style="width:500px;height:500px">
+
+<div dojoType="dijit.layout.AccordionPane" 
+  title="Madagascar Hissing Cockroach" 
+  href=
+"services/pure_proxy.php?url=\
+  entomology.unl.edu/k12/Croach/roachinfo/roachpage.html"
+></div>
+
+      <div dojoType="dijit.layout.AccordionPane" title="Wallaby" 
+       href="services/pure_proxy.php?url=animals.nationalgeographic.com/animals/mammals/wallaby.html"
+      ></div>
+      <div dojoType="dijit.layout.AccordionPane" title="Hermit Crab"
+       href="services/pure_proxy.php?url=www.hermitcrabassociation.com/phpBB/index.php"
+      ></div>
+   </div>
+   
+   <label for="newUrl">New URL:</label>
+   <input type="text" length="50" id="newUrl">
+   
+   <button dojoType="dijit.form.Button" />
+       Set
+       <script type="dojo/method" event="onClick" args="evt">
+           dojobook.widgets.DeclarativePortal.setUrl();
+       </script>
+   </button>
+</body></html>
+
+
+<!-- To format the book, we needed to break a line of code above with \+enter. -->
+<!-- To run the code, remove this break -->

@@ -1,0 +1,40 @@
+<!-- START:snip400 -->
+<html><head>
+  <title>
+    Mastering Dojo - Remote Scripting
+  </title>
+  
+  <style type="text/css">
+    @import "acme-corp.css";
+  </style>  
+  
+  <script 
+    type="text/javascript" 
+    src="/dojoroot/dojo/dojo.js" 
+    djConfig="isDebug: true"></script>
+    
+  <script 
+    type="text/javascript" 
+    src="acme-corp.js"></script> 
+</head><body>
+  <div class="titleBanner">
+    <h1>Acme Corporation</h1>
+    <p class="tagline">Tools for Coyotes and Cats Named Tom</p>
+  </div>
+  <div id="menu">
+    <p>
+      <a href="#home">Home</a>
+      <a href="#dynamite">Dynamite</a>
+      <a href="#rockets">Rockets</a>
+      <a href="#contraptions">Contraptions</a>
+    </p>
+  </div>
+  <div id="content">
+  </div>
+  <!-- START:snip403 -->  
+  <script type="text/javascript">
+    dojo.back.init();
+  </script>
+  <!-- END:snip403 -->  
+</body></html>
+<!-- END:snip400 -->

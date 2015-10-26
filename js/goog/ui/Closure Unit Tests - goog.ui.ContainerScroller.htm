@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<!-- saved from url=(0091)http://closure-library.googlecode.com/svn/trunk/closure/goog/ui/containerscroller_test.html -->
+<HTML><!--
+Copyright 2008 Google Inc. All Rights Reserved.
+
+--><HEAD><META http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<TITLE>Closure Unit Tests - goog.ui.ContainerScroller</TITLE>
+<SCRIPT src="./Closure Unit Tests - goog.ui.ContainerScroller_files/base.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.ContainerScroller_files/deps.js"></SCRIPT>
+<SCRIPT>
+  goog.require('goog.dom');
+  goog.require('goog.testing.MockClock');
+  goog.require('goog.testing.events');
+  goog.require('goog.testing.jsunit');
+  goog.require('goog.ui.Container');
+  goog.require('goog.ui.ContainerScroller');
+  goog.require('goog.ui.Control');
+</SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.ContainerScroller_files/array.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.ContainerScroller_files/tagname.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.ContainerScroller_files/classes.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.ContainerScroller_files/coordinate.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.ContainerScroller_files/size.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.ContainerScroller_files/object.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.ContainerScroller_files/string.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.ContainerScroller_files/useragent.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.ContainerScroller_files/dom.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.ContainerScroller_files/disposable.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.ContainerScroller_files/mockclock.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.ContainerScroller_files/errorhandlerweakdep.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.ContainerScroller_files/event.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.ContainerScroller_files/browserevent.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.ContainerScroller_files/eventwrapper.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.ContainerScroller_files/listener.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.ContainerScroller_files/simplepool.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.ContainerScroller_files/jscript.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.ContainerScroller_files/pools.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.ContainerScroller_files/events.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.ContainerScroller_files/keycodes.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.ContainerScroller_files/events(1).js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.ContainerScroller_files/stacktrace.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.ContainerScroller_files/asserts.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.ContainerScroller_files/testcase.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.ContainerScroller_files/testrunner.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.ContainerScroller_files/jsunit.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.ContainerScroller_files/a11y.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.ContainerScroller_files/eventtarget.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.ContainerScroller_files/keyhandler.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.ContainerScroller_files/box.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.ContainerScroller_files/rect.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.ContainerScroller_files/product.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.ContainerScroller_files/style.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.ContainerScroller_files/eventhandler.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.ContainerScroller_files/idgenerator.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.ContainerScroller_files/component.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.ContainerScroller_files/controlcontent.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.ContainerScroller_files/controlrenderer.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.ContainerScroller_files/registry.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.ContainerScroller_files/decorate.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.ContainerScroller_files/control.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.ContainerScroller_files/menuseparatorrenderer.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.ContainerScroller_files/separator.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.ContainerScroller_files/containerrenderer.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.ContainerScroller_files/container.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.ContainerScroller_files/timer.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.ContainerScroller_files/containerscroller.js"></SCRIPT>
+<STYLE type="text/css">
+.goog-container {
+  height: 100px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  position: relative;
+  /* Give a border and margin to ensure ContainerScroller is tolerant to
+   * them.  It is, however, not tolerant to padding. */
+  border: 11px solid #666;
+  margin: 7px 13px 17px 19px;
+}
+.goog-control {
+  font-size: 10px;
+  height: 14px;
+  padding: 3px;
+}
+</STYLE>
+</HEAD><BODY>
+<DIV id="sandbox" class="goog-container" style="-webkit-user-select: none; " tabindex="0"><DIV class="goog-control" id="control-0" style="-webkit-user-select: none; ">0</DIV><DIV class="goog-control" id="control-1" style="-webkit-user-select: none; ">1</DIV><DIV class="goog-control" id="control-2" style="-webkit-user-select: none; ">2</DIV><DIV class="goog-control" id="control-3" style="-webkit-user-select: none; ">3</DIV><DIV class="goog-control" id="control-4" style="-webkit-user-select: none; ">4</DIV><DIV class="goog-control" id="control-5" style="-webkit-user-select: none; ">5</DIV><DIV class="goog-control" id="control-6" style="-webkit-user-select: none; ">6</DIV><DIV class="goog-control" id="control-7" style="-webkit-user-select: none; ">7</DIV><DIV class="goog-control" id="control-8" style="-webkit-user-select: none; ">8</DIV><DIV class="goog-control" id="control-9" style="-webkit-user-select: none; ">9</DIV></DIV>
+<SCRIPT>
+
+var sandbox = goog.dom.$('sandbox');
+var container;
+var mockClock;
+var scroller;
+
+function setUp() {
+  container = new goog.ui.Container();
+  container.decorate(sandbox);
+  container.getElement().scrollTop = 0;
+  mockClock = new goog.testing.MockClock(true);
+  scroller = null;
+}
+
+function tearDown() {
+  container.dispose();
+  if (scroller) {
+    scroller.dispose();
+  }
+  // Tick one second to clear all the extra registered events.
+  mockClock.tick(1000);
+  mockClock.uninstall();
+}
+
+function testHighlightFirstStaysAtTop() {
+  scroller = new goog.ui.ContainerScroller(container);
+  container.getChildAt(0).setHighlighted(true);
+  assertEquals(0, container.getElement().scrollTop);
+}
+
+function testHighlightSecondStaysAtTop() {
+  scroller = new goog.ui.ContainerScroller(container);
+  container.getChildAt(1).setHighlighted(true);
+  assertEquals(0, container.getElement().scrollTop);
+}
+
+function testHighlightSecondLastScrollsNearTheBottom() {
+  scroller = new goog.ui.ContainerScroller(container);
+  container.getChildAt(8).setHighlighted(true);
+  assertEquals('Since scrolling is lazy, when highlighting the second' +
+      ' last, the item should be the last visible one.',
+      80, container.getElement().scrollTop);
+}
+
+function testHighlightLastScrollsToBottom() {
+  scroller = new goog.ui.ContainerScroller(container);
+  container.getChildAt(9).setHighlighted(true);
+  assertEquals(100, container.getElement().scrollTop);
+}
+
+function testScrollRestoreIfStillVisible() {
+  scroller = new goog.ui.ContainerScroller(container);
+  container.getChildAt(9).setHighlighted(true);
+  var scrollTop = container.getElement().scrollTop;
+  container.setVisible(false);
+  container.setVisible(true);
+  assertEquals('Scroll position should be the same after restore, if it ' +
+               'still makes highlighted item visible',
+               scrollTop, container.getElement().scrollTop);
+}
+
+function testNoScrollRestoreIfNotVisible() {
+  scroller = new goog.ui.ContainerScroller(container);
+  container.getElement().scrollTop = 100;
+  container.setVisible(false);
+  container.getChildAt(0).setHighlighted(true);
+  container.setVisible(true);
+  assertNotEquals('Scroll position should not be the same after restore, if ' +
+                  'the scroll position when the menu was hidden no longer ' +
+                  'makes the highlighted item visible when the container is ' +
+                  'shown again',
+               100, container.getElement().scrollTop);
+}
+
+function testCenterOnHighlightedOnFirstOpen() {
+  container.setVisible(false);
+  scroller = new goog.ui.ContainerScroller(container);
+  container.getChildAt(4).setHighlighted(true);
+  container.setVisible(true);
+  // #2 should be at the top when 4 is centered, meaning a scroll top
+  // of 40 pixels.
+  assertEquals(
+      'On the very first display of the scroller, the item should be ' +
+      'centered, rather than just assured in view.',
+      40, container.getElement().scrollTop);
+}
+
+function testHighlightsAreIgnoredInResponseToScrolling() {
+  scroller = new goog.ui.ContainerScroller(container);
+  container.getChildAt(9).setHighlighted(true);
+  goog.testing.events.fireMouseOverEvent(
+      goog.dom.$('control-5'),
+      goog.dom.$('control-9'));
+  assertEquals('Mouseovers due to scrolls should be ignored',
+      9, container.getHighlightedIndex());
+}
+
+function testHighlightsAreNotIgnoredWhenNotScrolling() {
+  scroller = new goog.ui.ContainerScroller(container);
+  container.getChildAt(5).setHighlighted(true);
+  mockClock.tick(1000);
+  goog.testing.events.fireMouseOutEvent(
+      goog.dom.$('control-5'),
+      goog.dom.$('control-6'));
+  goog.testing.events.fireMouseOverEvent(
+      goog.dom.$('control-6'),
+      goog.dom.$('control-5'));
+  assertEquals('Mousovers not due to scrolls should not be ignored',
+      6, container.getHighlightedIndex());
+}
+
+function testFastSynchronousHighlightsNotIgnored() {
+  scroller = new goog.ui.ContainerScroller(container);
+  // Whereas subsequent highlights from mouseovers due to a scroll, should
+  // be ignored, they should not ignored if they are made synchronusly
+  // from the code and not from a mouseover.  Imagine how bad it would be
+  // if you could only set the highligted index a certain number of
+  // times in the same execution context.
+  container.getChildAt(9).setHighlighted(true);
+  container.getChildAt(1).setHighlighted(true);
+  assertEquals('Synchronous highlights should NOT be ignored.',
+      1, container.getHighlightedIndex());
+  container.getChildAt(8).setHighlighted(true);
+  assertEquals('Synchronous highlights should NOT be ignored.',
+      8, container.getHighlightedIndex());
+}
+
+function testInitialItemIsCentered() {
+  container.getChildAt(4).setHighlighted(true);
+  scroller = new goog.ui.ContainerScroller(container);
+  // #2 should be at the top when 4 is centered, meaning a scroll top
+  // of 40 pixels.
+  assertEquals(
+      'On the very first attachment of the scroller, the item should be ' +
+      'centered, rather than just assured in view.',
+      40, container.getElement().scrollTop);
+}
+
+function testInitialItemIsCenteredTopItem() {
+  container.getChildAt(0).setHighlighted(true);
+  scroller = new goog.ui.ContainerScroller(container);
+  assertEquals(0, container.getElement().scrollTop);
+}
+
+function testFailsInUncompiledModeWhenContainerHasVerticalPadding() {
+  container.getElement().style.paddingTop = '4px';
+  try {
+    scroller = new goog.ui.ContainerScroller(container);
+    fail('Exception should be thrown when container has padding');
+  } catch (ex) {
+    // Should throw an exception in uncompiled mode.
+  }
+  container.getElement().style.paddingTop = '';
+}
+
+</SCRIPT>
+
+
+<DIV><DIV style="color: rgb(0, 100, 0); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; font-weight: bold; ">Closure Unit Tests - goog.ui.ContainerScroller [PASSED]</DIV><DIV style="color: rgb(51, 51, 51); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; font-weight: bold; ">closure-library.googlecode.com/svn/trunk/closure/goog/ui/containerscroller_test.html</DIV><DIV style="color: rgb(51, 51, 51); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">13 of 13 tests run in 164ms.</DIV><DIV style="color: rgb(51, 51, 51); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">13 passed, 0 failed.</DIV><DIV style="color: rgb(51, 51, 51); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">13 ms/test. 50 files loaded.</DIV><DIV style="color: rgb(51, 51, 51); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">.</DIV><DIV style="color: rgb(51, 51, 51); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">08:19:12.207  Start</DIV><DIV style="color: rgb(0, 100, 0); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">08:19:12.254  testCenterOnHighlightedOnFirstOpen : PASSED</DIV><DIV style="color: rgb(0, 100, 0); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">08:19:12.273  testFailsInUncompiledModeWhenContainerHasVerticalPadding : PASSED</DIV><DIV style="color: rgb(0, 100, 0); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">08:19:12.283  testFastSynchronousHighlightsNotIgnored : PASSED</DIV><DIV style="color: rgb(0, 100, 0); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">08:19:12.290  testHighlightFirstStaysAtTop : PASSED</DIV><DIV style="color: rgb(0, 100, 0); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">08:19:12.324  testHighlightLastScrollsToBottom : PASSED</DIV><DIV style="color: rgb(0, 100, 0); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">08:19:12.329  testHighlightSecondLastScrollsNearTheBottom : PASSED</DIV><DIV style="color: rgb(0, 100, 0); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">08:19:12.334  testHighlightSecondStaysAtTop : PASSED</DIV><DIV style="color: rgb(0, 100, 0); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">08:19:12.341  testHighlightsAreIgnoredInResponseToScrolling : PASSED</DIV><DIV style="color: rgb(0, 100, 0); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">08:19:12.351  testHighlightsAreNotIgnoredWhenNotScrolling : PASSED</DIV><DIV style="color: rgb(0, 100, 0); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">08:19:12.357  testInitialItemIsCentered : PASSED</DIV><DIV style="color: rgb(0, 100, 0); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">08:19:12.361  testInitialItemIsCenteredTopItem : PASSED</DIV><DIV style="color: rgb(0, 100, 0); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">08:19:12.366  testNoScrollRestoreIfNotVisible : PASSED</DIV><DIV style="color: rgb(0, 100, 0); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">08:19:12.370  testScrollRestoreIfStillVisible : PASSED</DIV><DIV style="color: rgb(51, 51, 51); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">08:19:12.370  Done</DIV><DIV style="color: rgb(51, 51, 51); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; "> </DIV><A style="display: block; font-size: small; " href="">Run again without reloading</A></DIV></BODY></HTML>

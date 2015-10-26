@@ -1,0 +1,27 @@
+{
+   "identifier": "wishId",
+   "label": "description",
+   "items": 
+   /* START:array */
+   [
+      /* START:item */ 
+      { 
+        "wishId": 4455, "description": "Don Pepin Garcia Delicias", 
+        "size": "7-50", "origin": "Nicaragua", "wrapper": "Corojo", 
+        "shape": "Straight"   
+      }, 
+      /* END:item */
+      {
+        "wishId": 4456, "description": "601 Habano Robusto", 
+        "size": "5-50", "origin": "Nicaragua", "wrapper": "Natural", 
+        "shape": "Straight"   
+      }, 
+      {
+        "wishId": 4457, "description": "Black Pearl Rojo Robusto", 
+        "size": "4 3/4-52", "origin": "Nicaragua", "wrapper": "Natural", 
+        "shape": "Straight"   
+      }, 
+      /* ... */
+   ]
+   /* END:array */
+}

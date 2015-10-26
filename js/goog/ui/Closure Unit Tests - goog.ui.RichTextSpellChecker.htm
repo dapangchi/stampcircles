@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<!-- saved from url=(0094)http://closure-library.googlecode.com/svn/trunk/closure/goog/ui/richtextspellchecker_test.html -->
+<HTML><!--
+  Copyright 2007 Google Inc. All Rights Reserved.
+--><HEAD><META http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<TITLE>Closure Unit Tests - goog.ui.RichTextSpellChecker</TITLE>
+<SCRIPT src="./Closure Unit Tests - goog.ui.RichTextSpellChecker_files/base.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.RichTextSpellChecker_files/deps.js"></SCRIPT>
+<SCRIPT>
+  goog.require('goog.dom');
+  goog.require('goog.string.StringBuffer');
+  goog.require('goog.testing.jsunit');
+  goog.require('goog.ui.RichTextSpellChecker');
+</SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.RichTextSpellChecker_files/array.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.RichTextSpellChecker_files/tagname.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.RichTextSpellChecker_files/classes.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.RichTextSpellChecker_files/coordinate.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.RichTextSpellChecker_files/size.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.RichTextSpellChecker_files/object.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.RichTextSpellChecker_files/string.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.RichTextSpellChecker_files/useragent.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.RichTextSpellChecker_files/dom.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.RichTextSpellChecker_files/jscript.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.RichTextSpellChecker_files/stringbuffer.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.RichTextSpellChecker_files/stacktrace.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.RichTextSpellChecker_files/asserts.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.RichTextSpellChecker_files/testcase.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.RichTextSpellChecker_files/testrunner.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.RichTextSpellChecker_files/jsunit.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.RichTextSpellChecker_files/disposable.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.RichTextSpellChecker_files/errorhandlerweakdep.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.RichTextSpellChecker_files/event.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.RichTextSpellChecker_files/browserevent.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.RichTextSpellChecker_files/eventwrapper.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.RichTextSpellChecker_files/listener.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.RichTextSpellChecker_files/simplepool.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.RichTextSpellChecker_files/pools.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.RichTextSpellChecker_files/events.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.RichTextSpellChecker_files/eventtarget.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.RichTextSpellChecker_files/timer.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.RichTextSpellChecker_files/selection.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.RichTextSpellChecker_files/structs.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.RichTextSpellChecker_files/iter.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.RichTextSpellChecker_files/map.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.RichTextSpellChecker_files/set.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.RichTextSpellChecker_files/spellcheck.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.RichTextSpellChecker_files/box.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.RichTextSpellChecker_files/rect.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.RichTextSpellChecker_files/product.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.RichTextSpellChecker_files/style.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.RichTextSpellChecker_files/eventhandler.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.RichTextSpellChecker_files/idgenerator.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.RichTextSpellChecker_files/component.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.RichTextSpellChecker_files/keycodes.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.RichTextSpellChecker_files/keyhandler.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.RichTextSpellChecker_files/controlcontent.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.RichTextSpellChecker_files/a11y.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.RichTextSpellChecker_files/controlrenderer.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.RichTextSpellChecker_files/registry.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.RichTextSpellChecker_files/decorate.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.RichTextSpellChecker_files/control.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.RichTextSpellChecker_files/menuitemrenderer.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.RichTextSpellChecker_files/menuitem.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.RichTextSpellChecker_files/menuseparatorrenderer.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.RichTextSpellChecker_files/separator.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.RichTextSpellChecker_files/menuseparator.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.RichTextSpellChecker_files/positioning.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.RichTextSpellChecker_files/abstractposition.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.RichTextSpellChecker_files/anchoredposition.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.RichTextSpellChecker_files/anchoredviewportposition.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.RichTextSpellChecker_files/clientposition.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.RichTextSpellChecker_files/viewportclientposition.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.RichTextSpellChecker_files/containerrenderer.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.RichTextSpellChecker_files/container.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.RichTextSpellChecker_files/menurenderer.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.RichTextSpellChecker_files/menu.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.RichTextSpellChecker_files/popupbase.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.RichTextSpellChecker_files/popupmenu.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.RichTextSpellChecker_files/abstractspellchecker.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.RichTextSpellChecker_files/richtextspellchecker.js"></SCRIPT>
+</HEAD><BODY>
+
+<DIV id="test1"><DEL>a    iggnore iggnore  words    few  few  a  missspelling missspelling   <B>iggnore missspelling    words    iggnore   a    test    a <I>words iggnore a    missspelling  words   a  <U>iggnore iggnore   </U>words   <U>missspelling  test    words    iggnore </U></I><I>test    a  test   missspelling missspelling a    <U>a   words  a    test   words  iggnore   </U>missspelling    words    words a missspelling  a   missspelling a  test    <U>words words </U></I>few   few    test test  few  </B>few iggnore    <U>a    words <I>test a <B class="goog-quote">words  test    test  </B>missspelling   few    missspelling   test  <B>a    iggnore    few    test  iggnore   test  </B></I>missspelling    iggnore    few  missspelling  a  a   words missspelling   <B>words words   words   <I>test  words    words a    few  iggnore test   </I><I>missspelling    words   missspelling   words    few  test   test   </I>iggnore   </B></U></DEL>missspelling missspelling   iggnore missspelling   a  <B>few test iggnore  iggnore    a    <U>words   test   <I class="goog-quote"><DEL>words words    missspelling    words    a    few   words  iggnore few   </DEL><DEL>words   iggnore    test    words  </DEL>a    <DEL>words words   a  words iggnore  test  a words   iggnore missspelling    </DEL></I>test words    a <I><DEL>missspelling  test   iggnore  </DEL>few    words    missspelling   missspelling   words  test words <DEL class="goog-quote">missspelling  test    a missspelling   </DEL>test    few missspelling    </I></U><U>test    few test    <DEL>test   few few test    iggnore   test   test  words    test    <I>few   few   iggnore   test  a test  iggnore  test   missspelling   </I>a   test missspelling words    <I>test    few   a  missspelling  iggnore </I></DEL>iggnore   words test    words iggnore words   a <DEL>few  few   <I>iggnore missspelling   </I>test test  test  <I>missspelling  few  words   missspelling a words   a    few   words  words   </I></DEL></U><I>a few  missspelling   iggnore   test missspelling    a    missspelling   <U>missspelling    test  few   test  iggnore  <DEL>words   few few    few iggnore   test words iggnore iggnore  test   </DEL>words few   a    <DEL>missspelling few    words   a  test   </DEL></U>a  <U class="goog-quote">iggnore   test words   words   missspelling    test    missspelling    <DEL class="goog-quote">few  iggnore iggnore    test   a    words   </DEL>missspelling a   iggnore    a missspelling  iggnore few    words  a  <DEL class="goog-quote">iggnore   a    iggnore words   test missspelling  words  iggnore    a </DEL></U></I></B>iggnore missspelling   few  test iggnore   test  missspelling  </DIV>
+<DIV id="test2"><DEL>iggnore  missspelling missspelling few  a    words <B>iggnore missspelling    test  a  iggnore   words a   few    a    <U class="goog-quote">missspelling iggnore iggnore    test  missspelling  a iggnore   a words    <I class="goog-quote">words iggnore    test   test   test  words    </I>iggnore   words   test  few   missspelling    missspelling   few    a  few   <I>test   a  a    few   test words    few  test  words    </I></U>iggnore few    <U>a    iggnore    words  <I>test    test    words few  </I>few <I>a   words  missspelling    few   few    words  test    iggnore    test    iggnore   </I></U></B>missspelling missspelling   <B>few   few   few   a words  <I>words  few a  words    <U>iggnore   a  words   words    iggnore  words  test    </U>iggnore    few few   few   words few words    <U class="goog-quote">missspelling  few  iggnore   few  test  few   words words   </U></I>missspelling   test    words test  few  missspelling   missspelling iggnore   words  iggnore  <I><U>missspelling few words   words    test   few   </U><U>missspelling   words    iggnore   missspelling    test  missspelling  a  a   a   a   </U>few   test   missspelling  few   <U class="goog-quote">test   words test   few </U></I></B></DEL>words iggnore    missspelling test   words  few   words    iggnore  words  words    <DEL>test    <I>missspelling iggnore test    missspelling  test    test   test   few   words   <U><B>words   iggnore    </B>a    iggnore    few   <B>test  missspelling  test   test iggnore    iggnore   words    </B>few   few  missspelling test   test    missspelling  few </U><B>a    few missspelling test   words   a    iggnore    words iggnore  iggnore   <U>test few few   </U>few   missspelling   iggnore    iggnore a    <U>missspelling  </U></B>words </I>test  words  a  iggnore  <B>missspelling  words few    few  few   a   <I>few  missspelling  words  a    test  iggnore  words    a    <U>a   test  words    few   test    iggnore   test iggnore   few   test   </U>words   iggnore   missspelling words   a  missspelling  missspelling missspelling   a   a <U>test test   missspelling   few    few   words    few </U></I><U><I>a   test  </I><I>a  iggnore  a  few    missspelling    words    words  iggnore   </I><I>test   iggnore   few  words  few    test test words  </I>few    iggnore   test    few   few   test test  test  test  </U>iggnore    a  few    words   missspelling  a few   words   test    </B></DEL>few  iggnore    iggnore   few </DIV>
+<DIV id="test3">missspelling    a  words   few a few  iggnore few few    missspelling  a    test iggnore words  words   test few few words    missspelling  a iggnore   a   missspelling  few  few   iggnore missspelling    a iggnore    few    words   few   words   missspelling  test missspelling    test    few test    words  a    missspelling   test    a  words few    iggnore few  words   words words    words iggnore   missspelling words    words   few   test  a missspelling a missspelling words missspelling  iggnore  a  missspelling   iggnore  iggnore few   missspelling  a words missspelling  few a  words   test  a  test   </DIV>
+
+<SCRIPT>
+
+var attributeSet = ['b', 'u', 'del', 'i'];
+var vocabulary = ['test', 'words', 'a', 'few', 'missspelling', 'iggnore'];
+
+// We don't use Math.random() to make test predictable. Math.random is not
+// repeatable, so a success on the dev machine != success in the lab (or on
+// other dev machines). This is the same pseudorandom logic that CRT rand()
+// uses.
+var rseed = 1;
+function random(range) {
+  rseed = (rseed * 1103515245 + 12345) & 0xffffffff;
+  return ((rseed >> 16) & 0x7fff) % range;
+};
+
+function localSpellCheckingFunction(words, spellChecker, callback) {
+  var len = words.length;
+  var results = [];
+  for (var i = 0; i < len; i++) {
+    var word = words[i];
+    var found = false;
+    // Last two words are considered misspellings
+    for (var j = 0 ; j < vocabulary.length - 2 ; ++j) {
+      if (vocabulary[j] == word) {
+        found = true;
+        break;
+      }
+    }
+    if (found) {
+      results.push([word, goog.spell.SpellCheck.WordStatus.VALID]);
+    } else {
+      results.push([word, goog.spell.SpellCheck.WordStatus.INVALID,
+          ['foo','bar']]);
+    }
+  }
+  callback.call(spellChecker, results);
+};
+
+function generateRandomSpace() {
+  var string = '';
+  var nSpace = 1 + random(4);
+  for (var i = 0; i < nSpace ; ++i) {
+    string += ' ';
+  }
+  return string;
+};
+
+function generateRandomString(maxWords) {
+  var string = '';
+  var nWords = 1 + random(maxWords);
+  for (var i = 0; i < nWords ; ++i) {
+    string += vocabulary[random(vocabulary.length)];
+    string += generateRandomSpace();
+  }
+  return string;
+};
+
+function generateRandomHtml(rootNode, branchFactor, attributes, numAttr) {
+  if (numAttr == 0) {
+    var text = document.createTextNode(generateRandomString(10));
+    rootNode.appendChild(text);
+    return;
+  }
+
+  var lastElementWasText = false;
+  for (var i = 0; i < branchFactor; ++i) {
+    var rand = random(10);
+    if (rand < 8 && !lastElementWasText) {
+      lastElementWasText = true;
+      var text = document.createTextNode(generateRandomString(10));
+      rootNode.appendChild(text);
+    } else {
+      lastElementWasText = false;
+
+      var rand = random(numAttr);
+      var index = 0;
+      for (;;) {
+        while (attributes[index] == null) {
+          ++index;
+        }
+        if (rand == 0)
+          break;
+        ++index;
+        --rand;
+      };
+
+      var attr = attributes[index];
+      var el = document.createElement(attr);
+      rootNode.appendChild(el);
+      rand = random(10);
+      if (rand == 0) {
+        el.className = 'goog-quote';
+      }
+      attributes[index] = null;
+      generateRandomHtml(el, branchFactor, attributes, numAttr-1);
+      attributes[index] = attr;
+    }
+  }
+};
+
+var timerQueue = [];
+function processTimerQueue() {
+  while (timerQueue.length > 0) {
+    var fn = timerQueue.shift();
+    fn();
+  }
+};
+
+function localTimer(fn, delay, obj) {
+  if (obj) {
+    fn = goog.bind(fn, obj);
+  }
+  timerQueue.push(fn);
+  return timerQueue.length;
+};
+
+function testDocumentIntegrity() {
+  var handler = new goog.spell.SpellCheck(localSpellCheckingFunction);
+  var s = new goog.ui.RichTextSpellChecker(handler);
+  s.asyncWordsPerBatch_ = 100;
+  var el = document.getElementById('test1');
+  s.decorate(el);
+  generateRandomHtml(el, 4, attributeSet, attributeSet.length);
+  var el2 = el.cloneNode(true);
+
+  var timerSav = goog.Timer.callOnce;
+  goog.Timer.callOnce = localTimer;
+
+  s.setExcludeMarker('goog-quote');
+  s.check();
+  processTimerQueue();
+  s.ignoreWord('iggnore');
+  processTimerQueue();
+  s.check();
+  processTimerQueue();
+  s.resume();
+  processTimerQueue();
+
+  goog.Timer.callOnce = timerSav;
+
+  assertEquals('Spell checker run should not change the underlying element.',
+               el2.innerHTML, el.innerHTML);
+  s.dispose();
+};
+
+function testBiggerDocument() {
+  var handler = new goog.spell.SpellCheck(localSpellCheckingFunction);
+  var s = new goog.ui.RichTextSpellChecker(handler);
+  var el = document.getElementById('test2');
+  s.decorate(el);
+  generateRandomHtml(el, 4, attributeSet, attributeSet.length);
+  var el2 = el.cloneNode(true);
+
+  var timerSav = goog.Timer.callOnce;
+  goog.Timer.callOnce = localTimer;
+
+  s.check();
+  processTimerQueue();
+  s.resume();
+  processTimerQueue();
+
+  goog.Timer.callOnce = timerSav;
+
+  assertEquals('Spell checker run should not change the underlying element.',
+               el2.innerHTML, el.innerHTML);
+  s.dispose();
+};
+
+function testElementOverflow() {
+  var handler = new goog.spell.SpellCheck(localSpellCheckingFunction);
+  var s = new goog.ui.RichTextSpellChecker(handler);
+  s.asyncWordsPerBatch_ = 100;
+  var el = document.getElementById('test3');
+  s.decorate(el);
+  var text = generateRandomString(200);
+  el.appendChild(document.createTextNode(text));
+
+  var el2 = el.cloneNode(true);
+
+  var timerSav = goog.Timer.callOnce;
+  goog.Timer.callOnce = localTimer;
+
+  s.check();
+  processTimerQueue();
+  s.check();
+  processTimerQueue();
+  s.resume();
+  processTimerQueue();
+
+  goog.Timer.callOnce = timerSav;
+
+  assertEquals('Spell checker run should not change the underlying element.',
+               el2.innerHTML, el.innerHTML);
+  s.dispose();
+};
+
+</SCRIPT>
+
+
+<DIV><DIV style="color: rgb(0, 100, 0); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; font-weight: bold; ">Closure Unit Tests - goog.ui.RichTextSpellChecker [PASSED]</DIV><DIV style="color: rgb(51, 51, 51); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; font-weight: bold; ">closure-library.googlecode.com/svn/trunk/closure/goog/ui/richtextspellchecker_test.html</DIV><DIV style="color: rgb(51, 51, 51); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">3 of 3 tests run in 321ms.</DIV><DIV style="color: rgb(51, 51, 51); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">3 passed, 0 failed.</DIV><DIV style="color: rgb(51, 51, 51); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">107 ms/test. 69 files loaded.</DIV><DIV style="color: rgb(51, 51, 51); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">.</DIV><DIV style="color: rgb(51, 51, 51); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">08:39:49.492  Start</DIV><DIV style="color: rgb(0, 100, 0); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">08:39:49.590  testBiggerDocument : PASSED</DIV><DIV style="color: rgb(0, 100, 0); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">08:39:49.698  testDocumentIntegrity : PASSED</DIV><DIV style="color: rgb(51, 51, 51); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">08:39:49.698  Breaking async</DIV><DIV style="color: rgb(51, 51, 51); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">08:39:49.798  Start</DIV><DIV style="color: rgb(0, 100, 0); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">08:39:49.813  testElementOverflow : PASSED</DIV><DIV style="color: rgb(51, 51, 51); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">08:39:49.813  Done</DIV><DIV style="color: rgb(51, 51, 51); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; "> </DIV><A style="display: block; font-size: small; " href="">Run again without reloading</A></DIV></BODY></HTML>

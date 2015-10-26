@@ -1,0 +1,43 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!--
+ ! Excerpted from "Mastering Dojo",
+ ! published by The Pragmatic Bookshelf.
+ ! Copyrights apply to this code. It may not be used to create training material, 
+ ! courses, books, articles, and the like. Contact us if you are in doubt.
+ ! We make no guarantees that this code is fit for any purpose. 
+ ! Visit http://www.pragmaticprogrammer.com/titles/rgdojo for more book information.
+-->
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Anchored Tooltip</title>
+    <style type="text/css">
+        @import "/dojoroot/dijit/themes/tundra/tundra.css";
+        @import "/dojoroot/dojo/resources/dojo.css"
+    </style>
+    <script type="text/javascript" src="/dojoroot/dojo/dojo.js"  djConfig="parseOnLoad: true"></script>
+    <script type="text/javascript">
+       dojo.require("dojo.parser");
+       dojo.require("dijit.Tooltip");
+    </script>
+</head>
+<body class="tundra">
+    
+    <p style="margin-top:200px;width:300px;">
+    What's that making your tongue flippy-flop? 
+    When you drink a <span style="color:purple" id="def">NuGrape</span> 
+    you don't know when to stop.
+    I got your ice cold 
+    <span style="color:purple" id="def2">NuGrape.</span></p>
+    
+    <span dojoType="dijit.Tooltip" connectId="def,def2" 
+          style="display:none;">NuGrape is a 
+          <span style="color:purple">grape soda</span>.
+          <p style="width:150px">First bottled in 1921, its 
+          strange, barrelhouse- inspired jingle <em>I Got Your 
+          Ice Cold NuGrape</em> is
+          a favorite among roots music snobs.</p>
+          </span>
+    
+</body>
+</html>

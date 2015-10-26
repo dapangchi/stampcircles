@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<!-- saved from url=(0079)http://closure-library.googlecode.com/svn/trunk/closure/goog/ui/zippy_test.html -->
+<HTML><!--
+Copyright 2008 Google Inc. All Rights Reserved.
+
+--><HEAD><META http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+  <TITLE>Closure Unit Tests - goog.ui.Zippy</TITLE>
+  <SCRIPT src="./Closure Unit Tests - goog.ui.Zippy_files/base.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.Zippy_files/deps.js"></SCRIPT>
+  <SCRIPT>
+    goog.require('goog.dom');
+    goog.require('goog.events');
+    goog.require('goog.testing.events');
+    goog.require('goog.testing.jsunit');
+    goog.require('goog.ui.Zippy');
+    goog.require('goog.ui.ZippyEvent');
+  </SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.Zippy_files/array.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.Zippy_files/tagname.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.Zippy_files/classes.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.Zippy_files/coordinate.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.Zippy_files/size.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.Zippy_files/object.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.Zippy_files/string.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.Zippy_files/useragent.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.Zippy_files/dom.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.Zippy_files/errorhandlerweakdep.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.Zippy_files/disposable.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.Zippy_files/event.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.Zippy_files/browserevent.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.Zippy_files/eventwrapper.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.Zippy_files/listener.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.Zippy_files/simplepool.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.Zippy_files/jscript.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.Zippy_files/pools.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.Zippy_files/events.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.Zippy_files/keycodes.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.Zippy_files/events(1).js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.Zippy_files/stacktrace.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.Zippy_files/asserts.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.Zippy_files/testcase.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.Zippy_files/testrunner.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.Zippy_files/jsunit.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.Zippy_files/eventtarget.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.Zippy_files/zippy.js"></SCRIPT>
+  <STYLE type="text/css">
+
+    .demo {
+      border: solid 1px red;
+      margin: 0 0 20px 0;
+    }
+
+    .demo h2 {
+      background-color: yellow;
+      border: solid 1px #ccc;
+      padding: 2px;
+      margin: 0;
+      fint-size: 100%;
+    }
+
+    .demo div {
+      border: solid 1px #ccc;
+      padding: 2px;
+    }
+
+  </STYLE>
+</HEAD><BODY>
+
+
+<DIV class="demo" id="d1">
+
+  <H2 id="t1" tabindex="0" class="goog-zippy-expanded">handler</H2>
+
+  <DIV id="c1" style="">
+    sem. Suspendisse porta felis ac ipsum. Sed tincidunt dui vitae nulla. Ut
+    blandit. Nunc non neque. Mauris placerat. Vestibulum mollis tellus id dolor.
+    Phasellus ac dolor molestie nunc euismod aliquam. Mauris tellus ipsum,
+    fringilla id, tincidunt eu, vestibulum sit amet, metus. Quisque congue
+    varius
+    ligula. Quisque ornare mollis enim. Aliquam erat volutpat. Nulla mattis
+    venenatis magna.
+  </DIV>
+</DIV>
+
+
+<SCRIPT>
+
+  var zippy, fakeZippy1, fakeZippy2, contentlessZippy, headerlessZippy;
+
+  function setUp() {
+    zippy = new goog.ui.Zippy(goog.dom.$('t1'), goog.dom.$('c1'));
+
+    var fakeControlEl = document.createElement('button');
+    var fakeContentEl = document.createElement('div');
+
+    fakeZippy1 = new goog.ui.Zippy(fakeControlEl.cloneNode(true),
+        fakeContentEl.cloneNode(true), true);
+    fakeZippy2 = new goog.ui.Zippy(fakeControlEl.cloneNode(true),
+        fakeContentEl.cloneNode(true), false);
+    contentlessZippy = new goog.ui.Zippy(fakeControlEl.cloneNode(true),
+        undefined, true);
+    headerlessZippy = new goog.ui.Zippy(null, fakeContentEl.cloneNode(true),
+        true);
+  }
+
+  function testConstructor() {
+    assertNotNull('must not be null', zippy);
+  }
+
+  function testIsExpanded() {
+    assertEquals("Default expanded must be false", false, zippy.isExpanded());
+    assertEquals("Expanded must be true", true, fakeZippy1.isExpanded());
+    assertEquals("Expanded must be false", false, fakeZippy2.isExpanded());
+    assertEquals("Expanded must be true", true, headerlessZippy.isExpanded());
+  }
+
+  function tearDown() {
+    zippy.disposeInternal();
+    fakeZippy1.disposeInternal();
+    fakeZippy2.disposeInternal();
+    contentlessZippy.disposeInternal();
+    headerlessZippy.disposeInternal();
+  }
+
+  function testExpandCollapse() {
+    zippy.expand();
+    headerlessZippy.expand();
+    assertEquals("expanded must be true", true, zippy.isExpanded());
+    assertEquals("expanded must be true", true, headerlessZippy.isExpanded());
+
+    zippy.collapse();
+    headerlessZippy.collapse();
+    assertEquals("expanded must be false", false, zippy.isExpanded());
+    assertEquals("expanded must be false", false, headerlessZippy.isExpanded());
+  }
+
+  function testSetExpand() {
+    var expanded = !zippy.isExpanded();
+    zippy.setExpanded(expanded);
+    assertEquals("expanded must be " + expanded, expanded, zippy.isExpanded());
+  }
+
+  function testToggle() {
+    var expanded = !zippy.isExpanded();
+    zippy.toggle();
+    assertEquals("expanded must be " + expanded, expanded, zippy.isExpanded());
+  }
+
+  function testCustomEventTOGGLE() {
+    var dispatchedActionCount;
+    var handleAction = function() {
+      dispatchedActionCount++;
+    }
+
+    var doTest = function (zippyObj) {
+      dispatchedActionCount = 0;
+      goog.events.listen(zippyObj, goog.ui.Zippy.Events.TOGGLE, handleAction);
+      zippy.toggle();
+      assertEquals("Custom Event must be called ", 1, dispatchedActionCount);
+    }
+
+    doTest(zippy);
+    doTest(fakeZippy1);
+    doTest(contentlessZippy);
+    doTest(headerlessZippy);
+  }
+
+  function testBasicZippyBehavior() {
+    var dispatchedActionCount = 0;
+    var handleAction = function() {
+      dispatchedActionCount++;
+    }
+
+    goog.events.listen(zippy, goog.ui.Zippy.Events.TOGGLE, handleAction);
+    goog.testing.events.fireClickSequence(zippy.elHeader_);
+    assertEquals('Zippy  must have dispatched TOGGLE on click', 1,
+        dispatchedActionCount);
+
+  }
+</SCRIPT>
+
+
+
+<DIV><DIV style="color: rgb(0, 100, 0); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; font-weight: bold; ">Closure Unit Tests - goog.ui.Zippy [PASSED]</DIV><DIV style="color: rgb(51, 51, 51); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; font-weight: bold; ">closure-library.googlecode.com/svn/trunk/closure/goog/ui/zippy_test.html</DIV><DIV style="color: rgb(51, 51, 51); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">7 of 7 tests run in 42ms.</DIV><DIV style="color: rgb(51, 51, 51); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">7 passed, 0 failed.</DIV><DIV style="color: rgb(51, 51, 51); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">6 ms/test. 30 files loaded.</DIV><DIV style="color: rgb(51, 51, 51); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">.</DIV><DIV style="color: rgb(51, 51, 51); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">08:50:09.459  Start</DIV><DIV style="color: rgb(0, 100, 0); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">08:50:09.483  testBasicZippyBehavior : PASSED</DIV><DIV style="color: rgb(0, 100, 0); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">08:50:09.486  testConstructor : PASSED</DIV><DIV style="color: rgb(0, 100, 0); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">08:50:09.490  testCustomEventTOGGLE : PASSED</DIV><DIV style="color: rgb(0, 100, 0); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">08:50:09.492  testExpandCollapse : PASSED</DIV><DIV style="color: rgb(0, 100, 0); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">08:50:09.495  testIsExpanded : PASSED</DIV><DIV style="color: rgb(0, 100, 0); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">08:50:09.497  testSetExpand : PASSED</DIV><DIV style="color: rgb(0, 100, 0); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">08:50:09.500  testToggle : PASSED</DIV><DIV style="color: rgb(51, 51, 51); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">08:50:09.500  Done</DIV><DIV style="color: rgb(51, 51, 51); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; "> </DIV><A style="display: block; font-size: small; " href="">Run again without reloading</A></DIV></BODY></HTML>

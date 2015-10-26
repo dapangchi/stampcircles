@@ -1,0 +1,94 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!--
+ ! Excerpted from "Mastering Dojo",
+ ! published by The Pragmatic Bookshelf.
+ ! Copyrights apply to this code. It may not be used to create training material, 
+ ! courses, books, articles, and the like. Contact us if you are in doubt.
+ ! We make no guarantees that this code is fit for any purpose. 
+ ! Visit http://www.pragmaticprogrammer.com/titles/rgdojo for more book information.
+-->
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>dijit.Declaration: YFT</title>
+    <style type="text/css">
+        @import "/dojoroot/dijit/themes/tundra/tundra.css";
+    </style>
+    <script type="text/javascript" src="/dojoroot/dojo/dojo.js"  djConfig="parseOnLoad: true"></script>
+    <script type="text/javascript">
+       dojo.require("dojo.parser");
+       dojo.require("dijit.Declaration");
+       dojo.require("dijit.Toolbar");
+       dojo.require("dijit.form.Button");
+     </script>
+</head>
+<body class="tundra">
+
+
+
+<div dojoType="dijit.Declaration" widgetClass="Changebox" 
+     defaults="{boxId: 'None'}">
+    Changebox for ${boxId}
+    <div dojoAttachPoint="containerNode"></div>
+    
+    <script type="dojo/method">
+       // Define YFT animation.  The domNode is different for
+       // each widget, so we define a different animation fn for each.
+ 
+       this.animationFn = dojo.animateProperty({
+          node: this.domNode,
+          duration: 2000,
+          properties: { 
+              backgroundColor: { start: "#FFFF00", end: "#FFFFFF" } 
+          }
+       });
+
+       // Fire it whenever the event /changebox/boxId is published
+       dojo.subscribe("/changebox/"+this.boxId, this, function() {
+          this.animationFn.play();
+       });
+    </script>
+</div>
+
+           
+
+<div dojoType="Changebox" boxId="supply">
+   <h2>Supply Chain</h2>
+   <ul>
+      <li>Tomato Price: $0.735 per pound</li>
+      <li>Onions: $0.466 per pound</li>
+   </ul>
+</div>
+
+<div dojoType="Changebox" boxId="majoracct">
+   <h2>Major Accounts</h2>
+   <ul>
+      <li>McDonald's: +3.11% </li>
+      <li>Burger King: -1.29%</li>
+      <li>Wendy's: unchanged</li>
+   </ul>
+</div>
+
+<div dojoType="Changebox" boxId="stock">
+   <h2>Competitor Stock</h2>
+   <ul>
+      <li>Heinz: $5.99 per share</li>
+      <li>Hunt Wesson: $8.12 per share</li>
+      <li>Wal Mart: $10.51 per share</li>
+   </ul>
+</div>
+
+<div id="toolbar1" dojoType="dijit.Toolbar">
+    <div dojoType="dijit.form.Button" id="toolbar1.supply"   
+        onClick="dojo.publish('/changebox/supply');">Supply Change</div>
+    <div dojoType="dijit.form.Button" id="toolbar1.majoracct" 
+        onClick="dojo.publish('/changebox/majoracct');">Major Acct Change</div>
+    <div dojoType="dijit.form.Button" id="toolbar1.stock" 
+        onClick="dojo.publish('/changebox/stock');">Stock Change</div>
+</div>
+
+
+
+
+</body>
+</html>

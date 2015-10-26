@@ -1,0 +1,102 @@
+<!--
+ ! Excerpted from "Mastering Dojo",
+ ! published by The Pragmatic Bookshelf.
+ ! Copyrights apply to this code. It may not be used to create training material, 
+ ! courses, books, articles, and the like. Contact us if you are in doubt.
+ ! We make no guarantees that this code is fit for any purpose. 
+ ! Visit http://www.pragmaticprogrammer.com/titles/rgdojo for more book information.
+-->
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" 
+     "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Account Preferences With Dijit</title>
+<style type="text/css">
+    @import "/dojoroot/dijit/themes/tundra/tundra.css";
+    @import "/dojoroot/dojo/resources/dojo.css"
+</style>
+<script type="text/javascript" src="/dojoroot/dojo/dojo.js"  
+        djConfig="parseOnLoad: true"></script>
+
+
+<script>
+    dojo.require("dojo.parser");
+    dojo.require("dijit.layout.ContentPane");
+    dojo.require("dijit.layout.TabContainer");
+</script>
+<style>
+.formContainer {
+   width:600px;
+   height:600px;
+}
+label {
+   width:150px;
+   float:left;
+}
+</style>
+
+</head>
+
+
+<body class="tundra">
+
+
+
+<div class="formContainer" dojoType="dijit.layout.TabContainer" 
+   style="width:600px;height:600px">
+
+
+
+<div dojoType="dijit.layout.ContentPane" title="Personal Data">
+    <label for="first_name">First Name:</label>
+    <input type="text" name="first_name" id="first_name" 
+           size="30" /><br/>
+    <label for="last_name">Last Name:</label>
+    <input type="text" name="last_name" id="last_name" 
+           size="30" /><br/>
+    <label for="middle_initial">Middle Initial:</label>
+    <input type="text" name="middle_initial" id="middle_initial" 
+           size="1" /><br/>
+</div>
+
+
+<div dojoType="dijit.layout.ContentPane" title="Address">
+    <label for="address_line_1">Address Line 1:</label>
+    <input type="text" name="address_line_1" id="address_line_1" 
+           size="30" /><br/>
+    <label for="address_line_2">Address Line 2:</label>
+    <input type="text" name="address_line_2" id="address_line_2" 
+           size="30" /><br/>
+    <label for="city">City:</label>
+    <input type="text" name="city" id="city" 
+           size="30" /><br/>
+    <label for="state">State:</label>
+    <input type="text" name="state" id="state" 
+           size="2" /><br/>
+    <label for="postal_code">Postal Code:</label>
+    <input type="text" name="postal_code" id="postal_code" 
+           size="15" /><br/>
+    <label for="country">Country:</label>
+    <input type="text" name="country" id="country" 
+           size="30" /><br/>
+    <label for="date_move">Date of Move to this Address:</label>
+    <input type="text" name="date_move" id="date_move" 
+           size="11" /><br/>
+</div>
+<div dojoType="dijit.layout.ContentPane" title="Phones">
+    <label for="home_phone">Home Phone:</label>
+    <input type="text" name="home_phone" id="home_phone" 
+           size="30" /><br/>
+    <label for="work_phone">Work Phone:</label>
+    <input type="text" name="work_phone" id="work_phone" 
+           size="30" /><br/>
+    <label for="cell_phone">Cell Phone:</label>
+    <input type="text" name="cell_phone" id="cell_phone" 
+           size="30" /><br/>
+</div>
+
+</div>
+</body>
+</html>

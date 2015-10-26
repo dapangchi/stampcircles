@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<!-- saved from url=(0080)http://closure-library.googlecode.com/svn/trunk/closure/goog/ui/dialog_test.html -->
+<HTML><!--
+  Copyright 2007 Google Inc. All Rights Reserved.
+--><HEAD><META http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<TITLE>Closure Unit Tests - goog.ui.Dialog</TITLE>
+<SCRIPT src="./Closure Unit Tests - goog.ui.Dialog_files/base.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.Dialog_files/deps.js"></SCRIPT>
+<SCRIPT>
+  goog.require('goog.ui.Dialog');
+  goog.require('goog.dom');
+  goog.require('goog.events');
+  goog.require('goog.testing.events');
+  goog.require('goog.testing.jsunit');
+</SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.Dialog_files/disposable.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.Dialog_files/array.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.Dialog_files/errorhandlerweakdep.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.Dialog_files/event.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.Dialog_files/string.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.Dialog_files/useragent.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.Dialog_files/browserevent.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.Dialog_files/eventwrapper.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.Dialog_files/listener.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.Dialog_files/simplepool.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.Dialog_files/jscript.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.Dialog_files/pools.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.Dialog_files/object.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.Dialog_files/events.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.Dialog_files/eventtarget.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.Dialog_files/timer.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.Dialog_files/tagname.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.Dialog_files/classes.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.Dialog_files/coordinate.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.Dialog_files/size.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.Dialog_files/dom.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.Dialog_files/a11y.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.Dialog_files/iframe.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.Dialog_files/focushandler.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.Dialog_files/keycodes.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.Dialog_files/eventhandler.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.Dialog_files/box.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.Dialog_files/rect.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.Dialog_files/dragger.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.Dialog_files/structs.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.Dialog_files/iter.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.Dialog_files/map.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.Dialog_files/product.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.Dialog_files/style.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.Dialog_files/idgenerator.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.Dialog_files/component.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.Dialog_files/dialog.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.Dialog_files/events(1).js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.Dialog_files/stacktrace.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.Dialog_files/asserts.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.Dialog_files/testcase.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.Dialog_files/testrunner.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.Dialog_files/jsunit.js"></SCRIPT>
+</HEAD><BODY>
+<IFRAME id="f" src="javascript:'<input>'"></IFRAME>
+<SCRIPT>
+
+  var dialog;
+
+  function setUp() {
+    dialog = new goog.ui.Dialog();
+    var buttons = new goog.ui.Dialog.ButtonSet();
+    buttons.set(goog.ui.Dialog.DefaultButtonKeys.CANCEL,
+       'Foo!',
+       false,
+       true);
+    buttons.set(goog.ui.Dialog.DefaultButtonKeys.OK,
+       'OK',
+       true);
+    dialog.setButtonSet(buttons);
+    dialog.setVisible(true);
+  }
+
+  function tearDown() {
+    dialog.dispose();
+  }
+
+  function testCrossFrameFocus() {
+    if (goog.userAgent.IE) {
+      return;
+    }
+    dialog.setVisible(false);
+    var iframeWindow = goog.dom.$('f').contentWindow;
+    var iframeInput = iframeWindow.document.getElementsByTagName('input')[0];
+    dialog.setButtonSet(goog.ui.Dialog.ButtonSet.OK);
+    var buttonElement = dialog.getButtonSet().getButton(0);
+    var focusCounter = 0;
+    goog.events.listen(buttonElement, 'focus', function() {
+      focusCounter++;
+    });
+    iframeInput.focus();
+    dialog.setVisible(true);
+    dialog.setVisible(false);
+    iframeInput.focus();
+    dialog.setVisible(true);
+    assertEquals(2, focusCounter);
+  }
+
+
+  /**
+   * Helper that clicks the first button in the dialog and checks if that
+   * results in a goog.ui.Dialog.EventType.SELECT being dispatched.
+   * @param {boolean} disableButton Whether to disable the button being
+   *     tested.
+   * @return {boolean} Whether a goog.ui.Dialog.EventType.SELECT was dispatched.
+   */
+  function checkSelectDispatchedOnButtonClick(disableButton) {
+    var aButton = dialog.getButtonElement().getElementsByTagName('BUTTON')[0];
+    assertNotEquals(aButton, null);
+    aButton.disabled = disableButton;
+    var wasCalled = false;
+    var callRecorder = function() { wasCalled = true; };
+    goog.events.listen(dialog, goog.ui.Dialog.EventType.SELECT, callRecorder);
+    goog.testing.events.fireClickSequence(aButton);
+    return wasCalled;
+  }
+
+  function testButtonClicksDispatchSelectEvents() {
+    assertTrue('Select event should be dispatched' +
+               ' when clicking on an enabled button',
+        checkSelectDispatchedOnButtonClick(false));
+  }
+
+  function testDisabledButtonClicksDontDispatchSelectEvents() {
+    assertFalse('Select event should not be dispatched' +
+                ' when clicking on a disabled button',
+        checkSelectDispatchedOnButtonClick(true));
+  }
+
+  function testEnterKeyDispatchesDefaultSelectEvents() {
+    var okButton = dialog.getButtonElement().getElementsByTagName('BUTTON')[1];
+    assertNotEquals(okButton, null);
+    var wasCalled = false;
+    var callRecorder = function() { wasCalled = true; };
+    goog.events.listen(dialog, goog.ui.Dialog.EventType.SELECT, callRecorder);
+    // Test that event is not dispatched when default button is disabled.
+    okButton.disabled = true;
+    goog.testing.events.fireKeySequence(dialog.getElement(),
+                                        goog.events.KeyCodes.ENTER);
+    assertFalse(wasCalled);
+    // Test that event is dispatched when default button is enabled.
+    okButton.disabled = false;
+    goog.testing.events.fireKeySequence(dialog.getElement(),
+                                        goog.events.KeyCodes.ENTER);
+    assertTrue(wasCalled);
+  }
+
+  function testEnterKeyDoesNothingOnSpecialFormElements() {
+    dialog.setContent('<textarea>Hello dialog</textarea>');
+    var textarea = dialog.getContentElement().
+        getElementsByTagName('TEXTAREA')[0];
+    var wasCalled = false;
+    var callRecorder = function() {
+      wasCalled = true;
+    };
+    goog.events.listen(dialog, goog.ui.Dialog.EventType.SELECT, callRecorder);
+
+    // Enter does not fire on the enabled textarea.
+    goog.testing.events.fireKeySequence(textarea,
+        goog.events.KeyCodes.ENTER);
+    assertFalse(wasCalled);
+
+    // Enter fires on the disabled textarea.
+    textarea.disabled = true;
+    goog.testing.events.fireKeySequence(textarea,
+        goog.events.KeyCodes.ENTER);
+    assertTrue(wasCalled);
+  }
+
+  function testEscapeKeyDoesNothingOnSpecialFormElements() {
+    dialog.setContent('<select><option>Hello</option>' +
+        '<option>dialog</option></select>');
+    var select = dialog.getContentElement().
+        getElementsByTagName('SELECT')[0];
+    var wasCalled = false;
+    var callRecorder = function() {
+      wasCalled = true;
+    };
+    goog.events.listen(dialog, goog.ui.Dialog.EventType.SELECT, callRecorder);
+
+    // Escape does not fire on the enabled select box.
+    goog.testing.events.fireKeySequence(select,
+        goog.events.KeyCodes.ESC);
+    assertFalse(wasCalled);
+
+    // Escape fires on the disabled select.
+    select.disabled = true;
+    goog.testing.events.fireKeySequence(select,
+        goog.events.KeyCodes.ESC);
+    assertTrue(wasCalled);
+  }
+
+  function testEnterKeyWithoutDefaultDoesNotPreventPropagation() {
+    var buttons = new goog.ui.Dialog.ButtonSet();
+    buttons.set(goog.ui.Dialog.DefaultButtonKeys.CANCEL,
+       'Foo!',
+       false);
+    // Set a button set without a default selected button
+    dialog.setButtonSet(buttons);
+    dialog.setContent('<span id="linkel" tabindex="0">Link Span</span>');
+
+    var call = false;
+    function called() {
+      call = true;
+    }
+    var element = document.getElementById("linkel");
+    goog.events.listen(element, goog.events.EventType.KEYDOWN, called);
+    goog.testing.events.fireKeySequence(element, goog.events.KeyCodes.ENTER);
+
+    assertTrue('Should have gotten event on the link', call);
+  }
+
+  function testPreventDefaultedSelectCausesStopPropagation() {
+    dialog.setButtonSet(goog.ui.Dialog.ButtonSet.OK_CANCEL);
+
+    var callCount = 0;
+    var callRecorder = function() {
+      callCount++;
+    };
+
+    var preventDefaulter = function(e) {
+      e.preventDefault();
+    };
+
+    goog.events.listen(
+        dialog, goog.ui.Dialog.EventType.SELECT, preventDefaulter);
+    goog.events.listen(
+        document.body, goog.events.EventType.KEYDOWN, callRecorder);
+
+    // Ensure that if the SELECT event is prevented, all key events
+    // are still stopped from propagating.
+    goog.testing.events.fireKeySequence(
+        dialog.getElement(), goog.events.KeyCodes.ENTER);
+    assertEquals(0, callCount);
+    goog.testing.events.fireKeySequence(
+        dialog.getElement(), goog.events.KeyCodes.ESC);
+    assertEquals(0, callCount);
+
+    goog.events.unlisten(
+        dialog, goog.ui.Dialog.EventType.SELECT, preventDefaulter);
+
+    goog.testing.events.fireKeySequence(
+        dialog.getElement(), goog.events.KeyCodes.ENTER);
+    assertEquals(0, callCount);
+  }
+
+  function testButtonsWithContentsDispatchSelectEvents() {
+    var aButton = dialog.getButtonElement().getElementsByTagName('BUTTON')[0];
+    var aSpan = document.createElement('SPAN');
+    aButton.appendChild(aSpan);
+    var wasCalled = false;
+    var callRecorder = function() { wasCalled = true; };
+    goog.events.listen(dialog, goog.ui.Dialog.EventType.SELECT, callRecorder);
+    goog.testing.events.fireClickSequence(aSpan);
+    assertTrue(wasCalled);
+  }
+
+  function testAfterHideEvent() {
+    var wasCalled = false;
+    var callRecorder = function() { wasCalled = true; };
+    goog.events.listen(dialog, goog.ui.Dialog.EventType.AFTER_HIDE,
+        callRecorder);
+    dialog.setVisible(false);
+    assertTrue(wasCalled);
+  }
+
+  function testCannedButtonSets() {
+    dialog.setButtonSet(goog.ui.Dialog.ButtonSet.OK);
+    assertButtons([goog.ui.Dialog.DefaultButtonKeys.OK]);
+
+    dialog.setButtonSet(goog.ui.Dialog.ButtonSet.OK_CANCEL);
+    assertButtons([goog.ui.Dialog.DefaultButtonKeys.OK,
+                   goog.ui.Dialog.DefaultButtonKeys.CANCEL]);
+
+    dialog.setButtonSet(goog.ui.Dialog.ButtonSet.YES_NO);
+    assertButtons([goog.ui.Dialog.DefaultButtonKeys.YES,
+                   goog.ui.Dialog.DefaultButtonKeys.NO]);
+
+    dialog.setButtonSet(goog.ui.Dialog.ButtonSet.YES_NO_CANCEL);
+    assertButtons([goog.ui.Dialog.DefaultButtonKeys.YES,
+                   goog.ui.Dialog.DefaultButtonKeys.NO,
+                   goog.ui.Dialog.DefaultButtonKeys.CANCEL]);
+
+    dialog.setButtonSet(goog.ui.Dialog.ButtonSet.CONTINUE_SAVE_CANCEL);
+    assertButtons([goog.ui.Dialog.DefaultButtonKeys.CONTINUE,
+                   goog.ui.Dialog.DefaultButtonKeys.SAVE,
+                   goog.ui.Dialog.DefaultButtonKeys.CANCEL]);
+  }
+
+  function testDefaultButtonClassName() {
+    var key = 'someKey';
+    var msg = 'someMessage';
+    var isDefalut = false;
+    var buttonSetOne = new goog.ui.Dialog.ButtonSet().set(key, msg, isDefault);
+    dialog.setButtonSet(buttonSetOne);
+    var defaultClassName = goog.getCssName(buttonSetOne.class_, 'default');
+    var buttonOne = buttonSetOne.getButton(key);
+    assertNotEquals(defaultClassName, buttonOne.className);
+    var isDefault = true;
+    var buttonSetTwo = new goog.ui.Dialog.ButtonSet().set(key, msg, isDefault);
+    dialog.setButtonSet(buttonSetTwo);
+    var buttonTwo = buttonSetTwo.getButton(key);
+    assertEquals(defaultClassName, buttonTwo.className);
+  }
+
+  function testGetButton() {
+    dialog.setButtonSet(goog.ui.Dialog.ButtonSet.OK);
+    var buttons = document.getElementsByName(
+        goog.ui.Dialog.DefaultButtonKeys.OK);
+    assertEquals(buttons[0], dialog.getButtonSet().getButton(
+        goog.ui.Dialog.DefaultButtonKeys.OK));
+  }
+
+  function testGetAllButtons() {
+    dialog.setButtonSet(goog.ui.Dialog.ButtonSet.YES_NO_CANCEL);
+    var buttons = goog.dom.$$(goog.dom.TagName.BUTTON, null,
+        dialog.getElement());
+    for (var i = 0; i < buttons.length; i++) {
+      assertEquals(buttons[i], dialog.getButtonSet().getAllButtons()[i]);
+    }
+  }
+
+  function testIframeMask() {
+    // generate a new dialog
+    dialog.dispose();
+    dialog = new goog.ui.Dialog(null, true /* iframe mask */);
+    dialog.setVisible(true);
+
+    var iframes =
+        goog.dom.getElementsByTagNameAndClass(goog.dom.TagName.IFRAME);
+    // NOTE: one iframe already exists in the document, so we check for 1 extra
+    // iframe.
+    assertEquals('No iframe mask created', 2, iframes.length);
+  }
+
+  function testNonModalDialog() {
+    // generate a new dialog
+    dialog.dispose();
+    dialog = new goog.ui.Dialog(null, true /* iframe mask */);
+    dialog.setModal(false);
+    dialog.setVisible(true);
+
+    var iframes =
+        goog.dom.getElementsByTagNameAndClass(goog.dom.TagName.IFRAME);
+    // NOTE: one iframe already exists in the document, so we check there are
+    // no extra iframes in the document.
+    assertEquals('Iframe mask created for modal dialog', 1, iframes.length);
+  }
+
+  /**
+   * Assert that the dialog has buttons with the given keys in the correct
+   * order.
+   * @param {Array.<string>} keys An array of button keys.
+   */
+  function assertButtons(keys) {
+    var buttons = goog.dom.$$(goog.dom.TagName.BUTTON, null,
+        dialog.getElement());
+    var actualKeys = [];
+    for (var i = 0; i < buttons.length; i++) {
+      actualKeys[i] = buttons[i].name;
+    }
+    assertArrayEquals(keys, actualKeys);
+  }
+</SCRIPT>
+
+
+<DIV><DIV style="color: rgb(0, 100, 0); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; font-weight: bold; ">Closure Unit Tests - goog.ui.Dialog [PASSED]</DIV><DIV style="color: rgb(51, 51, 51); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; font-weight: bold; ">closure-library.googlecode.com/svn/trunk/closure/goog/ui/dialog_test.html</DIV><DIV style="color: rgb(51, 51, 51); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">16 of 16 tests run in 326ms.</DIV><DIV style="color: rgb(51, 51, 51); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">16 passed, 0 failed.</DIV><DIV style="color: rgb(51, 51, 51); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">20 ms/test. 45 files loaded.</DIV><DIV style="color: rgb(51, 51, 51); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">.</DIV><DIV style="color: rgb(51, 51, 51); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">08:22:27.401  Start</DIV><DIV style="color: rgb(0, 100, 0); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">08:22:27.443  testAfterHideEvent : PASSED</DIV><DIV style="color: rgb(0, 100, 0); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">08:22:27.454  testButtonClicksDispatchSelectEvents : PASSED</DIV><DIV style="color: rgb(0, 100, 0); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">08:22:27.463  testButtonsWithContentsDispatchSelectEvents : PASSED</DIV><DIV style="color: rgb(0, 100, 0); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">08:22:27.473  testCannedButtonSets : PASSED</DIV><DIV style="color: rgb(0, 100, 0); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">08:22:27.486  testCrossFrameFocus : PASSED</DIV><DIV style="color: rgb(0, 100, 0); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">08:22:27.491  testDefaultButtonClassName : PASSED</DIV><DIV style="color: rgb(0, 100, 0); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">08:22:27.499  testDisabledButtonClicksDontDispatchSelectEvents : PASSED</DIV><DIV style="color: rgb(0, 100, 0); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">08:22:27.511  testEnterKeyDispatchesDefaultSelectEvents : PASSED</DIV><DIV style="color: rgb(0, 100, 0); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">08:22:27.523  testEnterKeyDoesNothingOnSpecialFormElements : PASSED</DIV><DIV style="color: rgb(0, 100, 0); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">08:22:27.532  testEnterKeyWithoutDefaultDoesNotPreventPropagation : PASSED</DIV><DIV style="color: rgb(0, 100, 0); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">08:22:27.541  testEscapeKeyDoesNothingOnSpecialFormElements : PASSED</DIV><DIV style="color: rgb(0, 100, 0); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">08:22:27.547  testGetAllButtons : PASSED</DIV><DIV style="color: rgb(0, 100, 0); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">08:22:27.552  testGetButton : PASSED</DIV><DIV style="color: rgb(0, 100, 0); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">08:22:27.602  testIframeMask : PASSED</DIV><DIV style="color: rgb(51, 51, 51); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">08:22:27.603  Breaking async</DIV><DIV style="color: rgb(51, 51, 51); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">08:22:27.703  Start</DIV><DIV style="color: rgb(0, 100, 0); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">08:22:27.714  testNonModalDialog : PASSED</DIV><DIV style="color: rgb(0, 100, 0); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">08:22:27.726  testPreventDefaultedSelectCausesStopPropagation : PASSED</DIV><DIV style="color: rgb(51, 51, 51); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">08:22:27.726  Done</DIV><DIV style="color: rgb(51, 51, 51); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; "> </DIV><A style="display: block; font-size: small; " href="">Run again without reloading</A></DIV></BODY></HTML>

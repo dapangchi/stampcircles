@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<!-- saved from url=(0085)http://closure-library.googlecode.com/svn/trunk/closure/goog/ui/hsvapalette_test.html -->
+<HTML><!--
+  Copyright 2008 Google Inc. All Rights Reserved.
+
+--><HEAD><META http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+  <TITLE>HsvaPalette Unit Tests</TITLE>
+  <SCRIPT src="./HsvaPalette Unit Tests_files/base.js"></SCRIPT><SCRIPT type="text/javascript" src="./HsvaPalette Unit Tests_files/deps.js"></SCRIPT>
+  <SCRIPT src="./HsvaPalette Unit Tests_files/deps.js"></SCRIPT>
+  <SCRIPT>
+    goog.require('goog.color.alpha');
+    goog.require('goog.events');
+    goog.require('goog.math.Rect');
+    goog.require('goog.style');
+    goog.require('goog.testing.PropertyReplacer');
+    goog.require('goog.testing.jsunit');
+    goog.require('goog.ui.HsvaPalette');
+    goog.require('goog.userAgent');
+  </SCRIPT><SCRIPT type="text/javascript" src="./HsvaPalette Unit Tests_files/names.js"></SCRIPT><SCRIPT type="text/javascript" src="./HsvaPalette Unit Tests_files/array.js"></SCRIPT><SCRIPT type="text/javascript" src="./HsvaPalette Unit Tests_files/coordinate.js"></SCRIPT><SCRIPT type="text/javascript" src="./HsvaPalette Unit Tests_files/box.js"></SCRIPT><SCRIPT type="text/javascript" src="./HsvaPalette Unit Tests_files/range.js"></SCRIPT><SCRIPT type="text/javascript" src="./HsvaPalette Unit Tests_files/size.js"></SCRIPT><SCRIPT type="text/javascript" src="./HsvaPalette Unit Tests_files/rect.js"></SCRIPT><SCRIPT type="text/javascript" src="./HsvaPalette Unit Tests_files/math.js"></SCRIPT><SCRIPT type="text/javascript" src="./HsvaPalette Unit Tests_files/color.js"></SCRIPT><SCRIPT type="text/javascript" src="./HsvaPalette Unit Tests_files/alpha.js"></SCRIPT><SCRIPT type="text/javascript" src="./HsvaPalette Unit Tests_files/errorhandlerweakdep.js"></SCRIPT><SCRIPT type="text/javascript" src="./HsvaPalette Unit Tests_files/disposable.js"></SCRIPT><SCRIPT type="text/javascript" src="./HsvaPalette Unit Tests_files/event.js"></SCRIPT><SCRIPT type="text/javascript" src="./HsvaPalette Unit Tests_files/string.js"></SCRIPT><SCRIPT type="text/javascript" src="./HsvaPalette Unit Tests_files/useragent.js"></SCRIPT><SCRIPT type="text/javascript" src="./HsvaPalette Unit Tests_files/browserevent.js"></SCRIPT><SCRIPT type="text/javascript" src="./HsvaPalette Unit Tests_files/eventwrapper.js"></SCRIPT><SCRIPT type="text/javascript" src="./HsvaPalette Unit Tests_files/listener.js"></SCRIPT><SCRIPT type="text/javascript" src="./HsvaPalette Unit Tests_files/simplepool.js"></SCRIPT><SCRIPT type="text/javascript" src="./HsvaPalette Unit Tests_files/jscript.js"></SCRIPT><SCRIPT type="text/javascript" src="./HsvaPalette Unit Tests_files/pools.js"></SCRIPT><SCRIPT type="text/javascript" src="./HsvaPalette Unit Tests_files/object.js"></SCRIPT><SCRIPT type="text/javascript" src="./HsvaPalette Unit Tests_files/events.js"></SCRIPT><SCRIPT type="text/javascript" src="./HsvaPalette Unit Tests_files/tagname.js"></SCRIPT><SCRIPT type="text/javascript" src="./HsvaPalette Unit Tests_files/classes.js"></SCRIPT><SCRIPT type="text/javascript" src="./HsvaPalette Unit Tests_files/dom.js"></SCRIPT><SCRIPT type="text/javascript" src="./HsvaPalette Unit Tests_files/product.js"></SCRIPT><SCRIPT type="text/javascript" src="./HsvaPalette Unit Tests_files/style.js"></SCRIPT><SCRIPT type="text/javascript" src="./HsvaPalette Unit Tests_files/propertyreplacer.js"></SCRIPT><SCRIPT type="text/javascript" src="./HsvaPalette Unit Tests_files/stacktrace.js"></SCRIPT><SCRIPT type="text/javascript" src="./HsvaPalette Unit Tests_files/asserts.js"></SCRIPT><SCRIPT type="text/javascript" src="./HsvaPalette Unit Tests_files/testcase.js"></SCRIPT><SCRIPT type="text/javascript" src="./HsvaPalette Unit Tests_files/testrunner.js"></SCRIPT><SCRIPT type="text/javascript" src="./HsvaPalette Unit Tests_files/jsunit.js"></SCRIPT><SCRIPT type="text/javascript" src="./HsvaPalette Unit Tests_files/eventhandler.js"></SCRIPT><SCRIPT type="text/javascript" src="./HsvaPalette Unit Tests_files/eventtarget.js"></SCRIPT><SCRIPT type="text/javascript" src="./HsvaPalette Unit Tests_files/idgenerator.js"></SCRIPT><SCRIPT type="text/javascript" src="./HsvaPalette Unit Tests_files/component.js"></SCRIPT><SCRIPT type="text/javascript" src="./HsvaPalette Unit Tests_files/inputhandler.js"></SCRIPT><SCRIPT type="text/javascript" src="./HsvaPalette Unit Tests_files/hsvpalette.js"></SCRIPT><SCRIPT type="text/javascript" src="./HsvaPalette Unit Tests_files/hsvapalette.js"></SCRIPT>
+</HEAD><BODY>
+  <DIV id="sandbox"></DIV>
+  <SCRIPT>
+    var samplePalette;
+    var eventWasFired = false;
+    var stubs = new goog.testing.PropertyReplacer();
+
+    function setUp() {
+      samplePalette = new goog.ui.HsvaPalette();
+    }
+
+    function tearDown() {
+      samplePalette.dispose();
+      stubs.reset();
+    }
+
+    function testOptionalInitialColor() {
+      var alpha = 0.5;
+      var color = '#0000ff';
+      var palette = new goog.ui.HsvaPalette(null, color, alpha);
+      assertEquals(color, palette.getColor());
+      assertEquals(alpha, palette.getAlpha());
+    }
+
+    function testCustomClassName() {
+      var customClassName = 'custom-plouf';
+      var customClassPalette =
+          new goog.ui.HsvaPalette(null, null, null, customClassName);
+      customClassPalette.createDom();
+      assertTrue(goog.dom.classes.has(customClassPalette.getElement(),
+                                      customClassName));
+    }
+
+    function testSetColor() {
+      var color = '#abcdef01';
+      samplePalette.setColorRgbaHex(color);
+      assertEquals(color,
+          goog.color.alpha.parse(samplePalette.getColorRgbaHex()).hex);
+    }
+
+    function testRender() {
+      samplePalette.render(document.getElementById('sandbox'));
+
+      assertTrue(samplePalette.isInDocument());
+
+      var elem = samplePalette.getElement();
+      assertNotNull(elem);
+      assertEquals(goog.dom.TagName.DIV, elem.tagName);
+
+      if (goog.userAgent.IE && !goog.userAgent.isVersion('7')) {
+        assertSameElements('On IE6, the noalpha class must be present',
+            ['goog-hsva-palette', 'goog-hsva-palette-noalpha'],
+            goog.dom.classes.get(elem));
+      } else {
+        assertEquals('The noalpha class must not be present',
+           'goog-hsva-palette', elem.className);
+      }
+    }
+
+    function testNoLeftOverListenersAfterDispose() {
+      var initialListenerCount = goog.events.getTotalListenerCount();
+      samplePalette.render(document.getElementById('sandbox'));
+      samplePalette.dispose();
+      assertEquals(initialListenerCount, goog.events.getTotalListenerCount());
+    }
+
+    function testInputColor() {
+      samplePalette.render(document.getElementById('sandbox'));
+      var color = '#00112233';
+      samplePalette.inputEl_.value = color;
+      samplePalette.handleInput_(null);
+      assertEquals(color,
+          goog.color.alpha.parse(samplePalette.getColorRgbaHex()).hex);
+    }
+
+    function testHandleMouseMoveAlpha() {
+      samplePalette.render(document.getElementById('sandbox'));
+      stubs.set(goog.dom, 'getPageScroll', function() {
+        return new goog.math.Coordinate(0, 0);
+      });
+
+      // Lowering the opacity of a dark, opaque red should yield a
+      // more transparent red.
+      samplePalette.setColorRgbaHex('#630c0000');
+      goog.style.setPageOffset(samplePalette.aImageEl_, 0, 0);
+      goog.style.setSize(samplePalette.aImageEl_, 10, 100);
+      var boundaries = goog.style.getBounds(samplePalette.aImageEl_);
+
+      var event = new goog.events.Event();
+      event.clientY = boundaries.top;
+      samplePalette.handleMouseMoveA_(boundaries, event);
+
+      assertEquals('#630c00ff', samplePalette.getColorRgbaHex());
+    }
+
+    function testSwatchOpacity() {
+      samplePalette.render(document.getElementById('sandbox'));
+
+      samplePalette.setAlpha(1);
+      assertEquals(1, goog.style.getOpacity(samplePalette.swatchEl_));
+
+      samplePalette.setAlpha(0x99 / 0xff);
+      assertEquals(0.6, goog.style.getOpacity(samplePalette.swatchEl_));
+
+      samplePalette.setAlpha(0);
+      assertEquals(0, goog.style.getOpacity(samplePalette.swatchEl_));
+    }
+
+    function testNoTransparencyBehavior() {
+      samplePalette.render(document.getElementById('sandbox'));
+
+      samplePalette.inputEl_.value = '#abcdef22';
+      samplePalette.handleInput_(null);
+      samplePalette.inputEl_.value = '#abcdef';
+      samplePalette.handleInput_(null);
+      assertEquals(1, goog.style.getOpacity(samplePalette.swatchEl_));
+    }
+
+  </SCRIPT>
+
+
+<DIV><DIV style="color: rgb(0, 100, 0); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; font-weight: bold; ">HsvaPalette Unit Tests [PASSED]</DIV><DIV style="color: rgb(51, 51, 51); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; font-weight: bold; ">closure-library.googlecode.com/svn/trunk/closure/goog/ui/hsvapalette_test.html</DIV><DIV style="color: rgb(51, 51, 51); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">9 of 9 tests run in 40ms.</DIV><DIV style="color: rgb(51, 51, 51); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">9 passed, 0 failed.</DIV><DIV style="color: rgb(51, 51, 51); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">4 ms/test. 44 files loaded.</DIV><DIV style="color: rgb(51, 51, 51); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">.</DIV><DIV style="color: rgb(51, 51, 51); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">08:26:36.591  Start</DIV><DIV style="color: rgb(0, 100, 0); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">08:26:36.598  testCustomClassName : PASSED</DIV><DIV style="color: rgb(0, 100, 0); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">08:26:36.616  testHandleMouseMoveAlpha : PASSED</DIV><DIV style="color: rgb(0, 100, 0); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">08:26:36.619  testInputColor : PASSED</DIV><DIV style="color: rgb(0, 100, 0); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">08:26:36.621  testNoLeftOverListenersAfterDispose : PASSED</DIV><DIV style="color: rgb(0, 100, 0); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">08:26:36.624  testNoTransparencyBehavior : PASSED</DIV><DIV style="color: rgb(0, 100, 0); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">08:26:36.625  testOptionalInitialColor : PASSED</DIV><DIV style="color: rgb(0, 100, 0); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">08:26:36.626  testRender : PASSED</DIV><DIV style="color: rgb(0, 100, 0); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">08:26:36.627  testSetColor : PASSED</DIV><DIV style="color: rgb(0, 100, 0); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">08:26:36.630  testSwatchOpacity : PASSED</DIV><DIV style="color: rgb(51, 51, 51); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">08:26:36.630  Done</DIV><DIV style="color: rgb(51, 51, 51); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; "> </DIV><A style="display: block; font-size: small; " href="">Run again without reloading</A></DIV></BODY></HTML>

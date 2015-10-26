@@ -1,0 +1,176 @@
+<html>
+<head>
+  <title>
+    Mastering Dojo - DOM Utilities - Animation Examples
+  </title>
+    
+  <style type="text/css">
+    #ball {
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      background-color: blue;
+    }
+  </style>
+  
+  <script 
+    type="text/javascript" 
+    src="/dojoroot/dojo/dojo.js" 
+    djConfig="isDebug: true">
+  </script>
+
+  <script type="text/javascript">
+    (function(){
+      var currentPosition= 0;
+      var leftToRight= true;
+    
+      function ex1(){
+      	//START:snip1
+        var ball= dojo.marginBox("ball");
+        var containerBox= dojo.marginBox("frame");
+        dojo.animateProperty({
+          node: dojo.byId("ball"),
+          properties: {
+            left: {
+              start: containerBox.l, 
+              end: containerBox.l+containerBox.w-ball.w
+            }
+          }
+        }).play();
+      	//END:snip1
+      }
+    
+      function ex2(){
+        var someNode= dojo.byId("target2");
+      	//START:snip2
+        dojo.animateProperty({
+          node: someNode,
+          properties: {
+              backgroundColor: {
+                start: "yellow"             
+             }
+          }
+        }).play();
+      	//END:snip2
+      }   	
+    
+      function ex3(){
+        var someNode= dojo.byId("target2");
+      	//START:snip3
+        dojo.animateProperty({
+          node: someNode,
+          properties: {
+            backgroundColor: {
+              start: "yellow"             
+            }
+          }
+        }).play();
+        
+      	//can also be stated like...
+        
+        var myAnimation1= dojo.animateProperty({});
+        myAnimation1.node= someNode;
+        myAnimation1.properties= {backgroundColor: {start: "yellow"}};
+        myAnimation1.play();
+      	//END:snip3
+      } 		
+    
+      function ex4(){
+        var someNode= dojo.byId("target2");
+      	//START:snip4
+      	//take a reference to the returned object...
+        var myAnimation= dojo.animateProperty({
+          node: someNode,
+          properties: {
+            backgroundColor: {
+              start: "red", end: "blue"           
+            }
+           }
+        });
+        
+      	//play it...
+        myAnimation.play();
+      	//play it again, sam...after waiting 3s
+        myAnimation.play(3000);
+      	//END:snip4
+      }  
+    
+      function ex5(){
+      	//START:snip5
+        var ball= dojo.marginBox("ball");
+        var containerBox= dojo.marginBox("frame");
+        var animation= dojo.animateProperty({
+          node: dojo.byId("ball"),
+          properties: {
+            left: {
+              start: containerBox.l, 
+              end: containerBox.l+containerBox.w-ball.w
+            },
+            backgroundColor: {end: "red"}
+          }
+        }).play();
+      	//END:snip5
+      }
+    
+    
+      function ex6(){
+      	//START:snip6
+        var ball= dojo.marginBox("ball");
+        var containerBox= dojo.marginBox("frame");
+        var animation= dojo.animateProperty({
+          node: dojo.byId("ball"),
+          properties: {
+            left: {
+              start: containerBox.l, 
+              end: containerBox.l+containerBox.w-ball.w
+            }
+          }
+        });
+        
+        var feedbackNode= dojo.byId("target2");
+        feedbackNode.innerHTML= "";
+        function append(text) {
+            feedbackNode.innerHTML= feedbackNode.innerHTML + " " + text;
+        }
+        
+        dojo.connect(animation, "onBegin", dojo.partial(append, "onBegin")); 
+        dojo.connect(animation, "onAnimate", dojo.partial(append, ".")); 
+        dojo.connect(animation, "onEnd", dojo.partial(append, "onEnd")); 
+        dojo.connect(animation, "onPlay", dojo.partial(append, "onPlay"));
+        
+        animation.play();
+    	//END:snip6
+      }   
+            
+      dojo.addOnLoad(function(){
+        ex6();
+      });
+      
+      function (){
+        //START:snip7     
+        dojo.anim = function(node, properties, duration, easing, onEnd, delay){
+          return dojo.animateProperty({ 
+            node:       node,
+            duration:   duration || dojo._Animation.prototype.duration,
+            properties: properties,
+            easing:     easing,
+            onEnd:      onEnd 
+          }).play(delay||0);
+        };
+        //END:snip7
+
+        //START:snip8 
+        dojo.anim(someNode, {backgroundColor: {start: "yellow"}});
+        //END:snip8   
+      }
+    
+    })();
+  </script>
+</head>
+<body>
+  <div id="frame">
+    <p id="ball" style="position: absolute; width: 20px; height: 20px; background-color: blue;"></p>
+    <p id="target2"> hello, world</p>
+  </div>
+  </body>
+</html>

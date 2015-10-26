@@ -1,0 +1,62 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!--
+ ! Excerpted from "Mastering Dojo",
+ ! published by The Pragmatic Bookshelf.
+ ! Copyrights apply to this code. It may not be used to create training material, 
+ ! courses, books, articles, and the like. Contact us if you are in doubt.
+ ! We make no guarantees that this code is fit for any purpose. 
+ ! Visit http://www.pragmaticprogrammer.com/titles/rgdojo for more book information.
+-->
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Constraints demo</title>
+    <style type="text/css">
+        @import "/dojoroot/dijit/themes/tundra/tundra.css";
+        @import "/dojoroot/dojo/resources/dojo.css"
+    </style>
+    <script type="text/javascript" src="/dojoroot/dojo/dojo.js"  
+            djConfig="parseOnLoad: true"
+            ></script>
+    <script type="text/javascript">
+       dojo.require("dijit.form.NumberTextBox");
+       dojo.require("dijit.form.CurrencyTextBox");
+    </script>
+</head>
+<body class="tundra">
+    <form method="post">
+    
+    <!--  Displays 1.01 -->
+    <div dojoType="dijit.form.NumberTextBox" name="n1" 
+         value='1.007' constraints="{ places: 2 }" 
+        ></div>
+
+    <!--  Displays 1.00 -->
+    <div dojoType="dijit.form.NumberTextBox" name="n2" 
+         value='1.004' constraints="{ pattern: '#.##' }" 
+        ></div>
+
+    <!--  Displays 110%, but reverts to 1 when the box gets focus,
+          and expects you to input the % sign -->
+    <div dojoType="dijit.form.NumberTextBox" name="n3" 
+         value='1.1' constraints="{ type: 'percent', places: 0 }" 
+        ></div>
+
+    <!--  Displays 1,005.0 -->
+    <div dojoType="dijit.form.NumberTextBox" name="n4" 
+         value='1005' constraints="{ pattern: '#,##0.0' }" 
+        ></div>
+
+    
+
+    
+    <!--  Displays 1.01 -->
+    Amt to Charge (in Japanese Yen)
+    <div dojoType="dijit.form.CurrencyTextBox" name="c1" 
+         value='1.007' constraints="{ currency:'JPY' }" 
+        ></div>
+    
+
+    <input type="submit" value="Submit">
+    </form>
+</body></html>

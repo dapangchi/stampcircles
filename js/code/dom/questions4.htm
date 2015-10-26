@@ -1,0 +1,206 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" 
+  "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+  <title>
+   Mastering Dojo - DOM Utilities Demonstration - Question List Challenge Step 4
+  </title>
+  
+  <style type="text/css">
+    @import "questions.css";
+  </style>
+  
+  <script 
+    type="text/javascript" 
+    src="/dojoroot/dojo/dojo.js" 
+    djConfig="isDebug: true">
+  </script>
+                
+  <script type="text/javascript">
+    (function(){
+      dojo.require("dojo.fx");
+    
+    //START:snip3
+    function checkSQuestion(pQuestion, choiceNode){
+
+      var sQuestion= pQuestion.nextSibling;
+      
+      //assume we're showing the sQuestion...
+      var start= 0, end= dojo.attr(sQuestion, "qHeight");
+      
+      //if hiding, then reverse start and end...
+      if (!choiceNode.checked) {
+        start= end; end= 0;
+      }
+      
+      dojo.anim(sQuestion, {
+          backgroundColor: {start: "yellow"},
+          height: {start: start, end: end}
+      }).play();
+    }
+    //END:snip3
+    
+    
+    //START:snip4
+    function checkSQuestion(pQuestion, choiceNode){
+      var f= dojo.fx[choiceNode.checked ? "wipeIn" : "wipeOut"];
+      f({node:pQuestion.nextSibling}).play();
+    }
+    //END:snip4
+    
+    function createElement(tag, className){
+      var newNode= document.createElement(tag);
+      dojo.addClass(newNode, className);
+      return newNode;
+    }   
+    
+    //START:snip1
+    function restructure(){
+
+      dojo.query("form > p").addClass("formTitle");
+      
+      var questionsDiv= dojo.query("div.questions")[0];
+      dojo.query("p", questionsDiv).forEach(function(node, questionNumber){
+        var pQuestion= !(questionNumber % 2);
+        
+        // START_HIGHLIGHT 
+        var band= (questionNumber % 4)<2 ? "lightBand" : "darkBand";
+        // END_HIGHLIGHT
+        
+        var className= "question " + band;
+        var question= createElement("div", className);
+        dojo.place(question, questionsDiv, "last");
+        dojo.query("span", node).forEach(function(choiceNode){
+          var choice= createElement("p", "choice");
+          dojo.place(choiceNode, choice, "last");
+          dojo.place(choice, question, "last");
+          
+          // START_HIGHLIGHT
+          if (pQuestion && choiceNode.firstChild.value=="yes") {
+            dojo.connect(question, "click", 
+              dojo.partial(checkSQuestion, question, choiceNode.firstChild));
+          }
+          // END_HIGHLIGHT
+          
+        });
+        dojo.addClass(node, "questionText");
+        dojo.place(node, question, "last");
+      });
+    }
+    //END:snip1
+    
+    function layout(){
+      layout.titleNode= layout.titleNode || dojo.query("form > p")[0];
+      var box= dojo.marginBox(layout.titleNode);
+      if (layout.basis && box.w==layout.basis.w && box.h==layout.basis.h) {
+        return;
+      }
+      layout.basis= {w: box.w, h: box.h};
+      alert("recalculating size");
+      
+      //clear all the previous widths so we get the natural widths...
+      dojo.query("p.choice").style("width", "");
+      
+      //get the questions in a NodeList...
+      var questions= dojo.query("div.question");
+      
+      //START:snip2
+      //find the maximum width of each column and
+      //calculate height and show/hide the sQuestions...
+      var widths= [];
+      questions.forEach(function(qNode, questionNumber){
+        dojo.query("p.choice", qNode).forEach(function(choiceNode, i){
+          var w= widths[i] || 0;
+          widths[i]= Math.max(w, dojo.marginBox(choiceNode).w);
+        });
+        
+        // START_HIGHLIGHT 
+        //calculate the height of the sQuestions;
+        //hide if the primary is NOT "yes"
+        if (questionNumber % 2) {
+          //let the browser layout engine calculate the height...
+          dojo.style(qNode, "height", "");
+          var height= dojo.style(qNode, "height");
+          
+          //stuff the height into a custom attribute for use by the event handler...
+          dojo.attr(qNode, "qHeight", height);
+          
+          //hide the question if the pQuestion isn't yes...
+          if (!dojo.query("input[value='yes']", qNode.previousSibling)[0].checked) {
+            dojo.style(qNode, "height", 0);
+          }
+        }
+        // END_HIGHLIGHT
+      });
+      //END:snip2
+      
+      //set each option to the maximum width just calculated... 
+      questions.forEach(function(qNode){
+        dojo.query("p.choice", qNode).forEach(function(choiceNode, i){
+          dojo.marginBox(choiceNode, {w: widths[i]});
+        });
+      });       
+      
+      //calculate the total width of all the columns...
+      var paddingLeft= 0;
+      dojo.forEach(widths, function(w){paddingLeft+= w;});
+      
+      //pad the question text by this width...                      
+      dojo.query(".questionText").forEach(function(node){
+        dojo.style(node, "paddingLeft", paddingLeft+10+"px");
+      });
+    }
+    
+    dojo.addOnLoad(function(){
+      restructure();
+      layout();
+      window.setInterval(layout, 2000);
+    });
+    
+    })();
+  </script>
+</head>
+        
+<body><div><form>
+  <p>Programmer Interview Questions</p>
+  <div class="questions">
+    <p>
+      <span><input type="radio" name="q1" value="yes">Yes</span>
+      <span><input type="radio" name="q1" value="no">No</span>
+      Are you a C programmer?
+    </p><p>
+      <span><input type="radio" name="q1-yes" value="yes">Yes</span>
+      <span><input type="radio" name="q1-yes" value="no">No</span>
+      <span><input type="radio" name="q1-yes" value="maybe">Don't know</span>
+      Have you read Kernighan and Ritchie?
+    </p><p>
+      <span><input type="radio" name="q2" value="yes">Yes</span>
+      <span><input type="radio" name="q2" value="no">No</span>
+      Are you a C++ programmer?
+    </p><p>
+      <span><input type="radio" name="q2-yes" value="yes">Yes</span>
+      <span><input type="radio" name="q2-yes" value="no">No</span>
+      <span><input type="radio" name="q2-yes" value="maybe">Don't know</span>
+      Have you read Stroustrup?
+    </p><p>
+      <span><input type="radio" name="q3" value="yes">Yes</span>
+      <span><input type="radio" name="q3" value="no">No</span>
+      Are you a Ruby programmer?
+    </p><p>
+      <span><input type="radio" name="q3-yes" value="yes">Yes</span>
+      <span><input type="radio" name="q3-yes" value="no">No</span>
+      <span><input type="radio" name="q3-yes" value="maybe">Don't know</span>
+      Have you read the pickax book?
+    </p><p>
+      <span><input type="radio" name="q4" value="yes">Yes</span>
+      <span><input type="radio" name="q4" value="no">No</span>
+      Are you a Lisp programmer?
+    </p><p>
+      <span><input type="radio" name="q4-yes" value="yes">Yes</span>
+      <span><input type="radio" name="q4-yes" value="no">No</span>
+      <span><input type="radio" name="q4-yes" value="maybe">Don't know</span>
+      Have you read the "Wizard" book?
+    </p>
+  </div>
+</form></div></body>
+</html>

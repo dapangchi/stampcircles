@@ -1,0 +1,656 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" dir="ltr" lang="en"><head>
+
+	
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+				<meta name="keywords" content="List of companies named after people,1896,1958,20th Century Fox,A&amp;M Records,A&amp;W Restaurants,A. G. Edwards,Abbott Laboratories,Abercrombie &amp; Fitch Co.,Abraham Lincoln,Abrams Air Craft">
+		<link rel="shortcut icon" href="http://en.wikipedia.org/favicon.ico">
+		<link rel="apple-touch-icon" href="http://en.wikipedia.org/apple-touch-icon.png">
+		<link rel="search" type="application/opensearchdescription+xml" href="http://en.wikipedia.org/w/opensearch_desc.php" title="Wikipedia (en)">
+		<link rel="copyright" href="http://www.gnu.org/copyleft/fdl.html">
+<link rel="alternate" type="application/rss+xml" title="Wikipedia RSS Feed" href="http://en.wikipedia.org/w/index.php?title=Special:RecentChanges&amp;feed=rss">
+<link rel="alternate" type="application/atom+xml" title="Wikipedia Atom Feed" href="http://en.wikipedia.org/w/index.php?title=Special:RecentChanges&amp;feed=atom"><title>List of companies named after people - Wikipedia, the free encyclopedia</title>
+		
+		<style type="text/css" media="screen, projection">/*<![CDATA[*/
+			@import "/skins-1.5/common/shared.css?122";
+			@import "/skins-1.5/monobook/main.css?122";
+		/*]]>*/</style>
+		<link rel="stylesheet" type="text/css" media="print" href="companies_files/commonPrint.css"><!--[if lt IE 5.5000]><style type="text/css">@import "/skins-1.5/monobook/IE50Fixes.css?122";</style><![endif]--><!--[if IE 5.5000]><style type="text/css">@import "/skins-1.5/monobook/IE55Fixes.css?122";</style><![endif]--><!--[if IE 6]><style type="text/css">@import "/skins-1.5/monobook/IE60Fixes.css?122";</style><![endif]--><!--[if IE 7]><style type="text/css">@import "/skins-1.5/monobook/IE70Fixes.css?122";</style><![endif]--><!--[if lt IE 7]><script type="text/javascript" src="/skins-1.5/common/IEFixes.js?122"></script>
+		<meta http-equiv="imagetoolbar" content="no" /><![endif]-->
+		
+		
+		
+		
+		
+		
+		<script type="text/javascript">/*<![CDATA[*/
+var skin = "monobook";
+var stylepath = "/skins-1.5";
+var wgArticlePath = "/wiki/$1";
+var wgScriptPath = "/w";
+var wgScript = "/w/index.php";
+var wgVariantArticlePath = false;
+var wgActionPaths = [];
+var wgServer = "http://en.wikipedia.org";
+var wgCanonicalNamespace = "";
+var wgCanonicalSpecialPageName = false;
+var wgNamespaceNumber = 0;
+var wgPageName = "List_of_companies_named_after_people";
+var wgTitle = "List of companies named after people";
+var wgAction = "view";
+var wgArticleId = "458248";
+var wgIsArticle = true;
+var wgUserName = "Yannisl";
+var wgUserGroups = ["*", "user", "autoconfirmed"];
+var wgUserLanguage = "en";
+var wgContentLanguage = "en";
+var wgBreakFrames = false;
+var wgCurRevisionId = "198433734";
+var wgVersion = "1.13alpha";
+var wgEnableAPI = true;
+var wgEnableWriteAPI = false;
+var wgRestrictionEdit = [];
+var wgRestrictionMove = [];
+var wgAjaxWatch = {"watchMsg": "Watch", "unwatchMsg": "Unwatch", "watchingMsg": "Watching...", "unwatchingMsg": "Unwatching..."};
+/*]]>*/</script>
+                
+		<script type="text/javascript" src="companies_files/wikibits.js"><!-- wikibits js --></script><!-- Head Scripts -->
+		
+		<script type="text/javascript" src="companies_files/ajax.js"></script>
+		<script type="text/javascript" src="companies_files/ajaxwatch.js"></script>
+		<script type="text/javascript" src="companies_files/index_002.php"><!-- site js --></script><script type="text/javascript" src="companies_files/index_003.php"></script>
+		<style type="text/css">/*<![CDATA[*/
+@import "/w/index.php?title=MediaWiki:Common.css&usemsgcache=yes&action=raw&ctype=text/css&smaxage=2678400";
+@import "/w/index.php?title=MediaWiki:Monobook.css&usemsgcache=yes&action=raw&ctype=text/css&smaxage=2678400";
+@import "/w/index.php?title=-&action=raw&gen=css&maxage=2678400&smaxage=0&ts=20080217101802";
+@import "/w/index.php?title=User:Yannisl/monobook.css&action=raw&ctype=text/css";
+/*]]>*/</style>
+		<script type="text/javascript" src="companies_files/index.php"></script></head><body class="mediawiki ns-0 ltr page-List_of_companies_named_after_people">
+	<div id="globalWrapper">
+		<div id="column-content">
+	<div id="content">
+		<a name="top" id="top"></a>
+		<div id="siteNotice"><script type="text/javascript" language="JavaScript">
+<!--
+var cookieName = "dismissSiteNotice=";
+var cookiePos = document.cookie.indexOf(cookieName);
+var siteNoticeID = "2.8";
+var siteNoticeValue = "\x3cdiv class=\"plainlinks\"\x3eThe \x3ca href=\"http://wikimania2008.wikimedia.org/wiki/\" class=\"external text\" title=\"http://wikimania2008.wikimedia.org/wiki/\" rel=\"nofollow\"\x3eWikimania 2008\x3c/a\x3e \x3ca href=\"http://wikimania2008.wikimedia.org/wiki/Call_for_Participation\" class=\"external text\" title=\"http://wikimania2008.wikimedia.org/wiki/Call_for_Participation\" rel=\"nofollow\"\x3eCall for Participation\x3c/a\x3e closes on March 16. Send in any last-minute proposals now!\x3c/div\x3e\n";
+var cookieValue = "";
+var msgClose = "hide";
+
+if (cookiePos > -1) {
+	cookiePos = cookiePos + cookieName.length;
+	var endPos = document.cookie.indexOf(";", cookiePos);
+	if (endPos > -1) {
+		cookieValue = document.cookie.substring(cookiePos, endPos);
+	} else {
+		cookieValue = document.cookie.substring(cookiePos);
+	}
+}
+if (cookieValue != siteNoticeID) {
+	function dismissNotice() {
+		var date = new Date();
+		date.setTime(date.getTime() + 30*86400*1000);
+		document.cookie = cookieName + siteNoticeID + "; expires="+date.toGMTString() + "; path=/";
+		var element = document.getElementById('siteNotice');
+		element.parentNode.removeChild(element);
+	}
+	document.writeln('<table width="100%" id="mw-dismissable-notice"><tr><td width="80%">'+siteNoticeValue+'</td>');
+	document.writeln('<td width="20%" align="right">[<a href="javascript:dismissNotice();">'+msgClose+'</a>]</td></tr></table>');
+}
+-->
+</script><table id="mw-dismissable-notice" width="100%"><tbody><tr><td width="80%"><div class="plainlinks">The <a href="http://wikimania2008.wikimedia.org/wiki/" class="external text" title="http://wikimania2008.wikimedia.org/wiki/" rel="nofollow">Wikimania 2008</a> <a href="http://wikimania2008.wikimedia.org/wiki/Call_for_Participation" class="external text" title="http://wikimania2008.wikimedia.org/wiki/Call_for_Participation" rel="nofollow">Call for Participation</a> closes on March 16. Send in any last-minute proposals now!</div>
+</td>
+<td align="right" width="20%">[<a href="javascript:dismissNotice();">hide</a>]</td></tr></tbody></table>
+</div>		<h1 class="firstHeading"><span><span>List of companies named after people</span></span></h1>
+		<div id="bodyContent">
+			<h3 id="siteSub">From Wikipedia, the free encyclopedia</h3>
+			<div id="contentSub"></div>
+									<div id="jump-to-nav">Jump to: <a href="#column-one">navigation</a>, <a href="#searchInput">search</a></div>			<!-- start content -->
+			<p>This is a <b>list of <a href="http://en.wikipedia.org/wiki/Companies" class="mw-redirect" title="Companies">companies</a> named after people</b>. For other lists of eponyms (names derived from people) see <a href="http://en.wikipedia.org/wiki/Lists_of_etymologies" title="Lists of etymologies">Lists of etymologies</a>.</p>
+<table id="toc" class="toc" summary="Contents">
+<tbody><tr>
+<td style="width: 4.5em;"><b>Contents</b></td>
+<td><a href="#top" title="">Top</a>&nbsp;<b>·</b> <a href="#0.E2.80.939" title="">0–9</a>&nbsp;<b>·</b> <a href="#A" title="">A</a> <a href="#B" title="">B</a> <a href="#C" title="">C</a> <a href="#D" title="">D</a> <a href="#E" title="">E</a> <a href="#F" title="">F</a> <a href="#G" title="">G</a> <a href="#H" title="">H</a> <a href="#I" title="">I</a> <a href="#J" title="">J</a> <a href="#K" title="">K</a> <a href="#L" title="">L</a> <a href="#M" title="">M</a> <a href="#N" title="">N</a> <a href="#O" title="">O</a> <a href="#P" title="">P</a> <a href="#Q" title="">Q</a> <a href="#R" title="">R</a> <a href="#S" title="">S</a> <a href="#T" title="">T</a> <a href="#U" title="">U</a> <a href="#V" title="">V</a> <a href="#W" title="">W</a> <a href="#X" title="">X</a> <a href="#Y" title="">Y</a> <a href="#Z" title="">Z</a></td>
+</tr>
+</tbody></table>
+<dl>
+<dd>
+<div class="boilerplate metadata" id="listdev"><i>This is an <a href="http://en.wikipedia.org/wiki/Wikipedia:WikiProject_Lists#Incomplete_lists" title="Wikipedia:WikiProject Lists">incomplete list</a>, which may never be able to satisfy certain standards for completeness.</i></div>
+</dd>
+<dd><span class="plainlinks selfreference"><i>Revisions and <a href="http://en.wikipedia.org/wiki/Wikipedia:Citing_sources" title="Wikipedia:Citing sources">sourced</a> additions are welcome.</i></span></dd>
+</dl>
+<p><a name=".23"></a></p>
+<h2><span class="editsection">[<a href="http://en.wikipedia.org/w/index.php?title=List_of_companies_named_after_people&amp;action=edit&amp;section=1" title="Edit section: #">edit</a>]</span> <span class="mw-headline">#</span></h2>
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/20th_Century_Fox" title="20th Century Fox">20th Century Fox</a> – <a href="http://en.wikipedia.org/wiki/Wilhelm_Fried" class="mw-redirect" title="Wilhelm Fried">William Fox</a></li>
+</ul>
+<p><a name="A" id="A"></a></p>
+<h2><span class="editsection">[<a href="http://en.wikipedia.org/w/index.php?title=List_of_companies_named_after_people&amp;action=edit&amp;section=2" title="Edit section: A">edit</a>]</span> <span class="mw-headline">A</span></h2>
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/A%26M_Records" title="A&amp;M Records">A&amp;M Records</a> – <a href="http://en.wikipedia.org/wiki/Herb_Alpert" title="Herb Alpert">Herb Alpert</a> and <a href="http://en.wikipedia.org/wiki/Jerry_Moss" title="Jerry Moss">Jerry Moss</a></li>
+<li><a href="http://en.wikipedia.org/wiki/A%26W_Restaurants" title="A&amp;W Restaurants">A&amp;W Restaurants</a> – after Roy Allen and Frank Wright</li>
+<li><a href="http://en.wikipedia.org/wiki/A._G._Edwards" title="A. G. Edwards">A. G. Edwards</a> – <a href="http://en.wikipedia.org/wiki/Albert_Gallatin_Edwards" title="Albert Gallatin Edwards">Albert Gallatin Edwards</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Abbott_Laboratories" title="Abbott Laboratories">Abbott Laboratories</a> – Wallace Calvin Abbott (1888)</li>
+<li><a href="http://en.wikipedia.org/wiki/Abercrombie_%26_Fitch_Co." class="mw-redirect" title="Abercrombie &amp; Fitch Co.">Abercrombie &amp; Fitch Co.</a> – David Abercrombie and Ezra Fitch</li>
+<li><a href="http://en.wikipedia.org/wiki/Opel" title="Opel">Adam Opel AG</a> – <a href="http://en.wikipedia.org/wiki/Adam_Opel" title="Adam Opel">Adam Opel</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Abrams_Air_Craft" title="Abrams Air Craft">Abrams Air Craft</a> - <a href="http://en.wikipedia.org/wiki/Talbert_Abrams" title="Talbert Abrams">Talbert Abrams</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Adidas" title="Adidas">adidas</a> – <a href="http://en.wikipedia.org/wiki/Adi_Dassler" class="mw-redirect" title="Adi Dassler">Adi Dassler</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Agusta" title="Agusta">Agusta</a> - Giovanni Agusta</li>
+<li><a href="http://en.wikipedia.org/wiki/Albert_Heijn" title="Albert Heijn">Albert Heijn</a> and <a href="http://en.wikipedia.org/wiki/Ahold" title="Ahold">Ahold</a> (<b>A</b>lbert <b>H</b>eijn H<b>old</b>ings) - <a href="http://en.wikipedia.org/wiki/Albert_Heijn_%281865%29" title="Albert Heijn (1865)">Albert Heijn</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Alza" class="mw-redirect" title="Alza">Alza</a> – name of the founder <b>Al</b>ex <b>Za</b>ffaroni.</li>
+<li><a href="http://en.wikipedia.org/wiki/Amstrad" title="Amstrad">Amstrad</a> – <a href="http://en.wikipedia.org/wiki/Sir_Alan_Sugar" class="mw-redirect" title="Sir Alan Sugar">Alan Sugar</a> - <b>A</b>lan <b>M</b>ichael <b>S</b>ugar <b>Trad</b>ing</li>
+<li><a href="http://en.wikipedia.org/wiki/Anheuser-Busch" title="Anheuser-Busch">Anheuser-Busch</a> - <a href="http://en.wikipedia.org/wiki/Adolphus_Busch" title="Adolphus Busch">Adolphus Busch</a> and Lilly and Eberhard Anheuser</li>
+<li><a href="http://en.wikipedia.org/wiki/The_Anschutz_Corporation" title="The Anschutz Corporation">The Anschutz Corporation</a> - <a href="http://en.wikipedia.org/wiki/Philip_Anschutz" title="Philip Anschutz">Philip Anschutz</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Archer_Daniels_Midland" title="Archer Daniels Midland">Archer Daniels</a> – George A. Archer and John W. Daniels</li>
+<li><a href="http://en.wikipedia.org/wiki/Giorgio_Armani_S.p.A." class="mw-redirect" title="Giorgio Armani S.p.A.">Armani</a> - <a href="http://en.wikipedia.org/wiki/Giorgio_Armani" title="Giorgio Armani">Giorgio Armani</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Aston_Martin" title="Aston Martin">Aston Martin</a> – <a href="http://en.wikipedia.org/wiki/Lionel_Martin" title="Lionel Martin">Lionel Martin</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Audi" title="Audi">Audi</a> – founder <a href="http://en.wikipedia.org/wiki/August_Horch" title="August Horch">August Horch</a> (<i>audi</i> is Latin for <i>horch</i> which means <i>listen</i> in English)</li>
+<li><a href="http://en.wikipedia.org/wiki/Avery_Dennison_Corporation" class="mw-redirect" title="Avery Dennison Corporation">Avery Dennison Corporation</a> – <a href="http://en.wikipedia.org/w/index.php?title=R._Stanton_Avery&amp;action=edit&amp;redlink=1" class="new" title="R. Stanton Avery (page does not exist)">R. Stanton Avery</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Ayala_Corporation" title="Ayala Corporation">Ayala Corporation</a> - <a href="http://en.wikipedia.org/wiki/Zobel_de_Ayala_family" title="Zobel de Ayala family">Zobel de Ayala family</a></li>
+</ul>
+<p><a name="B" id="B"></a></p>
+<h2><span class="editsection">[<a href="http://en.wikipedia.org/w/index.php?title=List_of_companies_named_after_people&amp;action=edit&amp;section=3" title="Edit section: B">edit</a>]</span> <span class="mw-headline">B</span></h2>
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/B%26Q" title="B&amp;Q">B&amp;Q</a> – from the initials of its founders, Block and Quayle</li>
+<li><a href="http://en.wikipedia.org/wiki/Baedeker%27s" class="mw-redirect" title="Baedeker's">Baedeker's</a> – <a href="http://en.wikipedia.org/wiki/Karl_Baedeker" title="Karl Baedeker">Karl Baedeker</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Bajaj_Auto" title="Bajaj Auto">Bajaj Auto</a> - <a href="http://en.wikipedia.org/wiki/Jamnalal_Bajaj" title="Jamnalal Bajaj">Jamnalal Bajaj</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Baker_International" title="Baker International">Baker International</a> (to <a href="http://en.wikipedia.org/wiki/Baker_Hughes" title="Baker Hughes">Baker Hughes</a> – <a href="http://en.wikipedia.org/wiki/Reuben_C._Baker" title="Reuben C. Baker">Reuben C. Baker</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Baldwin_Locomotive_Works" title="Baldwin Locomotive Works">Baldwin Locomotive Works</a> – founded by <a href="http://en.wikipedia.org/wiki/Matthias_W._Baldwin" title="Matthias W. Baldwin">Matthias W. Baldwin</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Ball_Corp." title="Ball Corp.">Ball Corp.</a> - the <a href="http://en.wikipedia.org/wiki/Ball_Brothers" title="Ball Brothers">Ball Brothers</a></li>
+<li><a href="http://en.wikipedia.org/w/index.php?title=Banta_COrporation&amp;action=edit&amp;redlink=1" class="new" title="Banta COrporation (page does not exist)">Banta COrporation</a> - <a href="http://en.wikipedia.org/wiki/George_Banta" title="George Banta">George Banta</a>, Sr.</li>
+<li><a href="http://en.wikipedia.org/wiki/Barnes_%26_Noble" title="Barnes &amp; Noble">Barnes &amp; Noble</a> – William Barnes and G. Clifford Noble</li>
+<li><a href="http://en.wikipedia.org/wiki/Bashas%27" title="Bashas'">Bashas'</a> - <a href="http://en.wikipedia.org/w/index.php?title=Eddie_Basha%2C_Sr.&amp;action=edit&amp;redlink=1" class="new" title="Eddie Basha, Sr. (page does not exist)">Eddie Basha, Sr.</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Baskin-Robbins" title="Baskin-Robbins">Baskin-Robbins</a> - <a href="http://en.wikipedia.org/wiki/Burt_Baskin" title="Burt Baskin">Burt Baskin</a> and <a href="http://en.wikipedia.org/wiki/Irv_Robbins" title="Irv Robbins">Irv Robbins</a></li>
+<li><a href="http://en.wikipedia.org/w/index.php?title=Bass_%26_Co&amp;action=edit&amp;redlink=1" class="new" title="Bass &amp; Co (page does not exist)">Bass &amp; Co</a> - William Bass founder in 1777</li>
+<li><a href="http://en.wikipedia.org/wiki/Bausch_and_Lomb" class="mw-redirect" title="Bausch and Lomb">Bausch and Lomb</a> – <a href="http://en.wikipedia.org/wiki/John_Jacob_Bausch" title="John Jacob Bausch">John Jacob Bausch</a> and Henry Lomb</li>
+<li><a href="http://en.wikipedia.org/wiki/Bayer" title="Bayer">Bayer</a> – <a href="http://en.wikipedia.org/wiki/Friedrich_Bayer" title="Friedrich Bayer">Friedrich Bayer</a></li>
+<li><a href="http://en.wikipedia.org/wiki/BEA_Systems" title="BEA Systems">BEA Systems</a> – from the first initial of each of the company's three founders: <b>B</b>ill Coleman, <b>E</b>d Scott and <b>A</b>lfred Chuang.</li>
+<li><a href="http://en.wikipedia.org/wiki/Beck%27s" title="Beck's">Beck's</a> – <a href="http://en.wikipedia.org/w/index.php?title=Heinrich_Beck&amp;action=edit&amp;redlink=1" class="new" title="Heinrich Beck (page does not exist)">Heinrich Beck</a> (1873)</li>
+<li><a href="http://en.wikipedia.org/wiki/Beckman_Coulter" title="Beckman Coulter">Beckman Coulter</a> - <a href="http://en.wikipedia.org/wiki/Arnold_O._Beckman" class="mw-redirect" title="Arnold O. Beckman">Arnold O. Beckman</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Bell_Aircraft" title="Bell Aircraft">Bell Aircraft</a> – <a href="http://en.wikipedia.org/wiki/Lawrence_Bell" class="mw-redirect" title="Lawrence Bell">Lawrence Bell</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Bell_Telephone_Company" title="Bell Telephone Company">Bell Telephone Company</a>, <a href="http://en.wikipedia.org/wiki/Bell_System" title="Bell System">Bell System</a> – <a href="http://en.wikipedia.org/wiki/Alexander_Graham_Bell" title="Alexander Graham Bell">Alexander Graham Bell</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Benetton_Group" title="Benetton Group">Benetton Group</a> - <a href="http://en.wikipedia.org/wiki/Luciano_Benetton" class="mw-redirect" title="Luciano Benetton">Luciano Benetton</a></li>
+<li><a href="http://en.wikipedia.org/w/index.php?title=Bennett_Schneider&amp;action=edit&amp;redlink=1" class="new" title="Bennett Schneider (page does not exist)">Bennett Schneider</a> – Bennett Bernard Schneider</li>
+<li><a href="http://en.wikipedia.org/wiki/Benz_%26_Cie." class="mw-redirect" title="Benz &amp; Cie.">Benz &amp; Cie.</a> (later <a href="http://en.wikipedia.org/wiki/Daimler-Benz" title="Daimler-Benz">Daimler-Benz</a>) – <a href="http://en.wikipedia.org/wiki/Karl_Benz" title="Karl Benz">Karl Benz</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Black_%26_Decker" title="Black &amp; Decker">Black &amp; Decker</a> – <a href="http://en.wikipedia.org/w/index.php?title=S._Duncan_Black&amp;action=edit&amp;redlink=1" class="new" title="S. Duncan Black (page does not exist)">S. Duncan Black</a> and <a href="http://en.wikipedia.org/w/index.php?title=Alonzo_G._Decker&amp;action=edit&amp;redlink=1" class="new" title="Alonzo G. Decker (page does not exist)">Alonzo G. Decker</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Bloomberg_L.P." title="Bloomberg L.P.">Bloomberg L.P.</a> - <a href="http://en.wikipedia.org/wiki/Michael_Bloomberg" title="Michael Bloomberg">Michael Bloomberg</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Boeing" title="Boeing">Boeing</a> – <a href="http://en.wikipedia.org/wiki/William_Boeing" class="mw-redirect" title="William Boeing">William Boeing</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Bombardier" title="Bombardier">Bombardier</a> - <a href="http://en.wikipedia.org/wiki/Joseph-Armand_Bombardier" title="Joseph-Armand Bombardier">Joseph-Armand Bombardier</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Bose_Corporation" title="Bose Corporation">Bose Corporation</a> – <a href="http://en.wikipedia.org/wiki/Amar_Bose" title="Amar Bose">Amar Bose</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Brentano%27s" title="Brentano's">Brentano's</a> – <a href="http://en.wikipedia.org/w/index.php?title=August_Brentano&amp;action=edit&amp;redlink=1" class="new" title="August Brentano (page does not exist)">August Brentano</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Briggs_%26_Stratton" title="Briggs &amp; Stratton">Briggs &amp; Stratton</a> – <a href="http://en.wikipedia.org/wiki/Stephen_Foster_Briggs" title="Stephen Foster Briggs">Stephen Foster Briggs</a> and <a href="http://en.wikipedia.org/wiki/Harold_M._Stratton" title="Harold M. Stratton">Harold M. Stratton</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Brooks_Locomotive_Works" title="Brooks Locomotive Works">Brooks Locomotive Works</a> – founded by <a href="http://en.wikipedia.org/wiki/Horatio_G._Brooks" title="Horatio G. Brooks">Horatio G. Brooks</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Bugatti" title="Bugatti">Bugatti</a> - <a href="http://en.wikipedia.org/wiki/Ettore_Bugatti" title="Ettore Bugatti">Ettore Bugatti</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Buick" title="Buick">Buick</a> - <a href="http://en.wikipedia.org/wiki/David_Dunbar_Buick" title="David Dunbar Buick">David Dunbar Buick</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Bulgari" title="Bulgari">Bulgari</a> - founder Sotirios Bulgari</li>
+<li><a href="http://en.wikipedia.org/w/index.php?title=B%26L_MACHINE_WORKS&amp;action=edit&amp;redlink=1" class="new" title="B&amp;L MACHINE WORKS (page does not exist)">B&amp;L MACHINE WORKS</a> from its founders Brad &amp; lemuel Dreher</li>
+<li><a href="http://en.wikipedia.org/w/index.php?title=BMB_SOFTECH&amp;action=edit&amp;redlink=1" class="new" title="BMB SOFTECH (page does not exist)">BMB SOFTECH</a> from Mr. BRIJ MOHAN BANSAL and Mr. ASHUTOSH AGGARWAL</li>
+</ul>
+<p><a name="C" id="C"></a></p>
+<h2><span class="editsection">[<a href="http://en.wikipedia.org/w/index.php?title=List_of_companies_named_after_people&amp;action=edit&amp;section=4" title="Edit section: C">edit</a>]</span> <span class="mw-headline">C</span></h2>
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/C%26A" title="C&amp;A">C&amp;A</a> - Clemens and August <a href="http://en.wikipedia.org/wiki/Brenninkmeijer_family" title="Brenninkmeijer family">Brenninkmeijer</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Cadbury-Schweppes" class="mw-redirect" title="Cadbury-Schweppes">Cadbury</a> – <a href="http://en.wikipedia.org/wiki/John_Cadbury" title="John Cadbury">John Cadbury</a> opened his shop in 1824</li>
+<li><a href="http://en.wikipedia.org/wiki/Cadillac" title="Cadillac">Cadillac</a> - <a href="http://en.wikipedia.org/wiki/Antoine_Laumet_de_La_Mothe%2C_sieur_de_Cadillac" title="Antoine Laumet de La Mothe, sieur de Cadillac">Antoine Laumet de La Mothe, sieur de Cadillac</a>, founder of <a href="http://en.wikipedia.org/wiki/Detroit%2C_Michigan" title="Detroit, Michigan">Detroit, Michigan</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Calvin_Klein" title="Calvin Klein">Calvin Klein</a> - <a href="http://en.wikipedia.org/wiki/Calvin_Klein" title="Calvin Klein">Calvin Klein</a></li>
+<li><a href="http://en.wikipedia.org/wiki/CKE_Restaurants" title="CKE Restaurants">CKE Restaurants</a> – founded as <a href="http://en.wikipedia.org/wiki/Carl_Karcher" title="Carl Karcher">Carl Karcher</a> Enterprises</li>
+<li><a href="http://en.wikipedia.org/wiki/Casio" title="Casio">Casio</a> – <a href="http://en.wikipedia.org/w/index.php?title=Tadao_Kashio&amp;action=edit&amp;redlink=1" class="new" title="Tadao Kashio (page does not exist)">Tadao Kashio</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Charles_Schwab_Corporation" class="mw-redirect" title="Charles Schwab Corporation">Charles Schwab Corporation</a> - <a href="http://en.wikipedia.org/wiki/Charles_R._Schwab" title="Charles R. Schwab">Charles R. Schwab</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Chase_Manhattan_Bank" class="mw-redirect" title="Chase Manhattan Bank">Chase National Bank</a> (to Chase Manhattan Bank and <a href="http://en.wikipedia.org/wiki/J.P._Morgan_Chase_%26_Co." class="mw-redirect" title="J.P. Morgan Chase &amp; Co.">J.P. Morgan Chase &amp; Co.</a> – in honor of <a href="http://en.wikipedia.org/wiki/Salmon_P._Chase" title="Salmon P. Chase">Salmon P. Chase</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Chevrolet" title="Chevrolet">Chevrolet</a> - <a href="http://en.wikipedia.org/wiki/Louis_Chevrolet" title="Louis Chevrolet">Louis Chevrolet</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Christie%27s" title="Christie's">Christie's</a> - James Christie</li>
+<li><a href="http://en.wikipedia.org/wiki/Chrysler" title="Chrysler">Chrysler</a> (to <a href="http://en.wikipedia.org/wiki/DaimlerChrysler" class="mw-redirect" title="DaimlerChrysler">DaimlerChrysler</a>) – <a href="http://en.wikipedia.org/wiki/Walter_Chrysler" title="Walter Chrysler">Walter Chrysler</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Citro%C3%ABn" title="Citroën">Citroën</a> – <a href="http://en.wikipedia.org/wiki/Andr%C3%A9_Citro%C3%ABn" title="André Citroën">André Citroën</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Colgate-Palmolive" title="Colgate-Palmolive">Colgate-Palmolive</a> – <a href="http://en.wikipedia.org/wiki/William_Colgate" title="William Colgate">William Colgate</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Collins_Radio_Company" class="mw-redirect" title="Collins Radio Company">Collins Radio Company</a> - <a href="http://en.wikipedia.org/wiki/Arthur_A._Collins" title="Arthur A. Collins">Arthur A. Collins</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Coors_Brewing_Company" title="Coors Brewing Company">Coors Brewing Company</a>, <a href="http://en.wikipedia.org/wiki/Adolph_Coors_Company" title="Adolph Coors Company">Adolph Coors Company</a> - <a href="http://en.wikipedia.org/wiki/Adolph_Coors" title="Adolph Coors">Adolph Coors</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Corel" class="mw-redirect" title="Corel">Corel</a> – from the founder's name Dr. <a href="http://en.wikipedia.org/wiki/Michael_Cowpland" title="Michael Cowpland">Michael Cowpland</a>. It stands for <b>CO</b>wpland <b>RE</b>search <b>L</b>aboratory.</li>
+<li><a href="http://en.wikipedia.org/wiki/Crane_Paper_Company" class="mw-redirect" title="Crane Paper Company">Crane &amp; Co.</a> - Stephen Crane or the Crane family</li>
+<li><a href="http://en.wikipedia.org/wiki/Cray_Research" class="mw-redirect" title="Cray Research">Cray Research</a> – <a href="http://en.wikipedia.org/wiki/Seymour_Cray" title="Seymour Cray">Seymour Cray</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Cummins" title="Cummins">Cummins</a> – <a href="http://en.wikipedia.org/wiki/Clessie_Cummins" title="Clessie Cummins">Clessie Cummins</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Curtiss_Aeroplane_and_Motor_Company" title="Curtiss Aeroplane and Motor Company">Curtiss Aeroplane and Motor Company</a> (to <a href="http://en.wikipedia.org/wiki/Curtiss-Wright" title="Curtiss-Wright">Curtiss-Wright</a>) – <a href="http://en.wikipedia.org/wiki/Glenn_Curtiss" title="Glenn Curtiss">Glenn Curtiss</a></li>
+</ul>
+<p><a name="D" id="D"></a></p>
+<h2><span class="editsection">[<a href="http://en.wikipedia.org/w/index.php?title=List_of_companies_named_after_people&amp;action=edit&amp;section=5" title="Edit section: D">edit</a>]</span> <span class="mw-headline">D</span></h2>
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/Daimler-Benz" title="Daimler-Benz">Daimler-Benz</a> (to <a href="http://en.wikipedia.org/wiki/DaimlerChrysler" class="mw-redirect" title="DaimlerChrysler">DaimlerChrysler</a>) – <a href="http://en.wikipedia.org/wiki/Gottlieb_Daimler" title="Gottlieb Daimler">Gottlieb Daimler</a> and <a href="http://en.wikipedia.org/wiki/Karl_Benz" title="Karl Benz">Karl Benz</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Damiani_%28jewelry_company%29" title="Damiani (jewelry company)">Damiani</a> – Enrico Grassi Damiani</li>
+<li><a href="http://en.wikipedia.org/wiki/Danelectro" title="Danelectro">Danelectro</a> – Nathan Daniel</li>
+<li><a href="http://en.wikipedia.org/wiki/Dassault_Group" title="Dassault Group">Dassault Group</a> – <a href="http://en.wikipedia.org/wiki/Marcel_Dassault" title="Marcel Dassault">Marcel Dassault</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Dean_%26_DeLuca" title="Dean &amp; DeLuca">Dean &amp; DeLuca</a> – Joel Dean and <a href="http://en.wikipedia.org/wiki/Giorgio_DeLuca" title="Giorgio DeLuca">Giorgio DeLuca</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Dean_Guitars" title="Dean Guitars">Dean Guitars</a> – Dean Zelinsky</li>
+<li><a href="http://en.wikipedia.org/wiki/Debian" title="Debian">Debian</a> – project founder <b>Ian</b> Murdock named it after himself and his girlfriend, <b>Deb</b>ra.</li>
+<li><a href="http://en.wikipedia.org/wiki/Deere_%26_Company" title="Deere &amp; Company">Deere &amp; Company</a> – <a href="http://en.wikipedia.org/wiki/John_Deere" title="John Deere">John Deere</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Dell%2C_Inc." class="mw-redirect" title="Dell, Inc.">Dell</a> – <a href="http://en.wikipedia.org/wiki/Michael_Dell" title="Michael Dell">Michael Dell</a></li>
+<li><a href="http://en.wikipedia.org/wiki/De_Lorean_Motor_Company" title="De Lorean Motor Company">De Lorean Motor Company</a> – <a href="http://en.wikipedia.org/wiki/John_De_Lorean" class="mw-redirect" title="John De Lorean">John De Lorean</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Dick%27s_Sporting_Goods" title="Dick's Sporting Goods">Dick's Sporting Goods</a> – Dick Stack</li>
+<li><a href="http://en.wikipedia.org/w/index.php?title=DiGiorgio_%26_Company&amp;action=edit&amp;redlink=1" class="new" title="DiGiorgio &amp; Company (page does not exist)">DiGiorgio &amp; Company</a> – family philanthropy <a href="http://en.wikipedia.org/w/index.php?title=Robert_P._DiGiorgio&amp;action=edit&amp;redlink=1" class="new" title="Robert P. DiGiorgio (page does not exist)">Robert P. DiGiorgio</a> Chairman, Boston</li>
+<li><a href="http://en.wikipedia.org/wiki/Dillard%27s" title="Dillard's">Dillard's</a> – <a href="http://en.wikipedia.org/wiki/William_T._Dillard" title="William T. Dillard">William T. Dillard</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Disney" class="mw-redirect" title="Disney">Disney</a> – <a href="http://en.wikipedia.org/wiki/Walt_Disney" title="Walt Disney">Walt Disney</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Dolby_Laboratories" title="Dolby Laboratories">Dolby Laboratories</a> – <a href="http://en.wikipedia.org/wiki/Ray_Dolby" title="Ray Dolby">Ray Dolby</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Dolce_%26_Gabbana" title="Dolce &amp; Gabbana">Dolce &amp; Gabbana</a> – <a href="http://en.wikipedia.org/wiki/Domenico_Dolce" class="mw-redirect" title="Domenico Dolce">Domenico Dolce</a> and <a href="http://en.wikipedia.org/wiki/Stefano_Gabbana" class="mw-redirect" title="Stefano Gabbana">Stefano Gabbana</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Douglas_Aircraft_Company" title="Douglas Aircraft Company">Douglas Aircraft Company</a> (to <a href="http://en.wikipedia.org/wiki/McDonnell_Douglas" title="McDonnell Douglas">McDonnell Douglas</a>) – <a href="http://en.wikipedia.org/wiki/Donald_Wills_Douglas%2C_Sr." title="Donald Wills Douglas, Sr.">Donald Wills Douglas, Sr.</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Dow_Chemical_Company" title="Dow Chemical Company">The Dow Chemical Company</a> – <a href="http://en.wikipedia.org/wiki/Herbert_Dow" class="mw-redirect" title="Herbert Dow">Herbert Dow</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Dow_Jones_%26_Company" title="Dow Jones &amp; Company">Dow Jones &amp; Company</a> – <a href="http://en.wikipedia.org/wiki/Charles_Dow" title="Charles Dow">Charles Dow</a> and <a href="http://en.wikipedia.org/wiki/Edward_Jones_%28statistician%29" title="Edward Jones (statistician)">Edward Jones</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Duke_Energy" title="Duke Energy">Duke Energy</a> – <a href="http://en.wikipedia.org/wiki/James_Buchanan_Duke" title="James Buchanan Duke">James Buchanan Duke</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Dunlop_%28brands%29" title="Dunlop (brands)">Dunlop</a> – <a href="http://en.wikipedia.org/wiki/John_Boyd_Dunlop" title="John Boyd Dunlop">John Boyd Dunlop</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Dunlop_Manufacturing" title="Dunlop Manufacturing">Dunlop Manufacturing</a> – <a href="http://en.wikipedia.org/wiki/Jim_Dunlop" class="mw-redirect" title="Jim Dunlop">Jim Dunlop</a></li>
+<li><a href="http://en.wikipedia.org/wiki/DuPont" title="DuPont">DuPont</a> – <a href="http://en.wikipedia.org/wiki/Eleuth%C3%A8re_Ir%C3%A9n%C3%A9e_du_Pont" title="Eleuthère Irénée du Pont">Eleuthère Irénée du Pont</a>.</li>
+</ul>
+<p><a name="E" id="E"></a></p>
+<h2><span class="editsection">[<a href="http://en.wikipedia.org/w/index.php?title=List_of_companies_named_after_people&amp;action=edit&amp;section=6" title="Edit section: E">edit</a>]</span> <span class="mw-headline">E</span></h2>
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/Eastman_Kodak" title="Eastman Kodak">Eastman Kodak</a> – <a href="http://en.wikipedia.org/wiki/George_Eastman" title="George Eastman">George Eastman</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Eatons" class="mw-redirect" title="Eatons">Eatons</a> – <a href="http://en.wikipedia.org/wiki/Timothy_Eaton" title="Timothy Eaton">Timothy Eaton</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Edison_Records" title="Edison Records">Edison Records</a> – <a href="http://en.wikipedia.org/wiki/Thomas_Edison" title="Thomas Edison">Thomas Edison</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Eli_Lilly_and_Company" title="Eli Lilly and Company">Eli Lilly and Company</a> – <a href="http://en.wikipedia.org/wiki/Colonel_Eli_Lilly" title="Colonel Eli Lilly">Eli Lilly</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Ericsson" title="Ericsson">Ericsson</a> – <a href="http://en.wikipedia.org/wiki/Lars_Magnus_Ericsson" title="Lars Magnus Ericsson">Lars Magnus Ericsson</a></li>
+</ul>
+<p><a name="F" id="F"></a></p>
+<h2><span class="editsection">[<a href="http://en.wikipedia.org/w/index.php?title=List_of_companies_named_after_people&amp;action=edit&amp;section=7" title="Edit section: F">edit</a>]</span> <span class="mw-headline">F</span></h2>
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/Fender" class="mw-redirect" title="Fender">Fender</a> – <a href="http://en.wikipedia.org/wiki/Leo_Fender" title="Leo Fender">Leo Fender</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Fendi" title="Fendi">Fendi</a> - <a href="http://en.wikipedia.org/w/index.php?title=Edoardo_Fendi&amp;action=edit&amp;redlink=1" class="new" title="Edoardo Fendi (page does not exist)">Edoardo Fendi</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Ferragamo" class="mw-redirect" title="Ferragamo">Ferragamo</a> - <a href="http://en.wikipedia.org/wiki/Salvatore_Ferragamo" title="Salvatore Ferragamo">Salvatore Ferragamo</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Ferrari" title="Ferrari">Ferrari</a> – <a href="http://en.wikipedia.org/wiki/Enzo_Ferrari" title="Enzo Ferrari">Enzo Ferrari</a>, founder</li>
+<li><a href="http://en.wikipedia.org/wiki/Fisher-Price" title="Fisher-Price">Fisher-Price</a> - <a href="http://en.wikipedia.org/wiki/Herman_Fisher" title="Herman Fisher">Herman Fisher</a> and <a href="http://en.wikipedia.org/wiki/Irving_Price" title="Irving Price">Irving Price</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Fitch_Ratings" title="Fitch Ratings">Fitch Ratings</a> - <a href="http://en.wikipedia.org/wiki/John_Knowles_Fitch" title="John Knowles Fitch">John Knowles Fitch</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Ford_Motor_Company" title="Ford Motor Company">Ford Motor Company</a> – <a href="http://en.wikipedia.org/wiki/Henry_Ford" title="Henry Ford">Henry Ford</a></li>
+<li><a href="http://en.wikipedia.org/wiki/20th_Century_Fox" title="20th Century Fox">Fox</a> – <a href="http://en.wikipedia.org/wiki/Wilhelm_Fried" class="mw-redirect" title="Wilhelm Fried">William Fox</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Franklin-Covey" class="mw-redirect" title="Franklin-Covey">FranklinCovey</a> – <a href="http://en.wikipedia.org/wiki/Benjamin_Franklin" title="Benjamin Franklin">Benjamin Franklin</a> and <a href="http://en.wikipedia.org/wiki/Stephen_Covey" title="Stephen Covey">Stephen Covey</a>.
+The company was formed in a 1997 merger of FranklinQuest and the Covey
+Leadership Center. FranklinQuest was best known for selling personal
+management systems inspired by the writings of Benjamin Franklin.</li>
+</ul>
+<p><a name="G" id="G"></a></p>
+<h2><span class="editsection">[<a href="http://en.wikipedia.org/w/index.php?title=List_of_companies_named_after_people&amp;action=edit&amp;section=8" title="Edit section: G">edit</a>]</span> <span class="mw-headline">G</span></h2>
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/Gannett_Company" title="Gannett Company">Gannett Company</a> – <a href="http://en.wikipedia.org/wiki/Frank_Gannett" title="Frank Gannett">Frank Gannett</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Garmin" title="Garmin">Garmin</a> - named after founders <b>Gar</b>y Burrell and Dr. <b>Min</b> Kao</li>
+<li><a href="http://en.wikipedia.org/wiki/Gartner" title="Gartner">Gartner</a> – <a href="http://en.wikipedia.org/wiki/Gideon_Gartner" title="Gideon Gartner">Gideon Gartner</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Getty_Images" title="Getty Images">Getty Images</a> – <a href="http://en.wikipedia.org/wiki/Mark_Getty" title="Mark Getty">Mark Getty</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Getty_Oil" title="Getty Oil">Getty Oil</a> – <a href="http://en.wikipedia.org/wiki/John_Paul_Getty" class="mw-redirect" title="John Paul Getty">John Paul Getty</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Ghirardelli_Chocolate_Company" title="Ghirardelli Chocolate Company">Ghirardelli Chocolate Company</a> – <a href="http://en.wikipedia.org/wiki/Domingo_Ghirardelli" title="Domingo Ghirardelli">Domingo Ghirardelli</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Giannini" title="Giannini">Giannini</a> - Tranquillo Giannini</li>
+<li><a href="http://en.wikipedia.org/wiki/Gibson_Guitar_Corporation" title="Gibson Guitar Corporation">Gibson Guitar Corporation</a> – <a href="http://en.wikipedia.org/wiki/Orville_Gibson" title="Orville Gibson">Orville Gibson</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Glenn_L._Martin_Company" title="Glenn L. Martin Company">Glenn L. Martin Company</a> (to <a href="http://en.wikipedia.org/wiki/Lockheed_Martin" title="Lockheed Martin">Lockheed Martin</a>) – <a href="http://en.wikipedia.org/wiki/Glenn_Luther_Martin" title="Glenn Luther Martin">Glenn Luther Martin</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Global_Gillette" title="Global Gillette">Global Gillette</a> – <a href="http://en.wikipedia.org/wiki/King_C._Gillette" title="King C. Gillette">King C. Gillette</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Glock" title="Glock">GLOCK GmbH</a> – <a href="http://en.wikipedia.org/wiki/Gaston_Glock" title="Gaston Glock">Gaston Glock</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Godin_%28Guitar_Manufacturer%29" title="Godin (Guitar Manufacturer)">Godin</a> – Robert Godin</li>
+<li><a href="http://en.wikipedia.org/wiki/Goldman_Sachs" title="Goldman Sachs">Goldman Sachs</a> – <a href="http://en.wikipedia.org/wiki/Marcus_Goldman" title="Marcus Goldman">Marcus Goldman</a> and Samuel Sachs</li>
+<li><a href="http://en.wikipedia.org/wiki/Goldwyn_Picture_Corporation" class="mw-redirect" title="Goldwyn Picture Corporation">Goldwyn Picture Corporation</a> (to <a href="http://en.wikipedia.org/wiki/Metro-Goldwyn-Mayer" title="Metro-Goldwyn-Mayer">Metro-Goldwyn-Mayer</a>) – a combination of the names of Samuel <b>Gold</b>fish (he later adopted the name <a href="http://en.wikipedia.org/wiki/Samuel_Goldwyn" title="Samuel Goldwyn">Samuel Goldwyn</a>), Edgar and Archibald Sel<b>wyn</b></li>
+<li><a href="http://en.wikipedia.org/wiki/Goodrich_Corporation" title="Goodrich Corporation">Goodrich Corporation</a> - <a href="http://en.wikipedia.org/wiki/Benjamin_Goodrich" title="Benjamin Goodrich">Benjamin Goodrich</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Gottlieb" title="Gottlieb">Gottlieb</a> – David Gottlieb</li>
+<li><a href="http://en.wikipedia.org/wiki/Gucci" title="Gucci">Gucci</a> - <a href="http://en.wikipedia.org/wiki/Guccio_Gucci" title="Guccio Gucci">Guccio Gucci</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Gretsch" title="Gretsch">Gretsch</a> – <a href="http://en.wikipedia.org/wiki/Friedrich_Gretsch" class="mw-redirect" title="Friedrich Gretsch">Friedrich Gretsch</a></li>
+</ul>
+<p><a name="H" id="H"></a></p>
+<h2><span class="editsection">[<a href="http://en.wikipedia.org/w/index.php?title=List_of_companies_named_after_people&amp;action=edit&amp;section=9" title="Edit section: H">edit</a>]</span> <span class="mw-headline">H</span></h2>
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/H%26R_Block" title="H&amp;R Block">H&amp;R Block</a> – <a href="http://en.wikipedia.org/wiki/Henry_W._Bloch" title="Henry W. Bloch">Henry W. Bloch</a> and <a href="http://en.wikipedia.org/wiki/Richard_Bloch" title="Richard Bloch">Richard Bloch</a></li>
+<li><a href="http://en.wikipedia.org/wiki/H._J._Heinz_Company" title="H. J. Heinz Company">H. J. Heinz Company</a> - <a href="http://en.wikipedia.org/wiki/Henry_John_Heinz" class="mw-redirect" title="Henry John Heinz">Henry John Heinz</a></li>
+<li><a href="http://en.wikipedia.org/wiki/H._K._Porter%2C_Inc" title="H. K. Porter, Inc">H. K. Porter, Inc</a> – <a href="http://en.wikipedia.org/wiki/Henry_Kirke_Porter" title="Henry Kirke Porter">Henry Kirke Porter</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Halliburton" title="Halliburton">Halliburton</a> – <a href="http://en.wikipedia.org/wiki/Erle_P._Halliburton" title="Erle P. Halliburton">Erle P. Halliburton</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Hammond_Organ" class="mw-redirect" title="Hammond Organ">Hammond Organ</a> - <a href="http://en.wikipedia.org/wiki/Laurens_Hammond" title="Laurens Hammond">Laurens Hammond</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Hanna-Barbera_Productions" class="mw-redirect" title="Hanna-Barbera Productions">Hanna-Barbera Productions</a> – <a href="http://en.wikipedia.org/wiki/William_Hanna" title="William Hanna">William Hanna</a> and <a href="http://en.wikipedia.org/wiki/Joseph_Barbera" title="Joseph Barbera">Joseph Barbera</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Harley-Davidson" title="Harley-Davidson">Harley-Davidson</a> – <a href="http://en.wikipedia.org/w/index.php?title=William_Harley&amp;action=edit&amp;redlink=1" class="new" title="William Harley (page does not exist)">William Harley</a> and <a href="http://en.wikipedia.org/wiki/Arthur_Davidson" title="Arthur Davidson">Arthur Davidson</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Harman_Kardon" title="Harman Kardon">Harman Kardon</a> – <a href="http://en.wikipedia.org/wiki/Sidney_Harman" title="Sidney Harman">Sidney Harman</a> and Bernard Kardon</li>
+<li><a href="http://en.wikipedia.org/wiki/Harrah%27s_Entertainment" title="Harrah's Entertainment">Harrah's Entertainment</a> – <a href="http://en.wikipedia.org/wiki/William_F._Harrah" title="William F. Harrah">William F. Harrah</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Harvey_Norman" title="Harvey Norman">Harvey Norman</a> – <a href="http://en.wikipedia.org/w/index.php?title=Gerald_Harvey&amp;action=edit&amp;redlink=1" class="new" title="Gerald Harvey (page does not exist)">Gerald Harvey</a> and <a href="http://en.wikipedia.org/w/index.php?title=Ian_Norman&amp;action=edit&amp;redlink=1" class="new" title="Ian Norman (page does not exist)">Ian Norman</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Hasbro" title="Hasbro">Hasbro</a> - the <b>Has</b>senfeld <b>Bro</b>thers</li>
+<li><a href="http://en.wikipedia.org/wiki/Hearst_Corporation" title="Hearst Corporation">Hearst Corporation</a> - <a href="http://en.wikipedia.org/wiki/William_Randolph_Hearst" title="William Randolph Hearst">William Randolph Hearst</a></li>
+<li><a href="http://en.wikipedia.org/wiki/The_Hershey_Company" title="The Hershey Company">The Hershey Company</a> – <a href="http://en.wikipedia.org/wiki/Milton_Hershey" class="mw-redirect" title="Milton Hershey">Milton Hershey</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Hewitt_Associates" title="Hewitt Associates">Hewitt Associates</a> – <a href="http://en.wikipedia.org/w/index.php?title=Ted_Hewitt&amp;action=edit&amp;redlink=1" class="new" title="Ted Hewitt (page does not exist)">Ted Hewitt</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Hewlett-Packard" title="Hewlett-Packard">Hewlett-Packard</a> – <a href="http://en.wikipedia.org/wiki/William_Hewlett" class="mw-redirect" title="William Hewlett">William Hewlett</a> and <a href="http://en.wikipedia.org/wiki/David_Packard" title="David Packard">David Packard</a></li>
+<li><a href="http://en.wikipedia.org/w/index.php?title=Hill_Audio&amp;action=edit&amp;redlink=1" class="new" title="Hill Audio (page does not exist)">Hill Audio</a> - <a href="http://en.wikipedia.org/wiki/Malcolm_Hill" title="Malcolm Hill">Malcolm Hill</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Hilton_Hotels" title="Hilton Hotels">Hilton Hotels</a> – <a href="http://en.wikipedia.org/wiki/Conrad_Hilton" title="Conrad Hilton">Conrad Hilton</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Honda" title="Honda">Honda</a> – <a href="http://en.wikipedia.org/wiki/Soichiro_Honda" title="Soichiro Honda">Soichiro Honda</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Honeywell" title="Honeywell">Honeywell</a> – <a href="http://en.wikipedia.org/wiki/Mark_Honeywell" class="mw-redirect" title="Mark Honeywell">Mark Honeywell</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Horlicks" title="Horlicks">Horlicks</a> – <a href="http://en.wikipedia.org/w/index.php?title=James_Horlick&amp;action=edit&amp;redlink=1" class="new" title="James Horlick (page does not exist)">James Horlick</a> and <a href="http://en.wikipedia.org/w/index.php?title=William_Horlick&amp;action=edit&amp;redlink=1" class="new" title="William Horlick (page does not exist)">William Horlick</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Hormel" title="Hormel">Hormel</a> – George A. Hormel</li>
+<li><a href="http://en.wikipedia.org/wiki/Hovnanian_Enterprises" title="Hovnanian Enterprises">Hovnanian Enterprises</a> – <a href="http://en.wikipedia.org/w/index.php?title=Kevork_Hovnanian&amp;action=edit&amp;redlink=1" class="new" title="Kevork Hovnanian (page does not exist)">Kevork Hovnanian</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Hughes_Aircraft" title="Hughes Aircraft">Hughes Aircraft</a>, <a href="http://en.wikipedia.org/wiki/Hughes_Tool_Company" title="Hughes Tool Company">Hughes Tool Company</a> (to <a href="http://en.wikipedia.org/wiki/Baker_Hughes" title="Baker Hughes">Baker Hughes</a>), <a href="http://en.wikipedia.org/wiki/Hughes_Airwest" title="Hughes Airwest">Hughes Airwest</a> – <a href="http://en.wikipedia.org/wiki/Howard_Hughes" title="Howard Hughes">Howard Hughes</a></li>
+</ul>
+<p><a name="I" id="I"></a></p>
+<h2><span class="editsection">[<a href="http://en.wikipedia.org/w/index.php?title=List_of_companies_named_after_people&amp;action=edit&amp;section=10" title="Edit section: I">edit</a>]</span> <span class="mw-headline">I</span></h2>
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/IKEA" title="IKEA">IKEA</a> – from an acronym using the initials of the founder <a href="http://en.wikipedia.org/wiki/Ingvar_Kamprad" title="Ingvar Kamprad">Ingvar Kamprad</a>, who was from a family farm called <b>E</b>lmtaryd, which was near the village of <b>A</b>gunnaryd.</li>
+</ul>
+<p><a name="J" id="J"></a></p>
+<h2><span class="editsection">[<a href="http://en.wikipedia.org/w/index.php?title=List_of_companies_named_after_people&amp;action=edit&amp;section=11" title="Edit section: J">edit</a>]</span> <span class="mw-headline">J</span></h2>
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/J._P._Morgan_%26_Co." class="mw-redirect" title="J. P. Morgan &amp; Co.">J. P. Morgan &amp; Co.</a> – <a href="http://en.wikipedia.org/wiki/J._P._Morgan" title="J. P. Morgan">J. P. Morgan</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Jackson_Guitars" title="Jackson Guitars">Jackson Guitars</a> – Grover Jackson</li>
+<li><a href="http://en.wikipedia.org/wiki/JCPenney" class="mw-redirect" title="JCPenney">JCPenney</a> – <a href="http://en.wikipedia.org/wiki/J.C._Penney" class="mw-redirect" title="J.C. Penney">James Cash Penney</a></li>
+<li><a href="http://en.wikipedia.org/wiki/The_Jim_Henson_Company" title="The Jim Henson Company">The Jim Henson Company</a> - <a href="http://en.wikipedia.org/wiki/Jim_Henson" title="Jim Henson">Jim Henson</a></li>
+<li><a href="http://en.wikipedia.org/wiki/J.J._Newberry" title="J.J. Newberry">J.J. Newberry</a> - <a href="http://en.wikipedia.org/wiki/John_Josiah_Newberry" title="John Josiah Newberry">John Josiah Newberry</a></li>
+<li><a href="http://en.wikipedia.org/wiki/John_Deere" title="John Deere">John Deere</a> - <a href="http://en.wikipedia.org/wiki/John_Deere" title="John Deere">John Deere</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Johnson_%26_Johnson" title="Johnson &amp; Johnson">Johnson &amp; Johnson</a> - <a href="http://en.wikipedia.org/wiki/Robert_Wood_Johnson_I" title="Robert Wood Johnson I">Robert Wood Johnson I</a>, <a href="http://en.wikipedia.org/w/index.php?title=James_Wood_Johnson&amp;action=edit&amp;redlink=1" class="new" title="James Wood Johnson (page does not exist)">James Wood Johnson</a>, and <a href="http://en.wikipedia.org/w/index.php?title=Edward_Mead_Johnson&amp;action=edit&amp;redlink=1" class="new" title="Edward Mead Johnson (page does not exist)">Edward Mead Johnson</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Johnson_Publishing" title="Johnson Publishing">Johnson Publishing</a> - <a href="http://en.wikipedia.org/wiki/John_H._Johnson" title="John H. Johnson">John H. Johnson</a></li>
+</ul>
+<p><a name="K" id="K"></a></p>
+<h2><span class="editsection">[<a href="http://en.wikipedia.org/w/index.php?title=List_of_companies_named_after_people&amp;action=edit&amp;section=12" title="Edit section: K">edit</a>]</span> <span class="mw-headline">K</span></h2>
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/Kawasaki_Heavy_Industries" title="Kawasaki Heavy Industries">Kawasaki Heavy Industries</a> – <a href="http://en.wikipedia.org/wiki/Shozo_Kawasaki" class="mw-redirect" title="Shozo Kawasaki">Shozo Kawasaki</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Kellogg_Company" title="Kellogg Company">Kellogg Company</a> – <a href="http://en.wikipedia.org/wiki/John_Harvey_Kellogg" title="John Harvey Kellogg">John Harvey Kellogg</a></li>
+<li><a href="http://en.wikipedia.org/w/index.php?title=The_Kent_H._Landsberg_Company&amp;action=edit&amp;redlink=1" class="new" title="The Kent H. Landsberg Company (page does not exist)">Kent H. Landsberg Company</a> - founder Kent H. Landsberg</li>
+<li><a href="http://en.wikipedia.org/wiki/Kroger" title="Kroger">Kroger Co.</a> – <a href="http://en.wikipedia.org/wiki/Bernard_Henry_Kroger" title="Bernard Henry Kroger">Bernard Henry Kroger</a></li>
+<li><a href="http://en.wikipedia.org/wiki/King_Kullen_Grocery_Company" class="mw-redirect" title="King Kullen Grocery Company">King Kullen Grocery Co.</a> – founder <a href="http://en.wikipedia.org/wiki/Michael_J._Cullen" title="Michael J. Cullen">Michael J. Cullen</a>, he replaced the "C" with a "K" for marketing purposes.</li>
+<li><a href="http://en.wikipedia.org/wiki/Knight_Ridder" title="Knight Ridder">Knight Ridder</a> – <a href="http://en.wikipedia.org/wiki/John_S._Knight" title="John S. Knight">John S. Knight</a> (Knight Newspapers, Inc.) and <a href="http://en.wikipedia.org/w/index.php?title=Herman_Ridder&amp;action=edit&amp;redlink=1" class="new" title="Herman Ridder (page does not exist)">Herman Ridder</a> (Ridder Publications, Inc.)</li>
+<li><a href="http://en.wikipedia.org/wiki/Kohl%27s" title="Kohl's">Kohl's</a> – <a href="http://en.wikipedia.org/w/index.php?title=Max_Kohl&amp;action=edit&amp;redlink=1" class="new" title="Max Kohl (page does not exist)">Max Kohl</a></li>
+</ul>
+<p><a name="L" id="L"></a></p>
+<h2><span class="editsection">[<a href="http://en.wikipedia.org/w/index.php?title=List_of_companies_named_after_people&amp;action=edit&amp;section=13" title="Edit section: L">edit</a>]</span> <span class="mw-headline">L</span></h2>
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/Lafarge" title="Lafarge">Lafarge</a> – Joseph-Auguste Pavin de Lafarge</li>
+<li><a href="http://en.wikipedia.org/wiki/Laidlaw" title="Laidlaw">Laidlaw</a> – <a href="http://en.wikipedia.org/wiki/Robert_Laidlaw" title="Robert Laidlaw">Robert Laidlaw</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Lamborghini" title="Lamborghini">Lamborghini</a> – <a href="http://en.wikipedia.org/wiki/Ferruccio_Lamborghini" title="Ferruccio Lamborghini">Ferruccio Lamborghini</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Lancia" title="Lancia">Lancia</a> – Vicenzo Lancia</li>
+<li><a href="http://en.wikipedia.org/wiki/Lazard" title="Lazard">Lazard</a> – <a href="http://en.wikipedia.org/w/index.php?title=Alexandre_Lazard&amp;action=edit&amp;redlink=1" class="new" title="Alexandre Lazard (page does not exist)">Alexandre Lazard</a>, <a href="http://en.wikipedia.org/w/index.php?title=Simon_Lazard&amp;action=edit&amp;redlink=1" class="new" title="Simon Lazard (page does not exist)">Simon Lazard</a>, and <a href="http://en.wikipedia.org/w/index.php?title=Elie_Lazard&amp;action=edit&amp;redlink=1" class="new" title="Elie Lazard (page does not exist)">Elie Lazard</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Lee_Enterprises" title="Lee Enterprises">Lee Enterprises</a> – <a href="http://en.wikipedia.org/w/index.php?title=A._W._Lee&amp;action=edit&amp;redlink=1" class="new" title="A. W. Lee (page does not exist)">A. W. Lee</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Lehman_Brothers" title="Lehman Brothers">Lehman Brothers</a> – <a href="http://en.wikipedia.org/w/index.php?title=Henry_Lehman&amp;action=edit&amp;redlink=1" class="new" title="Henry Lehman (page does not exist)">Henry Lehman</a>, <a href="http://en.wikipedia.org/w/index.php?title=Emanuel_Lehman&amp;action=edit&amp;redlink=1" class="new" title="Emanuel Lehman (page does not exist)">Emanuel Lehman</a> and <a href="http://en.wikipedia.org/w/index.php?title=Meyer_Lehman&amp;action=edit&amp;redlink=1" class="new" title="Meyer Lehman (page does not exist)">Meyer Lehman</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Leslie_speaker" title="Leslie speaker">Leslie</a> - <a href="http://en.wikipedia.org/wiki/Donald_Leslie" title="Donald Leslie">Donald Leslie</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Lesney_Products" title="Lesney Products">Lesney Products</a> - <a href="http://en.wikipedia.org/wiki/Leslie_Smith" title="Leslie Smith">Leslie Smith</a> and Rodney Smith</li>
+<li><a href="http://en.wikipedia.org/wiki/Levi_Strauss_%26_Co." title="Levi Strauss &amp; Co.">Levi Strauss &amp; Co.</a> – <a href="http://en.wikipedia.org/wiki/Levi_Strauss" title="Levi Strauss">Levi Strauss</a></li>
+<li><a href="http://en.wikipedia.org/w/index.php?title=Lewis_%26_Clark_Outfitters&amp;action=edit&amp;redlink=1" class="new" title="Lewis &amp; Clark Outfitters (page does not exist)">Lewis &amp; Clark Outfitters</a> - <a href="http://en.wikipedia.org/wiki/Meriwether_Lewis" title="Meriwether Lewis">Meriwether Lewis</a> and <a href="http://en.wikipedia.org/wiki/William_Clark" title="William Clark">William Clark</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Lincoln_National_Corporation" title="Lincoln National Corporation">Lincoln National Corporation</a> - to convey the integrity of U.S. President <a href="http://en.wikipedia.org/wiki/Abraham_Lincoln" title="Abraham Lincoln">Abraham Lincoln</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Liz_Claiborne%2C_Inc." class="mw-redirect" title="Liz Claiborne, Inc.">Liz Claiborne, Inc.</a> - <a href="http://en.wikipedia.org/w/index.php?title=Elisabeth_Claiborne_Ortenberg&amp;action=edit&amp;redlink=1" class="new" title="Elisabeth Claiborne Ortenberg (page does not exist)">Elisabeth Claiborne Ortenberg</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Lockheed_Corporation" class="mw-redirect" title="Lockheed Corporation">Lockheed Corporation</a> (to Lockheed Martin) - <a href="http://en.wikipedia.org/wiki/Allan_Haines_Loughead" title="Allan Haines Loughead">Allan Haines Loughead</a> and <a href="http://en.wikipedia.org/wiki/Malcolm_Loughead" title="Malcolm Loughead">Malcolm Loughead</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Lorillard_Tobacco_Company" title="Lorillard Tobacco Company">Lorillard Tobacco Company</a> – <a href="http://en.wikipedia.org/wiki/Pierre_Lorillard_IV" title="Pierre Lorillard IV">Pierre Lorillard IV</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Louis_B._Mayer_Pictures" class="mw-redirect" title="Louis B. Mayer Pictures">Louis B. Mayer Pictures</a> (to <a href="http://en.wikipedia.org/wiki/Metro-Goldwyn-Mayer" title="Metro-Goldwyn-Mayer">Metro-Goldwyn-Mayer</a>) – <a href="http://en.wikipedia.org/wiki/Louis_B._Mayer" title="Louis B. Mayer">Louis B. Mayer</a></li>
+</ul>
+<p><a name="M" id="M"></a></p>
+<h2><span class="editsection">[<a href="http://en.wikipedia.org/w/index.php?title=List_of_companies_named_after_people&amp;action=edit&amp;section=14" title="Edit section: M">edit</a>]</span> <span class="mw-headline">M</span></h2>
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/Macy%27s_%28department_store%29" class="mw-redirect" title="Macy's (department store)">Macy's</a> - <a href="http://en.wikipedia.org/wiki/Rowland_Hussey_Macy" title="Rowland Hussey Macy">Rowland Hussey Macy</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Mahindra_%26_Mahindra" class="mw-redirect" title="Mahindra &amp; Mahindra">Mahindra &amp; Mahindra Limited</a> - <a href="http://en.wikipedia.org/wiki/K.C._Mahindra" class="mw-redirect" title="K.C. Mahindra">K.C. Mahindra</a> and <a href="http://en.wikipedia.org/wiki/J.C._Mahindra" class="mw-redirect" title="J.C. Mahindra">J.C. Mahindra</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Marriott_Corporation" class="mw-redirect" title="Marriott Corporation">Marriott Corporation</a> (later split into <a href="http://en.wikipedia.org/wiki/Host_Marriott" class="mw-redirect" title="Host Marriott">Host Marriott</a> and <a href="http://en.wikipedia.org/wiki/Marriott_International" title="Marriott International">Marriott International</a>) – founder <a href="http://en.wikipedia.org/wiki/J._Willard_Marriott" title="J. Willard Marriott">J. Willard Marriott</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Mars%2C_Incorporated" title="Mars, Incorporated">Mars, Incorporated</a> – <a href="http://en.wikipedia.org/wiki/Frank_C._Mars" class="mw-redirect" title="Frank C. Mars">Frank C. Mars</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Marsh_%26_McLennan_Companies" title="Marsh &amp; McLennan Companies">Marsh &amp; McLennan Companies</a> - <a href="http://en.wikipedia.org/w/index.php?title=Henry_W._Marsh&amp;action=edit&amp;redlink=1" class="new" title="Henry W. Marsh (page does not exist)">Henry W. Marsh</a> and <a href="http://en.wikipedia.org/wiki/Donald_R._McLennan" title="Donald R. McLennan">Donald R. McLennan</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Marshall_Amplification" title="Marshall Amplification">Marshall Amplification</a> – <a href="http://en.wikipedia.org/wiki/Jim_Marshall_%28businessman%29" title="Jim Marshall (businessman)">Jim Marshall</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Martha_Stewart_Living_Omnimedia" title="Martha Stewart Living Omnimedia">Martha Stewart Living Omnimedia</a> – <a href="http://en.wikipedia.org/wiki/Martha_Stewart" title="Martha Stewart">Martha Stewart</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Martini_%26_Rossi" title="Martini &amp; Rossi">Martini &amp; Rossi</a> - <a href="http://en.wikipedia.org/wiki/Alessandro_Martini" title="Alessandro Martini">Alessandro Martini</a> and Luigi Rossi</li>
+<li><a href="http://en.wikipedia.org/w/index.php?title=Maruri_Publicidad&amp;action=edit&amp;redlink=1" class="new" title="Maruri Publicidad (page does not exist)">Maruri Publicidad</a> – from founder <a href="http://en.wikipedia.org/w/index.php?title=Jimmy_Maruri&amp;action=edit&amp;redlink=1" class="new" title="Jimmy Maruri (page does not exist)">Jimmy Maruri</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Mattel" title="Mattel">Mattel</a> – from founders Harold "Matt" Matson and Elliot Handler</li>
+<li><a href="http://en.wikipedia.org/wiki/Maytag" title="Maytag">Maytag</a> – <a href="http://en.wikipedia.org/wiki/F._L._Maytag" class="mw-redirect" title="F. L. Maytag">F. L. Maytag</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Mazda" title="Mazda">Mazda</a> – <a href="http://en.wikipedia.org/wiki/Jujiro_Matsuda" title="Jujiro Matsuda">Jujiro Matsuda</a>, also possibly inspired by Zoroastrian god <a href="http://en.wikipedia.org/wiki/Ahura_Mazda" title="Ahura Mazda">Ahura Mazda</a>.</li>
+<li><a href="http://en.wikipedia.org/wiki/McAfee" title="McAfee">McAfee</a> – <a href="http://en.wikipedia.org/wiki/John_McAfee" title="John McAfee">John McAfee</a></li>
+<li><a href="http://en.wikipedia.org/wiki/McCaw_Cellular" class="mw-redirect" title="McCaw Cellular">McCaw Cellular</a> – <a href="http://en.wikipedia.org/wiki/Craig_McCaw" title="Craig McCaw">Craig McCaw</a></li>
+<li><a href="http://en.wikipedia.org/wiki/McDonald%27s" title="McDonald's">McDonald's</a> – <a href="http://en.wikipedia.org/wiki/Dick_and_Mac_McDonald" title="Dick and Mac McDonald">Dick and Mac McDonald</a></li>
+<li><a href="http://en.wikipedia.org/wiki/McDonnell_Aircraft" title="McDonnell Aircraft">McDonnell Aircraft</a> (to <a href="http://en.wikipedia.org/wiki/McDonnell_Douglas" title="McDonnell Douglas">McDonnell Douglas</a>) – <a href="http://en.wikipedia.org/wiki/James_Smith_McDonnell" title="James Smith McDonnell">James Smith McDonnell</a></li>
+<li><a href="http://en.wikipedia.org/wiki/McGraw-Hill" title="McGraw-Hill">McGraw-Hill</a> – <a href="http://en.wikipedia.org/wiki/John_A._Hill" title="John A. Hill">John A. Hill</a> and <a href="http://en.wikipedia.org/wiki/James_H._McGraw" title="James H. McGraw">James H. McGraw</a></li>
+<li><a href="http://en.wikipedia.org/wiki/McKesson" title="McKesson">McKesson</a> – <a href="http://en.wikipedia.org/w/index.php?title=John_McKesson&amp;action=edit&amp;redlink=1" class="new" title="John McKesson (page does not exist)">John McKesson</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Mellon_Financial_Corporation" class="mw-redirect" title="Mellon Financial Corporation">Mellon Financial Corporation</a> – <a href="http://en.wikipedia.org/wiki/Thomas_Mellon" title="Thomas Mellon">Thomas Mellon</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Mercedes_%28car%29" title="Mercedes (car)">Mercedes</a> - an 1902 automobile model of Daimler Motor Company – <a href="http://en.wikipedia.org/wiki/M%C3%A9rc%C3%A9d%C3%A8s_Jellinek" title="Mércédès Jellinek">Mércédès Jellinek</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Merrill_Lynch" title="Merrill Lynch">Merrill Lynch</a> – <a href="http://en.wikipedia.org/wiki/Charles_E._Merrill" title="Charles E. Merrill">Charles E. Merrill</a> and Edmund C. Lynch</li>
+<li><a href="http://en.wikipedia.org/wiki/MGM" class="mw-redirect" title="MGM">MGM</a> or Metro-Goldwyn-Mayer – after the last names of <a href="http://en.wikipedia.org/wiki/Samuel_Goldfish" class="mw-redirect" title="Samuel Goldfish">Samuel <b>Gold</b>fish</a> and Edgar and Archibald Sel<b>wyn</b> and <a href="http://en.wikipedia.org/wiki/Louis_B._Mayer" title="Louis B. Mayer">Louis B. <b>Mayer</b></a>.</li>
+<li><a href="http://en.wikipedia.org/wiki/Miele" title="Miele">Miele</a> – Carl Miele.</li>
+<li><a href="http://en.wikipedia.org/wiki/Mitel" title="Mitel">Mitel</a> – from <i>Mi</i>ke and <i>Te</i>rry's <i>L</i>awnmowers after the founders <a href="http://en.wikipedia.org/wiki/Michael_Cowpland" title="Michael Cowpland">Michael Cowpland</a> and <a href="http://en.wikipedia.org/wiki/Terry_Matthews" title="Terry Matthews">Terry Matthews</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Molson" title="Molson">Molson</a> - <a href="http://en.wikipedia.org/wiki/John_Molson" title="John Molson">John Molson</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Moog_Music" title="Moog Music">Moog Music</a> – <a href="http://en.wikipedia.org/wiki/Bob_Moog" class="mw-redirect" title="Bob Moog">Dr. Robert Moog</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Morgan_Stanley" title="Morgan Stanley">Morgan Stanley</a> - <a href="http://en.wikipedia.org/wiki/Henry_S._Morgan" title="Henry S. Morgan">Henry S. Morgan</a> and <a href="http://en.wikipedia.org/wiki/Harold_Stanley" title="Harold Stanley">Harold Stanley</a></li>
+</ul>
+<p><a name="N" id="N"></a></p>
+<h2><span class="editsection">[<a href="http://en.wikipedia.org/w/index.php?title=List_of_companies_named_after_people&amp;action=edit&amp;section=15" title="Edit section: N">edit</a>]</span> <span class="mw-headline">N</span></h2>
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/Nero_AG" title="Nero AG">Nero AG</a> - <a href="http://en.wikipedia.org/wiki/Nero" title="Nero">Nero</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Nestl%C3%A9" title="Nestlé">Nestlé</a> – <a href="http://en.wikipedia.org/wiki/Henri_Nestl%C3%A9" title="Henri Nestlé">Henri Nestlé</a> who created the milk-based food in 1867</li>
+<li><a href="http://en.wikipedia.org/wiki/Nordstrom" title="Nordstrom">Nordstrom</a> - <a href="http://en.wikipedia.org/wiki/John_W._Nordstrom" title="John W. Nordstrom">John W. Nordstrom</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Northrop" title="Northrop">Northrop</a> – <a href="http://en.wikipedia.org/wiki/Jack_Northrop" class="mw-redirect" title="Jack Northrop">Jack Northrop</a></li>
+</ul>
+<p><a name="O" id="O"></a></p>
+<h2><span class="editsection">[<a href="http://en.wikipedia.org/w/index.php?title=List_of_companies_named_after_people&amp;action=edit&amp;section=16" title="Edit section: O">edit</a>]</span> <span class="mw-headline">O</span></h2>
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/Oldsmobile" title="Oldsmobile">Oldsmobile</a> - <a href="http://en.wikipedia.org/wiki/Ransom_E._Olds" title="Ransom E. Olds">Ransom E. Olds</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Olin_Corporation" class="mw-redirect" title="Olin Corporation">Olin Corporation</a> – <a href="http://en.wikipedia.org/wiki/Franklin_W._Olin" title="Franklin W. Olin">Franklin W. Olin</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Olivetti" title="Olivetti">Olivetti</a> - <a href="http://en.wikipedia.org/wiki/Camillo_Olivetti" title="Camillo Olivetti">Camillo Olivetti</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Orton_Ceramic_Foundation" title="Orton Ceramic Foundation">Orton Ceramic Foundation</a> - <a href="http://en.wikipedia.org/wiki/Edward_Orton%2C_Jr." title="Edward Orton, Jr.">Edward Orton, Jr.</a></li>
+<li><a href="http://en.wikipedia.org/w/index.php?title=Oztas&amp;action=edit&amp;redlink=1" class="new" title="Oztas (page does not exist)">Oztas</a> – <a href="http://en.wikipedia.org/w/index.php?title=Habib_%C3%96zta%C5%9F&amp;action=edit&amp;redlink=1" class="new" title="Habib Öztaş (page does not exist)">Habib Öztaş</a>, who founded the company in <a href="http://en.wikipedia.org/wiki/1958" title="1958">1958</a></li>
+</ul>
+<p><a name="P" id="P"></a></p>
+<h2><span class="editsection">[<a href="http://en.wikipedia.org/w/index.php?title=List_of_companies_named_after_people&amp;action=edit&amp;section=17" title="Edit section: P">edit</a>]</span> <span class="mw-headline">P</span></h2>
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/Path%C3%A9" title="Pathé">Pathé</a> – <a href="http://en.wikipedia.org/wiki/Charles_Path%C3%A9" title="Charles Pathé">Charles</a> and <a href="http://en.wikipedia.org/w/index.php?title=%C3%89mile_Path%C3%A9&amp;action=edit&amp;redlink=1" class="new" title="Émile Pathé (page does not exist)">Émile Pathé</a>, who founded the <a href="http://en.wikipedia.org/wiki/Path%C3%A9" title="Pathé">Société Pathé Frères</a> in <a href="http://en.wikipedia.org/wiki/1896" title="1896">1896</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Peavey_Electronics" title="Peavey Electronics">Peavey Electronics</a> – <a href="http://en.wikipedia.org/wiki/Hartley_Peavey" title="Hartley Peavey">Hartley Peavey</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Penske_Corporation" title="Penske Corporation">Penske Corporation</a> - <a href="http://en.wikipedia.org/wiki/Roger_Penske" title="Roger Penske">Roger Penske</a></li>
+<li><a href="http://en.wikipedia.org/wiki/PerkinElmer" title="PerkinElmer">PerkinElmer</a> - <a href="http://en.wikipedia.org/wiki/Richard_Scott_Perkin" title="Richard Scott Perkin">Richard Scott Perkin</a> and <a href="http://en.wikipedia.org/wiki/Charles_Elmer" title="Charles Elmer">Charles Elmer</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Perot_Systems" title="Perot Systems">Perot Systems</a> - <a href="http://en.wikipedia.org/wiki/H._Ross_Perot%2C_Jr." title="H. Ross Perot, Jr.">H. Ross Perot, Jr.</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Peugeot" title="Peugeot">Peugeot</a> – <a href="http://en.wikipedia.org/wiki/Armand_Peugeot" title="Armand Peugeot">Armand Peugeot</a> who founded the company in 1882</li>
+<li><a href="http://en.wikipedia.org/wiki/Pfizer" title="Pfizer">Pfizer</a> - <a href="http://en.wikipedia.org/wiki/Charles_Pfizer" title="Charles Pfizer">Charles Pfizer</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Philips" title="Philips">Philips</a> – Gerard Philips, who founded the company in 1891</li>
+<li><a href="http://en.wikipedia.org/wiki/Pontiac" title="Pontiac">Pontiac</a> - <a href="http://en.wikipedia.org/wiki/Chief_Pontiac" title="Chief Pontiac">Chief Pontiac</a>, leader of <a href="http://en.wikipedia.org/wiki/Pontiac%27s_Rebellion" title="Pontiac's Rebellion">Pontiac's Rebellion</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Porsche" title="Porsche">Porsche</a> – <a href="http://en.wikipedia.org/wiki/Ferdinand_Porsche" title="Ferdinand Porsche">Ferdinand Porsche</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Prada" title="Prada">Prada</a> - <a href="http://en.wikipedia.org/w/index.php?title=Mario_Prada&amp;action=edit&amp;redlink=1" class="new" title="Mario Prada (page does not exist)">Mario Prada</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Procter_%26_Gamble" title="Procter &amp; Gamble">Procter &amp; Gamble</a> – <a href="http://en.wikipedia.org/wiki/William_Procter_%28candlemaker%29" title="William Procter (candlemaker)">William Procter</a> and <a href="http://en.wikipedia.org/wiki/James_Gamble" title="James Gamble">James Gamble</a></li>
+<li><a href="http://en.wikipedia.org/wiki/PRS_Guitars" title="PRS Guitars">PRS Guitars</a> – <a href="http://en.wikipedia.org/wiki/Paul_Reed_Smith" title="Paul Reed Smith">Paul Reed Smith</a></li>
+</ul>
+<p><a name="Q" id="Q"></a></p>
+<h2><span class="editsection">[<a href="http://en.wikipedia.org/w/index.php?title=List_of_companies_named_after_people&amp;action=edit&amp;section=18" title="Edit section: Q">edit</a>]</span> <span class="mw-headline">Q</span></h2>
+<p><a name="R" id="R"></a></p>
+<h2><span class="editsection">[<a href="http://en.wikipedia.org/w/index.php?title=List_of_companies_named_after_people&amp;action=edit&amp;section=19" title="Edit section: R">edit</a>]</span> <span class="mw-headline">R</span></h2>
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/Rawlings_%28company%29" title="Rawlings (company)">Rawlings (company)</a> - George and Alfred Rawlings</li>
+<li><a href="http://en.wikipedia.org/wiki/Renault" title="Renault">Renault</a> – <a href="http://en.wikipedia.org/wiki/Louis_Renault_%28industrialist%29" title="Louis Renault (industrialist)">Louis Renault</a></li>
+<li><a href="http://en.wikipedia.org/wiki/REO_Motor_Car_Company" title="REO Motor Car Company">REO Motor Car Company</a> - <a href="http://en.wikipedia.org/wiki/Ransom_E._Olds" title="Ransom E. Olds">Ransom E. Olds</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Reuters" title="Reuters">Reuters</a> - <a href="http://en.wikipedia.org/wiki/Paul_Reuter" title="Paul Reuter">Paul Reuter</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Rickenbacker" title="Rickenbacker">Rickenbacker</a> – <a href="http://en.wikipedia.org/wiki/Adolph_Rickenbacher" title="Adolph Rickenbacher">Adolph Rickenbacher</a></li>
+<li><a href="http://en.wikipedia.org/wiki/R.J._Reynolds_Tobacco_Company" class="mw-redirect" title="R.J. Reynolds Tobacco Company">R.J. Reynolds Tobacco Company</a> (RJR) - <a href="http://en.wikipedia.org/wiki/R._J._Reynolds" title="R. J. Reynolds">R. J. Reynolds</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Robeez" title="Robeez">Robeez</a> - named after Sandra Wilson's son Robert</li>
+<li><a href="http://en.wikipedia.org/wiki/Robert_Bosch_GmbH" title="Robert Bosch GmbH">Robert Bosch GmbH</a> – <a href="http://en.wikipedia.org/wiki/Robert_Bosch" title="Robert Bosch">Robert Bosch</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Rockwell_International" title="Rockwell International">Rockwell International</a>, <a href="http://en.wikipedia.org/wiki/North_American_Rockwell" class="mw-redirect" title="North American Rockwell">North American Rockwell</a>, <a href="http://en.wikipedia.org/wiki/Rockwell_Semiconductor" class="mw-redirect" title="Rockwell Semiconductor">Rockwell Semiconductor</a> – <a href="http://en.wikipedia.org/wiki/Willard_Rockwell" title="Willard Rockwell">Willard Rockwell</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Rogers_Communications" title="Rogers Communications">Rogers Communications Inc.</a> - <a href="http://en.wikipedia.org/wiki/Edward_S._Rogers" class="mw-redirect" title="Edward S. Rogers">Edward S. "Ted" Rogers</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Rogers_Locomotive_and_Machine_Works" title="Rogers Locomotive and Machine Works">Rogers Locomotive and Machine Works</a> – <a href="http://en.wikipedia.org/wiki/Thomas_Rogers_%28locomotive_builder%29" title="Thomas Rogers (locomotive builder)">Thomas Rogers</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Rogers_Vacuum_Tube_Company" title="Rogers Vacuum Tube Company">Rogers Vacuum Tube Company</a> - <a href="http://en.wikipedia.org/wiki/Edward_S._Rogers%2C_Sr." title="Edward S. Rogers, Sr.">Edward S. Rogers, Sr.</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Rolls-Royce_plc" title="Rolls-Royce plc">Rolls-Royce plc</a>/<a href="http://en.wikipedia.org/wiki/Rolls-Royce_Motor_Cars" title="Rolls-Royce Motor Cars">Rolls-Royce Motor Cars</a> – <a href="http://en.wikipedia.org/wiki/Charles_Rolls" title="Charles Rolls">Charles Rolls</a> and <a href="http://en.wikipedia.org/wiki/Henry_Royce" title="Henry Royce">Henry Royce</a></li>
+<li><a href="http://en.wikipedia.org/wiki/RSA_Security" title="RSA Security">RSA Security</a> – from the first letters of the last names of founders <a href="http://en.wikipedia.org/wiki/Ronald_Rivest" class="mw-redirect" title="Ronald Rivest">Ronald Rivest</a>, <a href="http://en.wikipedia.org/wiki/Adi_Shamir" title="Adi Shamir">Adi Shamir</a> and <a href="http://en.wikipedia.org/wiki/Len_Adleman" class="mw-redirect" title="Len Adleman">Len Adleman</a>.</li>
+<li><a href="http://en.wikipedia.org/wiki/Ryanair" title="Ryanair">Ryanair</a> – <a href="http://en.wikipedia.org/wiki/Tony_Ryan" title="Tony Ryan">Tony Ryan</a></li>
+</ul>
+<p><a name="S" id="S"></a></p>
+<h2><span class="editsection">[<a href="http://en.wikipedia.org/w/index.php?title=List_of_companies_named_after_people&amp;action=edit&amp;section=20" title="Edit section: S">edit</a>]</span> <span class="mw-headline">S</span></h2>
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/Sam%27s_Club" title="Sam's Club">Sam's Club</a> - Sam Walton (same owner of <a href="http://en.wikipedia.org/wiki/Wal-Mart" title="Wal-Mart">Wal-Mart</a>)</li>
+<li><a href="http://en.wikipedia.org/wiki/S._C._Johnson_%26_Son" title="S. C. Johnson &amp; Son">S. C. Johnson &amp; Son</a> - <a href="http://en.wikipedia.org/wiki/Samuel_Curtis_Johnson%2C_Sr." title="Samuel Curtis Johnson, Sr.">Samuel Curtis Johnson, Sr.</a></li>
+<li><a href="http://en.wikipedia.org/wiki/J_Sainsbury" class="mw-redirect" title="J Sainsbury">Sainsbury's</a> – <a href="http://en.wikipedia.org/wiki/John_James_Sainsbury" title="John James Sainsbury">John James Sainsbury</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Sears_Holdings_Corporation" title="Sears Holdings Corporation">Sears</a> – <a href="http://en.wikipedia.org/wiki/Richard_Sears" title="Richard Sears">Richard Sears</a>
+<ul>
+<li>Formerly <i>Sears, Roebuck</i> – Sears and <a href="http://en.wikipedia.org/wiki/Alvah_Roebuck" class="mw-redirect" title="Alvah Roebuck">Alvah Roebuck</a></li>
+</ul>
+</li>
+<li><a href="http://en.wikipedia.org/wiki/Sherwin-Williams_Company" class="mw-redirect" title="Sherwin-Williams Company">Sherwin-Williams Company</a> - <a href="http://en.wikipedia.org/wiki/Henry_Sherwin" title="Henry Sherwin">Henry Sherwin</a> and Edward Williams</li>
+<li><a href="http://en.wikipedia.org/wiki/Shugart_Associates" title="Shugart Associates">Shugart Associates</a> - <a href="http://en.wikipedia.org/wiki/Alan_Shugart" title="Alan Shugart">Alan Shugart</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Siemens_AG" title="Siemens AG">Siemens AG</a> – <a href="http://en.wikipedia.org/wiki/Werner_von_Siemens" class="mw-redirect" title="Werner von Siemens">Werner von Siemens</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Sikorsky_Aircraft" title="Sikorsky Aircraft">Sikorsky Aircraft</a> - <a href="http://en.wikipedia.org/wiki/Igor_Sikorsky" title="Igor Sikorsky">Igor Sikorsky</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Singer_Corporation" title="Singer Corporation">Singer Corporation</a> – <a href="http://en.wikipedia.org/wiki/Issac_Merritt_Singer" class="mw-redirect" title="Issac Merritt Singer">Issac Merritt Singer</a>, inventor, improvements in the design of the sewing machine</li>
+<li><a href="http://en.wikipedia.org/wiki/Sotheby%27s" title="Sotheby's">Sotheby's</a> - <a href="http://en.wikipedia.org/wiki/John_Sotheby" title="John Sotheby">John Sotheby</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Stanley_Works" title="Stanley Works">Stanley Works</a> - <a href="http://en.wikipedia.org/wiki/Frederick_Trent_Stanley" title="Frederick Trent Stanley">Frederick Trent Stanley</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Stewart-Warner" title="Stewart-Warner">Stewart-Warner</a> – <a href="http://en.wikipedia.org/wiki/John_K._Stewart" title="John K. Stewart">John K. Stewart</a> and <a href="http://en.wikipedia.org/w/index.php?title=Arthur_P._Warner&amp;action=edit&amp;redlink=1" class="new" title="Arthur P. Warner (page does not exist)">Arthur P. Warner</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Stihl" title="Stihl">Stihl</a> - <a href="http://en.wikipedia.org/wiki/Andreas_Stihl" title="Andreas Stihl">Andreas Stihl</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Sukhoi" title="Sukhoi">Sukhoi</a> - <a href="http://en.wikipedia.org/wiki/Pavel_Sukhoi" title="Pavel Sukhoi">Pavel Sukhoi</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Suzuki" title="Suzuki">Suzuki</a> – Michio Suzuki</li>
+</ul>
+<p><a name="T" id="T"></a></p>
+<h2><span class="editsection">[<a href="http://en.wikipedia.org/w/index.php?title=List_of_companies_named_after_people&amp;action=edit&amp;section=21" title="Edit section: T">edit</a>]</span> <span class="mw-headline">T</span></h2>
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/Tata" title="Tata">Tata</a> – <a href="http://en.wikipedia.org/wiki/Jamsetji_Tata" title="Jamsetji Tata">Jamsetji Tata</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Tesco" title="Tesco">Tesco</a> – amalgamation of <i>TES</i> (from <a href="http://en.wikipedia.org/w/index.php?title=T._E._Stockwell&amp;action=edit&amp;redlink=1" class="new" title="T. E. Stockwell (page does not exist)">T. E. Stockwell</a>) and <i>CO</i> (from <a href="http://en.wikipedia.org/wiki/Jack_Cohen_%28Tesco%29" title="Jack Cohen (Tesco)">Jack Cohen</a>)</li>
+<li><a href="http://en.wikipedia.org/w/index.php?title=Thomas_Cook_Travel&amp;action=edit&amp;redlink=1" class="new" title="Thomas Cook Travel (page does not exist)">Thomas Cook Travel</a>, <a href="http://en.wikipedia.org/wiki/Thomas_Cook_Airlines" title="Thomas Cook Airlines">Thomas Cook Airlines</a>, <a href="http://en.wikipedia.org/wiki/Thomas_Cook" title="Thomas Cook">Thomas Cook</a></li>
+<li>Various named after <a href="http://en.wikipedia.org/wiki/Elihu_Thomson" title="Elihu Thomson">Elihu Thomson</a>:
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/Alstom" title="Alstom">Alstom</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Thomson_SA" title="Thomson SA">Thomson SA</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Thomson-CSF" title="Thomson-CSF">Thomson-CSF</a> (now <a href="http://en.wikipedia.org/wiki/Thales_Group" title="Thales Group">Thales Group</a>)</li>
+<li><a href="http://en.wikipedia.org/wiki/Thomson-Houston_Electric_Company" title="Thomson-Houston Electric Company">Thomson-Houston Electric Company</a> (now <a href="http://en.wikipedia.org/wiki/General_Electric" title="General Electric">General Electric</a>)</li>
+</ul>
+</li>
+<li><a href="http://en.wikipedia.org/wiki/Thomson_Corporation" class="mw-redirect" title="Thomson Corporation">Thomson Corporation</a> - <a href="http://en.wikipedia.org/wiki/Roy_Thomson%2C_1st_Baron_Thomson_of_Fleet" title="Roy Thomson, 1st Baron Thomson of Fleet">Roy Thomson, 1st Baron Thomson of Fleet</a></li>
+<li><a href="http://en.wikipedia.org/wiki/THX" title="THX">THX</a> – from the name of the technology's inventor and the audio technology of a 'crossover' amplifier, <a href="http://en.wikipedia.org/wiki/Tomlinson_Holman" title="Tomlinson Holman">Tomlinson Holman</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Tiffany_%26_Co." title="Tiffany &amp; Co.">Tiffany &amp; Co.</a> - <a href="http://en.wikipedia.org/wiki/Charles_Lewis_Tiffany" title="Charles Lewis Tiffany">Charles Lewis Tiffany</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Tim_Hortons" title="Tim Hortons">Tim Hortons</a> – <a href="http://en.wikipedia.org/wiki/Tim_Horton" title="Tim Horton">Tim Horton</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Timken_Company" title="Timken Company">Timken Company</a> - <a href="http://en.wikipedia.org/wiki/Henry_Timken" title="Henry Timken">Henry Timken</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Toyota" title="Toyota">Toyota Motor</a> – <a href="http://en.wikipedia.org/wiki/Kiichiro_Toyoda" title="Kiichiro Toyoda">Kiichiro Toyoda</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Toyota_Industries" title="Toyota Industries">Toyota Industries</a> - <a href="http://en.wikipedia.org/wiki/Sakichi_Toyoda" title="Sakichi Toyoda">Sakichi Toyoda</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Trump_Air_Shuttle" class="mw-redirect" title="Trump Air Shuttle">Trump Air Shuttle</a>, <a href="http://en.wikipedia.org/wiki/Airline" title="Airline">airline</a> - owner <a href="http://en.wikipedia.org/wiki/Donald_Trump" title="Donald Trump">Donald Trump</a></li>
+<li><a href="http://en.wikipedia.org/wiki/TVR" title="TVR">TVR</a> – founder <a href="http://en.wikipedia.org/w/index.php?title=Trevor_Wilkinson&amp;action=edit&amp;redlink=1" class="new" title="Trevor Wilkinson (page does not exist)">TreVoR Wilkinson</a></li>
+<li><a href="http://en.wikipedia.org/wiki/TVS_Motors" title="TVS Motors">TVS Motors</a>, <a href="http://en.wikipedia.org/wiki/TVS_Electronics" title="TVS Electronics">TVS Electronics</a> - <a href="http://en.wikipedia.org/wiki/T._V._Sundram_Iyengar" class="mw-redirect" title="T. V. Sundram Iyengar">T. V. Sundram Iyengar</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Tommy_Hilfiger" title="Tommy Hilfiger">Tommy Hilfiger Corporation</a> - <a href="http://en.wikipedia.org/wiki/Tommy_Hilfiger" title="Tommy Hilfiger">Thomas Jacob Hilfiger</a></li>
+</ul>
+<p><a name="U" id="U"></a></p>
+<h2><span class="editsection">[<a href="http://en.wikipedia.org/w/index.php?title=List_of_companies_named_after_people&amp;action=edit&amp;section=22" title="Edit section: U">edit</a>]</span> <span class="mw-headline">U</span></h2>
+<p><a name="V" id="V"></a></p>
+<h2><span class="editsection">[<a href="http://en.wikipedia.org/w/index.php?title=List_of_companies_named_after_people&amp;action=edit&amp;section=23" title="Edit section: V">edit</a>]</span> <span class="mw-headline">V</span></h2>
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/Vibram" title="Vibram">Vibram</a> - <a href="http://en.wikipedia.org/wiki/Vitale_Bramani" class="mw-redirect" title="Vitale Bramani"><b>Vi</b>tale <b>Bram</b>ani</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Vroom_%26_Dreesmann" title="Vroom &amp; Dreesmann">Vroom &amp; Dreesmann</a> - Willem Vroom and Anton Dreesmann, founders</li>
+</ul>
+<p><a name="W" id="W"></a></p>
+<h2><span class="editsection">[<a href="http://en.wikipedia.org/w/index.php?title=List_of_companies_named_after_people&amp;action=edit&amp;section=24" title="Edit section: W">edit</a>]</span> <span class="mw-headline">W</span></h2>
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/W._R._Grace_and_Company" title="W. R. Grace and Company">W. R. Grace and Company</a> - <a href="http://en.wikipedia.org/wiki/William_Russell_Grace" title="William Russell Grace">William Russell Grace</a></li>
+<li><a href="http://en.wikipedia.org/wiki/W._W._Norton" class="mw-redirect" title="W. W. Norton">W. W. Norton</a> - <a href="http://en.wikipedia.org/wiki/William_Warder_Norton" title="William Warder Norton">William Warder Norton</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Waitrose" title="Waitrose">Waitrose</a> – founders <a href="http://en.wikipedia.org/w/index.php?title=Wallace_Waite&amp;action=edit&amp;redlink=1" class="new" title="Wallace Waite (page does not exist)">Wallace Waite</a> and <a href="http://en.wikipedia.org/wiki/Arthur_Rose" title="Arthur Rose">Arthur Rose</a></li>
+<li><a href="http://en.wikipedia.org/wiki/The_Walt_Disney_Company" title="The Walt Disney Company">The Walt Disney Company</a> – <a href="http://en.wikipedia.org/wiki/Walt_Disney" title="Walt Disney">Walt Disney</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Wal-Mart" title="Wal-Mart">Wal-Mart</a> – <a href="http://en.wikipedia.org/wiki/Sam_Walton" title="Sam Walton">Sam Walton</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Walgreens" title="Walgreens">Walgreens</a> - <a href="http://en.wikipedia.org/wiki/Charles_Rudolph_Walgreen" title="Charles Rudolph Walgreen">Charles Rudolph Walgreen</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Wang_Laboratories" title="Wang Laboratories">Wang Laboratories</a> - <a href="http://en.wikipedia.org/wiki/An_Wang" title="An Wang">An Wang</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Warner_Bros." title="Warner Bros.">Warner Bros.</a> – the brothers <a href="http://en.wikipedia.org/wiki/Jack_Warner" title="Jack Warner">Jack Warner</a>, Sam Warner, Harold Warner and Albert Warner</li>
+<li><a href="http://en.wikipedia.org/wiki/Wells_Fargo" title="Wells Fargo">Wells Fargo</a> – founders Henry Wells and William Fargo</li>
+<li><a href="http://en.wikipedia.org/wiki/Wendy%27s" title="Wendy's">Wendy's</a> – founder <a href="http://en.wikipedia.org/wiki/Dave_Thomas_%28American_businessman%29" title="Dave Thomas (American businessman)">Dave Thomas</a>' daughter <a href="http://en.wikipedia.org/w/index.php?title=Melinda_%22Wendy%22_Thomas&amp;action=edit&amp;redlink=1" class="new" title="Melinda &quot;Wendy&quot; Thomas (page does not exist)">Melinda "Wendy" Thomas</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Westinghouse_Electric_%281886%29" title="Westinghouse Electric (1886)">Westinghouse Electric</a> - <a href="http://en.wikipedia.org/wiki/George_Westinghouse" title="George Westinghouse">George Westinghouse</a></li>
+<li><a href="http://en.wikipedia.org/wiki/WHSmith" class="mw-redirect" title="WHSmith">WHSmith</a> – <a href="http://en.wikipedia.org/wiki/William_Henry_Smith_%28businessman%29" title="William Henry Smith (businessman)">William Henry Smith</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Wright_Company" title="Wright Company">Wright Company</a>, <a href="http://en.wikipedia.org/wiki/Wright_Aeronautical" class="mw-redirect" title="Wright Aeronautical">Wright Aeronautical</a> (to <a href="http://en.wikipedia.org/wiki/Wright-Martin" title="Wright-Martin">Wright-Martin</a>) – <a href="http://en.wikipedia.org/wiki/Wright_brothers" title="Wright brothers">Orville and Wilbur Wright</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Wm._Wrigley_Jr._Company" title="Wm. Wrigley Jr. Company">Wrigley Company</a> - <a href="http://en.wikipedia.org/wiki/William_Wrigley_Jr." title="William Wrigley Jr.">William Wrigley Jr.</a></li>
+</ul>
+<p><a name="X" id="X"></a></p>
+<h2><span class="editsection">[<a href="http://en.wikipedia.org/w/index.php?title=List_of_companies_named_after_people&amp;action=edit&amp;section=25" title="Edit section: X">edit</a>]</span> <span class="mw-headline">X</span></h2>
+<p><a name="Y" id="Y"></a></p>
+<h2><span class="editsection">[<a href="http://en.wikipedia.org/w/index.php?title=List_of_companies_named_after_people&amp;action=edit&amp;section=26" title="Edit section: Y">edit</a>]</span> <span class="mw-headline">Y</span></h2>
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/Yamaha_Corporation" title="Yamaha Corporation">Yamaha Corporation</a> – <a href="http://en.wikipedia.org/wiki/Torakusu_Yamaha" title="Torakusu Yamaha">Torakusu Yamaha</a></li>
+</ul>
+<p><a name="Z" id="Z"></a></p>
+<h2><span class="editsection">[<a href="http://en.wikipedia.org/w/index.php?title=List_of_companies_named_after_people&amp;action=edit&amp;section=27" title="Edit section: Z">edit</a>]</span> <span class="mw-headline">Z</span></h2>
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/Zend_Technologies" title="Zend Technologies">Zend Technologies</a> – Co-Founders <b>Ze</b>ev Suraski &amp; A<b>nd</b>i Gutmans</li>
+</ul>
+<p><a name="See_also" id="See_also"></a></p>
+<h2><span class="editsection">[<a href="http://en.wikipedia.org/w/index.php?title=List_of_companies_named_after_people&amp;action=edit&amp;section=28" title="Edit section: See also">edit</a>]</span> <span class="mw-headline">See also</span></h2>
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/List_of_company_name_etymologies" title="List of company name etymologies">List of company name etymologies</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Lists_of_etymologies" title="Lists of etymologies">Lists of etymologies</a></li>
+</ul>
+
+
+<!-- 
+NewPP limit report
+Preprocessor node count: 50/1000000
+Post-expand include size: 902/2048000 bytes
+Template argument size: 73/2048000 bytes
+#ifexist count: 0/500
+-->
+
+<!-- Saved in parser cache with key enwiki:pcache:idhash:458248-0!1!0!default!!en!2 and timestamp 20080315164758 -->
+<div class="printfooter">
+Retrieved from "<a href="http://en.wikipedia.org/wiki/List_of_companies_named_after_people">http://en.wikipedia.org/wiki/List_of_companies_named_after_people</a>"</div>
+			<div id="catlinks" class="catlinks"><div id="mw-normal-catlinks"><a href="http://en.wikipedia.org/wiki/Special:Categories" title="Special:Categories">Categories</a>: <span dir="ltr"><a href="http://en.wikipedia.org/wiki/Category:Dynamic_lists" title="Category:Dynamic lists">Dynamic lists</a></span> | <span dir="ltr"><a href="http://en.wikipedia.org/wiki/Category:Lists_of_companies" title="Category:Lists of companies">Lists of companies</a></span> | <span dir="ltr"><a href="http://en.wikipedia.org/wiki/Category:Eponyms" title="Category:Eponyms">Eponyms</a></span> | <span dir="ltr"><a href="http://en.wikipedia.org/wiki/Category:Corporation-related_lists" title="Category:Corporation-related lists">Corporation-related lists</a></span></div></div>			<!-- end content -->
+			<div class="visualClear"></div>
+		</div>
+	</div>
+		</div>
+		<div id="column-one">
+	<div id="p-cactions" class="portlet">
+		<h5>Views</h5>
+		<div class="pBody">
+			<ul>
+					 <li id="ca-nstab-main" class="selected"><a href="http://en.wikipedia.org/wiki/List_of_companies_named_after_people" title="View the content page [alt-shift-c]" accesskey="c">Article</a></li>
+					 <li id="ca-talk"><a href="http://en.wikipedia.org/wiki/Talk:List_of_companies_named_after_people" title="Discussion about the content page [alt-shift-t]" accesskey="t">Discussion</a></li>
+					 <li id="ca-edit"><a href="http://en.wikipedia.org/w/index.php?title=List_of_companies_named_after_people&amp;action=edit" title="You can edit this page. Please use the preview button before saving. [alt-shift-e]" accesskey="e">Edit this page</a></li>
+					 <li id="ca-history"><a href="http://en.wikipedia.org/w/index.php?title=List_of_companies_named_after_people&amp;action=history" title="Past versions of this page [alt-shift-h]" accesskey="h">History</a></li>
+					 <li id="ca-move"><a href="http://en.wikipedia.org/wiki/Special:MovePage/List_of_companies_named_after_people" title="Rename this page [alt-shift-m]" accesskey="m">Move</a></li>
+					 <li id="ca-watch"><a href="http://en.wikipedia.org/w/index.php?title=List_of_companies_named_after_people&amp;action=watch" title="Add this page to your watchlist [alt-shift-w]" accesskey="w">Watch</a></li>
+				</ul>
+		</div>
+	</div>
+	<div class="portlet" id="p-personal">
+		<h5>Personal tools</h5>
+		<div class="pBody">
+			<ul>
+				<li id="pt-userpage"><a href="http://en.wikipedia.org/wiki/User:Yannisl" title="My user page [alt-shift-.]" accesskey="." class="new">Yannisl</a></li>
+				<li id="pt-mytalk"><a href="http://en.wikipedia.org/wiki/User_talk:Yannisl" title="My talk page [alt-shift-n]" accesskey="n">My talk</a></li>
+				<li id="pt-preferences"><a href="http://en.wikipedia.org/wiki/Special:Preferences" title="My preferences">My preferences</a></li>
+				<li id="pt-watchlist"><a href="http://en.wikipedia.org/wiki/Special:Watchlist" title="The list of pages that you are monitoring for changes [alt-shift-l]" accesskey="l">My watchlist</a></li>
+				<li id="pt-mycontris"><a href="http://en.wikipedia.org/wiki/Special:Contributions/Yannisl" title="List of my contributions [alt-shift-y]" accesskey="y">My contributions</a></li>
+				<li id="pt-logout"><a href="http://en.wikipedia.org/w/index.php?title=Special:UserLogout&amp;returnto=List_of_companies_named_after_people" title="Log out">Log out</a></li>
+			</ul>
+		</div>
+	</div>
+	<div class="portlet" id="p-logo">
+		<a style="background-image: url(/images/wiki-en.png);" href="http://en.wikipedia.org/wiki/Main_Page" title="Visit the main page [alt-shift-z]" accesskey="z"></a>
+	</div>
+	<script type="text/javascript"> if (window.isMSIE55) fixalpha(); </script>
+		<div class="portlet" id="p-navigation">
+		<h5>Navigation</h5>
+		<div class="pBody">
+			<ul>
+				<li id="n-mainpage"><a href="http://en.wikipedia.org/wiki/Main_Page" title="Visit the main page [alt-shift-z]" accesskey="z">Main Page</a></li>
+				<li id="n-Contents"><a href="http://en.wikipedia.org/wiki/Portal:Contents" title="Guides to browsing Wikipedia">Contents</a></li>
+				<li id="n-featuredcontent"><a href="http://en.wikipedia.org/wiki/Portal:Featured_content">Featured content</a></li>
+				<li id="n-currentevents"><a href="http://en.wikipedia.org/wiki/Portal:Current_events" title="Find background information on current events">Current events</a></li>
+				<li id="n-randompage"><a href="http://en.wikipedia.org/wiki/Special:Random" title="Load a random article [alt-shift-x]" accesskey="x">Random article</a></li>
+			</ul>
+		</div>
+	</div>
+		<div class="portlet" id="p-interaction">
+		<h5>Interaction</h5>
+		<div class="pBody">
+			<ul>
+				<li id="n-aboutsite"><a href="http://en.wikipedia.org/wiki/Wikipedia:About">About Wikipedia</a></li>
+				<li id="n-portal"><a href="http://en.wikipedia.org/wiki/Wikipedia:Community_Portal" title="About the project, what you can do, where to find things">Community portal</a></li>
+				<li id="n-recentchanges"><a href="http://en.wikipedia.org/wiki/Special:RecentChanges" title="The list of recent changes in the wiki [alt-shift-r]" accesskey="r">Recent changes</a></li>
+				<li id="n-contact"><a href="http://en.wikipedia.org/wiki/Wikipedia:Contact_us" title="How to contact Wikipedia">Contact Wikipedia</a></li>
+				<li id="n-sitesupport"><a href="http://wikimediafoundation.org/wiki/Donate" title="Support us">Donate to Wikipedia</a></li>
+				<li id="n-help"><a href="http://en.wikipedia.org/wiki/Help:Contents" title="Guidance on how to use and edit Wikipedia">Help</a></li>
+			</ul>
+		</div>
+	</div>
+		<div id="p-search" class="portlet">
+		<h5><label for="searchInput">Search</label></h5>
+		<div id="searchBody" class="pBody">
+			<form action="/wiki/Special:Search" id="searchform"><div>
+				<input id="searchInput" name="search" title="Search Wikipedia [alt-shift-f]" accesskey="f" value="" type="text">
+				<input name="go" class="searchButton" id="searchGoButton" value="Go" title="Go to a page with this exact name if one exists" type="submit">&nbsp;
+				<input name="fulltext" class="searchButton" id="mw-searchButton" value="Search" title="Search the wiki for this text" type="submit">
+			</div></form>
+		</div>
+	</div>
+	<div class="portlet" id="p-tb">
+		<h5>Toolbox</h5>
+		<div class="pBody">
+			<ul>
+				<li id="t-whatlinkshere"><a href="http://en.wikipedia.org/wiki/Special:WhatLinksHere/List_of_companies_named_after_people" title="List of all English Wikipedia pages that link here [alt-shift-j]" accesskey="j">What links here</a></li>
+				<li id="t-recentchangeslinked"><a href="http://en.wikipedia.org/wiki/Special:RecentChangesLinked/List_of_companies_named_after_people" title="Recent changes in pages linked from this page [alt-shift-k]" accesskey="k">Related changes</a></li>
+<li id="t-upload"><a href="http://en.wikipedia.org/wiki/Wikipedia:Upload" title="Upload files [alt-shift-u]" accesskey="u">Upload file</a></li>
+<li id="t-specialpages"><a href="http://en.wikipedia.org/wiki/Special:SpecialPages" title="List of all special pages [alt-shift-q]" accesskey="q">Special pages</a></li>
+				<li id="t-print"><a href="http://en.wikipedia.org/w/index.php?title=List_of_companies_named_after_people&amp;printable=yes" title="Printable version of this page [alt-shift-p]" accesskey="p">Printable version</a></li>				<li id="t-permalink"><a href="http://en.wikipedia.org/w/index.php?title=List_of_companies_named_after_people&amp;oldid=198433734" title="Permanent link to this version of the page">Permanent link</a></li><li id="t-cite"><a href="http://en.wikipedia.org/w/index.php?title=Special:Cite&amp;page=List_of_companies_named_after_people&amp;id=198433734">Cite this page</a></li>			</ul>
+		</div>
+	</div>
+		</div><!-- end of the left (by default at least) column -->
+			<div class="visualClear"></div>
+			<div id="footer">
+				<div id="f-poweredbyico"><a href="http://www.mediawiki.org/"><img src="companies_files/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki"></a></div>
+				<div id="f-copyrightico"><a href="http://wikimediafoundation.org/"><img src="companies_files/wikimedia-button.png" alt="Wikimedia Foundation" border="0"></a></div>
+			<ul id="f-list">
+				<li id="lastmod"> This page was last modified on 15 March 2008, at 16:44.</li>
+				<li id="copyright">All text is available under the terms of the <a class="internal" href="http://en.wikipedia.org/wiki/Wikipedia:Text_of_the_GNU_Free_Documentation_License" title="Wikipedia:Text of the GNU Free Documentation License">GNU Free Documentation License</a>. (See <b><a class="internal" href="http://en.wikipedia.org/wiki/Wikipedia:Copyrights" title="Wikipedia:Copyrights">Copyrights</a></b> for details.) <br> Wikipedia® is a registered trademark of the <a href="http://www.wikimediafoundation.org/">Wikimedia Foundation, Inc</a>., a U.S. registered <a class="internal" href="http://en.wikipedia.org/wiki/501%28c%29#501.28c.29.283.29" title="501(c)(3)">501(c)(3)</a> <a href="http://wikimediafoundation.org/wiki/Deductibility_of_donations">tax-deductible</a> <a class="internal" href="http://en.wikipedia.org/wiki/Non-profit_organization" title="Non-profit organization">nonprofit</a> <a href="http://en.wikipedia.org/wiki/Charitable_organization" title="Charitable organization">charity</a>.<br></li>
+				<li id="privacy"><a href="http://wikimediafoundation.org/wiki/Privacy_policy" title="wikimedia:Privacy policy">Privacy policy</a></li>
+				<li id="about"><a href="http://en.wikipedia.org/wiki/Wikipedia:About" title="Wikipedia:About">About Wikipedia</a></li>
+				<li id="disclaimer"><a href="http://en.wikipedia.org/wiki/Wikipedia:General_disclaimer" title="Wikipedia:General disclaimer">Disclaimers</a></li>
+			</ul>
+		</div>
+		
+	
+		<script type="text/javascript">if (window.runOnloadHook) runOnloadHook();</script>
+</div>
+<!-- Served by srv159 in 0.049 secs. -->
+</body></html>

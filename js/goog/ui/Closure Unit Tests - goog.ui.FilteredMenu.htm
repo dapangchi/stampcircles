@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<!-- saved from url=(0086)http://closure-library.googlecode.com/svn/trunk/closure/goog/ui/filteredmenu_test.html -->
+<HTML><!--
+  Copyright 2008 Google Inc. All Rights Reserved.
+
+
+--><HEAD><META http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<TITLE>Closure Unit Tests - goog.ui.FilteredMenu</TITLE>
+<STYLE>
+.goog-menu {
+  position: absolute;
+  background: #eee;
+  border: 1px solid #aaa;
+  font: menu;
+}
+.goog-menu-content {
+  height: 2em;
+  overflow: auto;
+}
+
+#testmenu {
+  right: 5px;
+  bottom: 5px;
+}
+</STYLE>
+<SCRIPT src="./Closure Unit Tests - goog.ui.FilteredMenu_files/base.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.FilteredMenu_files/deps.js"></SCRIPT>
+<SCRIPT>
+  goog.require('goog.dom');
+  goog.require('goog.events');
+  goog.require('goog.events.Event');
+  goog.require('goog.style');
+  goog.require('goog.testing.events');
+  goog.require('goog.testing.jsunit');
+  goog.require('goog.ui.FilteredMenu');
+  goog.require('goog.ui.MenuItem');
+</SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.FilteredMenu_files/array.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.FilteredMenu_files/tagname.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.FilteredMenu_files/classes.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.FilteredMenu_files/coordinate.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.FilteredMenu_files/size.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.FilteredMenu_files/object.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.FilteredMenu_files/string.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.FilteredMenu_files/useragent.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.FilteredMenu_files/dom.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.FilteredMenu_files/errorhandlerweakdep.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.FilteredMenu_files/disposable.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.FilteredMenu_files/event.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.FilteredMenu_files/browserevent.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.FilteredMenu_files/eventwrapper.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.FilteredMenu_files/listener.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.FilteredMenu_files/simplepool.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.FilteredMenu_files/jscript.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.FilteredMenu_files/pools.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.FilteredMenu_files/events.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.FilteredMenu_files/box.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.FilteredMenu_files/rect.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.FilteredMenu_files/product.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.FilteredMenu_files/style.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.FilteredMenu_files/keycodes.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.FilteredMenu_files/events(1).js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.FilteredMenu_files/stacktrace.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.FilteredMenu_files/asserts.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.FilteredMenu_files/testcase.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.FilteredMenu_files/testrunner.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.FilteredMenu_files/jsunit.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.FilteredMenu_files/eventtarget.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.FilteredMenu_files/inputhandler.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.FilteredMenu_files/controlcontent.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.FilteredMenu_files/a11y.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.FilteredMenu_files/eventhandler.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.FilteredMenu_files/idgenerator.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.FilteredMenu_files/component.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.FilteredMenu_files/controlrenderer.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.FilteredMenu_files/menuitemrenderer.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.FilteredMenu_files/filterobservingmenuitemrenderer.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.FilteredMenu_files/keyhandler.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.FilteredMenu_files/registry.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.FilteredMenu_files/decorate.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.FilteredMenu_files/control.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.FilteredMenu_files/menuitem.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.FilteredMenu_files/filterobservingmenuitem.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.FilteredMenu_files/menuseparatorrenderer.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.FilteredMenu_files/separator.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.FilteredMenu_files/containerrenderer.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.FilteredMenu_files/container.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.FilteredMenu_files/menurenderer.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.FilteredMenu_files/menuseparator.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.FilteredMenu_files/menu.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.FilteredMenu_files/filteredmenu.js"></SCRIPT>
+</HEAD><BODY>
+<DIV>
+  <DIV id="sandbox"></DIV>
+
+  <DIV id="testmenu" class="goog-menu goog-menu-vertical" tabindex="0" style="-webkit-user-select: none; ">
+    <DIV class="goog-menu-filter" style="-webkit-user-select: none; ">
+      <DIV style="-webkit-user-select: none; visibility: visible; "></DIV>
+      <INPUT tabindex="0" autocomplete="off" type="text" style="">
+    </DIV>
+    <DIV class="goog-menu-content" style="-webkit-user-select: none; ">
+      <DIV class="goog-menuitem" style="-webkit-user-select: none; " id=":0"><DIV class="goog-menuitem-content" style="-webkit-user-select: none; ">Apple</DIV></DIV>
+      <DIV class="goog-menuitem" style="-webkit-user-select: none; " id=":1"><DIV class="goog-menuitem-content" style="-webkit-user-select: none; ">Lemon</DIV></DIV>
+      <DIV class="goog-menuitem" style="-webkit-user-select: none; " id=":2"><DIV class="goog-menuitem-content" style="-webkit-user-select: none; ">Orange</DIV></DIV>
+      <DIV class="goog-menuitem" style="-webkit-user-select: none; " id=":3"><DIV class="goog-menuitem-content" style="-webkit-user-select: none; ">Strawberry</DIV></DIV>
+    </DIV>
+  </DIV>
+
+</DIV>
+<SCRIPT>
+
+var sandbox;
+
+function setUp() {
+  sandbox = goog.dom.getElement('sandbox');
+}
+
+
+function tearDown() {
+  sandbox.innerHTML = '';
+}
+
+
+function testRender() {
+  menu = new goog.ui.FilteredMenu();
+  menu.addItem(new goog.ui.MenuItem('Menu Item 1'));
+  menu.addItem(new goog.ui.MenuItem('Menu Item 2'));
+  menu.render(sandbox);
+
+  assertEquals('Menu should contain two items.', 2, menu.getChildCount());
+  assertEquals('Caption of first menu item should match supplied value.',
+               'Menu Item 1',
+               menu.getItemAt(0).getCaption());
+  assertEquals('Caption of second menu item should match supplied value.',
+               'Menu Item 2',
+               menu.getItemAt(1).getCaption());
+  assertTrue('Caption of first item should be in document.',
+              sandbox.innerHTML.indexOf('Menu Item 1') != -1);
+  assertTrue('Caption of second item should be in document.',
+              sandbox.innerHTML.indexOf('Menu Item 2') != -1);
+
+  menu.dispose();
+}
+
+
+function testDecorate() {
+  menu = new goog.ui.FilteredMenu();
+  menu.decorate(goog.dom.getElement('testmenu'));
+
+  assertEquals('Menu should contain four items.', 4, menu.getChildCount());
+  assertEquals('Caption of menu item should match decorated element',
+               'Apple',
+               menu.getItemAt(0).getCaption());
+  assertEquals('Caption of menu item should match decorated element',
+               'Lemon',
+               menu.getItemAt(1).getCaption());
+  assertEquals('Caption of menu item should match decorated element',
+               'Orange',
+               menu.getItemAt(2).getCaption());
+  assertEquals('Caption of menu item should match decorated element',
+               'Strawberry',
+               menu.getItemAt(3).getCaption());
+
+  menu.dispose();
+}
+
+
+function testDisposeClearsAllListeners() {
+  menu = new goog.ui.FilteredMenu();
+  menu.addItem(new goog.ui.MenuItem('Menu Item 1'));
+  menu.addItem(new goog.ui.MenuItem('Menu Item 2'));
+  menu.render(sandbox);
+  menu.dispose();
+
+  assertEquals('Dispose should clear all listeners.',
+               0,
+               goog.events.getTotalListenerCount());
+}
+
+
+function testFilter() {
+  menu = new goog.ui.FilteredMenu();
+  menu.addItem(new goog.ui.MenuItem('Family'));
+  menu.addItem(new goog.ui.MenuItem('Friends'));
+  menu.addItem(new goog.ui.MenuItem('Photos'));
+  menu.addItem(new goog.ui.MenuItem('Work'));
+
+  menu.render(sandbox);
+
+  // Check menu items.
+  assertEquals('Family should be the first label in the move to menu',
+               'Family', menu.getChildAt(0).getCaption());
+  assertEquals('Friends should be the second label in the move to menu',
+               'Friends', menu.getChildAt(1).getCaption());
+  assertEquals('Photos should be the third label in the move to menu',
+               'Photos', menu.getChildAt(2).getCaption());
+  assertEquals('Work should be the fourth label in the move to menu',
+               'Work', menu.getChildAt(3).getCaption());
+
+  // Filter menu.
+  menu.setFilter('W');
+  assertFalse('Family should not be visible when the menu is filtered',
+              menu.getChildAt(0).isVisible());
+  assertFalse('Friends should not be visible when the menu is filtered',
+              menu.getChildAt(1).isVisible());
+  assertFalse('Photos should not be visible when the menu is filtered',
+              menu.getChildAt(2).isVisible());
+  assertTrue('Work should be visible when the menu is filtered',
+             menu.getChildAt(3).isVisible());
+
+  menu.setFilter('W,');
+  for (var i = 0; i < menu.getChildCount(); i++) {
+    assertFalse('W, should not match anything with allowMultiple set to false',
+               menu.getChildAt(i).isVisible());
+  }
+
+  // Clear filter.
+  menu.setFilter('');
+  for (var i = 0; i < menu.getChildCount(); i++) {
+    assertTrue('All items should be visible', menu.getChildAt(i).isVisible());
+  }
+
+  menu.dispose();
+}
+
+
+function testFilterAllowMultiple() {
+  menu = new goog.ui.FilteredMenu();
+  menu.setAllowMultiple(true);
+  menu.addItem(new goog.ui.MenuItem('Family'));
+  menu.addItem(new goog.ui.MenuItem('Friends'));
+  menu.addItem(new goog.ui.MenuItem('Photos'));
+  menu.addItem(new goog.ui.MenuItem('Work'));
+
+  menu.render(sandbox);
+
+  // Filter menu.
+  menu.setFilter('W,');
+  for (var i = 0; i < menu.getChildCount(); i++) {
+    assertTrue('W, should show all items with allowMultiple set to true',
+               menu.getChildAt(i).isVisible());
+  }
+
+  // Filter second label.
+  menu.setFilter('Work,P');
+  assertFalse('Family should not be visible when the menu is filtered',
+              menu.getChildAt(0).isVisible());
+  assertFalse('Friends should not be visible when the menu is filtered',
+              menu.getChildAt(1).isVisible());
+  assertTrue('Photos should be visible when the menu is filtered',
+             menu.getChildAt(2).isVisible());
+  assertFalse('Work should not be visible when the menu is filtered',
+              menu.getChildAt(3).isVisible());
+
+  // Clear filter.
+  menu.setFilter('');
+  for (var i = 0; i < menu.getChildCount(); i++) {
+    assertTrue('All items should be visible', menu.getChildAt(i).isVisible());
+  }
+
+  menu.dispose();
+}
+
+
+function testFilterWordBoundary() {
+  menu = new goog.ui.FilteredMenu();
+  menu.addItem(new goog.ui.MenuItem('Vacation Photos'));
+  menu.addItem(new goog.ui.MenuItem('Work'));
+  menu.addItem(new goog.ui.MenuItem('Receipts & Invoices'));
+  menu.addItem(new goog.ui.MenuItem('Invitations'));
+  menu.addItem(new goog.ui.MenuItem('3.Family'));
+  menu.addItem(new goog.ui.MenuItem('No:Farm'));
+  menu.addItem(new goog.ui.MenuItem('Syd/Family'));
+
+  menu.render(sandbox);
+
+  // Filter menu.
+  menu.setFilter('Photos');
+  assertTrue('Vacation Photos should be visible when the menu is filtered',
+             menu.getChildAt(0).isVisible());
+  assertFalse('Work should not be visible when the menu is filtered',
+              menu.getChildAt(1).isVisible());
+  assertFalse('Receipts & Invoices should not be visible when the menu is ' +
+              'filtered',
+              menu.getChildAt(2).isVisible());
+  assertFalse('Invitations should not be visible when the menu is filtered',
+              menu.getChildAt(3).isVisible());
+
+  menu.setFilter('I');
+  assertFalse('Vacation Photos should not be visible when the menu is filtered',
+             menu.getChildAt(0).isVisible());
+  assertFalse('Work should not be visible when the menu is filtered',
+              menu.getChildAt(1).isVisible());
+  assertTrue('Receipts & Invoices should be visible when the menu is filtered',
+             menu.getChildAt(2).isVisible());
+  assertTrue('Invitations should be visible when the menu is filtered',
+             menu.getChildAt(3).isVisible());
+
+  menu.setFilter('Fa');
+  assertTrue('3.Family should be visible when the menu is filtered',
+             menu.getChildAt(4).isVisible());
+  assertTrue('No:Farm should be visible when the menu is filtered',
+             menu.getChildAt(5).isVisible());
+  assertTrue('Syd/Family should be visible when the menu is filtered',
+             menu.getChildAt(6).isVisible());
+
+  menu.dispose();
+}
+
+
+function testScrollIntoView() {
+  menu = new goog.ui.FilteredMenu();
+  menu.addItem(new goog.ui.MenuItem('Family'));
+  menu.addItem(new goog.ui.MenuItem('Friends'));
+  menu.addItem(new goog.ui.MenuItem('Photos'));
+  menu.addItem(new goog.ui.MenuItem('Work'));
+  menu.render(sandbox);
+
+  menu.setHighlightedIndex(0);
+  assertTrue('Highlighted item should be visible', isHighlightedVisible(menu));
+  menu.setHighlightedIndex(1);
+  assertTrue('Highlighted item should be visible', isHighlightedVisible(menu));
+  menu.setHighlightedIndex(2);
+  assertTrue('Highlighted item should be visible', isHighlightedVisible(menu));
+  menu.setHighlightedIndex(3);
+  assertTrue('Highlighted item should be visible', isHighlightedVisible(menu));
+  menu.setHighlightedIndex(0);
+  assertTrue('Highlighted item should be visible', isHighlightedVisible(menu));
+
+  menu.dispose();
+}
+
+
+function isHighlightedVisible(menu) {
+  var contRect = goog.style.getBounds(menu.getContentElement());
+  var itemRect = goog.style.getBounds(menu.getHighlighted().getElement());
+  return contRect.contains(itemRect);
+}
+
+</SCRIPT>
+
+
+<DIV><DIV style="color: rgb(0, 100, 0); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; font-weight: bold; ">Closure Unit Tests - goog.ui.FilteredMenu [PASSED]</DIV><DIV style="color: rgb(51, 51, 51); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; font-weight: bold; ">closure-library.googlecode.com/svn/trunk/closure/goog/ui/filteredmenu_test.html</DIV><DIV style="color: rgb(51, 51, 51); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">7 of 7 tests run in 75ms.</DIV><DIV style="color: rgb(51, 51, 51); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">7 passed, 0 failed.</DIV><DIV style="color: rgb(51, 51, 51); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">11 ms/test. 56 files loaded.</DIV><DIV style="color: rgb(51, 51, 51); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">.</DIV><DIV style="color: rgb(51, 51, 51); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">08:23:58.794  Start</DIV><DIV style="color: rgb(0, 100, 0); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">08:23:58.821  testDecorate : PASSED</DIV><DIV style="color: rgb(0, 100, 0); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">08:23:58.828  testDisposeClearsAllListeners : PASSED</DIV><DIV style="color: rgb(0, 100, 0); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">08:23:58.837  testFilter : PASSED</DIV><DIV style="color: rgb(0, 100, 0); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">08:23:58.844  testFilterAllowMultiple : PASSED</DIV><DIV style="color: rgb(0, 100, 0); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">08:23:58.853  testFilterWordBoundary : PASSED</DIV><DIV style="color: rgb(0, 100, 0); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">08:23:58.857  testRender : PASSED</DIV><DIV style="color: rgb(0, 100, 0); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">08:23:58.868  testScrollIntoView : PASSED</DIV><DIV style="color: rgb(51, 51, 51); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">08:23:58.868  Done</DIV><DIV style="color: rgb(51, 51, 51); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; "> </DIV><A style="display: block; font-size: small; " href="">Run again without reloading</A></DIV></BODY></HTML>

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<!-- saved from url=(0099)http://closure-library.googlecode.com/svn/trunk/closure/goog/ui/autocomplete/arraymatcher_test.html -->
+<HTML><!--
+  Copyright 2008 Google Inc. All Rights Reserved.
+--><HEAD><META http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<TITLE>Closure Unit Tests - goog.ui.AutoComplete.ArrayMatcher</TITLE>
+<SCRIPT src="./Closure Unit Tests - goog.ui.AutoComplete.ArrayMatcher_files/base.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.AutoComplete.ArrayMatcher_files/deps.js"></SCRIPT>
+<SCRIPT>
+  goog.require('goog.testing.jsunit');
+  goog.require('goog.ui.AutoComplete.ArrayMatcher');
+</SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.AutoComplete.ArrayMatcher_files/stacktrace.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.AutoComplete.ArrayMatcher_files/asserts.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.AutoComplete.ArrayMatcher_files/testcase.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.AutoComplete.ArrayMatcher_files/testrunner.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.AutoComplete.ArrayMatcher_files/jsunit.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.AutoComplete.ArrayMatcher_files/array.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.AutoComplete.ArrayMatcher_files/iter.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.AutoComplete.ArrayMatcher_files/string.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.AutoComplete.ArrayMatcher_files/errorhandlerweakdep.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.AutoComplete.ArrayMatcher_files/disposable.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.AutoComplete.ArrayMatcher_files/event.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.AutoComplete.ArrayMatcher_files/useragent.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.AutoComplete.ArrayMatcher_files/browserevent.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.AutoComplete.ArrayMatcher_files/eventwrapper.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.AutoComplete.ArrayMatcher_files/listener.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.AutoComplete.ArrayMatcher_files/simplepool.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.AutoComplete.ArrayMatcher_files/jscript.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.AutoComplete.ArrayMatcher_files/pools.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.AutoComplete.ArrayMatcher_files/object.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.AutoComplete.ArrayMatcher_files/events.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.AutoComplete.ArrayMatcher_files/eventtarget.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.AutoComplete.ArrayMatcher_files/autocomplete.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.ui.AutoComplete.ArrayMatcher_files/arraymatcher.js"></SCRIPT>
+</HEAD><BODY>
+<SCRIPT>
+
+// TODO: Add more useful tests for the similarity matching.
+
+var ArrayMatcher = goog.ui.AutoComplete.ArrayMatcher;
+
+function testRequestingRows() {
+  var items = ['a', 'Ab', 'abc', 'ba', 'ca'];
+  var am = new ArrayMatcher(items, true);
+
+  function matcher(token, matches) {
+    assertEquals('a', token);
+    assertEquals('Should have three matches', 3, matches.length);
+    assertEquals('a', matches[0]);
+    assertEquals('Ab', matches[1]);
+    assertEquals('abc', matches[2]);
+  }
+
+  am.requestMatchingRows('a', 10, matcher);
+}
+
+function testRequestingRowsMaxMatches() {
+  var items = ['a', 'Ab', 'abc', 'ba', 'ca'];
+  var am = new ArrayMatcher(items, true);
+
+  function matcher(token, matches) {
+    assertEquals('a', token);
+    assertEquals('Should have two matches', 2, matches.length);
+    assertEquals('a', matches[0]);
+    assertEquals('Ab', matches[1]);
+  }
+
+  am.requestMatchingRows('a', 2, matcher);
+}
+
+function testRequestingRowsSimilarMatches() {
+  // No prefix matches so use similar
+  var items = ['b', 'c', 'ba', 'ca'];
+  var am = new ArrayMatcher(items, false);
+
+  function matcher(token, matches) {
+    assertEquals('a', token);
+    assertEquals('Should have two matches', 2, matches.length);
+    assertEquals('ba', matches[0]);
+    assertEquals('ca', matches[1]);
+  }
+
+  am.requestMatchingRows('a', 10, matcher);
+}
+
+function testRequestingRowsSimilarMatchesMaxMatches() {
+  // No prefix matches so use similar
+  var items = ['b', 'c', 'ba', 'ca'];
+  var am = new ArrayMatcher(items, false);
+
+  function matcher(token, matches) {
+    assertEquals('a', token);
+    assertEquals('Should have one match', 1, matches.length);
+    assertEquals('ba', matches[0]);
+  }
+
+  am.requestMatchingRows('a', 1, matcher);
+}
+
+function testGetPrefixMatches() {
+  var items = ['a', 'b', 'c'];
+  var am = new ArrayMatcher(items, true);
+
+  var res = am.getPrefixMatches('a', 10);
+  assertEquals('Should have one match', 1, res.length);
+  assertEquals('Should return \'a\'', 'a', res[0]);
+}
+
+function testGetPrefixMatchesMaxMatches() {
+  var items = ['a', 'Ab', 'abc', 'ba', 'ca'];
+  var am = new ArrayMatcher(items, true);
+
+  var res = am.getPrefixMatches('a', 2);
+  assertEquals('Should have two matches', 2, res.length);
+  assertEquals('a', res[0]);
+}
+
+function testGetPrefixMatchesEmptyToken() {
+  var items = ['a', 'b', 'c'];
+  var am = new ArrayMatcher(items, true);
+
+  var res = am.getPrefixMatches('', 10);
+  assertEquals('Should have no matches', 0, res.length);
+}
+
+function testGetSimilarRows() {
+  var items = ['xa', 'xb', 'xc'];
+  var am = new ArrayMatcher(items, true);
+
+  var res = am.getSimilarRows('a', 10);
+  assertEquals('Should have one match', 1, res.length);
+  assertEquals('xa', res[0]);
+}
+
+function testGetSimilarRowsMaxMatches() {
+  var items = ['xa', 'xAa', 'xaAa'];
+  var am = new ArrayMatcher(items, true);
+
+  var res = am.getSimilarRows('a', 2);
+  assertEquals('Should have two matches', 2, res.length);
+  assertEquals('xa', res[0]);
+  assertEquals('xAa', res[1]);
+}
+
+</SCRIPT>
+
+
+<DIV><DIV style="color: rgb(0, 100, 0); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; font-weight: bold; ">Closure Unit Tests - goog.ui.AutoComplete.ArrayMatcher [PASSED]</DIV><DIV style="color: rgb(51, 51, 51); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; font-weight: bold; ">closure-library.googlecode.com/svn/trunk/closure/goog/ui/autocomplete/arraymatcher_test.html</DIV><DIV style="color: rgb(51, 51, 51); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">9 of 9 tests run in 14ms.</DIV><DIV style="color: rgb(51, 51, 51); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">9 passed, 0 failed.</DIV><DIV style="color: rgb(51, 51, 51); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">2 ms/test. 25 files loaded.</DIV><DIV style="color: rgb(51, 51, 51); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">.</DIV><DIV style="color: rgb(51, 51, 51); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">18:08:09.440  Start</DIV><DIV style="color: rgb(0, 100, 0); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">18:08:09.444  testGetPrefixMatches : PASSED</DIV><DIV style="color: rgb(0, 100, 0); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">18:08:09.445  testGetPrefixMatchesEmptyToken : PASSED</DIV><DIV style="color: rgb(0, 100, 0); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">18:08:09.446  testGetPrefixMatchesMaxMatches : PASSED</DIV><DIV style="color: rgb(0, 100, 0); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">18:08:09.448  testGetSimilarRows : PASSED</DIV><DIV style="color: rgb(0, 100, 0); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">18:08:09.449  testGetSimilarRowsMaxMatches : PASSED</DIV><DIV style="color: rgb(0, 100, 0); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">18:08:09.450  testRequestingRows : PASSED</DIV><DIV style="color: rgb(0, 100, 0); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">18:08:09.451  testRequestingRowsMaxMatches : PASSED</DIV><DIV style="color: rgb(0, 100, 0); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">18:08:09.452  testRequestingRowsSimilarMatches : PASSED</DIV><DIV style="color: rgb(0, 100, 0); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">18:08:09.452  testRequestingRowsSimilarMatchesMaxMatches : PASSED</DIV><DIV style="color: rgb(51, 51, 51); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">18:08:09.453  Done</DIV><DIV style="color: rgb(51, 51, 51); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; "> </DIV><A style="display: block; font-size: small; " href="">Run again without reloading</A></DIV></BODY></HTML>

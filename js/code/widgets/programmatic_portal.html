@@ -1,0 +1,54 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+            "http://www.w3.org/TR/html4/strict.dtd">
+<!--
+ ! Excerpted from "Mastering Dojo",
+ ! published by The Pragmatic Bookshelf.
+ ! Copyrights apply to this code. It may not be used to create training material, 
+ ! courses, books, articles, and the like. Contact us if you are in doubt.
+ ! We make no guarantees that this code is fit for any purpose. 
+ ! Visit http://www.pragmaticprogrammer.com/titles/rgdojo for more book information.
+-->
+<html>
+<head>
+<title>Portal Application</title>
+    <style type="text/css">
+        @import "/dojoroot/dijit/themes/tundra/tundra.css";
+        @import "/dojoroot/dojo/resources/dojo.css"
+    </style>
+    <script type="text/javascript" src="/dojoroot/dojo/dojo.js"  
+            djConfig="parseOnLoad: true"></script>
+    <script type="text/javascript">
+       dojo.registerModulePath("dojobook","../../dojobook");
+       dojo.require("dojo.parser");
+       dojo.require("dijit.layout.AccordionContainer");
+       dojo.require("dijit.layout.ContentPane");
+       dojo.require("dojox.widget.Toaster");
+       dojo.require("dojobook.widgets.ProgrammaticPortalDynamic");
+       dojo.addOnLoad(dojobook.widgets.ProgrammaticPortalDynamic.drawPortal);
+     </script>
+</head>
+<body class="tundra">
+
+   <div id="ups" dojoType="dijit.layout.AccordionContainer" 
+        style="width:500px;height:500px">
+        <!-- Initially Empty -->     
+   </div>
+   
+   
+   <label for="newUrl">New URL:</label>
+   <input type="text" length="50" id="newUrl">
+   <label for="newTitle">Title:</label>
+   <input type="text" length="50" id="newTitle">
+   
+   <button dojoType="dijit.form.Button" 
+        onclick="dojobook.widgets.ProgrammaticPortalDynamic.newPane();">
+        Add</button>
+   <button dojoType="dijit.form.Button" 
+        onclick="dojobook.widgets.ProgrammaticPortalDynamic.deletePane();">
+        Remove Selected</button>
+        
+   <div dojoType="dojox.widget.Toaster" duration="0"
+        messageTopic="xhrError" positionDirection="tr-left" />
+
+</body></html>
+

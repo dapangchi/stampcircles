@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<!-- saved from url=(0093)http://closure-library.googlecode.com/svn/trunk/closure/goog/async/conditionaldelay_test.html -->
+<HTML><!-- Copyright 2008 Google Inc. All Rights Reserved.--><!----><HEAD><META http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<TITLE>Closure Unit Tests - goog.async.ConditionalDelay</TITLE>
+<SCRIPT src="./Closure Unit Tests - goog.async.ConditionalDelay_files/base.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.async.ConditionalDelay_files/deps.js"></SCRIPT>
+<SCRIPT>
+  goog.require('goog.async.ConditionalDelay');
+  goog.require('goog.testing.MockClock');
+  goog.require('goog.testing.jsunit');
+</SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.async.ConditionalDelay_files/disposable.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.async.ConditionalDelay_files/array.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.async.ConditionalDelay_files/errorhandlerweakdep.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.async.ConditionalDelay_files/event.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.async.ConditionalDelay_files/string.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.async.ConditionalDelay_files/useragent.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.async.ConditionalDelay_files/browserevent.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.async.ConditionalDelay_files/eventwrapper.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.async.ConditionalDelay_files/listener.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.async.ConditionalDelay_files/simplepool.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.async.ConditionalDelay_files/jscript.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.async.ConditionalDelay_files/pools.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.async.ConditionalDelay_files/object.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.async.ConditionalDelay_files/events.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.async.ConditionalDelay_files/eventtarget.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.async.ConditionalDelay_files/timer.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.async.ConditionalDelay_files/delay.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.async.ConditionalDelay_files/conditionaldelay.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.async.ConditionalDelay_files/mockclock.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.async.ConditionalDelay_files/stacktrace.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.async.ConditionalDelay_files/asserts.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.async.ConditionalDelay_files/testcase.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.async.ConditionalDelay_files/testrunner.js"></SCRIPT><SCRIPT type="text/javascript" src="./Closure Unit Tests - goog.async.ConditionalDelay_files/jsunit.js"></SCRIPT>
+</HEAD><BODY>
+<SCRIPT>
+
+var invoked = false;
+var delay = null;
+var clock = null;
+var returnValue = true;
+var onSuccessCalled = false;
+var onFailureCalled = false;
+
+
+function callback() {
+  invoked = true;
+  return returnValue;
+}
+
+
+function setUp() {
+  clock = new goog.testing.MockClock(true);
+  invoked = false;
+  returnValue = true;
+  onSuccessCalled = false;
+  onFailureCalled = false;
+  delay = new goog.async.ConditionalDelay(callback);
+  delay.onSuccess = function() {
+    onSuccessCalled = true;
+  }
+  delay.onFailure = function() {
+    onFailureCalled = true;
+  }
+}
+
+
+function tearDown() {
+  clock.dispose();
+  delay.dispose();
+}
+
+
+function testDelay() {
+  delay.start(200, 200);
+  assertFalse(invoked);
+
+  clock.tick(100);
+  assertFalse(invoked);
+
+  clock.tick(100);
+  assertTrue(invoked);
+}
+
+
+function testStop() {
+  delay.start(200, 500);
+  assertTrue(delay.isActive());
+
+  clock.tick(100);
+  assertFalse(invoked);
+
+  delay.stop();
+  clock.tick(100);
+  assertFalse(invoked);
+
+  assertFalse(delay.isActive());
+}
+
+
+function testIsActive() {
+  assertFalse(delay.isActive());
+  delay.start(200, 200);
+  assertTrue(delay.isActive());
+  clock.tick(200);
+  assertFalse(delay.isActive());
+}
+
+
+function testRestart() {
+  delay.start(200, 50000);
+  clock.tick(100);
+
+  delay.stop();
+  assertFalse(invoked);
+
+  delay.start(200, 50000);
+  clock.tick(199);
+  assertFalse(invoked);
+
+  clock.tick(1);
+  assertTrue(invoked);
+
+  invoked = false;
+  delay.start(200, 200);
+  clock.tick(200);
+  assertTrue(invoked);
+
+  assertFalse(delay.isActive());
+}
+
+
+function testDispose() {
+  delay.start(200, 200);
+  delay.dispose();
+  assertTrue(delay.isDisposed());
+
+  clock.tick(500);
+  assertFalse(invoked);
+}
+
+
+function testConditionalDelay_Success() {
+  returnValue = false;
+  delay.start(100, 300);
+
+  clock.tick(99);
+  assertFalse(invoked);
+  clock.tick(1);
+  assertTrue(invoked);
+
+  assertTrue(delay.isActive());
+  assertFalse(delay.isDone());
+  assertFalse(onSuccessCalled);
+  assertFalse(onFailureCalled);
+
+  returnValue = true;
+
+  invoked = false;
+  clock.tick(100);
+  assertTrue(invoked);
+
+  assertFalse(delay.isActive());
+  assertTrue(delay.isDone());
+  assertTrue(onSuccessCalled);
+  assertFalse(onFailureCalled);
+
+  invoked = false;
+  clock.tick(200);
+  assertFalse(invoked);
+}
+
+
+function testConditionalDelay_Failure() {
+  returnValue = false;
+  delay.start(100, 300);
+
+  clock.tick(99);
+  assertFalse(invoked);
+  clock.tick(1);
+  assertTrue(invoked);
+
+  assertTrue(delay.isActive());
+  assertFalse(delay.isDone());
+  assertFalse(onSuccessCalled);
+  assertFalse(onFailureCalled);
+
+  invoked = false;
+  clock.tick(100);
+  assertTrue(invoked);
+  assertFalse(onSuccessCalled);
+  assertFalse(onFailureCalled);
+
+  invoked = false;
+  clock.tick(90);
+  assertFalse(invoked);
+  clock.tick(10);
+  assertTrue(invoked);
+
+  assertFalse(delay.isActive());
+  assertFalse(delay.isDone());
+  assertFalse(onSuccessCalled);
+  assertTrue(onFailureCalled);
+}
+
+
+function testInfiniteDelay() {
+  returnValue = false;
+  delay.start(100, -1);
+
+  // Test in a big enough loop.
+  for (var i = 0; i < 1000; ++i) {
+    clock.tick(80);
+    assertTrue(delay.isActive());
+    assertFalse(delay.isDone());
+    assertFalse(onSuccessCalled);
+    assertFalse(onFailureCalled);
+  }
+
+  delay.stop();
+  assertFalse(delay.isActive());
+  assertFalse(delay.isDone());
+  assertFalse(onSuccessCalled);
+  assertFalse(onFailureCalled);
+}
+
+function testCallbackScope() {
+  var callbackCalled = false;
+  var scopeObject = {};
+  function internalCallback() {
+    assertEquals(this, scopeObject);
+    callbackCalled = true;
+    return true;
+  }
+  delay = new goog.async.ConditionalDelay(internalCallback, scopeObject);
+  delay.start(200, 200);
+  clock.tick(201);
+  assertTrue(callbackCalled);
+}
+
+</SCRIPT>
+
+
+<DIV><DIV style="color: rgb(0, 100, 0); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; font-weight: bold; ">Closure Unit Tests - goog.async.ConditionalDelay [PASSED]</DIV><DIV style="color: rgb(51, 51, 51); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; font-weight: bold; ">closure-library.googlecode.com/svn/trunk/closure/goog/async/conditionaldelay_test.html</DIV><DIV style="color: rgb(51, 51, 51); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">9 of 9 tests run in 25ms.</DIV><DIV style="color: rgb(51, 51, 51); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">9 passed, 0 failed.</DIV><DIV style="color: rgb(51, 51, 51); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">3 ms/test. 26 files loaded.</DIV><DIV style="color: rgb(51, 51, 51); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">.</DIV><DIV style="color: rgb(51, 51, 51); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">14:26:18.493  Start</DIV><DIV style="color: rgb(0, 100, 0); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">14:26:18.501  testCallbackScope : PASSED</DIV><DIV style="color: rgb(0, 100, 0); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">14:26:18.503  testConditionalDelay_Failure : PASSED</DIV><DIV style="color: rgb(0, 100, 0); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">14:26:18.504  testConditionalDelay_Success : PASSED</DIV><DIV style="color: rgb(0, 100, 0); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">14:26:18.505  testDelay : PASSED</DIV><DIV style="color: rgb(0, 100, 0); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">14:26:18.505  testDispose : PASSED</DIV><DIV style="color: rgb(0, 100, 0); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">14:26:18.514  testInfiniteDelay : PASSED</DIV><DIV style="color: rgb(0, 100, 0); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">14:26:18.515  testIsActive : PASSED</DIV><DIV style="color: rgb(0, 100, 0); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">14:26:18.516  testRestart : PASSED</DIV><DIV style="color: rgb(0, 100, 0); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">14:26:18.517  testStop : PASSED</DIV><DIV style="color: rgb(51, 51, 51); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; ">14:26:18.517  Done</DIV><DIV style="color: rgb(51, 51, 51); font: normal normal normal 100%/normal monospace; white-space: pre-wrap; "> </DIV><A style="display: block; font-size: small; " href="">Run again without reloading</A></DIV></BODY></HTML>
