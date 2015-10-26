@@ -1,0 +1,113 @@
+---
+- 
+  id: 
+    name: 
+      name: id
+      type: int
+      null: NO
+      key: PRI
+      default: 
+      extra: auto_increment
+      max_length: 32000
+      input: int_input
+      size: 6
+      min_value: 0
+      max_value: 65535
+      length: required|min_length[%s]|max_length[%s]
+    human_name: Id
+    before: 
+    after: 
+    rules: 
+    attributes: 
+      name: id
+      id: id
+      class: stdINPUT
+      value: id
+      title: id,id,auto_increment
+      alt: id
+      style: 
+      hidden: false
+    key: 
+      name: id
+      auto_increment: true
+- 
+  user_id: 
+    name: 
+      name: user_id
+      type: int
+      null: NO
+      key: 
+      default: 
+      extra: 
+      max_length: 32000
+      input: int_input
+      size: 6
+      min_value: 0
+      max_value: 65535
+      length: required|min_length[%s]|max_length[%s]
+    human_name: User Id
+    before: 
+    after: 
+    rules: 
+    attributes: 
+      name: user_id
+      id: user_id
+      class: stdINPUT
+      value: user_id
+      title: user_id,user_id,
+      alt: user_id
+      style: 
+      hidden: false
+    key: false
+- 
+  country: 
+    name: 
+      name: country
+      type: varchar
+      null: YES
+      key: 
+      default: 
+      extra: 
+      max_length: 20
+      input: text_input
+      size: 80
+    human_name: Country
+    before: 
+    after: 
+    rules: 
+    attributes: 
+      name: country
+      id: country
+      class: stdINPUT
+      value: country
+      title: country,country,
+      alt: country
+      style: 
+      hidden: false
+    key: false
+- 
+  website: 
+    name: 
+      name: website
+      type: varchar
+      null: YES
+      key: 
+      default: 
+      extra: 
+      max_length: 255
+      input: text_input
+      size: 80
+    human_name: Website
+    before: 
+    after: 
+    rules: 
+    attributes: 
+      name: website
+      id: website
+      class: stdINPUT
+      value: website
+      title: website,website,
+      alt: website
+      style: 
+      hidden: false
+    key: false

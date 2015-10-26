@@ -1,0 +1,113 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"> 
+<head> 
+<title>Stamps and Postal History:<?php //echo $title;  ?><</title> 
+<meta http-equiv="Content-Type" content="text/html;charset=utf08" /><link rel="Shortcut Icon" href="http://www.bjornblomquist.com/favicon.ico" type="image/x-icon" /> 
+
+
+<script type="text/javascript" src="http://localhost/CodeIgniter/data/jquery-1.3.2.min"></script>
+
+<script type="text/javascript" src="http://localhost/strings/code_files/nav.js"></script>
+<script type="text/javascript" src="http://localhost/strings/code_files/prototype.js"></script>
+<script type="text/javascript" src="http://localhost/strings/code_files/moo.js"></script>
+<script type="text/javascript" src="http://localhost/strings/code_files/user_guide_menu.js"></script>
+
+<link rel="stylesheet" type="text/css" media="all" href="http://localhost/strings/code_files/userguide.css">
+
+<link rel="stylesheet" href="http://localhost/egypt/two_files/general.css" type="text/css" /> 
+<link rel="stylesheet" href="http://localhost/egypt/screen.css" type="text/css" /> 
+<link rel="stylesheet" href="http://localhost/CodeIgniter/css/typography.css" type="text/css" /> 
+<meta name="author" content="Y Lazarides" /> 
+<meta name="copyright" content="Dr Y Lazarides" /> 
+<meta name="robots" content="all" /> 
+<meta name="imagetoolbar" content="no" /> 
+<meta name="keywords" content="<?php //echo $keywords;    ?>" /> 
+<meta name="description" content="An automatic website builder" /> 
+
+ 
+ 
+<style type="text/css"> 
+<!-- Styles --> 
+ #toc {
+  border: 1px solid #bebebe ;
+  background-color:rgb(238,238,238);
+  margin: 0 0 5px 12px;
+  float:right;
+  width:300px;
+}
+
+#toc ol{font-size:13px}
+#toc ol {
+  margin: 8px;
+  padding-left: 5px;
+}
+.country {color:#fff;background:#C04343;}
+.country a:link,.country a:hover,.country a:visited{color:#fff}
+.arial11 {
+  color:#303000;
+  font-family:Arial,Helvetica,Verdana;
+  font-size:11px;
+  font-style:normal;
+  font-weight:bold;
+  line-height:13px;}
+  
+table td{font-size:11px;} 
+
+tr.shaded, .shaded{background:#fafafa} 
+hr {background:#fff}
+
+.description{font-size:smaller;margin-top:7px}
+.form-required{color:#f60}
+fieldset{border:none}
+
+</style>
+
+<script>
+$(document).ready(function() {
+ // hides the slickbox as soon as the DOM is ready
+ // (a little sooner than page load)
+  $('#slickbox').hide();
+ // shows the slickbox on clicking the noted link  
+  $('a#slick-show').click(function() {
+    $('#slickbox').show('slow');
+    return false;
+  });
+ // hides the slickbox on clicking the noted link  
+  $('a#slick-hide').click(function() {
+    $('#slickbox').hide('fast');
+    return false;
+  });
+ 
+ // toggles the slickbox on clicking the noted link  
+  $('a#slick-toggle').click(function() {
+    $('#slickbox').toggle(400);
+    return false;
+  });
+});
+
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</head> 
+
+
+
+
+
+
+
+

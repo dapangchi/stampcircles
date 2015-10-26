@@ -1,0 +1,17 @@
+<div style="background:url(http://localhost/egypt/service_shadow.png) repeat-y;background-repeat:no-repeat;width:23.5%;float:left">
+			 <h4 style="text-align:center"><a style="text-align:center;color:#bebebe;margin-left:10px"><span style="margin:0 auto">Manage Content</span></a></h4>
+<img src="http://localhost/egypt/download.jpg" style="display:block;margin:0 auto"  />
+
+<ul>
+<li>Content</li>
+<li class="active" style="color:red">Content Types</li> 
+<li>Post Settings</li>
+<li>RSS Publishing</li>
+<li>Taxonomy</li>
+<li>Search</li>
+</ul>
+ 
+<p>
+		   
+</p>
+</div>

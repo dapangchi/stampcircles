@@ -1,0 +1,34 @@
+---
+name: Tlist_example_09
+text: text
+taborder: taborder
+image_list:
+  - the-party-andre-pretorius.jpg
+  - driggs-roebling-andre-pretorius.jpg
+  - my-doom-andre-pretorius.jpg
+  - prince-andre-pretorius.jpg
+  - sculptor-andre-pretorius.jpg
+items:
+  - the-party-andre-pretorius.jpg
+  - driggs-roebling-andre-pretorius.jpg
+  - my-doom-andre-pretorius.jpg
+  - prince-andre-pretorius.jpg
+  - sculptor-andre-pretorius.jpg
+container: 
+  element: div
+  style: style
+wrapper: 
+  element: div
+  style: |
+    "width:280px;float:left;
+    margin-right:15px" class="bordered curvy clearfix shadowed"
+toolbar:
+  icons: ui-delete, ui-add, ui-save
+css: 
+  style: width:100px
+ajax: 
+template: 
+source: 
+  model: filesystem
+  method: get_all_images
+  vars: path/to/images

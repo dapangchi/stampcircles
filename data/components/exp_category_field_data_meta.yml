@@ -1,0 +1,88 @@
+---
+- 
+  cat_id: 
+    name: 
+      name: cat_id
+      type: int
+      null: NO
+      key: PRI
+      default: 
+      extra: 
+      max_length: 32000
+      input: int_input
+      size: 6
+      min_value: 0
+      max_value: 65535
+      length: required|min_length[%s]|max_length[%s]
+    human_name: Cat Id
+    before: 
+    after: 
+    rules: 
+    attributes: 
+      name: cat_id
+      id: cat_id
+      class: stdINPUT
+      value: cat_id
+      title: cat_id,cat_id,
+      alt: cat_id
+      style: 
+      hidden: false
+    key: false
+- 
+  site_id: 
+    name: 
+      name: site_id
+      type: int
+      null: NO
+      key: MUL
+      default: 1
+      extra: 
+      max_length: 32000
+      input: int_input
+      size: 6
+      min_value: 0
+      max_value: 65535
+      length: required|min_length[%s]|max_length[%s]
+    human_name: Site Id
+    before: 
+    after: 
+    rules: 
+    attributes: 
+      name: site_id
+      id: site_id
+      class: stdINPUT
+      value: site_id
+      title: site_id,site_id,
+      alt: site_id
+      style: 
+      hidden: false
+    key: false
+- 
+  group_id: 
+    name: 
+      name: group_id
+      type: int
+      null: NO
+      key: MUL
+      default: 
+      extra: 
+      max_length: 32000
+      input: int_input
+      size: 6
+      min_value: 0
+      max_value: 65535
+      length: required|min_length[%s]|max_length[%s]
+    human_name: Group Id
+    before: 
+    after: 
+    rules: 
+    attributes: 
+      name: group_id
+      id: group_id
+      class: stdINPUT
+      value: group_id
+      title: group_id,group_id,
+      alt: group_id
+      style: 
+      hidden: false
+    key: false

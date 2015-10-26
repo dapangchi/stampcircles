@@ -1,0 +1,577 @@
+---
+- 
+  id: 
+    name: 
+      name: id
+      type: int
+      null: NO
+      key: PRI
+      default: 
+      extra: auto_increment
+      max_length: 32000
+      input: int_input
+      size: 6
+      min_value: 0
+      max_value: 65535
+      length: required|min_length[%s]|max_length[%s]
+    human_name: Id
+    before: 
+    after: 
+    rules: 
+    attributes: 
+      name: id
+      id: id
+      class: stdINPUT
+      value: id
+      title: id,id,auto_increment
+      alt: id
+      style: 
+      hidden: false
+    key: 
+      name: id
+      auto_increment: true
+- 
+  transno: 
+    name: 
+      name: transno
+      type: int
+      null: NO
+      key: MUL
+      default: 0
+      extra: 
+      max_length: 32000
+      input: int_input
+      size: 6
+      min_value: 0
+      max_value: 65535
+      length: required|min_length[%s]|max_length[%s]
+    human_name: Transno
+    before: 
+    after: 
+    rules: 
+    attributes: 
+      name: transno
+      id: transno
+      class: stdINPUT
+      value: transno
+      title: transno,transno,
+      alt: transno
+      style: 
+      hidden: false
+    key: false
+- 
+  type: 
+    name: 
+      name: type
+      type: smallint
+      null: NO
+      key: MUL
+      default: 0
+      extra: 
+      max_length: 
+      input: int_input
+      size: 4
+      min_value: -32767
+      max_value: 65535
+      length: required|min_length[%s]|max_length[%s]
+    human_name: Type
+    before: 
+    after: 
+    rules: 
+    attributes: 
+      name: type
+      id: type
+      class: stdINPUT
+      value: type
+      title: type,type,
+      alt: type
+      style: 
+      hidden: false
+    key: false
+- 
+  debtorno: 
+    name: 
+      name: debtorno
+      type: varchar
+      null: NO
+      key: MUL
+      default: 
+      extra: 
+      max_length: 10
+      input: text_input
+      size: 80
+    human_name: Debtorno
+    before: 
+    after: 
+    rules: 
+    attributes: 
+      name: debtorno
+      id: debtorno
+      class: stdINPUT
+      value: debtorno
+      title: debtorno,debtorno,
+      alt: debtorno
+      style: 
+      hidden: false
+    key: false
+- 
+  branchcode: 
+    name: 
+      name: branchcode
+      type: varchar
+      null: NO
+      key: 
+      default: 
+      extra: 
+      max_length: 10
+      input: text_input
+      size: 80
+    human_name: Branchcode
+    before: 
+    after: 
+    rules: 
+    attributes: 
+      name: branchcode
+      id: branchcode
+      class: stdINPUT
+      value: branchcode
+      title: branchcode,branchcode,
+      alt: branchcode
+      style: 
+      hidden: false
+    key: false
+- 
+  trandate: 
+    name: 
+      name: trandate
+      type: datetime
+      null: NO
+      key: MUL
+      default: 0000-00-00 00:00:00
+      extra: 
+      input: datepicker
+      size: 6
+      max_length: 32000
+      min_value: 0
+      max_value: 65535
+      length: required|min_length[%s]|max_length[%s]
+    human_name: Trandate
+    before: 
+    after: 
+    rules: 
+    attributes: 
+      name: trandate
+      id: trandate
+      class: stdINPUT
+      value: trandate
+      title: trandate,trandate,
+      alt: trandate
+      style: 
+      hidden: false
+    key: false
+- 
+  prd: 
+    name: 
+      name: prd
+      type: smallint
+      null: NO
+      key: MUL
+      default: 0
+      extra: 
+      max_length: 
+      input: int_input
+      size: 4
+      min_value: -32767
+      max_value: 65535
+      length: required|min_length[%s]|max_length[%s]
+    human_name: Prd
+    before: 
+    after: 
+    rules: 
+    attributes: 
+      name: prd
+      id: prd
+      class: stdINPUT
+      value: prd
+      title: prd,prd,
+      alt: prd
+      style: 
+      hidden: false
+    key: false
+- 
+  settled: 
+    name: 
+      name: settled
+      type: tinyint
+      null: NO
+      key: MUL
+      default: 0
+      extra: 
+      max_length: 
+      input: int_input
+      size: 4
+      min_value: -127
+      max_value: 255
+      length: required|min_length[%s]|max_length[%s]
+    human_name: Settled
+    before: 
+    after: 
+    rules: 
+    attributes: 
+      name: settled
+      id: settled
+      class: stdINPUT
+      value: settled
+      title: settled,settled,
+      alt: settled
+      style: 
+      hidden: false
+    key: false
+- 
+  reference: 
+    name: 
+      name: reference
+      type: varchar
+      null: NO
+      key: 
+      default: 
+      extra: 
+      max_length: 20
+      input: text_input
+      size: 80
+    human_name: Reference
+    before: 
+    after: 
+    rules: 
+    attributes: 
+      name: reference
+      id: reference
+      class: stdINPUT
+      value: reference
+      title: reference,reference,
+      alt: reference
+      style: 
+      hidden: false
+    key: false
+- 
+  tpe: 
+    name: 
+      name: tpe
+      type: char
+      null: NO
+      key: MUL
+      default: 
+      extra: 
+      max_length: 2
+      input: text_input
+      size: 40
+    human_name: Tpe
+    before: 
+    after: 
+    rules: 
+    attributes: 
+      name: tpe
+      id: tpe
+      class: stdINPUT
+      value: tpe
+      title: tpe,tpe,
+      alt: tpe
+      style: 
+      hidden: false
+    key: false
+- 
+  order_: 
+    name: 
+      name: order_
+      type: int
+      null: NO
+      key: MUL
+      default: 0
+      extra: 
+      max_length: 32000
+      input: int_input
+      size: 6
+      min_value: 0
+      max_value: 65535
+      length: required|min_length[%s]|max_length[%s]
+    human_name: Order 
+    before: 
+    after: 
+    rules: 
+    attributes: 
+      name: order_
+      id: order_
+      class: stdINPUT
+      value: order_
+      title: order_,order_,
+      alt: order_
+      style: 
+      hidden: false
+    key: false
+- 
+  rate: 
+    name: 
+      name: rate
+      type: double
+      null: NO
+      key: 
+      default: 0
+      extra: 
+    human_name: Rate
+    before: 
+    after: 
+    rules: 
+    attributes: 
+      name: rate
+      id: rate
+      class: stdINPUT
+      value: rate
+      title: rate,rate,
+      alt: rate
+      style: 
+      hidden: false
+    key: false
+- 
+  ovamount: 
+    name: 
+      name: ovamount
+      type: double
+      null: NO
+      key: 
+      default: 0
+      extra: 
+    human_name: Ovamount
+    before: 
+    after: 
+    rules: 
+    attributes: 
+      name: ovamount
+      id: ovamount
+      class: stdINPUT
+      value: ovamount
+      title: ovamount,ovamount,
+      alt: ovamount
+      style: 
+      hidden: false
+    key: false
+- 
+  ovgst: 
+    name: 
+      name: ovgst
+      type: double
+      null: NO
+      key: 
+      default: 0
+      extra: 
+    human_name: Ovgst
+    before: 
+    after: 
+    rules: 
+    attributes: 
+      name: ovgst
+      id: ovgst
+      class: stdINPUT
+      value: ovgst
+      title: ovgst,ovgst,
+      alt: ovgst
+      style: 
+      hidden: false
+    key: false
+- 
+  ovfreight: 
+    name: 
+      name: ovfreight
+      type: double
+      null: NO
+      key: 
+      default: 0
+      extra: 
+    human_name: Ovfreight
+    before: 
+    after: 
+    rules: 
+    attributes: 
+      name: ovfreight
+      id: ovfreight
+      class: stdINPUT
+      value: ovfreight
+      title: ovfreight,ovfreight,
+      alt: ovfreight
+      style: 
+      hidden: false
+    key: false
+- 
+  ovdiscount: 
+    name: 
+      name: ovdiscount
+      type: double
+      null: NO
+      key: 
+      default: 0
+      extra: 
+    human_name: Ovdiscount
+    before: 
+    after: 
+    rules: 
+    attributes: 
+      name: ovdiscount
+      id: ovdiscount
+      class: stdINPUT
+      value: ovdiscount
+      title: ovdiscount,ovdiscount,
+      alt: ovdiscount
+      style: 
+      hidden: false
+    key: false
+- 
+  diffonexch: 
+    name: 
+      name: diffonexch
+      type: double
+      null: NO
+      key: 
+      default: 0
+      extra: 
+    human_name: Diffonexch
+    before: 
+    after: 
+    rules: 
+    attributes: 
+      name: diffonexch
+      id: diffonexch
+      class: stdINPUT
+      value: diffonexch
+      title: diffonexch,diffonexch,
+      alt: diffonexch
+      style: 
+      hidden: false
+    key: false
+- 
+  alloc: 
+    name: 
+      name: alloc
+      type: double
+      null: NO
+      key: 
+      default: 0
+      extra: 
+    human_name: Alloc
+    before: 
+    after: 
+    rules: 
+    attributes: 
+      name: alloc
+      id: alloc
+      class: stdINPUT
+      value: alloc
+      title: alloc,alloc,
+      alt: alloc
+      style: 
+      hidden: false
+    key: false
+- 
+  invtext: 
+    name: 
+      name: invtext
+      type: text
+      null: YES
+      key: 
+      default: 
+      extra: 
+      input: textarea_input
+      cols: 80
+    human_name: Invtext
+    before: 
+    after: 
+    rules: 
+    attributes: 
+      name: invtext
+      id: invtext
+      class: stdINPUT
+      value: invtext
+      title: invtext,invtext,
+      alt: invtext
+      style: 
+      hidden: false
+    key: false
+- 
+  shipvia: 
+    name: 
+      name: shipvia
+      type: varchar
+      null: NO
+      key: 
+      default: 
+      extra: 
+      max_length: 10
+      input: text_input
+      size: 80
+    human_name: Shipvia
+    before: 
+    after: 
+    rules: 
+    attributes: 
+      name: shipvia
+      id: shipvia
+      class: stdINPUT
+      value: shipvia
+      title: shipvia,shipvia,
+      alt: shipvia
+      style: 
+      hidden: false
+    key: false
+- 
+  edisent: 
+    name: 
+      name: edisent
+      type: tinyint
+      null: NO
+      key: MUL
+      default: 0
+      extra: 
+      max_length: 
+      input: int_input
+      size: 4
+      min_value: -127
+      max_value: 255
+      length: required|min_length[%s]|max_length[%s]
+    human_name: Edisent
+    before: 
+    after: 
+    rules: 
+    attributes: 
+      name: edisent
+      id: edisent
+      class: stdINPUT
+      value: edisent
+      title: edisent,edisent,
+      alt: edisent
+      style: 
+      hidden: false
+    key: false
+- 
+  consignment: 
+    name: 
+      name: consignment
+      type: varchar
+      null: NO
+      key: 
+      default: 
+      extra: 
+      max_length: 15
+      input: text_input
+      size: 80
+    human_name: Consignment
+    before: 
+    after: 
+    rules: 
+    attributes: 
+      name: consignment
+      id: consignment
+      class: stdINPUT
+      value: consignment
+      title: consignment,consignment,
+      alt: consignment
+      style: 
+      hidden: false
+    key: false

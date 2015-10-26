@@ -1,0 +1,334 @@
+---
+- 
+  copy_id: 
+    name: 
+      name: copy_id
+      type: int
+      null: NO
+      key: PRI
+      default: 
+      extra: auto_increment
+      max_length: 32000
+      input: int_input
+      size: 6
+      min_value: 0
+      max_value: 65535
+      length: required|min_length[%s]|max_length[%s]
+    human_name: Copy Id
+    before: 
+    after: 
+    rules: 
+    attributes: 
+      name: copy_id
+      id: copy_id
+      class: stdINPUT
+      value: copy_id
+      title: copy_id,copy_id,auto_increment
+      alt: copy_id
+      style: 
+      hidden: false
+    key: 
+      name: copy_id
+      auto_increment: true
+- 
+  message_id: 
+    name: 
+      name: message_id
+      type: int
+      null: NO
+      key: MUL
+      default: 0
+      extra: 
+      max_length: 32000
+      input: int_input
+      size: 6
+      min_value: 0
+      max_value: 65535
+      length: required|min_length[%s]|max_length[%s]
+    human_name: Message Id
+    before: 
+    after: 
+    rules: 
+    attributes: 
+      name: message_id
+      id: message_id
+      class: stdINPUT
+      value: message_id
+      title: message_id,message_id,
+      alt: message_id
+      style: 
+      hidden: false
+    key: false
+- 
+  sender_id: 
+    name: 
+      name: sender_id
+      type: int
+      null: NO
+      key: MUL
+      default: 0
+      extra: 
+      max_length: 32000
+      input: int_input
+      size: 6
+      min_value: 0
+      max_value: 65535
+      length: required|min_length[%s]|max_length[%s]
+    human_name: Sender Id
+    before: 
+    after: 
+    rules: 
+    attributes: 
+      name: sender_id
+      id: sender_id
+      class: stdINPUT
+      value: sender_id
+      title: sender_id,sender_id,
+      alt: sender_id
+      style: 
+      hidden: false
+    key: false
+- 
+  recipient_id: 
+    name: 
+      name: recipient_id
+      type: int
+      null: NO
+      key: MUL
+      default: 0
+      extra: 
+      max_length: 32000
+      input: int_input
+      size: 6
+      min_value: 0
+      max_value: 65535
+      length: required|min_length[%s]|max_length[%s]
+    human_name: Recipient Id
+    before: 
+    after: 
+    rules: 
+    attributes: 
+      name: recipient_id
+      id: recipient_id
+      class: stdINPUT
+      value: recipient_id
+      title: recipient_id,recipient_id,
+      alt: recipient_id
+      style: 
+      hidden: false
+    key: false
+- 
+  message_received: 
+    name: 
+      name: message_received
+      type: char
+      null: NO
+      key: 
+      default: n
+      extra: 
+      max_length: 1
+      input: text_input
+      size: 40
+    human_name: Message Received
+    before: 
+    after: 
+    rules: 
+    attributes: 
+      name: message_received
+      id: message_received
+      class: stdINPUT
+      value: message_received
+      title: message_received,message_received,
+      alt: message_received
+      style: 
+      hidden: false
+    key: false
+- 
+  message_read: 
+    name: 
+      name: message_read
+      type: char
+      null: NO
+      key: 
+      default: n
+      extra: 
+      max_length: 1
+      input: text_input
+      size: 40
+    human_name: Message Read
+    before: 
+    after: 
+    rules: 
+    attributes: 
+      name: message_read
+      id: message_read
+      class: stdINPUT
+      value: message_read
+      title: message_read,message_read,
+      alt: message_read
+      style: 
+      hidden: false
+    key: false
+- 
+  message_time_read: 
+    name: 
+      name: message_time_read
+      type: int
+      null: NO
+      key: 
+      default: 0
+      extra: 
+      max_length: 32000
+      input: int_input
+      size: 6
+      min_value: 0
+      max_value: 65535
+      length: required|min_length[%s]|max_length[%s]
+    human_name: Message Time Read
+    before: 
+    after: 
+    rules: 
+    attributes: 
+      name: message_time_read
+      id: message_time_read
+      class: stdINPUT
+      value: message_time_read
+      title: message_time_read,message_time_read,
+      alt: message_time_read
+      style: 
+      hidden: false
+    key: false
+- 
+  attachment_downloaded: 
+    name: 
+      name: attachment_downloaded
+      type: char
+      null: NO
+      key: 
+      default: n
+      extra: 
+      max_length: 1
+      input: text_input
+      size: 40
+    human_name: Attachment Downloaded
+    before: 
+    after: 
+    rules: 
+    attributes: 
+      name: attachment_downloaded
+      id: attachment_downloaded
+      class: stdINPUT
+      value: attachment_downloaded
+      title: >
+        attachment_downloaded,attachment_downloaded,
+      alt: attachment_downloaded
+      style: 
+      hidden: false
+    key: false
+- 
+  message_folder: 
+    name: 
+      name: message_folder
+      type: int
+      null: NO
+      key: 
+      default: 1
+      extra: 
+      max_length: 32000
+      input: int_input
+      size: 6
+      min_value: 0
+      max_value: 65535
+      length: required|min_length[%s]|max_length[%s]
+    human_name: Message Folder
+    before: 
+    after: 
+    rules: 
+    attributes: 
+      name: message_folder
+      id: message_folder
+      class: stdINPUT
+      value: message_folder
+      title: message_folder,message_folder,
+      alt: message_folder
+      style: 
+      hidden: false
+    key: false
+- 
+  message_authcode: 
+    name: 
+      name: message_authcode
+      type: varchar
+      null: NO
+      key: 
+      default: 
+      extra: 
+      max_length: 10
+      input: text_input
+      size: 80
+    human_name: Message Authcode
+    before: 
+    after: 
+    rules: 
+    attributes: 
+      name: message_authcode
+      id: message_authcode
+      class: stdINPUT
+      value: message_authcode
+      title: message_authcode,message_authcode,
+      alt: message_authcode
+      style: 
+      hidden: false
+    key: false
+- 
+  message_deleted: 
+    name: 
+      name: message_deleted
+      type: char
+      null: NO
+      key: 
+      default: n
+      extra: 
+      max_length: 1
+      input: text_input
+      size: 40
+    human_name: Message Deleted
+    before: 
+    after: 
+    rules: 
+    attributes: 
+      name: message_deleted
+      id: message_deleted
+      class: stdINPUT
+      value: message_deleted
+      title: message_deleted,message_deleted,
+      alt: message_deleted
+      style: 
+      hidden: false
+    key: false
+- 
+  message_status: 
+    name: 
+      name: message_status
+      type: varchar
+      null: NO
+      key: 
+      default: 
+      extra: 
+      max_length: 10
+      input: text_input
+      size: 80
+    human_name: Message Status
+    before: 
+    after: 
+    rules: 
+    attributes: 
+      name: message_status
+      id: message_status
+      class: stdINPUT
+      value: message_status
+      title: message_status,message_status,
+      alt: message_status
+      style: 
+      hidden: false
+    key: false

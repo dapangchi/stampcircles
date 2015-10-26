@@ -1,0 +1,246 @@
+---
+- 
+  id: 
+    name: 
+      name: id
+      type: int
+      null: NO
+      key: PRI
+      default: 
+      extra: auto_increment
+      max_length: 32000
+      input: int_input
+      size: 6
+      min_value: 0
+      max_value: 65535
+      length: required|min_length[%s]|max_length[%s]
+    human_name: Id
+    before: 
+    after: 
+    rules: 
+    attributes: 
+      name: id
+      id: id
+      class: stdINPUT
+      value: id
+      title: id,id,auto_increment
+      alt: id
+      style: 
+      hidden: false
+    key: 
+      name: id
+      auto_increment: true
+- 
+  site_id: 
+    name: 
+      name: site_id
+      type: int
+      null: NO
+      key: MUL
+      default: 1
+      extra: 
+      max_length: 32000
+      input: int_input
+      size: 6
+      min_value: 0
+      max_value: 65535
+      length: required|min_length[%s]|max_length[%s]
+    human_name: Site Id
+    before: 
+    after: 
+    rules: 
+    attributes: 
+      name: site_id
+      id: site_id
+      class: stdINPUT
+      value: site_id
+      title: site_id,site_id,
+      alt: site_id
+      style: 
+      hidden: false
+    key: false
+- 
+  member_id: 
+    name: 
+      name: member_id
+      type: int
+      null: NO
+      key: 
+      default: 0
+      extra: 
+      max_length: 32000
+      input: int_input
+      size: 6
+      min_value: 0
+      max_value: 65535
+      length: required|min_length[%s]|max_length[%s]
+    human_name: Member Id
+    before: 
+    after: 
+    rules: 
+    attributes: 
+      name: member_id
+      id: member_id
+      class: stdINPUT
+      value: member_id
+      title: member_id,member_id,
+      alt: member_id
+      style: 
+      hidden: false
+    key: false
+- 
+  tag_name: 
+    name: 
+      name: tag_name
+      type: varchar
+      null: NO
+      key: 
+      default: 
+      extra: 
+      max_length: 32
+      input: text_input
+      size: 80
+    human_name: Tag Name
+    before: 
+    after: 
+    rules: 
+    attributes: 
+      name: tag_name
+      id: tag_name
+      class: stdINPUT
+      value: tag_name
+      title: tag_name,tag_name,
+      alt: tag_name
+      style: 
+      hidden: false
+    key: false
+- 
+  tag_open: 
+    name: 
+      name: tag_open
+      type: varchar
+      null: NO
+      key: 
+      default: 
+      extra: 
+      max_length: 120
+      input: text_input
+      size: 80
+    human_name: Tag Open
+    before: 
+    after: 
+    rules: 
+    attributes: 
+      name: tag_open
+      id: tag_open
+      class: stdINPUT
+      value: tag_open
+      title: tag_open,tag_open,
+      alt: tag_open
+      style: 
+      hidden: false
+    key: false
+- 
+  tag_close: 
+    name: 
+      name: tag_close
+      type: varchar
+      null: NO
+      key: 
+      default: 
+      extra: 
+      max_length: 120
+      input: text_input
+      size: 80
+    human_name: Tag Close
+    before: 
+    after: 
+    rules: 
+    attributes: 
+      name: tag_close
+      id: tag_close
+      class: stdINPUT
+      value: tag_close
+      title: tag_close,tag_close,
+      alt: tag_close
+      style: 
+      hidden: false
+    key: false
+- 
+  accesskey: 
+    name: 
+      name: accesskey
+      type: varchar
+      null: NO
+      key: 
+      default: 
+      extra: 
+      max_length: 32
+      input: text_input
+      size: 80
+    human_name: Accesskey
+    before: 
+    after: 
+    rules: 
+    attributes: 
+      name: accesskey
+      id: accesskey
+      class: stdINPUT
+      value: accesskey
+      title: accesskey,accesskey,
+      alt: accesskey
+      style: 
+      hidden: false
+    key: false
+- 
+  tag_order: 
+    name: 
+      name: tag_order
+      type: int
+      null: NO
+      key: 
+      default: 
+      extra: 
+      max_length: 32000
+      input: int_input
+      size: 6
+      min_value: 0
+      max_value: 65535
+      length: required|min_length[%s]|max_length[%s]
+    human_name: Tag Order
+    before: 
+    after: 
+    rules: 
+    attributes: 
+      name: tag_order
+      id: tag_order
+      class: stdINPUT
+      value: tag_order
+      title: tag_order,tag_order,
+      alt: tag_order
+      style: 
+      hidden: false
+    key: false
+- 
+  tag_row: 
+    name: 
+      name: tag_row
+      type: char(1)
+      null: NO
+      key: 
+      default: 1
+      extra: 
+    human_name: Tag Row
+    before: 
+    after: 
+    rules: 
+    attributes: 
+      name: tag_row
+      id: tag_row
+      class: stdINPUT
+      value: tag_row
+      title: tag_row,tag_row,
+      alt: tag_row
+      style: 
+      hidden: false
+    key: false

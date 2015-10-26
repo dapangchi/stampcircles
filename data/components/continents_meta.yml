@@ -1,0 +1,59 @@
+---
+- 
+  continent_id: 
+    name: 
+      name: continent_id
+      type: tinyint
+      null: NO
+      key: PRI
+      default: 
+      extra: auto_increment
+      max_length: 
+      input: int_input
+      size: 4
+      min_value: -127
+      max_value: 255
+      length: required|min_length[%s]|max_length[%s]
+    human_name: Continent Id
+    before: 
+    after: 
+    rules: 
+    attributes: 
+      name: continent_id
+      id: continent_id
+      class: stdINPUT
+      value: continent_id
+      title: continent_id,continent_id,auto_increment
+      alt: continent_id
+      style: 
+      hidden: false
+    key: 
+      name: continent_id
+      auto_increment: true
+- 
+  continent_description: 
+    name: 
+      name: continent_description
+      type: varchar
+      null: NO
+      key: 
+      default: 
+      extra: 
+      max_length: 25
+      input: text_input
+      size: 80
+    human_name: Continent Description
+    before: 
+    after: 
+    rules: 
+    attributes: 
+      name: continent_description
+      id: continent_description
+      class: stdINPUT
+      value: continent_description
+      title: >
+        continent_description,continent_description,
+      alt: continent_description
+      style: 
+      hidden: false
+    key: false

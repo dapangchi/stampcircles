@@ -1,0 +1,24 @@
+---
+name: name
+caption: caption
+taborder: 4
+template: puff_container
+content: 
+image_list: name
+items: 
+  - Tlist
+  - TImagelist
+  - Tbutton
+  - TComponent
+container: 
+  element: div
+  style: style
+wrapper: 
+  element: div
+  style: |
+    "width:38%;float:left;
+    margin-right:15px" class="bordered curvy clearfix shadowed"
+actions: 
+events: 
+css: 
+  style: style

@@ -1,0 +1,188 @@
+<div style="width:23%;float:left;margin-right:20px">
+<script type="text/javascript">
+//<![CDATA[
+ $(function() {
+ $("#accordion").accordion({
+               autoHeight:false,
+                animated: 'bounceslide',
+                collapsible: true,
+                active: 4,
+                icons: {
+                    header: "ui-icon-circle-arrow-e",
+                    headerSelected: "ui-icon-circle-arrow-s"
+                }
+            });
+    });
+//]]>
+</script>
+
+
+<div style="font-size:smaller" id="accordion">
+<h3>
+<a href="#">CodeIgniter</a>
+</h3>
+<div>
+<h4>
+Che Ignites the Crowds
+</h4><img src="http://localhost/egypt/che-guevara/Scott-2004.jpg"
+style="width:90%;display:block;margin:0 auto" />
+<p>
+Mauris mauris ante, blandit et,
+                ultrices a, suscipit eget, quam.
+                Integer ut neque. Vivamus nisi metus,
+                molestie vel, gravida in, condimentum
+                sit amet, nunc. Nam a nibh. Donec
+                suscipit eros. Nam mi. Proin viverra
+                leo ut odio. Curabitur malesuada.
+                Vestibulum a velit eu ante scelerisque
+                vulputate.
+</p>
+</div>
+<h3>
+<a href="#">Sexy</a>
+</h3>
+<div>
+<img src="http://localhost/egypt/rudolf-kartelin/6994503-lg.jpg" style=
+                 "width:90%;display:block;margin:0 auto" />
+<p>
+ The content can be anything, even a
+ full blog post. Include by transclusion
+ if you want
+</p>
+</div>
+<h3>
+<a href="#">Very Sexy</a>
+</h3>
+<div>
+<img src="http://localhost/egypt/rudolf-kartelin/6972699-lg.jpg" style="width:90%;display:block;margin:0 auto" />
+<p>
+                Sed non urna. Donec et ante. Phasellus
+                eu ligula. Vestibulum sit amet purus.
+                Vivamus hendrerit, dolor at aliquet
+                laoreet, mauris turpis porttitor velit,
+                faucibus interdum tellus libero ac
+                justo. Vivamus non quam. In suscipit
+                faucibus urna.
+</p>
+</div>
+<h3>
+<a href="#">Top Girl</a>
+</h3>
+<div>
+<img src="http://localhost/egypt/rudolf-kartelin/7193729-lg.jpg"
+style= "width:90%;display:block;margin:0 auto" />
+<p>
+                Nam enim risus, molestie et, porta ac,
+                aliquam ac, risus. Quisque lobortis.
+                Phasellus pellentesque purus in massa.
+                Aenean in pede. Phasellus ac libero ac
+                tellus pellentesque semper. Sed ac
+                felis. Sed commodo, magna quis lacinia
+                ornare, quam ante aliquam nisi, eu
+                iaculis leo purus venenatis dui.
+</p>
+<ul>
+<li>List item one
+</li>
+<li>List item two
+</li>
+<li>List item three
+</li>
+</ul>
+</div>
+<h3>
+<a href="#">To Die For</a>
+</h3>
+<div>
+<img src="http://localhost/egypt/martin-schoeller/angelina_jolie_2004.jpg"  style="width:90%;display:block;margin:0 auto" />
+<p>
+                Cras dictum. Pellentesque habitant
+                morbi tristique senectus et netus et
+                malesuada fames ac turpis egestas.
+                Vestibulum ante ipsum primis in
+                faucibus orci luctus et ultrices
+                posuere cubilia Curae; Aenean lacinia
+                mauris vel est.
+</p>
+<p>
+                Suspendisse eu nisl. Nullam ut libero.
+                Integer dignissim consequat lectus.
+                Class aptent taciti sociosqu ad litora
+                torquent per conubia nostra, per
+                inceptos himenaeos.
+</p>
+</div>
+<h3>
+<a href="#">Che Again</a>
+</h3>
+<div>
+<img src=
+                 "http://localhost/egypt/milen-lesemann/6395980-lg.jpg"
+                 style="width:90%;display:block;margin:0 auto" />
+<p style="font-size:smaller;width:70%;float:right">
+ <a href=
+                   "http://localhost/CodeIgniter/blog/gallery/milen-lesemann/1"
+                   style="color:red;text-decoration:underline;">Milen
+                Lesemann</a>
+</p>
+<div style="clear:both;height:1px"></div>
+<p>
+                <a href=
+                   "http://localhost/CodeIgniter/Blogs/go/Kartelin">
+                Kartelin</a> Cras dictum. Pellentesque
+                habitant morbi tristique senectus et
+                netus et malesuada fames ac turpis
+                egestas.
+</p>
+<p>
+                Suspendisse eu nisl. Nullam ut libero.
+                Integer dignissim consequat lectus.
+                Class aptent taciti sociosqu ad litora
+                torquent per conubia nostra, per
+                inceptos himenaeos.
+</p>
+</div>
+<h3>
+<a href="#">More</a>
+</h3>
+<div>
+<h4>
+Che Again
+</h4><img src="http://localhost/egypt/che-guevara/Scott-2002.jpg"
+style="width:90%;display:block;margin:0 auto" />
+<p>
+                Mauris mauris ante, blandit et,
+                ultrices a, suscipit eget, quam.
+                Integer ut neque. Vivamus nisi metus,
+                molestie vel, gravida in, condimentum
+                sit amet, nunc. Nam a nibh. Donec
+                suscipit eros. Nam mi. Proin viverra
+                leo ut odio. Curabitur malesuada.
+                Vestibulum a velit eu ante scelerisque
+                vulputate.
+</p>
+</div>
+<h3>
+<a href="#">More Che</a>
+</h3>
+<div>
+<h4>
+                Che Again
+</h4><img src=
+                      "http://localhost/egypt/che-guevara/Scott-2001.jpg"
+                      style=
+                      "width:90%;display:block;margin:0 auto" />
+<p>
+                Mauris mauris ante, blandit et,
+                ultrices a, suscipit eget, quam.
+                Integer ut neque. Vivamus nisi metus,
+                molestie vel, gravida in, condimentum
+                sit amet, nunc. Nam a nibh. Donec
+                suscipit eros. Nam mi. Proin viverra
+                leo ut odio. Curabitur malesuada.
+                Vestibulum a velit eu ante scelerisque
+                vulputate.
+</p>
+</div>
+</div>
+</div>

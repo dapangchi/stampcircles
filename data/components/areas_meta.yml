@@ -1,0 +1,53 @@
+---
+- 
+  areacode: 
+    name: 
+      name: areacode
+      type: char
+      null: NO
+      key: PRI
+      default: 
+      extra: 
+      max_length: 3
+      input: text_input
+      size: 40
+    human_name: Areacode
+    before: 
+    after: 
+    rules: 
+    attributes: 
+      name: areacode
+      id: areacode
+      class: stdINPUT
+      value: areacode
+      title: areacode,areacode,
+      alt: areacode
+      style: 
+      hidden: false
+    key: false
+- 
+  areadescription: 
+    name: 
+      name: areadescription
+      type: varchar
+      null: NO
+      key: 
+      default: 
+      extra: 
+      max_length: 25
+      input: text_input
+      size: 80
+    human_name: Areadescription
+    before: 
+    after: 
+    rules: 
+    attributes: 
+      name: areadescription
+      id: areadescription
+      class: stdINPUT
+      value: areadescription
+      title: areadescription,areadescription,
+      alt: areadescription
+      style: 
+      hidden: false
+    key: false

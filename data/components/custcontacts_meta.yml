@@ -1,0 +1,165 @@
+---
+- 
+  contid: 
+    name: 
+      name: contid
+      type: int
+      null: NO
+      key: PRI
+      default: 
+      extra: auto_increment
+      max_length: 32000
+      input: int_input
+      size: 6
+      min_value: 0
+      max_value: 65535
+      length: required|min_length[%s]|max_length[%s]
+    human_name: Contid
+    before: 
+    after: 
+    rules: 
+    attributes: 
+      name: contid
+      id: contid
+      class: stdINPUT
+      value: contid
+      title: contid,contid,auto_increment
+      alt: contid
+      style: 
+      hidden: false
+    key: 
+      name: contid
+      auto_increment: true
+- 
+  debtorno: 
+    name: 
+      name: debtorno
+      type: varchar
+      null: NO
+      key: 
+      default: 
+      extra: 
+      max_length: 10
+      input: text_input
+      size: 80
+    human_name: Debtorno
+    before: 
+    after: 
+    rules: 
+    attributes: 
+      name: debtorno
+      id: debtorno
+      class: stdINPUT
+      value: debtorno
+      title: debtorno,debtorno,
+      alt: debtorno
+      style: 
+      hidden: false
+    key: false
+- 
+  contactname: 
+    name: 
+      name: contactname
+      type: varchar
+      null: NO
+      key: 
+      default: 
+      extra: 
+      max_length: 40
+      input: text_input
+      size: 80
+    human_name: Contactname
+    before: 
+    after: 
+    rules: 
+    attributes: 
+      name: contactname
+      id: contactname
+      class: stdINPUT
+      value: contactname
+      title: contactname,contactname,
+      alt: contactname
+      style: 
+      hidden: false
+    key: false
+- 
+  role: 
+    name: 
+      name: role
+      type: varchar
+      null: NO
+      key: 
+      default: 
+      extra: 
+      max_length: 10
+      input: text_input
+      size: 80
+    human_name: Role
+    before: 
+    after: 
+    rules: 
+    attributes: 
+      name: role
+      id: role
+      class: stdINPUT
+      value: role
+      title: role,role,
+      alt: role
+      style: 
+      hidden: false
+    key: false
+- 
+  phoneno: 
+    name: 
+      name: phoneno
+      type: int
+      null: NO
+      key: 
+      default: 
+      extra: 
+      max_length: 32000
+      input: int_input
+      size: 6
+      min_value: 0
+      max_value: 65535
+      length: required|min_length[%s]|max_length[%s]
+    human_name: Phoneno
+    before: 
+    after: 
+    rules: 
+    attributes: 
+      name: phoneno
+      id: phoneno
+      class: stdINPUT
+      value: phoneno
+      title: phoneno,phoneno,
+      alt: phoneno
+      style: 
+      hidden: false
+    key: false
+- 
+  notes: 
+    name: 
+      name: notes
+      type: varchar
+      null: NO
+      key: 
+      default: 
+      extra: 
+      max_length: 40
+      input: text_input
+      size: 80
+    human_name: Notes
+    before: 
+    after: 
+    rules: 
+    attributes: 
+      name: notes
+      id: notes
+      class: stdINPUT
+      value: notes
+      title: notes,notes,
+      alt: notes
+      style: 
+      hidden: false
+    key: false

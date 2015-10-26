@@ -1,0 +1,376 @@
+---
+- 
+  field_id: 
+    name: 
+      name: field_id
+      type: int
+      null: NO
+      key: PRI
+      default: 
+      extra: auto_increment
+      max_length: 32000
+      input: int_input
+      size: 6
+      min_value: 0
+      max_value: 65535
+      length: required|min_length[%s]|max_length[%s]
+    human_name: Field Id
+    before: 
+    after: 
+    rules: 
+    attributes: 
+      name: field_id
+      id: field_id
+      class: stdINPUT
+      value: field_id
+      title: field_id,field_id,auto_increment
+      alt: field_id
+      style: 
+      hidden: false
+    key: 
+      name: field_id
+      auto_increment: true
+- 
+  site_id: 
+    name: 
+      name: site_id
+      type: int
+      null: NO
+      key: MUL
+      default: 1
+      extra: 
+      max_length: 32000
+      input: int_input
+      size: 6
+      min_value: 0
+      max_value: 65535
+      length: required|min_length[%s]|max_length[%s]
+    human_name: Site Id
+    before: 
+    after: 
+    rules: 
+    attributes: 
+      name: site_id
+      id: site_id
+      class: stdINPUT
+      value: site_id
+      title: site_id,site_id,
+      alt: site_id
+      style: 
+      hidden: false
+    key: false
+- 
+  group_id: 
+    name: 
+      name: group_id
+      type: int
+      null: NO
+      key: MUL
+      default: 
+      extra: 
+      max_length: 32000
+      input: int_input
+      size: 6
+      min_value: 0
+      max_value: 65535
+      length: required|min_length[%s]|max_length[%s]
+    human_name: Group Id
+    before: 
+    after: 
+    rules: 
+    attributes: 
+      name: group_id
+      id: group_id
+      class: stdINPUT
+      value: group_id
+      title: group_id,group_id,
+      alt: group_id
+      style: 
+      hidden: false
+    key: false
+- 
+  field_name: 
+    name: 
+      name: field_name
+      type: varchar
+      null: NO
+      key: 
+      default: 
+      extra: 
+      max_length: 32
+      input: text_input
+      size: 80
+    human_name: Field Name
+    before: 
+    after: 
+    rules: 
+    attributes: 
+      name: field_name
+      id: field_name
+      class: stdINPUT
+      value: field_name
+      title: field_name,field_name,
+      alt: field_name
+      style: 
+      hidden: false
+    key: false
+- 
+  field_label: 
+    name: 
+      name: field_label
+      type: varchar
+      null: NO
+      key: 
+      default: 
+      extra: 
+      max_length: 50
+      input: text_input
+      size: 80
+    human_name: Field Label
+    before: 
+    after: 
+    rules: 
+    attributes: 
+      name: field_label
+      id: field_label
+      class: stdINPUT
+      value: field_label
+      title: field_label,field_label,
+      alt: field_label
+      style: 
+      hidden: false
+    key: false
+- 
+  field_type: 
+    name: 
+      name: field_type
+      type: varchar
+      null: NO
+      key: 
+      default: text
+      extra: 
+      max_length: 12
+      input: text_input
+      size: 80
+    human_name: Field Type
+    before: 
+    after: 
+    rules: 
+    attributes: 
+      name: field_type
+      id: field_type
+      class: stdINPUT
+      value: field_type
+      title: field_type,field_type,
+      alt: field_type
+      style: 
+      hidden: false
+    key: false
+- 
+  field_list_items: 
+    name: 
+      name: field_list_items
+      type: text
+      null: NO
+      key: 
+      default: 
+      extra: 
+      input: textarea_input
+      cols: 80
+    human_name: Field List Items
+    before: 
+    after: 
+    rules: 
+    attributes: 
+      name: field_list_items
+      id: field_list_items
+      class: stdINPUT
+      value: field_list_items
+      title: field_list_items,field_list_items,
+      alt: field_list_items
+      style: 
+      hidden: false
+    key: false
+- 
+  field_maxl: 
+    name: 
+      name: field_maxl
+      type: smallint
+      null: NO
+      key: 
+      default: 128
+      extra: 
+      max_length: 
+      input: int_input
+      size: 4
+      min_value: -32767
+      max_value: 65535
+      length: required|min_length[%s]|max_length[%s]
+    human_name: Field Maxl
+    before: 
+    after: 
+    rules: 
+    attributes: 
+      name: field_maxl
+      id: field_maxl
+      class: stdINPUT
+      value: field_maxl
+      title: field_maxl,field_maxl,
+      alt: field_maxl
+      style: 
+      hidden: false
+    key: false
+- 
+  field_ta_rows: 
+    name: 
+      name: field_ta_rows
+      type: tinyint
+      null: NO
+      key: 
+      default: 8
+      extra: 
+      max_length: 
+      input: int_input
+      size: 4
+      min_value: -127
+      max_value: 255
+      length: required|min_length[%s]|max_length[%s]
+    human_name: Field Ta Rows
+    before: 
+    after: 
+    rules: 
+    attributes: 
+      name: field_ta_rows
+      id: field_ta_rows
+      class: stdINPUT
+      value: field_ta_rows
+      title: field_ta_rows,field_ta_rows,
+      alt: field_ta_rows
+      style: 
+      hidden: false
+    key: false
+- 
+  field_default_fmt: 
+    name: 
+      name: field_default_fmt
+      type: varchar
+      null: NO
+      key: 
+      default: none
+      extra: 
+      max_length: 40
+      input: text_input
+      size: 80
+    human_name: Field Default Fmt
+    before: 
+    after: 
+    rules: 
+    attributes: 
+      name: field_default_fmt
+      id: field_default_fmt
+      class: stdINPUT
+      value: field_default_fmt
+      title: field_default_fmt,field_default_fmt,
+      alt: field_default_fmt
+      style: 
+      hidden: false
+    key: false
+- 
+  field_show_fmt: 
+    name: 
+      name: field_show_fmt
+      type: char(1)
+      null: NO
+      key: 
+      default: y
+      extra: 
+    human_name: Field Show Fmt
+    before: 
+    after: 
+    rules: 
+    attributes: 
+      name: field_show_fmt
+      id: field_show_fmt
+      class: stdINPUT
+      value: field_show_fmt
+      title: field_show_fmt,field_show_fmt,
+      alt: field_show_fmt
+      style: 
+      hidden: false
+    key: false
+- 
+  field_text_direction: 
+    name: 
+      name: field_text_direction
+      type: char(3)
+      null: NO
+      key: 
+      default: ltr
+      extra: 
+    human_name: Field Text Direction
+    before: 
+    after: 
+    rules: 
+    attributes: 
+      name: field_text_direction
+      id: field_text_direction
+      class: stdINPUT
+      value: field_text_direction
+      title: >
+        field_text_direction,field_text_direction,
+      alt: field_text_direction
+      style: 
+      hidden: false
+    key: false
+- 
+  field_required: 
+    name: 
+      name: field_required
+      type: char(1)
+      null: NO
+      key: 
+      default: n
+      extra: 
+    human_name: Field Required
+    before: 
+    after: 
+    rules: 
+    attributes: 
+      name: field_required
+      id: field_required
+      class: stdINPUT
+      value: field_required
+      title: field_required,field_required,
+      alt: field_required
+      style: 
+      hidden: false
+    key: false
+- 
+  field_order: 
+    name: 
+      name: field_order
+      type: int
+      null: NO
+      key: 
+      default: 
+      extra: 
+      max_length: 32000
+      input: int_input
+      size: 6
+      min_value: 0
+      max_value: 65535
+      length: required|min_length[%s]|max_length[%s]
+    human_name: Field Order
+    before: 
+    after: 
+    rules: 
+    attributes: 
+      name: field_order
+      id: field_order
+      class: stdINPUT
+      value: field_order
+      title: field_order,field_order,
+      alt: field_order
+      style: 
+      hidden: false
+    key: false

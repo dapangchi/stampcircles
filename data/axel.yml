@@ -1,0 +1,94 @@
+---
+name: axel
+caption: caption
+taborder: taborder
+image_list: 
+  - 2557313-lg.jpg
+  - 3569623-lg.jpg
+  - 3681677-lg.jpg
+  - 5343363-lg.jpg
+  - 6025280-md.jpg
+  - 6025281-lg.jpg
+  - 6384486-lg.jpg
+  - 7036800-lg.jpg
+  - 7185638-md.jpg
+  - 7189131-md.jpg
+  - 7198434-lg.jpg
+  - 7207308-lg.jpg
+  - 7219312-lg (1).jpg
+  - 7219312-lg.jpg
+  - 7268006-lg.jpg
+  - 7292429-lg.jpg
+  - 7449333-lg.jpg
+  - 7453062-lg.jpg
+  - 7582671-lg (1).jpg
+  - 7582671-lg.jpg
+  - 7641969-lg.jpg
+  - 7723924-lg.jpg
+  - 7999840-lg.jpg
+  - 8008080-lg.jpg
+  - 8044775-lg.jpg
+  - 8068831-lg.jpg
+items: 
+  - 2557313-lg.jpg
+  - 3569623-lg.jpg
+  - 3681677-lg.jpg
+  - 5343363-lg.jpg
+  - 6025280-md.jpg
+  - 6025281-lg.jpg
+  - 6384486-lg.jpg
+  - 7036800-lg.jpg
+  - 7185638-md.jpg
+  - 7189131-md.jpg
+  - 7198434-lg.jpg
+  - 7207308-lg.jpg
+  - 7219312-lg (1).jpg
+  - 7219312-lg.jpg
+  - 7268006-lg.jpg
+  - 7292429-lg.jpg
+  - 7449333-lg.jpg
+  - 7453062-lg.jpg
+  - 7582671-lg (1).jpg
+  - 7582671-lg.jpg
+  - 7641969-lg.jpg
+  - 7723924-lg.jpg
+  - 7999840-lg.jpg
+  - 8008080-lg.jpg
+  - 8044775-lg.jpg
+  - 8068831-lg.jpg
+container: 
+  element: div
+  style: style
+wrapper: 
+  element: div
+  style: |
+    "width:280px;float:left;
+    margin-right:15px" class="bordered curvy clearfix shadowed"
+actions: 
+css: 
+  style: width:100px
+ajax: 
+  behaviors: 
+    - sortable
+    - draggable
+    - resizable
+    - show
+    - hide
+view: 
+  name: view_tlist
+  data: data
+  cache: false
+model: 
+  model: filesystem
+  method: get_all
+  vars: 
+controllers: 
+  - create
+  - delete
+  - save
+  - sort
+help: cms/tlist_help.dat
+inspector: standard
+yalm: true
+db: true
+limit: 5

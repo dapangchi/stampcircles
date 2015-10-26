@@ -1,0 +1,347 @@
+---
+- 
+  img_id: 
+    name: 
+      name: img_id
+      type: int
+      null: NO
+      key: PRI
+      default: 
+      extra: auto_increment
+      max_length: 32000
+      input: int_input
+      size: 6
+      min_value: 0
+      max_value: 65535
+      length: required|min_length[%s]|max_length[%s]
+    human_name: Img Id
+    before: 
+    after: 
+    rules: 
+    attributes: 
+      name: img_id
+      id: img_id
+      class: stdINPUT
+      value: img_id
+      title: img_id,img_id,auto_increment
+      alt: img_id
+      style: 
+      hidden: false
+    key: 
+      name: img_id
+      auto_increment: true
+- 
+  img_title: 
+    name: 
+      name: img_title
+      type: varchar
+      null: NO
+      key: 
+      default: 
+      extra: 
+      max_length: 250
+      input: text_input
+      size: 80
+    human_name: Img Title
+    before: 
+    after: 
+    rules: 
+    attributes: 
+      name: img_title
+      id: img_title
+      class: stdINPUT
+      value: img_title
+      title: img_title,img_title,
+      alt: img_title
+      style: 
+      hidden: false
+    key: false
+- 
+  img_description: 
+    name: 
+      name: img_description
+      type: varchar
+      null: NO
+      key: 
+      default: 
+      extra: 
+      max_length: 250
+      input: text_input
+      size: 80
+    human_name: Img Description
+    before: 
+    after: 
+    rules: 
+    attributes: 
+      name: img_description
+      id: img_description
+      class: stdINPUT
+      value: img_description
+      title: img_description,img_description,
+      alt: img_description
+      style: 
+      hidden: false
+    key: false
+- 
+  img_alt: 
+    name: 
+      name: img_alt
+      type: varchar
+      null: NO
+      key: 
+      default: 
+      extra: 
+      max_length: 250
+      input: text_input
+      size: 80
+    human_name: Img Alt
+    before: 
+    after: 
+    rules: 
+    attributes: 
+      name: img_alt
+      id: img_alt
+      class: stdINPUT
+      value: img_alt
+      title: img_alt,img_alt,
+      alt: img_alt
+      style: 
+      hidden: false
+    key: false
+- 
+  img_longdescription: 
+    name: 
+      name: img_longdescription
+      type: varchar
+      null: NO
+      key: 
+      default: 
+      extra: 
+      max_length: 250
+      input: text_input
+      size: 80
+    human_name: Img Longdescription
+    before: 
+    after: 
+    rules: 
+    attributes: 
+      name: img_longdescription
+      id: img_longdescription
+      class: stdINPUT
+      value: img_longdescription
+      title: img_longdescription,img_longdescription,
+      alt: img_longdescription
+      style: 
+      hidden: false
+    key: false
+- 
+  img_rating: 
+    name: 
+      name: img_rating
+      type: int
+      null: NO
+      key: 
+      default: 
+      extra: 
+      max_length: 32000
+      input: int_input
+      size: 6
+      min_value: 0
+      max_value: 65535
+      length: required|min_length[%s]|max_length[%s]
+    human_name: Img Rating
+    before: 
+    after: 
+    rules: 
+    attributes: 
+      name: img_rating
+      id: img_rating
+      class: stdINPUT
+      value: img_rating
+      title: img_rating,img_rating,
+      alt: img_rating
+      style: 
+      hidden: false
+    key: false
+- 
+  img_owner: 
+    name: 
+      name: img_owner
+      type: varchar
+      null: NO
+      key: 
+      default: 
+      extra: 
+      max_length: 250
+      input: text_input
+      size: 80
+    human_name: Img Owner
+    before: 
+    after: 
+    rules: 
+    attributes: 
+      name: img_owner
+      id: img_owner
+      class: stdINPUT
+      value: img_owner
+      title: img_owner,img_owner,
+      alt: img_owner
+      style: 
+      hidden: false
+    key: false
+- 
+  img_genre: 
+    name: 
+      name: img_genre
+      type: varchar
+      null: NO
+      key: 
+      default: 
+      extra: 
+      max_length: 250
+      input: text_input
+      size: 80
+    human_name: Img Genre
+    before: 
+    after: 
+    rules: 
+    attributes: 
+      name: img_genre
+      id: img_genre
+      class: stdINPUT
+      value: img_genre
+      title: img_genre,img_genre,
+      alt: img_genre
+      style: 
+      hidden: false
+    key: false
+- 
+  img_caption: 
+    name: 
+      name: img_caption
+      type: varchar
+      null: NO
+      key: 
+      default: 
+      extra: 
+      max_length: 250
+      input: text_input
+      size: 80
+    human_name: Img Caption
+    before: 
+    after: 
+    rules: 
+    attributes: 
+      name: img_caption
+      id: img_caption
+      class: stdINPUT
+      value: img_caption
+      title: img_caption,img_caption,
+      alt: img_caption
+      style: 
+      hidden: false
+    key: false
+- 
+  img_copyright: 
+    name: 
+      name: img_copyright
+      type: varchar
+      null: NO
+      key: 
+      default: 
+      extra: 
+      max_length: 250
+      input: text_input
+      size: 80
+    human_name: Img Copyright
+    before: 
+    after: 
+    rules: 
+    attributes: 
+      name: img_copyright
+      id: img_copyright
+      class: stdINPUT
+      value: img_copyright
+      title: img_copyright,img_copyright,
+      alt: img_copyright
+      style: 
+      hidden: false
+    key: false
+- 
+  img_date: 
+    name: 
+      name: img_date
+      type: varchar
+      null: NO
+      key: 
+      default: 
+      extra: 
+      max_length: 25
+      input: text_input
+      size: 80
+    human_name: Img Date
+    before: 
+    after: 
+    rules: 
+    attributes: 
+      name: img_date
+      id: img_date
+      class: stdINPUT
+      value: img_date
+      title: img_date,img_date,
+      alt: img_date
+      style: 
+      hidden: false
+    key: false
+- 
+  img_last_seen: 
+    name: 
+      name: img_last_seen
+      type: varchar
+      null: NO
+      key: 
+      default: 
+      extra: 
+      max_length: 25
+      input: text_input
+      size: 80
+    human_name: Img Last Seen
+    before: 
+    after: 
+    rules: 
+    attributes: 
+      name: img_last_seen
+      id: img_last_seen
+      class: stdINPUT
+      value: img_last_seen
+      title: img_last_seen,img_last_seen,
+      alt: img_last_seen
+      style: 
+      hidden: false
+    key: false
+- 
+  img_tags: 
+    name: 
+      name: img_tags
+      type: varchar
+      null: NO
+      key: 
+      default: 
+      extra: 
+      max_length: 200
+      input: text_input
+      size: 80
+    human_name: Img Tags
+    before: 
+    after: 
+    rules: 
+    attributes: 
+      name: img_tags
+      id: img_tags
+      class: stdINPUT
+      value: img_tags
+      title: img_tags,img_tags,
+      alt: img_tags
+      style: 
+      hidden: false
+    key: false

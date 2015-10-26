@@ -1,0 +1,27 @@
+---
+name: name
+text: text
+taborder: taborder
+image_list: name
+items: 
+  - one
+  - two
+  - three
+  - >
+    <a
+    href="http://localhost/CodeIgniter/admin/dbutil/sortable">Sortable</a>
+  - draggable
+  - >
+    <a
+    href="http://localhost/CodeIgniter/admin/dbutil/accordion">Accordion</a>
+container: 
+  element: div
+  style: style
+wrapper: 
+  element: div
+  style: >
+    "width:50%;float:left;margin-right:15px"
+    class="bordered curvy clearfix shadowed"
+actions: 
+css: 
+  style: padding:0px;width:95%;margin:0 auto

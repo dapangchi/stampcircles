@@ -1,0 +1,29 @@
+## YAML Template
+## for MySQl database standard
+## fields
+## Dr Y Lazarides
+## 19 June 2009
+## Used to create option selects
+## and checklists
+
+fields:
+ integers:
+  tinyint
+  smallint
+  mediumint
+  largeint
+ strings:
+   char
+   text
+   smalltext
+   largetext
+blob:
+  tinyblob
+  mediumblob
+  largeblob
+
+
+
+
+
+

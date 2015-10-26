@@ -1,0 +1,88 @@
+---
+- 
+  mlid: 
+    name: 
+      name: mlid
+      type: int
+      null: NO
+      key: PRI
+      default: 0
+      extra: 
+      max_length: 32000
+      input: int_input
+      size: 6
+      min_value: 0
+      max_value: 65535
+      length: required|min_length[%s]|max_length[%s]
+    human_name: Mlid
+    before: 
+    after: 
+    rules: 
+    attributes: 
+      name: mlid
+      id: mlid
+      class: stdINPUT
+      value: mlid
+      title: mlid,mlid,
+      alt: mlid
+      style: 
+      hidden: false
+    key: false
+- 
+  nid: 
+    name: 
+      name: nid
+      type: int
+      null: NO
+      key: UNI
+      default: 0
+      extra: 
+      max_length: 32000
+      input: int_input
+      size: 6
+      min_value: 0
+      max_value: 65535
+      length: required|min_length[%s]|max_length[%s]
+    human_name: Nid
+    before: 
+    after: 
+    rules: 
+    attributes: 
+      name: nid
+      id: nid
+      class: stdINPUT
+      value: nid
+      title: nid,nid,
+      alt: nid
+      style: 
+      hidden: false
+    key: false
+- 
+  bid: 
+    name: 
+      name: bid
+      type: int
+      null: NO
+      key: MUL
+      default: 0
+      extra: 
+      max_length: 32000
+      input: int_input
+      size: 6
+      min_value: 0
+      max_value: 65535
+      length: required|min_length[%s]|max_length[%s]
+    human_name: Bid
+    before: 
+    after: 
+    rules: 
+    attributes: 
+      name: bid
+      id: bid
+      class: stdINPUT
+      value: bid
+      title: bid,bid,
+      alt: bid
+      style: 
+      hidden: false
+    key: false

@@ -1,0 +1,59 @@
+---
+- 
+  entry_id: 
+    name: 
+      name: entry_id
+      type: int
+      null: NO
+      key: MUL
+      default: 
+      extra: 
+      max_length: 32000
+      input: int_input
+      size: 6
+      min_value: 0
+      max_value: 65535
+      length: required|min_length[%s]|max_length[%s]
+    human_name: Entry Id
+    before: 
+    after: 
+    rules: 
+    attributes: 
+      name: entry_id
+      id: entry_id
+      class: stdINPUT
+      value: entry_id
+      title: entry_id,entry_id,
+      alt: entry_id
+      style: 
+      hidden: false
+    key: false
+- 
+  cat_id: 
+    name: 
+      name: cat_id
+      type: int
+      null: NO
+      key: MUL
+      default: 
+      extra: 
+      max_length: 32000
+      input: int_input
+      size: 6
+      min_value: 0
+      max_value: 65535
+      length: required|min_length[%s]|max_length[%s]
+    human_name: Cat Id
+    before: 
+    after: 
+    rules: 
+    attributes: 
+      name: cat_id
+      id: cat_id
+      class: stdINPUT
+      value: cat_id
+      title: cat_id,cat_id,
+      alt: cat_id
+      style: 
+      hidden: false
+    key: false

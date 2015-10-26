@@ -1,0 +1,16 @@
+<div style="background:url(http://localhost/egypt/service_shadow.png) repeat-y;background-repeat:no-repeat;width:23.5%;float:left">
+			 <h4 style="text-align:center;width:70%"><a  href="http://localhost/CodeIgniter/admin/dbutil/" style="text-align:center;color:#bebebe;margin-left:10px" title="Manage Databases, lists all dbs"><span style="margin:0 auto">Database Management</span></a></h4>
+<img src="http://localhost/egypt/CMS/db.jpg" style="display:block;margin:0 auto"  />
+
+<ul style="list-style-type:square;">
+  <li><a href="http://localhost/CodeIgniter/admin/dbutil/" title="Manage Databases, lists all dbs" >Manage your databases</a></li>
+  <li>List</li>
+  <li>Create</li>
+  <li>Backup</li>
+ </ul>
+
+ 
+<p>
+		   
+</p>
+</div>

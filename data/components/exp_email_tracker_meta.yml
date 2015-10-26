@@ -1,0 +1,168 @@
+---
+- 
+  email_id: 
+    name: 
+      name: email_id
+      type: int
+      null: NO
+      key: PRI
+      default: 
+      extra: auto_increment
+      max_length: 32000
+      input: int_input
+      size: 6
+      min_value: 0
+      max_value: 65535
+      length: required|min_length[%s]|max_length[%s]
+    human_name: Email Id
+    before: 
+    after: 
+    rules: 
+    attributes: 
+      name: email_id
+      id: email_id
+      class: stdINPUT
+      value: email_id
+      title: email_id,email_id,auto_increment
+      alt: email_id
+      style: 
+      hidden: false
+    key: 
+      name: email_id
+      auto_increment: true
+- 
+  email_date: 
+    name: 
+      name: email_date
+      type: int
+      null: NO
+      key: 
+      default: 0
+      extra: 
+      max_length: 32000
+      input: int_input
+      size: 6
+      min_value: 0
+      max_value: 65535
+      length: required|min_length[%s]|max_length[%s]
+    human_name: Email Date
+    before: 
+    after: 
+    rules: 
+    attributes: 
+      name: email_date
+      id: email_date
+      class: stdINPUT
+      value: email_date
+      title: email_date,email_date,
+      alt: email_date
+      style: 
+      hidden: false
+    key: false
+- 
+  sender_ip: 
+    name: 
+      name: sender_ip
+      type: varchar
+      null: NO
+      key: 
+      default: 
+      extra: 
+      max_length: 16
+      input: text_input
+      size: 80
+    human_name: Sender Ip
+    before: 
+    after: 
+    rules: 
+    attributes: 
+      name: sender_ip
+      id: sender_ip
+      class: stdINPUT
+      value: sender_ip
+      title: sender_ip,sender_ip,
+      alt: sender_ip
+      style: 
+      hidden: false
+    key: false
+- 
+  sender_email: 
+    name: 
+      name: sender_email
+      type: varchar
+      null: NO
+      key: 
+      default: 
+      extra: 
+      max_length: 75
+      input: text_input
+      size: 80
+    human_name: Sender Email
+    before: 
+    after: 
+    rules: 
+    attributes: 
+      name: sender_email
+      id: sender_email
+      class: stdINPUT
+      value: sender_email
+      title: sender_email,sender_email,
+      alt: sender_email
+      style: 
+      hidden: false
+    key: false
+- 
+  sender_username: 
+    name: 
+      name: sender_username
+      type: varchar
+      null: NO
+      key: 
+      default: 
+      extra: 
+      max_length: 50
+      input: text_input
+      size: 80
+    human_name: Sender Username
+    before: 
+    after: 
+    rules: 
+    attributes: 
+      name: sender_username
+      id: sender_username
+      class: stdINPUT
+      value: sender_username
+      title: sender_username,sender_username,
+      alt: sender_username
+      style: 
+      hidden: false
+    key: false
+- 
+  number_recipients: 
+    name: 
+      name: number_recipients
+      type: int
+      null: NO
+      key: 
+      default: 1
+      extra: 
+      max_length: 32000
+      input: int_input
+      size: 6
+      min_value: 0
+      max_value: 65535
+      length: required|min_length[%s]|max_length[%s]
+    human_name: Number Recipients
+    before: 
+    after: 
+    rules: 
+    attributes: 
+      name: number_recipients
+      id: number_recipients
+      class: stdINPUT
+      value: number_recipients
+      title: number_recipients,number_recipients,
+      alt: number_recipients
+      style: 
+      hidden: false
+    key: false

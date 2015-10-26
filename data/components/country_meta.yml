@@ -1,0 +1,191 @@
+---
+- 
+  id: 
+    name: 
+      name: id
+      type: int
+      null: NO
+      key: PRI
+      default: 
+      extra: auto_increment
+      max_length: 32000
+      input: int_input
+      size: 6
+      min_value: 0
+      max_value: 65535
+      length: required|min_length[%s]|max_length[%s]
+    human_name: Id
+    before: 
+    after: 
+    rules: 
+    attributes: 
+      name: id
+      id: id
+      class: stdINPUT
+      value: id
+      title: id,id,auto_increment
+      alt: id
+      style: 
+      hidden: false
+    key: 
+      name: id
+      auto_increment: true
+- 
+  iso: 
+    name: 
+      name: iso
+      type: char
+      null: NO
+      key: 
+      default: 
+      extra: 
+      max_length: 2
+      input: text_input
+      size: 40
+    human_name: Iso
+    before: 
+    after: 
+    rules: 
+    attributes: 
+      name: iso
+      id: iso
+      class: stdINPUT
+      value: iso
+      title: iso,iso,
+      alt: iso
+      style: 
+      hidden: false
+    key: false
+- 
+  name: 
+    name: 
+      name: name
+      type: varchar
+      null: NO
+      key: 
+      default: 
+      extra: 
+      max_length: 80
+      input: text_input
+      size: 80
+    human_name: Name
+    before: 
+    after: 
+    rules: 
+    attributes: 
+      name: name
+      id: name
+      class: stdINPUT
+      value: name
+      title: name,name,
+      alt: name
+      style: 
+      hidden: false
+    key: false
+- 
+  iso3: 
+    name: 
+      name: iso3
+      type: char
+      null: YES
+      key: 
+      default: 
+      extra: 
+      max_length: 3
+      input: text_input
+      size: 40
+    human_name: Iso3
+    before: 
+    after: 
+    rules: 
+    attributes: 
+      name: iso3
+      id: iso3
+      class: stdINPUT
+      value: iso3
+      title: iso3,iso3,
+      alt: iso3
+      style: 
+      hidden: false
+    key: false
+- 
+  numcode: 
+    name: 
+      name: numcode
+      type: smallint
+      null: YES
+      key: 
+      default: 
+      extra: 
+      max_length: 
+      input: int_input
+      size: 4
+      min_value: -32767
+      max_value: 65535
+      length: required|min_length[%s]|max_length[%s]
+    human_name: Numcode
+    before: 
+    after: 
+    rules: 
+    attributes: 
+      name: numcode
+      id: numcode
+      class: stdINPUT
+      value: numcode
+      title: numcode,numcode,
+      alt: numcode
+      style: 
+      hidden: false
+    key: false
+- 
+  continent: 
+    name: 
+      name: continent
+      type: varchar
+      null: NO
+      key: 
+      default: 
+      extra: 
+      max_length: 25
+      input: text_input
+      size: 80
+    human_name: Continent
+    before: 
+    after: 
+    rules: 
+    attributes: 
+      name: continent
+      id: continent
+      class: stdINPUT
+      value: continent
+      title: continent,continent,
+      alt: continent
+      style: 
+      hidden: false
+    key: false
+- 
+  area_interest: 
+    name: 
+      name: area_interest
+      type: varchar
+      null: NO
+      key: 
+      default: 
+      extra: 
+      max_length: 50
+      input: text_input
+      size: 80
+    human_name: Area Interest
+    before: 
+    after: 
+    rules: 
+    attributes: 
+      name: area_interest
+      id: area_interest
+      class: stdINPUT
+      value: area_interest
+      title: area_interest,area_interest,
+      alt: area_interest
+      style: 
+      hidden: false
+    key: false

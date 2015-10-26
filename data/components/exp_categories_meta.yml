@@ -1,0 +1,251 @@
+---
+- 
+  cat_id: 
+    name: 
+      name: cat_id
+      type: int
+      null: NO
+      key: PRI
+      default: 
+      extra: auto_increment
+      max_length: 32000
+      input: int_input
+      size: 6
+      min_value: 0
+      max_value: 65535
+      length: required|min_length[%s]|max_length[%s]
+    human_name: Cat Id
+    before: 
+    after: 
+    rules: 
+    attributes: 
+      name: cat_id
+      id: cat_id
+      class: stdINPUT
+      value: cat_id
+      title: cat_id,cat_id,auto_increment
+      alt: cat_id
+      style: 
+      hidden: false
+    key: 
+      name: cat_id
+      auto_increment: true
+- 
+  site_id: 
+    name: 
+      name: site_id
+      type: int
+      null: NO
+      key: MUL
+      default: 1
+      extra: 
+      max_length: 32000
+      input: int_input
+      size: 6
+      min_value: 0
+      max_value: 65535
+      length: required|min_length[%s]|max_length[%s]
+    human_name: Site Id
+    before: 
+    after: 
+    rules: 
+    attributes: 
+      name: site_id
+      id: site_id
+      class: stdINPUT
+      value: site_id
+      title: site_id,site_id,
+      alt: site_id
+      style: 
+      hidden: false
+    key: false
+- 
+  group_id: 
+    name: 
+      name: group_id
+      type: int
+      null: NO
+      key: MUL
+      default: 
+      extra: 
+      max_length: 32000
+      input: int_input
+      size: 6
+      min_value: 0
+      max_value: 65535
+      length: required|min_length[%s]|max_length[%s]
+    human_name: Group Id
+    before: 
+    after: 
+    rules: 
+    attributes: 
+      name: group_id
+      id: group_id
+      class: stdINPUT
+      value: group_id
+      title: group_id,group_id,
+      alt: group_id
+      style: 
+      hidden: false
+    key: false
+- 
+  parent_id: 
+    name: 
+      name: parent_id
+      type: int
+      null: NO
+      key: 
+      default: 
+      extra: 
+      max_length: 32000
+      input: int_input
+      size: 6
+      min_value: 0
+      max_value: 65535
+      length: required|min_length[%s]|max_length[%s]
+    human_name: Parent Id
+    before: 
+    after: 
+    rules: 
+    attributes: 
+      name: parent_id
+      id: parent_id
+      class: stdINPUT
+      value: parent_id
+      title: parent_id,parent_id,
+      alt: parent_id
+      style: 
+      hidden: false
+    key: false
+- 
+  cat_name: 
+    name: 
+      name: cat_name
+      type: varchar
+      null: NO
+      key: MUL
+      default: 
+      extra: 
+      max_length: 100
+      input: text_input
+      size: 80
+    human_name: Cat Name
+    before: 
+    after: 
+    rules: 
+    attributes: 
+      name: cat_name
+      id: cat_name
+      class: stdINPUT
+      value: cat_name
+      title: cat_name,cat_name,
+      alt: cat_name
+      style: 
+      hidden: false
+    key: false
+- 
+  cat_url_title: 
+    name: 
+      name: cat_url_title
+      type: varchar
+      null: NO
+      key: 
+      default: 
+      extra: 
+      max_length: 75
+      input: text_input
+      size: 80
+    human_name: Cat Url Title
+    before: 
+    after: 
+    rules: 
+    attributes: 
+      name: cat_url_title
+      id: cat_url_title
+      class: stdINPUT
+      value: cat_url_title
+      title: cat_url_title,cat_url_title,
+      alt: cat_url_title
+      style: 
+      hidden: false
+    key: false
+- 
+  cat_description: 
+    name: 
+      name: cat_description
+      type: text
+      null: NO
+      key: 
+      default: 
+      extra: 
+      input: textarea_input
+      cols: 80
+    human_name: Cat Description
+    before: 
+    after: 
+    rules: 
+    attributes: 
+      name: cat_description
+      id: cat_description
+      class: stdINPUT
+      value: cat_description
+      title: cat_description,cat_description,
+      alt: cat_description
+      style: 
+      hidden: false
+    key: false
+- 
+  cat_image: 
+    name: 
+      name: cat_image
+      type: varchar
+      null: NO
+      key: 
+      default: 
+      extra: 
+      max_length: 120
+      input: text_input
+      size: 80
+    human_name: Cat Image
+    before: 
+    after: 
+    rules: 
+    attributes: 
+      name: cat_image
+      id: cat_image
+      class: stdINPUT
+      value: cat_image
+      title: cat_image,cat_image,
+      alt: cat_image
+      style: 
+      hidden: false
+    key: false
+- 
+  cat_order: 
+    name: 
+      name: cat_order
+      type: int
+      null: NO
+      key: 
+      default: 
+      extra: 
+      max_length: 32000
+      input: int_input
+      size: 6
+      min_value: 0
+      max_value: 65535
+      length: required|min_length[%s]|max_length[%s]
+    human_name: Cat Order
+    before: 
+    after: 
+    rules: 
+    attributes: 
+      name: cat_order
+      id: cat_order
+      class: stdINPUT
+      value: cat_order
+      title: cat_order,cat_order,
+      alt: cat_order
+      style: 
+      hidden: false
+    key: false

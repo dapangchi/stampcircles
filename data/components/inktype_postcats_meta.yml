@@ -1,0 +1,90 @@
+---
+- 
+  postcat_id: 
+    name: 
+      name: postcat_id
+      type: int
+      null: NO
+      key: PRI
+      default: 
+      extra: auto_increment
+      max_length: 32000
+      input: int_input
+      size: 6
+      min_value: 0
+      max_value: 65535
+      length: required|min_length[%s]|max_length[%s]
+    human_name: Postcat Id
+    before: 
+    after: 
+    rules: 
+    attributes: 
+      name: postcat_id
+      id: postcat_id
+      class: stdINPUT
+      value: postcat_id
+      title: postcat_id,postcat_id,auto_increment
+      alt: postcat_id
+      style: 
+      hidden: false
+    key: 
+      name: postcat_id
+      auto_increment: true
+- 
+  post_id: 
+    name: 
+      name: post_id
+      type: int
+      null: NO
+      key: MUL
+      default: 
+      extra: 
+      max_length: 32000
+      input: int_input
+      size: 6
+      min_value: 0
+      max_value: 65535
+      length: required|min_length[%s]|max_length[%s]
+    human_name: Post Id
+    before: 
+    after: 
+    rules: 
+    attributes: 
+      name: post_id
+      id: post_id
+      class: stdINPUT
+      value: post_id
+      title: post_id,post_id,
+      alt: post_id
+      style: 
+      hidden: false
+    key: false
+- 
+  category_id: 
+    name: 
+      name: category_id
+      type: int
+      null: NO
+      key: MUL
+      default: 
+      extra: 
+      max_length: 32000
+      input: int_input
+      size: 6
+      min_value: 0
+      max_value: 65535
+      length: required|min_length[%s]|max_length[%s]
+    human_name: Category Id
+    before: 
+    after: 
+    rules: 
+    attributes: 
+      name: category_id
+      id: category_id
+      class: stdINPUT
+      value: category_id
+      title: category_id,category_id,
+      alt: category_id
+      style: 
+      hidden: false
+    key: false

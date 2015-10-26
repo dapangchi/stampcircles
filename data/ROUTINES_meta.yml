@@ -1,0 +1,525 @@
+---
+- 
+  SPECIFIC_NAME: 
+    name: 
+      name: SPECIFIC_NAME
+      type: varchar
+      null: NO
+      key: 
+      default: 
+      extra: 
+      max_length: 64
+      input: text_input
+      size: 80
+    human_name: Specific Name
+    before: 
+    after: 
+    rules: 
+    attributes: 
+      name: SPECIFIC_NAME
+      id: SPECIFIC_NAME
+      class: stdINPUT
+      value: SPECIFIC_NAME
+      title: SPECIFIC_NAME,SPECIFIC_NAME,
+      alt: SPECIFIC_NAME
+      style: 
+      hidden: false
+    key: false
+- 
+  ROUTINE_CATALOG: 
+    name: 
+      name: ROUTINE_CATALOG
+      type: varchar
+      null: YES
+      key: 
+      default: 
+      extra: 
+      max_length: 512
+      input: text_input
+      size: 80
+    human_name: Routine Catalog
+    before: 
+    after: 
+    rules: 
+    attributes: 
+      name: ROUTINE_CATALOG
+      id: ROUTINE_CATALOG
+      class: stdINPUT
+      value: ROUTINE_CATALOG
+      title: ROUTINE_CATALOG,ROUTINE_CATALOG,
+      alt: ROUTINE_CATALOG
+      style: 
+      hidden: false
+    key: false
+- 
+  ROUTINE_SCHEMA: 
+    name: 
+      name: ROUTINE_SCHEMA
+      type: varchar
+      null: NO
+      key: 
+      default: 
+      extra: 
+      max_length: 64
+      input: text_input
+      size: 80
+    human_name: Routine Schema
+    before: 
+    after: 
+    rules: 
+    attributes: 
+      name: ROUTINE_SCHEMA
+      id: ROUTINE_SCHEMA
+      class: stdINPUT
+      value: ROUTINE_SCHEMA
+      title: ROUTINE_SCHEMA,ROUTINE_SCHEMA,
+      alt: ROUTINE_SCHEMA
+      style: 
+      hidden: false
+    key: false
+- 
+  ROUTINE_NAME: 
+    name: 
+      name: ROUTINE_NAME
+      type: varchar
+      null: NO
+      key: 
+      default: 
+      extra: 
+      max_length: 64
+      input: text_input
+      size: 80
+    human_name: Routine Name
+    before: 
+    after: 
+    rules: 
+    attributes: 
+      name: ROUTINE_NAME
+      id: ROUTINE_NAME
+      class: stdINPUT
+      value: ROUTINE_NAME
+      title: ROUTINE_NAME,ROUTINE_NAME,
+      alt: ROUTINE_NAME
+      style: 
+      hidden: false
+    key: false
+- 
+  ROUTINE_TYPE: 
+    name: 
+      name: ROUTINE_TYPE
+      type: varchar
+      null: NO
+      key: 
+      default: 
+      extra: 
+      max_length: 9
+      input: text_input
+      size: 80
+    human_name: Routine Type
+    before: 
+    after: 
+    rules: 
+    attributes: 
+      name: ROUTINE_TYPE
+      id: ROUTINE_TYPE
+      class: stdINPUT
+      value: ROUTINE_TYPE
+      title: ROUTINE_TYPE,ROUTINE_TYPE,
+      alt: ROUTINE_TYPE
+      style: 
+      hidden: false
+    key: false
+- 
+  DTD_IDENTIFIER: 
+    name: 
+      name: DTD_IDENTIFIER
+      type: varchar
+      null: YES
+      key: 
+      default: 
+      extra: 
+      max_length: 64
+      input: text_input
+      size: 80
+    human_name: Dtd Identifier
+    before: 
+    after: 
+    rules: 
+    attributes: 
+      name: DTD_IDENTIFIER
+      id: DTD_IDENTIFIER
+      class: stdINPUT
+      value: DTD_IDENTIFIER
+      title: DTD_IDENTIFIER,DTD_IDENTIFIER,
+      alt: DTD_IDENTIFIER
+      style: 
+      hidden: false
+    key: false
+- 
+  ROUTINE_BODY: 
+    name: 
+      name: ROUTINE_BODY
+      type: varchar
+      null: NO
+      key: 
+      default: 
+      extra: 
+      max_length: 8
+      input: text_input
+      size: 80
+    human_name: Routine Body
+    before: 
+    after: 
+    rules: 
+    attributes: 
+      name: ROUTINE_BODY
+      id: ROUTINE_BODY
+      class: stdINPUT
+      value: ROUTINE_BODY
+      title: ROUTINE_BODY,ROUTINE_BODY,
+      alt: ROUTINE_BODY
+      style: 
+      hidden: false
+    key: false
+- 
+  ROUTINE_DEFINITION: 
+    name: 
+      name: ROUTINE_DEFINITION
+      type: longtext
+      null: YES
+      key: 
+      default: 
+      extra: 
+      input: textarea_input
+      cols: 80
+    human_name: Routine Definition
+    before: 
+    after: 
+    rules: 
+    attributes: 
+      name: ROUTINE_DEFINITION
+      id: ROUTINE_DEFINITION
+      class: stdINPUT
+      value: ROUTINE_DEFINITION
+      title: ROUTINE_DEFINITION,ROUTINE_DEFINITION,
+      alt: ROUTINE_DEFINITION
+      style: 
+      hidden: false
+    key: false
+- 
+  EXTERNAL_NAME: 
+    name: 
+      name: EXTERNAL_NAME
+      type: varchar
+      null: YES
+      key: 
+      default: 
+      extra: 
+      max_length: 64
+      input: text_input
+      size: 80
+    human_name: External Name
+    before: 
+    after: 
+    rules: 
+    attributes: 
+      name: EXTERNAL_NAME
+      id: EXTERNAL_NAME
+      class: stdINPUT
+      value: EXTERNAL_NAME
+      title: EXTERNAL_NAME,EXTERNAL_NAME,
+      alt: EXTERNAL_NAME
+      style: 
+      hidden: false
+    key: false
+- 
+  EXTERNAL_LANGUAGE: 
+    name: 
+      name: EXTERNAL_LANGUAGE
+      type: varchar
+      null: YES
+      key: 
+      default: 
+      extra: 
+      max_length: 64
+      input: text_input
+      size: 80
+    human_name: External Language
+    before: 
+    after: 
+    rules: 
+    attributes: 
+      name: EXTERNAL_LANGUAGE
+      id: EXTERNAL_LANGUAGE
+      class: stdINPUT
+      value: EXTERNAL_LANGUAGE
+      title: EXTERNAL_LANGUAGE,EXTERNAL_LANGUAGE,
+      alt: EXTERNAL_LANGUAGE
+      style: 
+      hidden: false
+    key: false
+- 
+  PARAMETER_STYLE: 
+    name: 
+      name: PARAMETER_STYLE
+      type: varchar
+      null: NO
+      key: 
+      default: 
+      extra: 
+      max_length: 8
+      input: text_input
+      size: 80
+    human_name: Parameter Style
+    before: 
+    after: 
+    rules: 
+    attributes: 
+      name: PARAMETER_STYLE
+      id: PARAMETER_STYLE
+      class: stdINPUT
+      value: PARAMETER_STYLE
+      title: PARAMETER_STYLE,PARAMETER_STYLE,
+      alt: PARAMETER_STYLE
+      style: 
+      hidden: false
+    key: false
+- 
+  IS_DETERMINISTIC: 
+    name: 
+      name: IS_DETERMINISTIC
+      type: varchar
+      null: NO
+      key: 
+      default: 
+      extra: 
+      max_length: 3
+      input: text_input
+      size: 80
+    human_name: Is Deterministic
+    before: 
+    after: 
+    rules: 
+    attributes: 
+      name: IS_DETERMINISTIC
+      id: IS_DETERMINISTIC
+      class: stdINPUT
+      value: IS_DETERMINISTIC
+      title: IS_DETERMINISTIC,IS_DETERMINISTIC,
+      alt: IS_DETERMINISTIC
+      style: 
+      hidden: false
+    key: false
+- 
+  SQL_DATA_ACCESS: 
+    name: 
+      name: SQL_DATA_ACCESS
+      type: varchar
+      null: NO
+      key: 
+      default: 
+      extra: 
+      max_length: 64
+      input: text_input
+      size: 80
+    human_name: Sql Data Access
+    before: 
+    after: 
+    rules: 
+    attributes: 
+      name: SQL_DATA_ACCESS
+      id: SQL_DATA_ACCESS
+      class: stdINPUT
+      value: SQL_DATA_ACCESS
+      title: SQL_DATA_ACCESS,SQL_DATA_ACCESS,
+      alt: SQL_DATA_ACCESS
+      style: 
+      hidden: false
+    key: false
+- 
+  SQL_PATH: 
+    name: 
+      name: SQL_PATH
+      type: varchar
+      null: YES
+      key: 
+      default: 
+      extra: 
+      max_length: 64
+      input: text_input
+      size: 80
+    human_name: Sql Path
+    before: 
+    after: 
+    rules: 
+    attributes: 
+      name: SQL_PATH
+      id: SQL_PATH
+      class: stdINPUT
+      value: SQL_PATH
+      title: SQL_PATH,SQL_PATH,
+      alt: SQL_PATH
+      style: 
+      hidden: false
+    key: false
+- 
+  SECURITY_TYPE: 
+    name: 
+      name: SECURITY_TYPE
+      type: varchar
+      null: NO
+      key: 
+      default: 
+      extra: 
+      max_length: 7
+      input: text_input
+      size: 80
+    human_name: Security Type
+    before: 
+    after: 
+    rules: 
+    attributes: 
+      name: SECURITY_TYPE
+      id: SECURITY_TYPE
+      class: stdINPUT
+      value: SECURITY_TYPE
+      title: SECURITY_TYPE,SECURITY_TYPE,
+      alt: SECURITY_TYPE
+      style: 
+      hidden: false
+    key: false
+- 
+  CREATED: 
+    name: 
+      name: CREATED
+      type: datetime
+      null: NO
+      key: 
+      default: 0000-00-00 00:00:00
+      extra: 
+      input: datepicker
+      size: 6
+      max_length: 32000
+      min_value: 0
+      max_value: 65535
+      length: required|min_length[%s]|max_length[%s]
+    human_name: Created
+    before: 
+    after: 
+    rules: 
+    attributes: 
+      name: CREATED
+      id: CREATED
+      class: stdINPUT
+      value: CREATED
+      title: CREATED,CREATED,
+      alt: CREATED
+      style: 
+      hidden: false
+    key: false
+- 
+  LAST_ALTERED: 
+    name: 
+      name: LAST_ALTERED
+      type: datetime
+      null: NO
+      key: 
+      default: 0000-00-00 00:00:00
+      extra: 
+      input: datepicker
+      size: 6
+      max_length: 32000
+      min_value: 0
+      max_value: 65535
+      length: required|min_length[%s]|max_length[%s]
+    human_name: Last Altered
+    before: 
+    after: 
+    rules: 
+    attributes: 
+      name: LAST_ALTERED
+      id: LAST_ALTERED
+      class: stdINPUT
+      value: LAST_ALTERED
+      title: LAST_ALTERED,LAST_ALTERED,
+      alt: LAST_ALTERED
+      style: 
+      hidden: false
+    key: false
+- 
+  SQL_MODE: 
+    name: 
+      name: SQL_MODE
+      type: longtext
+      null: NO
+      key: 
+      default: 
+      extra: 
+      input: textarea_input
+      cols: 80
+    human_name: Sql Mode
+    before: 
+    after: 
+    rules: 
+    attributes: 
+      name: SQL_MODE
+      id: SQL_MODE
+      class: stdINPUT
+      value: SQL_MODE
+      title: SQL_MODE,SQL_MODE,
+      alt: SQL_MODE
+      style: 
+      hidden: false
+    key: false
+- 
+  ROUTINE_COMMENT: 
+    name: 
+      name: ROUTINE_COMMENT
+      type: varchar
+      null: NO
+      key: 
+      default: 
+      extra: 
+      max_length: 64
+      input: text_input
+      size: 80
+    human_name: Routine Comment
+    before: 
+    after: 
+    rules: 
+    attributes: 
+      name: ROUTINE_COMMENT
+      id: ROUTINE_COMMENT
+      class: stdINPUT
+      value: ROUTINE_COMMENT
+      title: ROUTINE_COMMENT,ROUTINE_COMMENT,
+      alt: ROUTINE_COMMENT
+      style: 
+      hidden: false
+    key: false
+- 
+  DEFINER: 
+    name: 
+      name: DEFINER
+      type: varchar
+      null: NO
+      key: 
+      default: 
+      extra: 
+      max_length: 77
+      input: text_input
+      size: 80
+    human_name: Definer
+    before: 
+    after: 
+    rules: 
+    attributes: 
+      name: DEFINER
+      id: DEFINER
+      class: stdINPUT
+      value: DEFINER
+      title: DEFINER,DEFINER,
+      alt: DEFINER
+      style: 
+      hidden: false
+    key: false

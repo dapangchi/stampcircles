@@ -1,0 +1,68 @@
+---
+name: Tlist_example_04
+text: text
+taborder: taborder
+image_list: name
+items: 
+  - av_beginning.png
+  - av_end.png
+  - av_fast_forward.png
+  - av_pause.png
+  - av_play.png
+  - av_rewind.png
+  - back.png
+  - bookmark.png
+  - build.png
+  - bulb.png
+  - burn.png
+  - cd.png
+  - clock.png
+  - colors.png
+  - comment.png
+  - connect.png
+  - database.png
+  - delete.png
+  - document_delete.png
+  - document_new.png
+  - download.png
+  - drawer.png
+  - find.png
+  - flag.png
+  - folder.png
+  - forward.png
+  - help.png
+  - image.png
+  - info.png
+  - ipods.png
+  - ipod_black.png
+  - ipod_white.png
+  - journal.png
+  - mail.png
+  - news.png
+  - note_delete.png
+  - note_new.png
+  - print.png
+  - reload.png
+  - rulers.png
+  - save.png
+  - stop.png
+  - tools.png
+  - upload.png
+  - zoom_in.png
+  - zoom_out.png
+container: 
+  element: div
+  style: style
+wrapper: 
+  element: div
+  style: >
+    "width:50%;float:left;margin-right:15px"
+    class="bordered curvy clearfix shadowed"
+actions: 
+css: 
+  style: padding:0px;width:48%;float:left
+ajax: 
+template: 
+source: 
+  model: filesystem
+  method: test

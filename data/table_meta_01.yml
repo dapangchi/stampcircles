@@ -1,0 +1,115 @@
+---
+- 
+  id: 
+    name: 
+      name: id
+      type: int
+      null: NO
+      key: PRI
+      default: 
+      extra: 
+      max_length: 32000
+      input: int_input
+      size: 6
+      min_value: 0
+      max_value: 65535
+      length: required|min_length[%s]|max_length[%s]
+    human_name: Id
+    before: 
+    after: 
+    rules: 
+    attributes: 
+      name: id
+      id: id
+      class: stdINPUT
+      value: id
+      title: id,id,
+      alt: id
+      style: 
+      hidden: false
+    key: false
+- 
+  datetime: 
+    name: 
+      name: datetime
+      type: datetime
+      null: NO
+      key: 
+      default: 
+      extra: 
+      input: datepicker
+      size: 6
+      max_length: 32000
+      min_value: 0
+      max_value: 65535
+      length: required|min_length[%s]|max_length[%s]
+    human_name: Datetime
+    before: 
+    after: 
+    rules: 
+    attributes: 
+      name: datetime
+      id: datetime
+      class: stdINPUT
+      value: datetime
+      title: datetime,datetime,
+      alt: datetime
+      style: 
+      hidden: false
+    key: false
+- 
+  year: 
+    name: 
+      name: year
+      type: year
+      null: NO
+      key: 
+      default: 
+      extra: 
+      max_length: 32000
+      input: datepicker
+      size: 6
+      min_value: 0
+      max_value: 65535
+      length: required|min_length[%s]|max_length[%s]
+    human_name: Year
+    before: 
+    after: 
+    rules: 
+    attributes: 
+      name: year
+      id: year
+      class: stdINPUT
+      value: year
+      title: year,year,
+      alt: year
+      style: 
+      hidden: false
+    key: false
+- 
+  month: 
+    name: 
+      name: month
+      type: set
+      null: NO
+      key: 
+      default: 
+      extra: 
+      max_length: >
+        'January','February','March','April','May','June','July','August'
+      input: option_input
+      size: 80
+    human_name: Month
+    before: 
+    after: 
+    rules: 
+    attributes: 
+      name: month
+      id: month
+      class: stdINPUT
+      value: month
+      title: month,month,
+      alt: month
+      style: 
+      hidden: false
+    key: false

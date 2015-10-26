@@ -1,0 +1,108 @@
+---
+name: ilan-hamra
+caption: Fine Photography
+taborder: taborder
+image_list: 
+  - 01-01_HAMRA.jpg
+  - 01-08_HAMRA.jpg
+  - 01-09_HAMRA.jpg
+  - 01-10_HAMRA.jpg
+  - 02-05_HAMRA.jpg
+  - 02-06_HAMRA.jpg
+  - 02-07_HAMRA.jpg
+  - 02-08_HAMRA.jpg
+  - 02-09_HAMRA.jpg
+  - 03-01_HAMRA.jpg
+  - 03-02_HAMRA.jpg
+  - 03-03_HAMRA.jpg
+  - 03-04_HAMRA.jpg
+  - 03-05_HAMRA.jpg
+  - 03-06_HAMRA.jpg
+  - 03-07_HAMRA.jpg
+  - 03-08_HAMRA.jpg
+  - 03-09_HAMRA.jpg
+  - 05-01_HAMRA.jpg
+  - 05-02_HAMRA.jpg
+  - 05-03_HAMRA.jpg
+  - 05-04_HAMRA.jpg
+  - 05-05_HAMRA.jpg
+  - 05-07_HAMRA.jpg
+  - 05-08_HAMRA.jpg
+  - 05-10_HAMRA.jpg
+  - 05-11_HAMRA.jpg
+  - 05-12_HAMRA.jpg
+  - 05-13_HAMRA.jpg
+  - 08-02_HAMRA.jpg
+  - 08-03_HAMRA.jpg
+  - 08-04_HAMRA.jpg
+items: 
+  - 01-01_HAMRA.jpg
+  - 01-08_HAMRA.jpg
+  - 01-09_HAMRA.jpg
+  - 01-10_HAMRA.jpg
+  - 02-05_HAMRA.jpg
+  - 02-06_HAMRA.jpg
+  - 02-07_HAMRA.jpg
+  - 02-08_HAMRA.jpg
+  - 02-09_HAMRA.jpg
+  - 03-01_HAMRA.jpg
+  - 03-02_HAMRA.jpg
+  - 03-03_HAMRA.jpg
+  - 03-04_HAMRA.jpg
+  - 03-05_HAMRA.jpg
+  - 03-06_HAMRA.jpg
+  - 03-07_HAMRA.jpg
+  - 03-08_HAMRA.jpg
+  - 03-09_HAMRA.jpg
+  - 05-01_HAMRA.jpg
+  - 05-02_HAMRA.jpg
+  - 05-03_HAMRA.jpg
+  - 05-04_HAMRA.jpg
+  - 05-05_HAMRA.jpg
+  - 05-07_HAMRA.jpg
+  - 05-08_HAMRA.jpg
+  - 05-10_HAMRA.jpg
+  - 05-11_HAMRA.jpg
+  - 05-12_HAMRA.jpg
+  - 05-13_HAMRA.jpg
+  - 08-02_HAMRA.jpg
+  - 08-03_HAMRA.jpg
+  - 08-04_HAMRA.jpg
+container: 
+  element: div
+  style: style
+wrapper: 
+  element: div
+  style: |
+    "width:280px;float:left;
+    margin-right:15px" class="bordered curvy clearfix shadowed"
+actions: 
+css: 
+  style: width:100px
+ajax: 
+  behaviors: 
+    - sortable
+    - draggable
+    - resizable
+    - show
+    - hide
+view: 
+  name: view_tlist
+  data: data
+  cache: false
+model: 
+  model: filesystem
+  method: get_all
+  vars: 
+controllers: 
+  - create
+  - delete
+  - save
+  - sort
+help: cms/tlist_help.dat
+inspector: standard
+yalm: true
+db: true
+limit: 5
+image_path: ../egypt/ilan-hamra/
+basedir: http://localhost/egypt/ilan-hamra/

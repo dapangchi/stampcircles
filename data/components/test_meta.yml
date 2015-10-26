@@ -1,0 +1,276 @@
+---
+- 
+  int: 
+    name: 
+      name: int
+      type: int
+      null: NO
+      key: PRI
+      default: 
+      extra: auto_increment
+      max_length: 32000
+      input: int_input
+      size: 6
+      min_value: 0
+      max_value: 65535
+      length: required|min_length[%s]|max_length[%s]
+    human_name: Int
+    before: 
+    after: 
+    rules: 
+    attributes: 
+      name: int
+      id: int
+      class: stdINPUT
+      value: int
+      title: int,int,auto_increment
+      alt: int
+      style: 
+      hidden: false
+    key: 
+      name: int
+      auto_increment: true
+- 
+  varchar: 
+    name: 
+      name: varchar
+      type: varchar
+      null: NO
+      key: 
+      default: 
+      extra: 
+      max_length: 30
+      input: text_input
+      size: 80
+    human_name: Varchar
+    before: 
+    after: 
+    rules: 
+    attributes: 
+      name: varchar
+      id: varchar
+      class: stdINPUT
+      value: varchar
+      title: varchar,varchar,
+      alt: varchar
+      style: 
+      hidden: false
+    key: false
+- 
+  text: 
+    name: 
+      name: text
+      type: varchar
+      null: NO
+      key: 
+      default: 
+      extra: 
+      max_length: 400
+      input: text_input
+      size: 80
+    human_name: Text
+    before: 
+    after: 
+    rules: 
+    attributes: 
+      name: text
+      id: text
+      class: stdINPUT
+      value: text
+      title: text,text,
+      alt: text
+      style: 
+      hidden: false
+    key: false
+- 
+  blob_field: 
+    name: 
+      name: blob_field
+      type: blob
+      null: NO
+      key: 
+      default: 
+      extra: 
+      input: textarea_input
+      cols: 80
+    human_name: Blob Field
+    before: 
+    after: 
+    rules: 
+    attributes: 
+      name: blob_field
+      id: blob_field
+      class: stdINPUT
+      value: blob_field
+      title: blob_field,blob_field,
+      alt: blob_field
+      style: 
+      hidden: false
+    key: false
+- 
+  tiny_blob_field: 
+    name: 
+      name: tiny_blob_field
+      type: varchar
+      null: NO
+      key: 
+      default: 
+      extra: 
+      max_length: 20
+      input: text_input
+      size: 80
+    human_name: Tiny Blob Field
+    before: 
+    after: 
+    rules: 
+    attributes: 
+      name: tiny_blob_field
+      id: tiny_blob_field
+      class: stdINPUT
+      value: tiny_blob_field
+      title: tiny_blob_field,tiny_blob_field,
+      alt: tiny_blob_field
+      style: 
+      hidden: false
+    key: false
+- 
+  tinyint: 
+    name: 
+      name: tinyint
+      type: tinyint
+      null: NO
+      key: 
+      default: 
+      extra: 
+      max_length: 
+      input: int_input
+      size: 4
+      min_value: -127
+      max_value: 255
+      length: required|min_length[%s]|max_length[%s]
+    human_name: Tinyint
+    before: 
+    after: 
+    rules: 
+    attributes: 
+      name: tinyint
+      id: tinyint
+      class: stdINPUT
+      value: tinyint
+      title: tinyint,tinyint,
+      alt: tinyint
+      style: 
+      hidden: false
+    key: false
+- 
+  text1: 
+    name: 
+      name: text1
+      type: text
+      null: NO
+      key: 
+      default: 
+      extra: 
+      input: textarea_input
+      cols: 80
+    human_name: Text1
+    before: 
+    after: 
+    rules: 
+    attributes: 
+      name: text1
+      id: text1
+      class: stdINPUT
+      value: text1
+      title: text1,text1,
+      alt: text1
+      style: 
+      hidden: false
+    key: false
+- 
+  date: 
+    name: 
+      name: date
+      type: datetime
+      null: NO
+      key: 
+      default: 
+      extra: 
+      input: datepicker
+      size: 6
+      max_length: 32000
+      min_value: 0
+      max_value: 65535
+      length: required|min_length[%s]|max_length[%s]
+    human_name: Date
+    before: 
+    after: 
+    rules: 
+    attributes: 
+      name: date
+      id: date
+      class: stdINPUT
+      value: date
+      title: date,date,
+      alt: date
+      style: 
+      hidden: false
+    key: false
+- 
+  year: 
+    name: 
+      name: year
+      type: year
+      null: NO
+      key: 
+      default: 
+      extra: 
+      max_length: 32000
+      input: datepicker
+      size: 6
+      min_value: 0
+      max_value: 65535
+      length: required|min_length[%s]|max_length[%s]
+    human_name: Year
+    before: 
+    after: 
+    rules: 
+    attributes: 
+      name: year
+      id: year
+      class: stdINPUT
+      value: year
+      title: year,year,
+      alt: year
+      style: 
+      hidden: false
+    key: false
+- 
+  decimal: 
+    name: 
+      name: decimal
+      type: decimal
+      null: NO
+      key: 
+      default: 
+      extra: 
+      max_length: 32000
+      input: text_input
+      size: 6
+      min_value: 0
+      max_value: 65535
+      length: required|min_length[%s]|max_length[%s]
+    human_name: Decimal
+    before: 
+    after: 
+    rules: 
+    attributes: 
+      name: decimal
+      id: decimal
+      class: stdINPUT
+      value: decimal
+      title: decimal,decimal,
+      alt: decimal
+      style: 
+      hidden: false
+    key: false

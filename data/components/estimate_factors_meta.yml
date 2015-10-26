@@ -1,0 +1,107 @@
+---
+- 
+  est_id: 
+    name: 
+      name: est_id
+      type: smallint
+      null: NO
+      key: PRI
+      default: 
+      extra: auto_increment
+      max_length: 
+      input: int_input
+      size: 4
+      min_value: -32767
+      max_value: 65535
+      length: required|min_length[%s]|max_length[%s]
+    human_name: Est Id
+    before: 
+    after: 
+    rules: 
+    attributes: 
+      name: est_id
+      id: est_id
+      class: stdINPUT
+      value: est_id
+      title: est_id,est_id,auto_increment
+      alt: est_id
+      style: 
+      hidden: false
+    key: 
+      name: est_id
+      auto_increment: true
+- 
+  est_description: 
+    name: 
+      name: est_description
+      type: varchar
+      null: NO
+      key: 
+      default: 
+      extra: 
+      max_length: 120
+      input: text_input
+      size: 80
+    human_name: Est Description
+    before: 
+    after: 
+    rules: 
+    attributes: 
+      name: est_description
+      id: est_description
+      class: stdINPUT
+      value: est_description
+      title: est_description,est_description,
+      alt: est_description
+      style: 
+      hidden: false
+    key: false
+- 
+  est_factor: 
+    name: 
+      name: est_factor
+      type: double
+      null: NO
+      key: 
+      default: 
+      extra: 
+    human_name: Est Factor
+    before: 
+    after: 
+    rules: 
+    attributes: 
+      name: est_factor
+      id: est_factor
+      class: stdINPUT
+      value: est_factor
+      title: est_factor,est_factor,
+      alt: est_factor
+      style: 
+      hidden: false
+    key: false
+- 
+  est_group: 
+    name: 
+      name: est_group
+      type: varchar
+      null: NO
+      key: MUL
+      default: 
+      extra: 
+      max_length: 100
+      input: text_input
+      size: 80
+    human_name: Est Group
+    before: 
+    after: 
+    rules: 
+    attributes: 
+      name: est_group
+      id: est_group
+      class: stdINPUT
+      value: est_group
+      title: est_group,est_group,
+      alt: est_group
+      style: 
+      hidden: false
+    key: false

@@ -1,0 +1,138 @@
+---
+- 
+  option_id: 
+    name: 
+      name: option_id
+      type: bigint
+      null: NO
+      key: PRI
+      default: 
+      extra: auto_increment
+      max_length: 
+      input: int_input
+      size: 4
+      min_value: -32767
+      max_value: 65535
+      length: required|min_length[%s]|max_length[%s]
+    human_name: Option Id
+    before: 
+    after: 
+    rules: 
+    attributes: 
+      name: option_id
+      id: option_id
+      class: stdINPUT
+      value: option_id
+      title: option_id,option_id,auto_increment
+      alt: option_id
+      style: 
+      hidden: false
+    key: 
+      name: option_id
+      auto_increment: true
+- 
+  blog_id: 
+    name: 
+      name: blog_id
+      type: int
+      null: NO
+      key: PRI
+      default: 0
+      extra: 
+      max_length: 32000
+      input: int_input
+      size: 6
+      min_value: 0
+      max_value: 65535
+      length: required|min_length[%s]|max_length[%s]
+    human_name: Blog Id
+    before: 
+    after: 
+    rules: 
+    attributes: 
+      name: blog_id
+      id: blog_id
+      class: stdINPUT
+      value: blog_id
+      title: blog_id,blog_id,
+      alt: blog_id
+      style: 
+      hidden: false
+    key: false
+- 
+  option_name: 
+    name: 
+      name: option_name
+      type: varchar
+      null: NO
+      key: PRI
+      default: 
+      extra: 
+      max_length: 64
+      input: text_input
+      size: 80
+    human_name: Option Name
+    before: 
+    after: 
+    rules: 
+    attributes: 
+      name: option_name
+      id: option_name
+      class: stdINPUT
+      value: option_name
+      title: option_name,option_name,
+      alt: option_name
+      style: 
+      hidden: false
+    key: false
+- 
+  option_value: 
+    name: 
+      name: option_value
+      type: longtext
+      null: NO
+      key: 
+      default: 
+      extra: 
+      input: textarea_input
+      cols: 80
+    human_name: Option Value
+    before: 
+    after: 
+    rules: 
+    attributes: 
+      name: option_value
+      id: option_value
+      class: stdINPUT
+      value: option_value
+      title: option_value,option_value,
+      alt: option_value
+      style: 
+      hidden: false
+    key: false
+- 
+  autoload: 
+    name: 
+      name: autoload
+      type: varchar
+      null: NO
+      key: 
+      default: yes
+      extra: 
+      max_length: 20
+      input: text_input
+      size: 80
+    human_name: Autoload
+    before: 
+    after: 
+    rules: 
+    attributes: 
+      name: autoload
+      id: autoload
+      class: stdINPUT
+      value: autoload
+      title: autoload,autoload,
+      alt: autoload
+      style: 
+      hidden: false
+    key: false

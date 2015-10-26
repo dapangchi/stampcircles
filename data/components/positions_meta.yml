@@ -1,0 +1,84 @@
+---
+- 
+  position_id: 
+    name: 
+      name: position_id
+      type: int
+      null: NO
+      key: PRI
+      default: 
+      extra: auto_increment
+      max_length: 32000
+      input: int_input
+      size: 6
+      min_value: 0
+      max_value: 65535
+      length: required|min_length[%s]|max_length[%s]
+    human_name: Position Id
+    before: 
+    after: 
+    rules: 
+    attributes: 
+      name: position_id
+      id: position_id
+      class: stdINPUT
+      value: position_id
+      title: position_id,position_id,auto_increment
+      alt: position_id
+      style: 
+      hidden: false
+    key: 
+      name: position_id
+      auto_increment: true
+- 
+  position: 
+    name: 
+      name: position
+      type: varchar
+      null: NO
+      key: 
+      default: 
+      extra: 
+      max_length: 100
+      input: text_input
+      size: 80
+    human_name: Position
+    before: 
+    after: 
+    rules: 
+    attributes: 
+      name: position
+      id: position
+      class: stdINPUT
+      value: position
+      title: position,position,
+      alt: position
+      style: 
+      hidden: false
+    key: false
+- 
+  group: 
+    name: 
+      name: group
+      type: varchar
+      null: NO
+      key: MUL
+      default: 
+      extra: 
+      max_length: 100
+      input: text_input
+      size: 80
+    human_name: Group
+    before: 
+    after: 
+    rules: 
+    attributes: 
+      name: group
+      id: group
+      class: stdINPUT
+      value: group
+      title: group,group,
+      alt: group
+      style: 
+      hidden: false
+    key: false

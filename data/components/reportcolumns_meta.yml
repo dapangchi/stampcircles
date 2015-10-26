@@ -1,0 +1,386 @@
+---
+- 
+  reportid: 
+    name: 
+      name: reportid
+      type: smallint
+      null: NO
+      key: PRI
+      default: 0
+      extra: 
+      max_length: 
+      input: int_input
+      size: 4
+      min_value: -32767
+      max_value: 65535
+      length: required|min_length[%s]|max_length[%s]
+    human_name: Reportid
+    before: 
+    after: 
+    rules: 
+    attributes: 
+      name: reportid
+      id: reportid
+      class: stdINPUT
+      value: reportid
+      title: reportid,reportid,
+      alt: reportid
+      style: 
+      hidden: false
+    key: false
+- 
+  colno: 
+    name: 
+      name: colno
+      type: smallint
+      null: NO
+      key: PRI
+      default: 0
+      extra: 
+      max_length: 
+      input: int_input
+      size: 4
+      min_value: -32767
+      max_value: 65535
+      length: required|min_length[%s]|max_length[%s]
+    human_name: Colno
+    before: 
+    after: 
+    rules: 
+    attributes: 
+      name: colno
+      id: colno
+      class: stdINPUT
+      value: colno
+      title: colno,colno,
+      alt: colno
+      style: 
+      hidden: false
+    key: false
+- 
+  heading1: 
+    name: 
+      name: heading1
+      type: varchar
+      null: NO
+      key: 
+      default: 
+      extra: 
+      max_length: 15
+      input: text_input
+      size: 80
+    human_name: Heading1
+    before: 
+    after: 
+    rules: 
+    attributes: 
+      name: heading1
+      id: heading1
+      class: stdINPUT
+      value: heading1
+      title: heading1,heading1,
+      alt: heading1
+      style: 
+      hidden: false
+    key: false
+- 
+  heading2: 
+    name: 
+      name: heading2
+      type: varchar
+      null: YES
+      key: 
+      default: 
+      extra: 
+      max_length: 15
+      input: text_input
+      size: 80
+    human_name: Heading2
+    before: 
+    after: 
+    rules: 
+    attributes: 
+      name: heading2
+      id: heading2
+      class: stdINPUT
+      value: heading2
+      title: heading2,heading2,
+      alt: heading2
+      style: 
+      hidden: false
+    key: false
+- 
+  calculation: 
+    name: 
+      name: calculation
+      type: tinyint
+      null: NO
+      key: 
+      default: 0
+      extra: 
+      max_length: 
+      input: int_input
+      size: 4
+      min_value: -127
+      max_value: 255
+      length: required|min_length[%s]|max_length[%s]
+    human_name: Calculation
+    before: 
+    after: 
+    rules: 
+    attributes: 
+      name: calculation
+      id: calculation
+      class: stdINPUT
+      value: calculation
+      title: calculation,calculation,
+      alt: calculation
+      style: 
+      hidden: false
+    key: false
+- 
+  periodfrom: 
+    name: 
+      name: periodfrom
+      type: smallint
+      null: YES
+      key: 
+      default: 
+      extra: 
+      max_length: 
+      input: int_input
+      size: 4
+      min_value: -32767
+      max_value: 65535
+      length: required|min_length[%s]|max_length[%s]
+    human_name: Periodfrom
+    before: 
+    after: 
+    rules: 
+    attributes: 
+      name: periodfrom
+      id: periodfrom
+      class: stdINPUT
+      value: periodfrom
+      title: periodfrom,periodfrom,
+      alt: periodfrom
+      style: 
+      hidden: false
+    key: false
+- 
+  periodto: 
+    name: 
+      name: periodto
+      type: smallint
+      null: YES
+      key: 
+      default: 
+      extra: 
+      max_length: 
+      input: int_input
+      size: 4
+      min_value: -32767
+      max_value: 65535
+      length: required|min_length[%s]|max_length[%s]
+    human_name: Periodto
+    before: 
+    after: 
+    rules: 
+    attributes: 
+      name: periodto
+      id: periodto
+      class: stdINPUT
+      value: periodto
+      title: periodto,periodto,
+      alt: periodto
+      style: 
+      hidden: false
+    key: false
+- 
+  datatype: 
+    name: 
+      name: datatype
+      type: varchar
+      null: YES
+      key: 
+      default: 
+      extra: 
+      max_length: 15
+      input: text_input
+      size: 80
+    human_name: Datatype
+    before: 
+    after: 
+    rules: 
+    attributes: 
+      name: datatype
+      id: datatype
+      class: stdINPUT
+      value: datatype
+      title: datatype,datatype,
+      alt: datatype
+      style: 
+      hidden: false
+    key: false
+- 
+  colnumerator: 
+    name: 
+      name: colnumerator
+      type: tinyint
+      null: YES
+      key: 
+      default: 
+      extra: 
+      max_length: 
+      input: int_input
+      size: 4
+      min_value: -127
+      max_value: 255
+      length: required|min_length[%s]|max_length[%s]
+    human_name: Colnumerator
+    before: 
+    after: 
+    rules: 
+    attributes: 
+      name: colnumerator
+      id: colnumerator
+      class: stdINPUT
+      value: colnumerator
+      title: colnumerator,colnumerator,
+      alt: colnumerator
+      style: 
+      hidden: false
+    key: false
+- 
+  coldenominator: 
+    name: 
+      name: coldenominator
+      type: tinyint
+      null: YES
+      key: 
+      default: 
+      extra: 
+      max_length: 
+      input: int_input
+      size: 4
+      min_value: -127
+      max_value: 255
+      length: required|min_length[%s]|max_length[%s]
+    human_name: Coldenominator
+    before: 
+    after: 
+    rules: 
+    attributes: 
+      name: coldenominator
+      id: coldenominator
+      class: stdINPUT
+      value: coldenominator
+      title: coldenominator,coldenominator,
+      alt: coldenominator
+      style: 
+      hidden: false
+    key: false
+- 
+  calcoperator: 
+    name: 
+      name: calcoperator
+      type: char
+      null: YES
+      key: 
+      default: 
+      extra: 
+      max_length: 1
+      input: text_input
+      size: 40
+    human_name: Calcoperator
+    before: 
+    after: 
+    rules: 
+    attributes: 
+      name: calcoperator
+      id: calcoperator
+      class: stdINPUT
+      value: calcoperator
+      title: calcoperator,calcoperator,
+      alt: calcoperator
+      style: 
+      hidden: false
+    key: false
+- 
+  budgetoractual: 
+    name: 
+      name: budgetoractual
+      type: tinyint
+      null: NO
+      key: 
+      default: 0
+      extra: 
+      max_length: 
+      input: int_input
+      size: 4
+      min_value: -127
+      max_value: 255
+      length: required|min_length[%s]|max_length[%s]
+    human_name: Budgetoractual
+    before: 
+    after: 
+    rules: 
+    attributes: 
+      name: budgetoractual
+      id: budgetoractual
+      class: stdINPUT
+      value: budgetoractual
+      title: budgetoractual,budgetoractual,
+      alt: budgetoractual
+      style: 
+      hidden: false
+    key: false
+- 
+  valformat: 
+    name: 
+      name: valformat
+      type: char
+      null: NO
+      key: 
+      default: N
+      extra: 
+      max_length: 1
+      input: text_input
+      size: 40
+    human_name: Valformat
+    before: 
+    after: 
+    rules: 
+    attributes: 
+      name: valformat
+      id: valformat
+      class: stdINPUT
+      value: valformat
+      title: valformat,valformat,
+      alt: valformat
+      style: 
+      hidden: false
+    key: false
+- 
+  constant: 
+    name: 
+      name: constant
+      type: double
+      null: NO
+      key: 
+      default: 0
+      extra: 
+    human_name: Constant
+    before: 
+    after: 
+    rules: 
+    attributes: 
+      name: constant
+      id: constant
+      class: stdINPUT
+      value: constant
+      title: constant,constant,
+      alt: constant
+      style: 
+      hidden: false
+    key: false

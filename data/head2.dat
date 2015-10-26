@@ -1,0 +1,236 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"> 
+<head> 
+    <title>Stamps and Postal History:<?php echo $title;  ?></title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="Content-Language" content="mul" />
+
+    <link rel="Shortcut Icon" href="http://localhost/CodeIgniter/images/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" type="text/css" media="all" href="http://localhost/strings/code_files/userguide.css">
+<link rel="stylesheet" href="http://localhost/CodeIgniter/css/general.css" type="text/css" />
+
+    <link rel="stylesheet" href="http://localhost/CodeIgniter/css/typography.css" type="text/css" />
+    <link type="text/css" href="http://localhost/CodeIgniter/css/smoothness/jquery-ui-1.7.1.custom.css" rel="Stylesheet" />
+
+   
+    <script type="text/javascript" src="http://localhost/CodeIgniter/js/keyboard.js" charset="UTF-8"></script>
+    <link rel="stylesheet" type="text/css" href="http://localhost/CodeIgniter/css/keyboard.css">
+
+    <script type="text/javascript" src="http://localhost/strings/code_files/nav.js"></script>
+
+
+
+    <script type="text/javascript" src="http://localhost/strings/code_files/user_guide_menu.js"></script>
+
+    <script type="text/javascript" src="http://localhost/CodeIgniter/js/jquery-1.3.2.min.js"></script>
+
+    <script type="text/javascript" src="http://localhost/CodeIgniter/js/jquery-ui-1.7.1.custom.min.js"></script>
+    <script type="text/javascript" src="http://localhost/CodeIgniter/js/jquery.ajaxContent.js"></script>
+    <script type="text/javascript" src="http://localhost/CodeIgniter/js/jquery.form.js"></script>
+    <script type="text/javascript" src="http://localhost/CodeIgniter/js/ajax.js"></script>
+
+    <script type="text/javascript" src="http://localhost/CodeIgniter/js/jquery.innerfade.js"></script>
+<script type="text/javaScript" src="http://localhost/CodeIgniter/js/yl.js"></script>
+<script type="text/javaScript" src="http://localhost/CodeIgniter/chili/jquery.chili-2.2.js"></script>
+
+<script type="text/javascript">
+    ChiliBook.recipeFolder = "/CodeIgniter/chili/";
+</script>
+
+    
+
+    <link rel="stylesheet" href="http://localhost/CodeIgniter/css/screen.css" type="text/css" />
+    <link type="text/css" href="http://localhost/CodeIgniter/css/measures.css" rel="Stylesheet" />
+
+    <meta name="author" content="Y Lazarides" />
+    <meta name="copyright" content="Dr Y Lazarides" />
+    <meta name="robots" content="all" />
+    <meta name="imagetoolbar" content="no" />
+    <meta name="keywords" content="<?php //echo $keywords;    ?>" />
+    <meta name="description" content="An automatic website builder" />
+
+
+
+    
+
+    <script type="text/javascript">
+        function timedRefresh(timeoutPeriod) {
+            setTimeout("location.reload(true);",timeoutPeriod);
+        }
+        $(document).ready(function() {
+
+            //this is the only function that is used to toggle the top menu
+            //plenty others can be used like this
+            //essentially all the info boxes in order not
+            //to clutter pages
+            $('a#toc').click(function() {
+                $('#nav').toggle();
+                return false;
+            });
+
+            $('a#action').click(function() {
+                $('#img_cont').toggle();
+                return false;
+            });
+
+
+            var $a=$('img');
+            function test(){
+                $a.width('100px').height('100px');
+            }
+            $('a#panel').click(function() {
+                $('.details').toggle();
+                $('#close').width('70%').height('200px');
+                $a.width('50px').height('50px').fadeTo('slow','0.2').fadeTo('slow','1',test);
+                //if (a>2) $('.edit').width('190px')
+
+                return false;
+            });
+
+
+            $('a#toggle').click(function() {
+                $('#tools').toggle('slow');
+                return false;
+            });
+            $('#text-content, #imgContainer').dblclick(function() {
+                $('#tools').toggle('slow').timedRefresh(1000);
+                return false;
+            });
+
+            $('a#edit').click(function() {
+                $('#editable').toggle('faster');
+                return false;
+            });
+
+            $('a#button-toggle').click(function() {
+                $('#hide-show').toggle(500).animated('bounce');
+                return false;
+            });
+
+            $("a#ajax").click(function(){
+                // load about page on click
+                //no need to do anything else JUST /CodeIgniter and Controller
+                $("#ajax_content").load("/CodeIgniter/blogs/ajax_post/blog/introduction");
+                alert('test');
+                return false;
+            });
+
+
+
+            $(function() {
+                $("#resizable").resizable({
+                    handles: 'n, e, s, w, ne, se, sw, nw',
+                    helper: 'ui-state-highlight',
+                    ghost:'true',
+                    animateEasing: 'swing',
+                    animateDuration: 'slow'
+                });
+
+            });
+
+
+
+        });
+
+        $(function() {
+            $("#resizable2").resizable({
+                handles: 'n, e, s, w, ne, se, sw, nw',
+                helper: 'ui-state-highlight',
+                ghost:'true',
+                animateEasing: 'swing',
+                animateDuration: 'slow'
+            });
+        });
+        $(function() {
+            $("div.resizable").resizable({
+                handles: 'n, e, s, w, ne, se, sw, nw',
+                helper: 'ui-state-highlight',
+                ghost:'true',
+                animateEasing: 'swing',
+                animateDuration: 'slow'
+            });
+        });
+        $(function() {
+            $(".draggable").draggable({
+                cursor:'move',
+                //containment: 'parent',
+                zIndex: 2700
+
+            });
+        });
+
+        $(function(){
+            // start a counter for new row IDs
+            // by setting it to the number
+            // of existing rows
+            var newRowNum = 10;
+
+            // bind a click event to the "Add" link
+            $('#addnew').click(function(){
+                // increment the counter
+                newRowNum += 1;
+
+                // get the entire "Add" row --
+                // "this" refers to the clicked element
+                // and "parent" moves the selection up
+                // to the parent node in the DOM
+                var addRow = $(this).parent().parent();
+
+                // copy the entire row from the DOM
+                // with "clone"
+                var newRow = addRow.clone();
+
+                // set the values of the inputs
+                // in the "Add" row to empty strings
+                $('input', addRow).val('');
+
+                // replace the HTML for the "Add" link
+                // with the new row number
+                $('td:first-child', newRow).html(newRowNum);
+
+                // insert a remove link in the last cell
+                $('td:last-child', newRow).html('<a href="" class="remove">Remove<\/a>');
+
+                // loop through the inputs in the new row
+                // and update the ID and name attributes
+                $('input', newRow).each(function(i){
+                    var newID = newRowNum + '_' + i;
+                    $(this).attr('id',newID).attr('name',newID);
+                });
+
+                // insert the new row into the table
+                // "before" the Add row
+                addRow.before(newRow);
+
+                // add the remove function to the new row
+                $('a.remove', newRow).click(function(){
+                    $(this).parent().parent().remove();
+                    return false;
+                });
+
+                // prevent the default click
+                return false;
+            });
+
+
+        });
+
+        // shows x, y position of mouse
+        $().mousemove(function(e){
+            //display the x and y axis values inside the P element
+            $('.mouse').html("X Axis : " + e.pageX + " | Y Axis " + e.pageY);
+        });
+
+    </script>
+
+
+   <style type="text/css">
+       code, .code , code-block{white-space:pre;line-height:2;padding-left:0}
+
+   </style>
+
+</head> 
+
+
+
+
+

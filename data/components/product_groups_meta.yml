@@ -1,0 +1,112 @@
+---
+- 
+  product_group_id: 
+    name: 
+      name: product_group_id
+      type: int
+      null: NO
+      key: PRI
+      default: 
+      extra: auto_increment
+      max_length: 32000
+      input: int_input
+      size: 6
+      min_value: 0
+      max_value: 65535
+      length: required|min_length[%s]|max_length[%s]
+    human_name: Product Group Id
+    before: 
+    after: 
+    rules: 
+    attributes: 
+      name: product_group_id
+      id: product_group_id
+      class: stdINPUT
+      value: product_group_id
+      title: >
+        product_group_id,product_group_id,auto_increment
+      alt: product_group_id
+      style: 
+      hidden: false
+    key: 
+      name: product_group_id
+      auto_increment: true
+- 
+  product_group: 
+    name: 
+      name: product_group
+      type: varchar
+      null: NO
+      key: 
+      default: 
+      extra: 
+      max_length: 50
+      input: text_input
+      size: 80
+    human_name: Product Group
+    before: 
+    after: 
+    rules: 
+    attributes: 
+      name: product_group
+      id: product_group
+      class: stdINPUT
+      value: product_group
+      title: product_group,product_group,
+      alt: product_group
+      style: 
+      hidden: false
+    key: false
+- 
+  product_group_description: 
+    name: 
+      name: product_group_description
+      type: varchar
+      null: NO
+      key: 
+      default: 
+      extra: 
+      max_length: 200
+      input: text_input
+      size: 80
+    human_name: Product Group Description
+    before: 
+    after: 
+    rules: 
+    attributes: 
+      name: product_group_description
+      id: product_group_description
+      class: stdINPUT
+      value: product_group_description
+      title: >
+        product_group_description,product_group_description,
+      alt: product_group_description
+      style: 
+      hidden: false
+    key: false
+- 
+  product_group_page: 
+    name: 
+      name: product_group_page
+      type: varchar
+      null: NO
+      key: 
+      default: 
+      extra: 
+      max_length: 200
+      input: text_input
+      size: 80
+    human_name: Product Group Page
+    before: 
+    after: 
+    rules: 
+    attributes: 
+      name: product_group_page
+      id: product_group_page
+      class: stdINPUT
+      value: product_group_page
+      title: product_group_page,product_group_page,
+      alt: product_group_page
+      style: 
+      hidden: false
+    key: false

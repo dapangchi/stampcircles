@@ -1,0 +1,183 @@
+---
+- 
+  type: 
+    name: 
+      name: type
+      type: varchar
+      null: NO
+      key: PRI
+      default: 
+      extra: 
+      max_length: 25
+      input: text_input
+      size: 80
+    human_name: Type
+    before: 
+    after: 
+    rules: 
+    attributes: 
+      name: type
+      id: type
+      class: stdINPUT
+      value: type
+      title: type,type,
+      alt: type
+      style: 
+      hidden: false
+    key: false
+- 
+  name: 
+    name: 
+      name: name
+      type: varchar
+      null: NO
+      key: PRI
+      default: 
+      extra: 
+      max_length: 25
+      input: text_input
+      size: 80
+    human_name: Name
+    before: 
+    after: 
+    rules: 
+    attributes: 
+      name: name
+      id: name
+      class: stdINPUT
+      value: name
+      title: name,name,
+      alt: name
+      style: 
+      hidden: false
+    key: false
+- 
+  id: 
+    name: 
+      name: id
+      type: varchar
+      null: NO
+      key: 
+      default: 
+      extra: 
+      max_length: 25
+      input: text_input
+      size: 80
+    human_name: Id
+    before: 
+    after: 
+    rules: 
+    attributes: 
+      name: id
+      id: id
+      class: stdINPUT
+      value: id
+      title: id,id,
+      alt: id
+      style: 
+      hidden: false
+    key: false
+- 
+  class: 
+    name: 
+      name: class
+      type: varchar
+      null: NO
+      key: 
+      default: 
+      extra: 
+      max_length: 25
+      input: text_input
+      size: 80
+    human_name: Class
+    before: 
+    after: 
+    rules: 
+    attributes: 
+      name: class
+      id: class
+      class: stdINPUT
+      value: class
+      title: class,class,
+      alt: class
+      style: 
+      hidden: false
+    key: false
+- 
+  alt: 
+    name: 
+      name: alt
+      type: varchar
+      null: NO
+      key: 
+      default: 
+      extra: 
+      max_length: 120
+      input: text_input
+      size: 80
+    human_name: Alt
+    before: 
+    after: 
+    rules: 
+    attributes: 
+      name: alt
+      id: alt
+      class: stdINPUT
+      value: alt
+      title: alt,alt,
+      alt: alt
+      style: 
+      hidden: false
+    key: false
+- 
+  title: 
+    name: 
+      name: title
+      type: varchar
+      null: NO
+      key: 
+      default: 
+      extra: 
+      max_length: 120
+      input: text_input
+      size: 80
+    human_name: Title
+    before: 
+    after: 
+    rules: 
+    attributes: 
+      name: title
+      id: title
+      class: stdINPUT
+      value: title
+      title: title,title,
+      alt: title
+      style: 
+      hidden: false
+    key: false
+- 
+  style: 
+    name: 
+      name: style
+      type: varchar
+      null: NO
+      key: 
+      default: 
+      extra: 
+      max_length: 200
+      input: text_input
+      size: 80
+    human_name: Style
+    before: 
+    after: 
+    rules: 
+    attributes: 
+      name: style
+      id: style
+      class: stdINPUT
+      value: style
+      title: style,style,
+      alt: style
+      style: 
+      hidden: false
+    key: false

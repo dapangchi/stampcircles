@@ -1,0 +1,88 @@
+---
+- 
+  uid: 
+    name: 
+      name: uid
+      type: int
+      null: NO
+      key: PRI
+      default: 0
+      extra: 
+      max_length: 32000
+      input: int_input
+      size: 6
+      min_value: 0
+      max_value: 65535
+      length: required|min_length[%s]|max_length[%s]
+    human_name: Uid
+    before: 
+    after: 
+    rules: 
+    attributes: 
+      name: uid
+      id: uid
+      class: stdINPUT
+      value: uid
+      title: uid,uid,
+      alt: uid
+      style: 
+      hidden: false
+    key: false
+- 
+  nid: 
+    name: 
+      name: nid
+      type: int
+      null: NO
+      key: PRI
+      default: 0
+      extra: 
+      max_length: 32000
+      input: int_input
+      size: 6
+      min_value: 0
+      max_value: 65535
+      length: required|min_length[%s]|max_length[%s]
+    human_name: Nid
+    before: 
+    after: 
+    rules: 
+    attributes: 
+      name: nid
+      id: nid
+      class: stdINPUT
+      value: nid
+      title: nid,nid,
+      alt: nid
+      style: 
+      hidden: false
+    key: false
+- 
+  timestamp: 
+    name: 
+      name: timestamp
+      type: int
+      null: NO
+      key: 
+      default: 0
+      extra: 
+      max_length: 32000
+      input: int_input
+      size: 6
+      min_value: 0
+      max_value: 65535
+      length: required|min_length[%s]|max_length[%s]
+    human_name: Timestamp
+    before: 
+    after: 
+    rules: 
+    attributes: 
+      name: timestamp
+      id: timestamp
+      class: stdINPUT
+      value: timestamp
+      title: timestamp,timestamp,
+      alt: timestamp
+      style: 
+      hidden: false
+    key: false

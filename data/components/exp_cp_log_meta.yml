@@ -1,0 +1,197 @@
+---
+- 
+  id: 
+    name: 
+      name: id
+      type: int
+      null: NO
+      key: PRI
+      default: 
+      extra: auto_increment
+      max_length: 32000
+      input: int_input
+      size: 6
+      min_value: 0
+      max_value: 65535
+      length: required|min_length[%s]|max_length[%s]
+    human_name: Id
+    before: 
+    after: 
+    rules: 
+    attributes: 
+      name: id
+      id: id
+      class: stdINPUT
+      value: id
+      title: id,id,auto_increment
+      alt: id
+      style: 
+      hidden: false
+    key: 
+      name: id
+      auto_increment: true
+- 
+  site_id: 
+    name: 
+      name: site_id
+      type: int
+      null: NO
+      key: MUL
+      default: 1
+      extra: 
+      max_length: 32000
+      input: int_input
+      size: 6
+      min_value: 0
+      max_value: 65535
+      length: required|min_length[%s]|max_length[%s]
+    human_name: Site Id
+    before: 
+    after: 
+    rules: 
+    attributes: 
+      name: site_id
+      id: site_id
+      class: stdINPUT
+      value: site_id
+      title: site_id,site_id,
+      alt: site_id
+      style: 
+      hidden: false
+    key: false
+- 
+  member_id: 
+    name: 
+      name: member_id
+      type: int
+      null: NO
+      key: 
+      default: 
+      extra: 
+      max_length: 32000
+      input: int_input
+      size: 6
+      min_value: 0
+      max_value: 65535
+      length: required|min_length[%s]|max_length[%s]
+    human_name: Member Id
+    before: 
+    after: 
+    rules: 
+    attributes: 
+      name: member_id
+      id: member_id
+      class: stdINPUT
+      value: member_id
+      title: member_id,member_id,
+      alt: member_id
+      style: 
+      hidden: false
+    key: false
+- 
+  username: 
+    name: 
+      name: username
+      type: varchar
+      null: NO
+      key: 
+      default: 
+      extra: 
+      max_length: 32
+      input: text_input
+      size: 80
+    human_name: Username
+    before: 
+    after: 
+    rules: 
+    attributes: 
+      name: username
+      id: username
+      class: stdINPUT
+      value: username
+      title: username,username,
+      alt: username
+      style: 
+      hidden: false
+    key: false
+- 
+  ip_address: 
+    name: 
+      name: ip_address
+      type: varchar
+      null: NO
+      key: 
+      default: 0
+      extra: 
+      max_length: 16
+      input: text_input
+      size: 80
+    human_name: Ip Address
+    before: 
+    after: 
+    rules: 
+    attributes: 
+      name: ip_address
+      id: ip_address
+      class: stdINPUT
+      value: ip_address
+      title: ip_address,ip_address,
+      alt: ip_address
+      style: 
+      hidden: false
+    key: false
+- 
+  act_date: 
+    name: 
+      name: act_date
+      type: int
+      null: NO
+      key: 
+      default: 
+      extra: 
+      max_length: 32000
+      input: int_input
+      size: 6
+      min_value: 0
+      max_value: 65535
+      length: required|min_length[%s]|max_length[%s]
+    human_name: Act Date
+    before: 
+    after: 
+    rules: 
+    attributes: 
+      name: act_date
+      id: act_date
+      class: stdINPUT
+      value: act_date
+      title: act_date,act_date,
+      alt: act_date
+      style: 
+      hidden: false
+    key: false
+- 
+  action: 
+    name: 
+      name: action
+      type: varchar
+      null: NO
+      key: 
+      default: 
+      extra: 
+      max_length: 200
+      input: text_input
+      size: 80
+    human_name: Action
+    before: 
+    after: 
+    rules: 
+    attributes: 
+      name: action
+      id: action
+      class: stdINPUT
+      value: action
+      title: action,action,
+      alt: action
+      style: 
+      hidden: false
+    key: false

@@ -1,0 +1,113 @@
+---
+- 
+  captcha_id: 
+    name: 
+      name: captcha_id
+      type: bigint
+      null: NO
+      key: PRI
+      default: 
+      extra: auto_increment
+      max_length: 
+      input: int_input
+      size: 4
+      min_value: -32767
+      max_value: 65535
+      length: required|min_length[%s]|max_length[%s]
+    human_name: Captcha Id
+    before: 
+    after: 
+    rules: 
+    attributes: 
+      name: captcha_id
+      id: captcha_id
+      class: stdINPUT
+      value: captcha_id
+      title: captcha_id,captcha_id,auto_increment
+      alt: captcha_id
+      style: 
+      hidden: false
+    key: 
+      name: captcha_id
+      auto_increment: true
+- 
+  date: 
+    name: 
+      name: date
+      type: int
+      null: NO
+      key: 
+      default: 
+      extra: 
+      max_length: 32000
+      input: int_input
+      size: 6
+      min_value: 0
+      max_value: 65535
+      length: required|min_length[%s]|max_length[%s]
+    human_name: Date
+    before: 
+    after: 
+    rules: 
+    attributes: 
+      name: date
+      id: date
+      class: stdINPUT
+      value: date
+      title: date,date,
+      alt: date
+      style: 
+      hidden: false
+    key: false
+- 
+  ip_address: 
+    name: 
+      name: ip_address
+      type: varchar
+      null: NO
+      key: 
+      default: 0
+      extra: 
+      max_length: 16
+      input: text_input
+      size: 80
+    human_name: Ip Address
+    before: 
+    after: 
+    rules: 
+    attributes: 
+      name: ip_address
+      id: ip_address
+      class: stdINPUT
+      value: ip_address
+      title: ip_address,ip_address,
+      alt: ip_address
+      style: 
+      hidden: false
+    key: false
+- 
+  word: 
+    name: 
+      name: word
+      type: varchar
+      null: NO
+      key: MUL
+      default: 
+      extra: 
+      max_length: 20
+      input: text_input
+      size: 80
+    human_name: Word
+    before: 
+    after: 
+    rules: 
+    attributes: 
+      name: word
+      id: word
+      class: stdINPUT
+      value: word
+      title: word,word,
+      alt: word
+      style: 
+      hidden: false
+    key: false

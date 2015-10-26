@@ -1,0 +1,161 @@
+---
+- 
+  project_id: 
+    name: 
+      name: project_id
+      type: int
+      null: NO
+      key: PRI
+      default: 
+      extra: auto_increment
+      max_length: 32000
+      input: int_input
+      size: 6
+      min_value: 0
+      max_value: 65535
+      length: required|min_length[%s]|max_length[%s]
+    human_name: Project Id
+    before: 
+    after: 
+    rules: 
+    attributes: 
+      name: project_id
+      id: project_id
+      class: stdINPUT
+      value: project_id
+      title: project_id,project_id,auto_increment
+      alt: project_id
+      style: 
+      hidden: false
+    key: 
+      name: project_id
+      auto_increment: true
+- 
+  project_name: 
+    name: 
+      name: project_name
+      type: varchar
+      null: NO
+      key: 
+      default: 
+      extra: 
+      max_length: 120
+      input: text_input
+      size: 80
+    human_name: Project Name
+    before: 
+    after: 
+    rules: 
+    attributes: 
+      name: project_name
+      id: project_name
+      class: stdINPUT
+      value: project_name
+      title: project_name,project_name,
+      alt: project_name
+      style: 
+      hidden: false
+    key: false
+- 
+  project_number: 
+    name: 
+      name: project_number
+      type: varchar
+      null: NO
+      key: 
+      default: 
+      extra: 
+      max_length: 20
+      input: text_input
+      size: 80
+    human_name: Project Number
+    before: 
+    after: 
+    rules: 
+    attributes: 
+      name: project_number
+      id: project_number
+      class: stdINPUT
+      value: project_number
+      title: project_number,project_number,
+      alt: project_number
+      style: 
+      hidden: false
+    key: false
+- 
+  project_city: 
+    name: 
+      name: project_city
+      type: varchar
+      null: NO
+      key: 
+      default: 
+      extra: 
+      max_length: 20
+      input: text_input
+      size: 80
+    human_name: Project City
+    before: 
+    after: 
+    rules: 
+    attributes: 
+      name: project_city
+      id: project_city
+      class: stdINPUT
+      value: project_city
+      title: project_city,project_city,
+      alt: project_city
+      style: 
+      hidden: false
+    key: false
+- 
+  project_country: 
+    name: 
+      name: project_country
+      type: varchar
+      null: NO
+      key: 
+      default: 
+      extra: 
+      max_length: 20
+      input: text_input
+      size: 80
+    human_name: Project Country
+    before: 
+    after: 
+    rules: 
+    attributes: 
+      name: project_country
+      id: project_country
+      class: stdINPUT
+      value: project_country
+      title: project_country,project_country,
+      alt: project_country
+      style: 
+      hidden: false
+    key: false
+- 
+  project_address: 
+    name: 
+      name: project_address
+      type: longtext
+      null: NO
+      key: 
+      default: 
+      extra: 
+      input: textarea_input
+      cols: 80
+    human_name: Project Address
+    before: 
+    after: 
+    rules: 
+    attributes: 
+      name: project_address
+      id: project_address
+      class: stdINPUT
+      value: project_address
+      title: project_address,project_address,
+      alt: project_address
+      style: 
+      hidden: false
+    key: false

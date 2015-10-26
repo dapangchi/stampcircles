@@ -1,0 +1,292 @@
+---
+- 
+  doc_id: 
+    name: 
+      name: doc_id
+      type: int
+      null: NO
+      key: PRI
+      default: 
+      extra: auto_increment
+      max_length: 32000
+      input: int_input
+      size: 6
+      min_value: 0
+      max_value: 65535
+      length: required|min_length[%s]|max_length[%s]
+    human_name: Doc Id
+    before: 
+    after: 
+    rules: 
+    attributes: 
+      name: doc_id
+      id: doc_id
+      class: stdINPUT
+      value: doc_id
+      title: doc_id,doc_id,auto_increment
+      alt: doc_id
+      style: 
+      hidden: false
+    key: 
+      name: doc_id
+      auto_increment: true
+- 
+  doc_type: 
+    name: 
+      name: doc_type
+      type: varchar
+      null: NO
+      key: 
+      default: 
+      extra: 
+      max_length: 40
+      input: text_input
+      size: 80
+    human_name: Doc Type
+    before: 
+    after: 
+    rules: 
+    attributes: 
+      name: doc_type
+      id: doc_type
+      class: stdINPUT
+      value: doc_type
+      title: doc_type,doc_type,
+      alt: doc_type
+      style: 
+      hidden: false
+    key: false
+- 
+  doc_description: 
+    name: 
+      name: doc_description
+      type: varchar
+      null: NO
+      key: 
+      default: 
+      extra: 
+      max_length: 250
+      input: text_input
+      size: 80
+    human_name: Doc Description
+    before: 
+    after: 
+    rules: 
+    attributes: 
+      name: doc_description
+      id: doc_description
+      class: stdINPUT
+      value: doc_description
+      title: doc_description,doc_description,
+      alt: doc_description
+      style: 
+      hidden: false
+    key: false
+- 
+  doc_from: 
+    name: 
+      name: doc_from
+      type: varchar
+      null: NO
+      key: 
+      default: 
+      extra: 
+      max_length: 250
+      input: text_input
+      size: 80
+    human_name: Doc From
+    before: 
+    after: 
+    rules: 
+    attributes: 
+      name: doc_from
+      id: doc_from
+      class: stdINPUT
+      value: doc_from
+      title: doc_from,doc_from,
+      alt: doc_from
+      style: 
+      hidden: false
+    key: false
+- 
+  doc_to: 
+    name: 
+      name: doc_to
+      type: varchar
+      null: NO
+      key: 
+      default: 
+      extra: 
+      max_length: 250
+      input: text_input
+      size: 80
+    human_name: Doc To
+    before: 
+    after: 
+    rules: 
+    attributes: 
+      name: doc_to
+      id: doc_to
+      class: stdINPUT
+      value: doc_to
+      title: doc_to,doc_to,
+      alt: doc_to
+      style: 
+      hidden: false
+    key: false
+- 
+  doc_date: 
+    name: 
+      name: doc_date
+      type: varchar
+      null: NO
+      key: 
+      default: 
+      extra: 
+      max_length: 50
+      input: text_input
+      size: 80
+    human_name: Doc Date
+    before: 
+    after: 
+    rules: 
+    attributes: 
+      name: doc_date
+      id: doc_date
+      class: stdINPUT
+      value: doc_date
+      title: doc_date,doc_date,
+      alt: doc_date
+      style: 
+      hidden: false
+    key: false
+- 
+  doc_ref: 
+    name: 
+      name: doc_ref
+      type: varchar
+      null: NO
+      key: 
+      default: 
+      extra: 
+      max_length: 250
+      input: text_input
+      size: 80
+    human_name: Doc Ref
+    before: 
+    after: 
+    rules: 
+    attributes: 
+      name: doc_ref
+      id: doc_ref
+      class: stdINPUT
+      value: doc_ref
+      title: doc_ref,doc_ref,
+      alt: doc_ref
+      style: 
+      hidden: false
+    key: false
+- 
+  doc_location: 
+    name: 
+      name: doc_location
+      type: varchar
+      null: NO
+      key: 
+      default: 
+      extra: 
+      max_length: 250
+      input: text_input
+      size: 80
+    human_name: Doc Location
+    before: 
+    after: 
+    rules: 
+    attributes: 
+      name: doc_location
+      id: doc_location
+      class: stdINPUT
+      value: doc_location
+      title: doc_location,doc_location,
+      alt: doc_location
+      style: 
+      hidden: false
+    key: false
+- 
+  doc_category: 
+    name: 
+      name: doc_category
+      type: varchar
+      null: NO
+      key: 
+      default: 
+      extra: 
+      max_length: 50
+      input: text_input
+      size: 80
+    human_name: Doc Category
+    before: 
+    after: 
+    rules: 
+    attributes: 
+      name: doc_category
+      id: doc_category
+      class: stdINPUT
+      value: doc_category
+      title: doc_category,doc_category,
+      alt: doc_category
+      style: 
+      hidden: false
+    key: false
+- 
+  doc_author: 
+    name: 
+      name: doc_author
+      type: varchar
+      null: NO
+      key: 
+      default: 
+      extra: 
+      max_length: 50
+      input: text_input
+      size: 80
+    human_name: Doc Author
+    before: 
+    after: 
+    rules: 
+    attributes: 
+      name: doc_author
+      id: doc_author
+      class: stdINPUT
+      value: doc_author
+      title: doc_author,doc_author,
+      alt: doc_author
+      style: 
+      hidden: false
+    key: false
+- 
+  doc_dist_list: 
+    name: 
+      name: doc_dist_list
+      type: varchar
+      null: NO
+      key: 
+      default: 
+      extra: 
+      max_length: 50
+      input: text_input
+      size: 80
+    human_name: Doc Dist List
+    before: 
+    after: 
+    rules: 
+    attributes: 
+      name: doc_dist_list
+      id: doc_dist_list
+      class: stdINPUT
+      value: doc_dist_list
+      title: doc_dist_list,doc_dist_list,
+      alt: doc_dist_list
+      style: 
+      hidden: false
+    key: false

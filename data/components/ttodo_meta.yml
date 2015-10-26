@@ -1,0 +1,82 @@
+---
+- 
+  itemID: 
+    name: 
+      name: itemID
+      type: int
+      null: NO
+      key: PRI
+      default: 
+      extra: 
+      max_length: 32000
+      input: int_input
+      size: 6
+      min_value: 0
+      max_value: 65535
+      length: required|min_length[%s]|max_length[%s]
+    human_name: Itemid
+    before: 
+    after: 
+    rules: 
+    attributes: 
+      name: itemID
+      id: itemID
+      class: stdINPUT
+      value: itemID
+      title: itemID,itemID,
+      alt: itemID
+      style: 
+      hidden: false
+    key: false
+- 
+  itemDesc: 
+    name: 
+      name: itemDesc
+      type: varchar
+      null: NO
+      key: 
+      default: 
+      extra: 
+      max_length: 50
+      input: text_input
+      size: 80
+    human_name: Itemdesc
+    before: 
+    after: 
+    rules: 
+    attributes: 
+      name: itemDesc
+      id: itemDesc
+      class: stdINPUT
+      value: itemDesc
+      title: itemDesc,itemDesc,
+      alt: itemDesc
+      style: 
+      hidden: false
+    key: false
+- 
+  itemDate: 
+    name: 
+      name: itemDate
+      type: varchar
+      null: NO
+      key: 
+      default: 
+      extra: 
+      max_length: 12
+      input: text_input
+      size: 80
+    human_name: Itemdate
+    before: 
+    after: 
+    rules: 
+    attributes: 
+      name: itemDate
+      id: itemDate
+      class: stdINPUT
+      value: itemDate
+      title: itemDate,itemDate,
+      alt: itemDate
+      style: 
+      hidden: false
+    key: false

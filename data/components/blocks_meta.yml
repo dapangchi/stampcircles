@@ -1,0 +1,361 @@
+---
+- 
+  bid: 
+    name: 
+      name: bid
+      type: int
+      null: NO
+      key: PRI
+      default: 
+      extra: auto_increment
+      max_length: 32000
+      input: int_input
+      size: 6
+      min_value: 0
+      max_value: 65535
+      length: required|min_length[%s]|max_length[%s]
+    human_name: Bid
+    before: 
+    after: 
+    rules: 
+    attributes: 
+      name: bid
+      id: bid
+      class: stdINPUT
+      value: bid
+      title: bid,bid,auto_increment
+      alt: bid
+      style: 
+      hidden: false
+    key: 
+      name: bid
+      auto_increment: true
+- 
+  module: 
+    name: 
+      name: module
+      type: varchar
+      null: NO
+      key: 
+      default: 
+      extra: 
+      max_length: 64
+      input: text_input
+      size: 80
+    human_name: Module
+    before: 
+    after: 
+    rules: 
+    attributes: 
+      name: module
+      id: module
+      class: stdINPUT
+      value: module
+      title: module,module,
+      alt: module
+      style: 
+      hidden: false
+    key: false
+- 
+  delta: 
+    name: 
+      name: delta
+      type: varchar
+      null: NO
+      key: 
+      default: 0
+      extra: 
+      max_length: 32
+      input: text_input
+      size: 80
+    human_name: Delta
+    before: 
+    after: 
+    rules: 
+    attributes: 
+      name: delta
+      id: delta
+      class: stdINPUT
+      value: delta
+      title: delta,delta,
+      alt: delta
+      style: 
+      hidden: false
+    key: false
+- 
+  theme: 
+    name: 
+      name: theme
+      type: varchar
+      null: NO
+      key: MUL
+      default: 
+      extra: 
+      max_length: 64
+      input: text_input
+      size: 80
+    human_name: Theme
+    before: 
+    after: 
+    rules: 
+    attributes: 
+      name: theme
+      id: theme
+      class: stdINPUT
+      value: theme
+      title: theme,theme,
+      alt: theme
+      style: 
+      hidden: false
+    key: false
+- 
+  status: 
+    name: 
+      name: status
+      type: tinyint
+      null: NO
+      key: 
+      default: 0
+      extra: 
+      max_length: 
+      input: int_input
+      size: 4
+      min_value: -127
+      max_value: 255
+      length: required|min_length[%s]|max_length[%s]
+    human_name: Status
+    before: 
+    after: 
+    rules: 
+    attributes: 
+      name: status
+      id: status
+      class: stdINPUT
+      value: status
+      title: status,status,
+      alt: status
+      style: 
+      hidden: false
+    key: false
+- 
+  weight: 
+    name: 
+      name: weight
+      type: tinyint
+      null: NO
+      key: 
+      default: 0
+      extra: 
+      max_length: 
+      input: int_input
+      size: 4
+      min_value: -127
+      max_value: 255
+      length: required|min_length[%s]|max_length[%s]
+    human_name: Weight
+    before: 
+    after: 
+    rules: 
+    attributes: 
+      name: weight
+      id: weight
+      class: stdINPUT
+      value: weight
+      title: weight,weight,
+      alt: weight
+      style: 
+      hidden: false
+    key: false
+- 
+  region: 
+    name: 
+      name: region
+      type: varchar
+      null: NO
+      key: 
+      default: 
+      extra: 
+      max_length: 64
+      input: text_input
+      size: 80
+    human_name: Region
+    before: 
+    after: 
+    rules: 
+    attributes: 
+      name: region
+      id: region
+      class: stdINPUT
+      value: region
+      title: region,region,
+      alt: region
+      style: 
+      hidden: false
+    key: false
+- 
+  custom: 
+    name: 
+      name: custom
+      type: tinyint
+      null: NO
+      key: 
+      default: 0
+      extra: 
+      max_length: 
+      input: int_input
+      size: 4
+      min_value: -127
+      max_value: 255
+      length: required|min_length[%s]|max_length[%s]
+    human_name: Custom
+    before: 
+    after: 
+    rules: 
+    attributes: 
+      name: custom
+      id: custom
+      class: stdINPUT
+      value: custom
+      title: custom,custom,
+      alt: custom
+      style: 
+      hidden: false
+    key: false
+- 
+  throttle: 
+    name: 
+      name: throttle
+      type: tinyint
+      null: NO
+      key: 
+      default: 0
+      extra: 
+      max_length: 
+      input: int_input
+      size: 4
+      min_value: -127
+      max_value: 255
+      length: required|min_length[%s]|max_length[%s]
+    human_name: Throttle
+    before: 
+    after: 
+    rules: 
+    attributes: 
+      name: throttle
+      id: throttle
+      class: stdINPUT
+      value: throttle
+      title: throttle,throttle,
+      alt: throttle
+      style: 
+      hidden: false
+    key: false
+- 
+  visibility: 
+    name: 
+      name: visibility
+      type: tinyint
+      null: NO
+      key: 
+      default: 0
+      extra: 
+      max_length: 
+      input: int_input
+      size: 4
+      min_value: -127
+      max_value: 255
+      length: required|min_length[%s]|max_length[%s]
+    human_name: Visibility
+    before: 
+    after: 
+    rules: 
+    attributes: 
+      name: visibility
+      id: visibility
+      class: stdINPUT
+      value: visibility
+      title: visibility,visibility,
+      alt: visibility
+      style: 
+      hidden: false
+    key: false
+- 
+  pages: 
+    name: 
+      name: pages
+      type: text
+      null: NO
+      key: 
+      default: 
+      extra: 
+      input: textarea_input
+      cols: 80
+    human_name: Pages
+    before: 
+    after: 
+    rules: 
+    attributes: 
+      name: pages
+      id: pages
+      class: stdINPUT
+      value: pages
+      title: pages,pages,
+      alt: pages
+      style: 
+      hidden: false
+    key: false
+- 
+  title: 
+    name: 
+      name: title
+      type: varchar
+      null: NO
+      key: 
+      default: 
+      extra: 
+      max_length: 64
+      input: text_input
+      size: 80
+    human_name: Title
+    before: 
+    after: 
+    rules: 
+    attributes: 
+      name: title
+      id: title
+      class: stdINPUT
+      value: title
+      title: title,title,
+      alt: title
+      style: 
+      hidden: false
+    key: false
+- 
+  cache: 
+    name: 
+      name: cache
+      type: tinyint
+      null: NO
+      key: 
+      default: 1
+      extra: 
+      max_length: 
+      input: int_input
+      size: 4
+      min_value: -127
+      max_value: 255
+      length: required|min_length[%s]|max_length[%s]
+    human_name: Cache
+    before: 
+    after: 
+    rules: 
+    attributes: 
+      name: cache
+      id: cache
+      class: stdINPUT
+      value: cache
+      title: cache,cache,
+      alt: cache
+      style: 
+      hidden: false
+    key: false

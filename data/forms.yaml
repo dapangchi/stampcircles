@@ -1,0 +1,207 @@
+#
+#    YAML Examples
+#    Parsing with Spyc
+#   
+#
+#   author: [chris wanstrath, chris@ozmm.org]
+#   websites: [http://www.yaml.org, http://spyc.sourceforge.net/]
+#   license: [MIT License, http://www.opensource.org/licenses/mit-license.php]
+#   copyright: (c) 2005-2006 Chris Wanstrath
+#
+# yaml_example_01.yaml - A file containing a basic example in YAML that Spyc understands.
+
+
+
+
+#checkbox
+form:
+ properties:
+  name: myform
+  enctype: multi
+  action: action.php
+ #schema 
+ datasource: 
+  type: dts
+  table: image8
+  fields:
+    image_id:
+     type:INT
+     constraint:5
+     auto_increment:TRUE
+    description:
+     type:VARCHAR(200)
+     default: Enter an Image description here 
+    image:
+     type:VARCHAR
+     constraint:100
+     default: Queen of Town  
+    caption:
+     type:VARCHAR
+     constraint:100
+     default: Queen of Town
+    credit:  
+     type:VARCHAR
+     constraint:100
+     default: Queen of Town 
+    mime_type:
+     type:ENUM ("small","medium","large")
+     default:small
+    img_timestamp:
+     type:CHAR
+     constraint:14
+    img_user:
+     type:INT
+     constraint:5  
+  db: wordpress
+ fieldset1:
+  type:fieldset 
+  input1: 
+    name: image
+    type: text
+    value: A name
+    class: STDInput
+    before: User
+    after : *
+    id: input1
+    field:
+       name: user
+       field-type:VARCHAR
+       constraint:100
+       default:King of Town
+  input2: 
+    name: input2
+    type: text
+    value: user@example.com
+    class: input2
+    id: input1
+    before:email 
+    after: * 
+    field:
+       name: email
+       field-type:VARCHAR
+       constraint:100
+       default: user@example.com
+  input3: 
+    name: input3
+    type: text
+    value: input3
+    class: input3
+    id: input1 
+    before:website
+    after: (optional)
+  checkbox1:
+    type: checkbox
+    name:vote
+    tabindex:auto
+    checked: "checked"
+    class:fancy
+    id:fancy
+    head: This is a lot of text right on top     
+    footer: Some footnote help
+    before: text before fieldset
+    after: text after
+    style:
+    value: 
+    onclick: alert('You clicked me!');
+  checkbox2:
+    type:checkbox
+    name:vote
+    tabindex:auto
+    class:fancy
+    head: This is a lot of text right on top     
+    footer: Some footnote help
+    before: text before fieldset
+    after: text after
+    value: 
+    id: 
+  radio1:
+    type: radio
+    name: vote
+    tabindex:auto
+    checked: "checked"
+    class: fancy-checkbox
+    id: fancy-checkbox
+    columns:3
+    rows: equal
+    head: This is a lot of text right on top     
+    footer: Some footnote help
+    before: text before fieldset
+    after: text after
+  radio2:
+    type:radio
+    name:vote
+    tabindex:auto
+    class:fancy-checkbox
+    columns:3
+    rows:equal
+    head: This is a lot of text right on top     
+    footer: Some footnote help
+    before: text before fieldset
+    after: text after
+    id: fancy-radio
+  select:
+    type:select
+    multiple:multiple
+    name:country
+    file: ../CodeIgniter/data/country.yaml
+    tabindex:auto
+    class:select
+    size:7
+    id:select
+    caption:Select a Country
+    before:
+    after:
+    onclick: 
+    style: width:99%;
+  month:
+    type:month;
+    tag:select;
+    default:August
+    class:test
+    parent-tag:div
+    parent-class:month-div;
+    parent-id:month-id
+  textarea3:
+    type:textarea
+    name:textarea2
+    value:This is a test 
+    text: text area text
+    id:msgpost
+    ondblclick:alert('you double clicked!')
+    rows:30
+    cols:50
+  button1:
+    type:submit      #submit
+    name:submit
+    value:submit 
+  button2:
+    type:reset      #submit
+    name:reset
+    value:reset  
+  button3:
+    type:button      #submit
+    name:reset2
+    value:reset 
+    img: " <img src="/CodeIgniter/images/blue_check.png" alt="oops" /> "
+    style: width:100px;height:100px;
+  tabs:
+    type: tabs
+    tab1:
+       name:TAB 1
+       content: This is the first TAB
+    tab3:
+       name:TAB 2
+       content: This is the second TAB
+    tab3:
+       name:TAB 3
+       content: This is the third TAB
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 

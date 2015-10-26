@@ -1,0 +1,220 @@
+---
+- 
+  ref_id: 
+    name: 
+      name: ref_id
+      type: int
+      null: NO
+      key: PRI
+      default: 
+      extra: auto_increment
+      max_length: 32000
+      input: int_input
+      size: 6
+      min_value: 0
+      max_value: 65535
+      length: required|min_length[%s]|max_length[%s]
+    human_name: Ref Id
+    before: 
+    after: 
+    rules: 
+    attributes: 
+      name: ref_id
+      id: ref_id
+      class: stdINPUT
+      value: ref_id
+      title: ref_id,ref_id,auto_increment
+      alt: ref_id
+      style: 
+      hidden: false
+    key: 
+      name: ref_id
+      auto_increment: true
+- 
+  site_id: 
+    name: 
+      name: site_id
+      type: int
+      null: NO
+      key: MUL
+      default: 1
+      extra: 
+      max_length: 32000
+      input: int_input
+      size: 6
+      min_value: 0
+      max_value: 65535
+      length: required|min_length[%s]|max_length[%s]
+    human_name: Site Id
+    before: 
+    after: 
+    rules: 
+    attributes: 
+      name: site_id
+      id: site_id
+      class: stdINPUT
+      value: site_id
+      title: site_id,site_id,
+      alt: site_id
+      style: 
+      hidden: false
+    key: false
+- 
+  ref_from: 
+    name: 
+      name: ref_from
+      type: varchar
+      null: NO
+      key: 
+      default: 
+      extra: 
+      max_length: 120
+      input: text_input
+      size: 80
+    human_name: Ref From
+    before: 
+    after: 
+    rules: 
+    attributes: 
+      name: ref_from
+      id: ref_from
+      class: stdINPUT
+      value: ref_from
+      title: ref_from,ref_from,
+      alt: ref_from
+      style: 
+      hidden: false
+    key: false
+- 
+  ref_to: 
+    name: 
+      name: ref_to
+      type: varchar
+      null: NO
+      key: 
+      default: 
+      extra: 
+      max_length: 120
+      input: text_input
+      size: 80
+    human_name: Ref To
+    before: 
+    after: 
+    rules: 
+    attributes: 
+      name: ref_to
+      id: ref_to
+      class: stdINPUT
+      value: ref_to
+      title: ref_to,ref_to,
+      alt: ref_to
+      style: 
+      hidden: false
+    key: false
+- 
+  ref_ip: 
+    name: 
+      name: ref_ip
+      type: varchar
+      null: NO
+      key: 
+      default: 0
+      extra: 
+      max_length: 16
+      input: text_input
+      size: 80
+    human_name: Ref Ip
+    before: 
+    after: 
+    rules: 
+    attributes: 
+      name: ref_ip
+      id: ref_ip
+      class: stdINPUT
+      value: ref_ip
+      title: ref_ip,ref_ip,
+      alt: ref_ip
+      style: 
+      hidden: false
+    key: false
+- 
+  ref_date: 
+    name: 
+      name: ref_date
+      type: int
+      null: NO
+      key: 
+      default: 0
+      extra: 
+      max_length: 32000
+      input: int_input
+      size: 6
+      min_value: 0
+      max_value: 65535
+      length: required|min_length[%s]|max_length[%s]
+    human_name: Ref Date
+    before: 
+    after: 
+    rules: 
+    attributes: 
+      name: ref_date
+      id: ref_date
+      class: stdINPUT
+      value: ref_date
+      title: ref_date,ref_date,
+      alt: ref_date
+      style: 
+      hidden: false
+    key: false
+- 
+  ref_agent: 
+    name: 
+      name: ref_agent
+      type: varchar
+      null: NO
+      key: 
+      default: 
+      extra: 
+      max_length: 100
+      input: text_input
+      size: 80
+    human_name: Ref Agent
+    before: 
+    after: 
+    rules: 
+    attributes: 
+      name: ref_agent
+      id: ref_agent
+      class: stdINPUT
+      value: ref_agent
+      title: ref_agent,ref_agent,
+      alt: ref_agent
+      style: 
+      hidden: false
+    key: false
+- 
+  user_blog: 
+    name: 
+      name: user_blog
+      type: varchar
+      null: NO
+      key: 
+      default: 
+      extra: 
+      max_length: 40
+      input: text_input
+      size: 80
+    human_name: User Blog
+    before: 
+    after: 
+    rules: 
+    attributes: 
+      name: user_blog
+      id: user_blog
+      class: stdINPUT
+      value: user_blog
+      title: user_blog,user_blog,
+      alt: user_blog
+      style: 
+      hidden: false
+    key: false

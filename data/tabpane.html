@@ -1,0 +1,72 @@
+<div id="tabpane1" style="width:99%"></div>
+<div id="page1">
+
+<img src="http://localhost/codeigniter/images/users/george_clooney_2007.jpg" style="width:200px" />
+
+</div>
+
+<div id="page2">
+    <form id="project1">
+        <label>Project Name</label><div style="clear:both" ></div>
+        <input id="projectName" type="text" value="name" disabled /><br/>
+        <label>Project Number</label><div style="clear:both"></div>
+        <input id="projectNumber" type="text" value="number" disabled /><br/>
+        <label>Project Location</label><div style="clear:both"></div>
+        <input id="projectLocation" type="text" value="number" /><br/>
+        <label>Project Description</label><div style="clear:both"></div>
+        <textarea id="projectDescription">description</textarea><br/>
+        <button id="save1">save1 all</button>
+    </form>
+
+</div>
+
+<script>
+var tabPane = new goog.ui.TabPane(document.getElementById('tabpane1'));
+
+    tabPane.addPage(new goog.ui.TabPane.TabPage(
+        document.getElementById('page1'),'Page 1'));
+    tabPane.addPage(new goog.ui.TabPane.TabPage(
+        document.getElementById('page2'), 'Details'));
+       tabPane.addPage(new goog.ui.TabPane.TabPage('Page 5'));
+    tabPane.addPage(new goog.ui.TabPane.TabPage('Page 4'), 3);
+
+    var pg5 = new goog.ui.TabPane.TabPage(document.getElementById('page5'))
+    tabPane.addPage(pg5);
+    tabPane.addPage(new goog.ui.TabPane.TabPage('Page 6'));
+    tabPane.removePage(pg5);
+
+
+    function tabChanged(event) {
+      goog.dom.setTextContent(document.getElementById('tabpane1index'),
+                              event.page.getTitle());
+    }
+    goog.events.listen(tabPane, goog.ui.TabPane.Events.CHANGE, tabChanged);
+
+    tabPane.setSelectedIndex(0);
+
+
+    var tabPane2 = new goog.ui.TabPane(document.getElementById('tabpane2'),
+                                       goog.ui.TabPane.TabLocation.BOTTOM);
+    tabPane2.addPage(new goog.ui.TabPane.TabPage('Page 7'));
+    tabPane2.addPage(pg5);
+
+
+    var tabPane3 = new goog.ui.TabPane(document.getElementById('tabpane3'),
+                                       goog.ui.TabPane.TabLocation.LEFT);
+    tabPane3.addPage(new goog.ui.TabPane.TabPage('Page 7'));
+
+    var tabPane4 = new goog.ui.TabPane(document.getElementById('tabpane4'),
+                                       goog.ui.TabPane.TabLocation.RIGHT);
+    tabPane4.addPage(new goog.ui.TabPane.TabPage('Page 99'));
+
+ $('#save1').live('click',function(){
+     log('high');
+     return false;
+ });
+  </script>      
+
+
+
+
+
+

@@ -1,0 +1,52 @@
+---
+- 
+  name: 
+    name: 
+      name: name
+      type: varchar
+      null: NO
+      key: PRI
+      default: 
+      extra: 
+      max_length: 128
+      input: text_input
+      size: 80
+    human_name: Name
+    before: 
+    after: 
+    rules: 
+    attributes: 
+      name: name
+      id: name
+      class: stdINPUT
+      value: name
+      title: name,name,
+      alt: name
+      style: 
+      hidden: false
+    key: false
+- 
+  value: 
+    name: 
+      name: value
+      type: longtext
+      null: NO
+      key: 
+      default: 
+      extra: 
+      input: textarea_input
+      cols: 80
+    human_name: Value
+    before: 
+    after: 
+    rules: 
+    attributes: 
+      name: value
+      id: value
+      class: stdINPUT
+      value: value
+      title: value,value,
+      alt: value
+      style: 
+      hidden: false
+    key: false

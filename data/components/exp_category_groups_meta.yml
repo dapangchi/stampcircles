@@ -1,0 +1,217 @@
+---
+- 
+  group_id: 
+    name: 
+      name: group_id
+      type: int
+      null: NO
+      key: PRI
+      default: 
+      extra: auto_increment
+      max_length: 32000
+      input: int_input
+      size: 6
+      min_value: 0
+      max_value: 65535
+      length: required|min_length[%s]|max_length[%s]
+    human_name: Group Id
+    before: 
+    after: 
+    rules: 
+    attributes: 
+      name: group_id
+      id: group_id
+      class: stdINPUT
+      value: group_id
+      title: group_id,group_id,auto_increment
+      alt: group_id
+      style: 
+      hidden: false
+    key: 
+      name: group_id
+      auto_increment: true
+- 
+  site_id: 
+    name: 
+      name: site_id
+      type: int
+      null: NO
+      key: MUL
+      default: 1
+      extra: 
+      max_length: 32000
+      input: int_input
+      size: 6
+      min_value: 0
+      max_value: 65535
+      length: required|min_length[%s]|max_length[%s]
+    human_name: Site Id
+    before: 
+    after: 
+    rules: 
+    attributes: 
+      name: site_id
+      id: site_id
+      class: stdINPUT
+      value: site_id
+      title: site_id,site_id,
+      alt: site_id
+      style: 
+      hidden: false
+    key: false
+- 
+  group_name: 
+    name: 
+      name: group_name
+      type: varchar
+      null: NO
+      key: 
+      default: 
+      extra: 
+      max_length: 50
+      input: text_input
+      size: 80
+    human_name: Group Name
+    before: 
+    after: 
+    rules: 
+    attributes: 
+      name: group_name
+      id: group_name
+      class: stdINPUT
+      value: group_name
+      title: group_name,group_name,
+      alt: group_name
+      style: 
+      hidden: false
+    key: false
+- 
+  sort_order: 
+    name: 
+      name: sort_order
+      type: char
+      null: NO
+      key: 
+      default: a
+      extra: 
+      max_length: 1
+      input: text_input
+      size: 40
+    human_name: Sort Order
+    before: 
+    after: 
+    rules: 
+    attributes: 
+      name: sort_order
+      id: sort_order
+      class: stdINPUT
+      value: sort_order
+      title: sort_order,sort_order,
+      alt: sort_order
+      style: 
+      hidden: false
+    key: false
+- 
+  field_html_formatting: 
+    name: 
+      name: field_html_formatting
+      type: char
+      null: NO
+      key: 
+      default: all
+      extra: 
+      max_length: 4
+      input: text_input
+      size: 40
+    human_name: Field Html Formatting
+    before: 
+    after: 
+    rules: 
+    attributes: 
+      name: field_html_formatting
+      id: field_html_formatting
+      class: stdINPUT
+      value: field_html_formatting
+      title: >
+        field_html_formatting,field_html_formatting,
+      alt: field_html_formatting
+      style: 
+      hidden: false
+    key: false
+- 
+  can_edit_categories: 
+    name: 
+      name: can_edit_categories
+      type: text
+      null: NO
+      key: 
+      default: 
+      extra: 
+      input: textarea_input
+      cols: 80
+    human_name: Can Edit Categories
+    before: 
+    after: 
+    rules: 
+    attributes: 
+      name: can_edit_categories
+      id: can_edit_categories
+      class: stdINPUT
+      value: can_edit_categories
+      title: can_edit_categories,can_edit_categories,
+      alt: can_edit_categories
+      style: 
+      hidden: false
+    key: false
+- 
+  can_delete_categories: 
+    name: 
+      name: can_delete_categories
+      type: text
+      null: NO
+      key: 
+      default: 
+      extra: 
+      input: textarea_input
+      cols: 80
+    human_name: Can Delete Categories
+    before: 
+    after: 
+    rules: 
+    attributes: 
+      name: can_delete_categories
+      id: can_delete_categories
+      class: stdINPUT
+      value: can_delete_categories
+      title: >
+        can_delete_categories,can_delete_categories,
+      alt: can_delete_categories
+      style: 
+      hidden: false
+    key: false
+- 
+  is_user_blog: 
+    name: 
+      name: is_user_blog
+      type: char
+      null: NO
+      key: 
+      default: n
+      extra: 
+      max_length: 1
+      input: text_input
+      size: 40
+    human_name: Is User Blog
+    before: 
+    after: 
+    rules: 
+    attributes: 
+      name: is_user_blog
+      id: is_user_blog
+      class: stdINPUT
+      value: is_user_blog
+      title: is_user_blog,is_user_blog,
+      alt: is_user_blog
+      style: 
+      hidden: false
+    key: false

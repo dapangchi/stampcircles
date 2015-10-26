@@ -1,0 +1,30 @@
+ EUROPE: 
+    Greece: Visit Greece
+    Italy: Visit Italy 
+    Spain: Visit Spain
+    Germany:
+    Portugal:
+       selected: true
+       style: "color:dd0000;font-weight:bold"
+       class: red
+       id: reddish
+    France: Visit France
+    Sweden: Visit Sweden
+    Germany: Visit Germany
+    Holland: 
+       text:Visit Holland
+       style: "color:dd0000;font-weight:bold"
+ AFRICA:
+    South Africa: South Africa
+    Botswana: Botswana
+    Zimbabwe: Zimbabwe
+ MIDDLE EAST: 
+    UAE: UAE
+    Qatar:Qatar
+    Bahrain:Bahrain
+ AUSTRALIA:
+    Australia: Australia
+    New Zealand: New Zealand
+    
+       
+    

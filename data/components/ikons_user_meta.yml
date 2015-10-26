@@ -1,0 +1,189 @@
+---
+- 
+  g_id: 
+    name: 
+      name: g_id
+      type: int
+      null: NO
+      key: PRI
+      default: 
+      extra: 
+      max_length: 32000
+      input: int_input
+      size: 6
+      min_value: 0
+      max_value: 65535
+      length: required|min_length[%s]|max_length[%s]
+    human_name: G Id
+    before: 
+    after: 
+    rules: 
+    attributes: 
+      name: g_id
+      id: g_id
+      class: stdINPUT
+      value: g_id
+      title: g_id,g_id,
+      alt: g_id
+      style: 
+      hidden: false
+    key: false
+- 
+  g_userName: 
+    name: 
+      name: g_userName
+      type: varchar
+      null: NO
+      key: UNI
+      default: 
+      extra: 
+      max_length: 32
+      input: text_input
+      size: 80
+    human_name: G Username
+    before: 
+    after: 
+    rules: 
+    attributes: 
+      name: g_userName
+      id: g_userName
+      class: stdINPUT
+      value: g_userName
+      title: g_userName,g_userName,
+      alt: g_userName
+      style: 
+      hidden: false
+    key: false
+- 
+  g_fullName: 
+    name: 
+      name: g_fullName
+      type: varchar
+      null: YES
+      key: 
+      default: 
+      extra: 
+      max_length: 128
+      input: text_input
+      size: 80
+    human_name: G Fullname
+    before: 
+    after: 
+    rules: 
+    attributes: 
+      name: g_fullName
+      id: g_fullName
+      class: stdINPUT
+      value: g_fullName
+      title: g_fullName,g_fullName,
+      alt: g_fullName
+      style: 
+      hidden: false
+    key: false
+- 
+  g_hashedPassword: 
+    name: 
+      name: g_hashedPassword
+      type: varchar
+      null: YES
+      key: 
+      default: 
+      extra: 
+      max_length: 128
+      input: text_input
+      size: 80
+    human_name: G Hashedpassword
+    before: 
+    after: 
+    rules: 
+    attributes: 
+      name: g_hashedPassword
+      id: g_hashedPassword
+      class: stdINPUT
+      value: g_hashedPassword
+      title: g_hashedPassword,g_hashedPassword,
+      alt: g_hashedPassword
+      style: 
+      hidden: false
+    key: false
+- 
+  g_email: 
+    name: 
+      name: g_email
+      type: varchar
+      null: YES
+      key: 
+      default: 
+      extra: 
+      max_length: 255
+      input: text_input
+      size: 80
+    human_name: G Email
+    before: 
+    after: 
+    rules: 
+    attributes: 
+      name: g_email
+      id: g_email
+      class: stdINPUT
+      value: g_email
+      title: g_email,g_email,
+      alt: g_email
+      style: 
+      hidden: false
+    key: false
+- 
+  g_language: 
+    name: 
+      name: g_language
+      type: varchar
+      null: YES
+      key: 
+      default: 
+      extra: 
+      max_length: 128
+      input: text_input
+      size: 80
+    human_name: G Language
+    before: 
+    after: 
+    rules: 
+    attributes: 
+      name: g_language
+      id: g_language
+      class: stdINPUT
+      value: g_language
+      title: g_language,g_language,
+      alt: g_language
+      style: 
+      hidden: false
+    key: false
+- 
+  g_locked: 
+    name: 
+      name: g_locked
+      type: int
+      null: YES
+      key: 
+      default: 0
+      extra: 
+      max_length: 32000
+      input: int_input
+      size: 6
+      min_value: 0
+      max_value: 65535
+      length: required|min_length[%s]|max_length[%s]
+    human_name: G Locked
+    before: 
+    after: 
+    rules: 
+    attributes: 
+      name: g_locked
+      id: g_locked
+      class: stdINPUT
+      value: g_locked
+      title: g_locked,g_locked,
+      alt: g_locked
+      style: 
+      hidden: false
+    key: false

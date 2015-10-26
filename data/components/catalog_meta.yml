@@ -1,0 +1,210 @@
+---
+- 
+  cat_id: 
+    name: 
+      name: cat_id
+      type: int
+      null: NO
+      key: MUL
+      default: 
+      extra: auto_increment
+      max_length: 32000
+      input: int_input
+      size: 6
+      min_value: 0
+      max_value: 65535
+      length: required|min_length[%s]|max_length[%s]
+    human_name: Cat Id
+    before: 
+    after: 
+    rules: 
+    attributes: 
+      name: cat_id
+      id: cat_id
+      class: stdINPUT
+      value: cat_id
+      title: cat_id,cat_id,auto_increment
+      alt: cat_id
+      style: 
+      hidden: false
+    key: 
+      auto_increment: true
+- 
+  cat_country: 
+    name: 
+      name: cat_country
+      type: varchar
+      null: NO
+      key: 
+      default: 
+      extra: 
+      max_length: 50
+      input: text_input
+      size: 80
+    human_name: Cat Country
+    before: 
+    after: 
+    rules: 
+    attributes: 
+      name: cat_country
+      id: cat_country
+      class: stdINPUT
+      value: cat_country
+      title: cat_country,cat_country,
+      alt: cat_country
+      style: 
+      hidden: false
+    key: false
+- 
+  cat_image: 
+    name: 
+      name: cat_image
+      type: varchar
+      null: NO
+      key: 
+      default: 
+      extra: 
+      max_length: 120
+      input: text_input
+      size: 80
+    human_name: Cat Image
+    before: 
+    after: 
+    rules: 
+    attributes: 
+      name: cat_image
+      id: cat_image
+      class: stdINPUT
+      value: cat_image
+      title: cat_image,cat_image,
+      alt: cat_image
+      style: 
+      hidden: false
+    key: false
+- 
+  cat_title: 
+    name: 
+      name: cat_title
+      type: varchar
+      null: NO
+      key: 
+      default: 
+      extra: 
+      max_length: 200
+      input: text_input
+      size: 80
+    human_name: Cat Title
+    before: 
+    after: 
+    rules: 
+    attributes: 
+      name: cat_title
+      id: cat_title
+      class: stdINPUT
+      value: cat_title
+      title: cat_title,cat_title,
+      alt: cat_title
+      style: 
+      hidden: false
+    key: false
+- 
+  cat_description: 
+    name: 
+      name: cat_description
+      type: mediumtext
+      null: NO
+      key: 
+      default: 
+      extra: 
+    human_name: Cat Description
+    before: 
+    after: 
+    rules: 
+    attributes: 
+      name: cat_description
+      id: cat_description
+      class: stdINPUT
+      value: cat_description
+      title: cat_description,cat_description,
+      alt: cat_description
+      style: 
+      hidden: false
+    key: false
+- 
+  cat_path: 
+    name: 
+      name: cat_path
+      type: varchar
+      null: NO
+      key: 
+      default: 
+      extra: 
+      max_length: 200
+      input: text_input
+      size: 80
+    human_name: Cat Path
+    before: 
+    after: 
+    rules: 
+    attributes: 
+      name: cat_path
+      id: cat_path
+      class: stdINPUT
+      value: cat_path
+      title: cat_path,cat_path,
+      alt: cat_path
+      style: 
+      hidden: false
+    key: false
+- 
+  cat_last_update: 
+    name: 
+      name: cat_last_update
+      type: varchar
+      null: NO
+      key: 
+      default: 
+      extra: 
+      max_length: 100
+      input: text_input
+      size: 80
+    human_name: Cat Last Update
+    before: 
+    after: 
+    rules: 
+    attributes: 
+      name: cat_last_update
+      id: cat_last_update
+      class: stdINPUT
+      value: cat_last_update
+      title: cat_last_update,cat_last_update,
+      alt: cat_last_update
+      style: 
+      hidden: false
+    key: false
+- 
+  cat_last_editor: 
+    name: 
+      name: cat_last_editor
+      type: varchar
+      null: NO
+      key: 
+      default: 
+      extra: 
+      max_length: 100
+      input: text_input
+      size: 80
+    human_name: Cat Last Editor
+    before: 
+    after: 
+    rules: 
+    attributes: 
+      name: cat_last_editor
+      id: cat_last_editor
+      class: stdINPUT
+      value: cat_last_editor
+      title: cat_last_editor,cat_last_editor,
+      alt: cat_last_editor
+      style: 
+      hidden: false
+    key: false

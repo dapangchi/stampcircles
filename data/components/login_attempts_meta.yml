@@ -1,0 +1,87 @@
+---
+- 
+  id: 
+    name: 
+      name: id
+      type: int
+      null: NO
+      key: PRI
+      default: 
+      extra: auto_increment
+      max_length: 32000
+      input: int_input
+      size: 6
+      min_value: 0
+      max_value: 65535
+      length: required|min_length[%s]|max_length[%s]
+    human_name: Id
+    before: 
+    after: 
+    rules: 
+    attributes: 
+      name: id
+      id: id
+      class: stdINPUT
+      value: id
+      title: id,id,auto_increment
+      alt: id
+      style: 
+      hidden: false
+    key: 
+      name: id
+      auto_increment: true
+- 
+  ip_address: 
+    name: 
+      name: ip_address
+      type: varchar
+      null: NO
+      key: 
+      default: 
+      extra: 
+      max_length: 40
+      input: text_input
+      size: 80
+    human_name: Ip Address
+    before: 
+    after: 
+    rules: 
+    attributes: 
+      name: ip_address
+      id: ip_address
+      class: stdINPUT
+      value: ip_address
+      title: ip_address,ip_address,
+      alt: ip_address
+      style: 
+      hidden: false
+    key: false
+- 
+  time: 
+    name: 
+      name: time
+      type: timestamp
+      null: NO
+      key: 
+      default: CURRENT_TIMESTAMP
+      extra: 
+      input: datepicker
+      size: 6
+      max_length: 32000
+      min_value: 0
+      max_value: 65535
+      length: required|min_length[%s]|max_length[%s]
+    human_name: Time
+    before: 
+    after: 
+    rules: 
+    attributes: 
+      name: time
+      id: time
+      class: stdINPUT
+      value: time
+      title: time,time,
+      alt: time
+      style: 
+      hidden: false
+    key: false

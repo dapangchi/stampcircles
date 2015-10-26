@@ -1,0 +1,218 @@
+---
+- 
+  post_id: 
+    name: 
+      name: post_id
+      type: int
+      null: NO
+      key: PRI
+      default: 
+      extra: auto_increment
+      max_length: 32000
+      input: int_input
+      size: 6
+      min_value: 0
+      max_value: 65535
+      length: required|min_length[%s]|max_length[%s]
+    human_name: Post Id
+    before: 
+    after: 
+    rules: 
+    attributes: 
+      name: post_id
+      id: post_id
+      class: stdINPUT
+      value: post_id
+      title: post_id,post_id,auto_increment
+      alt: post_id
+      style: 
+      hidden: false
+    key: 
+      name: post_id
+      auto_increment: true
+- 
+  date: 
+    name: 
+      name: date
+      type: varchar
+      null: NO
+      key: 
+      default: 
+      extra: 
+      max_length: 12
+      input: text_input
+      size: 80
+    human_name: Date
+    before: 
+    after: 
+    rules: 
+    attributes: 
+      name: date
+      id: date
+      class: stdINPUT
+      value: date
+      title: date,date,
+      alt: date
+      style: 
+      hidden: false
+    key: false
+- 
+  user_id: 
+    name: 
+      name: user_id
+      type: int
+      null: NO
+      key: MUL
+      default: 
+      extra: 
+      max_length: 32000
+      input: int_input
+      size: 6
+      min_value: 0
+      max_value: 65535
+      length: required|min_length[%s]|max_length[%s]
+    human_name: User Id
+    before: 
+    after: 
+    rules: 
+    attributes: 
+      name: user_id
+      id: user_id
+      class: stdINPUT
+      value: user_id
+      title: user_id,user_id,
+      alt: user_id
+      style: 
+      hidden: false
+    key: false
+- 
+  title: 
+    name: 
+      name: title
+      type: varchar
+      null: NO
+      key: MUL
+      default: 
+      extra: 
+      max_length: 255
+      input: text_input
+      size: 80
+    human_name: Title
+    before: 
+    after: 
+    rules: 
+    attributes: 
+      name: title
+      id: title
+      class: stdINPUT
+      value: title
+      title: title,title,
+      alt: title
+      style: 
+      hidden: false
+    key: false
+- 
+  excerpt: 
+    name: 
+      name: excerpt
+      type: longtext
+      null: NO
+      key: MUL
+      default: 
+      extra: 
+      input: textarea_input
+      cols: 80
+    human_name: Excerpt
+    before: 
+    after: 
+    rules: 
+    attributes: 
+      name: excerpt
+      id: excerpt
+      class: stdINPUT
+      value: excerpt
+      title: excerpt,excerpt,
+      alt: excerpt
+      style: 
+      hidden: false
+    key: false
+- 
+  content: 
+    name: 
+      name: content
+      type: longtext
+      null: NO
+      key: MUL
+      default: 
+      extra: 
+      input: textarea_input
+      cols: 80
+    human_name: Content
+    before: 
+    after: 
+    rules: 
+    attributes: 
+      name: content
+      id: content
+      class: stdINPUT
+      value: content
+      title: content,content,
+      alt: content
+      style: 
+      hidden: false
+    key: false
+- 
+  status: 
+    name: 
+      name: status
+      type: int
+      null: NO
+      key: MUL
+      default: 0
+      extra: 
+      max_length: 32000
+      input: int_input
+      size: 6
+      min_value: 0
+      max_value: 65535
+      length: required|min_length[%s]|max_length[%s]
+    human_name: Status
+    before: 
+    after: 
+    rules: 
+    attributes: 
+      name: status
+      id: status
+      class: stdINPUT
+      value: status
+      title: status,status,
+      alt: status
+      style: 
+      hidden: false
+    key: false
+- 
+  url_title: 
+    name: 
+      name: url_title
+      type: varchar
+      null: NO
+      key: 
+      default: 
+      extra: 
+      max_length: 255
+      input: text_input
+      size: 80
+    human_name: Url Title
+    before: 
+    after: 
+    rules: 
+    attributes: 
+      name: url_title
+      id: url_title
+      class: stdINPUT
+      value: url_title
+      title: url_title,url_title,
+      alt: url_title
+      style: 
+      hidden: false
+    key: false

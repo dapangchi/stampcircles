@@ -1,0 +1,72 @@
+---
+name: axel-03
+caption: Fine Photography
+taborder: taborder
+image_list: 
+  - Air.jpg
+  - Autumn.jpg
+  - Earth.jpg
+  - Fire.jpg
+  - Flora.jpg
+  - image.jpg
+  - image1.jpg
+  - Spring.jpg
+  - Summer.jpg
+  - The Cook.jpg
+  - The Lawyer.jpg
+  - The Librarian.jpg
+  - Vertumnus.jpg
+  - Winter.jpg
+items: 
+  - Air.jpg
+  - Autumn.jpg
+  - Earth.jpg
+  - Fire.jpg
+  - Flora.jpg
+  - image.jpg
+  - image1.jpg
+  - Spring.jpg
+  - Summer.jpg
+  - The Cook.jpg
+  - The Lawyer.jpg
+  - The Librarian.jpg
+  - Vertumnus.jpg
+  - Winter.jpg
+container: 
+  element: div
+  style: style
+wrapper: 
+  element: div
+  style: |
+    "width:280px;float:left;
+    margin-right:15px" class="bordered curvy clearfix shadowed"
+actions: 
+css: 
+  style: width:100px
+ajax: 
+  behaviors: 
+    - sortable
+    - draggable
+    - resizable
+    - show
+    - hide
+view: 
+  name: view_tlist
+  data: data
+  cache: false
+model: 
+  model: filesystem
+  method: get_all
+  vars: 
+controllers: 
+  - create
+  - delete
+  - save
+  - sort
+help: cms/tlist_help.dat
+inspector: standard
+yalm: true
+db: true
+limit: 5
+image_path: ../egypt/arcimboldo/
+basedir: http://localhost/egypt/arcimboldo/

@@ -1,0 +1,12 @@
+---
+name: print
+text: text
+taborder: taborder
+image: 
+  - rss.gif
+  - active
+  - pressed
+state: 0
+container: div
+actions: 
+css: 

@@ -1,0 +1,298 @@
+---
+- 
+  wid: 
+    name: 
+      name: wid
+      type: int
+      null: NO
+      key: PRI
+      default: 
+      extra: auto_increment
+      max_length: 32000
+      input: int_input
+      size: 6
+      min_value: 0
+      max_value: 65535
+      length: required|min_length[%s]|max_length[%s]
+    human_name: Wid
+    before: 
+    after: 
+    rules: 
+    attributes: 
+      name: wid
+      id: wid
+      class: stdINPUT
+      value: wid
+      title: wid,wid,auto_increment
+      alt: wid
+      style: 
+      hidden: false
+    key: 
+      name: wid
+      auto_increment: true
+- 
+  uid: 
+    name: 
+      name: uid
+      type: int
+      null: NO
+      key: 
+      default: 0
+      extra: 
+      max_length: 32000
+      input: int_input
+      size: 6
+      min_value: 0
+      max_value: 65535
+      length: required|min_length[%s]|max_length[%s]
+    human_name: Uid
+    before: 
+    after: 
+    rules: 
+    attributes: 
+      name: uid
+      id: uid
+      class: stdINPUT
+      value: uid
+      title: uid,uid,
+      alt: uid
+      style: 
+      hidden: false
+    key: false
+- 
+  type: 
+    name: 
+      name: type
+      type: varchar
+      null: NO
+      key: MUL
+      default: 
+      extra: 
+      max_length: 16
+      input: text_input
+      size: 80
+    human_name: Type
+    before: 
+    after: 
+    rules: 
+    attributes: 
+      name: type
+      id: type
+      class: stdINPUT
+      value: type
+      title: type,type,
+      alt: type
+      style: 
+      hidden: false
+    key: false
+- 
+  message: 
+    name: 
+      name: message
+      type: longtext
+      null: NO
+      key: 
+      default: 
+      extra: 
+      input: textarea_input
+      cols: 80
+    human_name: Message
+    before: 
+    after: 
+    rules: 
+    attributes: 
+      name: message
+      id: message
+      class: stdINPUT
+      value: message
+      title: message,message,
+      alt: message
+      style: 
+      hidden: false
+    key: false
+- 
+  variables: 
+    name: 
+      name: variables
+      type: longtext
+      null: NO
+      key: 
+      default: 
+      extra: 
+      input: textarea_input
+      cols: 80
+    human_name: Variables
+    before: 
+    after: 
+    rules: 
+    attributes: 
+      name: variables
+      id: variables
+      class: stdINPUT
+      value: variables
+      title: variables,variables,
+      alt: variables
+      style: 
+      hidden: false
+    key: false
+- 
+  severity: 
+    name: 
+      name: severity
+      type: tinyint
+      null: NO
+      key: 
+      default: 0
+      extra: 
+      max_length: 
+      input: int_input
+      size: 4
+      min_value: -127
+      max_value: 255
+      length: required|min_length[%s]|max_length[%s]
+    human_name: Severity
+    before: 
+    after: 
+    rules: 
+    attributes: 
+      name: severity
+      id: severity
+      class: stdINPUT
+      value: severity
+      title: severity,severity,
+      alt: severity
+      style: 
+      hidden: false
+    key: false
+- 
+  link: 
+    name: 
+      name: link
+      type: varchar
+      null: NO
+      key: 
+      default: 
+      extra: 
+      max_length: 255
+      input: text_input
+      size: 80
+    human_name: Link
+    before: 
+    after: 
+    rules: 
+    attributes: 
+      name: link
+      id: link
+      class: stdINPUT
+      value: link
+      title: link,link,
+      alt: link
+      style: 
+      hidden: false
+    key: false
+- 
+  location: 
+    name: 
+      name: location
+      type: text
+      null: NO
+      key: 
+      default: 
+      extra: 
+      input: textarea_input
+      cols: 80
+    human_name: Location
+    before: 
+    after: 
+    rules: 
+    attributes: 
+      name: location
+      id: location
+      class: stdINPUT
+      value: location
+      title: location,location,
+      alt: location
+      style: 
+      hidden: false
+    key: false
+- 
+  referer: 
+    name: 
+      name: referer
+      type: varchar
+      null: NO
+      key: 
+      default: 
+      extra: 
+      max_length: 128
+      input: text_input
+      size: 80
+    human_name: Referer
+    before: 
+    after: 
+    rules: 
+    attributes: 
+      name: referer
+      id: referer
+      class: stdINPUT
+      value: referer
+      title: referer,referer,
+      alt: referer
+      style: 
+      hidden: false
+    key: false
+- 
+  hostname: 
+    name: 
+      name: hostname
+      type: varchar
+      null: NO
+      key: 
+      default: 
+      extra: 
+      max_length: 128
+      input: text_input
+      size: 80
+    human_name: Hostname
+    before: 
+    after: 
+    rules: 
+    attributes: 
+      name: hostname
+      id: hostname
+      class: stdINPUT
+      value: hostname
+      title: hostname,hostname,
+      alt: hostname
+      style: 
+      hidden: false
+    key: false
+- 
+  timestamp: 
+    name: 
+      name: timestamp
+      type: int
+      null: NO
+      key: 
+      default: 0
+      extra: 
+      max_length: 32000
+      input: int_input
+      size: 6
+      min_value: 0
+      max_value: 65535
+      length: required|min_length[%s]|max_length[%s]
+    human_name: Timestamp
+    before: 
+    after: 
+    rules: 
+    attributes: 
+      name: timestamp
+      id: timestamp
+      class: stdINPUT
+      value: timestamp
+      title: timestamp,timestamp,
+      alt: timestamp
+      style: 
+      hidden: false
+    key: false

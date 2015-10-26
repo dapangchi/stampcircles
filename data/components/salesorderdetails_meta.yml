@@ -1,0 +1,344 @@
+---
+- 
+  orderlineno: 
+    name: 
+      name: orderlineno
+      type: int
+      null: NO
+      key: PRI
+      default: 0
+      extra: 
+      max_length: 32000
+      input: int_input
+      size: 6
+      min_value: 0
+      max_value: 65535
+      length: required|min_length[%s]|max_length[%s]
+    human_name: Orderlineno
+    before: 
+    after: 
+    rules: 
+    attributes: 
+      name: orderlineno
+      id: orderlineno
+      class: stdINPUT
+      value: orderlineno
+      title: orderlineno,orderlineno,
+      alt: orderlineno
+      style: 
+      hidden: false
+    key: false
+- 
+  orderno: 
+    name: 
+      name: orderno
+      type: int
+      null: NO
+      key: PRI
+      default: 0
+      extra: 
+      max_length: 32000
+      input: int_input
+      size: 6
+      min_value: 0
+      max_value: 65535
+      length: required|min_length[%s]|max_length[%s]
+    human_name: Orderno
+    before: 
+    after: 
+    rules: 
+    attributes: 
+      name: orderno
+      id: orderno
+      class: stdINPUT
+      value: orderno
+      title: orderno,orderno,
+      alt: orderno
+      style: 
+      hidden: false
+    key: false
+- 
+  stkcode: 
+    name: 
+      name: stkcode
+      type: varchar
+      null: NO
+      key: MUL
+      default: 
+      extra: 
+      max_length: 20
+      input: text_input
+      size: 80
+    human_name: Stkcode
+    before: 
+    after: 
+    rules: 
+    attributes: 
+      name: stkcode
+      id: stkcode
+      class: stdINPUT
+      value: stkcode
+      title: stkcode,stkcode,
+      alt: stkcode
+      style: 
+      hidden: false
+    key: false
+- 
+  qtyinvoiced: 
+    name: 
+      name: qtyinvoiced
+      type: double
+      null: NO
+      key: 
+      default: 0
+      extra: 
+    human_name: Qtyinvoiced
+    before: 
+    after: 
+    rules: 
+    attributes: 
+      name: qtyinvoiced
+      id: qtyinvoiced
+      class: stdINPUT
+      value: qtyinvoiced
+      title: qtyinvoiced,qtyinvoiced,
+      alt: qtyinvoiced
+      style: 
+      hidden: false
+    key: false
+- 
+  unitprice: 
+    name: 
+      name: unitprice
+      type: double
+      null: NO
+      key: 
+      default: 0
+      extra: 
+    human_name: Unitprice
+    before: 
+    after: 
+    rules: 
+    attributes: 
+      name: unitprice
+      id: unitprice
+      class: stdINPUT
+      value: unitprice
+      title: unitprice,unitprice,
+      alt: unitprice
+      style: 
+      hidden: false
+    key: false
+- 
+  quantity: 
+    name: 
+      name: quantity
+      type: double
+      null: NO
+      key: 
+      default: 0
+      extra: 
+    human_name: Quantity
+    before: 
+    after: 
+    rules: 
+    attributes: 
+      name: quantity
+      id: quantity
+      class: stdINPUT
+      value: quantity
+      title: quantity,quantity,
+      alt: quantity
+      style: 
+      hidden: false
+    key: false
+- 
+  estimate: 
+    name: 
+      name: estimate
+      type: tinyint
+      null: NO
+      key: 
+      default: 0
+      extra: 
+      max_length: 
+      input: int_input
+      size: 4
+      min_value: -127
+      max_value: 255
+      length: required|min_length[%s]|max_length[%s]
+    human_name: Estimate
+    before: 
+    after: 
+    rules: 
+    attributes: 
+      name: estimate
+      id: estimate
+      class: stdINPUT
+      value: estimate
+      title: estimate,estimate,
+      alt: estimate
+      style: 
+      hidden: false
+    key: false
+- 
+  discountpercent: 
+    name: 
+      name: discountpercent
+      type: double
+      null: NO
+      key: 
+      default: 0
+      extra: 
+    human_name: Discountpercent
+    before: 
+    after: 
+    rules: 
+    attributes: 
+      name: discountpercent
+      id: discountpercent
+      class: stdINPUT
+      value: discountpercent
+      title: discountpercent,discountpercent,
+      alt: discountpercent
+      style: 
+      hidden: false
+    key: false
+- 
+  actualdispatchdate: 
+    name: 
+      name: actualdispatchdate
+      type: datetime
+      null: NO
+      key: 
+      default: 0000-00-00 00:00:00
+      extra: 
+      input: datepicker
+      size: 6
+      max_length: 32000
+      min_value: 0
+      max_value: 65535
+      length: required|min_length[%s]|max_length[%s]
+    human_name: Actualdispatchdate
+    before: 
+    after: 
+    rules: 
+    attributes: 
+      name: actualdispatchdate
+      id: actualdispatchdate
+      class: stdINPUT
+      value: actualdispatchdate
+      title: actualdispatchdate,actualdispatchdate,
+      alt: actualdispatchdate
+      style: 
+      hidden: false
+    key: false
+- 
+  completed: 
+    name: 
+      name: completed
+      type: tinyint
+      null: NO
+      key: MUL
+      default: 0
+      extra: 
+      max_length: 
+      input: int_input
+      size: 4
+      min_value: -127
+      max_value: 255
+      length: required|min_length[%s]|max_length[%s]
+    human_name: Completed
+    before: 
+    after: 
+    rules: 
+    attributes: 
+      name: completed
+      id: completed
+      class: stdINPUT
+      value: completed
+      title: completed,completed,
+      alt: completed
+      style: 
+      hidden: false
+    key: false
+- 
+  narrative: 
+    name: 
+      name: narrative
+      type: text
+      null: YES
+      key: 
+      default: 
+      extra: 
+      input: textarea_input
+      cols: 80
+    human_name: Narrative
+    before: 
+    after: 
+    rules: 
+    attributes: 
+      name: narrative
+      id: narrative
+      class: stdINPUT
+      value: narrative
+      title: narrative,narrative,
+      alt: narrative
+      style: 
+      hidden: false
+    key: false
+- 
+  itemdue: 
+    name: 
+      name: itemdue
+      type: date
+      null: YES
+      key: 
+      default: 
+      extra: 
+      input: datepicker
+      size: 6
+      max_length: 32000
+      min_value: 0
+      max_value: 65535
+      length: required|min_length[%s]|max_length[%s]
+    human_name: Itemdue
+    before: 
+    after: 
+    rules: 
+    attributes: 
+      name: itemdue
+      id: itemdue
+      class: stdINPUT
+      value: itemdue
+      title: itemdue,itemdue,
+      alt: itemdue
+      style: 
+      hidden: false
+    key: false
+- 
+  poline: 
+    name: 
+      name: poline
+      type: varchar
+      null: YES
+      key: 
+      default: 
+      extra: 
+      max_length: 10
+      input: text_input
+      size: 80
+    human_name: Poline
+    before: 
+    after: 
+    rules: 
+    attributes: 
+      name: poline
+      id: poline
+      class: stdINPUT
+      value: poline
+      title: poline,poline,
+      alt: poline
+      style: 
+      hidden: false
+    key: false

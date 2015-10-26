@@ -1,0 +1,109 @@
+---
+- 
+  dept_id: 
+    name: 
+      name: dept_id
+      type: int
+      null: NO
+      key: PRI
+      default: 
+      extra: auto_increment
+      max_length: 32000
+      input: int_input
+      size: 6
+      min_value: 0
+      max_value: 65535
+      length: required|min_length[%s]|max_length[%s]
+    human_name: Dept Id
+    before: 
+    after: 
+    rules: 
+    attributes: 
+      name: dept_id
+      id: dept_id
+      class: stdINPUT
+      value: dept_id
+      title: dept_id,dept_id,auto_increment
+      alt: dept_id
+      style: 
+      hidden: false
+    key: 
+      name: dept_id
+      auto_increment: true
+- 
+  dept_description: 
+    name: 
+      name: dept_description
+      type: varchar
+      null: NO
+      key: 
+      default: 
+      extra: 
+      max_length: 120
+      input: text_input
+      size: 80
+    human_name: Dept Description
+    before: 
+    after: 
+    rules: 
+    attributes: 
+      name: dept_description
+      id: dept_description
+      class: stdINPUT
+      value: dept_description
+      title: dept_description,dept_description,
+      alt: dept_description
+      style: 
+      hidden: false
+    key: false
+- 
+  dept_parent: 
+    name: 
+      name: dept_parent
+      type: varchar
+      null: NO
+      key: 
+      default: 
+      extra: 
+      max_length: 120
+      input: text_input
+      size: 80
+    human_name: Dept Parent
+    before: 
+    after: 
+    rules: 
+    attributes: 
+      name: dept_parent
+      id: dept_parent
+      class: stdINPUT
+      value: dept_parent
+      title: dept_parent,dept_parent,
+      alt: dept_parent
+      style: 
+      hidden: false
+    key: false
+- 
+  dept_vars: 
+    name: 
+      name: dept_vars
+      type: tinyblob
+      null: NO
+      key: 
+      default: 
+      extra: 
+      input: textarea_input
+      cols: 80
+    human_name: Dept Vars
+    before: 
+    after: 
+    rules: 
+    attributes: 
+      name: dept_vars
+      id: dept_vars
+      class: stdINPUT
+      value: dept_vars
+      title: dept_vars,dept_vars,
+      alt: dept_vars
+      style: 
+      hidden: false
+    key: false

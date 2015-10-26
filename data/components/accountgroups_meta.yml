@@ -1,0 +1,140 @@
+---
+- 
+  groupname: 
+    name: 
+      name: groupname
+      type: char
+      null: NO
+      key: PRI
+      default: 
+      extra: 
+      max_length: 30
+      input: text_input
+      size: 40
+    human_name: Groupname
+    before: 
+    after: 
+    rules: 
+    attributes: 
+      name: groupname
+      id: groupname
+      class: stdINPUT
+      value: groupname
+      title: groupname,groupname,
+      alt: groupname
+      style: 
+      hidden: false
+    key: false
+- 
+  sectioninaccounts: 
+    name: 
+      name: sectioninaccounts
+      type: int
+      null: NO
+      key: MUL
+      default: 0
+      extra: 
+      max_length: 32000
+      input: int_input
+      size: 6
+      min_value: 0
+      max_value: 65535
+      length: required|min_length[%s]|max_length[%s]
+    human_name: Sectioninaccounts
+    before: 
+    after: 
+    rules: 
+    attributes: 
+      name: sectioninaccounts
+      id: sectioninaccounts
+      class: stdINPUT
+      value: sectioninaccounts
+      title: sectioninaccounts,sectioninaccounts,
+      alt: sectioninaccounts
+      style: 
+      hidden: false
+    key: false
+- 
+  pandl: 
+    name: 
+      name: pandl
+      type: tinyint
+      null: NO
+      key: 
+      default: 1
+      extra: 
+      max_length: 
+      input: int_input
+      size: 4
+      min_value: -127
+      max_value: 255
+      length: required|min_length[%s]|max_length[%s]
+    human_name: Pandl
+    before: 
+    after: 
+    rules: 
+    attributes: 
+      name: pandl
+      id: pandl
+      class: stdINPUT
+      value: pandl
+      title: pandl,pandl,
+      alt: pandl
+      style: 
+      hidden: false
+    key: false
+- 
+  sequenceintb: 
+    name: 
+      name: sequenceintb
+      type: smallint
+      null: NO
+      key: MUL
+      default: 0
+      extra: 
+      max_length: 
+      input: int_input
+      size: 4
+      min_value: -32767
+      max_value: 65535
+      length: required|min_length[%s]|max_length[%s]
+    human_name: Sequenceintb
+    before: 
+    after: 
+    rules: 
+    attributes: 
+      name: sequenceintb
+      id: sequenceintb
+      class: stdINPUT
+      value: sequenceintb
+      title: sequenceintb,sequenceintb,
+      alt: sequenceintb
+      style: 
+      hidden: false
+    key: false
+- 
+  parentgroupname: 
+    name: 
+      name: parentgroupname
+      type: varchar
+      null: NO
+      key: MUL
+      default: 
+      extra: 
+      max_length: 30
+      input: text_input
+      size: 80
+    human_name: Parentgroupname
+    before: 
+    after: 
+    rules: 
+    attributes: 
+      name: parentgroupname
+      id: parentgroupname
+      class: stdINPUT
+      value: parentgroupname
+      title: parentgroupname,parentgroupname,
+      alt: parentgroupname
+      style: 
+      hidden: false
+    key: false

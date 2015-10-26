@@ -1,0 +1,27 @@
+<div class="masthead" style="background:#fff;width:100%;padding-left:0;margin-left:0;margin-bottom:0;">
+    <div id="pagehead" style="margin-bottom:0;height:60px;width:95%;margin-top:0px;padding-top:15px">
+        <h1 style="width:56%;margin-top:0;padding:0;padding-left:0">
+            <span style="background-color:rgb(255,255,248);font-family:arial;color:rgb(188,29,29);font-size:36px;line-height:1.3;padding:10px">
+        jsNotebooks<sup style="font-size:12px">&copy;</sup>&nbsp;&nbsp;&nbsp;</span></h1>
+        <ul id="menu" style="background-image:url(/codeigniter/images/icons/assets/nav_bg.gif);">
+            <li class="active">
+            <a  href="http://127.0.0.1/CodeIgniter/index.php/Blogs/tutorials/blog/home">Home</a></li>
+            <li class="active" style="background-color:rgb(188,29,29);">
+            <a style="color:#fff" href="http://127.0.0.1/CodeIgniter/index.php/Blogs/tutorials/jQuery/Introduction">Notes</a></li>
+
+            <!--  <li class="active" style="background-color:rgb(206,123,0)"><a href="http://127.0.0.1/CodeIgniter/index.php/Blogs/excerpt">Archive</a></li>-->
+            <li class="active"><a href="//localhost/CodeIgniter/blogs/gallery/eugenio-018/6">Galleries</a></li>
+            <!--    <li class="active"><a href="http://localhost/CodeIgniter/upload/">Upload</a></li>-->
+            <li class="active" ><a  href="http://localhost/CodeIgniter/blogs/stamps/general/introduction/">Blog</a></li>
+            <!--   <li class="active"><a href="http://localhost/CodeIgniter/admin/">Admin</a></li>-->
+            <li class="active"><a href="http://www.bjornblomquist.com/contact.html">Contact</a></li>
+            <li class="active"><a href="//localhost/CodeIgniter/auth/login/">Login</a></li>
+        </ul>
+        
+    </div>
+    <div id="top-spacer clearfix" style="padding-top:30px;width:100%;height:50px;margin:0;
+    background:#fff url(/codeigniter/images/spacer.jpg) no-repeat;">
+            <h4 style="display:block;float:right;margin-right:50px;color:rgb(188,29,29)">Demo Area</h4>
+    </div>
+
+</div>

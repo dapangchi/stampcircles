@@ -1,0 +1,58 @@
+---
+name: massimo-santoni
+caption: Fine Photography
+taborder: taborder
+image_list: 
+  - 6614400-lg.jpg
+  - 6641979-lg.jpg
+  - 6668681-lg.jpg
+  - 6681100-lg.jpg
+  - 6728171-lg.jpg
+  - 6798708-lg.jpg
+  - 6823850-lg.jpg
+items: 
+  - 6614400-lg.jpg
+  - 6641979-lg.jpg
+  - 6668681-lg.jpg
+  - 6681100-lg.jpg
+  - 6728171-lg.jpg
+  - 6798708-lg.jpg
+  - 6823850-lg.jpg
+container: 
+  element: div
+  style: style
+wrapper: 
+  element: div
+  style: |
+    "width:280px;float:left;
+    margin-right:15px" class="bordered curvy clearfix shadowed"
+actions: 
+css: 
+  style: width:100px
+ajax: 
+  behaviors: 
+    - sortable
+    - draggable
+    - resizable
+    - show
+    - hide
+view: 
+  name: view_tlist
+  data: data
+  cache: false
+model: 
+  model: filesystem
+  method: get_all
+  vars: 
+controllers: 
+  - create
+  - delete
+  - save
+  - sort
+help: cms/tlist_help.dat
+inspector: standard
+yalm: true
+db: true
+limit: 5
+image_path: ../egypt/massimo-santoni/
+basedir: http://localhost/egypt/massimo-santoni/

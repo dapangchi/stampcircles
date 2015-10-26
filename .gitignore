@@ -8,9 +8,6 @@ application/logs/*
 !application/logs/index.html
 !application/logs/.htaccess
 
-user_guide/*
-data/*
-examples/*
 images/*
 stamp-images/*
 stamp-notes/*

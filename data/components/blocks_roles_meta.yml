@@ -1,0 +1,82 @@
+---
+- 
+  module: 
+    name: 
+      name: module
+      type: varchar
+      null: NO
+      key: PRI
+      default: 
+      extra: 
+      max_length: 64
+      input: text_input
+      size: 80
+    human_name: Module
+    before: 
+    after: 
+    rules: 
+    attributes: 
+      name: module
+      id: module
+      class: stdINPUT
+      value: module
+      title: module,module,
+      alt: module
+      style: 
+      hidden: false
+    key: false
+- 
+  delta: 
+    name: 
+      name: delta
+      type: varchar
+      null: NO
+      key: PRI
+      default: 
+      extra: 
+      max_length: 32
+      input: text_input
+      size: 80
+    human_name: Delta
+    before: 
+    after: 
+    rules: 
+    attributes: 
+      name: delta
+      id: delta
+      class: stdINPUT
+      value: delta
+      title: delta,delta,
+      alt: delta
+      style: 
+      hidden: false
+    key: false
+- 
+  rid: 
+    name: 
+      name: rid
+      type: int
+      null: NO
+      key: PRI
+      default: 
+      extra: 
+      max_length: 32000
+      input: int_input
+      size: 6
+      min_value: 0
+      max_value: 65535
+      length: required|min_length[%s]|max_length[%s]
+    human_name: Rid
+    before: 
+    after: 
+    rules: 
+    attributes: 
+      name: rid
+      id: rid
+      class: stdINPUT
+      value: rid
+      title: rid,rid,
+      alt: rid
+      style: 
+      hidden: false
+    key: false

@@ -1,0 +1,494 @@
+---
+- 
+  uid: 
+    name: 
+      name: uid
+      type: int
+      null: NO
+      key: PRI
+      default: 
+      extra: auto_increment
+      max_length: 32000
+      input: int_input
+      size: 6
+      min_value: 0
+      max_value: 65535
+      length: required|min_length[%s]|max_length[%s]
+    human_name: Uid
+    before: 
+    after: 
+    rules: 
+    attributes: 
+      name: uid
+      id: uid
+      class: stdINPUT
+      value: uid
+      title: uid,uid,auto_increment
+      alt: uid
+      style: 
+      hidden: false
+    key: 
+      name: uid
+      auto_increment: true
+- 
+  name: 
+    name: 
+      name: name
+      type: varchar
+      null: NO
+      key: UNI
+      default: 
+      extra: 
+      max_length: 60
+      input: text_input
+      size: 80
+    human_name: Name
+    before: 
+    after: 
+    rules: 
+    attributes: 
+      name: name
+      id: name
+      class: stdINPUT
+      value: name
+      title: name,name,
+      alt: name
+      style: 
+      hidden: false
+    key: false
+- 
+  pass: 
+    name: 
+      name: pass
+      type: varchar
+      null: NO
+      key: 
+      default: 
+      extra: 
+      max_length: 32
+      input: text_input
+      size: 80
+    human_name: Pass
+    before: 
+    after: 
+    rules: 
+    attributes: 
+      name: pass
+      id: pass
+      class: stdINPUT
+      value: pass
+      title: pass,pass,
+      alt: pass
+      style: 
+      hidden: false
+    key: false
+- 
+  mail: 
+    name: 
+      name: mail
+      type: varchar
+      null: YES
+      key: MUL
+      default: 
+      extra: 
+      max_length: 64
+      input: text_input
+      size: 80
+    human_name: Mail
+    before: 
+    after: 
+    rules: 
+    attributes: 
+      name: mail
+      id: mail
+      class: stdINPUT
+      value: mail
+      title: mail,mail,
+      alt: mail
+      style: 
+      hidden: false
+    key: false
+- 
+  mode: 
+    name: 
+      name: mode
+      type: tinyint
+      null: NO
+      key: 
+      default: 0
+      extra: 
+      max_length: 
+      input: int_input
+      size: 4
+      min_value: -127
+      max_value: 255
+      length: required|min_length[%s]|max_length[%s]
+    human_name: Mode
+    before: 
+    after: 
+    rules: 
+    attributes: 
+      name: mode
+      id: mode
+      class: stdINPUT
+      value: mode
+      title: mode,mode,
+      alt: mode
+      style: 
+      hidden: false
+    key: false
+- 
+  sort: 
+    name: 
+      name: sort
+      type: tinyint
+      null: YES
+      key: 
+      default: 0
+      extra: 
+      max_length: 
+      input: int_input
+      size: 4
+      min_value: -127
+      max_value: 255
+      length: required|min_length[%s]|max_length[%s]
+    human_name: Sort
+    before: 
+    after: 
+    rules: 
+    attributes: 
+      name: sort
+      id: sort
+      class: stdINPUT
+      value: sort
+      title: sort,sort,
+      alt: sort
+      style: 
+      hidden: false
+    key: false
+- 
+  threshold: 
+    name: 
+      name: threshold
+      type: tinyint
+      null: YES
+      key: 
+      default: 0
+      extra: 
+      max_length: 
+      input: int_input
+      size: 4
+      min_value: -127
+      max_value: 255
+      length: required|min_length[%s]|max_length[%s]
+    human_name: Threshold
+    before: 
+    after: 
+    rules: 
+    attributes: 
+      name: threshold
+      id: threshold
+      class: stdINPUT
+      value: threshold
+      title: threshold,threshold,
+      alt: threshold
+      style: 
+      hidden: false
+    key: false
+- 
+  theme: 
+    name: 
+      name: theme
+      type: varchar
+      null: NO
+      key: 
+      default: 
+      extra: 
+      max_length: 255
+      input: text_input
+      size: 80
+    human_name: Theme
+    before: 
+    after: 
+    rules: 
+    attributes: 
+      name: theme
+      id: theme
+      class: stdINPUT
+      value: theme
+      title: theme,theme,
+      alt: theme
+      style: 
+      hidden: false
+    key: false
+- 
+  signature: 
+    name: 
+      name: signature
+      type: varchar
+      null: NO
+      key: 
+      default: 
+      extra: 
+      max_length: 255
+      input: text_input
+      size: 80
+    human_name: Signature
+    before: 
+    after: 
+    rules: 
+    attributes: 
+      name: signature
+      id: signature
+      class: stdINPUT
+      value: signature
+      title: signature,signature,
+      alt: signature
+      style: 
+      hidden: false
+    key: false
+- 
+  created: 
+    name: 
+      name: created
+      type: int
+      null: NO
+      key: MUL
+      default: 0
+      extra: 
+      max_length: 32000
+      input: int_input
+      size: 6
+      min_value: 0
+      max_value: 65535
+      length: required|min_length[%s]|max_length[%s]
+    human_name: Created
+    before: 
+    after: 
+    rules: 
+    attributes: 
+      name: created
+      id: created
+      class: stdINPUT
+      value: created
+      title: created,created,
+      alt: created
+      style: 
+      hidden: false
+    key: false
+- 
+  access: 
+    name: 
+      name: access
+      type: int
+      null: NO
+      key: MUL
+      default: 0
+      extra: 
+      max_length: 32000
+      input: int_input
+      size: 6
+      min_value: 0
+      max_value: 65535
+      length: required|min_length[%s]|max_length[%s]
+    human_name: Access
+    before: 
+    after: 
+    rules: 
+    attributes: 
+      name: access
+      id: access
+      class: stdINPUT
+      value: access
+      title: access,access,
+      alt: access
+      style: 
+      hidden: false
+    key: false
+- 
+  login: 
+    name: 
+      name: login
+      type: int
+      null: NO
+      key: 
+      default: 0
+      extra: 
+      max_length: 32000
+      input: int_input
+      size: 6
+      min_value: 0
+      max_value: 65535
+      length: required|min_length[%s]|max_length[%s]
+    human_name: Login
+    before: 
+    after: 
+    rules: 
+    attributes: 
+      name: login
+      id: login
+      class: stdINPUT
+      value: login
+      title: login,login,
+      alt: login
+      style: 
+      hidden: false
+    key: false
+- 
+  status: 
+    name: 
+      name: status
+      type: tinyint
+      null: NO
+      key: 
+      default: 0
+      extra: 
+      max_length: 
+      input: int_input
+      size: 4
+      min_value: -127
+      max_value: 255
+      length: required|min_length[%s]|max_length[%s]
+    human_name: Status
+    before: 
+    after: 
+    rules: 
+    attributes: 
+      name: status
+      id: status
+      class: stdINPUT
+      value: status
+      title: status,status,
+      alt: status
+      style: 
+      hidden: false
+    key: false
+- 
+  timezone: 
+    name: 
+      name: timezone
+      type: varchar
+      null: YES
+      key: 
+      default: 
+      extra: 
+      max_length: 8
+      input: text_input
+      size: 80
+    human_name: Timezone
+    before: 
+    after: 
+    rules: 
+    attributes: 
+      name: timezone
+      id: timezone
+      class: stdINPUT
+      value: timezone
+      title: timezone,timezone,
+      alt: timezone
+      style: 
+      hidden: false
+    key: false
+- 
+  language: 
+    name: 
+      name: language
+      type: varchar
+      null: NO
+      key: 
+      default: 
+      extra: 
+      max_length: 12
+      input: text_input
+      size: 80
+    human_name: Language
+    before: 
+    after: 
+    rules: 
+    attributes: 
+      name: language
+      id: language
+      class: stdINPUT
+      value: language
+      title: language,language,
+      alt: language
+      style: 
+      hidden: false
+    key: false
+- 
+  picture: 
+    name: 
+      name: picture
+      type: varchar
+      null: NO
+      key: 
+      default: 
+      extra: 
+      max_length: 255
+      input: text_input
+      size: 80
+    human_name: Picture
+    before: 
+    after: 
+    rules: 
+    attributes: 
+      name: picture
+      id: picture
+      class: stdINPUT
+      value: picture
+      title: picture,picture,
+      alt: picture
+      style: 
+      hidden: false
+    key: false
+- 
+  init: 
+    name: 
+      name: init
+      type: varchar
+      null: YES
+      key: 
+      default: 
+      extra: 
+      max_length: 64
+      input: text_input
+      size: 80
+    human_name: Init
+    before: 
+    after: 
+    rules: 
+    attributes: 
+      name: init
+      id: init
+      class: stdINPUT
+      value: init
+      title: init,init,
+      alt: init
+      style: 
+      hidden: false
+    key: false
+- 
+  data: 
+    name: 
+      name: data
+      type: longtext
+      null: YES
+      key: 
+      default: 
+      extra: 
+      input: textarea_input
+      cols: 80
+    human_name: Data
+    before: 
+    after: 
+    rules: 
+    attributes: 
+      name: data
+      id: data
+      class: stdINPUT
+      value: data
+      title: data,data,
+      alt: data
+      style: 
+      hidden: false
+    key: false

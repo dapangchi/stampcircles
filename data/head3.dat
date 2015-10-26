@@ -1,0 +1,292 @@
+  <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+    <head>
+        <title><?php echo $title;  ?></title>
+        <meta http-equiv="Content-Type" content="text/html" charset="utf-8" />
+        <!--<meta http-equiv="Content-Language" content="mul" />-->
+        <link rel="Shortcut Icon" href="http://localhost/CodeIgniter/images/favicon.ico" type="image/x-icon" />
+        <!--revised -->
+        <link rel="stylesheet" type="text/css" media="all" href="/codeigniter/css/userguide.css">
+        <!--
+<link rel="stylesheet" href="http://localhost/CodeIgniter/css/general.css" type="text/css" />
+        reviewed  and removed combined with typography-->
+        <link rel="stylesheet" href="http://localhost/CodeIgniter/css/screen.css" type="text/css" />
+
+
+        <link rel="stylesheet" href="http://localhost/CodeIgniter/css/typography.css" type="text/css" />
+        <link type="text/css" href="http://localhost/CodeIgniter/css/smoothness/jquery-ui-1.7.1.custom.css" rel="Stylesheet" />
+        <link type="text/css" href="http://localhost/CodeIgniter/css/measures.css" rel="Stylesheet" />
+        <script type="text/javascript" src="http://localhost/CodeIgniter/js/ajax.js"></script>
+
+
+
+
+
+        <script type="text/javascript" defer="true" src="http://localhost/codeIgniter/js/jslint.js" id="scriptjsLint" class="scriptjsLint" charset="utf-8"></script>
+
+
+
+        <!--    <script type="text/javascript" src="http://localhost/CodeIgniter/js/jquery.ajaxContent.js"></script>
+<script type="text/javascript" src="http://localhost/CodeIgniter/js/jquery.form.js" />-->
+        <!--   <script type="text/javascript" src="http://localhost/CodeIgniter/js/ajax.js"></script>-->
+        <script defer="true" type="text/javascript" src="http://localhost/codeigniter/js/formatter.js" ></script>
+
+
+        <!--<script defer="true" type="text/javaScript" src="http://localhost/CodeIgniter/js/prototype_part2.js"></script>-->
+
+        <!-- best way -->
+        <script type="text/javascript" src="http://localhost/CodeIgniter/js/jquery-1.3.2.min.js"></script>
+        <script type="text/javascript" src="http://localhost/CodeIgniter/js/jquery-ui-1.7.1.custom.min.js"></script>
+        <script type="text/javascript" src="http://localhost/CodeIgniter/js/goog/base.js"></script>
+        <script type="text/javascript" src="http://localhost/CodeIgniter/js/goog/deps.js"></script>
+        <script type="text/javascript" src="http://localhost/CodeIgniter/js/goog/dom/annotate.js"></script>
+        <!--
+<script defer="true" type="text/javaScript" src="http://localhost/CodeIgniter/js/goog/string/string.js"></script>
+
+
+
+<script defer="true" type="text/javascript" src="http://localhost/CodeIgniter/js/goog/string/stringformat.js"></script>
+<script defer="true" type="text/javascript" src="http://localhost/CodeIgniter/js/goog/structs/structs.js"></script>
+<script defer="true" type="text/javascript" src="http://localhost/CodeIgniter/js/goog/structs/node.js"></script>
+<script defer="true" type="text/javascript" src="http://localhost/CodeIgniter/js/goog/structs/map.js"></script>
+<script defer="true" type="text/javascript" src="http://localhost/CodeIgniter/js/goog/structs/queue.js"></script>
+<script defer="true" type="text/javascript" src="http://localhost/CodeIgniter/js/goog/structs/heap.js"></script>
+<script defer="true" type="text/javascript" src="http://localhost/CodeIgniter/js/goog/structs/priorityqueue.js"></script>
+<script defer="true" type="text/javacript" src="http://localhost/CodeIgniter/js/goog/structs/set.js"></script>
+<script defer="true" type="text/javascript" src="http://localhost/CodeIgniter/js/goog/structs/circularbuffer.js"></script>
+<script defer="true" type="text/javascript" src="http://localhost/CodeIgniter/js/goog/crypt/crypt.js"></script>
+<script defer="true" type="text/javascript" src="http://localhost/CodeIgniter/js/goog/crypt/basen.js"></script>
+<script defer="true" type="text/javascript" src="http://localhost/CodeIgniter/js/goog/crypt/base64.js"></script>
+<script defer="true" type="text/javascript" src="http://localhost/CodeIgniter/js/goog/crypt/hash32.js"></script>
+<script defer="true" type="text/javascript" src="http://localhost/CodeIgniter/js/goog/color/alpha.js"></script>
+<script defer="true" type="text/javascript" src="http://localhost/CodeIgniter/js/goog/color/color.js"></script>
+-->
+
+<!-- <script type="text/javaScript" src="http://localhost/CodeIgniter/js/goog/structs/heap.js"></script>-->
+
+<!--<script type="text/javaScript" src="http://localhost/CodeIgniter/js/goog/dom/annotate.js"></script>-->
+
+        <script defer="true" type="text/javascript" src="http://localhost/CodeIgniter/js/U.js"></script>
+      <!--  <script type="text/javaScript" src="http://localhost/CodeIgniter/js/yl.js"></script>-->
+        <script type="text/javaScript" src="http://localhost/CodeIgniter/js/highlighter.js"></script>
+        <!--  <script defer="true" type="text/javascript" src="http://localhost/CodeIgniter/js/tokens.js"></script>-->
+<!--<script defer="true" type="text/jacascript"   src="http://localhost/CodeIgniter/js/parse.js"></script>-->
+<!-- <script defer="true" type="text/javascript" src="http://localhost/codeigniter/js/json2.js"></script>-->
+
+
+
+        <meta name="author" content="Y Lazarides" />
+        <meta name="copyright" content="Dr Y Lazarides" />
+        <meta name="robots" content="all" />
+        <meta name="imagetoolbar" content="no" />
+        <meta name="keywords" content="<?php //echo $keywords;    ?>" />
+        <meta name="description" content="An automatic website builder" />
+
+
+
+
+
+        <style type="text/css">
+            /* side menu to be renamed
+            #toc {
+            border: 1px solid #bebebe ;
+            background:#bebebe;
+            margin: 0 0 5px 12px;
+            float:right;
+            width:300px;
+            }
+
+            #toc ol{font-size:13px}
+            #toc ol {
+            margin: 8px;
+            padding-left: 5px;
+            }
+            */
+
+            .country {color:#fff;background:rgb(192,67,67);padding:1px}
+            .country a:link,.country a:hover,.country a:visited{color:#fff}
+            .closure {color:#fff;background:rgb(188,29,29);padding:1px}
+            .closure a:link,.closure a:hover,.closure a:visited{color:#fff}
+            .arial11 {
+                color:#303000;
+                font-family:Arial,Helvetica,Verdana;
+                font-size:11px;
+                font-style:normal;
+                font-weight:bold;
+                line-height:13px;}
+
+            table td{font-size:11px;}
+
+            tr.shaded, .shaded{background:#fafafa}
+            hr {background:#fff}
+            p {font-size:14px;font-family:arial;}
+            div#pagehead ul#menu li.active{
+                background-color:#fafafa;}
+            div#pagehead ul#menu li.active a:link{color:#666}
+
+            div#pagehead ul#menu li.active a:visited{color:#666}
+            div#pagehead ul#menu li.active a:hover{color:#fff}
+        </style>
+       
+    <script type="text/javascript">
+        function timedRefresh(timeoutPeriod) {
+            setTimeout("location.reload(true);",timeoutPeriod);
+        }
+        $(document).ready(function() {
+
+            //this is the only function that is used to toggle the top menu
+            //plenty others can be used like this
+            //essentially all the info boxes in order not
+            //to clutter pages
+            $('a#toc').click(function() {
+                $('#nav').toggle();
+                return false;
+            });
+
+            $('a#action').click(function() {
+                $('#img_cont').toggle();
+                return false;
+            });
+
+
+            var $a=$('img');
+            function test(){
+                $a.width('100px').height('100px');
+            }
+            $('a#panel').click(function() {
+                $('.details').toggle();
+                $('#close').width('70%').height('200px');
+                $a.width('50px').height('50px').fadeTo('slow','0.2').fadeTo('slow','1',test);
+                //if (a>2) $('.edit').width('190px')
+
+                return false;
+            });
+
+
+            $('a#toggle').click(function() {
+                $('#tools').toggle('slow');
+                return false;
+            });
+            $('#text-content, #imgContainer').dblclick(function() {
+                $('#tools').toggle('slow').timedRefresh(1000);
+                return false;
+            });
+
+            $('a#edit').click(function() {
+                $('#editable').toggle('faster');
+                return false;
+            });
+
+            $('a#button-toggle').click(function() {
+                $('#hide-show').toggle(500).animated('bounce');
+                return false;
+            });
+
+            $("a#ajax").click(function(){
+                // load about page on click
+                //no need to do anything else JUST /CodeIgniter and Controller
+                $("#ajax_content").load("/CodeIgniter/blogs/ajax_post/blog/introduction");
+                alert('test');
+                return false;
+            });
+
+
+
+            $(function() {
+                $("#resizable").resizable({
+                    handles: 'n, e, s, w, ne, se, sw, nw',
+                    helper: 'ui-state-highlight',
+                    ghost:'true',
+                    animateEasing: 'swing',
+                    animateDuration: 'slow'
+                });
+
+            });
+
+
+
+        });
+
+        $(function() {
+            $("#resizable2").resizable({
+                handles: 'n, e, s, w, ne, se, sw, nw',
+                helper: 'ui-state-highlight',
+                ghost:'true',
+                animateEasing: 'swing',
+                animateDuration: 'slow'
+            });
+        });
+        $(function() {
+            $("div.resizable").resizable({
+                handles: 'n, e, s, w, ne, se, sw, nw',
+                helper: 'ui-state-highlight',
+                ghost:'true',
+                animateEasing: 'swing',
+                animateDuration: 'slow'
+            });
+        });
+        $(function() {
+            $(".draggable").draggable({
+                cursor:'move',
+                //containment: 'parent',
+                zIndex: 2700
+
+            });
+        });
+
+       $('a#toggle').click(function() {
+                $('#tools').toggle('slow');
+                return false;
+            });
+            $('#text-content, #imgContainer').dblclick(function() {
+                $('#tools').toggle('slow').timedRefresh(1000);
+                return false;
+            });
+
+            $('a#edit').click(function() {
+                $('#editable').toggle('faster');
+                return false;
+            });
+
+            $('a#button-toggle').click(function() {
+                $('#hide-show').toggle(500).animated('bounce');
+                return false;
+            });
+
+            $("a#ajax").click(function(){
+                // load about page on click
+                //no need to do anything else JUST /CodeIgniter and Controller
+                $("#ajax_content").load("/CodeIgniter/blogs/ajax_post/blog/introduction");
+                alert('test');
+                return false;
+            });
+
+
+
+
+    </script>
+
+
+   <style type="text/css">
+       code, .code , code-block{white-space:pre;line-height:2;padding-left:0}
+
+   </style>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</head> 
+
+
+
+
