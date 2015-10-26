@@ -237,8 +237,8 @@ class Blogs extends CI_Controller
         
         // check at document level
         $ini_array_system = self::parseIni($src_default, true);
-        //echo_array($ini_array_system);
-        $ini_array        = $ini_array + $ini_array_system; // gets missing defaults
+        //echo_array($ini_array_system);            
+        $ini_array = (array)$ini_array + (array)$ini_array_system; // gets missing defaults
         //echo_array($ini_array);
         
         //echoPRE('combined');
