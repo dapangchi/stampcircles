@@ -1,6 +1,6 @@
 <?php
 
-include_once '/texigniter/vendor/autoload.php';
+include_once 'texigniter/vendor/autoload.php';
 
 /*
  *---------------------------------------------------------------
