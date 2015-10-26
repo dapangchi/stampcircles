@@ -232,7 +232,7 @@ class Blogs extends CI_Controller
         // merge the two ini as the page level (userlevel) might have missed
         // settings
         
-        $ini_array = (($ini_array_page)) ? $ini_array + $ini_array_page : $ini_array;
+        $ini_array = (($ini_array_page)) ? (array)$ini_array + (array)$ini_array_page : $ini_array;
         
         
         // check at document level
